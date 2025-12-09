@@ -1,554 +1,689 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { 
-  MapPin, 
-  Calendar, 
-  Clock, 
-  ChevronLeft, 
-  Plane, 
-  Info, 
-  Sun, 
-  CloudRain, 
-  Cloud, 
-  Camera, 
-  Coffee, 
-  Utensils, 
-  BedDouble, 
-  Star,
-  Compass,
-  ArrowRight
-} from 'lucide-react';
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西巴爾幹之旅 App</title>
+    
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 引入 React 和 ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    
+    <!-- 引入 Babel (用於解析 JSX) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-// --- Data & Configuration ---
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
 
-const MORANDI_COLORS = {
-  bg: 'bg-[#FDFCF8]', // Pale cream
-  primary: 'bg-[#8F9E9D]', // Sage Green
-  secondary: 'bg-[#D4C4B7]', // Muted Clay
-  accent: 'bg-[#E6DECA]', // Warm Sand
-  text: 'text-[#4A4A4A]', // Soft Charcoal
-  textLight: 'text-[#8C8C8C]',
-  card: 'bg-white',
-  highlight: 'text-[#C78F76]' // Terracotta for highlights
-};
-
-// Weather Mock Data
-const getWeather = (dayIndex) => {
-  const weathers = [
-    { temp: 24, icon: <Sun size={16} className="text-yellow-500" />, desc: '晴朗' },
-    { temp: 22, icon: <Cloud size={16} className="text-gray-400" />, desc: '多雲' },
-    { temp: 26, icon: <Sun size={16} className="text-orange-400" />, desc: '艷陽' },
-    { temp: 20, icon: <CloudRain size={16} className="text-blue-400" />, desc: '午後陣雨' },
-  ];
-  // Deterministic "random" based on day index
-  return weathers[dayIndex % weathers.length];
-};
-
-// Generate Dates from 2026-05-24 to 2026-06-12
-const generateDates = () => {
-  const dates = [];
-  const start = new Date(2026, 4, 24); // Month is 0-indexed (4 is May)
-  const end = new Date(2026, 5, 12);   // 5 is June
-  
-  let current = start;
-  let dayCount = 1;
-
-  while (current <= end) {
-    dates.push({
-      dateObj: new Date(current),
-      dayNum: dayCount,
-      dayString: `${current.getMonth() + 1}/${current.getDate()}`,
-      weekDay: current.toLocaleDateString('zh-TW', { weekday: 'short' })
-    });
-    current.setDate(current.getDate() + 1);
-    dayCount++;
-  }
-  return dates;
-};
-
-const tripDates = generateDates();
-
-// Mock Itinerary Data (Sample for key days, utilizing generic structure for others)
-const itineraryData = {
-  1: [ // 5/24
-    {
-      id: 'd1-1',
-      time: '18:30',
-      title: '前往機場',
-      type: 'transport',
-      icon: <Plane size={18} />,
-      note: '記得檢查護照',
-      location: '桃園國際機場',
-      desc: '準備出發前往西巴爾幹半島！建議提早3小時抵達機場辦理登機手續。',
-      tips: ['檢查電源轉接頭', '下載離線地圖', '攜帶頸枕']
-    },
-    {
-      id: 'd1-2',
-      time: '21:00',
-      title: '飛往杜布羅夫尼克',
-      type: 'transport',
-      icon: <Plane size={18} />,
-      note: '需轉機',
-      location: '伊斯坦堡機場 (轉機)',
-      desc: '長途飛行，請多補充水分。預計在伊斯坦堡轉機。',
-      tips: ['機上保濕', '調整手錶時差']
-    }
-  ],
-  2: [ // 5/25
-    {
-      id: 'd2-1',
-      time: '13:00',
-      title: '抵達杜布羅夫尼克',
-      type: 'arrival',
-      icon: <MapPin size={18} />,
-      note: '入境卡填寫',
-      location: 'Dubrovnik Airport',
-      desc: '歡迎來到「亞得里亞海的珍珠」！通關後領取行李，前往租車櫃檯或搭乘接駁車。',
-      tips: ['機場換匯匯率較差，建議到市區再換', '購買當地 SIM 卡']
-    },
-    {
-      id: 'd2-2',
-      time: '15:30',
-      title: '入住飯店',
-      type: 'hotel',
-      icon: <BedDouble size={18} />,
-      note: 'Check-in',
-      location: 'Hotel Excelsior Dubrovnik',
-      desc: '飯店位於普洛切區，享有舊城區和亞得里亞海的壯麗景色。',
-      tips: ['確認早餐時間', '詢問櫃檯附近推薦餐廳']
-    },
-    {
-      id: 'd2-3',
-      time: '17:30',
-      title: '舊城區漫步',
-      type: 'sightseeing',
-      icon: <Camera size={18} />,
-      note: '絕美夕陽',
-      location: 'Stradun, Dubrovnik',
-      desc: '史特拉敦大道（Stradun）是舊城區的主要街道，兩旁皆是保存完好的巴洛克式建築。傍晚時分光線最美。',
-      tips: ['必吃冰淇淋', '參觀歐諾弗利歐水池']
-    }
-  ],
-  3: [ // 5/26
-    {
-      id: 'd3-1',
-      time: '09:00',
-      title: '古城牆巡禮',
-      type: 'sightseeing',
-      icon: <Camera size={18} />,
-      note: '權力遊戲場景',
-      location: 'Walls of Dubrovnik',
-      desc: '全長近2公里的古城牆，是防禦工事的傑作。在這裡可以俯瞰紅瓦屋頂與蔚藍大海的對比。',
-      tips: ['建議早上前往避開人潮', '攜帶足夠的水', '穿著舒適好走的鞋']
-    },
-    {
-      id: 'd3-2',
-      time: '12:30',
-      title: '海鮮午餐',
-      type: 'food',
-      icon: <Utensils size={18} />,
-      note: '已訂位',
-      location: 'Proto Fish Restaurant',
-      desc: '成立於1886年的老字號餐廳，提供正宗的達爾馬提亞海鮮料理。',
-      tips: ['推薦墨魚燉飯', '烤魚拼盤']
-    },
-    {
-      id: 'd3-3',
-      time: '15:00',
-      title: '搭纜車上山',
-      type: 'activity',
-      icon: <Compass size={18} />,
-      note: '俯瞰全景',
-      location: 'Dubrovnik Cable Car',
-      desc: '搭乘纜車前往 Srđ 山頂，只需4分鐘即可將杜布羅夫尼克舊城、水晶般的亞得里亞海和眾多島嶼盡收眼底。',
-      tips: ['山頂風大建議帶薄外套', '日落時分景色最迷人']
-    }
-  ],
-  // ... Assuming standard itinerary fills here. 
-  // For demo purposes, mapping day 4-19 to generic structure if data missing
-  20: [ // 6/12
-     {
-      id: 'd20-1',
-      time: '06:00',
-      title: '抵達台灣',
-      type: 'arrival',
-      icon: <MapPin size={18} />,
-      note: '平安回家',
-      location: '桃園國際機場',
-      desc: '旅程結束，帶著滿滿的回憶回到溫暖的家。',
-      tips: ['整理照片', '補眠調整時差']
-    }
-  ]
-};
-
-// Generic filler for days without specific data in this demo
-const getDayEvents = (dayNum) => {
-  if (itineraryData[dayNum]) return itineraryData[dayNum];
-  
-  return [
-    {
-      id: `gen-${dayNum}-1`,
-      time: '09:30',
-      title: '城市探索',
-      type: 'sightseeing',
-      icon: <Camera size={18} />,
-      note: '自由活動',
-      location: 'City Center',
-      desc: '享受當地的早晨氛圍，探索巷弄間的驚喜。',
-      tips: ['尋找當地咖啡館', '購買紀念品']
-    },
-    {
-      id: `gen-${dayNum}-2`,
-      time: '13:00',
-      title: '當地美食饗宴',
-      type: 'food',
-      icon: <Utensils size={18} />,
-      note: '午餐',
-      location: 'Local Restaurant',
-      desc: '品嚐西巴爾幹半島的特色料理，如烤肉卷 (Ćevapi) 或布雷克餅 (Burek)。',
-      tips: ['嘗試當地啤酒或葡萄酒']
-    },
-    {
-      id: `gen-${dayNum}-3`,
-      time: '16:00',
-      title: '午後休憩',
-      type: 'relax',
-      icon: <Coffee size={18} />,
-      note: '咖啡時光',
-      location: 'Old Town Cafe',
-      desc: '在露天咖啡座休息，觀察路人，享受悠閒的歐洲步調。',
-      tips: []
-    }
-  ];
-};
-
-// --- Components ---
-
-const DetailView = ({ item, onClose }) => {
-  if (!item) return null;
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center pointer-events-none">
-      {/* Backdrop */}
-      <div 
-        className="absolute inset-0 bg-black/40 backdrop-blur-sm pointer-events-auto transition-opacity duration-300"
-        onClick={onClose}
-      />
-      
-      {/* Card Content */}
-      <div className="relative w-full max-w-md h-[85vh] sm:h-[800px] bg-[#FDFCF8] rounded-t-3xl sm:rounded-3xl shadow-2xl overflow-hidden pointer-events-auto flex flex-col transform transition-transform duration-300 ease-out translate-y-0">
-        
-        {/* Header Image Area (Abstract) */}
-        <div className={`h-48 ${MORANDI_COLORS.secondary} relative flex items-center justify-center`}>
-          <button 
-            onClick={onClose}
-            className="absolute top-4 left-4 p-2 bg-white/50 backdrop-blur-md rounded-full hover:bg-white/80 transition-colors"
-          >
-            <ChevronLeft size={24} className={MORANDI_COLORS.text} />
-          </button>
-          <div className="text-6xl opacity-20 text-white">
-            {item.icon}
-          </div>
-        </div>
-
-        {/* Content */}
-        <div className="flex-1 overflow-y-auto p-8">
-          <div className="flex items-center gap-2 mb-2">
-            <span className={`px-3 py-1 rounded-full text-xs font-medium ${MORANDI_COLORS.primary} text-white`}>
-              {item.time}
-            </span>
-            <span className="text-xs text-gray-500 uppercase tracking-wider">{item.type}</span>
-          </div>
-
-          <h2 className={`text-2xl font-serif font-bold mb-4 ${MORANDI_COLORS.text}`}>
-            {item.title}
-          </h2>
-
-          <div className="flex items-start gap-2 mb-6 text-sm text-gray-600">
-            <MapPin size={16} className="mt-1 flex-shrink-0 text-gray-400" />
-            <span>{item.location}</span>
-          </div>
-
-          <div className="prose prose-sm mb-8">
-            <h3 className={`text-lg font-medium mb-2 ${MORANDI_COLORS.highlight}`}>關於此行程</h3>
-            <p className="text-gray-600 leading-relaxed text-justify">
-              {item.desc}
-            </p>
-          </div>
-
-          {item.tips && item.tips.length > 0 && (
-            <div className={`p-5 rounded-2xl ${MORANDI_COLORS.accent} bg-opacity-30`}>
-              <h3 className={`text-sm font-bold mb-3 flex items-center gap-2 ${MORANDI_COLORS.text}`}>
-                <Star size={16} /> 貼心小提醒
-              </h3>
-              <ul className="space-y-2">
-                {item.tips.map((tip, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0" />
-                    {tip}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          <a 
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.location)}`}
-            target="_blank"
-            rel="noreferrer"
-            className={`mt-8 w-full py-4 rounded-xl ${MORANDI_COLORS.primary} text-white font-medium flex items-center justify-center gap-2 hover:opacity-90 transition-opacity shadow-lg shadow-gray-200`}
-          >
-            <MapPin size={18} />
-            開啟 Google Maps
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const InfoPage = () => {
-  return (
-    <div className="p-6 pb-24 space-y-6 animate-fade-in">
-      <h2 className={`text-2xl font-serif font-bold ${MORANDI_COLORS.text}`}>旅遊資訊</h2>
-      
-      <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-        <div className="flex items-center gap-3 mb-4">
-          <Plane className="text-gray-400" />
-          <h3 className="font-bold text-lg text-gray-700">航班資訊</h3>
-        </div>
-        <div className="space-y-4">
-          <div className="border-l-2 border-gray-200 pl-4">
-            <p className="text-xs text-gray-400">去程 5/24</p>
-            <p className="font-medium text-gray-800">TK025 TPE - IST</p>
-            <p className="text-sm text-gray-500">21:55 - 05:10 (+1)</p>
-          </div>
-          <div className="border-l-2 border-gray-200 pl-4">
-            <p className="text-xs text-gray-400">轉機 5/25</p>
-            <p className="font-medium text-gray-800">TK439 IST - DBV</p>
-            <p className="text-sm text-gray-500">07:30 - 08:20</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-        <div className="flex items-center gap-3 mb-4">
-          <Info className="text-gray-400" />
-          <h3 className="font-bold text-lg text-gray-700">行前清單</h3>
-        </div>
-        <ul className="space-y-3">
-          {['護照 (效期6個月以上)', '歐元現金', '海外旅遊保險證明', '轉接頭 (歐規雙圓孔)', '常用藥品'].map((item, i) => (
-            <li key={i} className="flex items-center gap-3 text-sm text-gray-600">
-              <div className={`w-4 h-4 rounded border ${MORANDI_COLORS.primary} flex items-center justify-center`}>
-                <div className={`w-2 h-2 rounded-sm ${MORANDI_COLORS.primary}`} />
-              </div>
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-export default function App() {
-  const [activeTab, setActiveTab] = useState('itinerary'); // 'itinerary' | 'info'
-  const [selectedDateIdx, setSelectedDateIdx] = useState(0);
-  const [viewingItem, setViewingItem] = useState(null);
-  const scrollRef = useRef(null);
-
-  const currentDate = tripDates[selectedDateIdx];
-  const currentEvents = getDayEvents(currentDate.dayNum);
-  const currentWeather = getWeather(selectedDateIdx);
-
-  // Scroll active date into view
-  useEffect(() => {
-    if (scrollRef.current) {
-      const activeEl = scrollRef.current.children[selectedDateIdx];
-      if (activeEl) {
-        activeEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-      }
-    }
-  }, [selectedDateIdx]);
-
-  return (
-    <div className={`min-h-screen ${MORANDI_COLORS.bg} font-sans selection:bg-[#D4C4B7] selection:text-white`}>
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+    <style>
         body {
-          font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #FDFCF8;
         }
         .font-serif {
-          font-family: 'Noto Serif TC', serif;
+            font-family: 'Noto Serif TC', serif;
         }
-        /* Custom Scrollbar for date selector */
+        /* Custom Scrollbar */
         .hide-scrollbar::-webkit-scrollbar {
-          display: none;
+            display: none;
         }
         .hide-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
-      `}</style>
-
-      {/* --- Main Content Area --- */}
-      <div className="max-w-md mx-auto bg-[#FDFCF8] min-h-screen relative shadow-2xl overflow-hidden flex flex-col">
         
-        {/* Header */}
-        <div className="pt-8 px-6 pb-4 bg-white/50 backdrop-blur-sm sticky top-0 z-10">
-          <h1 className={`text-2xl font-serif font-bold ${MORANDI_COLORS.text} tracking-wide`}>
-            {activeTab === 'itinerary' ? '西巴爾幹之旅' : '旅遊資訊'}
-          </h1>
-          <p className="text-xs text-gray-500 mt-1 tracking-widest uppercase">
-            2026 MAY 24 - JUN 12
-          </p>
-        </div>
+        /* Animation */
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fade-in 0.3s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
 
-        {activeTab === 'itinerary' ? (
-          <>
-            {/* Date Selector (Squared, shorter, no gap) */}
-            <div className="border-b border-gray-200 bg-white shadow-sm z-0">
-              <div 
-                ref={scrollRef}
-                className="flex overflow-x-auto px-0 hide-scrollbar snap-x"
-              >
-                {tripDates.map((d, idx) => {
-                  const isActive = idx === selectedDateIdx;
-                  return (
-                    <button
-                      key={idx}
-                      onClick={() => setSelectedDateIdx(idx)}
-                      className={`snap-center flex-shrink-0 flex flex-col items-center justify-center w-16 h-16 transition-colors duration-200 border-r border-gray-50 last:border-0 ${
-                        isActive 
-                          ? `${MORANDI_COLORS.primary} text-white` 
-                          : 'bg-white text-gray-400 hover:bg-gray-50'
-                      }`}
-                    >
-                      <span className="text-[10px] font-medium opacity-80 uppercase tracking-wider">{d.weekDay}</span>
-                      <span className="text-lg font-bold leading-none my-0.5">{d.dateObj.getDate()}</span>
-                      <span className="text-[9px] opacity-60">D{d.dayNum}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
+    <script type="text/babel">
+        const { useState, useEffect, useRef, Fragment } = React;
 
-            {/* Scrollable Content */}
-            <div className="flex-1 overflow-y-auto pb-24">
-              
-              {/* Compact Weather Display (Top Right) */}
-              <div className="px-6 pt-4 pb-2 flex justify-end">
-                <div className={`flex items-center gap-1.5 px-3 py-1 rounded-full ${MORANDI_COLORS.bg} border border-gray-100 shadow-sm`}>
-                  <div className="text-gray-400">
-                     {currentWeather.icon}
-                  </div>
-                  <span className={`text-sm font-bold ${MORANDI_COLORS.text}`}>{currentWeather.temp}°</span>
-                  <span className="text-xs text-gray-400">{currentWeather.desc}</span>
-                </div>
-              </div>
+        // --- Icon Component System (Replaces Lucide imports) ---
+        const Icon = ({ name, size = 24, className = "" }) => {
+            const icons = {
+                MapPin: (
+                    <Fragment>
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </Fragment>
+                ),
+                Calendar: (
+                    <Fragment>
+                        <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                        <line x1="16" x2="16" y1="2" y2="6"/>
+                        <line x1="8" x2="8" y1="2" y2="6"/>
+                        <line x1="3" x2="21" y1="10" y2="10"/>
+                    </Fragment>
+                ),
+                Clock: (
+                    <Fragment>
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </Fragment>
+                ),
+                ChevronLeft: <path d="m15 18-6-6 6-6"/>,
+                Plane: (
+                    <Fragment>
+                        <path d="M2 12h5"/>
+                        <path d="M13 5.74V3a2 2 0 0 0-3.56-1.47l-1.56 2.08"/>
+                        <path d="M16 12h6"/>
+                        <path d="M13 18.26V21a2 2 0 0 1-3.56 1.47l-1.56-2.08"/>
+                        <path d="M20 14h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2"/>
+                        <path d="M7 17a2 2 0 0 0 1.5-3.5L16 6l4 4-7.5 7.5A2 2 0 0 0 7 17Z"/>
+                    </Fragment>
+                ),
+                Info: (
+                    <Fragment>
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 16v-4"/>
+                        <path d="M12 8h.01"/>
+                    </Fragment>
+                ),
+                Sun: (
+                    <Fragment>
+                        <circle cx="12" cy="12" r="4"/>
+                        <path d="M12 2v2"/>
+                        <path d="M12 20v2"/>
+                        <path d="m4.93 4.93 1.41 1.41"/>
+                        <path d="m17.66 17.66 1.41 1.41"/>
+                        <path d="M2 12h2"/>
+                        <path d="M20 12h2"/>
+                        <path d="m6.34 17.66-1.41 1.41"/>
+                        <path d="m19.07 4.93-1.41 1.41"/>
+                    </Fragment>
+                ),
+                CloudRain: (
+                    <Fragment>
+                        <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/>
+                        <path d="M16 14v6"/>
+                        <path d="M8 14v6"/>
+                        <path d="M12 16v6"/>
+                    </Fragment>
+                ),
+                Cloud: (
+                    <Fragment>
+                        <path d="M17.5 19c0-1.7-1.3-3-3-3"/>
+                        <path d="M9 19c-3.3 0-6-2.7-6-6 0-3.3 2.7-6 6-6 1.5 0 2.9.5 4.1 1.4"/>
+                        <path d="M19 13.5A2.5 2.5 0 0 1 16.5 16H9"/>
+                    </Fragment>
+                ),
+                Camera: (
+                    <Fragment>
+                        <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
+                        <circle cx="12" cy="13" r="3"/>
+                    </Fragment>
+                ),
+                Coffee: (
+                    <Fragment>
+                        <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+                        <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+                        <line x1="6" x2="6" y1="1" y2="4"/>
+                        <line x1="10" x2="10" y1="1" y2="4"/>
+                        <line x1="14" x2="14" y1="1" y2="4"/>
+                    </Fragment>
+                ),
+                Utensils: (
+                    <Fragment>
+                        <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
+                        <path d="M7 2v20"/>
+                        <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>
+                    </Fragment>
+                ),
+                BedDouble: (
+                    <Fragment>
+                        <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/>
+                        <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/>
+                        <path d="M12 4v6"/>
+                        <path d="M2 18h20"/>
+                    </Fragment>
+                ),
+                Star: <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>,
+                Compass: (
+                    <Fragment>
+                        <circle cx="12" cy="12" r="10"/>
+                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                    </Fragment>
+                ),
+                ArrowRight: (
+                    <Fragment>
+                        <path d="M5 12h14"/>
+                        <path d="m12 5 7 7-7 7"/>
+                    </Fragment>
+                )
+            };
 
-              {/* Itinerary List */}
-              <div className="px-6 space-y-4">
-                
-                {/* Removed the '當日行程' header as requested */}
+            const content = icons[name] || null;
 
-                {currentEvents.map((item, idx) => (
-                  <div 
-                    key={item.id}
-                    onClick={() => setViewingItem(item)}
-                    className="group bg-white rounded-xl p-5 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.05)] border border-gray-50 hover:shadow-lg transition-all duration-300 cursor-pointer relative overflow-hidden"
-                  >
-                    {/* Left Timeline Line */}
-                    {idx !== currentEvents.length - 1 && (
-                      <div className="absolute left-[29px] top-16 bottom-[-20px] w-[2px] bg-gray-100 group-hover:bg-[#EAEAEA] transition-colors" />
-                    )}
+            return (
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width={size} 
+                    height={size} 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    className={className}
+                >
+                    {content}
+                </svg>
+            );
+        };
 
-                    <div className="flex gap-4">
-                      {/* Icon Column */}
-                      <div className={`flex-shrink-0 w-12 h-12 rounded-full ${MORANDI_COLORS.bg} flex items-center justify-center text-gray-600 border border-gray-100 z-10`}>
-                        {item.icon}
-                      </div>
+        // --- Data & Configuration ---
 
-                      {/* Content Column */}
-                      <div className="flex-1 min-w-0">
-                        <div className="flex justify-between items-start">
-                          <span className={`text-sm font-medium ${MORANDI_COLORS.highlight} mb-1 block`}>
-                            {item.time}
-                          </span>
-                          {/* Map Pin Button */}
-                          <button 
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.location)}`, '_blank');
-                            }}
-                            className={`p-2 rounded-full ${MORANDI_COLORS.bg} text-gray-400 hover:text-[#C78F76] hover:bg-[#FFF] transition-colors`}
-                          >
-                            <div className="w-5 h-5 flex items-center justify-center rounded-tr-[50%] rounded-tl-[50%] rounded-bl-[50%] rounded-br-0 transform rotate-45 border-2 border-current">
-                              <div className="w-1.5 h-1.5 bg-current rounded-full transform -rotate-45" />
+        const MORANDI_COLORS = {
+            bg: 'bg-[#FDFCF8]', 
+            primary: 'bg-[#8F9E9D]', 
+            secondary: 'bg-[#D4C4B7]', 
+            accent: 'bg-[#E6DECA]', 
+            text: 'text-[#4A4A4A]', 
+            textLight: 'text-[#8C8C8C]',
+            card: 'bg-white',
+            highlight: 'text-[#C78F76]' 
+        };
+
+        const getWeather = (dayIndex) => {
+            const weathers = [
+                { temp: 24, icon: "Sun", color: "text-yellow-500", desc: '晴朗' },
+                { temp: 22, icon: "Cloud", color: "text-gray-400", desc: '多雲' },
+                { temp: 26, icon: "Sun", color: "text-orange-400", desc: '艷陽' },
+                { temp: 20, icon: "CloudRain", color: "text-blue-400", desc: '午後陣雨' },
+            ];
+            return weathers[dayIndex % weathers.length];
+        };
+
+        const generateDates = () => {
+            const dates = [];
+            const start = new Date(2026, 4, 24); 
+            const end = new Date(2026, 5, 12);   
+            
+            let current = start;
+            let dayCount = 1;
+
+            while (current <= end) {
+                dates.push({
+                    dateObj: new Date(current),
+                    dayNum: dayCount,
+                    dayString: `${current.getMonth() + 1}/${current.getDate()}`,
+                    weekDay: current.toLocaleDateString('zh-TW', { weekday: 'short' })
+                });
+                current.setDate(current.getDate() + 1);
+                dayCount++;
+            }
+            return dates;
+        };
+
+        const tripDates = generateDates();
+
+        const itineraryData = {
+            1: [ 
+                {
+                    id: 'd1-1',
+                    time: '18:30',
+                    title: '前往機場',
+                    type: 'transport',
+                    iconName: 'Plane',
+                    note: '記得檢查護照',
+                    location: '桃園國際機場',
+                    desc: '準備出發前往西巴爾幹半島！建議提早3小時抵達機場辦理登機手續。',
+                    tips: ['檢查電源轉接頭', '下載離線地圖', '攜帶頸枕']
+                },
+                {
+                    id: 'd1-2',
+                    time: '21:00',
+                    title: '飛往杜布羅夫尼克',
+                    type: 'transport',
+                    iconName: 'Plane',
+                    note: '需轉機',
+                    location: '伊斯坦堡機場 (轉機)',
+                    desc: '長途飛行，請多補充水分。預計在伊斯坦堡轉機。',
+                    tips: ['機上保濕', '調整手錶時差']
+                }
+            ],
+            2: [ 
+                {
+                    id: 'd2-1',
+                    time: '13:00',
+                    title: '抵達杜布羅夫尼克',
+                    type: 'arrival',
+                    iconName: 'MapPin',
+                    note: '入境卡填寫',
+                    location: 'Dubrovnik Airport',
+                    desc: '歡迎來到「亞得里亞海的珍珠」！通關後領取行李，前往租車櫃檯或搭乘接駁車。',
+                    tips: ['機場換匯匯率較差，建議到市區再換', '購買當地 SIM 卡']
+                },
+                {
+                    id: 'd2-2',
+                    time: '15:30',
+                    title: '入住飯店',
+                    type: 'hotel',
+                    iconName: 'BedDouble',
+                    note: 'Check-in',
+                    location: 'Hotel Excelsior Dubrovnik',
+                    desc: '飯店位於普洛切區，享有舊城區和亞得里亞海的壯麗景色。',
+                    tips: ['確認早餐時間', '詢問櫃檯附近推薦餐廳']
+                },
+                {
+                    id: 'd2-3',
+                    time: '17:30',
+                    title: '舊城區漫步',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    note: '絕美夕陽',
+                    location: 'Stradun, Dubrovnik',
+                    desc: '史特拉敦大道（Stradun）是舊城區的主要街道，兩旁皆是保存完好的巴洛克式建築。傍晚時分光線最美。',
+                    tips: ['必吃冰淇淋', '參觀歐諾弗利歐水池']
+                }
+            ],
+            3: [ 
+                {
+                    id: 'd3-1',
+                    time: '09:00',
+                    title: '古城牆巡禮',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    note: '權力遊戲場景',
+                    location: 'Walls of Dubrovnik',
+                    desc: '全長近2公里的古城牆，是防禦工事的傑作。在這裡可以俯瞰紅瓦屋頂與蔚藍大海的對比。',
+                    tips: ['建議早上前往避開人潮', '攜帶足夠的水', '穿著舒適好走的鞋']
+                },
+                {
+                    id: 'd3-2',
+                    time: '12:30',
+                    title: '海鮮午餐',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    note: '已訂位',
+                    location: 'Proto Fish Restaurant',
+                    desc: '成立於1886年的老字號餐廳，提供正宗的達爾馬提亞海鮮料理。',
+                    tips: ['推薦墨魚燉飯', '烤魚拼盤']
+                },
+                {
+                    id: 'd3-3',
+                    time: '15:00',
+                    title: '搭纜車上山',
+                    type: 'activity',
+                    iconName: 'Compass',
+                    note: '俯瞰全景',
+                    location: 'Dubrovnik Cable Car',
+                    desc: '搭乘纜車前往 Srđ 山頂，只需4分鐘即可將杜布羅夫尼克舊城、水晶般的亞得里亞海和眾多島嶼盡收眼底。',
+                    tips: ['山頂風大建議帶薄外套', '日落時分景色最迷人']
+                }
+            ],
+            20: [ 
+                {
+                    id: 'd20-1',
+                    time: '06:00',
+                    title: '抵達台灣',
+                    type: 'arrival',
+                    iconName: 'MapPin',
+                    note: '平安回家',
+                    location: '桃園國際機場',
+                    desc: '旅程結束，帶著滿滿的回憶回到溫暖的家。',
+                    tips: ['整理照片', '補眠調整時差']
+                }
+            ]
+        };
+
+        const getDayEvents = (dayNum) => {
+            if (itineraryData[dayNum]) return itineraryData[dayNum];
+            
+            return [
+                {
+                    id: `gen-${dayNum}-1`,
+                    time: '09:30',
+                    title: '城市探索',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    note: '自由活動',
+                    location: 'City Center',
+                    desc: '享受當地的早晨氛圍，探索巷弄間的驚喜。',
+                    tips: ['尋找當地咖啡館', '購買紀念品']
+                },
+                {
+                    id: `gen-${dayNum}-2`,
+                    time: '13:00',
+                    title: '當地美食饗宴',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    note: '午餐',
+                    location: 'Local Restaurant',
+                    desc: '品嚐西巴爾幹半島的特色料理，如烤肉卷 (Ćevapi) 或布雷克餅 (Burek)。',
+                    tips: ['嘗試當地啤酒或葡萄酒']
+                },
+                {
+                    id: `gen-${dayNum}-3`,
+                    time: '16:00',
+                    title: '午後休憩',
+                    type: 'relax',
+                    iconName: 'Coffee',
+                    note: '咖啡時光',
+                    location: 'Old Town Cafe',
+                    desc: '在露天咖啡座休息，觀察路人，享受悠閒的歐洲步調。',
+                    tips: []
+                }
+            ];
+        };
+
+        // --- Main Components ---
+
+        const DetailView = ({ item, onClose }) => {
+            if (!item) return null;
+
+            return (
+                <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center pointer-events-none">
+                    {/* Backdrop */}
+                    <div 
+                        className="absolute inset-0 bg-black/40 backdrop-blur-sm pointer-events-auto transition-opacity duration-300"
+                        onClick={onClose}
+                    />
+                    
+                    {/* Card Content */}
+                    <div className="relative w-full max-w-md h-[85vh] sm:h-[600px] bg-[#FDFCF8] rounded-t-3xl sm:rounded-3xl shadow-2xl overflow-hidden pointer-events-auto flex flex-col transform transition-transform duration-300 ease-out translate-y-0 animate-fade-in">
+                        
+                        {/* Header Bar (New) */}
+                        <div className="flex items-center justify-between p-4 border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-10">
+                            <button 
+                                onClick={onClose}
+                                className="p-2 -ml-2 rounded-full hover:bg-gray-100 transition-colors text-gray-600"
+                            >
+                                <Icon name="ChevronLeft" size={24} />
+                            </button>
+                            
+                            <h2 className={`text-lg font-serif font-bold ${MORANDI_COLORS.text} truncate flex-1 text-center px-2`}>
+                                {item.title}
+                            </h2>
+
+                             {/* Spacer to balance the layout for centering */}
+                             <div className="w-8"></div>
+                        </div>
+
+                        {/* Content */}
+                        <div className="flex-1 overflow-y-auto p-6 pt-6">
+                            
+                            <div className="flex flex-col items-center gap-4 mb-6">
+                                {/* Time Badge */}
+                                <div className="flex items-center gap-2">
+                                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${MORANDI_COLORS.primary} text-white`}>
+                                        {item.time}
+                                    </span>
+                                     <span className="text-xs text-gray-400 uppercase tracking-wider bg-gray-100 px-2 py-1 rounded-md">{item.type}</span>
+                                </div>
+                                
+                                {/* Location */}
+                                <div className="flex items-center justify-center gap-2 text-sm text-gray-500">
+                                    <Icon name="MapPin" size={16} className="flex-shrink-0" />
+                                    <span>{item.location}</span>
+                                </div>
                             </div>
-                          </button>
+
+                            <div className="prose prose-sm mb-8">
+                                <h3 className={`text-lg font-medium mb-3 ${MORANDI_COLORS.highlight}`}>關於此行程</h3>
+                                <p className="text-gray-600 leading-relaxed text-justify">
+                                    {item.desc}
+                                </p>
+                            </div>
+
+                            {item.tips && item.tips.length > 0 && (
+                                <div className={`p-5 rounded-2xl ${MORANDI_COLORS.accent} bg-opacity-30 mb-8`}>
+                                    <h3 className={`text-sm font-bold mb-3 flex items-center gap-2 ${MORANDI_COLORS.text}`}>
+                                        <Icon name="Star" size={16} /> 貼心小提醒
+                                    </h3>
+                                    <ul className="space-y-2">
+                                        {item.tips.map((tip, idx) => (
+                                            <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0" />
+                                                {tip}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+
+                            <a 
+                                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.location)}`}
+                                target="_blank"
+                                rel="noreferrer"
+                                className={`w-full py-4 rounded-xl ${MORANDI_COLORS.primary} text-white font-medium flex items-center justify-center gap-2 hover:opacity-90 transition-opacity shadow-lg shadow-gray-200 mb-4`}
+                            >
+                                <Icon name="MapPin" size={18} />
+                                開啟 Google Maps
+                            </a>
                         </div>
-                        
-                        <h3 className={`text-lg font-bold ${MORANDI_COLORS.text} mb-1 truncate`}>
-                          {item.title}
-                        </h3>
-                        <p className="text-sm text-gray-500 mb-2">{item.location}</p>
-                        
-                        {item.note && (
-                          <span className="inline-block px-2 py-1 bg-gray-100 text-gray-500 text-xs rounded-md">
-                            {item.note}
-                          </span>
-                        )}
-                        
-                        <div className="flex items-center gap-1 mt-3 text-xs text-gray-400 font-medium group-hover:text-[#AAB7B8] transition-colors">
-                          查看詳情 <ArrowRight size={12} />
-                        </div>
-                      </div>
                     </div>
-                  </div>
-                ))}
-
-                <div className="h-10 text-center text-xs text-gray-300 pt-4">
-                  End of Day {currentDate.dayNum}
                 </div>
-              </div>
-            </div>
-          </>
-        ) : (
-          <InfoPage />
-        )}
+            );
+        };
 
-        {/* Bottom Navigation */}
-        <div className="absolute bottom-6 left-6 right-6">
-          <div className="bg-white/90 backdrop-blur-md rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-1.5 flex justify-between border border-white/50">
-            <button
-              onClick={() => setActiveTab('itinerary')}
-              className={`flex-1 py-3 rounded-full flex items-center justify-center gap-2 text-sm font-medium transition-all duration-300 ${
-                activeTab === 'itinerary' 
-                  ? `${MORANDI_COLORS.primary} text-white shadow-md` 
-                  : 'text-gray-400 hover:bg-gray-50'
-              }`}
-            >
-              <Calendar size={18} />
-              每日行程
-            </button>
-            <button
-              onClick={() => setActiveTab('info')}
-              className={`flex-1 py-3 rounded-full flex items-center justify-center gap-2 text-sm font-medium transition-all duration-300 ${
-                activeTab === 'info' 
-                  ? `${MORANDI_COLORS.primary} text-white shadow-md` 
-                  : 'text-gray-400 hover:bg-gray-50'
-              }`}
-            >
-              <Info size={18} />
-              旅遊資訊
-            </button>
-          </div>
-        </div>
+        const InfoPage = () => {
+            return (
+                <div className="p-6 pb-24 space-y-6 animate-fade-in">
+                    <h2 className={`text-2xl font-serif font-bold ${MORANDI_COLORS.text}`}>旅遊資訊</h2>
+                    
+                    <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="text-gray-400"><Icon name="Plane" size={24}/></div>
+                            <h3 className="font-bold text-lg text-gray-700">航班資訊</h3>
+                        </div>
+                        <div className="space-y-4">
+                            <div className="border-l-2 border-gray-200 pl-4">
+                                <p className="text-xs text-gray-400">去程 5/24</p>
+                                <p className="font-medium text-gray-800">TK025 TPE - IST</p>
+                                <p className="text-sm text-gray-500">21:55 - 05:10 (+1)</p>
+                            </div>
+                            <div className="border-l-2 border-gray-200 pl-4">
+                                <p className="text-xs text-gray-400">轉機 5/25</p>
+                                <p className="font-medium text-gray-800">TK439 IST - DBV</p>
+                                <p className="text-sm text-gray-500">07:30 - 08:20</p>
+                            </div>
+                        </div>
+                    </div>
 
-        {/* Details Overlay */}
-        <DetailView item={viewingItem} onClose={() => setViewingItem(null)} />
+                    <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <div className="flex items-center gap-3 mb-4">
+                             <div className="text-gray-400"><Icon name="Info" size={24}/></div>
+                            <h3 className="font-bold text-lg text-gray-700">行前清單</h3>
+                        </div>
+                        <ul className="space-y-3">
+                            {['護照 (效期6個月以上)', '歐元現金', '海外旅遊保險證明', '轉接頭 (歐規雙圓孔)', '常用藥品'].map((item, i) => (
+                                <li key={i} className="flex items-center gap-3 text-sm text-gray-600">
+                                    <div className={`w-4 h-4 rounded border ${MORANDI_COLORS.primary} flex items-center justify-center`}>
+                                        <div className={`w-2 h-2 rounded-sm ${MORANDI_COLORS.primary}`} />
+                                    </div>
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            );
+        };
 
-      </div>
-    </div>
-  );
-}
+        const App = () => {
+            const [activeTab, setActiveTab] = useState('itinerary'); 
+            const [selectedDateIdx, setSelectedDateIdx] = useState(0);
+            const [viewingItem, setViewingItem] = useState(null);
+            const scrollRef = useRef(null);
+
+            const currentDate = tripDates[selectedDateIdx];
+            const currentEvents = getDayEvents(currentDate.dayNum);
+            const currentWeather = getWeather(selectedDateIdx);
+
+            useEffect(() => {
+                if (scrollRef.current) {
+                    const activeEl = scrollRef.current.children[selectedDateIdx];
+                    if (activeEl) {
+                        activeEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                    }
+                }
+            }, [selectedDateIdx]);
+
+            return (
+                <div className={`min-h-screen ${MORANDI_COLORS.bg} font-sans selection:bg-[#D4C4B7] selection:text-white`}>
+                    <div className="max-w-md mx-auto bg-[#FDFCF8] min-h-screen relative shadow-2xl overflow-hidden flex flex-col">
+                        
+                        {/* Header */}
+                        <div className="pt-8 px-6 pb-4 bg-white/50 backdrop-blur-sm sticky top-0 z-10">
+                            <h1 className={`text-2xl font-serif font-bold ${MORANDI_COLORS.text} tracking-wide`}>
+                                {activeTab === 'itinerary' ? '西巴爾幹之旅' : '旅遊資訊'}
+                            </h1>
+                            <p className="text-xs text-gray-500 mt-1 tracking-widest uppercase">
+                                2026 MAY 24 - JUN 12
+                            </p>
+                        </div>
+
+                        {activeTab === 'itinerary' ? (
+                            <React.Fragment>
+                                {/* Date Selector */}
+                                <div className="border-b border-gray-200 bg-white shadow-sm z-0">
+                                    <div 
+                                        ref={scrollRef}
+                                        className="flex overflow-x-auto px-0 hide-scrollbar snap-x"
+                                    >
+                                        {tripDates.map((d, idx) => {
+                                            const isActive = idx === selectedDateIdx;
+                                            return (
+                                                <button
+                                                    key={idx}
+                                                    onClick={() => setSelectedDateIdx(idx)}
+                                                    className={`snap-center flex-shrink-0 flex flex-col items-center justify-center w-16 h-16 transition-colors duration-200 border-r border-gray-50 last:border-0 ${
+                                                        isActive 
+                                                            ? `${MORANDI_COLORS.primary} text-white` 
+                                                            : 'bg-white text-gray-400 hover:bg-gray-50'
+                                                    }`}
+                                                >
+                                                    <span className="text-[10px] font-medium opacity-80 uppercase tracking-wider">{d.weekDay}</span>
+                                                    <span className="text-lg font-bold leading-none my-0.5">{d.dateObj.getDate()}</span>
+                                                    <span className="text-[9px] opacity-60">D{d.dayNum}</span>
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+
+                                {/* Scrollable Content */}
+                                <div className="flex-1 overflow-y-auto pb-24">
+                                    
+                                    {/* Weather Display */}
+                                    <div className="px-6 pt-4 pb-2 flex justify-end">
+                                        <div className={`flex items-center gap-1.5 px-3 py-1 rounded-full ${MORANDI_COLORS.bg} border border-gray-100 shadow-sm`}>
+                                            <div className={currentWeather.color}>
+                                                <Icon name={currentWeather.icon} size={16} />
+                                            </div>
+                                            <span className={`text-sm font-bold ${MORANDI_COLORS.text}`}>{currentWeather.temp}°</span>
+                                            <span className="text-xs text-gray-400">{currentWeather.desc}</span>
+                                        </div>
+                                    </div>
+
+                                    {/* Itinerary List */}
+                                    <div className="px-6 space-y-4">
+                                        {currentEvents.map((item, idx) => (
+                                            <div 
+                                                key={item.id}
+                                                onClick={() => setViewingItem(item)}
+                                                className="group bg-white rounded-xl p-5 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.05)] border border-gray-50 hover:shadow-lg transition-all duration-300 cursor-pointer relative overflow-hidden"
+                                            >
+                                                {/* No Line */}
+
+                                                <div className="flex items-start gap-4">
+                                                    {/* Time Column (Replaces Icon Column) */}
+                                                    <div className={`flex-shrink-0 w-14 pt-1 text-right text-sm font-bold font-serif ${MORANDI_COLORS.highlight}`}>
+                                                        {item.time}
+                                                    </div>
+
+                                                    {/* Content Column */}
+                                                    <div className="flex-1 min-w-0">
+                                                        <div className="flex justify-between items-start mb-0.5">
+                                                            <h3 className={`text-lg font-bold ${MORANDI_COLORS.text} leading-tight`}>
+                                                                {item.title}
+                                                            </h3>
+                                                            
+                                                            {/* Map Button */}
+                                                            <button 
+                                                                onClick={(e) => {
+                                                                    e.stopPropagation();
+                                                                    window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.location)}`, '_blank');
+                                                                }}
+                                                                className={`ml-2 p-1.5 rounded-full ${MORANDI_COLORS.bg} text-gray-400 hover:text-[#C78F76] hover:bg-[#FFF] transition-colors flex-shrink-0`}
+                                                            >
+                                                                <div className="w-4 h-4 flex items-center justify-center rounded-tr-[50%] rounded-tl-[50%] rounded-bl-[50%] rounded-br-0 transform rotate-45 border-2 border-current">
+                                                                    <div className="w-1 h-1 bg-current rounded-full transform -rotate-45" />
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                        
+                                                        <p className="text-sm text-gray-500 line-clamp-2">{item.location}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
+
+                                        <div className="h-10 text-center text-xs text-gray-300 pt-4">
+                                            End of Day {currentDate.dayNum}
+                                        </div>
+                                    </div>
+                                </div>
+                            </React.Fragment>
+                        ) : (
+                            <InfoPage />
+                        )}
+
+                        {/* Bottom Navigation */}
+                        <div className="absolute bottom-6 left-6 right-6">
+                            <div className="bg-white/90 backdrop-blur-md rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-1.5 flex justify-between border border-white/50">
+                                <button
+                                    onClick={() => setActiveTab('itinerary')}
+                                    className={`flex-1 py-3 rounded-full flex items-center justify-center gap-2 text-sm font-medium transition-all duration-300 ${
+                                        activeTab === 'itinerary' 
+                                            ? `${MORANDI_COLORS.primary} text-white shadow-md` 
+                                            : 'text-gray-400 hover:bg-gray-50'
+                                    }`}
+                                >
+                                    <Icon name="Calendar" size={18} />
+                                    每日行程
+                                </button>
+                                <button
+                                    onClick={() => setActiveTab('info')}
+                                    className={`flex-1 py-3 rounded-full flex items-center justify-center gap-2 text-sm font-medium transition-all duration-300 ${
+                                        activeTab === 'info' 
+                                            ? `${MORANDI_COLORS.primary} text-white shadow-md` 
+                                            : 'text-gray-400 hover:bg-gray-50'
+                                    }`}
+                                >
+                                    <Icon name="Info" size={18} />
+                                    旅遊資訊
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Details Overlay */}
+                        <DetailView item={viewingItem} onClose={() => setViewingItem(null)} />
+
+                    </div>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
