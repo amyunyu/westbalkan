@@ -1,773 +1,845 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>西巴爾幹半島之旅 | My Journey</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        morandi: {
-                            bg: '#FDFCF5',
-                            green: '#8FA598',
-                            blue: '#9DB4C0',
-                            rose: '#C6B3B3',
-                            dark: '#4A4A4A'
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['"Times New Roman"', 'Times', 'serif'],
-                        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
-                    }
-                }
-            }
+import React, { useState, useEffect, useRef } from 'react';
+import { 
+  MapPin, 
+  Sun, 
+  Cloud, 
+  CloudRain, 
+  ArrowLeft, 
+  Plane, 
+  Info, 
+  Calendar, 
+  Camera, 
+  Coffee, 
+  Utensils, 
+  History, 
+  Map,
+  ChevronRight,
+  Luggage,
+  Hotel,
+  Train,
+  Ship,
+  Clock,
+  BookOpen,
+  Wallet,
+  Plus,
+  Trash2,
+  Navigation
+} from 'lucide-react';
+
+// --- 色票定義 (Morandi Palette) ---
+// 背景: 淺米黃 #FDFCF5
+// 主色: 莫蘭迪綠 #8FA598
+// 副色: 霧霾藍 #9DB4C0
+// 點綴: 乾燥玫瑰 #C6B3B3
+// 文字: 深灰 #4A4A4A
+
+// --- 資料結構 ---
+
+const generateDateRange = (startStr, endStr) => {
+  const dates = [];
+  let curr = new Date(startStr);
+  const end = new Date(endStr);
+  let dayCount = 1;
+
+  while (curr <= end) {
+    dates.push({
+      dateObj: new Date(curr),
+      dateStr: curr.toISOString().split('T')[0],
+      dayNum: dayCount,
+      weekday: curr.toLocaleDateString('zh-TW', { weekday: 'short' }),
+      displayDate: `${curr.getMonth() + 1}/${curr.getDate()}`
+    });
+    curr.setDate(curr.getDate() + 1);
+    dayCount++;
+  }
+  return dates;
+};
+
+const tripDates = generateDateRange('2025-05-24', '2025-06-13');
+
+// 主要城市對照表
+const cityMap = {
+  '2025-05-24': '台北',
+  '2025-05-25': '札格瑞布',
+  '2025-05-26': '札格瑞布',
+  '2025-05-27': '盧比安納',
+  '2025-05-28': '布萊德',
+  '2025-05-29': '布萊德',
+  '2025-05-30': '羅維尼',
+  '2025-05-31': '普拉',
+  '2025-06-01': '十六湖',
+  '2025-06-02': '札達爾',
+  '2025-06-03': '斯普利特',
+  '2025-06-04': '赫瓦爾',
+  '2025-06-05': '莫斯塔爾',
+  '2025-06-06': '塞拉耶佛',
+  '2025-06-07': '塞拉耶佛',
+  '2025-06-08': '科托爾',
+  '2025-06-09': '科托爾',
+  '2025-06-10': '杜布羅夫尼克',
+  '2025-06-11': '杜布羅夫尼克',
+  '2025-06-12': '返程',
+  '2025-06-13': '台北'
+};
+
+const mockWeather = {
+  sunny: { icon: <Sun className="w-5 h-5 text-orange-400" />, temp: "24°C" },
+  cloudy: { icon: <Cloud className="w-5 h-5 text-gray-400" />, temp: "22°C" },
+  rainy: { icon: <CloudRain className="w-5 h-5 text-blue-400" />, temp: "19°C" },
+};
+
+// *** 行程資料庫 ***
+const itineraryDatabase = {
+  '2025-05-24': {
+    dayTitle: '啟程｜飛向巴爾幹',
+    events: [
+      { id: 'flight-tpe-zag', time: '23:05', title: '台北 - 杜拜 (轉機)', location: '桃園國際機場', type: 'flight', notes: '阿聯酋航空 EK367', details: { intro: '23:05 TPE 出發 -> 04:40 DXB 抵達 (轉機)。' } }
+    ]
+  },
+  '2025-05-25': {
+    dayTitle: '初見｜札格瑞布',
+    events: [
+      { id: 'flight-zag-arr', time: '13:30', title: '抵達札格瑞布', location: 'Zagreb Airport', type: 'arrival', notes: '航班 EK2012 抵達', details: { intro: '從杜拜轉機飛往札格瑞布。' } },
+      { 
+        id: 'car-rental', 
+        time: '15:00', 
+        title: '租車取車', 
+        location: 'Zagreb Airport', 
+        type: 'transport', 
+        notes: '辦理租車手續', 
+        details: { intro: '取車時請務必檢查車身外觀刮痕並拍照留底，確認保險涵蓋範圍。' } 
+      },
+      { 
+        id: 'stay-zagreb', 
+        time: '16:00', 
+        title: '住宿 - 札格達布', 
+        location: 'Zagreb', 
+        type: 'hotel', 
+        notes: 'Check-in', 
+        details: { intro: '抵達首都市區，安頓行李，準備稍作休息後出門探索。' } 
+      },
+      { 
+        id: 'zagreb-walk-eve', 
+        time: '17:00', 
+        title: '舊城區閒晃', 
+        location: 'Upper Town Zagreb', 
+        type: 'scene', 
+        notes: '主教座堂、石門、聖馬爾谷教堂', 
+        details: { 
+            intro: `【午後漫步】\n辦理入住後，趁著傍晚天色還亮，先到上城區感受古城氛圍。\n\n【推薦路線】\n1. 札格瑞布主教座堂 (Zagrebačka katedrala)：雙塔地標，雖然常在維修中，但依然壯觀。\n2. 石門 (Kamenita vrata)：這是通往上城區唯一僅存的中世紀城門。傳說中一場大火燒毀了城門，唯獨聖母畫像奇蹟般毫髮無傷，因此這裡成為了當地人的祈禱聖地，路過時常能見到點點燭光。\n3. 聖馬爾谷教堂 (Crkva sv. Marka)：傍晚遊客較少，可以更悠閒地欣賞屋頂上可愛的馬賽克拼貼徽章。`
+        } 
+      }
+    ]
+  },
+  '2025-05-26': {
+    dayTitle: '漫步｜經典散步路線',
+    events: [
+      { 
+        id: 'zagreb-walk-1', 
+        time: '09:00', 
+        title: '散步起點：Zrinjevac & Tomislav', 
+        location: 'Zrinjevac Park', 
+        type: 'scene', 
+        notes: '非常輕鬆、路面平坦的早晨散步', 
+        details: { intro: '【路線 1】\nZrinjevac Park → Art Pavilion → King Tomislav Square\n\n你會看到：\n● 公園中央噴泉\n● 樹林步道\n● 黃色外牆的 Art Pavilion\n● 遠處鐵道車站方向的城市開闊景' } 
+      },
+      { 
+        id: 'zagreb-walk-2', 
+        time: '10:00', 
+        title: 'Ban Jelačić Square', 
+        location: 'Ban Jelačić Square', 
+        type: 'scene', 
+        notes: '往北直走，Zagreb 最熱鬧的中心', 
+        details: { intro: '【路線 2】\nKing Tomislav Square → Ban Jelačić Square（主廣場）\n\n這段路最簡單，就是往北直走即可。耶拉契奇廣場是 Zagreb 最熱鬧的中心。' } 
+      },
+      { 
+        id: 'zagreb-market', 
+        time: '10:30', 
+        title: '朵拉茲市場 Dolac', 
+        location: 'Dolac Market', 
+        type: 'food', 
+        notes: '走上樓梯 20 秒即達紅傘市場', 
+        details: { 
+            intro: `【路線 3】\nBan Jelačić Square → Dolac Market\n\n● 導航：走上右後方的樓梯 20 秒即可到達紅傘市場，非常明顯。\n● 建議停留：約 20–40 分鐘。\n\n【景點介紹】\n朵拉茲市場自 1930 年開業以來，一直是札格瑞布的「肚臍」。\n\n【必看亮點】\n1. 紅色遮陽傘海：象徵當地的傳統。\n2. Kumica Barica 銅像：紀念頭頂菜籃的農婦。\n3. 室內區：別錯過室內的魚市場與起司區。`
+        } 
+      },
+      { 
+        id: 'zagreb-funicular', 
+        time: '11:30', 
+        title: 'Zagreb Funicular', 
+        location: 'Zagreb Funicular', 
+        type: 'scene', 
+        notes: '往南下坡 2-3 分鐘即達，世界最短纜車', 
+        details: {
+            intro: `【路線 4】\nDolac Market → Zagreb Funicular\n\n● 導航：從市場往南下坡 2–3 分鐘就到纜車入口。非常近，不會迷路。\n● 體驗：搭乘這座藍色小纜車上城，只需 64 秒。`
         }
-    </script>
+      },
+      { 
+        id: 'zagreb-tower', 
+        time: '11:50', 
+        title: 'Lotrščak Tower', 
+        location: 'Lotrščak Tower', 
+        type: 'history', 
+        notes: '纜車出口旁，準備聽 12:00 正午大砲', 
+        details: {
+            intro: `【路線 5】\n搭 Funicular 上城 → Lotrščak Tower\n\n● 導航：塔就在纜車出口旁 20 秒，非常好找。\n● 必看儀式：如果 12:00 正好在附近，可以聽正午大砲（很大聲！）。\n\n【景點介紹】\n這座建於13世紀的防禦塔樓，自1877年以來，每天中午 12:00 整都會發射加農砲報時。`
+        }
+      },
+      { 
+        id: 'zagreb-museum', 
+        time: '13:30', 
+        title: 'Museum of Lost Tales', 
+        location: 'Ilica 26, Zagreb', 
+        type: 'history', 
+        notes: '失落傳說博物館', 
+        details: { intro: '充滿奇幻氛圍的沉浸式博物館，展示克羅埃西亞的民間傳說與神話生物。' } 
+      },
+      { 
+        id: 'trans-ljubljana', 
+        time: '16:30', 
+        title: '前往盧比安納', 
+        location: 'Ljubljana', 
+        type: 'transport', 
+        notes: '跨境前往斯洛維尼亞', 
+        details: { intro: '車程約 2.5 小時，記得準備護照以備邊境檢查。' } 
+      },
+      { 
+        id: 'stay-ljubljana', 
+        time: '19:00', 
+        title: '住宿 - 盧比安納', 
+        location: 'Ljubljana', 
+        type: 'hotel', 
+        notes: '入住斯洛維尼亞首都', 
+        details: { intro: '抵達「飛龍之城」盧比安納。' } 
+      }
+    ]
+  },
+  '2025-05-27': {
+    dayTitle: '探索｜飛龍之城',
+    events: [
+      { id: 'ljubljana-square', time: '09:00', title: '普列舍仁廣場', location: 'Prešeren Square', type: 'scene', notes: '粉紅教堂與三橋', details: { intro: '盧比安納的核心，以詩人 Prešeren 命名。必看粉紅色的方濟各會教堂與普列赤尼克設計的三橋。' } },
+      { id: 'ljubljana-market', time: '09:30', title: '中央市場 & 教堂', location: 'Ljubljana Cathedral', type: 'history', notes: '參觀市場與銅門', details: { intro: '【聖尼各老主教座堂】必看兩扇銅門：描繪斯洛維尼亞基督教歷史的「斯洛維尼亞之門」與歷任主教頭像的「盧比安納之門」。' } },
+      { id: 'ljubljana-dragon', time: '10:30', title: '龍橋 Zmajski most', location: 'Dragon Bridge', type: 'scene', notes: '必拍飛龍地標', details: { intro: '傳說希臘英雄傑森在此擊敗巨龍。這座建於1901年的橋樑上有四隻青銅翼龍，是城市守護象徵。' } },
+      { id: 'ljubljana-castle', time: '11:30', title: '盧比安納城', location: 'Ljubljana Castle', type: 'history', notes: '搭纜車或徒步上城堡', details: { intro: '搭乘玻璃纜車上山，俯瞰紅瓦屋頂與遠處阿爾卑斯山。' } },
+      { id: 'ljubljana-plecnik', time: '14:30', title: 'Plečnik House', location: 'Plečnik House', type: 'history', notes: '建築大師故居', details: { intro: '參觀建築大師 Jože Plečnik 的故居，了解他如何塑造了這座城市的樣貌。' } },
+      { id: 'ljubljana-walk', time: '16:30', title: '河岸散步', location: 'Cankarjevo nabrežje', type: 'scene', notes: '享受河岸咖啡與悠閒氛圍', details: { intro: '傍晚時分，在 Ljubljanica 河岸找家咖啡廳，享受慢活時光。' } }
+    ]
+  },
+  '2025-05-28': {
+    dayTitle: '移動｜前往布萊德',
+    events: [
+      { id: 'move-bled', time: '10:00', title: '前往布萊德', location: 'Bled', type: 'transport', notes: '移動日，車程約 1 小時', details: { intro: '前往阿爾卑斯山腳下的度假勝地布萊德湖。' } },
+      { id: 'stay-bled', time: '14:00', title: '住宿 - 布萊德', location: 'Bled', type: 'hotel', notes: 'Check-in 享受湖光山色', details: { intro: '入住布萊德湖畔。' } },
+      { id: 'bled-relax', time: '15:30', title: '湖畔自由活動', location: 'Lake Bled', type: 'food', notes: '必吃布萊德奶油蛋糕', details: { intro: '【必吃美食：Kremšnita】\n推薦到發源地 Hotel Park 的 Kavarna Park 咖啡廳，品嚐正宗的布萊德奶油蛋糕 (Bled Cream Cake)，享受湖景下午茶。' } }
+    ]
+  },
+  '2025-05-29': {
+    dayTitle: '仙境｜布萊德湖',
+    events: [
+      { id: 'bled-vintgar', time: '08:30', title: '文特加峽谷', location: 'Vintgar Gorge', type: 'scene', notes: '早晨光線最美' },
+      { id: 'bled-castle', time: '11:00', title: '布萊德城堡', location: 'Bled Castle', type: 'history', notes: '懸崖上俯瞰湖景' },
+      { id: 'bled-island', time: '13:30', title: '聖母升天教堂', location: 'Lake Bled Island', type: 'history', notes: '搭乘 Pletna 手搖船' },
+      { id: 'bled-view', time: '17:00', title: '觀景台', location: 'Ojstrica Viewpoint', type: 'scene', notes: '攝影最佳角度' }
+    ]
+  },
+  '2025-05-30': {
+    dayTitle: '奇景｜溶洞與城堡',
+    events: [
+      { id: 'vogel', time: '08:30', title: '沃格爾纜車', location: 'Vogel Ski Center', type: 'scene', notes: '登高望遠' },
+      { id: 'bohinj', time: '10:00', title: '博希尼湖', location: 'Lake Bohinj', type: 'scene', notes: '寧靜的冰蝕湖' },
+      { id: 'postojna', time: '14:00', title: '波斯托伊納洞', location: 'Postojna Cave', type: 'scene', notes: '搭小火車進溶洞' },
+      { id: 'predjama', time: '16:00', title: '洞窟城堡', location: 'Predjama Castle', type: 'history', notes: '世界最大洞穴城堡' },
+      { id: 'stay-rovinj', time: '18:00', title: '住宿 - 羅維尼', location: 'Rovinj', type: 'hotel', notes: 'Check-in' }
+    ]
+  },
+  '2025-05-31': {
+    dayTitle: '穿越｜普拉競技場',
+    events: [
+      { id: 'pula-drive', time: '09:00', title: '前往普拉', location: 'Pula', type: 'transport', notes: '車程約 40 分鐘' },
+      { id: 'pula-arena', time: '10:00', title: '普拉競技場', location: 'Pula Arena', type: 'history', notes: '羅馬圓形劇場' },
+      { id: 'pula-temple', time: '11:30', title: '奧古斯都神廟', location: 'Temple of Augustus', type: 'history', notes: '羅馬古蹟' },
+      { id: 'pula-arch', time: '12:30', title: '塞爾吉烏斯凱旋門', location: 'Arch of the Sergii', type: 'history', notes: '普拉古城門' },
+      { id: 'rovinj-back', time: '15:00', title: '返回羅維尼', location: 'Rovinj', type: 'scene', notes: '享受夕陽晚餐' }
+    ]
+  },
+  '2025-06-01': {
+    dayTitle: '秘境｜水車村',
+    events: [
+      { id: 'rovinj-view', time: '11:00', title: 'Panorama 全景', location: 'Rovinj', type: 'scene', notes: '欣賞海港舊城' },
+      { id: 'rovinj-church', time: '11:30', title: '聖尤菲米亞教堂', location: 'Church of St. Euphemia', type: 'history', notes: '地標鐘塔' },
+      { id: 'drive-rastoke', time: '14:00', title: '前往水車村', location: 'Rastoke', type: 'transport', notes: '車程較長' },
+      { id: 'rastoke', time: '18:00', title: '水車村', location: 'Rastoke', type: 'scene', notes: '瀑布與小屋' },
+      { id: 'stay-plitvice', time: '19:30', title: '住宿 - 十六湖', location: 'Plitvice Lakes', type: 'hotel', notes: '住在國家公園旁' }
+    ]
+  },
+  '2025-06-02': {
+    dayTitle: '絕景｜十六湖',
+    events: [
+      { id: 'plitvice-enter', time: '08:00', title: '十六湖國家公園', location: 'Plitvice Lakes', type: 'scene', notes: '全日遊覽' },
+      { id: 'move-zadar', time: '16:00', title: '前往札達爾', location: 'Zadar', type: 'transport', notes: '前往海岸' },
+      { id: 'stay-zadar', time: '18:00', title: '住宿 - 札達爾', location: 'Zadar', type: 'hotel', notes: 'Check-in' }
+    ]
+  },
+  '2025-06-03': {
+    dayTitle: '古韻｜夕陽海風琴',
+    events: [
+      { id: 'zadar-wells', time: '09:00', title: '五井廣場', location: 'Five Wells Square', type: 'history', notes: '古城巡禮' },
+      { id: 'zadar-donatus', time: '09:30', title: '聖多那教堂', location: 'Church of St. Donatus', type: 'history', notes: '圓形教堂地標' },
+      { id: 'krka-np', time: '11:00', title: '克爾卡國家公園', location: 'Krka National Park', type: 'scene', notes: '著名的瀑布' },
+      { id: 'move-split', time: '15:00', title: '前往斯普利特', location: 'Split', type: 'transport', notes: '前往第二大城' },
+      { id: 'split-palace', time: '16:30', title: '戴克里先皇宮', location: 'Diocletian\'s Palace', type: 'history', notes: '整座舊城就是皇宮' },
+      { id: 'split-cath', time: '17:30', title: '斯普利特主教座堂', location: 'Cathedral of Saint Domnius', type: 'history', notes: '登頂看風景' }
+    ]
+  },
+  '2025-06-04': {
+    dayTitle: '陽光｜赫瓦爾島',
+    events: [
+      { id: 'ferry-hvar', time: '09:00', title: '搭船前往赫瓦爾', location: 'Hvar', type: 'ship', notes: '跳島之旅' },
+      { id: 'hvar-fort', time: '10:30', title: '赫瓦爾堡壘', location: 'Fortica', type: 'history', notes: '俯瞰港口' },
+      { id: 'hvar-town', time: '12:00', title: '赫瓦爾城鎮觀光', location: 'Hvar Town', type: 'scene', notes: '聖史蒂芬廣場' },
+      { id: 'ferry-back', time: '16:00', title: '返回斯普利特', location: 'Split', type: 'ship', notes: '結束跳島' }
+    ]
+  },
+  '2025-06-05': {
+    dayTitle: '異域｜莫斯塔爾',
+    events: [
+      { id: 'move-mostar', time: '09:00', title: '前往莫斯塔爾', location: 'Mostar', type: 'transport', notes: '跨境前往波赫' },
+      { id: 'mostar-checkin', time: '12:00', title: '住宿 - Mostar', location: 'Mostar', type: 'hotel', notes: 'Check-in' },
+      { id: 'mostar-bridge', time: '13:30', title: '莫斯塔爾古橋', location: 'Stari Most', type: 'history', notes: '看跳水表演' },
+      { id: 'mostar-bazaar', time: '15:00', title: '舊市集', location: 'Old Bazaar', type: 'scene', notes: '土耳其風情' }
+    ]
+  },
+  '2025-06-06': {
+    dayTitle: '歷史｜塞拉耶佛',
+    events: [
+      { id: 'move-sarajevo', time: '09:00', title: '前往塞拉耶佛', location: 'Sarajevo', type: 'transport', notes: '前往波士尼亞首都' },
+      { id: 'stay-sarajevo', time: '12:30', title: '住宿 - 塞拉耶佛', location: 'Sarajevo', type: 'hotel', notes: '入住' },
+      { id: 'sarajevo-start', time: '14:00', title: '市區初探', location: 'Sarajevo', type: 'scene', notes: '東西文化交融' }
+    ]
+  },
+  '2025-06-07': {
+    dayTitle: '印記｜舊城漫步',
+    events: [
+      { id: 'sarajevo-old', time: '09:30', title: '巴什察爾希亞市集', location: 'Baščaršija', type: 'history', notes: '塞畢理噴泉' },
+      { id: 'sarajevo-bridge', time: '11:00', title: '拉丁橋', location: 'Latin Bridge', type: 'history', notes: '一次大戰導火線' },
+      { id: 'sarajevo-cable', time: '14:00', title: 'Trebević 纜車', location: 'Trebević Cable Car', type: 'scene', notes: '俯瞰全景' }
+    ]
+  },
+  '2025-06-08': {
+    dayTitle: '峽灣｜科托爾',
+    events: [
+      { id: 'move-kotor', time: '08:00', title: '前往科托爾', location: 'Kotor', type: 'transport', notes: '前往蒙特內哥羅' },
+      { id: 'stay-kotor', time: '14:00', title: '住宿 - 科托爾', location: 'Kotor', type: 'hotel', notes: '入住峽灣古城' },
+      { id: 'kotor-walk', time: '16:00', title: '古城漫步', location: 'Kotor Old Town', type: 'scene', notes: '貓咪與石板路' }
+    ]
+  },
+  '2025-06-09': {
+    dayTitle: '登高｜最美峽灣',
+    events: [
+      { id: 'kotor-hike', time: '08:30', title: '科托爾城牆健行', location: 'City Walls', type: 'scene', notes: '早起爬牆' },
+      { id: 'kotor-bay', time: '14:00', title: '科托爾灣巡遊', location: 'Bay of Kotor', type: 'ship', notes: '搭船遊湖' }
+    ]
+  },
+  '2025-06-10': {
+    dayTitle: '權遊｜君臨城',
+    events: [
+      { id: 'kotor-church', time: '09:30', title: '修道院', location: 'Franciscan Monastery', type: 'history', notes: '參觀' },
+      { id: 'move-dub', time: '11:00', title: '前往杜布羅夫尼克', location: 'Dubrovnik', type: 'transport', notes: '前往君臨城' },
+      { id: 'stay-dub', time: '14:00', title: '住宿 - 杜布羅夫尼克', location: 'Dubrovnik', type: 'hotel', notes: 'Check-in' },
+      { id: 'dub-cable', time: '16:30', title: 'Srd 山纜車', location: 'Mount Srd', type: 'scene', notes: '看夕陽' }
+    ]
+  },
+  '2025-06-11': {
+    dayTitle: '漫步｜君臨城巡禮',
+    events: [
+      { id: 'dub-walls', time: '08:30', title: '城牆漫步', location: 'City Walls', type: 'history', notes: '避開曝曬' },
+      { id: 'dub-fort', time: '11:00', title: '羅維里耶奈克要塞', location: 'Lovrijenac', type: 'history', notes: '紅堡取景地' },
+      { id: 'dub-oldtown', time: '12:30', title: '史特拉敦大道', location: 'Stradun', type: 'scene', notes: '午餐與購物' },
+      { id: 'dub-relax', time: '16:00', title: 'Banje Beach', location: 'Banje Beach', type: 'scene', notes: '海灘放鬆' }
+    ]
+  },
+  '2025-06-12': {
+    dayTitle: '告別｜前往機場',
+    events: [
+      { id: 'flight-checkin', time: 'Check-out', title: '退房前往機場', location: 'Dubrovnik Airport', type: 'transport', notes: '辦理退稅' },
+      { id: 'flight-back', time: '15:20', title: '航班返程', location: 'Dubrovnik Airport', type: 'flight', notes: 'EK2075 (flydubai)', details: { intro: '飛往杜拜轉機。' } }
+    ]
+  },
+  '2025-06-13': {
+    dayTitle: '歸途｜甜蜜家園',
+    events: [
+      { id: 'home', time: 'Arrival', title: '抵達台灣', location: 'TPE Airport', type: 'home', notes: 'EK366 抵達', details: { intro: '平安抵達溫暖的家。' } }
+    ]
+  }
+};
 
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+// --- 元件區 ---
 
-    <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide-react.js"></script>
+const WeatherWidget = ({ dayIndex }) => {
+  const weatherTypes = ['sunny', 'cloudy', 'sunny', 'rainy', 'sunny', 'cloudy', 'sunny'];
+  const type = weatherTypes[dayIndex % weatherTypes.length];
+  const info = mockWeather[type];
 
-    <style>
+  return (
+    <div className="flex items-center gap-2 bg-white/70 backdrop-blur-md rounded-full px-3 py-1.5 shadow-sm border border-[#8FA598]/20 flex-shrink-0">
+      <span className="text-sm font-bold text-[#6B7280] tracking-tight">{info.temp}</span>
+      <div className="opacity-90">
+          {info.icon}
+      </div>
+    </div>
+  );
+};
+
+// --- 詳細頁面元件 ---
+const DetailView = ({ event, onBack }) => {
+  if (!event) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 bg-[#FDFCF5] overflow-y-auto animate-fade-in-up pb-20">
+      
+      {/* 簡約頂部導航列 */}
+      <div className="sticky top-0 z-20 flex items-center justify-between px-4 py-3 bg-[#FDFCF5]/95 backdrop-blur-sm border-b border-gray-100/50 shadow-sm">
+        <button 
+          onClick={onBack}
+          className="p-2 bg-white rounded-full shadow-sm border border-gray-100 active:scale-95 transition-transform text-gray-600"
+        >
+          <ArrowLeft size={20} />
+        </button>
+        
+        {/* 標題置中 */}
+        <h2 className="flex-1 text-center text-lg font-serif font-bold text-[#4A4A4A] px-2 truncate leading-tight">
+          {event.title}
+        </h2>
+        
+        {/* 佔位符 */}
+        <div className="w-9"></div>
+      </div>
+
+      <div className="p-6 space-y-6 pt-6">
+        
+        {/* 行程資訊 (時間、地點) */}
+        <div className="flex justify-center gap-4 items-center text-sm text-gray-600">
+          <div className="flex items-center gap-1 bg-[#E8E0D5] px-3 py-1 rounded-full text-[#4A4A4A] font-bold">
+            <Clock size={14} />
+            <span>{event.time}</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <MapPin size={14} />
+            <span>{event.location}</span>
+          </div>
+        </div>
+
+        {/* 文字內容 - 支援換行 */}
+        <div className="prose prose-stone mx-auto">
+          <p className="text-gray-600 leading-relaxed text-justify whitespace-pre-line">
+            {event.details?.intro ? event.details.intro : event.notes}
+          </p>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+// --- 記帳小工具 ---
+const ExpenseTracker = () => {
+  const [expenses, setExpenses] = useState([
+    { id: 1, title: '機場咖啡', amount: 150 },
+    { id: 2, title: '網卡 (eSIM)', amount: 500 },
+  ]);
+  const [inputTitle, setInputTitle] = useState('');
+  const [inputAmount, setInputAmount] = useState('');
+
+  const handleAddExpense = () => {
+    if (!inputTitle || !inputAmount) return;
+    const newExpense = {
+      id: Date.now(),
+      title: inputTitle,
+      amount: Number(inputAmount)
+    };
+    setExpenses([...expenses, newExpense]);
+    setInputTitle('');
+    setInputAmount('');
+  };
+
+  const handleDeleteExpense = (id) => {
+    setExpenses(expenses.filter(item => item.id !== id));
+  };
+
+  const totalAmount = expenses.reduce((sum, item) => sum + item.amount, 0);
+
+  return (
+    <div className="bg-white p-6 rounded-2xl shadow-sm border border-[#E8E0D5]">
+      <h3 className="font-serif text-xl text-[#4A4A4A] mb-4 flex items-center gap-2">
+        <Wallet className="text-[#8FA598]" /> 旅費記帳本
+      </h3>
+      
+      {/* 總金額顯示 */}
+      <div className="bg-[#FDFCF5] p-4 rounded-xl mb-4 flex justify-between items-center border border-[#E8E0D5]">
+        <span className="text-sm text-gray-500 font-bold">目前總花費</span>
+        <span className="text-2xl font-bold text-[#8FA598]">NT$ {totalAmount.toLocaleString()}</span>
+      </div>
+
+      {/* 記帳列表 */}
+      <div className="space-y-2 mb-4 max-h-40 overflow-y-auto pr-1">
+        {expenses.length > 0 ? (
+          expenses.map(item => (
+            <div key={item.id} className="flex justify-between items-center text-sm border-b border-gray-50 pb-2 last:border-0">
+              <span className="text-gray-700">{item.title}</span>
+              <div className="flex items-center gap-3">
+                <span className="font-mono text-gray-500 font-medium">${item.amount}</span>
+                <button onClick={() => handleDeleteExpense(item.id)} className="text-gray-300 hover:text-red-400">
+                  <Trash2 size={14} />
+                </button>
+              </div>
+            </div>
+          ))
+        ) : (
+          <p className="text-center text-xs text-gray-400 py-2">尚未新增任何花費</p>
+        )}
+      </div>
+
+      {/* 新增輸入框 */}
+      <div className="flex gap-2">
+        <input 
+          type="text" 
+          placeholder="項目" 
+          value={inputTitle}
+          onChange={(e) => setInputTitle(e.target.value)}
+          className="w-full bg-gray-50 border border-gray-100 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#8FA598]"
+        />
+        <input 
+          type="number" 
+          placeholder="$" 
+          value={inputAmount}
+          onChange={(e) => setInputAmount(e.target.value)}
+          className="w-20 bg-gray-50 border border-gray-100 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#8FA598]"
+        />
+        <button 
+          onClick={handleAddExpense}
+          className="bg-[#8FA598] text-white rounded-lg px-3 flex items-center justify-center hover:bg-[#7D9386] transition-colors"
+        >
+          <Plus size={18} />
+        </button>
+      </div>
+    </div>
+  );
+};
+
+// 圖示邏輯
+const TypeIcon = ({ type }) => {
+    const className = "w-5 h-5 text-white";
+    let bgClass = "bg-[#8FA598]"; // Default Green
+    let icon = <MapPin className={className} />;
+  
+    switch(type) {
+      case 'flight': 
+        bgClass = "bg-[#9DB4C0]"; // Blue
+        icon = <Plane className={className} />;
+        break;
+      case 'food':
+        bgClass = "bg-[#C6B3B3]"; // Rose
+        icon = <Utensils className={className} />;
+        break;
+      case 'history':
+        bgClass = "bg-[#B5A89E]"; // Brownish
+        icon = <History className={className} />;
+        break;
+      case 'scene':
+        bgClass = "bg-[#8FA598]"; // Green
+        icon = <Camera className={className} />;
+        break;
+      case 'home':
+        bgClass = "bg-[#4A4A4A]"; // Dark
+        icon = <Luggage className={className} />;
+        break;
+      case 'hotel':
+        bgClass = "bg-[#D4A373]"; // Wood/Brown
+        icon = <Hotel className={className} />;
+        break;
+      case 'transport':
+        bgClass = "bg-[#6B705C]"; // Olive
+        icon = <Train className={className} />;
+        break;
+      case 'ship':
+        bgClass = "bg-[#457B9D]"; // Deep Blue
+        icon = <Ship className={className} />;
+        break;
+      case 'arrival':
+        bgClass = "bg-[#4A4A4A]";
+        icon = <Plane className={className} />;
+        break;
+    }
+  
+    return (
+      <div className={`${bgClass} w-10 h-10 rounded-full flex items-center justify-center shadow-sm shrink-0`}>
+        {icon}
+      </div>
+    );
+  };
+
+// 主頁面 - 旅遊資訊頁
+const InfoPage = () => {
+  return (
+    <div className="p-6 space-y-8 animate-fade-in pb-24">
+      
+      {/* 記帳模組 */}
+      <ExpenseTracker />
+
+      <div className="bg-white p-6 rounded-2xl shadow-sm border border-[#E8E0D5]">
+        <h3 className="font-serif text-xl text-[#4A4A4A] mb-4 flex items-center gap-2">
+          <Plane className="text-[#9DB4C0]" /> 航班資訊 (阿聯酋航空)
+        </h3>
+        <div className="space-y-4">
+          <div className="border-l-2 border-[#9DB4C0] pl-4">
+            <p className="text-xs text-gray-500">去程 5/24</p>
+            <p className="font-bold text-gray-800">TPE (23:05) - DXB</p>
+            <p className="text-sm text-gray-600">EK367</p>
+          </div>
+          <div className="border-l-2 border-[#9DB4C0] pl-4">
+            <p className="text-xs text-gray-500">去程轉機 5/25</p>
+            <p className="font-bold text-gray-800">DXB - ZAG (13:30 抵達)</p>
+            <p className="text-sm text-gray-600">EK2012 (flydubai)</p>
+          </div>
+          <hr className="border-dashed border-gray-200" />
+          <div className="border-l-2 border-[#8FA598] pl-4">
+            <p className="text-xs text-gray-500">回程 6/12</p>
+            <p className="font-bold text-gray-800">DBV - DXB</p>
+            <p className="text-sm text-gray-600">EK2075 (flydubai)</p>
+          </div>
+          <div className="border-l-2 border-[#8FA598] pl-4">
+            <p className="text-xs text-gray-500">回程轉機 6/13</p>
+            <p className="font-bold text-gray-800">DXB - TPE</p>
+            <p className="text-sm text-gray-600">EK366</p>
+          </div>
+        </div>
+      </div>
+      
+       <div className="bg-white p-6 rounded-2xl shadow-sm border border-[#E8E0D5]">
+        <h3 className="font-serif text-xl text-[#4A4A4A] mb-4 flex items-center gap-2">
+            <Hotel className="text-[#D4A373]" /> 住宿概覽
+        </h3>
+        <ul className="text-sm text-gray-600 space-y-3 list-none pl-1">
+            <li>
+                <span className="font-bold text-[#4A4A4A]">克羅埃西亞</span>
+                <ul className="pl-3 border-l-2 border-gray-200 mt-1 space-y-1 text-gray-500">
+                    <li>📍 札格瑞布 - 1晚 (5/25-5/26)</li>
+                    <li>📍 羅維尼 - 2晚 (5/30-6/01)</li>
+                    <li>📍 十六湖 - 1晚 (6/01-6/02)</li>
+                    <li>📍 札達爾 - 1晚 (6/02-6/03)</li>
+                    <li>📍 斯普利特 - 2晚 (6/03-6/05)</li>
+                    <li>📍 杜布羅夫尼克 - 2晚 (6/10-6/12)</li>
+                </ul>
+            </li>
+            <li>
+                <span className="font-bold text-[#4A4A4A]">斯洛維尼亞</span>
+                <ul className="pl-3 border-l-2 border-gray-200 mt-1 space-y-1 text-gray-500">
+                    <li>📍 盧比安納 - 2晚 (5/26-5/28)</li>
+                    <li>📍 布萊德 - 2晚 (5/28-5/30)</li>
+                </ul>
+            </li>
+            <li>
+                <span className="font-bold text-[#4A4A4A]">波赫 (波士尼亞與赫塞哥維納)</span>
+                <ul className="pl-3 border-l-2 border-gray-200 mt-1 space-y-1 text-gray-500">
+                    <li>📍 Mostar - 1晚 (6/05-6/06)</li>
+                    <li>📍 塞拉耶佛 - 2晚 (6/06-6/08)</li>
+                </ul>
+            </li>
+            <li>
+                <span className="font-bold text-[#4A4A4A]">蒙特內哥羅 (黑山)</span>
+                <ul className="pl-3 border-l-2 border-gray-200 mt-1 space-y-1 text-gray-500">
+                    <li>📍 科托爾 - 2晚 (6/08-6/10)</li>
+                </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default function App() {
+  const [selectedDateStr, setSelectedDateStr] = useState('2025-05-24');
+  const [activeTab, setActiveTab] = useState('itinerary'); 
+  const [selectedEvent, setSelectedEvent] = useState(null);
+  
+  const dateScrollRef = useRef(null);
+  const dayData = itineraryDatabase[selectedDateStr] || {};
+  const currentEvents = dayData.events || [];
+  const currentDayTitle = dayData.dayTitle || 'Enjoy your trip!';
+  const currentDayIndex = tripDates.findIndex(d => d.dateStr === selectedDateStr);
+  
+  const handleEventClick = (event) => setSelectedEvent(event);
+  const handleBack = () => setSelectedEvent(null);
+
+  return (
+    <div className="w-full max-w-md mx-auto h-screen bg-[#FDFCF5] flex flex-col font-sans text-[#4A4A4A] overflow-hidden relative shadow-2xl">
+      <header className="pt-8 pb-2 px-6 bg-[#FDFCF5] z-10">
+        <div className="flex justify-between items-end mb-1">
+          <div>
+            <h1 className="text-2xl font-serif font-bold text-[#4A4A4A]">西巴爾幹半島</h1>
+            <p className="text-sm text-[#8FA598] tracking-widest uppercase">My Journey</p>
+          </div>
+        </div>
+      </header>
+
+      <div className="flex-1 overflow-hidden relative pb-[80px]"> 
+        {activeTab === 'itinerary' && (
+            <>
+                <div className="mb-2 w-full">
+                    <div 
+                        ref={dateScrollRef}
+                        className="flex overflow-x-auto w-full scrollbar-hide snap-x"
+                        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                    >
+                        {tripDates.map((item, index) => {
+                            const isSelected = item.dateStr === selectedDateStr;
+                            const cityName = cityMap[item.dateStr] || '';
+                            
+                            return (
+                                <button
+                                    key={item.dateStr}
+                                    onClick={() => setSelectedDateStr(item.dateStr)}
+                                    className={`flex-shrink-0 snap-center min-w-[4.5rem] h-16 flex flex-col items-center justify-center transition-all duration-300 border-r border-b border-t border-gray-200 relative overflow-hidden ${
+                                        isSelected 
+                                            ? 'bg-[#4A4A4A] text-white border-[#4A4A4A] z-10' 
+                                            : 'bg-white text-gray-400 border-gray-100 hover:bg-gray-50'
+                                    }`}
+                                >
+                                    <div className="flex flex-col items-center justify-center h-full w-full pb-3">
+                                        <span className="text-[10px] font-medium leading-tight">Day {item.dayNum}</span>
+                                        <span className={`text-base font-bold leading-tight ${isSelected ? 'text-[#FDFCF5]' : 'text-gray-700'}`}>
+                                            {item.displayDate}
+                                        </span>
+                                    </div>
+                                    
+                                    <div className={`absolute bottom-0 left-0 right-0 w-full text-center py-0.5 text-[9px] font-medium truncate px-1 ${
+                                        isSelected ? 'bg-[#8FA598] text-white' : 'bg-gray-100 text-gray-500'
+                                    }`}>
+                                        {cityName}
+                                    </div>
+                                </button>
+                            );
+                        })}
+                    </div>
+                </div>
+
+                <div className="flex-1 overflow-y-auto px-6 h-full pb-6">
+                    <div className="flex justify-between items-center mb-4 px-1 sticky top-0 bg-[#FDFCF5] z-10 py-2">
+                      <h2 className="font-serif font-bold text-lg text-[#4A4A4A] leading-tight flex-1 mr-2">
+                        {currentDayTitle}
+                      </h2>
+                      <WeatherWidget dayIndex={currentDayIndex} />
+                    </div>
+
+                    <div className="space-y-4">
+                        {currentEvents.length > 0 ? (
+                            currentEvents.map((event, index) => (
+                                <div 
+                                    key={event.id}
+                                    onClick={() => handleEventClick(event)}
+                                    className="group bg-white rounded-2xl p-4 shadow-sm border border-gray-50 flex gap-4 items-center active:scale-[0.98] transition-all cursor-pointer relative overflow-hidden"
+                                >
+                                    <div className={`absolute left-0 top-0 bottom-0 w-1 ${
+                                        index % 2 === 0 ? 'bg-[#8FA598]' : 'bg-[#C6B3B3]'
+                                    }`}></div>
+
+                                    <div className="flex flex-col items-center gap-2 mr-2 min-w-[3rem]">
+                                        <TypeIcon type={event.type} />
+                                        <span className="text-[10px] font-bold text-[#8FA598] font-mono text-center leading-tight">
+                                            {event.time}
+                                        </span>
+                                    </div>
+                                    
+                                    <div className="flex-1 min-w-0 pr-2">
+                                        <div className="flex justify-between items-start mb-1">
+                                            <h3 className="font-bold text-gray-800 truncate pr-2">{event.title}</h3>
+                                        </div>
+                                        
+                                        <p className="text-sm text-gray-500 line-clamp-2 leading-relaxed">
+                                            {event.notes}
+                                        </p>
+                                    </div>
+                                    
+                                    {/* 右側地圖按鈕 - 改為 MapPin 圖示 */}
+                                    <button
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        const query = event.location === 'To Ljubljana' ? 'Ljubljana Station' : event.location;
+                                        window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`, '_blank');
+                                      }}
+                                      className="p-3 text-gray-400 hover:text-[#8FA598] hover:bg-gray-100 rounded-full transition-all z-10 shrink-0"
+                                      aria-label="在 Google Maps 開啟"
+                                    >
+                                      <MapPin size={20} />
+                                    </button>
+                                </div>
+                            ))
+                        ) : (
+                            <div className="text-center py-20 text-gray-400">
+                                <Coffee className="w-12 h-12 mx-auto mb-4 text-[#E8E0D5]" />
+                                <p>本日無特定行程，<br/>享受自由的漫步時光吧！</p>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </>
+        )}
+
+        {activeTab === 'info' && (
+            <div className="h-full overflow-y-auto pb-6">
+                <InfoPage />
+            </div>
+        )}
+      </div>
+      
+      {/* 底部導航列 (Bottom Navigation Bar) */}
+      <div className="absolute bottom-0 w-full bg-white border-t border-gray-200 shadow-[0_-5px_15px_rgba(0,0,0,0.05)] z-20 flex justify-around items-center safe-area-pb">
+        <button 
+            onClick={() => setActiveTab('itinerary')}
+            className={`flex-1 py-3 flex flex-col items-center gap-1 transition-all active:scale-95 ${activeTab === 'itinerary' ? 'text-[#8FA598]' : 'text-gray-400'}`}
+        >
+            <Calendar size={24} strokeWidth={activeTab === 'itinerary' ? 2.5 : 2} />
+            <span className="text-[10px] font-bold">每日行程</span>
+        </button>
+        
+        <div className="w-px h-8 bg-gray-100"></div>
+
+        <button 
+            onClick={() => setActiveTab('info')}
+            className={`flex-1 py-3 flex flex-col items-center gap-1 transition-all active:scale-95 ${activeTab === 'info' ? 'text-[#9DB4C0]' : 'text-gray-400'}`}
+        >
+            <BookOpen size={24} strokeWidth={activeTab === 'info' ? 2.5 : 2} />
+            <span className="text-[10px] font-bold">旅遊資訊</span>
+        </button>
+      </div>
+
+      {selectedEvent && (
+        <DetailView event={selectedEvent} onBack={handleBack} />
+      )}
+      
+      <style>{`
+        @keyframes fade-in-up {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+          animation: fade-in-up 0.3s ease-out forwards;
+        }
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fade-in {
+            animation: fade-in 0.3s ease-out forwards;
+        }
         .scrollbar-hide::-webkit-scrollbar {
             display: none;
         }
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
+        .safe-area-pb {
+            padding-bottom: env(safe-area-inset-bottom, 10px);
         }
-        body {
-            background-color: #FDFCF5; /* 避免加載時閃爍 */
-        }
-    </style>
-</head>
-<body>
-    <div id="root"></div>
+      `}</style>
+    </div>
+  );
+}
 
-    <script type="text/babel">
-        // --- 1. 轉換 Imports ---
-        const { useState, useEffect, useRef } = React;
-        const { 
-            MapPin, Sun, Cloud, CloudRain, ArrowLeft, Plane, Info, Calendar, 
-            Camera, Coffee, Utensils, History, Map, ChevronRight, Luggage, 
-            Hotel, Train, Ship, Clock, BookOpen, Wallet, Plus, Trash2, Navigation 
-        } = lucideReact;
-
-        // --- 2. 資料結構與工具函式 ---
-
-        const generateDateRange = (startStr, endStr) => {
-            const dates = [];
-            let curr = new Date(startStr);
-            const end = new Date(endStr);
-            let dayCount = 1;
-            while (curr <= end) {
-                dates.push({
-                    dateObj: new Date(curr),
-                    dateStr: curr.toISOString().split('T')[0],
-                    dayNum: dayCount,
-                    weekday: curr.toLocaleDateString('zh-TW', { weekday: 'short' }),
-                    displayDate: `${curr.getMonth() + 1}/${curr.getDate()}`
-                });
-                curr.setDate(curr.getDate() + 1);
-                dayCount++;
-            }
-            return dates;
-        };
-
-        const tripDates = generateDateRange('2025-05-24', '2025-06-13');
-
-        // 主要城市對照表
-        const cityMap = {
-            '2025-05-24': '台北',
-            '2025-05-25': '札格瑞布',
-            '2025-05-26': '札格瑞布',
-            '2025-05-27': '盧比安納',
-            '2025-05-28': '布萊德',
-            '2025-05-29': '布萊德',
-            '2025-05-30': '羅維尼',
-            '2025-05-31': '普拉',
-            '2025-06-01': '十六湖',
-            '2025-06-02': '札達爾',
-            '2025-06-03': '斯普利特',
-            '2025-06-04': '赫瓦爾',
-            '2025-06-05': '莫斯塔爾',
-            '2025-06-06': '塞拉耶佛',
-            '2025-06-07': '塞拉耶佛',
-            '2025-06-08': '科托爾',
-            '2025-06-09': '科托爾',
-            '2025-06-10': '杜布羅夫尼克',
-            '2025-06-11': '杜布羅夫尼克',
-            '2025-06-12': '返程',
-            '2025-06-13': '台北'
-        };
-
-        const mockWeather = {
-            sunny: { icon: <Sun className="w-5 h-5 text-orange-400" />, temp: "24°C" },
-            cloudy: { icon: <Cloud className="w-5 h-5 text-gray-400" />, temp: "22°C" },
-            rainy: { icon: <CloudRain className="w-5 h-5 text-blue-400" />, temp: "19°C" },
-        };
-
-        // *** 行程資料庫 ***
-        const itineraryDatabase = {
-            '2025-05-24': {
-                dayTitle: '啟程｜飛向巴爾幹',
-                events: [
-                    { id: 'flight-tpe-zag', time: '23:05', title: '台北 - 杜拜 (轉機)', location: '桃園國際機場', type: 'flight', notes: '阿聯酋航空 EK367', details: { intro: '23:05 TPE 出發 -> 04:40 DXB 抵達 (轉機)。' } }
-                ]
-            },
-            '2025-05-25': {
-                dayTitle: '初見｜札格瑞布',
-                events: [
-                    { id: 'flight-zag-arr', time: '13:30', title: '抵達札格瑞布', location: 'Zagreb Airport', type: 'arrival', notes: '航班 EK2012 抵達', details: { intro: '從杜拜轉機飛往札格瑞布。' } },
-                    { id: 'car-rental', time: '15:00', title: '租車取車', location: 'Zagreb Airport', type: 'transport', notes: '辦理租車手續', details: { intro: '取車時請務必檢查車身外觀刮痕並拍照留底，確認保險涵蓋範圍。' } },
-                    { id: 'stay-zagreb', time: '16:00', title: '住宿 - 札格達布', location: 'Zagreb', type: 'hotel', notes: 'Check-in', details: { intro: '抵達首都市區，安頓行李，準備稍作休息後出門探索。' } },
-                    { id: 'zagreb-walk-eve', time: '17:00', title: '舊城區閒晃', location: 'Upper Town Zagreb', type: 'scene', notes: '主教座堂、石門、聖馬爾谷教堂', details: { intro: `【午後漫步】\n辦理入住後，趁著傍晚天色還亮，先到上城區感受古城氛圍。\n\n【推薦路線】\n1. 札格瑞布主教座堂 (Zagrebačka katedrala)：雙塔地標，雖然常在維修中，但依然壯觀。\n2. 石門 (Kamenita vrata)：這是通往上城區唯一僅存的中世紀城門。傳說中一場大火燒毀了城門，唯獨聖母畫像奇蹟般毫髮無傷，因此這裡成為了當地人的祈禱聖地，路過時常能見到點點燭光。\n3. 聖馬爾谷教堂 (Crkva sv. Marka)：傍晚遊客較少，可以更悠閒地欣賞屋頂上可愛的馬賽克拼貼徽章。` } }
-                ]
-            },
-            '2025-05-26': {
-                dayTitle: '漫步｜經典散步路線',
-                events: [
-                    { id: 'zagreb-walk-1', time: '09:00', title: '散步起點：Zrinjevac & Tomislav', location: 'Zrinjevac Park', type: 'scene', notes: '非常輕鬆、路面平坦的早晨散步', details: { intro: '【路線 1】\nZrinjevac Park → Art Pavilion → King Tomislav Square\n\n你會看到：\n● 公園中央噴泉\n● 樹林步道\n● 黃色外牆的 Art Pavilion\n● 遠處鐵道車站方向的城市開闊景' } },
-                    { id: 'zagreb-walk-2', time: '10:00', title: 'Ban Jelačić Square', location: 'Ban Jelačić Square', type: 'scene', notes: '往北直走，Zagreb 最熱鬧的中心', details: { intro: '【路線 2】\nKing Tomislav Square → Ban Jelačić Square（主廣場）\n\n這段路最簡單，就是往北直走即可。耶拉契奇廣場是 Zagreb 最熱鬧的中心。' } },
-                    { id: 'zagreb-market', time: '10:30', title: '朵拉茲市場 Dolac', location: 'Dolac Market', type: 'food', notes: '走上樓梯 20 秒即達紅傘市場', details: { intro: `【路線 3】\nBan Jelačić Square → Dolac Market\n\n● 導航：走上右後方的樓梯 20 秒即可到達紅傘市場，非常明顯。\n● 建議停留：約 20–40 分鐘。\n\n【景點介紹】\n朵拉茲市場自 1930 年開業以來，一直是札格瑞布的「肚臍」。\n\n【必看亮點】\n1. 紅色遮陽傘海：象徵當地的傳統。\n2. Kumica Barica 銅像：紀念頭頂菜籃的農婦。\n3. 室內區：別錯過室內的魚市場與起司區。` } },
-                    { id: 'zagreb-funicular', time: '11:30', title: 'Zagreb Funicular', location: 'Zagreb Funicular', type: 'scene', notes: '往南下坡 2-3 分鐘即達，世界最短纜車', details: { intro: `【路線 4】\nDolac Market → Zagreb Funicular\n\n● 導航：從市場往南下坡 2–3 分鐘就到纜車入口。非常近，不會迷路。\n● 體驗：搭乘這座藍色小纜車上城，只需 64 秒。` } },
-                    { id: 'zagreb-tower', time: '11:50', title: 'Lotrščak Tower', location: 'Lotrščak Tower', type: 'history', notes: '纜車出口旁，準備聽 12:00 正午大砲', details: { intro: `【路線 5】\n搭 Funicular 上城 → Lotrščak Tower\n\n● 導航：塔就在纜車出口旁 20 秒，非常好找。\n● 必看儀式：如果 12:00 正好在附近，可以聽正午大砲（很大聲！）。\n\n【景點介紹】\n這座建於13世紀的防禦塔樓，自1877年以來，每天中午 12:00 整都會發射加農砲報時。` } },
-                    { id: 'zagreb-museum', time: '13:30', title: 'Museum of Lost Tales', location: 'Ilica 26, Zagreb', type: 'history', notes: '失落傳說博物館', details: { intro: '充滿奇幻氛圍的沉浸式博物館，展示克羅埃西亞的民間傳說與神話生物。' } },
-                    { id: 'trans-ljubljana', time: '16:30', title: '前往盧比安納', location: 'Ljubljana', type: 'transport', notes: '跨境前往斯洛維尼亞', details: { intro: '車程約 2.5 小時，記得準備護照以備邊境檢查。' } },
-                    { id: 'stay-ljubljana', time: '19:00', title: '住宿 - 盧比安納', location: 'Ljubljana', type: 'hotel', notes: '入住斯洛維尼亞首都', details: { intro: '抵達「飛龍之城」盧比安納。' } }
-                ]
-            },
-            '2025-05-27': {
-                dayTitle: '探索｜飛龍之城',
-                events: [
-                    { id: 'ljubljana-square', time: '09:00', title: '普列舍仁廣場', location: 'Prešeren Square', type: 'scene', notes: '粉紅教堂與三橋', details: { intro: '盧比安納的核心，以詩人 Prešeren 命名。必看粉紅色的方濟各會教堂與普列赤尼克設計的三橋。' } },
-                    { id: 'ljubljana-market', time: '09:30', title: '中央市場 & 教堂', location: 'Ljubljana Cathedral', type: 'history', notes: '參觀市場與銅門', details: { intro: '【聖尼各老主教座堂】必看兩扇銅門：描繪斯洛維尼亞基督教歷史的「斯洛維尼亞之門」與歷任主教頭像的「盧比安納之門」。' } },
-                    { id: 'ljubljana-dragon', time: '10:30', title: '龍橋 Zmajski most', location: 'Dragon Bridge', type: 'scene', notes: '必拍飛龍地標', details: { intro: '傳說希臘英雄傑森在此擊敗巨龍。這座建於1901年的橋樑上有四隻青銅翼龍，是城市守護象徵。' } },
-                    { id: 'ljubljana-castle', time: '11:30', title: '盧比安納城', location: 'Ljubljana Castle', type: 'history', notes: '搭纜車或徒步上城堡', details: { intro: '搭乘玻璃纜車上山，俯瞰紅瓦屋頂與遠處阿爾卑斯山。' } },
-                    { id: 'ljubljana-plecnik', time: '14:30', title: 'Plečnik House', location: 'Plečnik House', type: 'history', notes: '建築大師故居', details: { intro: '參觀建築大師 Jože Plečnik 的故居，了解他如何塑造了這座城市的樣貌。' } },
-                    { id: 'ljubljana-walk', time: '16:30', title: '河岸散步', location: 'Cankarjevo nabrežje', type: 'scene', notes: '享受河岸咖啡與悠閒氛圍', details: { intro: '傍晚時分，在 Ljubljanica 河岸找家咖啡廳，享受慢活時光。' } }
-                ]
-            },
-            '2025-05-28': {
-                dayTitle: '移動｜前往布萊德',
-                events: [
-                    { id: 'move-bled', time: '10:00', title: '前往布萊德', location: 'Bled', type: 'transport', notes: '移動日，車程約 1 小時', details: { intro: '前往阿爾卑斯山腳下的度假勝地布萊德湖。' } },
-                    { id: 'stay-bled', time: '14:00', title: '住宿 - 布萊德', location: 'Bled', type: 'hotel', notes: 'Check-in 享受湖光山色', details: { intro: '入住布萊德湖畔。' } },
-                    { id: 'bled-relax', time: '15:30', title: '湖畔自由活動', location: 'Lake Bled', type: 'food', notes: '必吃布萊德奶油蛋糕', details: { intro: '【必吃美食：Kremšnita】\n推薦到發源地 Hotel Park 的 Kavarna Park 咖啡廳，品嚐正宗的布萊德奶油蛋糕 (Bled Cream Cake)，享受湖景下午茶。' } }
-                ]
-            },
-            '2025-05-29': {
-                dayTitle: '仙境｜布萊德湖',
-                events: [
-                    { id: 'bled-vintgar', time: '08:30', title: '文特加峽谷', location: 'Vintgar Gorge', type: 'scene', notes: '早晨光線最美' },
-                    { id: 'bled-castle', time: '11:00', title: '布萊德城堡', location: 'Bled Castle', type: 'history', notes: '懸崖上俯瞰湖景' },
-                    { id: 'bled-island', time: '13:30', title: '聖母升天教堂', location: 'Lake Bled Island', type: 'history', notes: '搭乘 Pletna 手搖船' },
-                    { id: 'bled-view', time: '17:00', title: '觀景台', location: 'Ojstrica Viewpoint', type: 'scene', notes: '攝影最佳角度' }
-                ]
-            },
-            '2025-05-30': {
-                dayTitle: '奇景｜溶洞與城堡',
-                events: [
-                    { id: 'vogel', time: '08:30', title: '沃格爾纜車', location: 'Vogel Ski Center', type: 'scene', notes: '登高望遠' },
-                    { id: 'bohinj', time: '10:00', title: '博希尼湖', location: 'Lake Bohinj', type: 'scene', notes: '寧靜的冰蝕湖' },
-                    { id: 'postojna', time: '14:00', title: '波斯托伊納洞', location: 'Postojna Cave', type: 'scene', notes: '搭小火車進溶洞' },
-                    { id: 'predjama', time: '16:00', title: '洞窟城堡', location: 'Predjama Castle', type: 'history', notes: '世界最大洞穴城堡' },
-                    { id: 'stay-rovinj', time: '18:00', title: '住宿 - 羅維尼', location: 'Rovinj', type: 'hotel', notes: 'Check-in' }
-                ]
-            },
-            '2025-05-31': {
-                dayTitle: '穿越｜普拉競技場',
-                events: [
-                    { id: 'pula-drive', time: '09:00', title: '前往普拉', location: 'Pula', type: 'transport', notes: '車程約 40 分鐘' },
-                    { id: 'pula-arena', time: '10:00', title: '普拉競技場', location: 'Pula Arena', type: 'history', notes: '羅馬圓形劇場' },
-                    { id: 'pula-temple', time: '11:30', title: '奧古斯都神廟', location: 'Temple of Augustus', type: 'history', notes: '羅馬古蹟' },
-                    { id: 'pula-arch', time: '12:30', title: '塞爾吉烏斯凱旋門', location: 'Arch of the Sergii', type: 'history', notes: '普拉古城門' },
-                    { id: 'rovinj-back', time: '15:00', title: '返回羅維尼', location: 'Rovinj', type: 'scene', notes: '享受夕陽晚餐' }
-                ]
-            },
-            '2025-06-01': {
-                dayTitle: '秘境｜水車村',
-                events: [
-                    { id: 'rovinj-view', time: '11:00', title: 'Panorama 全景', location: 'Rovinj', type: 'scene', notes: '欣賞海港舊城' },
-                    { id: 'rovinj-church', time: '11:30', title: '聖尤菲米亞教堂', location: 'Church of St. Euphemia', type: 'history', notes: '地標鐘塔' },
-                    { id: 'drive-rastoke', time: '14:00', title: '前往水車村', location: 'Rastoke', type: 'transport', notes: '車程較長' },
-                    { id: 'rastoke', time: '18:00', title: '水車村', location: 'Rastoke', type: 'scene', notes: '瀑布與小屋' },
-                    { id: 'stay-plitvice', time: '19:30', title: '住宿 - 十六湖', location: 'Plitvice Lakes', type: 'hotel', notes: '住在國家公園旁' }
-                ]
-            },
-            '2025-06-02': {
-                dayTitle: '絕景｜十六湖',
-                events: [
-                    { id: 'plitvice-enter', time: '08:00', title: '十六湖國家公園', location: 'Plitvice Lakes', type: 'scene', notes: '全日遊覽' },
-                    { id: 'move-zadar', time: '16:00', title: '前往札達爾', location: 'Zadar', type: 'transport', notes: '前往海岸' },
-                    { id: 'stay-zadar', time: '18:00', title: '住宿 - 札達爾', location: 'Zadar', type: 'hotel', notes: 'Check-in' }
-                ]
-            },
-            '2025-06-03': {
-                dayTitle: '古韻｜夕陽海風琴',
-                events: [
-                    { id: 'zadar-wells', time: '09:00', title: '五井廣場', location: 'Five Wells Square', type: 'history', notes: '古城巡禮' },
-                    { id: 'zadar-donatus', time: '09:30', title: '聖多那教堂', location: 'Church of St. Donatus', type: 'history', notes: '圓形教堂地標' },
-                    { id: 'krka-np', time: '11:00', title: '克爾卡國家公園', location: 'Krka National Park', type: 'scene', notes: '著名的瀑布' },
-                    { id: 'move-split', time: '15:00', title: '前往斯普利特', location: 'Split', type: 'transport', notes: '前往第二大城' },
-                    { id: 'split-palace', time: '16:30', title: '戴克里先皇宮', location: 'Diocletian\'s Palace', type: 'history', notes: '整座舊城就是皇宮' },
-                    { id: 'split-cath', time: '17:30', title: '斯普利特主教座堂', location: 'Cathedral of Saint Domnius', type: 'history', notes: '登頂看風景' }
-                ]
-            },
-            '2025-06-04': {
-                dayTitle: '陽光｜赫瓦爾島',
-                events: [
-                    { id: 'ferry-hvar', time: '09:00', title: '搭船前往赫瓦爾', location: 'Hvar', type: 'ship', notes: '跳島之旅' },
-                    { id: 'hvar-fort', time: '10:30', title: '赫瓦爾堡壘', location: 'Fortica', type: 'history', notes: '俯瞰港口' },
-                    { id: 'hvar-town', time: '12:00', title: '赫瓦爾城鎮觀光', location: 'Hvar Town', type: 'scene', notes: '聖史蒂芬廣場' },
-                    { id: 'ferry-back', time: '16:00', title: '返回斯普利特', location: 'Split', type: 'ship', notes: '結束跳島' }
-                ]
-            },
-            '2025-06-05': {
-                dayTitle: '異域｜莫斯塔爾',
-                events: [
-                    { id: 'move-mostar', time: '09:00', title: '前往莫斯塔爾', location: 'Mostar', type: 'transport', notes: '跨境前往波赫' },
-                    { id: 'mostar-checkin', time: '12:00', title: '住宿 - Mostar', location: 'Mostar', type: 'hotel', notes: 'Check-in' },
-                    { id: 'mostar-bridge', time: '13:30', title: '莫斯塔爾古橋', location: 'Stari Most', type: 'history', notes: '看跳水表演' },
-                    { id: 'mostar-bazaar', time: '15:00', title: '舊市集', location: 'Old Bazaar', type: 'scene', notes: '土耳其風情' }
-                ]
-            },
-            '2025-06-06': {
-                dayTitle: '歷史｜塞拉耶佛',
-                events: [
-                    { id: 'move-sarajevo', time: '09:00', title: '前往塞拉耶佛', location: 'Sarajevo', type: 'transport', notes: '前往波士尼亞首都' },
-                    { id: 'stay-sarajevo', time: '12:30', title: '住宿 - 塞拉耶佛', location: 'Sarajevo', type: 'hotel', notes: '入住' },
-                    { id: 'sarajevo-start', time: '14:00', title: '市區初探', location: 'Sarajevo', type: 'scene', notes: '東西文化交融' }
-                ]
-            },
-            '2025-06-07': {
-                dayTitle: '印記｜舊城漫步',
-                events: [
-                    { id: 'sarajevo-old', time: '09:30', title: '巴什察爾希亞市集', location: 'Baščaršija', type: 'history', notes: '塞畢理噴泉' },
-                    { id: 'sarajevo-bridge', time: '11:00', title: '拉丁橋', location: 'Latin Bridge', type: 'history', notes: '一次大戰導火線' },
-                    { id: 'sarajevo-cable', time: '14:00', title: 'Trebević 纜車', location: 'Trebević Cable Car', type: 'scene', notes: '俯瞰全景' }
-                ]
-            },
-            '2025-06-08': {
-                dayTitle: '峽灣｜科托爾',
-                events: [
-                    { id: 'move-kotor', time: '08:00', title: '前往科托爾', location: 'Kotor', type: 'transport', notes: '前往蒙特內哥羅' },
-                    { id: 'stay-kotor', time: '14:00', title: '住宿 - 科托爾', location: 'Kotor', type: 'hotel', notes: '入住峽灣古城' },
-                    { id: 'kotor-walk', time: '16:00', title: '古城漫步', location: 'Kotor Old Town', type: 'scene', notes: '貓咪與石板路' }
-                ]
-            },
-            '2025-06-09': {
-                dayTitle: '登高｜最美峽灣',
-                events: [
-                    { id: 'kotor-hike', time: '08:30', title: '科托爾城牆健行', location: 'City Walls', type: 'scene', notes: '早起爬牆' },
-                    { id: 'kotor-bay', time: '14:00', title: '科托爾灣巡遊', location: 'Bay of Kotor', type: 'ship', notes: '搭船遊湖' }
-                ]
-            },
-            '2025-06-10': {
-                dayTitle: '權遊｜君臨城',
-                events: [
-                    { id: 'kotor-church', time: '09:30', title: '修道院', location: 'Franciscan Monastery', type: 'history', notes: '參觀' },
-                    { id: 'move-dub', time: '11:00', title: '前往杜布羅夫尼克', location: 'Dubrovnik', type: 'transport', notes: '前往君臨城' },
-                    { id: 'stay-dub', time: '14:00', title: '住宿 - 杜布羅夫尼克', location: 'Dubrovnik', type: 'hotel', notes: 'Check-in' },
-                    { id: 'dub-cable', time: '16:30', title: 'Srd 山纜車', location: 'Mount Srd', type: 'scene', notes: '看夕陽' }
-                ]
-            },
-            '2025-06-11': {
-                dayTitle: '漫步｜君臨城巡禮',
-                events: [
-                    { id: 'dub-walls', time: '08:30', title: '城牆漫步', location: 'City Walls', type: 'history', notes: '避開曝曬' },
-                    { id: 'dub-fort', time: '11:00', title: '羅維里耶奈克要塞', location: 'Lovrijenac', type: 'history', notes: '紅堡取景地' },
-                    { id: 'dub-oldtown', time: '12:30', title: '史特拉敦大道', location: 'Stradun', type: 'scene', notes: '午餐與購物' },
-                    { id: 'dub-relax', time: '16:00', title: 'Banje Beach', location: 'Banje Beach', type: 'scene', notes: '海灘放鬆' }
-                ]
-            },
-            '2025-06-12': {
-                dayTitle: '告別｜前往機場',
-                events: [
-                    { id: 'flight-checkin', time: 'Check-out', title: '退房前往機場', location: 'Dubrovnik Airport', type: 'transport', notes: '辦理退稅' },
-                    { id: 'flight-back', time: '15:20', title: '航班返程', location: 'Dubrovnik Airport', type: 'flight', notes: 'EK2075 (flydubai)', details: { intro: '飛往杜拜轉機。' } }
-                ]
-            },
-            '2025-06-13': {
-                dayTitle: '歸途｜甜蜜家園',
-                events: [
-                    { id: 'home', time: 'Arrival', title: '抵達台灣', location: 'TPE Airport', type: 'home', notes: 'EK366 抵達', details: { intro: '平安抵達溫暖的家。' } }
-                ]
-            }
-        };
-
-        // --- 元件區 ---
-
-        const WeatherWidget = ({ dayIndex }) => {
-            const weatherTypes = ['sunny', 'cloudy', 'sunny', 'rainy', 'sunny', 'cloudy', 'sunny'];
-            const type = weatherTypes[dayIndex % weatherTypes.length];
-            const info = mockWeather[type];
-            return (
-                <div className="flex items-center gap-2 bg-white/70 backdrop-blur-md rounded-full px-3 py-1.5 shadow-sm border border-[#8FA598]/20 flex-shrink-0">
-                <span className="text-sm font-bold text-[#6B7280] tracking-tight">{info.temp}</span>
-                <div className="opacity-90">
-                    {info.icon}
-                </div>
-                </div>
-            );
-        };
-
-        // --- 詳細頁面元件 ---
-        const DetailView = ({ event, onBack }) => {
-            if (!event) return null;
-            return (
-                <div className="fixed inset-0 z-50 bg-[#FDFCF5] overflow-y-auto animate-fade-in-up pb-20">
-                
-                {/* 簡約頂部導航列 */}
-                <div className="sticky top-0 z-20 flex items-center justify-between px-4 py-3 bg-[#FDFCF5]/95 backdrop-blur-sm border-b border-gray-100/50 shadow-sm">
-                    <button 
-                    onClick={onBack}
-                    className="p-2 bg-white rounded-full shadow-sm border border-gray-100 active:scale-95 transition-transform text-gray-600"
-                    >
-                    <ArrowLeft size={20} />
-                    </button>
-                    
-                    {/* 標題置中 */}
-                    <h2 className="flex-1 text-center text-lg font-serif font-bold text-[#4A4A4A] px-2 truncate leading-tight">
-                    {event.title}
-                    </h2>
-                    
-                    {/* 佔位符 */}
-                    <div className="w-9"></div>
-                </div>
-
-                <div className="p-6 space-y-6 pt-6">
-                    
-                    {/* 行程資訊 (時間、地點) */}
-                    <div className="flex justify-center gap-4 items-center text-sm text-gray-600">
-                    <div className="flex items-center gap-1 bg-[#E8E0D5] px-3 py-1 rounded-full text-[#4A4A4A] font-bold">
-                        <Clock size={14} />
-                        <span>{event.time}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                        <MapPin size={14} />
-                        <span>{event.location}</span>
-                    </div>
-                    </div>
-
-                    {/* 文字內容 - 支援換行 */}
-                    <div className="prose prose-stone mx-auto">
-                    <p className="text-gray-600 leading-relaxed text-justify whitespace-pre-line">
-                        {event.details?.intro ? event.details.intro : event.notes}
-                    </p>
-                    </div>
-
-                </div>
-                </div>
-            );
-        };
-
-        // --- 記帳小工具 ---
-        const ExpenseTracker = () => {
-            const [expenses, setExpenses] = useState([
-                { id: 1, title: '機場咖啡', amount: 150 },
-                { id: 2, title: '網卡 (eSIM)', amount: 500 },
-            ]);
-            const [inputTitle, setInputTitle] = useState('');
-            const [inputAmount, setInputAmount] = useState('');
-            const handleAddExpense = () => {
-                if (!inputTitle || !inputAmount) return;
-                const newExpense = {
-                id: Date.now(),
-                title: inputTitle,
-                amount: Number(inputAmount)
-                };
-                setExpenses([...expenses, newExpense]);
-                setInputTitle('');
-                setInputAmount('');
-            };
-
-            const handleDeleteExpense = (id) => {
-                setExpenses(expenses.filter(item => item.id !== id));
-            };
-            const totalAmount = expenses.reduce((sum, item) => sum + item.amount, 0);
-            return (
-                <div className="bg-white p-6 rounded-2xl shadow-sm border border-[#E8E0D5]">
-                <h3 className="font-serif text-xl text-[#4A4A4A] mb-4 flex items-center gap-2">
-                    <Wallet className="text-[#8FA598]" /> 旅費記帳本
-                </h3>
-                
-                {/* 總金額顯示 */}
-                <div className="bg-[#FDFCF5] p-4 rounded-xl mb-4 flex justify-between items-center border border-[#E8E0D5]">
-                    <span className="text-sm text-gray-500 font-bold">目前總花費</span>
-                    <span className="text-2xl font-bold text-[#8FA598]">NT$ {totalAmount.toLocaleString()}</span>
-                </div>
-
-                {/* 記帳列表 */}
-                <div className="space-y-2 mb-4 max-h-40 overflow-y-auto pr-1">
-                    {expenses.length > 0 ? (
-                    expenses.map(item => (
-                        <div key={item.id} className="flex justify-between items-center text-sm border-b border-gray-50 pb-2 last:border-0">
-                        <span className="text-gray-700">{item.title}</span>
-                        <div className="flex items-center gap-3">
-                            <span className="font-mono text-gray-500 font-medium">${item.amount}</span>
-                            <button onClick={() => handleDeleteExpense(item.id)} className="text-gray-300 hover:text-red-400">
-                            <Trash2 size={14} />
-                            </button>
-                        </div>
-                        </div>
-                    ))
-                    ) : (
-                    <p className="text-center text-xs text-gray-400 py-2">尚未新增任何花費</p>
-                    )}
-                </div>
-
-                {/* 新增輸入框 */}
-                <div className="flex gap-2">
-                    <input 
-                    type="text" 
-                    placeholder="項目" 
-                    value={inputTitle}
-                    onChange={(e) => setInputTitle(e.target.value)}
-                    className="w-full bg-gray-50 border border-gray-100 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#8FA598]"
-                    />
-                    <input 
-                    type="number" 
-                    placeholder="$" 
-                    value={inputAmount}
-                    onChange={(e) => setInputAmount(e.target.value)}
-                    className="w-20 bg-gray-50 border border-gray-100 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#8FA598]"
-                    />
-                    <button 
-                    onClick={handleAddExpense}
-                    className="bg-[#8FA598] text-white rounded-lg px-3 flex items-center justify-center hover:bg-[#7D9386] transition-colors"
-                    >
-                    <Plus size={18} />
-                    </button>
-                </div>
-                </div>
-            );
-        };
-
-        // 圖示邏輯
-        const TypeIcon = ({ type }) => {
-            const className = "w-5 h-5 text-white";
-            let bgClass = "bg-[#8FA598]"; // Default Green
-            let icon = <MapPin className={className} />;
-            switch(type) {
-                case 'flight': 
-                    bgClass = "bg-[#9DB4C0]"; // Blue
-                    icon = <Plane className={className} />;
-                    break;
-                case 'food':
-                    bgClass = "bg-[#C6B3B3]"; // Rose
-                    icon = <Utensils className={className} />;
-                    break;
-                case 'history':
-                    bgClass = "bg-[#B5A89E]"; // Brownish
-                    icon = <History className={className} />;
-                    break;
-                case 'scene':
-                    bgClass = "bg-[#8FA598]"; // Green
-                    icon = <Camera className={className} />;
-                    break;
-                case 'home':
-                    bgClass = "bg-[#4A4A4A]"; // Dark
-                    icon = <Luggage className={className} />;
-                    break;
-                case 'hotel':
-                    bgClass = "bg-[#D4A373]"; // Wood/Brown
-                    icon = <Hotel className={className} />;
-                    break;
-                case 'transport':
-                    bgClass = "bg-[#6B705C]"; // Olive
-                    icon = <Train className={className} />;
-                    break;
-                case 'ship':
-                    bgClass = "bg-[#457B9D]"; // Deep Blue
-                    icon = <Ship className={className} />;
-                    break;
-                case 'arrival':
-                    bgClass = "bg-[#4A4A4A]";
-                    icon = <Plane className={className} />;
-                    break;
-            }
-        
-            return (
-                <div className={`${bgClass} w-10 h-10 rounded-full flex items-center justify-center shadow-sm shrink-0`}>
-                    {icon}
-                </div>
-            );
-        };
-
-        // 主頁面 - 旅遊資訊頁
-        const InfoPage = () => {
-            return (
-                <div className="p-6 space-y-8 animate-fade-in pb-24">
-                
-                {/* 記帳模組 */}
-                <ExpenseTracker />
-
-                <div className="bg-white p-6 rounded-2xl shadow-sm border border-[#E8E0D5]">
-                    <h3 className="font-serif text-xl text-[#4A4A4A] mb-4 flex items-center gap-2">
-                    <Plane className="text-[#9DB4C0]" /> 航班資訊 (阿聯酋航空)
-                    </h3>
-                    <div className="space-y-4">
-                    <div className="border-l-2 border-[#9DB4C0] pl-4">
-                        <p className="text-xs text-gray-500">去程 5/24</p>
-                        <p className="font-bold text-gray-800">TPE (23:05) - DXB</p>
-                        <p className="text-sm text-gray-600">EK367</p>
-                    </div>
-                    <div className="border-l-2 border-[#9DB4C0] pl-4">
-                        <p className="text-xs text-gray-500">去程轉機 5/25</p>
-                        <p className="font-bold text-gray-800">DXB - ZAG (13:30 抵達)</p>
-                        <p className="text-sm text-gray-600">EK2012 (flydubai)</p>
-                    </div>
-                    <hr className="border-dashed border-gray-200" />
-                    <div className="border-l-2 border-[#8FA598] pl-4">
-                        <p className="text-xs text-gray-500">回程 6/12</p>
-                        <p className="font-bold text-gray-800">DBV - DXB</p>
-                        <p className="text-sm text-gray-600">EK2075 (flydubai)</p>
-                    </div>
-                    <div className="border-l-2 border-[#8FA598] pl-4">
-                        <p className="text-xs text-gray-500">回程轉機 6/13</p>
-                        <p className="font-bold text-gray-800">DXB - TPE</p>
-                        <p className="text-sm text-gray-600">EK366</p>
-                    </div>
-                    </div>
-                </div>
-                
-                <div className="bg-white p-6 rounded-2xl shadow-sm border border-[#E8E0D5]">
-                    <h3 className="font-serif text-xl text-[#4A4A4A] mb-4 flex items-center gap-2">
-                        <Hotel className="text-[#D4A373]" /> 住宿概覽
-                    </h3>
-                    <ul className="text-sm text-gray-600 space-y-3 list-none pl-1">
-                        <li>
-                            <span className="font-bold text-[#4A4A4A]">克羅埃西亞</span>
-                            <ul className="pl-3 border-l-2 border-gray-200 mt-1 space-y-1 text-gray-500">
-                                <li>📍 札格瑞布 - 1晚 (5/25-5/26)</li>
-                                <li>📍 羅維尼 - 2晚 (5/30-6/01)</li>
-                                <li>📍 十六湖 - 1晚 (6/01-6/02)</li>
-                                <li>📍 札達爾 - 1晚 (6/02-6/03)</li>
-                                <li>📍 斯普利特 - 2晚 (6/03-6/05)</li>
-                                <li>📍 杜布羅夫尼克 - 2晚 (6/10-6/12)</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span className="font-bold text-[#4A4A4A]">斯洛維尼亞</span>
-                            <ul className="pl-3 border-l-2 border-gray-200 mt-1 space-y-1 text-gray-500">
-                                <li>📍 盧比安納 - 2晚 (5/26-5/28)</li>
-                                <li>📍 布萊德 - 2晚 (5/28-5/30)</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span className="font-bold text-[#4A4A4A]">波赫 (波士尼亞與赫塞哥維納)</span>
-                            <ul className="pl-3 border-l-2 border-gray-200 mt-1 space-y-1 text-gray-500">
-                                <li>📍 Mostar - 1晚 (6/05-6/06)</li>
-                                <li>📍 塞拉耶佛 - 2晚 (6/06-6/08)</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span className="font-bold text-[#4A4A4A]">蒙特內哥羅 (黑山)</span>
-                            <ul className="pl-3 border-l-2 border-gray-200 mt-1 space-y-1 text-gray-500">
-                                <li>📍 科托爾 - 2晚 (6/08-6/10)</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                </div>
-            );
-        };
-
-        function App() {
-            const [selectedDateStr, setSelectedDateStr] = useState('2025-05-24');
-            const [activeTab, setActiveTab] = useState('itinerary');
-            const [selectedEvent, setSelectedEvent] = useState(null);
-            
-            const dateScrollRef = useRef(null);
-            const dayData = itineraryDatabase[selectedDateStr] || {};
-            const currentEvents = dayData.events || [];
-            const currentDayTitle = dayData.dayTitle || 'Enjoy your trip!';
-            const currentDayIndex = tripDates.findIndex(d => d.dateStr === selectedDateStr);
-            const handleEventClick = (event) => setSelectedEvent(event);
-            const handleBack = () => setSelectedEvent(null);
-
-            return (
-                <div className="w-full max-w-md mx-auto h-screen bg-[#FDFCF5] flex flex-col font-sans text-[#4A4A4A] overflow-hidden relative shadow-2xl">
-                <header className="pt-8 pb-2 px-6 bg-[#FDFCF5] z-10">
-                    <div className="flex justify-between items-end mb-1">
-                    <div>
-                        <h1 className="text-2xl font-serif font-bold text-[#4A4A4A]">西巴爾幹半島</h1>
-                        <p className="text-sm text-[#8FA598] tracking-widest uppercase">My Journey</p>
-                    </div>
-                    </div>
-                </header>
-
-                <div className="flex-1 overflow-hidden relative pb-[80px]"> 
-                    {activeTab === 'itinerary' && (
-                        <>
-                            <div className="mb-2 w-full">
-                                <div 
-                                    ref={dateScrollRef}
-                                    className="flex overflow-x-auto w-full scrollbar-hide snap-x"
-                                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-                                >
-                                    {tripDates.map((item, index) => {
-                                        const isSelected = item.dateStr === selectedDateStr;
-                                        const cityName = cityMap[item.dateStr] || '';
-                                        
-                                        return (
-                                            <button
-                                                key={item.dateStr}
-                                                onClick={() => setSelectedDateStr(item.dateStr)}
-                                                className={`flex-shrink-0 snap-center min-w-[4.5rem] h-16 flex flex-col items-center justify-center transition-all duration-300 border-r border-b border-t border-gray-200 relative overflow-hidden ${
-                                                    isSelected 
-                                                        ? 'bg-[#4A4A4A] text-white border-[#4A4A4A] z-10' 
-                                                        : 'bg-white text-gray-400 border-gray-100 hover:bg-gray-50'
-                                                }`}
-                                            >
-                                                <div className="flex flex-col items-center justify-center h-full w-full pb-3">
-                                                    <span className="text-[10px] font-medium leading-tight">Day {item.dayNum}</span>
-                                                    <span className={`text-base font-bold leading-tight ${isSelected ? 'text-[#FDFCF5]' : 'text-gray-700'}`}>
-                                                        {item.displayDate}
-                                                    </span>
-                                                </div>
-                                                
-                                                <div className={`absolute bottom-0 left-0 right-0 w-full text-center py-0.5 text-[9px] font-medium truncate px-1 ${
-                                                    isSelected ? 'bg-[#8FA598] text-white' : 'bg-gray-100 text-gray-500'
-                                                }`}>
-                                                    {cityName}
-                                                </div>
-                                            </button>
-                                        );
-                                    })}
-                                </div>
-                            </div>
-
-                            <div className="flex-1 overflow-y-auto px-6 h-full pb-6">
-                                <div className="flex justify-between items-center mb-4 px-1 sticky top-0 bg-[#FDFCF5] z-10 py-2">
-                                    <h2 className="font-serif font-bold text-lg text-[#4A4A4A] leading-tight flex-1 mr-2">
-                                    {currentDayTitle}
-                                    </h2>
-                                    <WeatherWidget dayIndex={currentDayIndex} />
-                                </div>
-
-                                <div className="space-y-4">
-                                    {currentEvents.length > 0 ? (
-                                        currentEvents.map((event, index) => (
-                                            <div 
-                                                key={event.id}
-                                                onClick={() => handleEventClick(event)}
-                                                className="group bg-white rounded-2xl p-4 shadow-sm border border-gray-50 flex gap-4 items-center active:scale-[0.98] transition-all cursor-pointer relative overflow-hidden"
-                                            >
-                                                <div className={`absolute left-0 top-0 bottom-0 w-1 ${
-                                                    index % 2 === 0 ? 'bg-[#8FA598]' : 'bg-[#C6B3B3]'
-                                                }`}></div>
-
-                                                <div className="flex flex-col items-center gap-2 mr-2 min-w-[3rem]">
-                                                    <TypeIcon type={event.type} />
-                                                    <span className="text-[10px] font-bold text-[#8FA598] font-mono text-center leading-tight">
-                                                        {event.time}
-                                                    </span>
-                                                </div>
-                                                
-                                                <div className="flex-1 min-w-0 pr-2">
-                                                    <div className="flex justify-between items-start mb-1">
-                                                        <h3 className="font-bold text-gray-800 truncate pr-2">{event.title}</h3>
-                                                    </div>
-                                                    
-                                                    <p className="text-sm text-gray-500 line-clamp-2 leading-relaxed">
-                                                        {event.notes}
-                                                    </p>
-                                                </div>
-                                                
-                                                <button
-                                                  onClick={(e) => {
-                                                    e.stopPropagation();
-                                                    // 修正地圖連結邏輯
-                                                    const query = event.location === 'To Ljubljana' ? 'Ljubljana Station' : event.location;
-                                                    const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
-                                                    window.open(mapUrl, '_blank');
-                                                  }}
-                                                  className="p-3 text-gray-400 hover:text-[#8FA598] hover:bg-gray-100 rounded-full transition-all z-10 shrink-0"
-                                                  aria-label="在 Google Maps 開啟"
-                                                >
-                                                  <MapPin size={20} />
-                                                </button>
-                                            </div>
-                                        ))
-                                    ) : (
-                                        <div className="text-center py-20 text-gray-400">
-                                            <Coffee className="w-12 h-12 mx-auto mb-4 text-[#E8E0D5]" />
-                                            <p>本日無特定行程，<br/>享受自由的漫步時光吧！</p>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-                        </>
-                    )}
-
-                    {activeTab === 'info' && (
-                        <div className="h-full overflow-y-auto pb-6">
-                            <InfoPage />
-                        </div>
-                    )}
-                </div>
-                
-                {/* 底部導航列 */}
-                <div className="absolute bottom-0 w-full bg-white border-t border-gray-200 shadow-[0_-5px_15px_rgba(0,0,0,0.05)] z-20 flex justify-around items-center safe-area-pb">
-                    <button 
-                        onClick={() => setActiveTab('itinerary')}
-                        className={`flex-1 py-3 flex flex-col items-center gap-1 transition-all active:scale-95 ${activeTab === 'itinerary' ? 'text-[#8FA598]' : 'text-gray-400'}`}
-                    >
-                        <Calendar size={24} strokeWidth={activeTab === 'itinerary' ? 2.5 : 2} />
-                        <span className="text-[10px] font-bold">每日行程</span>
-                    </button>
-                    
-                    <div className="w-px h-8 bg-gray-100"></div>
-
-                    <button 
-                        onClick={() => setActiveTab('info')}
-                        className={`flex-1 py-3 flex flex-col items-center gap-1 transition-all active:scale-95 ${activeTab === 'info' ? 'text-[#9DB4C0]' : 'text-gray-400'}`}
-                    >
-                        <BookOpen size={24} strokeWidth={activeTab === 'info' ? 2.5 : 2} />
-                        <span className="text-[10px] font-bold">旅遊資訊</span>
-                    </button>
-                </div>
-
-                {selectedEvent && (
-                    <DetailView event={selectedEvent} onBack={handleBack} />
-                )}
-                
-                <style>{`
-                    @keyframes fade-in-up {
-                        from { opacity: 0; transform: translateY(20px); }
-                        to { opacity: 1; transform: translateY(0); }
-                    }
-                    .animate-fade-in-up {
-                        animation: fade-in-up 0.3s ease-out forwards;
-                    }
-                    @keyframes fade-in {
-                        from { opacity: 0; }
-                        to { opacity: 1; }
-                    }
-                    .animate-fade-in {
-                        animation: fade-in 0.3s ease-out forwards;
-                    }
-                    .safe-area-pb {
-                        padding-bottom: env(safe-area-inset-bottom, 10px);
-                    }
-                `}</style>
-                </div>
-            );
-        }
-
-        // 渲染 App
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<App />);
-    </script>
-</body>
-</html>
