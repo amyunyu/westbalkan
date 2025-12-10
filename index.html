@@ -53,7 +53,7 @@
     <script type="text/babel">
         const { useState, useEffect, useRef, Fragment } = React;
 
-        // --- Icon Component System (Replaces Lucide imports) ---
+        // --- Icon Component System ---
         const Icon = ({ name, size = 24, className = "" }) => {
             const icons = {
                 MapPin: (
@@ -85,6 +85,14 @@
                         <path d="M13 18.26V21a2 2 0 0 1-3.56 1.47l-1.56-2.08"/>
                         <path d="M20 14h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2"/>
                         <path d="M7 17a2 2 0 0 0 1.5-3.5L16 6l4 4-7.5 7.5A2 2 0 0 0 7 17Z"/>
+                    </Fragment>
+                ),
+                Car: (
+                    <Fragment>
+                        <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
+                        <circle cx="7" cy="17" r="2"/>
+                        <path d="M9 17h6"/>
+                        <circle cx="17" cy="17" r="2"/>
                     </Fragment>
                 ),
                 Info: (
@@ -233,6 +241,22 @@
 
         const tripDates = generateDates();
 
+        // Helper for inline map button (The "Raindrop")
+        const MapLink = ({ url }) => (
+            <a 
+                href={url}
+                target="_blank"
+                rel="noreferrer"
+                className={`inline-flex items-center justify-center ml-2 p-1 rounded-full ${MORANDI_COLORS.bg} text-[#C78F76] hover:bg-[#FFF] border border-gray-200 transition-colors align-bottom cursor-pointer`}
+                style={{ verticalAlign: 'middle' }}
+                onClick={(e) => e.stopPropagation()}
+            >
+                <div className="w-3 h-3 flex items-center justify-center rounded-tr-[50%] rounded-tl-[50%] rounded-bl-[50%] rounded-br-0 transform rotate-45 border border-current">
+                     <div className="w-0.5 h-0.5 bg-current rounded-full transform -rotate-45" />
+                </div>
+            </a>
+        );
+
         const itineraryData = {
             1: [ 
                 {
@@ -241,7 +265,6 @@
                     title: '前往機場',
                     type: 'transport',
                     iconName: 'Plane',
-                    note: '記得檢查護照',
                     location: '桃園國際機場',
                     desc: '準備出發前往西巴爾幹半島！建議提早3小時抵達機場辦理登機手續。',
                     tips: ['檢查電源轉接頭', '下載離線地圖', '攜帶頸枕']
@@ -252,7 +275,7 @@
                     title: '飛往杜布羅夫尼克',
                     type: 'transport',
                     iconName: 'Plane',
-                    note: '需轉機',
+                    subtitle: '轉機',
                     location: '伊斯坦堡機場 (轉機)',
                     desc: '長途飛行，請多補充水分。預計在伊斯坦堡轉機。',
                     tips: ['機上保濕', '調整手錶時差']
@@ -261,71 +284,204 @@
             2: [ 
                 {
                     id: 'd2-1',
-                    time: '13:00',
-                    title: '抵達杜布羅夫尼克',
-                    type: 'arrival',
-                    iconName: 'MapPin',
-                    note: '入境卡填寫',
-                    location: 'Dubrovnik Airport',
-                    desc: '歡迎來到「亞得里亞海的珍珠」！通關後領取行李，前往租車櫃檯或搭乘接駁車。',
-                    tips: ['機場換匯匯率較差，建議到市區再換', '購買當地 SIM 卡']
+                    time: '14:00',
+                    title: '租車',
+                    type: 'transport',
+                    iconName: 'Car',
+                    location: 'Zagreb Airport',
+                    mapLink: 'https://maps.app.goo.gl/zEc8CPN39NLXcLzf6',
+                    subtitle: '機場取車',
+                    desc: '辦理租車手續，準備開始西巴爾幹半島的自駕之旅。請務必詳細檢查車況及保險文件。',
+                    tips: ['準備國際駕照', '確認油箱返還規定', '檢查車身刮痕']
                 },
                 {
                     id: 'd2-2',
                     time: '15:30',
-                    title: '入住飯店',
+                    title: 'Olive Tree City Corner',
                     type: 'hotel',
                     iconName: 'BedDouble',
-                    note: 'Check-in',
-                    location: 'Hotel Excelsior Dubrovnik',
-                    desc: '飯店位於普洛切區，享有舊城區和亞得里亞海的壯麗景色。',
-                    tips: ['確認早餐時間', '詢問櫃檯附近推薦餐廳']
+                    subtitle: 'Booking/check in',
+                    location: 'Olive Tree City Corner, Zagreb',
+                    mapLink: 'https://maps.app.goo.gl/T6FTVhCTjEoCbxdu6',
+                    desc: '抵達今日住宿地點辦理入住手續，稍作休息。',
+                    tips: ['確認停車位置', '詢問房東當地推薦']
                 },
                 {
                     id: 'd2-3',
-                    time: '17:30',
-                    title: '舊城區漫步',
+                    time: '16:30',
+                    title: '札格瑞布舊城漫遊',
                     type: 'sightseeing',
                     iconName: 'Camera',
-                    note: '絕美夕陽',
-                    location: 'Stradun, Dubrovnik',
-                    desc: '史特拉敦大道（Stradun）是舊城區的主要街道，兩旁皆是保存完好的巴洛克式建築。傍晚時分光線最美。',
-                    tips: ['必吃冰淇淋', '參觀歐諾弗利歐水池']
+                    subtitle: '主教座堂、石門、聖馬爾谷教堂',
+                    location: 'Zagrebačka katedrala',
+                    mapLink: 'https://maps.app.goo.gl/7EzQcsDABBNFR2JQ8',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">漫步於札格瑞布上城區，探索三大歷史地標：</p>
+
+                            <div className="mb-6">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【札格瑞布主教座堂】 
+                                    <MapLink url="https://maps.app.goo.gl/LUBdDPyV9ESCDgyM8" />
+                                </h4>
+                                <ul className="text-sm text-gray-600 space-y-1 list-none pl-0">
+                                    <li>1. 克羅埃西亞最高、最具代表性的哥德式地標：擁有雙尖塔，是 Zagreb 天際線最顯眼的建築，但因 2020 地震受損，目前仍在修復（外觀部分有鷹架）。</li>
+                                    <li>2. 教堂歷史超過八百年，是首都最重要宗教中心：內部以哥德式拱頂、彩繪玻璃與雕刻聞名；地震後雖可能僅部分開放，但仍值得一訪。</li>
+                                    <li>3. 外觀拍照非常壯觀，周邊廣場也適合停留：廣場空間大，適合拍整體建築；若想拍上城全景，可在同一天搭 Funicular 去塔上補景。</li>
+                                </ul>
+                            </div>
+
+                            <div className="mb-6">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【石門】
+                                    <MapLink url="https://maps.app.goo.gl/eN9HqDhoKveSN28d6" />
+                                </h4>
+                                <ul className="text-sm text-gray-600 space-y-1 list-none pl-0">
+                                    <li>1. 上城僅存的中世紀城門，城市重要歷史遺址：原本是城牆的一部分，13 世紀建成，是 Zagreb 少數保留至今的城門。</li>
+                                    <li>2. 門內供奉奇蹟聖母畫像，被視為守護 Zagreb 的象徵：據說 1731 大火中所有物品燒毀，只有聖母畫像完好無損，因此成為市民重要的祈願地點。</li>
+                                    <li>3. 氣氛寧靜、帶有神聖感，可短暫停留點蠟燭：遊客多是靜靜經過、拍照或祈願；參觀免費，行程可在 5–10 分鐘內完成。</li>
+                                </ul>
+                            </div>
+
+                            <div className="mb-4">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【聖馬爾谷教堂】
+                                    <MapLink url="https://maps.app.goo.gl/kh5qDiZeJnayCNBJ7" />
+                                </h4>
+                                <ul className="text-sm text-gray-600 space-y-1 list-none pl-0">
+                                    <li>1. Zagreb 的視覺標誌，以彩色瓷磚屋頂最具代表性：屋頂圖案呈現 克羅埃西亞國徽 + Zagreb 市徽，拍照非常亮眼，是必訪地標。</li>
+                                    <li>2. 位於上城最古老區域，周邊是國會與政府機構：聖馬爾谷廣場周邊開闊、典雅，是 Zagreb 政治中心與歷史重心。</li>
+                                    <li>3. 建築本體為羅馬式＋哥德式混合風格：內部偶爾開放（不固定），但外觀本身就相當值得欣賞；建議白天拍一次、傍晚光線下再看一次更漂亮。</li>
+                                </ul>
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['穿著舒適好走的鞋', '石門為肅靜場所請保持安靜', '教堂內部參觀需注意開放時間']
                 }
             ],
-            3: [ 
+            3: [
                 {
                     id: 'd3-1',
                     time: '09:00',
-                    title: '古城牆巡禮',
+                    title: '早餐',
+                    type: 'food',
+                    iconName: 'Coffee',
+                    location: 'Zagreb',
+                    desc: '享受美好的早餐時光，為新的一天補充滿滿活力。',
+                    tips: []
+                },
+                {
+                    id: 'd3-combined',
+                    time: '10:00',
+                    title: '札格瑞布下城漫步',
                     type: 'sightseeing',
                     iconName: 'Camera',
-                    note: '權力遊戲場景',
-                    location: 'Walls of Dubrovnik',
-                    desc: '全長近2公里的古城牆，是防禦工事的傑作。在這裡可以俯瞰紅瓦屋頂與蔚藍大海的對比。',
-                    tips: ['建議早上前往避開人潮', '攜帶足夠的水', '穿著舒適好走的鞋']
+                    subtitle: 'Zrinjevac、國王噴泉、總督廣場',
+                    location: 'Zrinjevac Park, Zagreb',
+                    mapLink: 'https://maps.app.goo.gl/MBA9ahmZafFHqB2Y7', // Primary link (Zrinjevac)
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">在前往多拉茨市場前，先來一場愜意的下城區（Donji Grad）巡禮，感受札格瑞布的城市脈動：</p>
+
+                            <div className="mb-6">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【Zrinjevac Park】 
+                                    <MapLink url="https://maps.app.goo.gl/MBA9ahmZafFHqB2Y7" />
+                                </h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    正式名稱為 Nikola Šubić Zrinski 廣場，是札格瑞布著名的「綠色馬蹄」（Green Horseshoe）公園序列的一部分。公園中心有一座建於1891年的音樂涼亭，四周環繞著百年懸鈴木與噴泉，是當地人最愛的休憩場所，氛圍優雅浪漫。
+                                </p>
+                            </div>
+
+                            <div className="mb-6">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【托米斯拉夫國王噴泉】
+                                    <MapLink url="https://maps.app.goo.gl/n4DVFc5MyALF2pJx9" />
+                                </h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    位於火車總站正對面的宏偉廣場（King Tomislav Square）。廣場上矗立著克羅埃西亞第一位國王托米斯拉夫（King Tomislav）的騎馬雕像，紀念他在925年加冕的歷史時刻。雕像後方是黃色的藝術展覽館（Art Pavilion），展現了華麗的新藝術風格。
+                                </p>
+                            </div>
+
+                            <div className="mb-4">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【耶拉契奇總督廣場】
+                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Ban+Jelačić+Square" />
+                                </h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    札格瑞布的地理中心與主廣場，連接著上城與下城。廣場中央是19世紀總督 Josip Jelačić 的騎馬雕像，他是克羅埃西亞的民族英雄。這裡是市民最熱門的會面點，周邊建築融合了古典主義、分離派與現代主義風格。由此處走上階梯，只需約1分鐘即可抵達多拉茨市場。
+                                </p>
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['此路線為平緩的步行區域，非常輕鬆', '沿途有許多適合拍照的角落', '廣場人潮較多請留意隨身物品']
                 },
                 {
-                    id: 'd3-2',
-                    time: '12:30',
-                    title: '海鮮午餐',
-                    type: 'food',
+                    id: 'd3-5',
+                    time: '10:50',
+                    title: '多拉茨市場',
+                    type: 'shopping',
                     iconName: 'Utensils',
-                    note: '已訂位',
-                    location: 'Proto Fish Restaurant',
-                    desc: '成立於1886年的老字號餐廳，提供正宗的達爾馬提亞海鮮料理。',
-                    tips: ['推薦墨魚燉飯', '烤魚拼盤']
+                    subtitle: 'Dolac Market',
+                    location: 'Dolac Market',
+                    mapLink: 'https://maps.app.goo.gl/fqnhjcCdCPA8VhrE8',
+                    desc: '札格瑞布最著名的「紅傘市場」，充滿鮮豔的紅色遮陽傘。這裡是在地人的廚房，也是體驗當地生活的最佳去處。建議可以購買新鮮水果、蜂蜜，並拍攝經典的紅傘場景。',
+                    tips: ['市集是現金/部分攤販可刷卡，建議帶一些歐元小額鈔票', '水果可以請店家「幫你挑一盒好吃的」', '推薦邊走邊吃：葡萄、櫻桃、無花果', 'Dolac Market 很安全，但旅遊區仍注意包包']
                 },
                 {
-                    id: 'd3-3',
-                    time: '15:00',
-                    title: '搭纜車上山',
+                    id: 'd3-6',
+                    time: '11:30',
+                    title: '搭乘登山纜車',
                     type: 'activity',
                     iconName: 'Compass',
-                    note: '俯瞰全景',
-                    location: 'Dubrovnik Cable Car',
-                    desc: '搭乘纜車前往 Srđ 山頂，只需4分鐘即可將杜布羅夫尼克舊城、水晶般的亞得里亞海和眾多島嶼盡收眼底。',
-                    tips: ['山頂風大建議帶薄外套', '日落時分景色最迷人']
+                    subtitle: 'Funicular',
+                    location: 'Zagreb Funicular',
+                    desc: '被譽為世界上最短的公共交通纜車之一，連接著下城區與上城區。纜車站就在市場旁東南側，下坡步行約 3 分鐘可到。',
+                    tips: ['車程很短但體驗獨特', '亦可選擇步行上山']
+                },
+                {
+                    id: 'd3-7',
+                    time: '11:32',
+                    title: '洛特爾薩克塔',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: '警盜鐘之塔',
+                    location: 'Lotrščak Tower',
+                    mapLink: 'https://maps.app.goo.gl/b261uivUK7pmrhi79',
+                    desc: '位於上城區的入口處，擁有絕佳的視野。若有興趣可以購票登塔，拍攝札格瑞布的城市全景。',
+                    tips: []
+                },
+                {
+                    id: 'd3-8',
+                    time: '12:00',
+                    title: '聽正午大炮',
+                    type: 'activity',
+                    iconName: 'Clock',
+                    subtitle: 'Grič Cannon',
+                    location: 'Lotrščak Tower',
+                    desc: '每天正午十二點，這裡會準時鳴響加農砲（Grič Cannon），這是札格瑞布延續百年的傳統，以此校正全城的鐘錶時間。聲音非常響亮，請做好心理準備！',
+                    tips: ['聲音很大，建議摀住耳朵', '就在 Lotrščak Tower 旁']
+                },
+                {
+                    id: 'd3-9',
+                    time: '12:15',
+                    title: '午餐',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    location: 'Tkalčićeva Street',
+                    desc: '建議在 Tkalčićeva 街或主廣場附近用餐，這一帶聚集了許多餐廳、咖啡館與酒吧，選擇非常豐富。',
+                    tips: []
+                },
+                {
+                    id: 'd3-10',
+                    time: '14:30',
+                    title: '前往 Ljubljana',
+                    type: 'transport',
+                    iconName: 'Car',
+                    subtitle: '開車離開 Zagreb',
+                    location: 'Ljubljana, Slovenia',
+                    desc: '開車離開札格瑞布 (Zagreb)，前往斯洛維尼亞首都盧布爾雅那 (Ljubljana)。提早出發可以避免塞車，並剛好於下午或傍晚時分抵達目的地。',
+                    tips: ['跨國自駕請確認過境文件', '準備斯洛維尼亞高速公路通行證 (Vignette)']
                 }
             ],
             20: [ 
@@ -353,7 +509,6 @@
                     title: '城市探索',
                     type: 'sightseeing',
                     iconName: 'Camera',
-                    note: '自由活動',
                     location: 'City Center',
                     desc: '享受當地的早晨氛圍，探索巷弄間的驚喜。',
                     tips: ['尋找當地咖啡館', '購買紀念品']
@@ -364,7 +519,6 @@
                     title: '當地美食饗宴',
                     type: 'food',
                     iconName: 'Utensils',
-                    note: '午餐',
                     location: 'Local Restaurant',
                     desc: '品嚐西巴爾幹半島的特色料理，如烤肉卷 (Ćevapi) 或布雷克餅 (Burek)。',
                     tips: ['嘗試當地啤酒或葡萄酒']
@@ -375,7 +529,6 @@
                     title: '午後休憩',
                     type: 'relax',
                     iconName: 'Coffee',
-                    note: '咖啡時光',
                     location: 'Old Town Cafe',
                     desc: '在露天咖啡座休息，觀察路人，享受悠閒的歐洲步調。',
                     tips: []
@@ -399,7 +552,7 @@
                     {/* Card Content */}
                     <div className="relative w-full max-w-md h-[85vh] sm:h-[600px] bg-[#FDFCF8] rounded-t-3xl sm:rounded-3xl shadow-2xl overflow-hidden pointer-events-auto flex flex-col transform transition-transform duration-300 ease-out translate-y-0 animate-fade-in">
                         
-                        {/* Header Bar (New) */}
+                        {/* Header Bar */}
                         <div className="flex items-center justify-between p-4 border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-10">
                             <button 
                                 onClick={onClose}
@@ -412,7 +565,6 @@
                                 {item.title}
                             </h2>
 
-                             {/* Spacer to balance the layout for centering */}
                              <div className="w-8"></div>
                         </div>
 
@@ -428,18 +580,19 @@
                                      <span className="text-xs text-gray-400 uppercase tracking-wider bg-gray-100 px-2 py-1 rounded-md">{item.type}</span>
                                 </div>
                                 
-                                {/* Location */}
+                                {/* Location (with inline Map Link) */}
                                 <div className="flex items-center justify-center gap-2 text-sm text-gray-500">
                                     <Icon name="MapPin" size={16} className="flex-shrink-0" />
                                     <span>{item.location}</span>
+                                    <MapLink url={item.mapLink || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.location)}`} />
                                 </div>
                             </div>
 
                             <div className="prose prose-sm mb-8">
                                 <h3 className={`text-lg font-medium mb-3 ${MORANDI_COLORS.highlight}`}>關於此行程</h3>
-                                <p className="text-gray-600 leading-relaxed text-justify">
+                                <div className="text-gray-600 leading-relaxed text-justify">
                                     {item.desc}
-                                </p>
+                                </div>
                             </div>
 
                             {item.tips && item.tips.length > 0 && (
@@ -457,16 +610,8 @@
                                     </ul>
                                 </div>
                             )}
-
-                            <a 
-                                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.location)}`}
-                                target="_blank"
-                                rel="noreferrer"
-                                className={`w-full py-4 rounded-xl ${MORANDI_COLORS.primary} text-white font-medium flex items-center justify-center gap-2 hover:opacity-90 transition-opacity shadow-lg shadow-gray-200 mb-4`}
-                            >
-                                <Icon name="MapPin" size={18} />
-                                開啟 Google Maps
-                            </a>
+                            
+                            {/* Bottom Button Removed */}
                         </div>
                     </div>
                 </div>
@@ -543,7 +688,7 @@
                         {/* Header */}
                         <div className="pt-8 px-6 pb-4 bg-white/50 backdrop-blur-sm sticky top-0 z-10">
                             <h1 className={`text-2xl font-serif font-bold ${MORANDI_COLORS.text} tracking-wide`}>
-                                {activeTab === 'itinerary' ? '西巴爾幹之旅' : '旅遊資訊'}
+                                西巴爾幹之旅
                             </h1>
                             <p className="text-xs text-gray-500 mt-1 tracking-widest uppercase">
                                 2026 MAY 24 - JUN 12
@@ -594,17 +739,15 @@
                                     </div>
 
                                     {/* Itinerary List */}
-                                    <div className="px-6 space-y-4">
+                                    <div className="px-6 space-y-2">
                                         {currentEvents.map((item, idx) => (
                                             <div 
                                                 key={item.id}
                                                 onClick={() => setViewingItem(item)}
                                                 className="group bg-white rounded-xl p-5 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.05)] border border-gray-50 hover:shadow-lg transition-all duration-300 cursor-pointer relative overflow-hidden"
                                             >
-                                                {/* No Line */}
-
                                                 <div className="flex items-start gap-4">
-                                                    {/* Time Column (Replaces Icon Column) */}
+                                                    {/* Time Column */}
                                                     <div className={`flex-shrink-0 w-14 pt-1 text-right text-sm font-bold font-serif ${MORANDI_COLORS.highlight}`}>
                                                         {item.time}
                                                     </div>
@@ -616,11 +759,12 @@
                                                                 {item.title}
                                                             </h3>
                                                             
-                                                            {/* Map Button */}
+                                                            {/* Map Button on Card */}
                                                             <button 
                                                                 onClick={(e) => {
                                                                     e.stopPropagation();
-                                                                    window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.location)}`, '_blank');
+                                                                    const url = item.mapLink || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.location)}`;
+                                                                    window.open(url, '_blank');
                                                                 }}
                                                                 className={`ml-2 p-1.5 rounded-full ${MORANDI_COLORS.bg} text-gray-400 hover:text-[#C78F76] hover:bg-[#FFF] transition-colors flex-shrink-0`}
                                                             >
@@ -630,7 +774,10 @@
                                                             </button>
                                                         </div>
                                                         
-                                                        <p className="text-sm text-gray-500 line-clamp-2">{item.location}</p>
+                                                        {/* Subtitle / Location */}
+                                                        <p className="text-sm text-gray-500 line-clamp-2">
+                                                            {item.subtitle || item.location}
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -687,3 +834,5 @@
     </script>
 </body>
 </html>
+
+
