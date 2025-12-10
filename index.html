@@ -219,7 +219,11 @@
                 2: '札格瑞布',
                 3: '札格瑞布\n盧比安納',
                 4: '盧比安納',
-                5: '盧比安納\n布萊德'
+                5: '盧比安納\n布萊德',
+                6: '布萊德\n博希尼',
+                7: '布萊德\n羅維尼',
+                8: '羅維尼\n普拉',
+                9: '羅維尼\n十六湖'
             };
 
             let current = start;
@@ -777,17 +781,11 @@
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                盧比安納最漂亮的大公園。推薦走 "Jacopič Promenade" 林蔭大道，欣賞戶外攝影展，感覺非常舒服。
+                                盧比安納最漂亮的大公園，也是城市的綠肺。推薦走 "Jacopič Promenade" 林蔭大道，這條大道由建築師 Plečnik 設計，經常舉辦戶外大型攝影展。
                             </p>
-                            <div className="mb-4">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【Café Čolnarna Tivoli】 
-                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Colnarna+Tivoli" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    位於池塘邊的可愛咖啡館，很適合在這裡喝杯飲料休息，享受愜意的午後時光。
-                                </p>
-                            </div>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                您可以在公園內的長椅上休息，或是沿著小徑漫步到溫室植物園，享受愜意的午後自然時光。
+                            </p>
                         </Fragment>
                     ),
                     tips: []
@@ -907,17 +905,17 @@
                 },
                 {
                     id: 'd5-2',
-                    time: '11:30',
+                    time: '10:30',
                     title: '前往布萊德',
                     type: 'transport',
                     iconName: 'Car',
-                    subtitle: '車程約 40-50 分鐘',
+                    subtitle: '車程約 45 分鐘',
                     location: 'Bled, Slovenia',
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Lake+Bled',
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                告別可愛的盧比安納，開車前往斯洛維尼亞最夢幻的景點——布萊德湖 (Lake Bled)。
+                                回住宿拿行李後，開車前往斯洛維尼亞最夢幻的景點——布萊德湖 (Lake Bled)。
                             </p>
                             <div className="p-3 bg-gray-50 rounded-lg border border-gray-100 text-sm text-gray-600">
                                 <span className="font-bold">🚗 駕駛提醒：</span> 沿著 A2 高速公路行駛，路況通常良好。接近布萊德時可能會有些許車潮，請放慢速度欣賞沿途阿爾卑斯山腳下的美景。
@@ -925,6 +923,789 @@
                         </Fragment>
                     ),
                     tips: ['確認行李都已上車', '準備好相機迎接湖光山色']
+                },
+                {
+                    id: 'd5-3',
+                    time: '11:30',
+                    title: '湖景午餐',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    subtitle: 'Penzion Mlino / Vila Ajda',
+                    location: 'Lake Bled',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                抵達布萊德後，先享用一頓美味的湖景午餐。
+                            </p>
+                            <ul className="list-none pl-0 space-y-4">
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Penzion Mlino
+                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Penzion+Mlino+Bled" />
+                                    </div>
+                                    <p className="text-sm text-gray-600">擁有絕佳的湖景位置，價格合理，是欣賞湖心島的好地方。</p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Vila Ajda
+                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Vila+Ajda+Bled" />
+                                    </div>
+                                    <p className="text-sm text-gray-600">著名的布萊德奶油蛋糕 (Kremna rezina) 非常好吃，環境舒適。</p>
+                                </li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: ['午餐後可順便品嚐布萊德蛋糕']
+                },
+                {
+                    id: 'd5-4',
+                    time: '13:00',
+                    title: '布萊德湖散步',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: '環湖步道',
+                    location: 'Lake Bled',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                沿著湖畔逆時針散步，全程平緩好走，約需 1-1.5 小時。這是感受布萊德湖寧靜之美的最佳方式。
+                            </p>
+                            <div className="mb-4">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【最佳攝影點】
+                                </h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    走到 Mala Osojnica 路口附近的湖區，以及標示 Top View 的點位，可以拍到明信片般完美的湖心島與城堡合影。
+                                </p>
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['隨時可以停下來拍照', '穿著舒適好走的鞋']
+                },
+                {
+                    id: 'd5-checkin',
+                    time: '14:30',
+                    title: 'Rikli Balance Hotel',
+                    type: 'hotel',
+                    iconName: 'BedDouble',
+                    subtitle: 'Booking/14:00可check in',
+                    location: 'Rikli Balance Hotel',
+                    mapLink: 'https://maps.app.goo.gl/3Ud44qR8w5z4j3r98',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                抵達布萊德的下榻飯店 <span className="font-bold text-gray-800">Rikli Balance Hotel</span>。
+                            </p>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                飯店位於布萊德湖畔的高地上，享有絕佳的湖景視野。飯店名稱源自瑞士自然療法先驅 Arnold Rikli，強調整體健康與平衡的生活方式。辦理入住後，可以先將行李安置好，稍作休息，再繼續下午的遊船行程。
+                            </p>
+                        </Fragment>
+                    ),
+                    tips: ['14:00 後即可辦理入住', '享受飯店設施與景觀']
+                },
+                {
+                    id: 'd5-5',
+                    time: '15:00',
+                    title: '布萊德島遊船',
+                    type: 'activity',
+                    iconName: 'Compass',
+                    subtitle: 'Pletna Boat & 許願鐘',
+                    location: 'Bled Island',
+                    mapLink: 'https://maps.app.goo.gl/PnJRe8mLQZxmwxVw9',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                搭乘當地傳統的人力木造船 Pletna 前往湖心島，這是布萊德湖獨有的體驗。
+                            </p>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                上島後需爬上99階階梯才能抵達聖母升天教堂。別忘了進教堂拉響「許願鐘」，據說能讓願望成真。整個行程（含船程與島上停留）約 1.5 小時。
+                            </p>
+                        </Fragment>
+                    ),
+                    tips: ['Pletna 船夫通常只收現金', '教堂內部需購票參觀']
+                },
+                {
+                    id: 'd5-6',
+                    time: '17:00',
+                    title: '布萊德城堡夕陽',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: 'Bled Castle',
+                    location: 'Bled Castle',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Bled+Castle',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                登上懸崖邊的千年古堡，這裡是俯瞰全湖最壯闊的制高點。強烈建議黃昏時分前來，看著夕陽餘暉灑在湖面與遠方阿爾卑斯山頭，景色美不勝收。
+                            </p>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                建議停留到 18:30，盡情享受這魔幻時刻。
+                            </p>
+                        </Fragment>
+                    ),
+                    tips: ['夕陽時分遊客較多，建議提早佔位', '城堡內有博物館與酒窖可參觀']
+                },
+                {
+                    id: 'd5-7',
+                    time: '19:00',
+                    title: '晚餐',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    subtitle: '城堡餐廳 / Vrtnarija',
+                    location: 'Bled',
+                    desc: (
+                        <Fragment>
+                            <ul className="list-none pl-0 space-y-4">
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Bled Castle Restaurant
+                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Bled+Castle+Restaurant" />
+                                    </div>
+                                    <p className="text-sm text-gray-600">景觀第一的餐廳，就在城堡內。一邊享用美食一邊欣賞夜景，非常浪漫（強烈建議預訂）。</p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Restaurant Vrtnarija
+                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Restaurant+Vrtnarija+Bled" />
+                                    </div>
+                                    <p className="text-sm text-gray-600">位於 Garden Village 內，主打在地食材與健康料理，環境綠意盎然，氣氛極佳。</p>
+                                </li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: ['熱門時段務必訂位']
+                }
+            ],
+            6: [
+                {
+                    id: 'd6-1',
+                    time: '08:30',
+                    title: '前往博希尼',
+                    type: 'transport',
+                    iconName: 'Car',
+                    subtitle: '車程約 30-35 分鐘',
+                    location: 'Bohinj, Slovenia',
+                    mapLink: 'https://maps.app.goo.gl/o35VzmZEAa8iL4zg7',
+                    desc: '從布萊德出發，前往更原始、更寧靜的博希尼湖 (Lake Bohinj)。沿途風景優美，抵達後可先在湖邊散步拍照。',
+                    tips: ['早晨湖面常有霧氣，非常夢幻']
+                },
+                {
+                    id: 'd6-2',
+                    time: '09:30',
+                    title: '博希尼湖畔走走',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: '鏡面反射美景',
+                    location: 'Lake Bohinj',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Lake+Bohinj',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                相比布萊德的熱鬧，博希尼湖多了一份遺世獨立的寧靜。湖面廣闊，群山環繞，天氣好時湖面呈現完美的鏡面反射。
+                            </p>
+                            <div className="mb-4">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【必拍地標：聖約翰教堂】
+                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Church+of+St+John+the+Baptist+Bohinj" />
+                                </h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    St. John the Baptist 教堂矗立在石橋旁，是博希尼湖最經典的畫面。
+                                </p>
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['湖水清澈見底', '適合深呼吸放鬆']
+                },
+                {
+                    id: 'd6-3',
+                    time: '10:00',
+                    title: 'Vogel Cable Car',
+                    type: 'activity',
+                    iconName: 'Compass',
+                    subtitle: '纜車上山＋山頂散步',
+                    location: 'Vogel Ski Center',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Vogel+Cable+Car',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                搭乘纜車直達海拔 1535 公尺的山頂，單趟僅需 4 分鐘。
+                            </p>
+                            <div className="mb-4">
+                                <h4 className="font-bold text-gray-800 mb-1">【山頂亮點】</h4>
+                                <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
+                                    <li>壯觀的朱利安阿爾卑斯群峰 (Julian Alps) 全景。</li>
+                                    <li>俯瞰深谷中的博希尼湖，視角震撼。</li>
+                                    <li>山上步道輕鬆好走，約 20-40 分鐘即可遊覽主要觀景點。</li>
+                                </ul>
+                            </div>
+                            <div className="p-3 bg-gray-50 rounded-lg border border-gray-100 text-sm text-gray-600">
+                                <span className="font-bold">☕️ 愜意推薦：</span> 在山頂的咖啡館喝杯咖啡或享用早午餐，被群山環抱的氣氛極佳。
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['山上氣溫較低，建議帶件薄外套', '天氣晴朗時視野最佳']
+                },
+                {
+                    id: 'd6-4',
+                    time: '12:30',
+                    title: '博希尼午餐',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    subtitle: 'Foksner / Triglav',
+                    location: 'Ribčev Laz',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                下山後在博希尼湖畔小鎮享用午餐。
+                            </p>
+                            <ul className="list-none pl-0 space-y-4">
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Foksner
+                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Foksner+Burger+Bohinj" />
+                                    </div>
+                                    <p className="text-sm text-gray-600">人氣超高的漢堡店，漢堡肉汁豐富，是當地的排隊名店。</p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Restavracija Triglav Bohinj
+                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Restavracija+Triglav+Bohinj" />
+                                    </div>
+                                    <p className="text-sm text-gray-600">評價很好的景觀餐廳，提供美味的傳統斯洛維尼亞料理。</p>
+                                </li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: []
+                },
+                {
+                    id: 'd6-5-combined',
+                    time: '14:00',
+                    title: '薩維察瀑布 (Savica Waterfall)',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: '前往瀑布 & 步道健行',
+                    location: 'Slap Savica',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Savica+Waterfall',
+                    desc: (
+                        <Fragment>
+                             <div className="mb-4">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【前往瀑布】
+                                </h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    午餐後開車前往 Savica Waterfall，車程約 20 分鐘。
+                                </p>
+                            </div>
+                            <div className="mb-4">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【薩維察瀑布】 
+                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Savica+Waterfall" />
+                                </h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    這是斯洛維尼亞最著名的瀑布之一，也是薩瓦河 (Sava River) 的源頭。從停車場出發，需爬約 20-25 分鐘的階梯步道才能抵達觀景台。瀑布呈現獨特的字母「A」形（或說倒 Y 形），注入下方碧綠的水潭，顏色是夢幻的綠松石色，非常獨特且壯觀。
+                                </p>
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['需購買門票', '階梯較多但路況良好', '不會太累，值得一走']
+                },
+                {
+                    id: 'd6-7',
+                    time: '16:00',
+                    title: '返回布萊德',
+                    type: 'transport',
+                    iconName: 'Car',
+                    subtitle: '車程約 40 分鐘',
+                    location: 'Bled',
+                    desc: '結束博希尼的一日遊，開車返回布萊德。',
+                    tips: []
+                },
+                {
+                    id: 'd6-8',
+                    time: '17:00',
+                    title: '湖邊休息／自由活動',
+                    type: 'relax',
+                    iconName: 'Coffee',
+                    subtitle: '布萊德蛋糕',
+                    location: 'Lake Bled',
+                    desc: '回到布萊德後，可以在湖畔找個長椅休息，或是去咖啡館享用著名的「布萊德奶油蛋糕」(Kremna rezina)。這段時間也可以用來補足昨天想做但沒時間完成的活動，或者採買紀念品。',
+                    tips: ['享受悠閒的湖畔時光']
+                },
+                {
+                    id: 'd6-9',
+                    time: '19:00',
+                    title: '晚餐',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    subtitle: 'Bled',
+                    location: 'Bled',
+                    desc: '在布萊德享用晚餐，為美好的一天畫下句點。',
+                    tips: []
+                }
+            ],
+            7: [
+                {
+                    id: 'd7-1',
+                    time: '06:30',
+                    title: 'Mala Osojnica 晨拍',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: '最佳拍攝點',
+                    location: 'Mala Osojnica Trailhead',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Mala+Osojnica+Trailhead',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                攝影愛好者的必訪行程！清晨光線順光，是拍攝布萊德湖經典全景（湖、島、城堡、山巒）的絕佳時刻。
+                            </p>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                步道有些陡峭，單程約需 20-30 分鐘，建議穿著防滑好走的鞋子。山頂的視野絕對值得這番努力。
+                            </p>
+                        </Fragment>
+                    ),
+                    tips: ['步道較陡請小心', '記得帶水']
+                },
+                {
+                    id: 'd7-2',
+                    time: '10:30',
+                    title: '前往 Postojna Cave',
+                    type: 'transport',
+                    iconName: 'Car',
+                    subtitle: '車程 1h10',
+                    location: 'Postojna Cave Park',
+                    mapLink: 'https://maps.app.goo.gl/9n7MVp4bRbEhCDMv9',
+                    desc: '享用早餐並辦理退房後，開車前往歐洲最壯觀的鐘乳石洞——波斯托伊納溶洞 (Postojna Cave)。',
+                    tips: ['確認導航路線']
+                },
+                {
+                    id: 'd7-3',
+                    time: '13:30',
+                    title: 'Postojna Cave 洞窟導覽',
+                    type: 'sightseeing',
+                    iconName: 'MapPin',
+                    subtitle: '搭乘洞窟小火車',
+                    location: 'Postojna Cave',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Postojna+Cave+Entrance',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                全程約 1.5 小時的奇幻地底之旅。首先搭乘復古的洞窟小火車深入地底，接著步行參觀壯麗的鐘乳石大廳，最後尋找傳說中的「人魚」（洞螈）。
+                            </p>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                這是世界唯一有雙軌鐵路的溶洞，規模宏大令人嘆為觀止。
+                            </p>
+                        </Fragment>
+                    ),
+                    tips: ['洞內恆溫約10度，務必帶外套', '建議事先預約導覽']
+                },
+                {
+                    id: 'd7-4',
+                    time: '15:00',
+                    title: 'Predjama Castle',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: '洞窟城堡',
+                    location: 'Predjama Castle',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Predjama+Castle',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                距離溶洞僅10分鐘車程。這座城堡嵌在 123 公尺高的懸崖峭壁洞口，是金氏世界紀錄認證「世界上最大的洞窟城堡」。
+                            </p>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                外觀極具震撼力，彷彿魔幻電影場景。內部展示了中世紀的生活與騎士埃拉澤姆 (Erazem) 的傳奇故事。
+                            </p>
+                        </Fragment>
+                    ),
+                    tips: ['外觀必拍']
+                },
+                {
+                    id: 'd7-5',
+                    time: '16:00',
+                    title: '前往羅維尼',
+                    type: 'transport',
+                    iconName: 'Car',
+                    subtitle: '車程約 2 小時',
+                    location: 'Rovinj, Croatia',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Rovinj+Old+Town',
+                    desc: '跨越邊境進入克羅埃西亞，前往伊斯特里亞半島上最浪漫的城市——羅維尼 (Rovinj)。沿途欣賞地中海風情景致。',
+                    tips: ['準備護照通關', '注意克羅埃西亞交通規則']
+                },
+                {
+                    id: 'd7-6',
+                    time: '18:00',
+                    title: 'Loreto LYA SEA VIEW APARTMENTS',
+                    type: 'hotel',
+                    iconName: 'BedDouble',
+                    subtitle: 'Booking/check in',
+                    location: 'Loreto LYA Apartments',
+                    mapLink: 'https://maps.app.goo.gl/vKh1GcrtsoXXU8sH9',
+                    desc: '辦理入住手續，放下行李。準備迎接亞得里亞海的夕陽。',
+                    tips: []
+                },
+                {
+                    id: 'd7-7',
+                    time: '19:00',
+                    title: '舊城夕陽散步 & 晚餐',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: 'St. Euphemia Sunset',
+                    location: 'Rovinj Old Town',
+                    desc: (
+                        <Fragment>
+                            <div className="mb-4 flex items-center">
+                                <span className="font-bold text-gray-800">散步路線</span>
+                                <MapLink url="https://maps.app.goo.gl/6WL62poDFQ9MbSjW9" />
+                            </div>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                傍晚是羅維尼最魔幻的時刻。建議沿著蜿蜒的石板路漫步至舊城最高點的 <span className="font-bold text-gray-800">聖歐菲米亞教堂 (St. Euphemia)</span>。
+                            </p>
+                            
+                            <div className="mb-6">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【夕陽觀景點：教堂廣場】 
+                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Church+of+St.+Euphemia+Rovinj" />
+                                </h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    這裡擁有開闊的視野，可以欣賞金黃色夕陽灑落在亞得里亞海上的絕美景色，是羅維尼必拍的黃金時刻。
+                                </p>
+                            </div>
+
+                            <div className="mb-4">
+                                <h4 className="font-bold text-gray-800 mb-2">【晚餐推薦】</h4>
+                                <ul className="list-none pl-0 space-y-4">
+                                    <li>
+                                        <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                            La Puntulina
+                                            <MapLink url="https://maps.app.goo.gl/HftfrvrUuebu4f149" />
+                                        </div>
+                                        <p className="text-sm text-gray-600">懸崖邊的景觀餐廳，可以邊吃海鮮邊看海，非常熱門，務必預訂。</p>
+                                    </li>
+                                    <li>
+                                        <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                            Kantinon Tavern
+                                            <MapLink url="https://maps.app.goo.gl/bmU9kJ14GbqU2PNv8" />
+                                        </div>
+                                        <p className="text-sm text-gray-600">提供道地的伊斯特里亞傳統料理與海鮮，更有在地氛圍。</p>
+                                    </li>
+                                    <li>
+                                        <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                            Spacio Matika
+                                            <MapLink url="https://maps.app.goo.gl/LFVZ4J5r9vk6KyFy5" />
+                                        </div>
+                                        <p className="text-sm text-gray-600">體驗傳統羅維尼酒館文化 (Spacio) 的好地方，氣氛輕鬆。</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['舊城石板路較滑，建議穿好走的鞋', '夕陽後氣溫稍涼']
+                }
+            ],
+            8: [
+                {
+                    id: 'd8-1',
+                    time: '08:30',
+                    title: '舊城晨間散步',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: 'Rovinj Old Town',
+                    location: 'Rovinj Old Town',
+                    desc: '早晨的羅維尼安靜而美好，避開遊客喧囂，細細品味這座色彩繽紛的海港山城。',
+                    tips: []
+                },
+                {
+                    id: 'd8-2',
+                    time: '09:30',
+                    title: '前往普拉',
+                    type: 'transport',
+                    iconName: 'Car',
+                    subtitle: '車程 40 分鐘',
+                    location: 'Pula, Croatia',
+                    mapLink: 'https://maps.app.goo.gl/a23gVksw1nteuByo7',
+                    desc: '出發前往伊斯特里亞半島最大的城市——普拉 (Pula)，探訪著名的古羅馬遺跡。',
+                    tips: []
+                },
+                {
+                    id: 'd8-3',
+                    time: '10:30',
+                    title: '普拉競技場',
+                    type: 'sightseeing',
+                    iconName: 'MapPin',
+                    subtitle: 'Pula Arena',
+                    location: 'Pula Arena',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Pula+Arena',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                世界現存六大羅馬競技場之一，也是保存最完整的之一。這座建於西元一世紀的宏偉建築，曾是神鬼戰士搏鬥的場所。
+                            </p>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                上午的光線最適合拍攝競技場的外觀與內部。
+                            </p>
+                        </Fragment>
+                    ),
+                    tips: ['保留度極高', '光線上午最好']
+                },
+                {
+                    id: 'd8-zero',
+                    time: '11:20',
+                    title: 'Zerostrasse',
+                    type: 'sightseeing',
+                    iconName: 'Compass',
+                    subtitle: '地下軍事隧道',
+                    location: 'Zerostrasse',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Zerostrasse+Pula',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                這是普拉鮮為人知的地下世界，一戰時期建造的龐大防禦工事系統。
+                            </p>
+                            <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
+                                <li><span className="font-bold">位置便利：</span>距離競技場步行僅需 5 分鐘。</li>
+                                <li><span className="font-bold">參觀時間：</span>約 20–30 分鐘即可走完。</li>
+                                <li><span className="font-bold">特色體驗：</span>隧道內終年恆溫，非常涼爽（適合避暑）。冷冽的工業風格與地面的羅馬遺跡截然不同，拍照非常有氛圍。</li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: ['隧道內較涼爽', '風格獨特好拍照']
+                },
+                {
+                    id: 'd8-4',
+                    time: '12:00',
+                    title: '古城遺跡與堡壘巡禮',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: '凱旋門、神廟、Pulski Fort',
+                    location: 'Pula Old Town',
+                    desc: (
+                        <Fragment>
+                            <div className="mb-6">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【凱旋門 (Arch of the Sergii)】 
+                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Arch+of+the+Sergii" />
+                                </h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    這座精美的古羅馬凱旋門位於舊城區入口，雕刻細緻，已有兩千年歷史。
+                                </p>
+                            </div>
+                            <div className="mb-6">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【奧古斯都神廟 (Temple of Augustus)】 
+                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Temple+of+Augustus+Pula" />
+                                </h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    位於市政廣場 (Forum)，是獻給羅馬第一位皇帝奧古斯都的神廟，保存狀況極佳，見證了普拉悠久的歷史。
+                                </p>
+                            </div>
+                            <div className="mb-4">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【威尼斯堡壘 (Pulski Fort / Kaštel)】 
+                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Pula+Castle+Kastel" />
+                                </h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    這座星形要塞由威尼斯人建於17世紀，矗立在市中心的最高點。不僅是重要的防禦工事，現在更是俯瞰普拉市景、競技場與海港的最佳瞭望台。
+                                </p>
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['堡壘需爬坡，視野極佳']
+                },
+                {
+                    id: 'd8-5',
+                    time: '13:00',
+                    title: '普拉午餐',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    subtitle: 'Jupiter / Epulon',
+                    location: 'Pula City Center',
+                    desc: (
+                        <Fragment>
+                            <ul className="list-none pl-0 space-y-4">
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Jupiter
+                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Pizzeria+Jupiter+Pula" />
+                                    </div>
+                                    <p className="text-sm text-gray-600">當地著名的披薩與義大利麵餐廳，份量足、口味好。</p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Epulon Food & Wine
+                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Epulon+Food+and+Wine+Pula" />
+                                    </div>
+                                    <p className="text-sm text-gray-600">提供精緻的伊斯特里亞料理與美酒，氣氛佳。</p>
+                                </li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: []
+                },
+                {
+                    id: 'd8-6',
+                    time: '14:30',
+                    title: '返回羅維尼',
+                    type: 'transport',
+                    iconName: 'Car',
+                    subtitle: '車程 40 分鐘',
+                    location: 'Rovinj',
+                    desc: '結束普拉的羅馬歷史之旅，開車返回羅維尼，準備享受悠閒的午後時光。',
+                    tips: []
+                },
+                {
+                    id: 'd8-7',
+                    time: '16:00',
+                    title: '羅維尼日落時光',
+                    type: 'relax',
+                    iconName: 'Coffee',
+                    subtitle: 'Old Town / Port Sunset',
+                    location: 'Rovinj Port',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                羅維尼的傍晚是最迷人的時刻。魚市場與市中心港口是拍照的絕佳地點，可以拍到色彩斑斕的房子倒映在海水中。
+                            </p>
+                            <div className="mb-4">
+                                <h4 className="font-bold text-gray-800 mb-1">推薦海邊小酒吧：</h4>
+                                <ul className="text-sm text-gray-600 space-y-1 list-none pl-0">
+                                    <li>
+                                        <div className="flex items-center">
+                                            Mediterraneo Bar
+                                            <MapLink url="https://www.google.com/maps/search/?api=1&query=Mediterraneo+Bar+Rovinj" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="flex items-center">
+                                            La Puntulina (也有酒吧區)
+                                            <MapLink url="https://www.google.com/maps/search/?api=1&query=La+Puntulina+Rovinj" />
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p className="text-sm text-gray-600 mt-2">坐在石階上喝一杯，看著夕陽落入海中，是羅維尼最經典的體驗。</p>
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['海邊石頭較硬，可帶坐墊', '日落景色絕美']
+                },
+                {
+                    id: 'd8-8',
+                    time: '19:00',
+                    title: '海鮮晚餐',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    subtitle: 'La Puntulina / Kantinon',
+                    location: 'Rovinj',
+                    desc: (
+                        <Fragment>
+                            <ul className="list-none pl-0 space-y-4">
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        La Puntulina
+                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=La+Puntulina+Rovinj" />
+                                    </div>
+                                    <p className="text-sm text-gray-600">懸崖邊的景觀餐廳，可以邊吃海鮮邊看海，非常熱門，務必預訂。</p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Kantinon Tavern
+                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Kantinon+Tavern+Rovinj" />
+                                    </div>
+                                    <p className="text-sm text-gray-600">提供道地的伊斯特里亞傳統料理與海鮮，更有在地氛圍。</p>
+                                </li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: ['Rovinj 海鮮非常新鮮推薦']
+                }
+            ],
+            9: [
+                {
+                    id: 'd9-1',
+                    time: '10:00',
+                    title: 'Rovinj 全景 & 教堂',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: 'Panorama & St. Euphemia',
+                    location: 'Rovinj',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                退房後把握早晨的最佳光線。前往 Panorama Lookout 拍攝羅維尼彷彿漂浮在海上的經典城景。
+                            </p>
+                            <div className="mb-4">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【St. Euphemia 教堂】 
+                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Church+of+St+Euphemia+Rovinj" />
+                                </h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    這座巴洛克式教堂位於舊城最高點，守護著這座城市。若塔樓開放，建議登頂俯瞰紅瓦屋頂與蔚藍亞得里亞海的絕美對比。
+                                </p>
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['早上光線順光適合拍照']
+                },
+                {
+                    id: 'd9-2',
+                    time: '12:00',
+                    title: '前往 Kotli',
+                    type: 'transport',
+                    iconName: 'Car',
+                    subtitle: '車程 1h10',
+                    location: 'Kotli, Croatia',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Kotli',
+                    desc: '告別海岸，開車前往伊斯特里亞內陸的秘境——Kotli 水車村。',
+                    tips: []
+                },
+                {
+                    id: 'd9-3',
+                    time: '13:15',
+                    title: 'Kotli 水車村',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: '秘境瀑布 & 午餐',
+                    location: 'Kotli',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                一個彷彿時間靜止的廢棄小村落。Mirna 河流經此處形成小瀑布與天然的石灰岩水池 (Caldera)，景色獨特且寧靜。
+                            </p>
+                            <div className="mb-4">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【午餐推薦：Kotli Tavern】 
+                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Konoba+Kotli" />
+                                </h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    可在村內的傳統餐館享用午餐，品嚐伊斯特里亞的松露料理或燉肉，非常有特色。
+                                </p>
+                            </div>
+                            <p className="text-sm text-gray-600">在此停留散步約 30-45 分鐘即可。</p>
+                        </Fragment>
+                    ),
+                    tips: ['如遇枯水期水量可能較小', '氛圍非常寧靜']
+                },
+                {
+                    id: 'd9-4',
+                    time: '14:30',
+                    title: '前往十六湖',
+                    type: 'transport',
+                    iconName: 'Car',
+                    subtitle: '車程約 2 小時',
+                    location: 'Plitvice Lakes National Park',
+                    desc: '開車前往克羅埃西亞最著名的普利特維采湖群國家公園 (十六湖)。沿途風景將從地中海景觀轉變為內陸山林景色。',
+                    tips: ['山路駕駛請注意安全']
+                },
+                {
+                    id: 'd9-5',
+                    time: '16:30',
+                    title: '抵達十六湖住宿',
+                    type: 'hotel',
+                    iconName: 'BedDouble',
+                    subtitle: 'Check-in',
+                    location: 'Plitvice Lakes Accommodation',
+                    desc: '抵達住宿地點辦理入住。建議選擇靠近 Entrance 1 或 Entrance 2 的住宿，以便明天一早就能進入園區，避開人潮並節省體力。',
+                    tips: ['早點休息為明日健行做準備', '確認好明日入園門票']
                 }
             ],
             20: [ 
@@ -1021,6 +1802,13 @@
                                         {item.time}
                                     </span>
                                      <span className="text-xs text-gray-400 uppercase tracking-wider bg-gray-100 px-2 py-1 rounded-md">{item.type}</span>
+                                </div>
+                                
+                                {/* Location (with inline Map Link) */}
+                                <div className="flex items-center justify-center gap-2 text-sm text-gray-500">
+                                    <Icon name="MapPin" size={16} className="flex-shrink-0" />
+                                    <span>{item.location}</span>
+                                    <MapLink url={item.mapLink || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.location)}`} />
                                 </div>
                             </div>
 
@@ -1265,6 +2053,3 @@
     </script>
 </body>
 </html>
-
-
-
