@@ -223,7 +223,8 @@
                 6: '布萊德\n博希尼',
                 7: '布萊德\n羅維尼',
                 8: '羅維尼\n普拉',
-                9: '羅維尼\n十六湖'
+                9: '羅維尼\n十六湖',
+                10: '十六湖'
             };
 
             let current = start;
@@ -1706,6 +1707,143 @@
                     location: 'Plitvice Lakes Accommodation',
                     desc: '抵達住宿地點辦理入住。建議選擇靠近 Entrance 1 或 Entrance 2 的住宿，以便明天一早就能進入園區，避開人潮並節省體力。',
                     tips: ['早點休息為明日健行做準備', '確認好明日入園門票']
+                }
+            ],
+            10: [
+                {
+                    id: 'd10-1',
+                    time: '08:30',
+                    title: '抵達入口 2 (Entrance 2)',
+                    type: 'sightseeing',
+                    iconName: 'MapPin',
+                    subtitle: '最佳起點 • 路線 B',
+                    location: 'Plitvice Lakes Entrance 2',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Plitvice+Lakes+Entrance+2',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                <span className="font-bold text-gray-800">🟢 今日策略：路線 B（上下湖全覽）</span><br/>
+                                這是最適合您的路線！距離適中，體力消耗剛好，景色密度最高，且能一次看完上湖區的靜謐藍湖與下湖區的經典瀑布群。
+                            </p>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                選擇入口 2 進入，可以比入口 1 更快避開下游的塞車人潮。
+                            </p>
+                            <div className="mt-4 p-3 bg-yellow-50 rounded-lg border border-yellow-100">
+                                <h4 className="font-bold text-gray-800 mb-1 text-sm">🟡 替代方案（視當天狀況調整）：</h4>
+                                <ul className="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                                    <li><span className="font-bold">方案 2 (路線 A)：</span>最輕鬆，單走下湖 (2-3小時)。適合睡晚了、下雨或不想走太累。</li>
+                                    <li><span className="font-bold">方案 3 (路線 C)：</span>超完整 (6-7小時)。把 A+B 全合併，適合體力極佳者，但路線 B 其實已經很完美了。</li>
+                                </ul>
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['早到避開 10:00 後的爆量團客', '穿防滑好走的鞋']
+                },
+                {
+                    id: 'd10-2',
+                    time: '09:00',
+                    title: '上湖區健行',
+                    type: 'activity',
+                    iconName: 'Camera',
+                    subtitle: '搭巴士至 ST3 起點',
+                    location: 'Upper Lakes',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Plitvice+Upper+Lakes',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                進園後先搭乘園區巴士到 ST3（上湖區起點）。您會站在十六湖最「安靜的高處」，直接開始欣賞深綠色的湖面與森林步道。
+                            </p>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                這一段路平緩好走，木棧道穿過湖面，光線柔和，是美照密度最高的區域。
+                            </p>
+                            <div className="mb-4 mt-4">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    📸 上湖區必拍：
+                                </h4>
+                                <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
+                                    <li>Gradinsko jezero 湖面倒影</li>
+                                    <li>Galovački buk 大瀑布</li>
+                                </ul>
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['此區禁止飛空拍機', '禁止游泳']
+                },
+                {
+                    id: 'd10-3',
+                    time: '11:00',
+                    title: '遊船橫渡大湖',
+                    type: 'transport',
+                    iconName: 'Compass',
+                    subtitle: 'P2 → P3',
+                    location: 'Lake Kozjak',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                結束上湖區健行後，抵達碼頭 P2，搭乘電動船前往 P3，橫渡最大的 Kozjak 湖。
+                            </p>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                這段船程約 10-15 分鐘，非常舒服，剛好可以讓雙腳休息一下。在船面上也是拍攝湖景的絕佳視角。
+                            </p>
+                        </Fragment>
+                    ),
+                    tips: ['船班約 10-15 分鐘一班', '旺季偶爾需排隊']
+                },
+                {
+                    id: 'd10-4',
+                    time: '11:20',
+                    title: '下湖區健行',
+                    type: 'activity',
+                    iconName: 'Camera',
+                    subtitle: '經典瀑布群',
+                    location: 'Lower Lakes',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Plitvice+Lower+Lakes',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                抵達 P3 碼頭後進入下湖區，這裡是全園區最震撼的「大小瀑布密集區」。木棧道緊貼著水邊，超級好拍。
+                            </p>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                途中會經過熱門的「辰光瀑布區」，但因為您是從入口 2 方向過來，會是反向行走，剛好能避開部分迎面而來的人潮。
+                            </p>
+                            <div className="mb-4 mt-4">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    📸 下湖區必拍：
+                                </h4>
+                                <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
+                                    <li>Milanovac – Gavanovac 湖連接構圖</li>
+                                    <li>Veliki Slap (大瀑布)：從高處拍全景最壯觀</li>
+                                </ul>
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['下雨天木棧道會滑，請小心', '雨天顏色反而更飽和']
+                },
+                {
+                    id: 'd10-5',
+                    time: '13:00',
+                    title: '高點觀景台 & 回程',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: 'Postcard View',
+                    location: 'Veliki Slap Viewpoint',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Veliki+Slap+Viewpoint',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                走到下湖區尾端，爬上高點觀景台，這裡就是無數明信片上的經典畫面位置 (Postcard View)，可以俯瞰大瀑布與S型木棧道。
+                            </p>
+                            <div className="mb-4">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【回程安排】
+                                </h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    約 13:30 從 ST1 搭乘接駁巴士返回 ST2 (入口 2)，取車離開。全程約 4.5 - 5.5 小時，剛好完成完美的十六湖一日遊，不會太過疲累。
+                                </p>
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['預留體力爬最後一段坡', '準備離開園區']
                 }
             ],
             20: [ 
