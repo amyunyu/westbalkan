@@ -56,6 +56,7 @@
         const { useState, useEffect, useRef, Fragment } = React;
 
         // --- Icon Component System ---
+        // 使用 Lucide Icons 集合的 SVG 路徑
         const Icon = ({ name, size = 24, className = "" }) => {
             const icons = {
                 MapPin: (
@@ -199,23 +200,25 @@
 
         // --- Data & Configuration ---
 
+        // 莫蘭迪色系配置
         const MORANDI_COLORS = {
-            bg: 'bg-[#FDFCF8]', 
-            primary: 'bg-[#8F9E9D]', 
-            secondary: 'bg-[#D4C4B7]', 
-            accent: 'bg-[#E6DECA]', 
-            text: 'text-[#4A4A4A]', 
-            textLight: 'text-[#8C8C8C]',
+            bg: 'bg-[#FDFCF8]', // 暖白底色
+            primary: 'bg-[#8F9E9D]', // 主色 (青灰色)
+            secondary: 'bg-[#D4C4B7]', // 次要色 (米褐色)
+            accent: 'bg-[#E6DECA]', // 點綴色 (淺米黃)
+            text: 'text-[#4A4A4A]', // 主要文字色
+            textLight: 'text-[#8C8C8C]', // 輕量文字色
             card: 'bg-white',
-            highlight: 'text-[#C78F76]' 
+            highlight: 'text-[#C78F76]' // 強調色 (暖棕色)
         };
 
+        // 生成行程日期數據
         const generateDates = () => {
             const dates = [];
-            const start = new Date(2026, 4, 24); 
-            const end = new Date(2026, 5, 12);   
+            const start = new Date(2026, 4, 24); // 5月24日 (月份是 0-indexed)
+            const end = new Date(2026, 5, 12);   // 6月12日
             
-            // City mapping for date selector
+            // 城市對應表
             const cityMap = {
                 1: '飛機上',
                 2: '札格瑞布',
@@ -251,7 +254,7 @@
 
         const tripDates = generateDates();
 
-        // Helper for inline map button (The "Raindrop")
+        // 嵌入式地圖連結按鈕 (地圖水滴圖示)
         const MapLink = ({ url }) => (
             <a 
                 href={url}
@@ -267,6 +270,7 @@
             </a>
         );
 
+        // 詳細行程數據 (已包含在原始檔案中)
         const itineraryData = {
             1: [ 
                 {
@@ -282,7 +286,7 @@
                 {
                     id: 'd1-2',
                     time: '21:00',
-                    title: '飛往杜布羅夫尼克',
+                    title: '飛往札格瑞布', // <-- 已修改目的地
                     type: 'transport',
                     iconName: 'Plane',
                     subtitle: '轉機',
@@ -724,14 +728,14 @@
                             </p>
                             <ul className="list-none pl-0 space-y-4">
                                 <li>
-                                    <div className="font-bold text-gray-800 flex items-center mb-1">
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                         Druga Violina
                                         <MapLink url="https://www.google.com/maps/search/?api=1&query=Druga+Violina+Ljubljana" />
                                     </div>
                                     <p className="text-sm text-gray-600">在地菜、平價且美味，這是一間雇用身心障礙人士的社會企業餐廳，氣氛溫馨。</p>
                                 </li>
                                 <li>
-                                    <div className="font-bold text-gray-800 flex items-center mb-1">
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                         Valvas’or
                                         <MapLink url="https://www.google.com/maps/search/?api=1&query=Valvasor+Ljubljana" />
                                     </div>
@@ -764,7 +768,7 @@
                                     <p className="text-sm text-gray-600">National Gallery，收藏豐富的斯洛維尼亞與歐洲藝術畫作。</p>
                                 </li>
                                 <li>
-                                    <div className="font-bold text-gray-800 flex items-center mb-1">
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                         喜歡現代藝術 → 現代博物館
                                         <MapLink url="https://www.google.com/maps/search/?api=1&query=Moderna+galerija+Ljubljana" />
                                     </div>
@@ -1400,7 +1404,7 @@
                                     <li>
                                         <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                             Kantinon Tavern
-                                            <MapLink url="https://maps.app.goo.gl/bmU9kJ14GbqU2PNv8" />
+                                            <MapLink url="https://www.google.com/maps/search/?api=1&query=Kantinon+Tavern+Rovinj" />
                                         </div>
                                         <p className="text-sm text-gray-600">提供道地的伊斯特里亞傳統料理與海鮮，更有在地氛圍。</p>
                                     </li>
@@ -1617,7 +1621,7 @@
                                 <li>
                                     <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                         La Puntulina
-                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=La+Puntulina+Rovinj" />
+                                        <MapLink url="https://maps.app.goo.gl/HftfrvrUuebu4f149" />
                                     </div>
                                     <p className="text-sm text-gray-600">懸崖邊的景觀餐廳，可以邊吃海鮮邊看海，非常熱門，務必預訂。</p>
                                 </li>
@@ -1627,6 +1631,13 @@
                                         <MapLink url="https://www.google.com/maps/search/?api=1&query=Kantinon+Tavern+Rovinj" />
                                     </div>
                                     <p className="text-sm text-gray-600">提供道地的伊斯特里亞傳統料理與海鮮，更有在地氛圍。</p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Spacio Matika
+                                        <MapLink url="https://maps.app.goo.gl/LFVZ4J5r9vk6KyFy5" />
+                                    </div>
+                                    <p className="text-sm text-gray-600">體驗傳統羅維尼酒館文化 (Spacio) 的好地方，氣氛輕鬆。</p>
                                 </li>
                             </ul>
                         </Fragment>
@@ -2205,7 +2216,7 @@
                                     <span className="text-xs text-gray-600 block">巨大的石造空間，是《冰與火之歌：權力遊戲》龍母關龍的拍攝地，非常壯觀。</span>
                                 </li>
                                 <li>
-                                    <div className="font-bold text-gray-700 flex items-center mb-1">
+                                    <div className="font-bold text-gray-700 mb-1">
                                         6. 水果廣場 (Fruit Square) (10 min)
                                         <MapLink url="https://www.google.com/maps/search/?api=1&query=Fruit+Square+Split" />
                                     </div>
@@ -2254,9 +2265,11 @@
             ]
         };
 
+        // 獲取當日行程數據的函數 (如果沒有定義，則返回通用行程)
         const getDayEvents = (dayNum) => {
             if (itineraryData[dayNum]) return itineraryData[dayNum];
             
+            // 處理未定義日期的通用行程
             return [
                 {
                     id: `gen-${dayNum}-1`,
@@ -2291,23 +2304,24 @@
             ];
         };
 
-        // --- Main Components ---
+        // --- 子組件 ---
 
+        // 行程細節彈窗
         const DetailView = ({ item, onClose }) => {
             if (!item) return null;
 
             return (
                 <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center pointer-events-none">
-                    {/* Backdrop */}
+                    {/* 背景遮罩 */}
                     <div 
                         className="absolute inset-0 bg-black/40 backdrop-blur-sm pointer-events-auto transition-opacity duration-300"
                         onClick={onClose}
                     />
                     
-                    {/* Card Content */}
+                    {/* 卡片內容 (底部滑出) */}
                     <div className="relative w-full max-w-md h-[85vh] sm:h-[600px] bg-[#FDFCF8] rounded-t-3xl sm:rounded-3xl shadow-2xl overflow-hidden pointer-events-auto flex flex-col transform transition-transform duration-300 ease-out translate-y-0 animate-fade-in">
                         
-                        {/* Header Bar */}
+                        {/* 標頭欄 */}
                         <div className="flex items-center justify-between p-4 border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-10">
                             <button 
                                 onClick={onClose}
@@ -2320,14 +2334,14 @@
                                 {item.title}
                             </h2>
 
-                             <div className="w-8"></div>
+                             <div className="w-8"></div> {/* Spacer for symmetry */}
                         </div>
 
-                        {/* Content */}
+                        {/* 內容區域 */}
                         <div className="flex-1 overflow-y-auto p-6 pt-6">
                             
                             <div className="flex flex-col items-center gap-4 mb-6">
-                                {/* Time Badge */}
+                                {/* 時間/類型標籤 */}
                                 <div className="flex items-center gap-2">
                                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${MORANDI_COLORS.primary} text-white`}>
                                         {item.time}
@@ -2359,16 +2373,17 @@
                                 </div>
                             )}
                             
-                            {/* Bottom Button Removed */}
+                            {/* 底部按鈕已移除 */}
                         </div>
                     </div>
                 </div>
             );
         };
 
+        // 旅遊資訊頁面
         const InfoPage = () => {
             return (
-                <div className="p-6 pb-24 space-y-6 animate-fade-in">
+                <div className="p-6 pb-32 space-y-6 animate-fade-in"> {/* 確保使用 pb-32 */}
                     <h2 className={`text-2xl font-serif font-bold ${MORANDI_COLORS.text}`}>旅遊資訊</h2>
                     
                     <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
@@ -2384,8 +2399,8 @@
                             </div>
                             <div className="border-l-2 border-gray-200 pl-4">
                                 <p className="text-xs text-gray-400">轉機 5/25</p>
-                                <p className="font-medium text-gray-800">TK439 IST - DBV</p>
-                                <p className="text-sm text-gray-500">07:30 - 08:20</p>
+                                <p className="font-medium text-gray-800">TK439 IST - ZAG</p> {/* 更改為 ZAG */}
+                                <p className="text-sm text-gray-500">07:30 - 09:20</p> {/* 假設到達時間約為 09:20 */}
                             </div>
                         </div>
                     </div>
@@ -2410,19 +2425,22 @@
             );
         };
 
+        // --- 主應用程式組件 ---
         const App = () => {
-            const [activeTab, setActiveTab] = useState('itinerary'); 
-            const [selectedDateIdx, setSelectedDateIdx] = useState(0);
-            const [viewingItem, setViewingItem] = useState(null);
+            const [activeTab, setActiveTab] = useState('itinerary'); // 預設顯示行程頁
+            const [selectedDateIdx, setSelectedDateIdx] = useState(0); // 預設選擇第一天
+            const [viewingItem, setViewingItem] = useState(null); // 控制詳細資訊彈窗
             const scrollRef = useRef(null);
 
             const currentDate = tripDates[selectedDateIdx];
             const currentEvents = getDayEvents(currentDate.dayNum);
             
+            // 側滑選單定位效果
             useEffect(() => {
                 if (scrollRef.current) {
                     const activeEl = scrollRef.current.children[selectedDateIdx];
                     if (activeEl) {
+                        // 讓選中的日期滾動到視野中央
                         activeEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
                     }
                 }
@@ -2432,7 +2450,7 @@
                 <div className={`min-h-screen ${MORANDI_COLORS.bg} font-sans selection:bg-[#D4C4B7] selection:text-white`}>
                     <div className="max-w-md mx-auto bg-[#FDFCF8] h-[100dvh] relative shadow-2xl overflow-hidden flex flex-col">
                         
-                        {/* Header - Fixed Height */}
+                        {/* 頂部標題 */}
                         <div className="pt-8 px-6 pb-4 bg-white/50 backdrop-blur-sm sticky top-0 z-10 shrink-0">
                             <h1 className={`text-2xl font-serif font-bold ${MORANDI_COLORS.text} tracking-wide`}>
                                 西巴爾幹之旅
@@ -2444,7 +2462,7 @@
 
                         {activeTab === 'itinerary' ? (
                             <React.Fragment>
-                                {/* Date Selector - Fixed Height */}
+                                {/* 日期選擇器 (橫向滾動) */}
                                 <div className="border-b border-gray-200 bg-white shadow-sm z-0 shrink-0">
                                     <div 
                                         ref={scrollRef}
@@ -2476,12 +2494,12 @@
                                     </div>
                                 </div>
 
-                                {/* Scrollable Content */}
-                                <div className="flex-1 overflow-y-auto pb-24">
+                                {/* 行程列表 (垂直滾動) */}
+                                <div className="flex-1 overflow-y-auto pb-4 mb-24">
                                     
-                                    {/* Weather Display Removed */}
+                                    {/* 天氣欄位已移除 */}
 
-                                    {/* Itinerary List */}
+                                    {/* 行程列表 */}
                                     <div className="px-6 space-y-2 mt-4">
                                         {currentEvents.map((item, idx) => (
                                             <div 
@@ -2490,19 +2508,19 @@
                                                 className="group bg-white rounded-xl p-5 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.05)] border border-gray-50 hover:shadow-lg transition-all duration-300 cursor-pointer relative overflow-hidden"
                                             >
                                                 <div className="flex items-start gap-4">
-                                                    {/* Time Column */}
+                                                    {/* 時間欄 */}
                                                     <div className={`flex-shrink-0 w-14 pt-1 text-right text-sm font-bold font-serif ${MORANDI_COLORS.highlight}`}>
                                                         {item.time}
                                                     </div>
 
-                                                    {/* Content Column */}
+                                                    {/* 內容欄 */}
                                                     <div className="flex-1 min-w-0">
                                                         <div className="flex justify-between items-start mb-0.5">
                                                             <h3 className={`text-lg font-bold ${MORANDI_COLORS.text} leading-tight`}>
                                                                 {item.title}
                                                             </h3>
                                                             
-                                                            {/* Map Button on Card */}
+                                                            {/* 地圖按鈕 on Card */}
                                                             <button 
                                                                 onClick={(e) => {
                                                                     e.stopPropagation();
@@ -2511,13 +2529,14 @@
                                                                 }}
                                                                 className={`ml-2 p-1.5 rounded-full ${MORANDI_COLORS.bg} text-gray-400 hover:text-[#C78F76] hover:bg-[#FFF] transition-colors flex-shrink-0`}
                                                             >
+                                                                {/* 模擬地圖水滴圖案 */}
                                                                 <div className="w-4 h-4 flex items-center justify-center rounded-tr-[50%] rounded-tl-[50%] rounded-bl-[50%] rounded-br-0 transform rotate-45 border-2 border-current">
                                                                     <div className="w-1 h-1 bg-current rounded-full transform -rotate-45" />
                                                                 </div>
                                                             </button>
                                                         </div>
                                                         
-                                                        {/* Subtitle / Location */}
+                                                        {/* 副標題 / 地點 */}
                                                         <p className="text-sm text-gray-500 line-clamp-2">
                                                             {item.subtitle || item.location}
                                                         </p>
@@ -2527,18 +2546,20 @@
                                         ))}
 
                                         <div className="h-10 text-center text-xs text-gray-300 pt-4">
-                                            End of Day {currentDate.dayNum}
+                                            {/* 顯示當日結束標記 */}
+                                            Day {currentDate.dayNum} 行程結束
                                         </div>
                                     </div>
                                 </div>
                             </React.Fragment>
                         ) : (
-                            <div className="flex-1 overflow-y-auto pb-24">
+                            // 旅遊資訊頁籤內容
+                            <div className="flex-1 overflow-y-auto pb-4 mb-24">
                                 <InfoPage />
                             </div>
                         )}
 
-                        {/* Bottom Navigation */}
+                        {/* 底部導航欄 */}
                         <div className="absolute bottom-6 left-6 right-6 z-20">
                             <div className="bg-white/90 backdrop-blur-md rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-1.5 flex justify-between border border-white/50">
                                 <button
@@ -2566,7 +2587,7 @@
                             </div>
                         </div>
 
-                        {/* Details Overlay */}
+                        {/* 行程細節彈窗 */}
                         <DetailView item={viewingItem} onClose={() => setViewingItem(null)} />
 
                     </div>
