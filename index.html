@@ -24,6 +24,8 @@
         body {
             font-family: 'Noto Sans TC', sans-serif;
             background-color: #FDFCF8;
+            /* Prevent overscroll behavior on mobile */
+            overscroll-behavior: none;
         }
         .font-serif {
             font-family: 'Noto Serif TC', serif;
@@ -1242,7 +1244,7 @@
                     iconName: 'Coffee',
                     subtitle: '布萊德蛋糕',
                     location: 'Lake Bled',
-                    desc: '回到布萊德後，可以在湖畔找個長椅休息，或是去咖啡館享用著名的「布萊德奶油蛋糕」(Kremna rezina)。這段時間也可以用來補足昨天想做但沒時間完成的活動，或者採買紀念品。',
+                    desc: '回到布萊德後，可以在湖畔找個長椅休息，或是享用著名的「布萊德奶油蛋糕」(Kremna rezina)。這段時間也可以用來補足昨天想做但沒時間完成的活動，或者採買紀念品。',
                     tips: ['享受悠閒的湖畔時光']
                 },
                 {
@@ -2428,10 +2430,10 @@
 
             return (
                 <div className={`min-h-screen ${MORANDI_COLORS.bg} font-sans selection:bg-[#D4C4B7] selection:text-white`}>
-                    <div className="max-w-md mx-auto bg-[#FDFCF8] min-h-screen relative shadow-2xl overflow-hidden flex flex-col">
+                    <div className="max-w-md mx-auto bg-[#FDFCF8] h-[100dvh] relative shadow-2xl overflow-hidden flex flex-col">
                         
-                        {/* Header */}
-                        <div className="pt-8 px-6 pb-4 bg-white/50 backdrop-blur-sm sticky top-0 z-10">
+                        {/* Header - Fixed Height */}
+                        <div className="pt-8 px-6 pb-4 bg-white/50 backdrop-blur-sm sticky top-0 z-10 shrink-0">
                             <h1 className={`text-2xl font-serif font-bold ${MORANDI_COLORS.text} tracking-wide`}>
                                 西巴爾幹之旅
                             </h1>
@@ -2442,8 +2444,8 @@
 
                         {activeTab === 'itinerary' ? (
                             <React.Fragment>
-                                {/* Date Selector */}
-                                <div className="border-b border-gray-200 bg-white shadow-sm z-0">
+                                {/* Date Selector - Fixed Height */}
+                                <div className="border-b border-gray-200 bg-white shadow-sm z-0 shrink-0">
                                     <div 
                                         ref={scrollRef}
                                         className="flex overflow-x-auto px-0 hide-scrollbar snap-x overflow-y-hidden"
@@ -2531,11 +2533,13 @@
                                 </div>
                             </React.Fragment>
                         ) : (
-                            <InfoPage />
+                            <div className="flex-1 overflow-y-auto pb-24">
+                                <InfoPage />
+                            </div>
                         )}
 
                         {/* Bottom Navigation */}
-                        <div className="absolute bottom-6 left-6 right-6">
+                        <div className="absolute bottom-6 left-6 right-6 z-20">
                             <div className="bg-white/90 backdrop-blur-md rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-1.5 flex justify-between border border-white/50">
                                 <button
                                     onClick={() => setActiveTab('itinerary')}
