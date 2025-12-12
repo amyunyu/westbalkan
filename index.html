@@ -2610,7 +2610,7 @@
                             </div>
                         </Fragment>
                     ),
-                    tips: ['石板路夜晚偏滑 → 建議穿防滑鞋', '不建議夜晚上 Yellow Bastion', '主路線燈光足、安全']
+                    tips: ['石板路夜晚偏滑 → 建議穿防滑鞋', '不建議夜登上 Yellow Bastion', '主路線燈光足、安全']
                 }
             ],
             // --- Day 15: Sarajevo 深度歷史日：奧斯曼 × 奧匈 × 戰爭 (6/7) ---
@@ -2931,6 +2931,142 @@
                     location: 'Kotor Old Town',
                     desc: '在科托爾舊城區內或海邊找間餐廳享用晚餐。第一晚行程以放鬆為主，不用安排任何重點活動，也不要爬山，留待明天再深度探索。',
                     tips: ['Old Town 晚餐', '海邊或城牆外短散步', '不登山、不排重點', '第一晚保留體力']
+                }
+            ],
+            // --- Day 17: Kotor 深度探索 (6/9) ---
+            17: [
+                {
+                    id: 'd17-1',
+                    time: '06:30',
+                    title: '聖約翰堡晨間健行',
+                    type: 'activity',
+                    iconName: 'Compass',
+                    subtitle: 'Kotor Fortress (San Giovanni)',
+                    location: 'Kotor Fortress',
+                    mapLink: 'https://maps.app.goo.gl/JqFh6tD2G1xR6N8', // Fortress Link
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                **強烈建議早上出發（避開炎熱和人潮）**。這段健行約需 1.5 到 2 小時（往返＋拍照），雖然階梯多，但從山頂俯瞰科托爾灣 (Kotor Bay) 的景色是蒙特內哥羅最經典的畫面。
+                            </p>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                爬到**「聖母健康教堂 (Church of Our Lady of Health)」**（約 30 分鐘）即可看到非常棒的景色。繼續往上爬到堡壘頂端（約 60 分鐘），景色更壯闊。
+                            </p>
+                        </Fragment>
+                    ),
+                    tips: ['一定要帶水', '穿舒適的運動鞋', '早上 6:00-7:00 出發最佳', '若不想爬山，可改為搭乘纜車（參見下午行程）。']
+                },
+                {
+                    id: 'd17-2',
+                    time: '10:00',
+                    title: '早餐＋休息',
+                    type: 'food',
+                    iconName: 'Coffee',
+                    subtitle: 'Dobrota 或老城咖啡館',
+                    location: 'Kotor Old Town / Dobrota',
+                    mapLink: 'https://maps.app.goo.gl/JqFh6tD2G1xR6N8', // Old Town Link
+                    desc: '健行後回到老城區，找間咖啡館享用早餐並休息。推薦：老城內咖啡館，或沿著 Dobrota 沿海大道找間有海景的 Cafe，享受真正的慢活時光。',
+                    tips: ['補充水分與能量', ' Dobrota 沿海有很多安靜的咖啡館']
+                },
+                {
+                    id: 'd17-3',
+                    time: '11:00',
+                    title: 'Kotor Old Town 深度散步',
+                    type: 'sightseeing',
+                    iconName: 'MapPin',
+                    subtitle: '城牆內小巷、教堂、貓咪博物館',
+                    location: 'Kotor Old Town',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                深入探索科托爾迷宮般的舊城區（受聯合國教科文組織保護），這是一座「貓城」，充滿中世紀的建築魅力。
+                            </p>
+                            <div className="mb-2">
+                                <h4 className="font-bold text-gray-800 mb-1">【必看亮點】</h4>
+                                <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
+                                    <li><span className="font-bold">聖特里芬大教堂 (St. Tryphon Cathedral)：</span>科托爾最重要的地標，建於 12 世紀。</li>
+                                    <li><span className="font-bold">鐘樓廣場 & 武器廣場：</span>舊城區的中心地帶。</li>
+                                    <li><span className="font-bold">貓咪博物館：</span>科托爾是著名的愛貓城市，這間小小的博物館充滿趣味。</li>
+                                    <li><span className="font-bold">城牆邊緣：</span>沿著城牆腳下的小路走，感受古老的石牆氛圍。</li>
+                                </ul>
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['許多小巷都有驚喜的拍照點', '注意地上的貓咪']
+                },
+                {
+                    id: 'd17-4',
+                    time: '13:00',
+                    title: '午餐',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    subtitle: 'Konoba Scala Santa / Cesarica',
+                    location: 'Kotor Old Town',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                享用舊城內的美食。科托爾靠近海邊，推薦品嚐新鮮的海鮮和達爾馬提亞特色菜。
+                            </p>
+                            <h4 className="font-bold text-gray-800 mb-2">【餐廳推薦】</h4>
+                            <ul className="list-none pl-0 space-y-3">
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Konoba Scala Santa
+                                        <MapLink url="https://maps.app.goo.gl/r6W4W2H6j5T8Z4A6" />
+                                    </div>
+                                    <p className="text-xs text-gray-600">位於安靜的廣場，提供優質的本地菜和海鮮。</p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Cesarica
+                                        <MapLink url="https://maps.app.goo.gl/9k2c8G4H6j5T8Z4A6" />
+                                    </div>
+                                    <p className="text-xs text-gray-600">家庭式經營的小餐館，主打傳統菜，氣氛溫馨。</p>
+                                </li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: ['午餐後可小睡片刻']
+                },
+                {
+                    id: 'd17-5',
+                    time: '14:30',
+                    title: '午後自由活動 (二選一)',
+                    type: 'relax',
+                    iconName: 'Sun',
+                    subtitle: '纜車或海邊放空',
+                    location: 'Kotor Cable Car / Dobrota',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                下午氣溫高，建議選擇一個輕鬆的行程：
+                            </p>
+                            <ul className="text-sm text-gray-600 space-y-4 list-none pl-0">
+                                <li>
+                                    <span className="font-bold text-gray-700">【A. Kotor Cable Car (纜車)】</span>
+                                    <MapLink url="https://maps.app.goo.gl/SL5DbBXwE2euixbG8" />
+                                    <span className="text-xs text-gray-500 block">搭乘 2023 年啟用的新纜車，從高處俯瞰整個科托爾灣，景色絕美且輕鬆不流汗。</span>
+                                </li>
+                                <li>
+                                    <span className="font-bold text-gray-700">【B. Dobrota 海邊放空】</span>
+                                    <MapLink url="https://maps.app.goo.gl/LUBdDPyV9ESCDgyM8" />
+                                    <span className="text-xs text-gray-500 block">沿著 Dobrota 的海濱步道散步，找間海邊咖啡館或小泳點，享受真正的地中海慢生活。</span>
+                                </li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: ['纜車來回約 30 分鐘，景觀很棒', '海邊放空建議帶書或耳機']
+                },
+                {
+                    id: 'd17-6',
+                    time: '18:00',
+                    title: '晚餐 / 老城夜景',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    subtitle: '輕鬆享受夜晚',
+                    location: 'Kotor Old Town',
+                    desc: '在老城內享用晚餐，或沿著城牆外圍散步，欣賞點燈後的城牆與城堡，氣氛浪漫。建議早點休息，儲備體力迎接明天的行程。',
+                    tips: ['點燈後的城牆很美', '早點睡，避免舟車勞頓的疲勞累積']
                 }
             ],
             20: [
