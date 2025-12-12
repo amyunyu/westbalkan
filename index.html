@@ -277,7 +277,7 @@
             </a>
         );
 
-        // 詳細行程數據 (已包含在原始檔案中)
+        // 詳細行程數據
         const itineraryData = {
             1: [
                 {
@@ -1798,8 +1798,8 @@
                     type: 'transport',
                     iconName: 'Compass',
                     subtitle: 'P2 → P3',
-                    location: 'Lake Kozjak',
-                    desc: '結束上湖區健行後，抵達碼頭 P2，搭乘電動船前往 P3，橫渡最大的 Kozjak 湖。這段船程約 10-15 分鐘，非常舒服。',
+                    location: 'Lake Kozyak',
+                    desc: '結束上湖區健行後，抵達碼頭 P2，搭乘電動船前往 P3，橫渡最大的 Kozyak 湖。這段船程約 10-15 分鐘，非常舒服。',
                     tips: ['船班約 10-15 分鐘一班', '旺季偶爾需排隊']
                 },
                 {
@@ -2241,7 +2241,7 @@
                     iconName: 'Coffee',
                     subtitle: '自由活動',
                     location: 'Split Old Town',
-                    desc: '在迷宮般的巷弄中找間咖啡館休息，或是享用午餐，享受離開前的悠閒時光。請務必在 12:00 前結束用餐，準備出發前往莫斯塔爾。', // 已更新
+                    desc: '在迷宮般的巷弄中找間咖啡館休息，或是享用午餐。請務必在 12:00 前結束用餐，準備出發前往莫斯塔爾。', // 已更新
                     tips: ['把握時間，準備跨國移動'] // 已更新
                 },
                 {
@@ -2388,7 +2388,7 @@
                     iconName: 'Car',
                     subtitle: '車程 20 分鐘',
                     location: 'Blagaj Tekija',
-                    mapLink: 'https://maps.app.goo.gl/uX3Lh4m6C4A3j57p6',
+                    mapLink: 'https://maps.app.goo.gl/xRtCPhFrwsFNHqRBA', // 已更新地圖連結
                     desc: '前往第一個景點 Blagaj Tekija。走一般道路，路況很好開。早點抵達可以避開遊覽車人潮，並找到較好的停車位。',
                     tips: ['走一般道路，很好開', '早到好停車、遊覽車還沒到']
                 },
@@ -2400,7 +2400,7 @@
                     iconName: 'MapPin',
                     subtitle: '河源藍綠色水色',
                     location: 'Blagaj Tekija (Dervish Monastery)',
-                    mapLink: 'https://maps.app.goo.gl/uX3Lh4m6C4A3j57p6',
+                    mapLink: 'https://maps.app.goo.gl/xRtCPhFrwsFNHqRBA', // 已更新地圖連結
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
@@ -2426,11 +2426,18 @@
                     iconName: 'Utensils',
                     subtitle: 'Restoran Vrelo（首選）',
                     location: 'Restoran Vrelo (Blagaj)',
-                    mapLink: 'https://maps.app.goo.gl/sY6N3N3J6pQ7V5hN7',
+                    mapLink: 'https://maps.app.goo.gl/GjrKbxK2Vi94mdFJA', // 已更新地圖連結
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 在河岸邊的陰涼處享用午餐。這個時間點用餐可以避開人潮，且能在一天中最熱之前獲得充分休息。
+                            </p>
+                            <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+                                【推薦餐廳：Restoran Vrelo】
+                                <MapLink url="https://maps.app.goo.gl/GjrKbxK2Vi94mdFJA" />
+                            </h4>
+                            <p className="text-sm text-gray-600 leading-relaxed text-justify mb-4">
+                                這間餐廳位於河源附近，擁有絕佳的戶外座位，能邊用餐邊享受冰涼的河水和瀑布聲，氣氛極佳。
                             </p>
                             <h4 className="font-bold text-gray-800 mb-2">【推薦菜單】</h4>
                             <ul className="list-none pl-0 space-y-3">
@@ -2456,7 +2463,7 @@
                     iconName: 'Car',
                     subtitle: '車程 30 分鐘',
                     location: 'Počitelj, Bosnia',
-                    mapLink: 'https://maps.app.goo.gl/2F8XjW4L2m3T8L4b8',
+                    mapLink: 'https://maps.app.goo.gl/q4x7TpsS66zeZEWH9', // 已更新地圖連結
                     desc: '沿 M17 道路前往 Počitelj。這段車程很短，剛好在午餐後消化一下。',
                     tips: ['走 M17', '很短一段，吃飽開車剛好']
                 },
@@ -2468,8 +2475,23 @@
                     iconName: 'Camera',
                     subtitle: '攻頂堡壘俯瞰全村',
                     location: 'Počitelj Castle',
-                    mapLink: 'https://maps.app.goo.gl/2F8XjW4L2m3T8L4b8',
-                    desc: '這座中世紀鄂圖曼古村依山勢而建。建議直接從官方停車場攻頂到堡壘（約 15-20 分鐘），從制高點拍下整個石頭村莊和 Neretva 河谷的壯觀景色。',
+                    mapLink: 'https://maps.app.goo.gl/q4x7TpsS66zeZEWH9', // 保持村莊主連結
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                這座中世紀鄂圖曼古村依山勢而建。建議直接從官方停車場攻頂到堡壘（約 15-20 分鐘），從制高點拍下整個石頭村莊和 Neretva 河谷的壯觀景色。
+                            </p>
+                            <div className="mb-2">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【Kula 堡壘觀景點】
+                                    <MapLink url="https://maps.app.goo.gl/QgrGmurxdW5yEEjZA" /> {/* 新增堡壘連結 */}
+                                </h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    Kula 堡壘是村莊的制高點，提供了俯瞰 Počitelj 紅瓦屋頂和 Neretva 河谷的最佳全景視角，非常適合拍照留念。
+                                </p>
+                            </div>
+                        </Fragment>
+                    ),
                     tips: ['直接攻頂堡壘（15–20 分鐘）', '拍：整個石頭村＋河谷', '中段拍清真寺、石階、藤蔓牆', '正中午偏熱，帽子＋水很重要']
                 },
                 {
@@ -2480,7 +2502,7 @@
                     iconName: 'Car',
                     subtitle: '車程 25 分鐘',
                     location: 'Kravica Waterfall',
-                    mapLink: 'https://maps.app.goo.gl/D2L5F9fG6tF3j2gW6',
+                    mapLink: 'https://maps.app.goo.gl/gj4Y45p1HbgzMtpS9', // 已更新地圖連結
                     desc: '開車前往 Kravica 瀑布。路況良好，接近瀑布時跟著指標走即可。',
                     tips: ['路況 OK', '接近瀑布時照指標走即可']
                 },
@@ -2492,7 +2514,7 @@
                     iconName: 'Sun',
                     subtitle: '走木棧道 & 戲水',
                     location: 'Kravica Waterfall',
-                    mapLink: 'https://maps.app.goo.gl/D2L5F9fG6tF3j2gW6',
+                    mapLink: 'https://maps.app.goo.gl/gj4Y45p1HbgzMtpS9',
                     desc: '克拉維采瀑布被譽為「波赫的尼加拉瀑布」。沿著木棧道走一圈，從不同角度拍攝瀑布。如果天氣炎熱，可以下水泡腳或游泳，享受清涼（自備泳衣）。',
                     tips: ['走木棧道', '拍整圈瀑布', '天氣熱可下水泡腳 / 游一下', '補水、上洗手間', '1 小時 15 分鐘非常剛好']
                 },
