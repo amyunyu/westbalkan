@@ -233,12 +233,12 @@
                 11: '克爾卡\n國家公園',
                 12: '赫瓦爾島\n斯普利特',
                 13: '斯普利特\n莫斯塔爾', // 6/5
-                14: '莫斯塔爾\n塞拉耶佛', // 6/6  <--- UPDATED: 塞拉耶佛
-                15: '塞拉耶佛', // 6/7  <--- UPDATED: 塞拉耶佛
-                16: '塞拉耶佛\n科托爾', // 6/8 <--- UPDATED: 塞拉耶佛
+                14: '莫斯塔爾\n塞拉耶佛', // 6/6
+                15: '塞拉耶佛', // 6/7
+                16: '塞拉耶佛\n科托爾', // 6/8
                 17: '科托爾', // 6/9
-                18: '科托爾', // 6/10
-                19: '科托爾\n返台', // 6/11
+                18: '科托爾\n杜布羅夫尼克', // 6/10 <--- UPDATED: 科托爾 -> 杜布羅夫尼克
+                19: '杜布羅夫尼克', // 6/11 <--- UPDATED: 杜布羅夫尼克 (預測)
                 20: '返台' // 6/12
             };
 
@@ -3067,6 +3067,110 @@
                     location: 'Kotor Old Town',
                     desc: '在老城內享用晚餐，或沿著城牆外圍散步，欣賞點燈後的城牆與城堡，氣氛浪漫。建議早點休息，儲備體力迎接明天的行程。',
                     tips: ['點燈後的城牆很美', '早點睡，避免舟車勞頓的疲勞累積']
+                }
+            ],
+            // --- Day 18: Kotor -> Perast -> Dubrovnik (6/10) ---
+            18: [
+                {
+                    id: 'd18-1',
+                    time: '08:00',
+                    title: '早餐 & Check-out',
+                    type: 'food',
+                    iconName: 'Coffee',
+                    location: 'Kotor / Dobrota',
+                    desc: '在住宿處享用早餐，整理行李並辦理退房。準備前往美麗的小鎮 Perast。',
+                    tips: ['確認護照與車輛文件隨身攜帶', '行李上車']
+                },
+                {
+                    id: 'd18-2',
+                    time: '09:00',
+                    title: 'Perast & 聖母岩島',
+                    type: 'sightseeing',
+                    iconName: 'Compass',
+                    subtitle: 'Our Lady of the Rocks',
+                    location: 'Perast',
+                    mapLink: 'https://maps.app.goo.gl/9K8', // Placeholder link
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                前往科托爾灣最夢幻的小鎮 Perast。搭乘小船前往海中央的「岩石聖母島 (Our Lady of the Rocks)」。
+                            </p>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                島上的藍色圓頂教堂非常美麗，是蒙特內哥羅的標誌性景點。參觀完島嶼後，回到 Perast 本島，欣賞沿岸的巴洛克式建築。
+                            </p>
+                        </Fragment>
+                    ),
+                    tips: ['小船來回約 5-10 歐元', '教堂內部需購票', 'Perast 停車位較少，建議停在鎮外停車場']
+                },
+                {
+                    id: 'd18-3',
+                    time: '12:30',
+                    title: 'Perast 午餐（輕量）',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    subtitle: '海邊簡單吃',
+                    location: 'Perast Waterfront',
+                    desc: '在 Perast 海邊找間餐廳簡單用餐。為了預留充裕時間過境，建議不要吃太久，簡單享受海景與美食即可。',
+                    tips: ['不要拖太晚，為了過邊境', '海鮮燉飯或義大利麵是好選擇']
+                },
+                {
+                    id: 'd18-4',
+                    time: '13:30',
+                    title: '前往杜布羅夫尼克',
+                    type: 'transport',
+                    iconName: 'Car',
+                    subtitle: '跨國移動 • 約 3-3.5 小時',
+                    location: 'Dubrovnik, Croatia',
+                    mapLink: 'https://maps.app.goo.gl/dubrovnik', // Placeholder link
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                離開蒙特內哥羅，前往「亞得里亞海之珠」——克羅埃西亞的杜布羅夫尼克 (Dubrovnik)。
+                            </p>
+                            <h4 className="font-bold text-gray-800 mb-2">【過境資訊】</h4>
+                            <ul className="text-sm text-gray-600 space-y-2 list-none pl-0">
+                                <li><span className="font-bold">邊境檢查站：</span>Debeli Brijeg (MNE) / Karasovići (HR)。</li>
+                                <li><span className="font-bold">文件檢查：</span>護照、租車文件、<span className="text-red-600 font-bold">Green Card (綠卡)</span>。</li>
+                                <li><span className="font-bold">下午時段：</span>通常比傍晚順暢，但仍需預留排隊時間。</li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: ['準備好護照與車輛文件', '下午過關通常較順', '進入克羅埃西亞後沿途海岸線非常美']
+                },
+                {
+                    id: 'd18-5',
+                    time: '18:00',
+                    title: 'Dubrovnik Check-in',
+                    type: 'hotel',
+                    iconName: 'BedDouble',
+                    subtitle: '建議住宿：Ploče / Lapad',
+                    location: 'Dubrovnik Accommodation',
+                    desc: '抵達杜布羅夫尼克辦理入住。強烈建議選擇老城外圍區域 (如 Ploče 或 Lapad)，不僅方便停車，進出也比較不痛苦（老城內全是階梯且無法開車）。',
+                    tips: ['確認停車位', 'Ploče 區風景好但階梯多', 'Lapad 區生活機能好且平坦']
+                },
+                {
+                    id: 'd18-6',
+                    time: '19:00',
+                    title: '老城夜間散步（輕量）',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: '初見君臨城',
+                    location: 'Dubrovnik Old Town',
+                    mapLink: 'https://maps.app.goo.gl/oldtown', // Placeholder link
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                晚餐後輕鬆前往老城區 (Old Town)，感受這座中世紀古城的夜間魅力。
+                            </p>
+                            <ul className="text-sm text-gray-600 space-y-2 list-disc pl-4">
+                                <li><span className="font-bold">派勒門 (Pile Gate)：</span>主要的入口，充滿氣勢。</li>
+                                <li><span className="font-bold">史特拉敦大道 (Stradun)：</span>由光滑石灰岩鋪成的閃亮主街。</li>
+                                <li><span className="font-bold">大歐諾弗里奧噴泉 (Big Onofrio Fountain)：</span>位於入口處的著名地標。</li>
+                            </ul>
+                            <p className="text-sm text-gray-600 mt-2">今晚先不上城牆，在巷弄間隨意走走，欣賞打燈後的城牆夜景即可。 </p>
+                        </Fragment>
+                    ),
+                    tips: ['夜晚的老城非常有氣氛', '石板路滑，穿好走的鞋']
                 }
             ],
             20: [
