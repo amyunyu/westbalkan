@@ -234,12 +234,12 @@
                 12: '赫瓦爾島\n斯普利特',
                 13: '斯普利特\n莫斯塔爾', // 6/5
                 14: '莫斯塔爾\n薩拉熱窩', // 6/6
-                15: '薩拉熱窩', // 6/7 <--- NEW
-                16: '薩拉熱窩', // 6/8 <--- NEW
-                17: '薩拉熱窩', // 6/9 <--- NEW
-                18: '薩拉熱窩', // 6/10 <--- NEW
-                19: '薩拉熱窩', // 6/11 <--- NEW
-                20: '返台' // 6/12 <--- NEW
+                15: '薩拉熱窩', // 6/7
+                16: '薩拉熱窩\n科托爾', // 6/8 <--- UPDATED
+                17: '科托爾', // 6/9 <--- UPDATED
+                18: '科托爾', // 6/10 <--- UPDATED
+                19: '科托爾\n返台', // 6/11 <--- UPDATED
+                20: '返台' // 6/12
             };
 
             let current = start;
@@ -2743,6 +2743,127 @@
                     mapLink: 'https://maps.app.goo.gl/3A7Fk4A6H7j3tH9X9',
                     desc: '步行或搭車前往黃堡，這是薩拉熱窩欣賞日落和城市全景的最佳地點。尤其在黃昏時分，陽光將整個城市鋪上一層金色，景色壯觀。這裡也是當地人聚集、喝咖啡放鬆的熱門地。',
                     tips: ['可拍整個城市鋪滿紅色屋頂', '日落時間較晚，注意保暖']
+                }
+            ],
+            // --- Day 16: Sarajevo -> Kotor (6/8) ---
+            16: [
+                {
+                    id: 'd16-1',
+                    time: '08:30',
+                    title: '早餐',
+                    type: 'food',
+                    iconName: 'Coffee',
+                    location: 'Sarajevo Accommodation / Baščaršija',
+                    desc: '在住處附近或 Baščaršija 老城區享用清爽的早餐。這天是長途移動日，建議吃清爽不過飽。',
+                    tips: ['住處附近或 Baščaršija 老城', '吃清爽、不過飽']
+                },
+                {
+                    id: 'd16-2',
+                    time: '09:30',
+                    title: 'Baščaršija 老城晨間散步（輕量）',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: 'Sebilj 噴泉、市集街道',
+                    location: 'Baščaršija Old Town, Sarajevo',
+                    mapLink: 'https://maps.app.goo.gl/U2hXkK3F8jD3tA9X9',
+                    desc: '把握薩拉熱窩最後的早晨時光。在 Sebilj 噴泉和市集街道散步，享受清晨漂亮又不擁擠的光線和氛圍。這段活動不會爬坡，不耗費體力，為下午的長途駕駛保留精力。',
+                    tips: ['早晨光線好、人少', '不爬坡、不耗體力']
+                },
+                {
+                    id: 'd16-3',
+                    time: '10:45',
+                    title: '早一點的午餐 / Brunch',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    subtitle: 'Ćevapi（小份）或 Börek',
+                    location: 'Sarajevo Old Town',
+                    desc: '在離開前享用簡單的午餐或早午餐。建議選擇小份的 Ćevapi 或 Börek（波士尼亞餡餅），搭配咖啡和水，確保補足能量但不過於飽脹。',
+                    tips: ['Ćevapi（小份）或 Börek', '咖啡＋水補滿']
+                },
+                {
+                    id: 'd16-4',
+                    time: '11:30',
+                    title: '回住宿取行李、準備出發',
+                    type: 'transport',
+                    iconName: 'Car',
+                    subtitle: '跨國準備與文件檢查',
+                    location: 'Sarajevo Accommodation',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                回到住宿地點整理行李並裝車，準備跨國移動至蒙特內哥羅。
+                            </p>
+                            <h4 className="font-bold text-gray-800 mb-2">【出發前檢查清單】</h4>
+                            <ul className="text-sm text-gray-600 space-y-2 list-none pl-0">
+                                <li><span className="font-bold">車輛：</span>油箱 ≥ 70%（邊境後無補給）。</li>
+                                <li><span className="font-bold">水：</span>水備足，長途車程非常重要。</li>
+                                <li><span className="font-bold">文件：</span>護照、租車文件、**Green Card（綠卡）** 確認帶齊。</li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: ['油箱 ≥ 70%', '水備足（邊境後無補給）', '護照、租車文件、Green Card 確認']
+                },
+                {
+                    id: 'd16-5',
+                    time: '12:30',
+                    title: '離開 Sarajevo',
+                    type: 'transport',
+                    iconName: 'ArrowRight',
+                    location: 'Sarajevo City Exit',
+                    desc: '準時出發，開始長途移動前往科托爾。保持穩定的速度，安全為上。',
+                    tips: ['建議時間，準時出發']
+                },
+                {
+                    id: 'd16-6',
+                    time: '12:30–18:30',
+                    title: '長途移動：Sarajevo → Kotor',
+                    type: 'transport',
+                    iconName: 'Car',
+                    subtitle: '山路＋邊境 • 抓 5-5.5 小時',
+                    location: 'Kotor, Montenegro',
+                    mapLink: 'https://maps.app.goo.gl/T4Y6v2t7K9jX7pX8A', // Kotor 連結
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                這是行程中最長、風景也最壯觀的車程之一。路線將穿越山區，抵達蒙特內哥羅。
+                            </p>
+                            <h4 className="font-bold text-gray-800 mb-2">【行車路線與時間規劃】</h4>
+                            <ul className="text-sm text-gray-600 space-y-2 list-none pl-0">
+                                <li><span className="font-bold">路線：</span>Sarajevo → Foča → Šćepan Polje（邊境）→ Kotor</li>
+                                <li><span className="font-bold">Sarajevo → Foča：</span>約 1.5 小時</li>
+                                <li><span className="font-bold">Foča → 邊境 (Šćepan Polje)：</span>約 35 分鐘</li>
+                                <li><span className="font-bold">過境：</span>預計 15–40 分鐘（視排隊情況）</li>
+                                <li><span className="font-bold">邊境 → Kotor：</span>約 2–2.5 小時（這段是**盤山路**）</li>
+                            </ul>
+                            <div className="p-3 bg-red-50 rounded-lg border border-red-100 text-sm text-gray-700 mt-3">
+                                <span className="font-bold text-red-800">⚠️ 駕駛提醒：</span>邊境後無加油站，且山路多隧道、彎道多。**必須確保在白天開完這段路**，安全最重要。
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['邊境後無加油站', '隧道多、彎多，白天開最安全', '不摸黑跑山路是今日關鍵']
+                },
+                {
+                    id: 'd16-7',
+                    time: '18:30',
+                    title: '抵達 Kotor・Check-in',
+                    type: 'hotel',
+                    iconName: 'BedDouble',
+                    subtitle: '放行李、簡單梳洗',
+                    location: 'Kotor Accommodation',
+                    mapLink: 'https://maps.app.goo.gl/T4Y6v2t7K9jX7pX8A',
+                    desc: '安全抵達科托爾。辦理入住手續，放行李並簡單梳洗，消除長途車程的疲憊。',
+                    tips: ['不摸黑進山城原則已達成', '簡單梳洗']
+                },
+                {
+                    id: 'd16-8',
+                    time: '19:30',
+                    title: 'Kotor 第一晚（輕鬆晚餐）',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    subtitle: 'Old Town 晚餐',
+                    location: 'Kotor Old Town',
+                    desc: '在科托爾舊城區內或海邊找間餐廳享用晚餐。第一晚行程以放鬆為主，不用安排任何重點活動，也不要爬山，留待明天再深度探索。',
+                    tips: ['Old Town 晚餐', '海邊或城牆外短散步', '不登山、不排重點', '第一晚保留體力']
                 }
             ],
             20: [
