@@ -232,7 +232,14 @@
                 10: '十六湖\n札達爾',
                 11: '克爾卡\n國家公園',
                 12: '赫瓦爾島\n斯普利特',
-                13: '斯普利特\n莫斯塔爾' // 6/5
+                13: '斯普利特\n莫斯塔爾', // 6/5
+                14: '莫斯塔爾\n薩拉熱窩', // 6/6 <--- NEW
+                15: '薩拉熱窩', // 6/7 <--- NEW
+                16: '薩拉熱窩', // 6/8 <--- NEW
+                17: '薩拉熱窩', // 6/9 <--- NEW
+                18: '薩拉熱窩', // 6/10 <--- NEW
+                19: '薩拉熱窩', // 6/11 <--- NEW
+                20: '返台' // 6/12 <--- NEW
             };
 
             let current = start;
@@ -609,7 +616,7 @@
                     location: 'Ljubljanica River',
                     mapLink: 'https://maps.app.goo.gl/QPMrvxzf38D6VePX8',
                     desc: '盧比安納的治安很好，夜晚沿著盧布爾雅尼察河畔散步非常愜意且安全。河岸兩旁有許多露天酒吧與咖啡館，燈火通明，充滿悠閒的生活氣息。',
-                    tips: ['夜晚安全、愜意', '感受河畔悠閒氛圍']
+                    tips: ['夜晚安全、愜意', '感受河畔悠閒氛in']
                 }
             ],
             4: [
@@ -2359,6 +2366,184 @@
                     location: 'Mostar Old Town',
                     desc: '在夜色中漫步於舊城區，回到噴泉廣場。小巷中的路燈燈光昏黃，氣氛浪漫。最後，別忘了在不同角度拍攝一次點燈後的老橋，展現它不同的魅力。',
                     tips: ['回到噴泉廣場', '最後拍一次點燈後的橋']
+                }
+            ],
+            // --- Day 14: Mostar -> Blagaj -> Počitelj -> Kravica -> Sarajevo (6/6) ---
+            14: [
+                {
+                    id: 'd14-1',
+                    time: '08:30',
+                    title: 'Mostar 早餐 & 退房',
+                    type: 'food',
+                    iconName: 'Coffee',
+                    location: 'Mostar Accommodation',
+                    desc: '在莫斯塔爾享用早餐後辦理退房手續。確保所有行李已放上車，並準備好足夠的水分，為接下來的波士尼亞一日遊和長途車程做準備。',
+                    tips: ['早餐後退房', '行李放車上', '每人至少準備 1 瓶水', '油量確認（半桶以上即可）']
+                },
+                {
+                    id: 'd14-2',
+                    time: '09:00',
+                    title: '前往 Blagaj Tekija',
+                    type: 'transport',
+                    iconName: 'Car',
+                    subtitle: '車程 20 分鐘',
+                    location: 'Blagaj Tekija',
+                    mapLink: 'https://maps.app.goo.gl/uX3Lh4m6C4A3j57p6',
+                    desc: '前往第一個景點 Blagaj Tekija。走一般道路，路況很好開。早點抵達可以避開遊覽車人潮，並找到較好的停車位。',
+                    tips: ['走一般道路，很好開', '早到好停車、遊覽車還沒到']
+                },
+                {
+                    id: 'd14-3',
+                    time: '09:20',
+                    title: 'Blagaj Tekija 修道院 & 河源',
+                    type: 'sightseeing',
+                    iconName: 'MapPin',
+                    subtitle: '河源藍綠色水色',
+                    location: 'Blagaj Tekija (Dervish Monastery)',
+                    mapLink: 'https://maps.app.goo.gl/uX3Lh4m6C4A3j57p6',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                參觀建於 16 世紀的特奇雅修道院，它緊貼著 200 公尺高的懸崖而建，下方是歐洲最大的地下水河源之一。
+                            </p>
+                            <div className="mb-2">
+                                <h4 className="font-bold text-gray-800 mb-1">遊覽重點：</h4>
+                                <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
+                                    <li><span className="font-bold">河源水色：</span>必拍藍綠色的冰冷河水湧出岩洞的奇特景象。</li>
+                                    <li><span className="font-bold">修道院構圖：</span>在外側拍攝修道院貼著巨大岩壁的經典構圖。</li>
+                                    <li><span className="font-bold">內部參觀：</span>視情況可買象徵性門票進入修道院內部（需注意服裝規定）。</li>
+                                </ul>
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['停車在公共停車場', '沿「白色建築右側」小路走進去', '先拍外觀＋河水＋岩壁', '必看河源藍綠色水色']
+                },
+                {
+                    id: 'd14-4',
+                    time: '10:30',
+                    title: 'Blagaj 河邊午餐',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    subtitle: 'Restoran Vrelo（首選）',
+                    location: 'Restoran Vrelo (Blagaj)',
+                    mapLink: 'https://maps.app.goo.gl/sY6N3N3J6pQ7V5hN7',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                在河岸邊的陰涼處享用午餐。這個時間點用餐可以避開人潮，且能在一天中最熱之前獲得充分休息。
+                            </p>
+                            <h4 className="font-bold text-gray-800 mb-2">【推薦菜單】</h4>
+                            <ul className="list-none pl-0 space-y-3">
+                                <li>
+                                    <span className="font-bold text-sm text-gray-800">烤鱒魚 (Grilled Trout)：</span>最在地、最新鮮的選擇。
+                                </li>
+                                <li>
+                                    <span className="font-bold text-sm text-gray-800">Ćevapi：</span>巴爾幹地區著名的烤肉卷。
+                                </li>
+                                <li>
+                                    <span className="font-bold text-sm text-gray-800">沙拉＋麵包：</span>搭配主食，清爽解膩。
+                                </li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: ['坐河邊陰涼處', '吃完不會太撐，剛剛好', '這個時間點吃午餐，是整天順不順的關鍵']
+                },
+                {
+                    id: 'd14-5',
+                    time: '11:30',
+                    title: '前往 Počitelj 古村',
+                    type: 'transport',
+                    iconName: 'Car',
+                    subtitle: '車程 30 分鐘',
+                    location: 'Počitelj, Bosnia',
+                    mapLink: 'https://maps.app.goo.gl/2F8XjW4L2m3T8L4b8',
+                    desc: '沿 M17 道路前往 Počitelj。這段車程很短，剛好在午餐後消化一下。',
+                    tips: ['走 M17', '很短一段，吃飽開車剛好']
+                },
+                {
+                    id: 'd14-6',
+                    time: '12:00',
+                    title: 'Počitelj 古村（省力拍照路線）',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: '攻頂堡壘俯瞰全村',
+                    location: 'Počitelj Castle',
+                    mapLink: 'https://maps.app.goo.gl/2F8XjW4L2m3T8L4b8',
+                    desc: '這座中世紀鄂圖曼古村依山勢而建。建議直接從官方停車場攻頂到堡壘（約 15-20 分鐘），從制高點拍下整個石頭村莊和 Neretva 河谷的壯觀景色。',
+                    tips: ['直接攻頂堡壘（15–20 分鐘）', '拍：整個石頭村＋河谷', '中段拍清真寺、石階、藤蔓牆', '正中午偏熱，帽子＋水很重要']
+                },
+                {
+                    id: 'd14-7',
+                    time: '13:00',
+                    title: '前往 Kravica Waterfall',
+                    type: 'transport',
+                    iconName: 'Car',
+                    subtitle: '車程 25 分鐘',
+                    location: 'Kravica Waterfall',
+                    mapLink: 'https://maps.app.goo.gl/D2L5F9fG6tF3j2gW6',
+                    desc: '開車前往 Kravica 瀑布。路況良好，接近瀑布時跟著指標走即可。',
+                    tips: ['路況 OK', '接近瀑布時照指標走即可']
+                },
+                {
+                    id: 'd14-8',
+                    time: '13:25',
+                    title: 'Kravica 瀑布',
+                    type: 'activity',
+                    iconName: 'Sun',
+                    subtitle: '走木棧道 & 戲水',
+                    location: 'Kravica Waterfall',
+                    mapLink: 'https://maps.app.goo.gl/D2L5F9fG6tF3j2gW6',
+                    desc: '克拉維采瀑布被譽為「波赫的尼加拉瀑布」。沿著木棧道走一圈，從不同角度拍攝瀑布。如果天氣炎熱，可以下水泡腳或游泳，享受清涼（自備泳衣）。',
+                    tips: ['走木棧道', '拍整圈瀑布', '天氣熱可下水泡腳 / 游一下', '補水、上洗手間', '1 小時 15 分鐘非常剛好']
+                },
+                {
+                    id: 'd14-9',
+                    time: '14:45',
+                    title: '長途移動：Kravica → Sarajevo',
+                    type: 'transport',
+                    iconName: 'Car',
+                    subtitle: '車程約 3 小時',
+                    location: 'Sarajevo',
+                    mapLink: 'https://maps.app.goo.gl/E39G4J8H9k2T8Z4A6',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                開始長途車程前往波士尼亞首都薩拉熱窩 (Sarajevo)。這段路程結合了山路和城鎮道路，風景優美但需專注駕駛。
+                            </p>
+                            <div className="mb-2">
+                                <h4 className="font-bold text-gray-800 mb-1">【路線建議】</h4>
+                                <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
+                                    <li><span className="font-bold">路徑：</span>Čapljina → Jablanica → Konjic → Sarajevo</li>
+                                    <li><span className="font-bold">休息：</span>建議在 Jablanica 或 Konjic 擇一短暫休息 5-10 分鐘。</li>
+                                    <li><span className="font-bold">提醒：</span>不用趕，安全最重要，預計 17:45 抵達。</li>
+                                </ul>
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['不用趕，安全最重要', '山路駕駛請注意安全', '在 Jablanica / Konjic 短暫休息']
+                },
+                {
+                    id: 'd14-10',
+                    time: '17:45',
+                    title: '抵達 Sarajevo・Check-in',
+                    type: 'hotel',
+                    iconName: 'BedDouble',
+                    subtitle: '放行李、休息',
+                    location: 'Sarajevo Accommodation',
+                    desc: '抵達薩拉熱窩住宿地點辦理入住。放好行李後，洗臉換衣服，稍微休息一下，恢復體力。',
+                    tips: ['放行李、洗臉、換衣服', '稍作休息']
+                },
+                {
+                    id: 'd14-11',
+                    time: '18:30',
+                    title: 'Sarajevo 晚上自由活動',
+                    type: 'relax',
+                    iconName: 'Utensils',
+                    subtitle: 'Baščaršija 老城散步',
+                    location: 'Baščaršija Old Town, Sarajevo',
+                    mapLink: 'https://maps.app.goo.gl/U2hXkK3F8jD3tA9X9',
+                    desc: '傍晚前往充滿鄂圖曼風情的 Baščaršija 老城區散步。晚餐可以再次享用 Ćevapi，或試試 Bosnian Pot (Bosanski lonac) 這道當地的燉肉料理。',
+                    tips: ['不累、不趕，狀態會很好', '吃 Ćevapi 或 Bosnian Pot', '享受老城區的銅器街夜景']
                 }
             ],
             20: [
