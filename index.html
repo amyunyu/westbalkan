@@ -2833,7 +2833,7 @@
                     subtitle: 'Sebilj 噴泉、市集街道',
                     location: 'Baščaršija Old Town, Sarajevo',
                     mapLink: 'https://maps.app.goo.gl/U2hXkK3F8jD3tA9X9',
-                    desc: '把握塞拉耶佛最後的早晨時光。在 Sebilj 噴泉和市集街道散步，享受清晨漂亮又不擁擠的光線和氛圍。這段活動不會爬坡，不耗費體力，為下午的長途駕駛保留精力。',
+                    desc: '把握塞拉耶佛最後的早晨時光。在 Sebilj 噴泉和市集街道散步，享受清晨漂亮又不擁擠的光線和氛圍。這段活動不會爬坡，不耗費體力，為下午的長途駕駛保留精力。', // *** UPDATED: 塞拉耶佛 ***
                     tips: ['早晨光線好、人少', '不爬坡、不耗體力']
                 },
                 {
@@ -2883,7 +2883,7 @@
                 {
                     id: 'd16-6',
                     time: '12:30–18:30',
-                    title: '長途移動：塞拉耶佛 → Kotor',
+                    title: '長途移動：塞拉耶佛 → Kotor', // *** UPDATED: 塞拉耶佛 ***
                     type: 'transport',
                     iconName: 'Car',
                     subtitle: '山路＋邊境 • 抓 5-5.5 小時',
@@ -2896,8 +2896,8 @@
                             </p>
                             <h4 className="font-bold text-gray-800 mb-2">【行車路線與時間規劃】</h4>
                             <ul className="text-sm text-gray-600 space-y-2 list-none pl-0">
-                                <li><span className="font-bold">路線：</span>塞拉耶佛 → Foča → Šćepan Polje（邊境）→ Kotor</li>
-                                <li><span className="font-bold">塞拉耶佛 → Foča：</span>約 1.5 小時</li>
+                                <li><span className="font-bold">路線：</span>塞拉耶佛 → Foča → Šćepan Polje（邊境）→ Kotor</li> {/* *** UPDATED: 塞拉耶佛 *** */}
+                                <li><span className="font-bold">塞拉耶佛 → Foča：</span>約 1.5 小時</li> {/* *** UPDATED: 塞拉耶佛 *** */}
                                 <li><span className="font-bold">Foča → 邊境 (Šćepan Polje)：</span>約 35 分鐘</li>
                                 <li><span className="font-bold">過境：</span>預計 15–40 分鐘（視排隊情況）</li>
                                 <li><span className="font-bold">邊境 → Kotor：</span>約 2–2.5 小時（這段是**盤山路**）</li>
@@ -2933,6 +2933,7 @@
                     tips: ['Old Town 晚餐', '海邊或城牆外短散步', '不登山、不排重點', '第一晚保留體力']
                 }
             ],
+            // --- Day 17: Kotor 深度探索 (6/9) ---
             17: [
                 {
                     id: 'd17-1',
@@ -3239,9 +3240,89 @@
                     tips: ['享受最後的夜晚', '購買紀念品']
                 }
             ],
+            // --- Day 20: Dubrovnik -> Departure (6/12) ---
             20: [
                 {
                     id: 'd20-1',
+                    time: '06:45',
+                    title: '清晨 Dubrovnik 老城漫步',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: '黃金時段：避開郵輪人潮',
+                    location: 'Dubrovnik Old Town',
+                    mapLink: 'https://maps.app.goo.gl/gQ5XyZ5J8k2T8Z4A6',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-2 text-gray-600 leading-relaxed text-justify">
+                                早起享受杜布羅夫尼克最寧靜、最好拍的時刻。郵輪遊客約 09:00 才來，此時光線柔和、溫度宜人。
+                            </p>
+                            <h4 className="font-bold text-gray-800 mb-1">【建議走法】</h4>
+                            <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
+                                <li>**平坦路線：** Pile Gate → Stradun → Onofrio Fountain → Old Port。</li>
+                                <li>隨意在小巷隨走隨拍，完全不用上城牆。</li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: ['務必在 06:45-07:00 出發', '光線柔、溫度低，最好拍的時段', '完全不用上城牆']
+                },
+                {
+                    id: 'd20-2',
+                    time: '08:30',
+                    title: '早餐 / 咖啡休息',
+                    type: 'food',
+                    iconName: 'Coffee',
+                    subtitle: '老城內或回住宿附近',
+                    location: 'Dubrovnik Old Town / Accommodation',
+                    desc: '在老城內 café 享受早餐，或回住宿附近吃、順便整理行李。趁機補水，為接下來的旅程做好準備。',
+                    tips: ['老城內 café 休息', '補水']
+                },
+                {
+                    id: 'd20-3',
+                    time: '09:30',
+                    title: '整理行李 & Check-out',
+                    type: 'hotel',
+                    iconName: 'BedDouble',
+                    subtitle: '行李最後確認',
+                    location: 'Dubrovnik Accommodation',
+                    desc: '回住宿處，做最後的行李整理。確保護照、登機文件都已確認，並完成 Check-out 手續。',
+                    tips: ['護照、登機文件確認', '水補滿', '最後檢查充電器']
+                },
+                {
+                    id: 'd20-4',
+                    time: '11:30',
+                    title: '離開市區 → Dubrovnik 機場 (DBV)',
+                    type: 'transport',
+                    iconName: 'Car',
+                    subtitle: '建議叫車 / 機場接送',
+                    location: 'Dubrovnik Airport (DBV)',
+                    mapLink: 'https://maps.app.goo.gl/e7P2X4J8k2T8Z4A6',
+                    desc: '離開市區，前往機場。建議提前叫車或使用預先安排的機場接送服務。如果是自駕還車，預留 15–20 分鐘的手續時間。',
+                    tips: ['建議叫車 / 機場接送', '自駕還車預留 15–20 分鐘']
+                },
+                {
+                    id: 'd20-5',
+                    time: '12:00',
+                    title: '機場手續 & 休息',
+                    type: 'relax',
+                    iconName: 'Clock',
+                    subtitle: '行李托運、安檢、出境',
+                    location: 'Dubrovnik Airport (DBV)',
+                    desc: '辦理行李托運和出境安檢手續。在登機前，在機場找個舒適的區域休息，吃點東西。',
+                    tips: ['留意登機時間']
+                },
+                {
+                    id: 'd20-6',
+                    time: '21:50',
+                    title: '轉機提醒 (Dubai DXB)',
+                    type: 'transport',
+                    iconName: 'Info',
+                    subtitle: '轉機時間約 6 小時',
+                    location: 'Dubai International Airport (DXB)',
+                    desc: '航班抵達杜拜 (DXB) 後，轉機時間約 6 小時（21:50 抵達 → 03:45 起飛）。杜拜機場設施完善，建議不用出境，找安靜區域休息或利用機場設施。從 DBV 到 DXB 這段是深夜航班，請盡量休息補眠。',
+                    tips: ['不用出境', '找安靜區域休息', 'DBV–DXB 這段盡量睡']
+                },
+                {
+                    id: 'd20-7',
                     time: '06:00',
                     title: '抵達台灣',
                     type: 'arrival',
