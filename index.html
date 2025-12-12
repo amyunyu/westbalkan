@@ -418,7 +418,10 @@
                         <Fragment>
                              <h4 className="font-bold text-gray-800 mb-2">【晚餐選項：克羅埃西亞經典】</h4>
                             <div className="mb-6">
-                                <h5 className="font-bold text-gray-700 mb-1">▪ La Štruk</h5>
+                                <h5 className="font-bold text-gray-700 mb-1 flex items-center">
+                                    ▪ La Štruk
+                                    <MapLink url="https://maps.app.goo.gl/RmeouBqAk8NJV3Cf6" />
+                                </h5>
                                 <p className="text-sm text-gray-600 leading-relaxed mb-1">
                                     舊城（Stone Gate 附近）。主打克羅埃西亞代表料理「Štrukli」。
                                 </p>
@@ -437,7 +440,10 @@
                                 </ul>
                             </div>
                             <div className="mb-6">
-                                <h5 className="font-bold text-gray-700 mb-1">▪ Vinodol</h5>
+                                <h5 className="font-bold text-gray-700 mb-1 flex items-center">
+                                    ▪ Vinodol
+                                    <MapLink url="https://maps.app.goo.gl/TQR1xpNjdYrsJ3a3A" />
+                                </h5>
                                 <p className="text-sm text-gray-600 leading-relaxed mb-1">
                                     舊城外圍（走路 10–15 分）。傳統高級克羅埃西亞料理。
                                 </p>
@@ -2318,25 +2324,25 @@
                 },
                 {
                     id: 'd13-2',
-                    time: '11:30', 
+                    time: '11:30',
                     title: '舊城午餐 & 咖啡',
                     type: 'food',
                     iconName: 'Coffee',
                     subtitle: '自由活動',
                     location: 'Split Old Town',
-                    desc: '在迷宮般的巷弄中找間咖啡館休息，或是享用午餐。請務必在 12:00 前結束用餐，準備出發前往莫斯塔爾。', 
-                    tips: ['把握時間，準備跨國移動'] 
+                    desc: '在迷宮般的巷弄中找間咖啡館休息，或是享用午餐。請務必在 12:00 前結束用餐，準備出發前往莫斯塔爾。',
+                    tips: ['把握時間，準備跨國移動']
                 },
                 {
                     id: 'd13-3',
-                    time: '12:00', 
+                    time: '12:00',
                     title: '前往莫斯塔爾',
                     type: 'transport',
                     iconName: 'Car',
-                    subtitle: '跨國移動 • 車程約 3 小時', 
+                    subtitle: '跨國移動 • 車程約 3 小時',
                     location: 'Mostar, Bosnia & Herzegovina',
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Mostar+Old+Bridge',
-                    desc: '告別克羅埃西亞海岸，提早出發前往波士尼亞與赫塞哥維納的古城——莫斯塔爾 (Mostar)。預計 15:00 左右抵達，準備迎接截然不同的異國風情。', 
+                    desc: '告別克羅埃西亞海岸，提早出發前往波士尼亞與赫塞哥維納的古城——莫斯塔爾 (Mostar)。預計 15:00 左右抵達，準備迎接截然不同的異國風情。',
                     tips: ['準備護照過境', '注意波士尼亞入境規定', '山路駕駛請注意安全']
                 },
                 {
@@ -2469,7 +2475,7 @@
                     iconName: 'Car',
                     subtitle: '車程 20 分鐘',
                     location: 'Blagaj Tekija',
-                    mapLink: 'https://maps.app.goo.gl/xRtCPhFrwsFNHqRBA', 
+                    mapLink: 'https://maps.app.goo.gl/xRtCPhFrwsFNHqRBA',
                     desc: '前往第一個景點 Blagaj Tekija。走一般道路，路況很好開。早點抵達可以避開遊覽車人潮，並找到較好的停車位。',
                     tips: ['走一般道路，很好開', '早到好停車、遊覽車還沒到']
                 },
@@ -2481,7 +2487,7 @@
                     iconName: 'MapPin',
                     subtitle: '河源藍綠色水色',
                     location: 'Blagaj Tekija (Dervish Monastery)',
-                    mapLink: 'https://maps.app.goo.gl/xRtCPhFrwsFNHqRBA', 
+                    mapLink: 'https://maps.app.goo.gl/xRtCPhFrwsFNHqRBA',
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
@@ -2507,7 +2513,7 @@
                     iconName: 'Utensils',
                     subtitle: 'Restoran Vrelo（首選）',
                     location: 'Restoran Vrelo (Blagaj)',
-                    mapLink: 'https://maps.app.goo.gl/GjrKbxK2Vi94mdFJA', 
+                    mapLink: 'https://maps.app.goo.gl/GjrKbxK2Vi94mdFJA',
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
@@ -2544,7 +2550,7 @@
                     iconName: 'Car',
                     subtitle: '車程 30 分鐘',
                     location: 'Počitelj, Bosnia',
-                    mapLink: 'https://maps.app.goo.gl/q4x7TpsS66zeZEWH9', 
+                    mapLink: 'https://maps.app.goo.gl/q4x7TpsS66zeZEWH9',
                     desc: '沿 M17 道路前往 Počitelj。這段車程很短，剛好在午餐後消化一下。',
                     tips: ['走 M17', '很短一段，吃飽開車剛好']
                 },
@@ -2556,7 +2562,7 @@
                     iconName: 'Camera',
                     subtitle: '攻頂堡壘俯瞰全村',
                     location: 'Počitelj Castle',
-                    mapLink: 'https://maps.app.goo.gl/q4x7TpsS66zeZEWH9', 
+                    mapLink: 'https://maps.app.goo.gl/q4x7TpsS66zeZEWH9',
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
@@ -2565,7 +2571,7 @@
                             <div className="mb-2">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
                                     【Kula 堡壘觀景點】
-                                    <MapLink url="https://maps.app.goo.gl/QgrGmurxdW5yEEjZA" /> 
+                                    <MapLink url="https://maps.app.goo.gl/QgrGmurxdW5yEEjZA" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
                                     Kula 堡壘是村莊的制高點，提供了俯瞰 Počitelj 紅瓦屋頂和 Neretva 河谷的最佳全景視角，非常適合拍照留念。
@@ -2583,7 +2589,7 @@
                     iconName: 'Car',
                     subtitle: '車程 25 分鐘',
                     location: 'Kravica Waterfall',
-                    mapLink: 'https://maps.app.goo.gl/SVUd2kwPCL5fHrzcA', 
+                    mapLink: 'https://maps.app.goo.gl/SVUd2kwPCL5fHrzcA',
                     desc: '開車前往 Kravica 瀑布。路況良好，接近瀑布時跟著指標走即可。',
                     tips: ['路況 OK', '接近瀑布時照指標走即可']
                 },
@@ -2595,14 +2601,14 @@
                     iconName: 'Sun',
                     subtitle: '走木棧道 & 戲水',
                     location: 'Kravica Waterfall',
-                    mapLink: 'https://maps.app.goo.gl/SVUd2kwPCL5fHrzcA', 
+                    mapLink: 'https://maps.app.goo.gl/SVUd2kwPCL5fHrzcA',
                     desc: '克拉維采瀑布被譽為「波赫的尼加拉瀑布」。沿著木棧道走一圈，從不同角度拍攝瀑布。如果天氣炎熱，可以下水泡腳或游泳，享受清涼（自備泳衣）。',
                     tips: ['走木棧道', '拍整圈瀑布', '天氣熱可下水泡腳 / 游一下', '補水、上洗手間', '1 小時 15 分鐘非常剛好']
                 },
                 {
                     id: 'd14-9',
                     time: '14:45',
-                    title: '前往塞拉耶佛', 
+                    title: '前往塞拉耶佛',
                     type: 'transport',
                     iconName: 'Car',
                     subtitle: '車程約 3 小時',
@@ -2631,10 +2637,10 @@
                     title: "Apartments Fadilpasic's House",
                     type: 'hotel',
                     iconName: 'BedDouble',
-                    subtitle: 'check in', 
+                    subtitle: 'check in',
                     location: 'Sarajevo Accommodation',
-                    mapLink: 'https://maps.app.goo.gl/SL5DbBXwE2euixbG8', 
-                    desc: '抵達塞拉耶佛住宿地點辦理入住。放好行李後，洗臉換衣服，稍微休息一下，恢復體力。', 
+                    mapLink: 'https://maps.app.goo.gl/SL5DbBXwE2euixbG8',
+                    desc: '抵達塞拉耶佛住宿地點辦理入住。放好行李後，洗臉換衣服，稍微休息一下，恢復體力。',
                     tips: ['放行李、洗臉、換衣服', '稍作休息']
                 },
                 {
@@ -2645,7 +2651,7 @@
                     iconName: 'Camera', 
                     subtitle: 'Baščaršija 夜間漫遊',
                     location: 'Baščaršija, Sarajevo',
-                    mapLink: 'https://maps.app.goo.gl/mUbNEb2XFP2JwSyVA', 
+                    mapLink: 'https://maps.app.goo.gl/mUbNEb2XFP2JwSyVA',
                     desc: (
                         <Fragment>
                              <div className="mb-4 flex items-center">
@@ -2702,7 +2708,7 @@
                     type: 'food',
                     iconName: 'Coffee',
                     location: 'Sarajevo Accommodation / Local Cafe',
-                    desc: '享用早餐，準備開始塞拉耶佛的深度歷史之旅。', 
+                    desc: '享用早餐，準備開始塞拉耶佛的深度歷史之旅。',
                     tips: ['在住宿或老城區找間有氣氛的咖啡館']
                 },
                 {
@@ -2726,7 +2732,7 @@
                     subtitle: '奧斯曼風格經典建築',
                     location: 'Gazi Husrev-beg Mosque',
                     mapLink: 'https://maps.app.goo.gl/9k2c8G4H6j5T8Z4A6',
-                    desc: '這座清真寺是巴爾幹地區最重要的伊斯蘭建築之一，由鄂圖曼帝國時期的總督於 16 世紀建造。外部的庭院非常適合拍照，展現了塞拉耶佛的東方氣息。', 
+                    desc: '這座清真寺是巴爾幹地區最重要的伊斯蘭建築之一，由鄂圖曼帝國時期的總督於 16 世紀建造。外部的庭院非常適合拍照，展現了塞拉耶佛的東方氣息。',
                     tips: ['奧斯曼風格經典建築', '外部庭院很好拍', '進入內部需注意服裝規定']
                 },
                 {
@@ -2773,7 +2779,7 @@
                     subtitle: '開車前往',
                     location: 'Tunnel of Hope Museum',
                     mapLink: 'https://maps.app.goo.gl/N8Vj3D7E9k2T8Z4A6',
-                    desc: '開車前往位於塞拉耶佛機場附近的希望隧道。這是波士尼亞戰爭期間（1992-1995）修建的一條秘密地下隧道，是塞拉耶佛被圍困時的唯一生命通道。', 
+                    desc: '開車前往位於塞拉耶佛機場附近的希望隧道。這是波士尼亞戰爭期間（1992-1995）修建的一條秘密地下隧道，是塞拉耶佛被圍困時的唯一生命通道。',
                     tips: ['Tunnel of Hope 是全 Sarajevo 最必去景點', '需開車，建議使用導航']
                 },
                 {
@@ -2785,7 +2791,7 @@
                     subtitle: '戰爭中唯一生命通道',
                     location: 'Tunnel of Hope Museum',
                     desc: '參觀博物館，了解波黑戰爭圍城期間的艱辛歷史。現場仍保留一小段原隧道供遊客體驗。展覽內容非常震撼，是感受城市歷史傷痕最直接的方式。',
-                    tips: ['展覽震撼，建議多留時間細看', '感受塞拉耶佛的堅韌精神'] 
+                    tips: ['展覽震撼，建議多留時間細看', '感受塞拉耶佛的堅韌精神']
                 },
                 {
                     id: 'd15-8',
@@ -2912,7 +2918,7 @@
                     subtitle: 'Sebilj 噴泉、市集街道',
                     location: 'Baščaršija Old Town, Sarajevo',
                     mapLink: 'https://maps.app.goo.gl/U2hXkK3F8jD3tA9X9',
-                    desc: '把握塞拉耶佛最後的早晨時光。在 Sebilj 噴泉和市集街道散步，享受清晨漂亮又不擁擠的光線和氛圍。這段活動不會爬坡，不耗費體力，為下午的長途駕駛保留精力。', 
+                    desc: '把握塞拉耶佛最後的早晨時光。在 Sebilj 噴泉和市集街道散步，享受清晨漂亮又不擁擠的光線和氛圍。這段活動不會爬坡，不耗費體力，為下午的長途駕駛保留精力。',
                     tips: ['早晨光線好、人少', '不爬坡、不耗體力']
                 },
                 {
@@ -2962,12 +2968,12 @@
                 {
                     id: 'd16-6',
                     time: '12:30–18:30',
-                    title: '長途移動：塞拉耶佛 → Kotor', 
+                    title: '長途移動：塞拉耶佛 → Kotor',
                     type: 'transport',
                     iconName: 'Car',
                     subtitle: '山路＋邊境 • 抓 5-5.5 小時',
                     location: 'Kotor, Montenegro',
-                    mapLink: 'https://maps.app.goo.gl/T4Y6v2t7K9jX7pX8A', 
+                    mapLink: 'https://maps.app.goo.gl/T4Y6v2t7K9jX7pX8A',
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
@@ -2975,8 +2981,8 @@
                             </p>
                             <h4 className="font-bold text-gray-800 mb-2">【行車路線與時間規劃】</h4>
                             <ul className="text-sm text-gray-600 space-y-2 list-none pl-0">
-                                <li><span className="font-bold">路線：</span>塞拉耶佛 → Foča → Šćepan Polje（邊境）→ Kotor</li> 
-                                <li><span className="font-bold">塞拉耶佛 → Foča：</span>約 1.5 小時</li> 
+                                <li><span className="font-bold">路線：</span>塞拉耶佛 → Foča → Šćepan Polje（邊境）→ Kotor</li>
+                                <li><span className="font-bold">塞拉耶佛 → Foča：</span>約 1.5 小時</li>
                                 <li><span className="font-bold">Foča → 邊境 (Šćepan Polje)：</span>約 35 分鐘</li>
                                 <li><span className="font-bold">過境：</span>預計 15–40 分鐘（視排隊情況）</li>
                                 <li><span className="font-bold">邊境 → Kotor：</span>約 2–2.5 小時（這段是**盤山路**）</li>
@@ -3295,11 +3301,11 @@
                             <ul className="text-sm text-gray-600 space-y-4 list-none pl-0">
                                 <li>
                                     <span className="font-bold text-gray-700">【A. Lokrum Island (洛克魯姆島)】</span>
-                                    <span className="text-xs text-gray-500 block">從老港口搭船僅需 15 分鐘。島上有孔雀、修道院遺跡、植物園和一個鹹水湖（死海），非常適合游泳或在森林中散步避暑。</span>
+                                    <span class="text-xs text-gray-500 block">從老港口搭船僅需 15 分鐘。島上有孔雀、修道院遺跡、植物園和一個鹹水湖（死海），非常適合游泳或在森林中散步避暑。</span>
                                 </li>
                                 <li>
                                     <span className="font-bold text-gray-700">【B. Mount Srđ (瑟爾德山)】</span>
-                                    <span className="text-xs text-gray-500 block">搭乘纜車（或自駕）上山。這裡是俯瞰整個杜布羅夫尼克舊城、亞得里亞海與附近島嶼的最佳制高點。傍晚光線最美。</span>
+                                    <span class="text-xs text-gray-500 block">搭乘纜車（或自駕）上山。這裡是俯瞰整個杜布羅夫尼克舊城、亞得里亞海與附近島嶼的最佳制高點。傍晚光線最美。</span>
                                 </li>
                             </ul>
                         </Fragment>
@@ -3449,6 +3455,8 @@
             ];
         };
 
+        // --- 子組件 ---
+
         const DetailView = ({ item, onClose }) => {
             if (!item) return null;
 
@@ -3517,7 +3525,7 @@
 
         const InfoPage = () => {
             return (
-                <div className="p-6 pb-32 space-y-6 animate-fade-in"> 
+                <div className="p-6 pb-32 space-y-6 animate-fade-in">
                     <h2 className={`text-2xl font-serif font-bold ${MORANDI_COLORS.text}`}>旅遊資訊</h2>
 
                     <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
@@ -3646,14 +3654,10 @@
                                                             <button
                                                                 onClick={(e) => {
                                                                     e.stopPropagation();
-                                                                    if (item.mapLink) {
-                                                                        window.open(item.mapLink, '_blank');
-                                                                    } else {
-                                                                        const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.location)}`;
-                                                                        window.open(url, '_blank');
-                                                                    }
+                                                                    const url = item.mapLink || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.location)}`;
+                                                                    window.open(url, '_blank');
                                                                 }}
-                                                                className={`ml-2 p-1.5 rounded-full ${MORANDI_COLORS.bg} text-gray-400 hover:text-[#C78F76] hover:bg-[#FFF] transition-colors flex-shrink-0 ${!item.mapLink && !item.location ? 'hidden' : ''}`}
+                                                                className={`ml-2 p-1.5 rounded-full ${MORANDI_COLORS.bg} text-gray-400 hover:text-[#C78F76] hover:bg-[#FFF] transition-colors flex-shrink-0`}
                                                             >
                                                                 <div className="w-4 h-4 flex items-center justify-center rounded-tr-[50%] rounded-tl-[50%] rounded-bl-[50%] rounded-br-0 transform rotate-45 border-2 border-current">
                                                                     <div className="w-1 h-1 bg-current rounded-full transform -rotate-45" />
