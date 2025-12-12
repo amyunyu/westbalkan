@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>西巴爾幹之旅 App</title>
-    
+
     <!-- 引入 Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- 引入 React 和 ReactDOM -->
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    
+
     <!-- 引入 Babel (用於解析 JSX) -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
@@ -38,7 +38,7 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
-        
+
         /* Animation */
         @keyframes fade-in {
             from { opacity: 0; transform: translateY(10px); }
@@ -181,16 +181,16 @@
             const content = icons[name] || null;
 
             return (
-                <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    width={size} 
-                    height={size} 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    strokeWidth="2" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={size}
+                    height={size}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className={className}
                 >
                     {content}
@@ -217,7 +217,7 @@
             const dates = [];
             const start = new Date(2026, 4, 24); // 5月24日 (月份是 0-indexed)
             const end = new Date(2026, 5, 12);   // 6月12日
-            
+
             // 城市對應表
             const cityMap = {
                 1: '飛機上',
@@ -232,7 +232,7 @@
                 10: '十六湖\n札達爾',
                 11: '克爾卡\n國家公園',
                 12: '赫瓦爾島\n斯普利特',
-                13: '斯普利特\n莫斯塔爾'
+                13: '斯普利特\n莫斯塔爾' // 6/5
             };
 
             let current = start;
@@ -256,7 +256,7 @@
 
         // 嵌入式地圖連結按鈕 (地圖水滴圖示)
         const MapLink = ({ url }) => (
-            <a 
+            <a
                 href={url}
                 target="_blank"
                 rel="noreferrer"
@@ -272,7 +272,7 @@
 
         // 詳細行程數據 (已包含在原始檔案中)
         const itineraryData = {
-            1: [ 
+            1: [
                 {
                     id: 'd1-1',
                     time: '18:30',
@@ -295,7 +295,7 @@
                     tips: ['機上保濕', '調整手錶時差']
                 }
             ],
-            2: [ 
+            2: [
                 {
                     id: 'd2-1',
                     time: '14:00',
@@ -335,7 +335,7 @@
 
                             <div className="mb-6">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【札格瑞布主教座堂】 
+                                    【札格瑞布主教座堂】
                                     <MapLink url="https://maps.app.goo.gl/LUBdDPyV9ESCDgyM8" />
                                 </h4>
                                 <ul className="text-sm text-gray-600 space-y-1 list-none pl-0">
@@ -399,7 +399,7 @@
 
                             <div className="mb-6">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【Zrinjevac Park】 
+                                    【Zrinjevac Park】
                                     <MapLink url="https://maps.app.goo.gl/MBA9ahmZafFHqB2Y7" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -439,8 +439,8 @@
                         </Fragment>
                     ),
                     tips: [
-                        '市集部分攤販僅收現金，建議帶小額歐元', 
-                        '水果可請店家「幫你挑一盒好吃的」', 
+                        '市集部分攤販僅收現金，建議帶小額歐元',
+                        '水果可請店家「幫你挑一盒好吃的」',
                         '推薦邊走邊吃：葡萄、櫻桃、無花果',
                         'Dolac Market 很安全，但旅遊區仍注意包包'
                     ]
@@ -537,7 +537,7 @@
                             </p>
                             <div className="mb-6">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【普列舍倫廣場 (Prešernov trg)】 
+                                    【普列舍倫廣場 (Prešernov trg)】
                                     <MapLink url="https://maps.app.goo.gl/f2dcEMFHYewVjR2KA" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -546,7 +546,7 @@
                             </div>
                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【三重橋 (Triple Bridge)】 
+                                    【三重橋 (Triple Bridge)】
                                     <MapLink url="https://maps.app.goo.gl/FMNMuYQ5jh11BnwB9" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -569,7 +569,7 @@
                         <Fragment>
                             <div className="mb-6">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【龍橋 (Dragon Bridge)】 
+                                    【龍橋 (Dragon Bridge)】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Dragon+Bridge+Ljubljana" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -578,7 +578,7 @@
                             </div>
                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【中央市場 (Central Market)】 
+                                    【中央市場 (Central Market)】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Central+Market+Ljubljana" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -627,7 +627,7 @@
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 矗立在市中心山丘上的盧比安納城堡，是這座城市的守護者，擁有約900年的歷史。從最初的中世紀堡壘，歷經哈布斯堡王朝的改建，曾作為防禦工事、軍火庫，甚至監獄。如今，它是盧比安納最重要的文化景點與眺望點。
                             </p>
-                            
+
                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-2 flex items-center">
                                     必看亮點：
@@ -647,7 +647,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            
+
                             <div className="p-3 bg-gray-50 rounded-lg border border-gray-100 text-sm text-gray-600">
                                 <span className="font-bold">💡 參觀建議：</span> 搭乘纜車上山最省力（來回票較划算），若時間有限，建議優先登上景觀塔並在庭院散步，感受居高臨下的氛圍。
                             </div>
@@ -675,7 +675,7 @@
                             </p>
                             <div className="mb-6">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【聖尼各老主教座堂】 
+                                    【聖尼各老主教座堂】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Ljubljana+Cathedral" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -798,7 +798,7 @@
                             </p>
                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【Café Čolnarna Tivoli】 
+                                    【Café Čolnarna Tivoli】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Colnarna+Tivoli" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -888,10 +888,10 @@
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 將盧比安納最道地的兩種早晨體驗結合，享受愜意的慢活時光。
                             </p>
-                            
+
                             <div className="mb-6">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【中央市場早市散步】 
+                                    【中央市場早市散步】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Central+Market+Ljubljana" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -1218,7 +1218,7 @@
                             </div>
                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【薩維察瀑布】 
+                                    【薩維察瀑布】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Savica+Waterfall" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -1380,10 +1380,10 @@
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 傍晚是羅維尼最魔幻的時刻。建議沿著蜿蜒的石板路漫步至舊城最高點的 <span className="font-bold text-gray-800">聖歐菲米亞教堂 (St. Euphemia)</span>。
                             </p>
-                            
+
                             <div className="mb-6">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【夕陽觀景點：教堂廣場】 
+                                    【夕陽觀景點：教堂廣場】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Church+of+St.+Euphemia+Rovinj" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -1502,7 +1502,7 @@
                         <Fragment>
                             <div className="mb-6">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【凱旋門 (Arch of the Sergii)】 
+                                    【凱旋門 (Arch of the Sergii)】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Arch+of+the+Sergii" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -1511,7 +1511,7 @@
                             </div>
                             <div className="mb-6">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【奧古斯都神廟 (Temple of Augustus)】 
+                                    【奧古斯都神廟 (Temple of Augustus)】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Temple+of+Augustus+Pula" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -1520,7 +1520,7 @@
                             </div>
                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【威尼斯堡壘 (Pulski Fort / Kaštel)】 
+                                    【威尼斯堡壘 (Pulski Fort / Kaštel)】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Pula+Castle+Kastel" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -1661,7 +1661,7 @@
                             </p>
                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【St. Euphemia 教堂】 
+                                    【St. Euphemia 教堂】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Church+of+St+Euphemia+Rovinj" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -1699,7 +1699,7 @@
                             </p>
                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【午餐推薦：Kotli Tavern】 
+                                    【午餐推薦：Kotli Tavern】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Konoba+Kotli" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -1875,7 +1875,7 @@
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 札達爾以其羅馬遺跡和現代海濱藝術裝置聞名。以下是最佳光線與動線的建議：
                             </p>
-                            
+
                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-2 flex items-center">
                                     建議路線與停留時間：
@@ -1946,7 +1946,7 @@
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 若前一天太累，今早可悠閒地在 Riva 海濱散步，找間咖啡館享受亞得里亞海的早晨，補拍昨晚沒拍好的景點。以下是推薦的順遊路線：
                             </p>
-                            
+
                             <ul className="text-sm text-gray-600 space-y-4 list-none pl-0">
                                 <li>
                                     <div className="font-bold text-gray-700 mb-1">1. Land Gate（陸門）— 古城氣場起點 (5 min)</div>
@@ -2027,7 +2027,7 @@
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 克爾卡國家公園以瀑布群聞名，其中最壯觀的是 <strong>Skradinski buk</strong>。
                             </p>
-                            
+
                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-2 flex items-center">
                                     遊覽路線攻略：
@@ -2228,29 +2228,140 @@
                 },
                 {
                     id: 'd13-2',
-                    time: '12:00',
+                    time: '11:30', // 已調整
                     title: '舊城午餐 & 咖啡',
                     type: 'food',
                     iconName: 'Coffee',
                     subtitle: '自由活動',
                     location: 'Split Old Town',
-                    desc: '在迷宮般的巷弄中找間咖啡館休息，或是享用午餐，享受離開前的悠閒時光。',
-                    tips: []
+                    desc: '在迷宮般的巷弄中找間咖啡館休息，或是享用午餐，享受離開前的悠閒時光。請務必在 12:00 前結束用餐，準備出發前往莫斯塔爾。', // 已更新
+                    tips: ['把握時間，準備跨國移動'] // 已更新
                 },
                 {
                     id: 'd13-3',
-                    time: '14:00',
+                    time: '12:00', // 已調整
                     title: '前往莫斯塔爾',
                     type: 'transport',
                     iconName: 'Car',
-                    subtitle: '跨國移動',
+                    subtitle: '跨國移動 • 車程約 3 小時', // 已更新
                     location: 'Mostar, Bosnia & Herzegovina',
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Mostar+Old+Bridge',
-                    desc: '告別克羅埃西亞海岸，前往波士尼亞與赫塞哥維納的古城——莫斯塔爾 (Mostar)。準備迎接截然不同的異國風情。',
-                    tips: ['準備護照過境', '注意波士尼亞入境規定']
+                    desc: '告別克羅埃西亞海岸，提早出發前往波士尼亞與赫塞哥維納的古城——莫斯塔爾 (Mostar)。預計 15:00 左右抵達，準備迎接截然不同的異國風情。', // 已更新
+                    tips: ['準備護照過境', '注意波士尼亞入境規定', '山路駕駛請注意安全']
+                },
+                // --- 6/5 新增莫斯塔爾行程 ---
+                {
+                    id: 'd13-4',
+                    time: '15:00',
+                    title: '入住、稍作休息',
+                    type: 'hotel',
+                    iconName: 'BedDouble',
+                    subtitle: '放行李、補水',
+                    location: 'Mostar Accommodation',
+                    desc: '抵達莫斯塔爾的住宿地點辦理入住手續，放下行李、補充水分，換上輕便的鞋子，準備出門探索舊城區。',
+                    tips: ['詢問停車位置', '換上好走的鞋子']
+                },
+                {
+                    id: 'd13-5',
+                    time: '15:30',
+                    title: 'Kujundžiluk Old Bazaar',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: '老街散步拍照',
+                    location: 'Kujundžiluk, Mostar',
+                    mapLink: 'https://maps.app.goo.gl/TDFQ53N9m8wWpX2N6',
+                    desc: '逛逛這條充滿色彩的手工藝品街和銅器街，體驗奧斯曼時期的古老市集氛圍。這是拍攝聖橋 (Stari Most) 河岸視角的第一個角度。',
+                    tips: ['逛彩色手工藝、銅器街', '拍老橋的第一個角度（河岸視角）']
+                },
+                {
+                    id: 'd13-6',
+                    time: '16:10',
+                    title: 'Koski Mehmed Pasha Mosque',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: '上塔拍老橋經典角度',
+                    location: 'Koski Mehmed Pasha Mosque',
+                    mapLink: 'https://maps.app.goo.gl/n8F395m6D2G1xR6N8',
+                    desc: '這座清真寺位於河岸邊，是拍攝莫斯塔爾老橋 (Stari Most) 最經典角度的絕佳地點。特別推薦在午後光線下拍攝，景色更佳。',
+                    tips: ['最推薦午後光線', '塔樓比較窄，小心腳步', '需購買門票']
+                },
+                {
+                    id: 'd13-7',
+                    time: '16:50',
+                    title: '沿 Neretva 河散步到 Stari Most',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: '橋下仰拍弧線',
+                    location: 'Stari Most (Old Bridge), Mostar',
+                    mapLink: 'https://maps.app.goo.gl/tB3c1P5T9E1cE38q7',
+                    desc: '沿著 Neretva 河畔漫步至老橋。在這個角度可以拍到老橋優美的「橋下仰拍弧線」。如果運氣好，可能會在下午時段看到當地人進行著名的跳橋表演。',
+                    tips: ['拍「橋下仰拍弧線」', '如果有跳橋者，通常在下午出現', '老橋石階較滑，請小心']
+                },
+                {
+                    id: 'd13-8',
+                    time: '17:20',
+                    title: '晚餐 (Mostar)',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    subtitle: 'Hindin Han / Šadrvan / Urban Grill',
+                    location: 'Mostar Old Town',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                在莫斯塔爾舊城區享用晚餐，品嚐當地特色料理如 Ćevapi（烤肉卷）。
+                            </p>
+                            <h4 className="font-bold text-gray-800 mb-2">【餐廳推薦】</h4>
+                            <ul className="list-none pl-0 space-y-3">
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Hindin Han
+                                        <MapLink url="https://maps.app.goo.gl/3w5Ua45T1j4q2xHw8" />
+                                    </div>
+                                    <p className="text-xs text-gray-600">最推薦，有河景座位且好拍照，食物傳統美味。</p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Šadrvan
+                                        <MapLink url="https://maps.app.goo.gl/Wc2k5P5wS4nK1vQW9" />
+                                    </div>
+                                    <p className="text-xs text-gray-600">位於舊城中心，裝潢充滿當地特色。</p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Urban Grill
+                                        <MapLink url="https://maps.app.goo.gl/FkG9w3xZgR2x2pXq9" />
+                                    </div>
+                                    <p className="text-xs text-gray-600">提供西式烤肉和牛排，適合喜歡大口吃肉的人。</p>
+                                </li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: ['建議 Hindin Han：河景＋好拍照', '嘗試當地咖啡與甜點']
+                },
+                {
+                    id: 'd13-9',
+                    time: '18:20',
+                    title: '老橋夕陽',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: '金色時刻 × 倒影',
+                    location: 'Stari Most (Old Bridge), Mostar',
+                    desc: '晚餐後返回老橋，拍攝日落時分的景色。抓住「金色時刻」，捕捉夕陽餘暉灑在老橋與 Neretva 河面上的倒影，景色如詩如畫。',
+                    tips: ['拍「金色時刻 × 老橋倒影」', '老橋上人潮較多，注意安全']
+                },
+                {
+                    id: 'd13-10',
+                    time: '19:00',
+                    title: '舊城夜景散步',
+                    type: 'relax',
+                    iconName: 'Coffee',
+                    subtitle: '點燈後的橋',
+                    location: 'Mostar Old Town',
+                    desc: '在夜色中漫步於舊城區，回到噴泉廣場。小巷中的路燈燈光昏黃，氣氛浪漫。最後，別忘了在不同角度拍攝一次點燈後的老橋，展現它不同的魅力。',
+                    tips: ['回到噴泉廣場', '最後拍一次點燈後的橋']
                 }
             ],
-            20: [ 
+            20: [
                 {
                     id: 'd20-1',
                     time: '06:00',
@@ -2268,7 +2379,7 @@
         // 獲取當日行程數據的函數 (如果沒有定義，則返回通用行程)
         const getDayEvents = (dayNum) => {
             if (itineraryData[dayNum]) return itineraryData[dayNum];
-            
+
             // 處理未定義日期的通用行程
             return [
                 {
@@ -2313,23 +2424,23 @@
             return (
                 <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center pointer-events-none">
                     {/* 背景遮罩 */}
-                    <div 
+                    <div
                         className="absolute inset-0 bg-black/40 backdrop-blur-sm pointer-events-auto transition-opacity duration-300"
                         onClick={onClose}
                     />
-                    
+
                     {/* 卡片內容 (底部滑出) */}
                     <div className="relative w-full max-w-md h-[85vh] sm:h-[600px] bg-[#FDFCF8] rounded-t-3xl sm:rounded-3xl shadow-2xl overflow-hidden pointer-events-auto flex flex-col transform transition-transform duration-300 ease-out translate-y-0 animate-fade-in">
-                        
+
                         {/* 標頭欄 */}
                         <div className="flex items-center justify-between p-4 border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-10">
-                            <button 
+                            <button
                                 onClick={onClose}
                                 className="p-2 -ml-2 rounded-full hover:bg-gray-100 transition-colors text-gray-600"
                             >
                                 <Icon name="ChevronLeft" size={24} />
                             </button>
-                            
+
                             <h2 className={`text-lg font-serif font-bold ${MORANDI_COLORS.text} truncate flex-1 text-center px-2`}>
                                 {item.title}
                             </h2>
@@ -2339,7 +2450,7 @@
 
                         {/* 內容區域 */}
                         <div className="flex-1 overflow-y-auto p-6 pt-6">
-                            
+
                             <div className="flex flex-col items-center gap-4 mb-6">
                                 {/* 時間/類型標籤 */}
                                 <div className="flex items-center gap-2">
@@ -2372,7 +2483,7 @@
                                     </ul>
                                 </div>
                             )}
-                            
+
                             {/* 底部按鈕已移除 */}
                         </div>
                     </div>
@@ -2385,7 +2496,7 @@
             return (
                 <div className="p-6 pb-32 space-y-6 animate-fade-in"> {/* 確保使用 pb-32 */}
                     <h2 className={`text-2xl font-serif font-bold ${MORANDI_COLORS.text}`}>旅遊資訊</h2>
-                    
+
                     <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                         <div className="flex items-center gap-3 mb-4">
                             <div className="text-gray-400"><Icon name="Plane" size={24}/></div>
@@ -2434,7 +2545,7 @@
 
             const currentDate = tripDates[selectedDateIdx];
             const currentEvents = getDayEvents(currentDate.dayNum);
-            
+
             // 側滑選單定位效果
             useEffect(() => {
                 if (scrollRef.current) {
@@ -2449,7 +2560,7 @@
             return (
                 <div className={`min-h-screen ${MORANDI_COLORS.bg} font-sans selection:bg-[#D4C4B7] selection:text-white`}>
                     <div className="max-w-md mx-auto bg-[#FDFCF8] h-[100dvh] relative shadow-2xl overflow-hidden flex flex-col">
-                        
+
                         {/* 頂部標題 */}
                         <div className="pt-8 px-6 pb-4 bg-white/50 backdrop-blur-sm sticky top-0 z-10 shrink-0">
                             <h1 className={`text-2xl font-serif font-bold ${MORANDI_COLORS.text} tracking-wide`}>
@@ -2464,7 +2575,7 @@
                             <React.Fragment>
                                 {/* 日期選擇器 (橫向滾動) */}
                                 <div className="border-b border-gray-200 bg-white shadow-sm z-0 shrink-0">
-                                    <div 
+                                    <div
                                         ref={scrollRef}
                                         className="flex overflow-x-auto px-0 hide-scrollbar snap-x overflow-y-hidden"
                                     >
@@ -2475,8 +2586,8 @@
                                                     key={idx}
                                                     onClick={() => setSelectedDateIdx(idx)}
                                                     className={`snap-center flex-shrink-0 flex flex-col items-center justify-start w-16 h-20 transition-colors duration-200 border-r border-gray-50 last:border-0 pt-1 ${
-                                                        isActive 
-                                                            ? `${MORANDI_COLORS.primary} text-white` 
+                                                        isActive
+                                                            ? `${MORANDI_COLORS.primary} text-white`
                                                             : 'bg-white text-gray-400 hover:bg-gray-50'
                                                     }`}
                                                 >
@@ -2496,13 +2607,13 @@
 
                                 {/* 行程列表 (垂直滾動) */}
                                 <div className="flex-1 overflow-y-auto pb-4 mb-24">
-                                    
+
                                     {/* 天氣欄位已移除 */}
 
                                     {/* 行程列表 */}
                                     <div className="px-6 space-y-2 mt-4">
                                         {currentEvents.map((item, idx) => (
-                                            <div 
+                                            <div
                                                 key={item.id}
                                                 onClick={() => setViewingItem(item)}
                                                 className="group bg-white rounded-xl p-5 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.05)] border border-gray-50 hover:shadow-lg transition-all duration-300 cursor-pointer relative overflow-hidden"
@@ -2519,9 +2630,9 @@
                                                             <h3 className={`text-lg font-bold ${MORANDI_COLORS.text} leading-tight`}>
                                                                 {item.title}
                                                             </h3>
-                                                            
+
                                                             {/* 地圖按鈕 on Card */}
-                                                            <button 
+                                                            <button
                                                                 onClick={(e) => {
                                                                     e.stopPropagation();
                                                                     const url = item.mapLink || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.location)}`;
@@ -2535,7 +2646,7 @@
                                                                 </div>
                                                             </button>
                                                         </div>
-                                                        
+
                                                         {/* 副標題 / 地點 */}
                                                         <p className="text-sm text-gray-500 line-clamp-2">
                                                             {item.subtitle || item.location}
@@ -2565,8 +2676,8 @@
                                 <button
                                     onClick={() => setActiveTab('itinerary')}
                                     className={`flex-1 py-3 rounded-full flex items-center justify-center gap-2 text-sm font-medium transition-all duration-300 ${
-                                        activeTab === 'itinerary' 
-                                            ? `${MORANDI_COLORS.primary} text-white shadow-md` 
+                                        activeTab === 'itinerary'
+                                            ? `${MORANDI_COLORS.primary} text-white shadow-md`
                                             : 'text-gray-400 hover:bg-gray-50'
                                     }`}
                                 >
@@ -2576,8 +2687,8 @@
                                 <button
                                     onClick={() => setActiveTab('info')}
                                     className={`flex-1 py-3 rounded-full flex items-center justify-center gap-2 text-sm font-medium transition-all duration-300 ${
-                                        activeTab === 'info' 
-                                            ? `${MORANDI_COLORS.primary} text-white shadow-md` 
+                                        activeTab === 'info'
+                                            ? `${MORANDI_COLORS.primary} text-white shadow-md`
                                             : 'text-gray-400 hover:bg-gray-50'
                                     }`}
                                 >
