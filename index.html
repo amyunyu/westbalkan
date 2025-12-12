@@ -237,8 +237,8 @@
                 15: '塞拉耶佛', // 6/7
                 16: '塞拉耶佛\n科托爾', // 6/8
                 17: '科托爾', // 6/9
-                18: '科托爾\n杜布羅夫尼克', // 6/10 <--- UPDATED: 科托爾 -> 杜布羅夫尼克
-                19: '杜布羅夫尼克', // 6/11 <--- UPDATED: 杜布羅夫尼克 (預測)
+                18: '科托爾\n杜布羅夫尼克', // 6/10
+                19: '杜布羅夫尼克', // 6/11
                 20: '返台' // 6/12
             };
 
@@ -2833,7 +2833,7 @@
                     subtitle: 'Sebilj 噴泉、市集街道',
                     location: 'Baščaršija Old Town, Sarajevo',
                     mapLink: 'https://maps.app.goo.gl/U2hXkK3F8jD3tA9X9',
-                    desc: '把握塞拉耶佛最後的早晨時光。在 Sebilj 噴泉和市集街道散步，享受清晨漂亮又不擁擠的光線和氛圍。這段活動不會爬坡，不耗費體力，為下午的長途駕駛保留精力。', // *** UPDATED: 塞拉耶佛 ***
+                    desc: '把握塞拉耶佛最後的早晨時光。在 Sebilj 噴泉和市集街道散步，享受清晨漂亮又不擁擠的光線和氛圍。這段活動不會爬坡，不耗費體力，為下午的長途駕駛保留精力。',
                     tips: ['早晨光線好、人少', '不爬坡、不耗體力']
                 },
                 {
@@ -2883,7 +2883,7 @@
                 {
                     id: 'd16-6',
                     time: '12:30–18:30',
-                    title: '長途移動：塞拉耶佛 → Kotor', // *** UPDATED: 塞拉耶佛 ***
+                    title: '長途移動：塞拉耶佛 → Kotor',
                     type: 'transport',
                     iconName: 'Car',
                     subtitle: '山路＋邊境 • 抓 5-5.5 小時',
@@ -2896,8 +2896,8 @@
                             </p>
                             <h4 className="font-bold text-gray-800 mb-2">【行車路線與時間規劃】</h4>
                             <ul className="text-sm text-gray-600 space-y-2 list-none pl-0">
-                                <li><span className="font-bold">路線：</span>塞拉耶佛 → Foča → Šćepan Polje（邊境）→ Kotor</li> {/* *** UPDATED: 塞拉耶佛 *** */}
-                                <li><span className="font-bold">塞拉耶佛 → Foča：</span>約 1.5 小時</li> {/* *** UPDATED: 塞拉耶佛 *** */}
+                                <li><span className="font-bold">路線：</span>塞拉耶佛 → Foča → Šćepan Polje（邊境）→ Kotor</li>
+                                <li><span className="font-bold">塞拉耶佛 → Foča：</span>約 1.5 小時</li>
                                 <li><span className="font-bold">Foča → 邊境 (Šćepan Polje)：</span>約 35 分鐘</li>
                                 <li><span className="font-bold">過境：</span>預計 15–40 分鐘（視排隊情況）</li>
                                 <li><span className="font-bold">邊境 → Kotor：</span>約 2–2.5 小時（這段是**盤山路**）</li>
@@ -2933,7 +2933,6 @@
                     tips: ['Old Town 晚餐', '海邊或城牆外短散步', '不登山、不排重點', '第一晚保留體力']
                 }
             ],
-            // --- Day 17: Kotor 深度探索 (6/9) ---
             17: [
                 {
                     id: 'd17-1',
@@ -2943,7 +2942,7 @@
                     iconName: 'Compass',
                     subtitle: 'Kotor Fortress (San Giovanni)',
                     location: 'Kotor Fortress',
-                    mapLink: 'https://maps.app.goo.gl/JqFh6tD2G1xR6N8', // Fortress Link
+                    mapLink: 'https://maps.app.goo.gl/JqFh6tD2G1xR6N8',
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
@@ -2964,7 +2963,7 @@
                     iconName: 'Coffee',
                     subtitle: 'Dobrota 或老城咖啡館',
                     location: 'Kotor Old Town / Dobrota',
-                    mapLink: 'https://maps.app.goo.gl/JqFh6tD2G1xR6N8', // Old Town Link
+                    mapLink: 'https://maps.app.goo.gl/JqFh6tD2G1xR6N8',
                     desc: '健行後回到老城區，找間咖啡館享用早餐並休息。推薦：老城內咖啡館，或沿著 Dobrota 沿海大道找間有海景的 Cafe，享受真正的慢活時光。',
                     tips: ['補充水分與能量', ' Dobrota 沿海有很多安靜的咖啡館']
                 },
@@ -3069,108 +3068,175 @@
                     tips: ['點燈後的城牆很美', '早點睡，避免舟車勞頓的疲勞累積']
                 }
             ],
-            // --- Day 18: Kotor -> Perast -> Dubrovnik (6/10) ---
             18: [
                 {
                     id: 'd18-1',
-                    time: '08:00',
-                    title: '早餐 & Check-out',
-                    type: 'food',
-                    iconName: 'Coffee',
-                    location: 'Kotor / Dobrota',
-                    desc: '在住宿處享用早餐，整理行李並辦理退房。準備前往美麗的小鎮 Perast。',
-                    tips: ['確認護照與車輛文件隨身攜帶', '行李上車']
-                },
-                {
-                    id: 'd18-2',
                     time: '09:00',
-                    title: 'Perast & 聖母岩島',
-                    type: 'sightseeing',
-                    iconName: 'Compass',
-                    subtitle: 'Our Lady of the Rocks',
-                    location: 'Perast',
-                    mapLink: 'https://maps.app.goo.gl/9K8', // Placeholder link
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                前往科托爾灣最夢幻的小鎮 Perast。搭乘小船前往海中央的「岩石聖母島 (Our Lady of the Rocks)」。
-                            </p>
-                            <p className="text-sm text-gray-600 leading-relaxed">
-                                島上的藍色圓頂教堂非常美麗，是蒙特內哥羅的標誌性景點。參觀完島嶼後，回到 Perast 本島，欣賞沿岸的巴洛克式建築。
-                            </p>
-                        </Fragment>
-                    ),
-                    tips: ['小船來回約 5-10 歐元', '教堂內部需購票', 'Perast 停車位較少，建議停在鎮外停車場']
-                },
-                {
-                    id: 'd18-3',
-                    time: '12:30',
-                    title: 'Perast 午餐（輕量）',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    subtitle: '海邊簡單吃',
-                    location: 'Perast Waterfront',
-                    desc: '在 Perast 海邊找間餐廳簡單用餐。為了預留充裕時間過境，建議不要吃太久，簡單享受海景與美食即可。',
-                    tips: ['不要拖太晚，為了過邊境', '海鮮燉飯或義大利麵是好選擇']
-                },
-                {
-                    id: 'd18-4',
-                    time: '13:30',
                     title: '前往杜布羅夫尼克',
                     type: 'transport',
                     iconName: 'Car',
-                    subtitle: '跨國移動 • 約 3-3.5 小時',
+                    subtitle: '跨國移動 • 車程約 2.5 - 3.5 小時',
                     location: 'Dubrovnik, Croatia',
-                    mapLink: 'https://maps.app.goo.gl/dubrovnik', // Placeholder link
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                離開蒙特內哥羅，前往「亞得里亞海之珠」——克羅埃西亞的杜布羅夫尼克 (Dubrovnik)。
-                            </p>
-                            <h4 className="font-bold text-gray-800 mb-2">【過境資訊】</h4>
-                            <ul className="text-sm text-gray-600 space-y-2 list-none pl-0">
-                                <li><span className="font-bold">邊境檢查站：</span>Debeli Brijeg (MNE) / Karasovići (HR)。</li>
-                                <li><span className="font-bold">文件檢查：</span>護照、租車文件、<span className="text-red-600 font-bold">Green Card (綠卡)</span>。</li>
-                                <li><span className="font-bold">下午時段：</span>通常比傍晚順暢，但仍需預留排隊時間。</li>
-                            </ul>
-                        </Fragment>
-                    ),
-                    tips: ['準備好護照與車輛文件', '下午過關通常較順', '進入克羅埃西亞後沿途海岸線非常美']
+                    mapLink: 'https://maps.app.goo.gl/fP6QxZ5J8k2T8Z4A6',
+                    desc: '告別蒙特內哥羅，開車前往「亞得里亞海的珍珠」——杜布羅夫尼克 (Dubrovnik)。需經過邊境檢查 (Karasovići / Debeli Brijeg)，旺季可能需要排隊，請預留充足時間。',
+                    tips: ['準備護照過境', '預留邊境排隊時間', '沿途海景非常美']
+                },
+                {
+                    id: 'd18-2',
+                    time: '13:00',
+                    title: '抵達 Dubrovnik / Check-in',
+                    type: 'hotel',
+                    iconName: 'BedDouble',
+                    subtitle: '辦理入住',
+                    location: 'Dubrovnik Accommodation',
+                    desc: '抵達杜布羅夫尼克住宿地點，辦理入住手續。建議選擇有停車位的住宿，因為舊城區周邊停車非常困難且昂貴。',
+                    tips: ['確認停車位', '休息片刻']
+                },
+                {
+                    id: 'd18-3',
+                    time: '15:00',
+                    title: 'Stradun 大道漫步',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: '初訪君臨城',
+                    location: 'Stradun (Placa)',
+                    mapLink: 'https://maps.app.goo.gl/gQ5XyZ5J8k2T8Z4A6',
+                    desc: '走進派勒門 (Pile Gate)，踏上光滑的石灰岩大道 Stradun。這裡是杜布羅夫尼克的心臟，兩旁是保存完好的巴洛克式建築。可以參觀歐諾弗里奥噴泉 (Onofrio\'s Fountain) 和聖救世主教堂。',
+                    tips: ['感受古城氣勢', '在此享用冰淇淋']
+                },
+                {
+                    id: 'd18-4',
+                    time: '18:00',
+                    title: 'Banje Beach 夕陽',
+                    type: 'relax',
+                    iconName: 'Sun',
+                    subtitle: '城牆外的海灘',
+                    location: 'Banje Beach',
+                    mapLink: 'https://maps.app.goo.gl/hR6QxZ5J8k2T8Z4A6',
+                    desc: '步行至普洛切門 (Ploče Gate) 外的 Banje 海灘。這裡是欣賞舊城牆與老港口夕陽的最佳角度之一。可以坐在沙灘上放鬆，或在海灘酒吧喝一杯。',
+                    tips: ['經典的城牆海灘視角', '不用下水也很舒服']
                 },
                 {
                     id: 'd18-5',
-                    time: '18:00',
-                    title: 'Dubrovnik Check-in',
-                    type: 'hotel',
-                    iconName: 'BedDouble',
-                    subtitle: '建議住宿：Ploče / Lapad',
-                    location: 'Dubrovnik Accommodation',
-                    desc: '抵達杜布羅夫尼克辦理入住。強烈建議選擇老城外圍區域 (如 Ploče 或 Lapad)，不僅方便停車，進出也比較不痛苦（老城內全是階梯且無法開車）。',
-                    tips: ['確認停車位', 'Ploče 區風景好但階梯多', 'Lapad 區生活機能好且平坦']
-                },
-                {
-                    id: 'd18-6',
-                    time: '19:00',
-                    title: '老城夜間散步（輕量）',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: '初見君臨城',
+                    time: '19:30',
+                    title: '舊城晚餐',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    subtitle: '巷弄美食',
                     location: 'Dubrovnik Old Town',
-                    mapLink: 'https://maps.app.goo.gl/oldtown', // Placeholder link
+                    desc: '在舊城區的巷弄中（尤其是 Prijeko 街）尋找餐廳享用晚餐。夜晚的杜布羅夫尼克點燈後更顯金碧輝煌。',
+                    tips: ['夜晚的舊城更有氣氛']
+                }
+            ],
+            19: [
+                {
+                    id: 'd19-1',
+                    time: '07:30',
+                    title: '古城牆健行 (City Walls)',
+                    type: 'sightseeing',
+                    iconName: 'MapPin',
+                    subtitle: '一定要早！避熱避人',
+                    location: 'Dubrovnik City Walls',
+                    mapLink: 'https://maps.app.goo.gl/mS7QxZ5J8k2T8Z4A6',
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                晚餐後輕鬆前往老城區 (Old Town)，感受這座中世紀古城的夜間魅力。
+                                這是杜布羅夫尼克最經典、絕對不能錯過的體驗。全長約 2 公里的城牆步道，可以 360 度俯瞰紅瓦屋頂舊城與亞得里亞海。
                             </p>
-                            <ul className="text-sm text-gray-600 space-y-2 list-disc pl-4">
-                                <li><span className="font-bold">派勒門 (Pile Gate)：</span>主要的入口，充滿氣勢。</li>
-                                <li><span className="font-bold">史特拉敦大道 (Stradun)：</span>由光滑石灰岩鋪成的閃亮主街。</li>
-                                <li><span className="font-bold">大歐諾弗里奧噴泉 (Big Onofrio Fountain)：</span>位於入口處的著名地標。</li>
-                            </ul>
-                            <p className="text-sm text-gray-600 mt-2">今晚先不上城牆，在巷弄間隨意走走，欣賞打燈後的城牆夜景即可。 </p>
+                            <div className="mb-2">
+                                <h4 className="font-bold text-gray-800 mb-1">【攻略重點】</h4>
+                                <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
+                                    <li><span className="font-bold">時間：</span>務必在 08:00 前開始（通常 08:00 開門，部分季節 09:00，請依現場為準，越早越好）。</li>
+                                    <li><span className="font-bold">時長：</span>走走停停拍照約需 1.5 - 2 小時。</li>
+                                    <li><span className="font-bold">亮點：</span>Minceta Tower (最高點)、Bokar Fortress (權力遊戲場景)。</li>
+                                </ul>
+                            </div>
                         </Fragment>
                     ),
-                    tips: ['夜晚的老城非常有氣氛', '石板路滑，穿好走的鞋']
+                    tips: ['一定要帶水、帽子、防曬', '逆時針方向單行道', '門票包含 Lovrijenac 堡壘']
+                },
+                {
+                    id: 'd19-2',
+                    time: '10:00',
+                    title: '早餐 / 咖啡休息',
+                    type: 'food',
+                    iconName: 'Coffee',
+                    subtitle: '城內休息補水',
+                    location: 'Dubrovnik Old Town',
+                    desc: '走完城牆後，身體會感到熱且累。找間舒適的咖啡館（如 Gradska Kavana Arsenal）休息，享用早餐或咖啡，補充水分與體力。',
+                    tips: ['此時遊客大批湧入，剛好在店內休息']
+                },
+                {
+                    id: 'd19-3',
+                    time: '11:00',
+                    title: '老城深度散步',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: 'Rector’s Palace & 大教堂',
+                    location: 'Rector\'s Palace',
+                    mapLink: 'https://maps.app.goo.gl/nR8QxZ5J8k2T8Z4A6',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                在平地上輕鬆探索舊城區的精華建築與巷弄。
+                            </p>
+                            <ul className="text-sm text-gray-600 space-y-2 list-none pl-0">
+                                <li><span className="font-bold">Rector’s Palace (總督宮)：</span>哥德文藝復興式建築，曾是拉古薩共和國的權力中心。</li>
+                                <li><span className="font-bold">Dubrovnik Cathedral (大教堂)：</span>巴洛克式教堂，內部藏有珍貴的聖物。</li>
+                                <li><span className="font-bold">巷弄拍照：</span>隨意走進兩側的階梯巷弄，捕捉光影與生活感。</li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: ['總督宮中庭很美', '巷弄階梯也是權力遊戲場景']
+                },
+                {
+                    id: 'd19-4',
+                    time: '13:00',
+                    title: '午餐',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    subtitle: '避開尖峰時刻',
+                    location: 'Dubrovnik',
+                    desc: '在城內或城外（Pile Gate 附近）享用午餐。建議避開 12:00-13:00 的最尖峰時段，選擇 13:00 後用餐會比較愜意。推薦品嚐亞得里亞海的墨魚燉飯。',
+                    tips: ['推薦墨魚燉飯']
+                },
+                {
+                    id: 'd19-5',
+                    time: '14:30',
+                    title: '下午二選一 (看體力)',
+                    type: 'activity',
+                    iconName: 'Compass',
+                    subtitle: 'Lokrum Island 或 Mount Srđ',
+                    location: 'Lokrum / Mount Srđ',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                根據上午的體力消耗，選擇一項下午活動：
+                            </p>
+                            <ul className="text-sm text-gray-600 space-y-4 list-none pl-0">
+                                <li>
+                                    <span className="font-bold text-gray-700">【A. Lokrum Island (洛克魯姆島)】</span>
+                                    <span className="text-xs text-gray-500 block">從老港口搭船僅需 15 分鐘。島上有孔雀、修道院遺跡、植物園和一個鹹水湖（死海），非常適合游泳或在森林中散步避暑。</span>
+                                </li>
+                                <li>
+                                    <span className="font-bold text-gray-700">【B. Mount Srđ (瑟爾德山)】</span>
+                                    <span className="text-xs text-gray-500 block">搭乘纜車（或自駕）上山。這裡是俯瞰整個杜布羅夫尼克舊城、亞得里亞海與附近島嶼的最佳制高點。傍晚光線最美。</span>
+                                </li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: ['Lokrum 船班頻繁', 'Mount Srđ 纜車票價較高但風景無敵']
+                },
+                {
+                    id: 'd19-6',
+                    time: '19:00',
+                    title: '老城晚餐 & 夜景',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    subtitle: '最後一晚',
+                    location: 'Dubrovnik Old Town',
+                    desc: '享用在西巴爾幹半島的最後一頓晚餐。飯後再次漫步於 Stradun 大道，欣賞夜晚的燈光倒映在石板路上，感受與白天截然不同的神秘氛圍。',
+                    tips: ['享受最後的夜晚', '購買紀念品']
                 }
             ],
             20: [
