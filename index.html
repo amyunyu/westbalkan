@@ -233,7 +233,7 @@
                 11: '克爾卡\n國家公園',
                 12: '赫瓦爾島\n斯普利特',
                 13: '斯普利特\n莫斯塔爾', // 6/5
-                14: '莫斯塔爾\n薩拉熱窩', // 6/6 <--- NEW
+                14: '莫斯塔爾\n薩拉熱窩', // 6/6
                 15: '薩拉熱窩', // 6/7 <--- NEW
                 16: '薩拉熱窩', // 6/8 <--- NEW
                 17: '薩拉熱窩', // 6/9 <--- NEW
@@ -2544,6 +2544,205 @@
                     mapLink: 'https://maps.app.goo.gl/U2hXkK3F8jD3tA9X9',
                     desc: '傍晚前往充滿鄂圖曼風情的 Baščaršija 老城區散步。晚餐可以再次享用 Ćevapi，或試試 Bosnian Pot (Bosanski lonac) 這道當地的燉肉料理。',
                     tips: ['不累、不趕，狀態會很好', '吃 Ćevapi 或 Bosnian Pot', '享受老城區的銅器街夜景']
+                }
+            ],
+            // --- Day 15: Sarajevo 深度歷史日：奧斯曼 × 奧匈 × 戰爭 (6/7) ---
+            15: [
+                {
+                    id: 'd15-1',
+                    time: '08:30',
+                    title: '早餐',
+                    type: 'food',
+                    iconName: 'Coffee',
+                    location: 'Sarajevo Accommodation / Local Cafe',
+                    desc: '享用早餐，準備開始薩拉熱窩的深度歷史之旅。',
+                    tips: ['在住宿或老城區找間有氣氛的咖啡館']
+                },
+                {
+                    id: 'd15-2',
+                    time: '09:00',
+                    title: 'Baščaršija 市集散步',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: '傳統銅器店、咖啡店',
+                    location: 'Baščaršija (Pigeon Square)',
+                    mapLink: 'https://maps.app.goo.gl/U2hXkK3F8jD3tA9X9',
+                    desc: '在老城區的中心——鴿子廣場（Sebilj Fountain）開始一天的探索。清晨的光線柔和，遊客還不多，可以悠閒地逛逛傳統的銅器店和咖啡店，感受鄂圖曼時期的古老氛圍。',
+                    tips: ['早晨的光線漂亮又不擠', '鴿子廣場是最佳拍照點']
+                },
+                {
+                    id: 'd15-3',
+                    time: '09:40',
+                    title: 'Gazi Husrev-beg Mosque',
+                    type: 'sightseeing',
+                    iconName: 'MapPin',
+                    subtitle: '奧斯曼風格經典建築',
+                    location: 'Gazi Husrev-beg Mosque',
+                    mapLink: 'https://maps.app.goo.gl/9k2c8G4H6j5T8Z4A6',
+                    desc: '這座清真寺是巴爾幹地區最重要的伊斯蘭建築之一，由鄂圖曼帝國時期的總督於 16 世紀建造。外部的庭院非常適合拍照，展現了薩拉熱窩的東方氣息。',
+                    tips: ['奧斯曼風格經典建築', '外部庭院很好拍', '進入內部需注意服裝規定']
+                },
+                {
+                    id: 'd15-4',
+                    time: '10:25',
+                    title: 'Latin Bridge（拉丁橋）',
+                    type: 'sightseeing',
+                    iconName: 'MapPin',
+                    subtitle: '第一次世界大戰的起點',
+                    location: 'Latin Bridge',
+                    mapLink: 'https://maps.app.goo.gl/T4Y6v2t7K9jX7pX8A',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                這座橋本身是薩拉熱窩最古老的鄂圖曼橋樑之一，但更著名的是它作為「第一次世界大戰的引爆點」。
+                            </p>
+                            <div className="mb-2">
+                                <h4 className="font-bold text-gray-800 mb-1">【重點】</h4>
+                                <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
+                                    <li><span className="font-bold">遇刺點紀念碑：</span>就在橋頭的對面，標記了 1914 年奧匈帝國王儲斐迪南大公遇刺的地點。</li>
+                                    <li><span className="font-bold">美景：</span>在橋上可拍 Miljacka 河谷的兩岸景色，見證薩拉熱窩從東方走向西方的歷史分界線。</li>
+                                </ul>
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['拍 Miljacka 河美景', '遇刺點紀念碑就在橋頭對面']
+                },
+                {
+                    id: 'd15-5',
+                    time: '11:00',
+                    title: '午餐',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    location: 'Sarajevo Old Town',
+                    desc: '午餐可以換間餐廳，繼續品嚐當地美食。推薦嘗試不同的 Ćevapi 或是傳統的 Bosnian Pot (Bosanski lonac) 燉肉。',
+                    tips: ['可換一間 Ćevapi 或 Bosnian Pot 嘗試']
+                },
+                {
+                    id: 'd15-6',
+                    time: '12:00',
+                    title: '前往 Tunnel of Hope（希望隧道博物館）',
+                    type: 'transport',
+                    iconName: 'Car',
+                    subtitle: '開車前往',
+                    location: 'Tunnel of Hope Museum',
+                    mapLink: 'https://maps.app.goo.gl/N8Vj3D7E9k2T8Z4A6',
+                    desc: '開車前往位於薩拉熱窩機場附近的希望隧道。這是波士尼亞戰爭期間（1992-1995）修建的一條秘密地下隧道，是薩拉熱窩被圍困時的唯一生命通道。',
+                    tips: ['Tunnel of Hope 是全 Sarajevo 最必去景點', '需開車，建議使用導航']
+                },
+                {
+                    id: 'd15-7',
+                    time: '12:30',
+                    title: 'Tunnel of Hope 參觀',
+                    type: 'activity',
+                    iconName: 'Compass',
+                    subtitle: '戰爭中唯一生命通道',
+                    location: 'Tunnel of Hope Museum',
+                    desc: '參觀博物館，了解波黑戰爭圍城期間的艱辛歷史。現場仍保留一小段原隧道供遊客體驗。展覽內容非常震撼，是感受城市歷史傷痕最直接的方式。',
+                    tips: ['展覽震撼，建議多留時間細看', '感受薩拉熱窩的堅韌精神']
+                },
+                {
+                    id: 'd15-8',
+                    time: '13:45',
+                    title: '回市區 or 回飯店休息',
+                    type: 'transport',
+                    iconName: 'Car',
+                    location: 'Sarajevo Old Town',
+                    desc: '參觀完畢後，開車返回市區或住宿地點，為下午的自由時間和傍晚的活動儲備體力。',
+                    tips: []
+                },
+                {
+                    id: 'd15-9',
+                    time: '14:15',
+                    title: '自由時間（兩個選項）',
+                    type: 'relax',
+                    iconName: 'Coffee',
+                    subtitle: '黃堡散步 / 老城咖啡甜點',
+                    location: 'Old Town / Yellow Bastion',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                享受悠閒的午後時光，您可以選擇：
+                            </p>
+                            <ul className="text-sm text-gray-600 space-y-3 list-none pl-0">
+                                <li>
+                                    <span className="font-bold text-gray-700">【選項一：黃堡 (Yellow Bastion) 散步】</span>
+                                    <MapLink url="https://maps.app.goo.gl/3A7Fk4A6H7j3tH9X9" />
+                                    <span className="text-xs text-gray-500 block">提早到黃堡（Vijećnica 附近）散步，拍下薩拉熱窩的城市景色，為傍晚的夕陽做探路。</span>
+                                </li>
+                                <li>
+                                    <span className="font-bold text-gray-700">【選項二：老城區休息】</span>
+                                    <span className="text-xs text-gray-500 block">在 Baščaršija 找間傳統咖啡店，體驗正宗的波斯咖啡 (Bosnian coffee) 或享用當地甜點。</span>
+                                </li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: ['波斯咖啡儀式感很強，值得嘗試']
+                },
+                {
+                    id: 'd15-10',
+                    time: '16:00',
+                    title: '奧匈帝國風街區漫步',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: 'Ferhadija 街 → Eternal Flame',
+                    location: 'Ferhadija Street',
+                    mapLink: 'https://maps.app.goo.gl/G4g9T7E9k2T8Z4A6',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                沿著 Ferhadija 街前進，從鄂圖曼風格的 Baščaršija 過渡到奧匈帝國時期的西式建築。這條街被稱為「薩拉熱窩的歐洲耶路撒冷分界線」，展現了這座城市的第二種面貌。
+                            </p>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                最終抵達 **Eternal Flame (長明火)**，紀念二戰解放薩拉熱窩的犧牲者。
+                            </p>
+                        </Fragment>
+                    ),
+                    tips: ['感受「文化分界線」的建築風格差異', '長明火附近適合拍奧匈建築']
+                },
+                {
+                    id: 'd15-11',
+                    time: '17:00',
+                    title: '晚餐（推薦：Dveri / Avlija）',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    location: 'Sarajevo',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                在薩拉熱窩享用晚餐，為接下來的黃堡夕陽做準備。
+                            </p>
+                            <h4 className="font-bold text-gray-800 mb-2">【餐廳推薦】</h4>
+                            <ul className="list-none pl-0 space-y-3">
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Dveri
+                                        <MapLink url="https://maps.app.goo.gl/j4Fh6tD2G1xR6N8" />
+                                    </div>
+                                    <p className="text-xs text-gray-600">薩拉熱窩最著名的隱藏式傳統餐廳，氛圍親密浪漫，食物精緻（務必預訂）。</p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Avlija
+                                        <MapLink url="https://maps.app.goo.gl/A7Fj5tD2G1xR6N8" />
+                                    </div>
+                                    <p className="text-xs text-gray-600">充滿異國風情的室外庭院餐廳，提供優質的傳統和國際美食。</p>
+                                </li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: ['Dveri 熱門，建議提早預訂']
+                },
+                {
+                    id: 'd15-12',
+                    time: '18:30',
+                    title: 'Yellow Bastion 夕陽（強烈推薦）',
+                    type: 'sightseeing',
+                    iconName: 'Sun',
+                    subtitle: '最美黃昏看點',
+                    location: 'Yellow Bastion (Žuta tabija)',
+                    mapLink: 'https://maps.app.goo.gl/3A7Fk4A6H7j3tH9X9',
+                    desc: '步行或搭車前往黃堡，這是薩拉熱窩欣賞日落和城市全景的最佳地點。尤其在黃昏時分，陽光將整個城市鋪上一層金色，景色壯觀。這裡也是當地人聚集、喝咖啡放鬆的熱門地。',
+                    tips: ['可拍整個城市鋪滿紅色屋頂', '日落時間較晚，注意保暖']
                 }
             ],
             20: [
