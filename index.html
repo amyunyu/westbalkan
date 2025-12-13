@@ -553,13 +553,29 @@
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                <span className="font-bold text-gray-800">【搭乘登山纜車 (Funicular)】</span><br/>
-                                連接下城區與上城區，被譽為世界上最短的公共交通纜車之一。纜車站就在市場旁東南側，下坡步行約3分鐘可到。
+                                這是札格瑞布（Zagreb）必訪的兩大地標，結合了城市交通工具和古老防禦工事，是俯瞰城市景色的絕佳地點。
                             </p>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                <span className="font-bold text-gray-800">【洛特爾薩克塔 (Lotrščak Tower)】</span><br/>
-                                位於纜車上站出口。建於13世紀，原為防禦工事，名為「盜賊之鐘」，古時每晚敲鐘提醒城外居民回家。
-                            </p>
+
+                            <div className="mb-6">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【搭乘登山纜車 (Funicular)】
+                                    <MapLink url="https://maps.app.goo.gl/QGiFLBaw1pf9CkUj9" />
+                                </h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    連接下城區與上城區，被譽為世界上最短的公共交通纜車之一。纜車站就在市場旁東南側，下坡步行約3分鐘可到。
+                                </p>
+                            </div>
+
+                            <div className="mb-6">
+                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                    【洛特爾薩克塔 (Lotrščak Tower)】
+                                    <MapLink url="https://maps.app.goo.gl/vikjFtN5odUFcgZy9" />
+                                </h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                    位於纜車上站出口。建於13世紀，原為防禦工事，名為「盜賊之鐘」，古時每晚敲鐘提醒城外居民回家。
+                                </p>
+                            </div>
+
                             <div className="p-4 bg-gray-50 rounded-xl border border-gray-100 mb-2">
                                 <h4 className="font-bold text-gray-700 mb-2 flex items-center gap-2">
                                     <Icon name="Clock" size={16} /> 12:00 正午大炮
@@ -593,8 +609,9 @@
                     title: '前往盧比安納 & 入住',
                     type: 'transport',
                     iconName: 'Car',
-                    subtitle: '車程1時40分 • AB Ljubljana Apartment',
-                    location: 'Ljubljana, Slovenia',
+                    subtitle: '車程1時40分 • Romantic JUMP Studio overlooking river, free parking',
+                    location: 'Romantic JUMP Studio overlooking river, free parking',
+                    mapLink: 'https://maps.app.goo.gl/MJwSKMkRag86adaF8',
                     desc: (
                         <Fragment>
                             <div className="mb-6">
@@ -607,8 +624,8 @@
                             </div>
                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【AB Ljubljana - Prince Filip Apartment】
-                                    <MapLink url="https://maps.app.goo.gl/ZBAMcUDtb9iMhMMs7" />
+                                    Romantic JUMP Studio overlooking river free parking
+                                    <MapLink url="https://maps.app.goo.gl/MJwSKMkRag86adaF8" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
                                     預計 16:30 抵達住宿地點。辦理入住手續，放下行李並稍作休息，為傍晚的城市漫遊養精蓄銳。
@@ -691,9 +708,32 @@
                     title: '晚餐',
                     type: 'food',
                     iconName: 'Utensils',
-                    subtitle: '自炊',
+                    subtitle: '自炊 / 附近超市採買',
                     location: 'Ljubljana Accommodation',
-                    desc: '享受自炊晚餐的樂趣。可以在超市購買當地食材，簡單烹調美味的一餐，享受像當地人一樣的生活步調。',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                享受自炊晚餐的樂趣。可以在附近超市購買當地食材，簡單烹調美味的一餐，享受像當地人一樣的生活步調。
+                            </p>
+                            <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+                                附近超市建議：
+                            </h4>
+                            <ul className="list-none pl-0 space-y-3">
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Mercator (較大間)
+                                        <MapLink url="https://maps.app.goo.gl/oyyStkCapt99reQ7A" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Lidl (平價)
+                                        <MapLink url="https://maps.app.goo.gl/7tiE46DfzxKKZa8G9" />
+                                    </div>
+                                </li>
+                            </ul>
+                        </Fragment>
+                    ),
                     tips: ['超市可買到斯洛維尼亞當地食材', '享受放鬆的晚餐時光']
                 },
                 {
@@ -709,6 +749,18 @@
                 }
             ],
             4: [
+                {
+                    id: 'd4-0',
+                    time: '08:30',
+                    title: '盧比安納早餐',
+                    type: 'food',
+                    iconName: 'Coffee',
+                    subtitle: 'Cafe Čokl',
+                    location: 'Cafe Čokl, Ljubljana',
+                    mapLink: 'https://maps.app.goo.gl/gUkv3T67itKUoSY37',
+                    desc: '在 Cafe Čokl 享受美好的早晨時光，這間店提供高品質的咖啡，為一天的城堡與舊城區探索行程補充能量。',
+                    tips: ['享受一杯斯洛維尼亞咖啡', '搭配當地糕點']
+                },
                 {
                     id: 'd4-1',
                     time: '09:00',
@@ -734,7 +786,10 @@
                                         城堡最高點，提供 360 度絕佳視野，天氣好時可遠眺朱利安阿爾卑斯山，是拍攝城市紅瓦屋頂的最佳位置。
                                     </li>
                                     <li>
-                                        <span className="font-bold text-gray-700">【木偶博物館 (Museum of Puppetry)】</span><br/>
+                                        <span className="font-bold text-gray-700 flex items-center">
+                                            【木偶博物館 (Museum of Puppetry)】
+                                            <MapLink url="https://maps.app.goo.gl/qjgHxATvNW7D85wQ7" />
+                                        </span><br/>
                                         斯洛維尼亞擁有豐富的木偶戲傳統，這裡展示了各種有趣的木偶與互動裝置。
                                     </li>
                                     <li>
@@ -855,13 +910,85 @@
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 依您的喜好選擇一個參觀：
                             </p>
-                            <ul className="list-none pl-0 space-y-4">
+                            <ul className="list-none pl-0 space-y-6">
                                 <li>
-                                    <div className="font-bold text-gray-800 flex items-center mb-1">
+                                    <div className="font-bold text-gray-800 flex items-center mb-2">
                                         喜歡畫作 → 國家美術館
                                         <MapLink url="https://www.google.com/maps/search/?api=1&query=National+Gallery+of+Slovenia" />
                                     </div>
-                                    <p className="text-sm text-gray-600">National Gallery，收藏豐富的斯洛維尼亞與歐洲藝術畫作。</p>
+                                    <p className="text-sm text-gray-600 mb-2">National Gallery，收藏豐富的斯洛維尼亞與歐洲藝術畫作。</p>
+                                    
+                                    {/* 新增的詳細畫作清單 */}
+                                    <div className="bg-gray-50 rounded-lg p-3 border border-gray-100">
+                                        <h5 className="font-bold text-gray-700 text-sm mb-2 border-b pb-1 border-gray-200">國寶等級（一定要看）</h5>
+                                        <ul className="text-xs text-gray-600 space-y-2 mb-3 pl-1">
+                                            <li>
+                                                <span className="font-bold block text-gray-800">① Ivana Kobilca｜《夏日 Poletje》</span>
+                                                斯洛維尼亞最重要的畫<br/>
+                                                <span className="text-gray-500">👀 看重點：自然光、女性日常、寧靜感</span>
+                                            </li>
+                                            <li>
+                                                <span className="font-bold block text-gray-800">② Ivana Kobilca｜《咖啡女士 Kofetarica》</span>
+                                                國民記憶等級<br/>
+                                                <span className="text-gray-500">👀 看重點：普通生活被畫成「值得被記住」</span>
+                                            </li>
+                                        </ul>
+
+                                        <h5 className="font-bold text-gray-700 text-sm mb-2 border-b pb-1 border-gray-200">斯洛維尼亞印象派核心</h5>
+                                        <ul className="text-xs text-gray-600 space-y-2 mb-3 pl-1">
+                                            <li>
+                                                <span className="font-bold block text-gray-800">③ Ivan Grohar｜《播種者 Sejalec》</span>
+                                                出現在鈔票上的畫<br/>
+                                                <span className="text-gray-500">看重點：農村、勞動、國族象徵</span>
+                                            </li>
+                                            <li>
+                                                <span className="font-bold block text-gray-800">④ Rihard Jakopič｜風景畫</span>
+                                                本地印象派代表<br/>
+                                                <span className="text-gray-500">看重點：顏色層次、空氣感</span>
+                                            </li>
+                                            <li>
+                                                <span className="font-bold block text-gray-800">⑤ Matej Sternen｜室內／人物畫</span>
+                                                光影高手<br/>
+                                                <span className="text-gray-500">看重點：室內光線＋人物安靜感</span>
+                                            </li>
+                                        </ul>
+
+                                        <h5 className="font-bold text-gray-700 text-sm mb-2 border-b pb-1 border-gray-200">🕊 戰爭與存在（氣氛會變）</h5>
+                                        <ul className="text-xs text-gray-600 space-y-2 mb-3 pl-1">
+                                            <li>
+                                                <span className="font-bold block text-gray-800">⑥ Zoran Mušič｜戰後／達豪集中營系列</span>
+                                                國際級藝術家<br/>
+                                                <span className="text-gray-500">這區情緒比較重，慢慢看</span>
+                                            </li>
+                                        </ul>
+
+                                        <h5 className="font-bold text-gray-700 text-sm mb-2 border-b pb-1 border-gray-200">中世紀與宗教藝術（地區連結）</h5>
+                                        <ul className="text-xs text-gray-600 space-y-2 mb-3 pl-1">
+                                            <li>
+                                                <span className="font-bold block text-gray-800">⑦ 哥德式祭壇畫（14–15 世紀）</span>
+                                                阿爾卑斯地區特色<br/>
+                                                <span className="text-gray-500">看重點：金色背景、木板畫</span>
+                                            </li>
+                                            <li>
+                                                <span className="font-bold block text-gray-800">⑧ 巴洛克宗教畫</span>
+                                                奧地利／義大利影響<br/>
+                                                <span className="text-gray-500">看重點：戲劇性、光影對比</span>
+                                            </li>
+                                        </ul>
+
+                                        <h5 className="font-bold text-gray-700 text-sm mb-2 border-b pb-1 border-gray-200">不要錯過的補充</h5>
+                                        <ul className="text-xs text-gray-600 space-y-2 pl-1">
+                                            <li>
+                                                <span className="font-bold block text-gray-800">⑨ 斯洛維尼亞貴族肖像畫</span>
+                                                看社會階級與服飾<br/>
+                                                <span className="text-gray-500">看重點：表情、衣料細節</span>
+                                            </li>
+                                            <li>
+                                                <span className="font-bold block text-gray-800">⑩ 19 世紀風景畫（非印象派）</span>
+                                                從「記錄」走向「表現」的轉折
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </li>
                                 <li>
                                     <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
@@ -894,8 +1021,8 @@
                             </p>
                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【Café Čolnarna Tivoli】
-                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Colnarna+Tivoli" />
+                                    【moderna. - coffee&cocktails -】
+                                    <MapLink url="https://maps.app.goo.gl/MdnwJQGRN9Ph8Pvq6" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
                                     位於池塘邊的可愛咖啡館，很適合在這裡喝杯飲料休息，享受愜意的午後時光。
@@ -3569,7 +3696,7 @@
 
         const App = () => {
             const [activeTab, setActiveTab] = useState('itinerary'); 
-            const [selectedDateIdx, setSelectedDateIdx] = useState(0); 
+            const [selectedDateIdx, setSelectedDateIdx] = useState(2); // Start on Day 3 for the user
             const [viewingItem, setViewingItem] = useState(null); 
             const scrollRef = useRef(null);
 
