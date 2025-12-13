@@ -333,7 +333,7 @@
                 },
                 {
                     id: 'd2-4',
-                    time: '15:00',
+                    time: '15:30', // <--- UPDATED
                     title: '機場取車',
                     type: 'transport',
                     iconName: 'Car',
@@ -345,13 +345,13 @@
                 },
                 {
                     id: 'd2-5',
-                    time: '15:30',
-                    title: 'Olive Tree City Corner',
+                    time: '16:00', // <--- UPDATED
+                    title: 'Nino Luxury Apartment, Zagreb', // <--- UPDATED
                     type: 'hotel',
                     iconName: 'BedDouble',
                     subtitle: 'Booking/check in',
-                    location: 'Olive Tree City Corner, Zagreb',
-                    mapLink: 'https://maps.app.goo.gl/T6FTVhCTjEoCbxdu6',
+                    location: 'Nino Luxury Apartment, Zagreb', // <--- UPDATED
+                    mapLink: 'https://maps.app.goo.gl/ENR5mUPoxAjySoWV7', // <--- UPDATED
                     desc: '抵達今日住宿地點辦理入住手續，稍作休息。',
                     tips: ['確認停車位置', '詢問房東當地推薦']
                 },
@@ -414,59 +414,53 @@
                     type: 'food',
                     iconName: 'Utensils',
                     location: 'Zagreb Old Town',
-                    desc: (
+                    desc: ( // <--- UPDATED
                         <Fragment>
-                             <h4 className="font-bold text-gray-800 mb-2">【晚餐選項：克羅埃西亞經典】</h4>
-                            <div className="mb-6">
-                                <h5 className="font-bold text-gray-700 mb-1 flex items-center">
-                                    ▪ La Štruk
-                                    <MapLink url="https://maps.app.goo.gl/RmeouBqAk8NJV3Cf6" />
-                                </h5>
-                                <p className="text-sm text-gray-600 leading-relaxed mb-1">
-                                    舊城（Stone Gate 附近）。主打克羅埃西亞代表料理「Štrukli」。
-                                </p>
-                                <p className="text-xs font-bold text-gray-600 mb-1">【為什麼推】</p>
-                                <ul className="text-xs text-gray-500 space-y-1 list-disc pl-4">
-                                    <li>Štrukli 是札格瑞布必吃（起司麵皮，焗/煮都有）。</li>
-                                    <li>份量剛好、口味不重，適合飛行＋第一晚。</li>
-                                    <li>氣氛溫暖，有「到克羅埃西亞了」的感覺。</li>
-                                </ul>
-                                <p className="text-xs font-bold text-gray-600 mt-2 mb-1">【推薦點】</p>
-                                <ul className="text-xs text-gray-500 space-y-1 list-disc pl-4">
-                                    <li>焗烤 Štrukli（經典）</li>
-                                    <li>野菇或菠菜版本</li>
-                                    <li>配一杯白酒</li>
-                                    <li>非常適合你這天 16:30 舊城慢遊後直接吃。</li>
-                                </ul>
-                            </div>
-                            <div className="mb-6">
-                                <h5 className="font-bold text-gray-700 mb-1 flex items-center">
-                                    ▪ Vinodol
-                                    <MapLink url="https://maps.app.goo.gl/TQR1xpNjdYrsJ3a3A" />
-                                </h5>
-                                <p className="text-sm text-gray-600 leading-relaxed mb-1">
-                                    舊城外圍（走路 10–15 分）。傳統高級克羅埃西亞料理。
-                                </p>
-                                <p className="text-xs font-bold text-gray-600 mb-1">【為什麼推】</p>
-                                <ul className="text-xs text-gray-500 space-y-1 list-disc pl-4">
-                                    <li>在地人也會吃的老字號。</li>
-                                    <li>料理偏正式，但不會太貴。</li>
-                                    <li>適合想「好好坐下來吃一頓」。</li>
-                                </ul>
-                                <p className="text-xs font-bold text-gray-600 mt-2 mb-1">【推薦點】</p>
-                                <ul className="text-xs text-gray-500 space-y-1 list-disc pl-4">
-                                    <li>牛肉燉菜</li>
-                                    <li>黑松露義大利麵（季節性）</li>
-                                    <li>紅酒選擇好</li>
-                                </ul>
-                            </div>
-                            <h4 className="font-bold text-gray-800 mb-2">【吃完後的小建議】</h4>
-                            <p className="text-sm text-gray-600 leading-relaxed">
-                                沿 Tkalčićeva 街 散步 → 喝杯咖啡或冰淇淋。或慢慢走回住宿，調整時差。
+                             <h4 className="font-bold text-gray-800 mb-2">【札格瑞布晚餐選項】</h4>
+                            <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                                札格瑞布市區提供多樣化的克羅埃西亞傳統料理與現代街頭美食，以下為推薦清單：
                             </p>
+                            <ul className="space-y-4">
+                                <li>
+                                    <div className="font-bold text-gray-700 flex items-center">
+                                        La Štruk
+                                        <MapLink url="https://maps.app.goo.gl/XxbrHj2KArnY891H8" />
+                                    </div>
+                                    <p className="text-xs text-gray-500 mt-1">
+                                        必嚐的克羅埃西亞經典甜點/鹹點 Štrukli（起司麵皮）。
+                                    </p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-gray-700 flex items-center">
+                                        Vinodol
+                                        <MapLink url="https://maps.app.goo.gl/R9x4Ddx2QHHA1rv86" />
+                                    </div>
+                                    <p className="text-xs text-gray-500 mt-1">
+                                        傳統高級克羅埃西亞料理，適合想要「好好坐下來吃一頓」的場合。
+                                    </p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-gray-700 flex items-center">
+                                        HERITAGE - Croatian Street Food & Shop
+                                        <MapLink url="https://maps.app.goo.gl/JuJgkjrKjtvWerqN7" />
+                                    </div>
+                                    <p className="text-xs text-gray-500 mt-1">
+                                        提供精緻的克羅埃西亞街頭美食，可快速享用。
+                                    </p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-gray-700 flex items-center">
+                                        Batak Tkalčićeva
+                                        <MapLink url="https://maps.app.goo.gl/v9SbKvGMc3cLFtTW9" />
+                                    </div>
+                                    <p className="text-xs text-gray-500 mt-1">
+                                        主打傳統烤肉 (Grill)，份量充足，口味濃郁。
+                                    </p>
+                                </li>
+                            </ul>
                         </Fragment>
                     ),
-                    tips: ['Štrukli 適合當晚輕食', 'Vinodol 需預訂', '飯後慢慢走回住宿調整時差']
+                    tips: ['晚餐後可沿 Tkalčićeva 街散步', 'Štrukli 適合當晚輕食', 'Vinodol 需預訂']
                 }
             ],
             3: [
@@ -912,7 +906,7 @@
                             </p>
                             <ul className="list-none pl-0 space-y-6">
                                 <li>
-                                    <div className="font-bold text-gray-800 flex items-center mb-2">
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-2">
                                         喜歡畫作 → 國家美術館
                                         <MapLink url="https://www.google.com/maps/search/?api=1&query=National+Gallery+of+Slovenia" />
                                     </div>
@@ -1915,6 +1909,7 @@
                     iconName: 'Camera',
                     subtitle: '秘境瀑布 & 午餐',
                     location: 'Kotli',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Kotli',
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
