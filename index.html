@@ -1150,7 +1150,7 @@
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                回住宿拿行李後，開車前往斯洛維尼亞最夢幻的景點——布萊德湖 (Lake Bled)。
+                                抵達布萊德後，先享用一頓美味的湖景午餐。
                             </p>
                             <div className="p-3 bg-gray-50 rounded-lg border border-gray-100 text-sm text-gray-600">
                                 <span className="font-bold">🚗 駕駛提醒：</span> 沿著 A2 高速公路行駛，路況通常良好。接近布萊德時可能會有些許車潮，請放慢速度欣賞沿途阿爾卑斯山腳下的美景。
@@ -2208,7 +2208,7 @@
                                 </li>
                                 <li>
                                     <div className="font-bold text-gray-700 mb-1">4. 主街 Široka Ulica（卡拉街）(10 min)</div>
-                                    <p className="text-xs text-gray-500">早上 8-9 點這裡還沒開始擠人，可以邊走邊看咖啡店、糕點店開始營業。</p>
+                                    <p className="text-xs text-gray-500時隔：">早上 8-9 點這裡還沒開始擠人，可以邊走邊看咖啡店、糕點店開始營業。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-gray-700 mb-1">5. 羅馬廣場 Roman Forum (10 min)</div>
@@ -2313,26 +2313,36 @@
                 {
                     id: 'd11-4',
                     time: '17:00',
-                    title: '前往斯普利特',
+                    title: '前往斯普利特St.Lucija',
                     type: 'transport',
                     iconName: 'Car',
                     subtitle: '車程約 1 小時',
-                    location: 'Split, Croatia',
-                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Split+Old+Town',
+                    location: 'St.Lucija, Split',
+                    mapLink: 'https://maps.app.goo.gl/Zt7icotwEoGUxeVB9',
                     desc: '離開國家公園，前往達爾馬提亞海岸的最大城市——斯普利特 (Split)。辦理入住手續並稍作休息。',
                     tips: ['注意斯普利特舊城區停車規定']
                 },
                 {
                     id: 'd11-5',
                     time: '19:00',
-                    title: '初訪斯普利特舊城',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    subtitle: 'Riva 海濱晚餐',
-                    location: 'Riva Promenade',
-                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Riva+Split',
-                    desc: '晚上不需要走太多路，輕鬆逛逛舊城外圍與熱鬧的 Riva 海濱大道。在海邊挑選一間餐廳享用晚餐，讓自己進入 Split 的度假氛圍。',
-                    tips: ['儲備體力迎接明天的行程']
+                    title: '初訪斯普利特舊城：散步',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: 'Riva 海濱 • 舊城巷弄',
+                    location: 'Split Old Town',
+                    mapLink: 'https://maps.app.goo.gl/oGDoMPrWPYfUUM2z5',
+                    desc: (
+                        <Fragment>
+                            <div className="flex items-center gap-1 mb-4">
+                                <span className="font-bold text-gray-800">散步路線</span>
+                                <MapLink url="https://maps.app.goo.gl/oGDoMPrWPYfUUM2z5" />
+                            </div>
+                            <p className="text-gray-600 leading-relaxed text-justify">
+                                Riva海濱散步，黃昏時分面向舊城、背對港口拍照，從銅門進入戴克里先宮，石牆、拱門、老屋直接長在宮殿裡；Peristyle 廣場，整個舊城的靈魂，晚上常有街頭音樂、小型演出；聖多米努斯主教座堂，抬頭看鐘樓夜燈就很美；巷弄慢走，曬衣服的石牆、小酒吧藏在拱門下、羅馬柱被包在咖啡店裡。
+                            </p>
+                        </Fragment>
+                    ),
+                    tips: ['儲備體力迎接明天的行程', '舊城石板路較滑，建議穿好走的鞋']
                 }
             ],
             12: [
@@ -2562,21 +2572,21 @@
                                         Hindin Han
                                         <MapLink url="https://maps.app.goo.gl/3w5Ua45T1j4q2xHw8" />
                                     </div>
-                                    <p className="text-xs text-gray-600">最推薦，有河景座位且好拍照，食物傳統美味。</p>
+                                    <p className="text-xs text-gray-500 mt-1">最推薦，有河景座位且好拍照，食物傳統美味。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                         Šadrvan
                                         <MapLink url="https://maps.app.goo.com/Wc2k5P5wS4nK1vQW9" />
                                     </div>
-                                    <p className="text-xs text-gray-600">位於舊城中心，裝潢充滿當地特色。</p>
+                                    <p className="text-xs text-gray-500 mt-1">位於舊城中心，裝潢充滿當地特色。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                         Urban Grill
                                         <MapLink url="https://maps.app.goo.gl/FkG9w3xZgR2x2pXq9" />
                                     </div>
-                                    <p className="text-xs text-gray-600">提供西式烤肉和牛排，適合喜歡大口吃肉的人。</p>
+                                    <p className="text-xs text-gray-500 mt-1">提供西式烤肉和牛排，適合喜歡大口吃肉的人。</p>
                                 </li>
                             </ul>
                         </Fragment>
@@ -2614,7 +2624,7 @@
                     type: 'food',
                     iconName: 'Coffee',
                     location: 'Mostar Accommodation',
-                    desc: '在莫斯塔爾享用早餐後辦理退房手續。確保所有行李已放上車，並準備好足夠的水分，為接下來的波士尼亞一日遊和長途車程做準備。',
+                    desc: '在莫斯塔爾享用早餐後辦理退房手續。確保所有行李已負上車，並準備好足夠的水分，為接下來的波士尼亞一日遊和長途車程做準備。',
                     tips: ['早餐後退房', '行李放車上', '每人至少準備 1 瓶水', '油量確認（半桶以上即可）']
                 },
                 {
@@ -3719,7 +3729,7 @@
 
         const App = () => {
             const [activeTab, setActiveTab] = useState('itinerary'); 
-            const [selectedDateIdx, setSelectedDateIdx] = useState(2); // Start on Day 3 for the user
+            const [selectedDateIdx, setSelectedDateIdx] = useState(10); // Start on Day 11
             const [viewingItem, setViewingItem] = useState(null); 
             const scrollRef = useRef(null);
 
