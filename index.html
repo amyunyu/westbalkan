@@ -2051,7 +2051,7 @@
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Plitvice+Lower+Lakes',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式：">
                                 抵達 P3 碼頭後進入下湖區，這裡是全園區最震撼的「大小瀑布密集區」。木棧道緊貼著水邊，超級好拍。
                             </p>
                             <div className="mb-4 mt-4">
@@ -2377,34 +2377,79 @@
                     tips: ['建議事先查好船班並購票', '確認回程時間']
                 },
                 {
-                    id: 'd12-2',
+                    id: 'd12-fortress',
                     time: '09:00',
-                    title: '赫瓦爾島一日遊',
+                    title: '西班牙堡壘',
                     type: 'sightseeing',
-                    iconName: 'Sun',
-                    subtitle: 'Hvar Town & Fortress',
-                    location: 'Hvar, Croatia',
-                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Hvar+Town',
+                    iconName: 'Compass',
+                    subtitle: 'Španjola Fortress, Hvar',
+                    location: 'Španjola Fortress, Hvar',
+                    mapLink: 'https://maps.app.goo.gl/qEPxLmYBqdQge8HB7',
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                在赫瓦爾島享受陽光與地中海風情。
+                                登上西班牙堡壘 (Španjola Fortress)，這裡是俯瞰赫瓦爾港口與帕克林斯基群島 (Pakleni Islands) 的最佳制高點。
                             </p>
-                            <ul className="text-sm text-gray-600 space-y-3 list-disc pl-4">
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                從舊城區沿著蜿蜒的小路向上爬，沿途可以看見許多仙人掌和地中海植物，抵達頂部後，亞得里亞海的蔚藍景色將一覽無遺。
+                            </p>
+                        </Fragment>
+                    ),
+                    tips: ['建議早點出發避開豔陽', '堡壘視野極佳必去']
+                },
+                {
+                    id: 'd12-square',
+                    time: '10:30',
+                    title: '前往史特芬亞廣場',
+                    type: 'sightseeing',
+                    iconName: 'Camera',
+                    subtitle: 'St. Stephen\'s Square/Katedrala sv. Stjepana',
+                    location: 'St. Stephen\'s Square, Hvar',
+                    mapLink: 'https://maps.app.goo.gl/wE2oj7WQe1oAP1eu5',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                來到赫瓦爾舊城的核心——史特芬亞廣場。這是達爾馬提亞地區面積最大且最美麗的古老廣場之一。
+                            </p>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                廣場盡頭是聖史特芬大教堂 (Cathedral of St. Stephen)，其細緻的鐘樓是島上的地標建築。您可以在此悠閒散步，感受這座威尼斯風格古城的優雅氛圍。
+                            </p>
+                        </Fragment>
+                    ),
+                    tips: ['大教堂內部莊嚴肅穆', '廣場周邊巷弄非常適合拍照']
+                },
+                {
+                    id: 'd12-lunch',
+                    time: '12:00',
+                    title: '赫瓦爾島午餐',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    location: 'Hvar Town',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                在赫瓦爾島享受陽光與地中海風情午餐。
+                            </p>
+                            <h4 className="font-bold text-gray-800 mb-3">【推薦餐廳】</h4>
+                            <ul className="list-none pl-0 space-y-4">
                                 <li>
-                                    <span className="font-bold">史特芬亞廣場 (St. Stephen's Square)：</span>達爾馬提亞地區最大的廣場之一。
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Dalmatino
+                                        <MapLink url="https://maps.app.goo.gl/1zt9sZKo2FYrfL4z8" />
+                                    </div>
+                                    <p className="text-xs text-gray-500">極受歡迎的高評價餐廳，提供高品質的在地創意海鮮料理。</p>
                                 </li>
                                 <li>
-                                    <span className="font-bold">西班牙堡壘 (Spanish Fortress)：</span>
-                                    <span className="block text-xs mt-1 text-gray-500">建議登頂，俯瞰赫瓦爾港口與帕克林斯基群島 (Pakleni Islands) 的經典絕美景色，是必拍畫面。</span>
-                                </li>
-                                <li>
-                                    <span className="font-bold">悠閒午餐：</span>在巷弄間尋找海鮮餐廳，享受島嶼美食。
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Fig Hvar
+                                        <MapLink url="https://maps.app.goo.gl/wgn6Jkkro85qiPyw6" />
+                                    </div>
+                                    <p className="text-xs text-gray-500">主打新鮮、現代且充滿驚喜的創意異國料理。</p>
                                 </li>
                             </ul>
                         </Fragment>
                     ),
-                    tips: ['記得防曬', '堡壘視野極佳必去']
+                    tips: ['熱門餐廳建議先預約或早點去']
                 },
                 {
                     id: 'd12-3',
@@ -3579,7 +3624,7 @@
                     iconName: 'Info',
                     subtitle: '轉機時間約 6 小時',
                     location: 'Dubai International Airport (DXB)',
-                    desc: '航班抵達杜拜 (DXB) 後，轉機時間約 6 小時（21:50 抵達 → 03:45 起飛）。杜拜機場設施完善，建議不用出境，找安靜區域休息或利用機場設施。從 DBV 到 DXB 這段是深夜航班，請盡量休息補眠。',
+                    desc: '航班抵拜 (DXB) 後，轉機時間約 6 小時（21:50 抵達 → 03:45 起飛）。杜拜機場設施完善，建議不用出境，找安靜區域休息或利用機場設施。從 DBV 到 DXB 這段是深夜航班，請盡量休息補眠。',
                     tips: ['不用出境', '找安靜區域休息', 'DBV–DXB 這段盡量睡']
                 },
                 {
@@ -3747,7 +3792,7 @@
 
         const App = () => {
             const [activeTab, setActiveTab] = useState('itinerary'); 
-            const [selectedDateIdx, setSelectedDateIdx] = useState(10); // Start on Day 11
+            const [selectedDateIdx, setSelectedDateIdx] = useState(11); // Start on Day 12
             const [viewingItem, setViewingItem] = useState(null); 
             const scrollRef = useRef(null);
 
