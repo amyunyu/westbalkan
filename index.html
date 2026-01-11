@@ -83,7 +83,7 @@
                     <Fragment>
                         <path d="M2 12h5"/>
                         <path d="M13 5.74V3a2 2 0 0 0-3.56-1.47l-1.56 2.08"/>
-                        <path x1="16" x2="12" h6=""/>
+                        <path d="M16 12h6"/>
                         <path d="M13 18.26V21a2 2 0 0 1-3.56 1.47l-1.56-2.08"/>
                         <path d="M20 14h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2"/>
                         <path d="M7 17a2 2 0 0 0 1.5-3.5L16 6l4 4-7.5 7.5A2 2 0 0 0 7 17Z"/>
@@ -273,7 +273,7 @@
         );
 
         const itineraryData = {
-            0: [ // New D0 (Old D1)
+            0: [
                 {
                     id: 'd1-1',
                     time: '18:30',
@@ -296,7 +296,7 @@
                     tips: ['機上保濕', '調整手錶時差']
                 }
             ],
-            1: [ // New D1 (Old D2)
+            1: [
                 {
                     id: 'd2-1',
                     time: '04:35',
@@ -463,7 +463,7 @@
                     tips: ['晚餐後可沿 Tkalčićeva 街散步', 'Štrukli 適合當晚輕食', 'Vinodol 需預訂']
                 }
             ],
-            2: [ // New D2 (Old D3)
+            2: [
                 {
                     id: 'd3-1',
                     time: '09:00',
@@ -531,7 +531,7 @@
                     tips: [
                         '市集部分攤販僅收現金，建議帶小額歐元',
                         '水果可請店家「幫你挑一盒好吃的」',
-                        '推薦邊走邊吃：葡萄、櫻桃、無花果',
+                        '推薦邊走邊吃：葡萄、櫻桃、無花景',
                         'Dolac Market 很安全，但旅遊區仍注意包包'
                     ]
                 },
@@ -543,7 +543,7 @@
                     iconName: 'Compass',
                     subtitle: '通往上城、警盜鐘與大炮',
                     location: 'Lotrščak Tower',
-                    mapLink: 'https://maps.app.goo.gl/QGiFLBaw1pf9CkUj9',
+                    mapLink: 'https://maps.app.goo.gl/b261uivUK7pmrhi79',
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
@@ -742,7 +742,7 @@
                     tips: ['夜晚安全、愜意', '感受河畔悠閒氛']
                 }
             ],
-            3: [ // New D3 (Old D4)
+            3: [
                 {
                     id: 'd4-0',
                     time: '08:30',
@@ -1089,7 +1089,7 @@
                     tips: ['酒吧營業時間通常較晚，適合放鬆']
                 }
             ],
-            4: [ // New D4 (Old D5)
+            4: [
                 {
                     id: 'd5-1',
                     time: '09:00',
@@ -1252,7 +1252,7 @@
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 搭乘當地傳統的人力木造船 Pletna 前往湖心島，這是布萊德湖獨有的體驗。
                             </p>
-                            <p className="text-sm text-gray-600 leading-relaxed">
+                            <p className="text-sm text-gray-600 leading-relaxed text-justify">
                                 上島後需爬上99階階梯才能抵達聖母升天教堂。別忘了進教堂拉響「許願鐘」，據說能讓願望成真。整個行程（含船程與島上停留）約 1.5 小時。
                             </p>
                         </Fragment>
@@ -1273,7 +1273,7 @@
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 登上懸崖邊的千年古堡，這裡是俯瞰全湖最壯闊的制高點。強烈建議黃昏時分前來，看著夕陽餘暉灑在湖面與遠方阿爾卑斯山頭，景色美不勝收。
                             </p>
-                            <p className="text-sm text-gray-600 leading-relaxed">
+                            <p className="text-sm text-gray-600 leading-relaxed text-justify">
                                 建議停留到 18:30，盡情享受這魔幻時刻。
                             </p>
                         </Fragment>
@@ -1311,7 +1311,7 @@
                     tips: ['熱門時段務必訂位']
                 }
             ],
-            5: [ // New D5 (Old D6)
+            5: [
                 {
                     id: 'd6-1',
                     time: '08:30',
@@ -1343,7 +1343,7 @@
                                     【必拍地標：聖約翰教堂】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Church+of+St+John+the+Baptist+Bohinj" />
                                 </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
+                                <p className="text-sm text-gray-600 leading-relaxed text-justify">
                                     St. John the Baptist 教堂矗立在石橋旁，是博希尼湖最經典的畫面。
                                 </p>
                             </div>
@@ -1362,7 +1362,7 @@
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Vogel+Cable+Car',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600導致領先的文字對齊方式：">
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 搭乘纜車直達海拔 1535 公尺的山頂，單趟僅需 4 分鐘。
                             </p>
                             <div className="mb-4">
@@ -1390,7 +1390,7 @@
                     location: 'Ribčev Laz',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600導致領先的文字對齊方式：">
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 下山後在博希尼湖畔小鎮享用午餐。
                             </p>
                             <ul className="list-none pl-0 space-y-4">
@@ -1437,7 +1437,7 @@
                                     【薩維察瀑布】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Savica+Waterfall" />
                                 </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                <p className="text-sm text-gray-600導致領先的文字對齊方式：">
                                     這是斯洛維尼亞最著名的瀑布之一，也是薩瓦河 (Sava River) 的源頭。從停車場出發，需爬約 20-25 分鐘的階梯步道才能抵達觀景台。瀑布呈現獨特的字母「A」形（或說倒 Y 形），注入下方碧綠的水潭，顏色是夢幻的錄松石色，非常獨特且壯觀。
                                 </p>
                             </div>
@@ -1479,7 +1479,7 @@
                     tips: []
                 }
             ],
-            6: [ // New D6 (Old D7)
+            6: [
                 {
                     id: 'd7-1',
                     time: '06:30',
@@ -1638,7 +1638,7 @@
                     tips: ['舊城石板路較滑，建議穿好走的鞋', '夕陽後氣溫稍涼']
                 }
             ],
-            7: [ // New D7 (Old D8)
+            7: [
                 {
                     id: 'd8-1',
                     time: '08:30',
@@ -1889,7 +1889,7 @@
                     tips: ['Rovinj 海鮮非常新鮮推薦']
                 }
             ],
-            8: [ // New D8 (Old D9)
+            8: [
                 {
                     id: 'd9-1',
                     time: '09:00',
@@ -1979,7 +1979,7 @@
                     tips: ['早點休息為明日健行做準備', '確認好明日入園門票']
                 }
             ],
-            9: [ // New D9 (Old D10)
+            9: [
                  {
                     id: 'd10-1',
                     time: '08:30',
@@ -2173,7 +2173,7 @@
                     tips: ['海風琴階梯適合坐著看海', '準備好相機拍攝日落']
                 }
             ],
-            10: [ // New D10 (Old D11)
+            10: [
                 {
                     id: 'd11-1',
                     time: '08:30',
@@ -2363,7 +2363,7 @@
                     tips: ['儲備體力迎接明天的行程', '舊城石板路較滑，建議穿好走的鞋']
                 }
             ],
-            11: [ // New D11 (Old D12)
+            11: [
                 {
                     id: 'd12-1',
                     time: '07:00',
@@ -2524,7 +2524,7 @@
                     tips: ['放鬆享受美酒與爵士樂']
                 }
             ],
-            12: [ // New D12 (Old D13)
+            12: [
                 {
                     id: 'd13-1',
                     time: '09:00',
@@ -2558,7 +2558,7 @@
                                         3. 列柱中庭 Peristyle ⭐ (20 min)
                                         <MapLink url="https://www.google.com/maps/search/?api=1&query=Peristyle+Split" />
                                     </div>
-                                    <span className="text-xs text-gray-600 block">皇宮的核心，最經典的打卡點。早晨光線好且人較少，運氣好會遇到羅馬士兵換崗表演。</span>
+                                    <span className="text-xs text-gray-600 block">皇宮的核心，最經典的打卡點。早晨人少，運氣好會遇到羅馬士兵換崗表演。</span>
                                 </li>
                                 <li>
                                     <div className="font-bold text-gray-700 flex items-center mb-1">
@@ -2743,7 +2743,7 @@
                     tips: ['回到噴泉廣場', '最後拍一次點燈後的橋']
                 }
             ],
-            13: [ // New D13 (Old D14)
+            13: [
                 {
                     id: 'd14-1',
                     time: '08:30',
@@ -2880,7 +2880,7 @@
                     desc: (
                         <Fragment>
                              <div className="mb-4 flex items-center">
-                                <span className="font-bold text-gray-800">推薦散步路線</span>
+                                <span className="font-bold text-gray-800">散步路線</span>
                                 <MapLink url="https://maps.app.goo.gl/VKq18rv1AogvX3Sj7" />
                             </div>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
@@ -2925,7 +2925,7 @@
                     tips: ['石板路夜晚偏滑 → 建議穿防滑鞋', '不建議夜登上 Yellow Bastion', '主路線燈光足、安全']
                 }
             ],
-            14: [ // New D14 (Old D15)
+            14: [
                 {
                     id: 'd15-1',
                     time: '08:30',
@@ -3038,7 +3038,7 @@
                     location: 'Old Town / Yellow Bastion',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600導致領先的文字對齊方式：">
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 享受悠閒的午後時光，您可以選擇：
                             </p>
                             <ul className="text-sm text-gray-600 space-y-3 list-none pl-0">
@@ -3067,10 +3067,10 @@
                     mapLink: 'https://maps.app.goo.gl/G4g9T7E9k2T8Z4A6',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600導致領先的文字對齊方式：">
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 沿著 Ferhadija 街前進，從鄂圖曼風格的 Baščaršija 過渡到奧匈帝國時期的西式建築。這條街被稱為「塞拉耶佛的歐洲耶路撒冷分界線」，展現了這座城市的第二種面貌。
                             </p>
-                            <p className="text-sm text-gray-600導致領先的文字對齊方式：">
+                            <p className="text-sm text-gray-600 leading-relaxed text-justify">
                                 最終抵達 **Eternal Flame (長明火)**，紀念二戰解放塞拉耶佛的犧牲者。
                             </p>
                         </Fragment>
@@ -3086,7 +3086,7 @@
                     location: 'Sarajevo',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600導致領先的文字對齊方式：">
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 在塞拉耶佛享用晚餐，為接下來的黃堡夕陽做準備。
                             </p>
                             <h4 className="font-bold text-gray-800 mb-2">【餐廳推薦】</h4>
@@ -3123,7 +3123,7 @@
                     tips: ['可拍整個城市鋪滿紅色屋頂', '日落時間較晚，注意保暖']
                 }
             ],
-            15: [ // New D15 (Old D16)
+            15: [
                 {
                     id: 'd16-1',
                     time: '07:30',
@@ -3135,7 +3135,7 @@
                     mapLink: 'https://maps.app.goo.gl/eidKifRKo9mYUoQu7',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600導致領先的文字對齊方式：">
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 今日是跨國移動日，建議於 07:30–08:00 間出發。早餐請吃得清淡，並確保出發前在塞拉耶佛市區將油箱加滿。
                             </p>
                             <div className="mb-4">
@@ -3188,7 +3188,7 @@
                     location: 'Kotor Old Town',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600導致領先的文字對齊方式：">
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 在科托爾舊城區內散步並享用晚餐。
                             </p>
                             <div className="mt-6 border-t border-gray-100 pt-6">
@@ -3213,7 +3213,7 @@
                     tips: ['第一晚建議放鬆步調']
                 }
             ],
-            16: [ // New D16 (Old D17)
+            16: [
                 {
                     id: 'd17-1',
                     time: '06:30',
@@ -3232,7 +3232,7 @@
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 **強烈建議早上出發（避開炎熱和人潮）**。這段健行約需 1.5 到 2 小時（往返＋拍照），雖然階梯多，但從山頂俯瞰科托爾灣 (Kotor Bay) 的景色是蒙特內哥羅最經典的畫面。
                             </p>
-                            <p className="text-sm text-gray-600 leading-relaxed">
+                            <p className="text-sm text-gray-600 leading-relaxed text-justify">
                                 爬到**「聖母健康教堂 (Church of Our Lady of Health)」**（約 30 分鐘）即可看到非常棒的景色。繼續往上爬到堡壘頂端（約 60 分鐘），景色更壯闊。
                             </p>
                         </Fragment>
@@ -3279,7 +3279,7 @@
                                     【鐘樓廣場】
                                     <MapLink url="https://maps.app.goo.gl/ZP2cGiA7BPJiF2E17" />
                                 </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
+                                <p className="text-sm text-gray-600 leading-relaxed text-justify">
                                     科托爾舊城區的中心地帶，著名的 17 世紀鐘樓矗立在此。
                                 </p>
                             </div>
@@ -3301,7 +3301,7 @@
                     title: '午餐',
                     type: 'food',
                     iconName: 'Utensils',
-                    subtitle: 'Konoba Scala Santa / Cesarica / BBQ Tanjga',
+                    subtitle: '',
                     location: 'Kotor Old Town',
                     desc: (
                         <Fragment>
@@ -3329,7 +3329,7 @@
                                         BBQ Tanjga
                                         <MapLink url="https://maps.app.goo.gl/omAchTgeaFnGQ9kS6" />
                                     </div>
-                                    <p className="text-xs text-gray-600">評價極高且份量十足的在地燒烤店。</p>
+                                    <p className="text-xs text-gray-500">評價極高且份量十足的在地燒烤店。</p>
                                 </li>
                             </ul>
                         </Fragment>
@@ -3346,7 +3346,7 @@
                     location: 'Kotor Cable Car / Dobrota',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式：">
                                 下午氣溫高，建議選擇一個輕鬆的行程：
                             </p>
                             <ul className="text-sm text-gray-600 space-y-4 list-none pl-0">
@@ -3379,7 +3379,7 @@
                     tips: ['點燈後的城牆很美', '早點睡，避免舟車勞頓的疲勞累積']
                 }
             ],
-            17: [ // New D17 (Old D18)
+            17: [
                 {
                     id: 'd18-1',
                     time: '09:00',
@@ -3406,13 +3406,102 @@
                 {
                     id: 'd18-3',
                     time: '15:00',
-                    title: 'Stradun 大道漫步',
+                    title: '史特拉敦大道漫步',
                     type: 'sightseeing',
                     iconName: 'Camera',
                     subtitle: '初訪君臨城',
                     location: 'Stradun (Placa)',
-                    mapLink: 'https://maps.app.goo.gl/gQ5XyZ5J8k2T8Z4A6',
-                    desc: '走進派勒門 (Pile Gate)，踏上光滑的石灰岩大道 Stradun。這裡是杜布羅夫尼克的心臟，兩旁是保存完好的巴洛克式建築。可以參觀歐諾弗里奥噴泉 (Onofrio\'s Fountain) 和聖救世主教堂。',
+                    mapLink: 'https://maps.app.goo.gl/SyHmnCTGR51swK5s8',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                走進派勒門 (Pile Gate)，踏上杜布羅夫尼克的心臟——史特拉敦大道 (Stradun)。這條光滑的大理石大道兩旁盡是歷史悠久的建築與傳奇故事。
+                            </p>
+                            <div className="space-y-6">
+                                <div>
+                                    <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                        【大奧諾佛里奧供水池 Big Onofrio Fountains】
+                                        <MapLink url="https://maps.app.goo.gl/KQ21bCWhUBZ1QVpP9" />
+                                    </h4>
+                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                        建於1438年，是杜布羅夫尼克供水系統的終點之一，其水源來自於十二公里外的Dubrovacka河，世紀以來為市民提供了新鮮的泉水，至今仍在運作。呈十六邊型的大奧諾佛里奧供水池，每面都有一個人臉浮雕，泉水便是從其口中的水龍頭流洩出來。
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                        【杜布羅夫尼克鐘塔】
+                                        <MapLink url="https://maps.app.goo.gl/HFBrY5hvzanYhzvZ7" />
+                                    </h4>
+                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                        高31公尺的鐘塔原建於1444年，為拉古薩的象徵之一。後來因為大地震造成結構上的危險，現在所見的鐘塔是在1929年重建的。鐘塔上的銅像每小時會敲鐘。鐘塔下方旁還有小奧諾佛里奧供水池與Marin Drzic的銅像。他是推廣克羅埃西亞語言的學者。由於傳說摸他的鼻子可以增加智慧，因此雕像的鼻子閃亮無比。
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                        【斯蓬扎宮 Sponza Palace】
+                                        <MapLink url="https://maps.app.goo.gl/DszMqr8weU1xepmd9" />
+                                    </h4>
+                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                        緊鄰鐘塔的斯蓬扎宮是座十六世紀的文藝復興宮殿，曾作為海關、銀行與鑄幣廠，現在是國家檔案館，展有大量獨立戰爭期間的文物。
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                        【聖伯拉削教堂與奧蘭多石柱】
+                                        <MapLink url="https://maps.app.goo.gl/eNJyBr5YWHZr3ttj6" />
+                                    </h4>
+                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                        這座巴洛克式的教堂建於1717年，是獻給該城的守護聖人聖伯拉削 (St. Blaise)。教堂內部的寶庫收藏了聖伯拉削的聖骨。教堂前的奧蘭多石柱則立於1418年，上有身著鎧甲的奧蘭多騎士，象徵自由與獨立。
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                        【總督府 Rector’s Palace】
+                                        <MapLink url="https://maps.app.goo.gl/CmKsdv427gZqUJoo6" />
+                                    </h4>
+                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                        杜布羅夫尼克在14世紀至1808年間的政府所在地。建築風格融合了哥德、文藝復興與巴洛克元素。現為歷史博物館，可深入參觀地牢與武器庫。
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                        【聖母升天大教堂 The Cathedral】
+                                        <MapLink url="https://maps.app.goo.gl/2pmqiisn3ygAqYeF8" />
+                                    </h4>
+                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                        今日所見的大教堂是1667年大地震後重建，完工於1713年。建築外觀優雅，內部收藏有提香的畫作與大量金銀工藝聖物。
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                        【聖依納爵堂 Crkva sv. Ignacija】
+                                        <MapLink url="https://maps.app.goo.gl/QUGS4XNYN3J7ostPA" />
+                                    </h4>
+                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                        建於1725年，模仿了羅馬耶穌會教堂風格。教堂旁的階梯因《權力遊戲》中的「瑟曦羞辱之路」而聲名大噪。
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                        【聖天使報喜東正教堂】
+                                        <MapLink url="https://maps.app.goo.gl/MRCSB5vKRFpEhnNW6" />
+                                    </h4>
+                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                        建於1877年，在天主教堂眾多的舊城中顯得相當特別，內部裝飾金碧輝煌。
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                                        【舊港 Old Port】
+                                        <MapLink url="https://maps.app.goo.gl/36WxoUVf2L4qheWPA" />
+                                    </h4>
+                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                        杜布羅夫尼克最古老的區域之一。現今是宜人的徒步區，可在此觀賞海景並前往洛克魯姆島。
+                                    </p>
+                                </div>
+                            </div>
+                        </Fragment>
+                    ),
                     tips: ['感受古城氣勢', '在此享用冰淇淋']
                 },
                 {
@@ -3439,7 +3528,7 @@
                     tips: ['夜晚的舊城更有氣氛']
                 }
             ],
-            18: [ // New D18 (Old D19)
+            18: [
                 {
                     id: 'd19-1',
                     time: '07:30',
@@ -3451,7 +3540,7 @@
                     mapLink: 'https://maps.app.goo.gl/mS7QxZ5J8k2T8Z4A6',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600導致領先的文字對齊方式：">
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 這是杜布羅夫尼克最經典、絕對不能錯過的體驗。全長約 2 公里的城牆步道，可以 360 度俯瞰紅瓦屋頂舊城與亞得里亞海。
                             </p>
                             <div className="mb-2">
@@ -3488,7 +3577,7 @@
                     mapLink: 'https://maps.app.goo.gl/nR8QxZ5J8k2T8Z4A6',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600導致領先的文字對齊方式：">
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 在平地上輕鬆探索舊城區的精華建築與巷弄。
                             </p>
                             <ul className="text-sm text-gray-600 space-y-2 list-none pl-0">
@@ -3521,7 +3610,7 @@
                     location: 'Lokrum / Mount Srđ',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600導致領先的文字對齊方式：">
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 根據上午的體力消耗，選擇一項下午活動：
                             </p>
                             <ul className="text-sm text-gray-600 space-y-4 list-none pl-0">
@@ -3550,7 +3639,7 @@
                     tips: ['享受最後的夜晚', '購買紀念品']
                 }
             ],
-            19: [ // New D19 (Old D20)
+            19: [
                 {
                     id: 'd20-1',
                     time: '06:45',
@@ -3562,7 +3651,7 @@
                     mapLink: 'https://maps.app.goo.gl/gQ5XyZ5J8k2T8Z4A6',
                     desc: (
                         <Fragment>
-                            <p className="mb-2 text-gray-600導致領先的文字對齊方式：">
+                            <p className="mb-2 text-gray-600 leading-relaxed text-justify">
                                 早起享受杜布羅夫尼克最寧靜、最好拍的時刻。郵輪遊客約 09:00 才來，此時光線柔和、溫度宜人。
                             </p>
                             <h4 className="font-bold text-gray-800 mb-1">【建議走法】</h4>
@@ -3638,7 +3727,7 @@
                     iconName: 'MapPin',
                     note: '平安回家',
                     location: '桃園國際機場',
-                    desc: '旅程結束，帶著滿滿的回憶回到溫塊的家。',
+                    desc: '旅程結束，帶著滿滿的回憶回到溫暖的家。',
                     tips: ['整理照片', '補眠調整時差']
                 }
             ]
@@ -3723,7 +3812,7 @@
 
                             <div className="prose prose-sm mb-8">
                                 <h3 className={`text-lg font-medium mb-3 ${MORANDI_COLORS.highlight}`}>關於此行程</h3>
-                                <div className="text-gray-600導致領先的文字對齊方式：">
+                                <div className="text-gray-600 leading-relaxed text-justify">
                                     {item.desc}
                                 </div>
                             </div>
