@@ -6,7 +6,7 @@
     <title>西巴爾幹之旅 App</title>
 
     <!-- 引入 Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/"></script>
 
     <!-- 引入 React 和 ReactDOM -->
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
@@ -608,7 +608,7 @@
                     type: 'food',
                     iconName: 'Utensils',
                     location: 'Tkalčićeva Street',
-                    desc: '建議在 Tkalčićeva 街或主廣場附近用餐，這一帶聚集了許多餐廳、咖啡館與酒吧，選擇非常豐富。',
+                    desc: '建議在 Tkalčićeva 街或主廣場附近用餐，這一帶聚集了許多餐廳、咖啡館與酒吧，選擇非常豐富選擇。',
                     tips: []
                 },
                 {
@@ -830,7 +830,7 @@
                                 <MapLink url="https://maps.app.goo.gl/fss7bvUgLN7RGd369" />
                             </div>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                下山後漫步於老城區，這裡充滿可愛的小店與咖啡館，沿途更是橋樑建築的巡禮。
+                                下山後漫步於老城區，這裡充滿可愛的小店與咖啡館，沿途更是裝飾精美的橋樑建築。
                             </p>
                             <div className="mb-6">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
@@ -883,9 +883,16 @@
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                在老城區享用美味午餐，推薦兩間不同風格的餐廳：
+                                在老城區享用美味午餐，推薦三間不同風格的餐廳：
                             </p>
                             <ul className="list-none pl-0 space-y-4">
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Julija
+                                        <MapLink url="https://maps.app.goo.gl/DANzZysdiBtfjvFi8" />
+                                    </div>
+                                    <p className="text-sm text-gray-600">位於舊城中心，裝潢典雅且提供多樣化的地中海與當地特色料理，是非常受歡迎的熱門選擇。</p>
+                                </li>
                                 <li>
                                     <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                         Druga Violina
@@ -903,7 +910,7 @@
                             </ul>
                         </Fragment>
                     ),
-                    tips: ['熱門餐廳建議先訂位']
+                    tips: ['熱門餐廳如 Julija 建議先訂位']
                 },
                 {
                     id: 'd4-4',
@@ -1054,31 +1061,12 @@
                     id: 'd4-7',
                     time: '18:00',
                     title: '晚餐＋酒吧',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    subtitle: 'Manna / Strelec / Bar',
+                    type: 'relax',
+                    iconName: 'Coffee',
+                    subtitle: 'Kolibri / TOZD',
                     location: 'Ljubljana',
                     desc: (
                         <Fragment>
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-2">推薦晚餐：</h4>
-                                <ul className="list-none pl-0 space-y-3">
-                                    <li>
-                                        <div className="font-bold text-sm flex items-center">
-                                            Manna
-                                            <MapLink url="https://www.google.com/maps/search/?api=1&query=Manna+Ljubljana" />
-                                        </div>
-                                        <p className="text-xs text-gray-600">高級但不貴，品質超好。</p>
-                                    </li>
-                                    <li>
-                                        <div className="font-bold text-sm flex items-center">
-                                            Strelec
-                                            <MapLink url="https://www.google.com/maps/search/?api=1&query=Restavracija+Strelec" />
-                                        </div>
-                                        <p className="text-xs text-gray-600">城堡餐廳，若想提升儀式感可選此處。</p>
-                                    </li>
-                                </ul>
-                            </div>
                             <div>
                                 <h4 className="font-bold text-gray-800 mb-2">飯後小酌：</h4>
                                 <ul className="list-none pl-0 space-y-3">
@@ -1106,7 +1094,7 @@
             4: [
                 {
                     id: 'd5-1',
-                    time: '09:00',
+                    time: '08:00',
                     title: '早安盧比安納：市場與咖啡',
                     type: 'food',
                     iconName: 'Coffee',
@@ -1151,6 +1139,14 @@
                         </Fragment>
                     ),
                     tips: ['市場建議早點去食材較新鮮', '熱門咖啡館可能需要稍作等待']
+                },
+                {
+                    id: 'd4-checkout',
+                    time: '10:00',
+                    title: 'Check out',
+                    type: 'compact',
+                    iconName: 'Clock',
+                    location: 'Ljubljana'
                 },
                 {
                     id: 'd5-2',
@@ -1442,7 +1438,7 @@
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
                                     【前往瀑布】
                                 </h4>
-                                <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed">
+                                <p className="text-sm text-gray-600導致領進的文字對齊方式： leading-relaxed">
                                     午餐後開車前往 Savica Waterfall，車程約 20 分鐘。
                                 </p>
                             </div>
@@ -1505,7 +1501,7 @@
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Mala+Osojnica+Trailhead',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領進的文字對齊方式： leading-relaxed text-justify">
                                 攝影愛好者的必訪行程！清晨光線順光，是拍攝布萊德湖經典全景的絕佳時刻。
                             </p>
                             <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
