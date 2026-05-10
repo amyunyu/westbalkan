@@ -2516,7 +2516,7 @@
                             </p>
                         </Fragment>
                     ),
-                    tips: ['建議早點出發避開勞、炎熱和人潮', '堡壘視野極佳必去']
+                    tips: ['建議早點出發避開炎熱和人潮', '堡壘視野極佳必去']
                 },
                 {
                     id: 'd12-square',
@@ -2573,76 +2573,90 @@
                     tips: ['熱門餐廳建議先預約或早點去']
                 },
                 {
-                    id: 'd12-3',
-                    time: '16:45',
-                    title: '返回斯普利特',
-                    type: 'transport',
-                    iconName: 'Compass',
-                    subtitle: '搭船返回',
-                    location: 'Split',
-                    desc: '搭乘渡輪返回斯普利特，準備迎接傍晚的夕陽行程。',
-                    tips: []
+  id: 'd12-free',
+  time: '13:30',
+  title: '赫瓦爾海邊自由時間',
+  type: 'relax',
+  iconName: 'Coffee',
+  subtitle: '港口散步 / 海邊咖啡 / 小巷拍照',
+  location: 'Hvar Town',
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Hvar+Town',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        午餐後保留一段彈性時間，慢慢逛赫瓦爾港口、舊城小巷與海邊步道。若天氣炎熱，可以找間海邊咖啡館休息，或回到廣場周邊拍照、買薰衣草與紀念品。
+      </p>
+      <p className="text-sm text-gray-600 leading-relaxed text-justify">
+        若體力充裕，也可以安排短程水上計程車前往 Pakleni Islands 附近海灣，但要特別注意回程船班，不建議把時間抓得太緊。
+      </p>
+    </Fragment>
+  ),
+  tips: ['保留回港口搭船的時間', '注意防曬與補水', '回程船票建議提前買好']
                 },
                 {
-                    id: 'd12-4',
-                    time: '18:00',
-                    title: '馬里安山夕陽',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: 'Prva Vidilica na Marjanu',
-                    location: 'Marjan Hill',
-                    mapLink: 'https://maps.app.goo.gl/ubZmm3TsiPcg4QJy9',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                回到斯普利特後，前往馬里安山 (Marjan Hill) 的觀景台 (Prva Vidilica na Marjanu)。登頂約需 15-20 分鐘，路程輕鬆。
-                            </p>
-                            <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                這裡是俯瞰斯普利特舊城與港口全景的最佳地點。日落前抵達，看著夕陽將整座城市染成金黃色，非常浪漫。
-                            </p>
-                        </Fragment>
-                    ),
-                    tips: ['日落景色絕美', '不用爬到最高點，第一觀景台視野就很棒']
+  id: 'd12-3',
+  time: '16:30',
+  title: '返回斯普利特',
+  type: 'transport',
+  iconName: 'Compass',
+  subtitle: '依回程船班調整',
+  location: 'Split',
+  desc: '搭乘快船返回斯普利特。若能搭上 16:30 左右的船班，傍晚仍可安排 Marjan Hill 夕陽；若回程船較晚，則建議直接晚餐或酒吧，Marjan 夕陽改為隔天。',
+  tips: ['務必提前確認回程船班', '建議至少提早 20–30 分鐘回到碼頭', '若船班延誤，Marjan 夕陽可取消']
                 },
                 {
-                    id: 'd12-dinner',
-                    time: '19:30',
-                    title: '斯普利特晚餐',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    location: 'Split',
-                    desc: (
-                        <Fragment>
-                            <h4 className="font-bold text-gray-800 mb-3">【晚餐選項】</h4>
-                            <ul className="list-none pl-0 space-y-4">
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Konoba Fetivi
-                                        <MapLink url="https://maps.app.goo.gl/MPT4exoixvaKarhf6" />
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Apetit
-                                        <MapLink url="https://maps.app.goo.gl/NvsSdsFWZ5EihkCM7" />
-                                    </div>
-                                </li>
-                            </ul>
-                        </Fragment>
-                    ),
-                    tips: ['Split 的海鮮與傳統料理非常出名']
+  id: 'd12-4',
+  time: '18:00',
+  title: '馬里安山夕陽',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: 'Prva Vidilica na Marjanu',
+  location: 'Marjan Hill',
+  mapLink: 'https://maps.app.goo.gl/ubZmm3TsiPcg4QJy9',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        若回程船班順利、抵達斯普利特時間夠早，可前往馬里安山第一觀景台 Prva Vidilica na Marjanu。從 Riva 附近步行上去約 15–20 分鐘，不需要爬到最高點，就能俯瞰斯普利特舊城、港口與亞得里亞海。
+      </p>
+      <p className="text-sm text-gray-600 leading-relaxed text-justify">
+        若當天從 Hvar 回來較晚或體力不足，這段可直接取消，改成在 Riva 海濱散步、晚餐與爵士酒吧。
+      </p>
+    </Fragment>
+  ),
+  tips: ['日落景色絕美', '不用爬到最高點，第一觀景台視野就很棒', '若回程船晚，這段可彈性取消']
                 },
                 {
-                    id: 'd12-jazz',
-                    time: '21:00',
-                    title: 'Marvlvs Library Jazz Bar',
-                    type: 'relax',
-                    iconName: 'Coffee',
-                    subtitle: '爵士樂酒吧',
-                    location: 'Marvlvs Library Jazz Bar',
-                    mapLink: 'https://maps.app.goo.gl/K3zf6EBEbHTUzHZs9',
-                    desc: '位於皇宮建築內的爵士樂酒吧，氛圍獨特，充滿古老與現代交融的魅力。',
-                    tips: ['放鬆享受美酒與爵士樂']
+  id: 'd12-4',
+  time: '18:00',
+  title: '馬里安山夕陽',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: 'Prva Vidilica na Marjanu',
+  location: 'Marjan Hill',
+  mapLink: 'https://maps.app.goo.gl/ubZmm3TsiPcg4QJy9',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        若回程船班順利、抵達斯普利特時間夠早，可前往馬里安山第一觀景台 Prva Vidilica na Marjanu。從 Riva 附近步行上去約 15–20 分鐘，不需要爬到最高點，就能俯瞰斯普利特舊城、港口與亞得里亞海。
+      </p>
+      <p className="text-sm text-gray-600 leading-relaxed text-justify">
+        若當天從 Hvar 回來較晚或體力不足，這段可直接取消，改成在 Riva 海濱散步、晚餐與爵士酒吧。
+      </p>
+    </Fragment>
+  ),
+  tips: ['日落景色絕美', '不用爬到最高點，第一觀景台視野就很棒', '若回程船晚，這段可彈性取消']
+                },
+                {
+  id: 'd12-jazz',
+  time: '21:30',
+  title: 'Marvlvs Library Jazz Bar',
+  type: 'relax',
+  iconName: 'Coffee',
+  subtitle: '爵士樂酒吧',
+  location: 'Marvlvs Library Jazz Bar',
+  mapLink: 'https://maps.app.goo.gl/K3zf6EBEbHTUzHZs9',
+  desc: '位於戴克里先宮舊城建築內的爵士酒吧，空間小巧、有書房感與復古氣氛。適合在 Hvar 一日遊與晚餐後，喝一杯放鬆收尾。',
+  tips: ['座位不多，建議早點到或先確認營業狀況', '是否有現場演出需以當日公告為準']
                 }
             ],
             13: [
