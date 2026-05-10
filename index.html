@@ -2338,7 +2338,7 @@
                             </ul>
                         </Fragment>
                     ),
-                    tips: ['享受慢活早晨', '記得 10:00 前回飯店收行李']
+                    tips: ['依體力選 3–4 個點即可', '記得 09:30 左右回住宿收行李', '10:00 辦理退房']
                 },
                 {
                     id: 'd11-checkout',
@@ -2350,119 +2350,138 @@
                     mapLink: 'https://maps.app.goo.gl/uFEeduGsZZJJz2nQA'
                 },
                 {
-                    id: 'd11-2',
-                    time: '10:00',
-                    title: '前往克爾卡國家公園',
-                    type: 'transport',
-                    iconName: 'Car',
-                    subtitle: '有停車場 • 車程約1.5小時 • 午餐',
-                    location: 'Krka National Park',
-                    mapLink: 'https://maps.app.goo.gl/2dVKwT28vXqEzEMf6',
-                    desc: '出發前往克羅埃西亞另一個絕美的國家公園——克爾卡 (Krka)。',
-                    tips: ['先吃午餐/很多家','光線最佳時段', '步道輕鬆好走']
+  id: 'd11-2',
+  time: '10:15',
+  title: '前往 Krka 國家公園',
+  type: 'transport',
+  iconName: 'Car',
+  subtitle: 'Skradin 入口 • 車程約 1.5 小時',
+  location: 'Skradin, Krka National Park',
+  mapLink: 'https://maps.app.goo.gl/2dVKwT28vXqEzEMf6',
+  desc: '從札達爾出發前往 Krka 國家公園的 Skradin 入口。抵達後先停車、簡單午餐或補給，再搭船前往 Skradinski buk 瀑布區。',
+  tips: ['建議使用 Skradin 入口搭船進園', '先吃簡單午餐或準備點心', '確認船班與回程時間']
                 },
                 {
-                    id: 'd11-3',
-                    time: '12:30',
-                    title: '克爾卡瀑布巡禮',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: 'Skradinski buk',
-                    location: 'Skradinski buk',
-                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Skradinski+buk',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed">
-                                克爾卡國家公園以瀑布群聞名，其中最壯觀的是 <strong>Skradinski buk</strong>。
-                            </p>
+  id: 'd11-3',
+  time: '13:00',
+  title: 'Krka 瀑布巡禮',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: 'Skradinski buk',
+  location: 'Skradinski buk',
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Skradinski+buk',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed">
+        Krka 國家公園以瀑布群聞名，其中最經典的是 <strong>Skradinski buk</strong>。從 Skradin 搭船進入園區，沿途可欣賞 Krka 河谷景色。
+      </p>
 
-                            <div className="mb-4">
-                                <h4 className="font-bold text-gray-800 mb-2 flex items-center">
-                                    遊覽路線攻略：
-                                </h4>
-                                <ul className="text-sm text-gray-600 leading-relaxed space-y-3 list-disc pl-4">
-                                    <li>
-                                        <span className="font-bold text-gray-700">入園方式：</span>
-                                        從 Skradin 搭船進入園區，沿途欣賞峽谷河景。
-                                    </li>
-                                    <li>
-                                        <span className="font-bold text-gray-700">環狀步道：</span>
-                                        下船後依指標走入環狀木棧道。步道逆時針或順時針都可以，但建議採<span className="text-orange-600 font-bold">「順時針」</span>方向，人潮動線較順。
-                                    </li>
-                                    <li>
-                                        <span className="font-bold text-gray-700">沿途亮點：</span>
-                                        <ul className="list-[circle] pl-4 mt-1 space-y-1 text-gray-500">
-                                            <li>穿越綠意盎然的木棧道濕地</li>
-                                            <li>層層疊疊的小瀑布區</li>
-                                            <li>參觀 Old mills 水車小屋（傳統磨坊）</li>
-                                            <li>最後抵達震撼的 <span className="font-bold text-gray-700">Skradinski Buk 大瀑布觀景平台</span></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <span className="font-bold text-gray-700">所需時間：</span>
-                                        走完一圈約 1.2 – 1.5 小時。
-                                    </li>
-                                </ul>
-                            </div>
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          遊覽路線攻略：
+        </h4>
+        <ul className="text-sm text-gray-600 leading-relaxed space-y-3 list-disc pl-4">
+          <li>
+            <span className="font-bold text-gray-700">入園方式：</span>
+            從 Skradin 入口搭船前往 Skradinski buk 瀑布區；若船班等待較久，也可依現場狀況調整停留時間。
+          </li>
+          <li>
+            <span className="font-bold text-gray-700">環狀步道：</span>
+            下船後依指標走入環狀木棧道，沿途會經過濕地、小瀑布、傳統水車與觀景平台。
+          </li>
+          <li>
+            <span className="font-bold text-gray-700">沿途亮點：</span>
+            <ul className="list-[circle] pl-4 mt-1 space-y-1 text-gray-500">
+              <li>綠意盎然的木棧道濕地</li>
+              <li>層層疊疊的小瀑布區</li>
+              <li>Old mills 水車小屋與傳統磨坊</li>
+              <li>Skradinski buk 大瀑布觀景平台</li>
+            </ul>
+          </li>
+          <li>
+            <span className="font-bold text-gray-700">所需時間：</span>
+            步道本身約 1–1.5 小時；含搭船、拍照與休息，建議抓 2.5–3 小時。
+          </li>
+        </ul>
+      </div>
 
-                            <p className="text-sm text-gray-600 leading-relaxed">
-                                下午 12:30 - 16:00 是光線最佳的時刻，瀑布水霧在陽光下經常會出現彩虹。沿著木棧道散步，感受與十六湖截然不同的開闊瀑布景觀。
-                            </p>
-                        </Fragment>
-                    ),
-                    tips: ['光線最佳時段', '步道輕鬆好走']
+      <p className="text-sm text-gray-600 leading-relaxed">
+        下午光線適合拍瀑布與水霧，若天氣晴朗，有機會看到水霧中的彩虹。沿著木棧道散步，感受與十六湖截然不同的開闊瀑布景觀。
+      </p>
+    </Fragment>
+  ),
+  tips: ['步道輕鬆好走', '木棧道濕滑時請放慢腳步', '注意回程船班時間']
                 },
                 {
-                    id: 'd11-4',
-                    time: '17:00',
-                    title: '前往斯普利特住宿',
-                    type: 'transport',
-                    iconName: 'Car',
-                    subtitle: '車程約 1 小時 • 有停車位',
-                    location: 'Apartments and Rooms Perimar Split Center, Split',
-                    mapLink: 'https://maps.app.goo.gl/Jh9SHDVZDZSZwrgFA',
-                    desc: '離開國家公園，前往達爾馬提亞海岸的最大城市——斯普利特 (Split)。辦理入住手續並稍作休息。',
-                    tips: ['注意斯普利特舊城區停車規定']
+  id: 'd11-4',
+  time: '16:30',
+  title: '前往斯普利特住宿',
+  type: 'transport',
+  iconName: 'Car',
+  subtitle: '車程約 1 小時 15 分 • 有停車位',
+  location: 'Apartments and Rooms Perimar Split Center, Split',
+  mapLink: 'https://maps.app.goo.gl/Jh9SHDVZDZSZwrgFA',
+  desc: '離開 Krka 國家公園，前往達爾馬提亞海岸最大城市斯普利特。抵達後先處理停車與入住，稍作休息後再步行前往舊城與 Riva 海濱。',
+  tips: ['注意斯普利特舊城區停車規定', '抵達後先確認停車位置與住宿入口']
                 },
                 {
-                    id: 'd11-5',
-                    time: '19:00',
-                    title: '初訪斯普利特舊城：散步',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: 'Riva 海濱 • 舊城巷弄',
-                    location: 'Split Old Town',
-                    mapLink: 'https://maps.app.goo.gl/oGDoMPrWPYfUUM2z5',
-                    desc: (
-                        <Fragment>
-                            <div className="flex items-center gap-1 mb-4">
-                                <span className="font-bold text-gray-800">散步路線</span>
-                                <MapLink url="https://maps.app.goo.gl/oGDoMPrWPYfUUM2z5" />
-                            </div>
-                            <p className="text-gray-600 leading-relaxed text-justify mb-6">
-                                Riva海濱散步，黃昏時分面向舊城、背對港口拍照，從銅門進入戴克里先宮，石牆、拱門、老屋直接長在宮殿裡；Peristyle 廣場，整個舊城的靈魂，晚上常有街頭音樂、小型演出；聖多米努斯主教座堂，抬頭看鐘樓夜燈就很美；巷弄慢走，曬衣服的石牆、小酒吧藏在拱門下、羅馬柱被包在咖啡店裡。
-                            </p>
-                            
-                            <div className="mt-6 border-t border-gray-100 pt-6">
-                                <h4 className="font-bold text-gray-800 mb-3">【晚餐選項】</h4>
-                                <ul className="list-none pl-0 space-y-4">
-                                    <li>
-                                        <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                            Villa Spiza
-                                            <MapLink url="https://maps.app.goo.gl/K2AzkU2ia2uMNgKZ7" />
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                            Pizzeria Sette Sorelle
-                                            <MapLink url="https://maps.app.goo.gl/pLLwDwibaqLcqjJC8" />
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['儲備體力迎接明天的行程', '舊城石板路較滑，建議穿好走的鞋']
+  id: 'd11-5',
+  time: '19:00',
+  title: '初訪斯普利特舊城',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: 'Riva 海濱 • 戴克里先宮',
+  location: 'Split Old Town',
+  mapLink: 'https://maps.app.goo.gl/oGDoMPrWPYfUUM2z5',
+  desc: (
+    <Fragment>
+      <div className="flex items-center gap-1 mb-4">
+        <span className="font-bold text-gray-800">散步路線</span>
+        <MapLink url="https://maps.app.goo.gl/oGDoMPrWPYfUUM2z5" />
+      </div>
+      <p className="text-gray-600 leading-relaxed text-justify mb-6">
+        傍晚從 Riva 海濱開始散步，欣賞港口與舊城交界的熱鬧氣氛。接著從銅門進入戴克里先宮，穿過石牆、拱門與巷弄，走到 Peristyle 廣場與聖多米努斯主教座堂周邊。夜晚的舊城燈光很有氣氛，適合慢慢感受斯普利特的第一印象。
+      </p>
+    </Fragment>
+  ),
+  tips: ['舊城石板路較滑，建議穿好走的鞋', '今晚以輕鬆散步為主，儲備體力迎接明天']
+                },
+                {
+  id: 'd11-dinner',
+  time: '20:00',
+  title: '斯普利特舊城晚餐',
+  type: 'food',
+  iconName: 'Utensils',
+  subtitle: 'Villa Spiza / Pizzeria Sette Sorelle',
+  location: 'Split Old Town',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        初訪斯普利特的晚上，建議選擇舊城內或步行可達的餐廳，不再開車移動。晚餐後可以順路回到 Riva 海濱散步，感受夜晚的達爾馬提亞氣氛。
+      </p>
+      <ul className="list-none pl-0 space-y-4">
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Villa Spiza
+            <MapLink url="https://maps.app.goo.gl/K2AzkU2ia2uMNgKZ7" />
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            小巧熱門的在地餐館，菜色依當日食材變化，適合想吃斯普利特家常風味的人。
+          </p>
+        </li>
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Pizzeria Sette Sorelle
+            <MapLink url="https://maps.app.goo.gl/pLLwDwibaqLcqjJC8" />
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            輕鬆好吃的披薩選項，適合 Krka 行程後不想吃太正式、想簡單舒服收尾的晚上。
+          </p>
+        </li>
+      </ul>
+    </Fragment>
+  ),
+  tips: ['Villa Spiza 熱門且座位少，可能需要等待', '今晚不建議排太晚，明天還要繼續斯普利特行程']
                 }
             ],
             12: [
