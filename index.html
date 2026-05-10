@@ -3009,7 +3009,7 @@
                 },
                 {
   id: 'd14-dinner',
-  time: '20:00',
+  time: '19:30',
   title: '塞拉耶佛在地晚餐',
   type: 'food',
   iconName: 'Utensils',
@@ -3169,22 +3169,34 @@
                     tips: ['拍 Miljacka 河美景', '遇刺點紀念碑就在橋頭對面']
                 },
                 {
-                    id: 'd15-5',
-                    time: '11:00',
-                    title: '午餐',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    location: 'Sarajevo Old Town',
-                    desc: '午餐可以換間餐廳，繼續品嚐當地美食。推薦嘗試不同的 Ćevapi 或是傳統的 Bosnian Pot (Bosanski lonac) 燉肉。',
-                    tips: ['可換一間 Ćevapi 或 Bosnian Pot 嘗試']
+  id: 'd15-cityhall',
+  time: '11:00',
+  title: '塞拉耶佛市政廳外觀',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: 'Vijećnica',
+  location: 'Sarajevo City Hall',
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Sarajevo+City+Hall+Vijecnica',
+  desc: '從拉丁橋沿著 Miljacka 河岸散步至塞拉耶佛市政廳。這座華麗的摩爾復興式建築是城市最醒目的地標之一，外觀非常適合拍照，也能銜接 Sarajevo 從鄂圖曼到奧匈時期的歷史層次。',
+  tips: ['外觀拍照即可', '可順路回 Baščaršija 午餐']
+                },
+                {
+  id: 'd15-5',
+  time: '11:30',
+  title: '老城午餐',
+  type: 'food',
+  iconName: 'Utensils',
+  location: 'Sarajevo Old Town',
+  desc: '在 Baščaršija 或老城周邊享用午餐。若昨晚已吃 ćevapi，今天可改試 Bosanski lonac 波士尼亞燉肉、burek 餡餅，或找間傳統餐廳坐下來慢慢吃。',
+  tips: ['若昨晚吃過 ćevapi，今天可改吃 Bosanski lonac 或 burek', '午餐後準備前往 Tunnel of Hope']
                 },
                 {
                     id: 'd15-6',
-                    time: '12:00',
+                    time: '12:30',
                     title: '前往 Tunnel of Hope（希望隧道博物館）',
                     type: 'transport',
                     iconName: 'Car',
-                    subtitle: '開車前往',
+                    subtitle: '開車前往 • 約 25–35 分鐘',
                     location: 'Tunnel of Hope Museum',
                     mapLink: 'https://maps.app.goo.gl/N8Vj3D7E9k2T8Z4A6',
                     desc: '開車前往位於塞拉耶佛機場附近的希望隧道。這是波士尼亞戰爭期間（1992-1995）修建的一條秘密地下隧道，是塞拉耶佛被圍圍困時的唯一生命通道。',
@@ -3192,7 +3204,7 @@
                 },
                 {
                     id: 'd15-7',
-                    time: '12:30',
+                    time: '13:00',
                     title: 'Tunnel of Hope 參觀',
                     type: 'activity',
                     iconName: 'Compass',
@@ -3203,7 +3215,7 @@
                 },
                 {
                     id: 'd15-8',
-                    time: '13:45',
+                    time: '14:15',
                     title: '回市區 or 回飯店休息',
                     type: 'transport',
                     iconName: 'Car',
@@ -3212,98 +3224,99 @@
                     tips: []
                 },
                 {
-                    id: 'd15-9',
-                    time: '14:15',
-                    title: '自由時間（兩個選項）',
-                    type: 'relax',
-                    iconName: 'Coffee',
-                    subtitle: '黃堡散步 / 老城區休息',
-                    location: 'Old Town / Yellow Bastion',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed">
-                                享受悠閒的午後時光，您可以選擇：
-                            </p>
-                            <ul className="text-sm text-gray-600 leading-relaxed space-y-3 list-none pl-0">
-                                <li>
-                                    <span className="font-bold text-gray-700">【選項一：黃堡 (Yellow Bastion) 散步】</span>
-                                    <MapLink url="https://maps.app.goo.gl/3A7Fk4A6H7j3tH9X9" />
-                                    <span className="text-xs text-gray-500 block">提早到黃堡（Vijećnica 附近）散步，拍下塞拉耶佛的城市景色，為傍晚的夕陽做探路。</span>
-                                </li>
-                                <li>
-                                    <span className="font-bold text-gray-700">【選項二：老城區休息】</span>
-                                    <span className="text-xs text-gray-500 block">在 Baščaršija 找間傳統咖啡店，體驗正宗的波斯咖啡 (Bosnian coffee) 或享用當地甜點。</span>
-                                </li>
-                            </ul>
-                        </Fragment>
-                    ),
-                    tips: ['波斯咖啡儀式感很強，值得嘗試']
+  id: 'd15-9',
+  time: '15:30',
+  title: '自由時間（兩個選項）',
+  type: 'relax',
+  iconName: 'Coffee',
+  subtitle: '黃堡探路 / 老城區休息',
+  location: 'Old Town / Yellow Bastion',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed">
+        享受悠閒的午後時光，可依體力選擇：
+      </p>
+      <ul className="text-sm text-gray-600 leading-relaxed space-y-3 list-none pl-0">
+        <li>
+          <span className="font-bold text-gray-700">【選項一：黃堡 Yellow Bastion 探路】</span>
+          <MapLink url="https://maps.app.goo.gl/3A7Fk4A6H7j3tH9X9" />
+          <span className="text-xs text-gray-500 block">提早到黃堡附近散步，拍下塞拉耶佛城市景色，為傍晚夕陽做探路。</span>
+        </li>
+        <li>
+          <span className="font-bold text-gray-700">【選項二：老城區休息】</span>
+          <span className="text-xs text-gray-500 block">在 Baščaršija 找間傳統咖啡店，體驗波士尼亞咖啡或享用當地甜點。</span>
+        </li>
+      </ul>
+    </Fragment>
+  ),
+  tips: ['波士尼亞咖啡儀式感很強，值得嘗試', '若上午和隧道博物館較累，建議選老城咖啡休息']
                 },
                 {
-                    id: 'd15-10',
-                    time: '16:00',
-                    title: '奧匈帝國風街區漫步',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: 'Ferhadija 街 → Eternal Flame',
-                    location: 'Ferhadija Street',
-                    mapLink: 'https://maps.app.goo.gl/G4g9T7E9k2T8Z4A6',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed">
-                                沿著 Ferhadija 街前進，從鄂圖曼風格的 Baščaršija 過渡到奧匈帝國時期的西式建築。這條街被稱為「塞拉耶佛的歐洲耶路撒冷分界線」，展現了這座城市的第二種面貌。
-                            </p>
-                            <p className="text-sm text-gray-600 leading-relaxed">
-                                最終抵達 **Eternal Flame (長明火)**，紀念二戰解放塞拉耶佛的犧牲者。
-                            </p>
-                        </Fragment>
-                    ),
-                    tips: ['感受「文化分界線」的建築風格差異', '長明火附近適合拍奧匈建築']
+  id: 'd15-10',
+  time: '16:30',
+  title: '奧匈帝國風街區漫步',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: 'Ferhadija 街 → Eternal Flame',
+  location: 'Ferhadija Street',
+  mapLink: 'https://maps.app.goo.gl/G4g9T7E9k2T8Z4A6',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed">
+        沿著 Ferhadija 街前進，從鄂圖曼風格的 Baščaršija 過渡到奧匈帝國時期的西式建築。這段路最能感受 Sarajevo 東西文化交會的城市性格。
+      </p>
+      <p className="text-sm text-gray-600 leading-relaxed">
+        最終抵達 <span className="font-bold text-gray-800">Eternal Flame（長明火）</span>，紀念二戰解放塞拉耶佛的犧牲者。
+      </p>
+    </Fragment>
+  ),
+  tips: ['感受建築風格從鄂圖曼到奧匈的變化', '長明火附近適合拍奧匈建築']
                 },
                 {
-                    id: 'd15-11',
-                    time: '17:00',
-                    title: '晚餐（推薦：Dveri / Avlija）',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    location: 'Sarajevo',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed">
-                                在塞拉耶佛享用晚餐，為接下來的黃堡夕陽做準備。
-                            </p>
-                            <h4 className="font-bold text-gray-800 mb-2 flex items-center">【餐廳推薦】</h4>
-                            <ul className="list-none pl-0 space-y-3">
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Dveri
-                                        <MapLink url="https://maps.app.goo.gl/j4Fh6tD2G1xR6N8" />
-                                    </div>
-                                    <p className="text-xs text-gray-600 leading-relaxed">塞拉耶佛最著名的隱藏式傳統餐廳，氛圍親密浪漫，食物精緻（務必預訂）。</p>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Avlija
-                                        <MapLink url="https://maps.app.goo.gl/A7Fj5tD2G1xR6N8" />
-                                    </div>
-                                    <p className="text-xs text-gray-600 leading-relaxed">充滿異國風情的室外庭院餐廳，提供優質的傳統和國際美食。</p>
-                                </li>
-                            </ul>
-                        </Fragment>
-                    ),
-                    tips: ['Dveri 熱門，建議提早預訂']
+  id: 'd15-11',
+  time: '17:30',
+  title: '塞拉耶佛傳統晚餐',
+  type: 'food',
+  iconName: 'Utensils',
+  subtitle: 'Dveri / Avlija',
+  location: 'Sarajevo',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed">
+        在塞拉耶佛享用一頓比較完整的傳統晚餐，為黃堡夕陽前補充體力。若想要氣氛與傳統菜色，Dveri 很適合；若想要庭院感與較放鬆的環境，可以考慮 Avlija。
+      </p>
+      <h4 className="font-bold text-gray-800 mb-2 flex items-center">【餐廳推薦】</h4>
+      <ul className="list-none pl-0 space-y-3">
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Dveri
+            <MapLink url="https://maps.app.goo.gl/j4Fh6tD2G1xR6N8" />
+          </div>
+          <p className="text-xs text-gray-600 leading-relaxed">老城區熱門傳統餐廳，氣氛親密，適合想吃一頓比較完整的波士尼亞料理；建議預訂。</p>
+        </li>
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Avlija
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Avlija+Sarajevo" />
+          </div>
+          <p className="text-xs text-gray-600 leading-relaxed">庭院感強、氣氛輕鬆，適合想避開老城人潮、慢慢吃飯的選擇。</p>
+        </li>
+      </ul>
+    </Fragment>
+  ),
+  tips: ['Dveri 熱門，建議提早預訂', '若要看夕陽，晚餐不要拖太久']
                 },
                 {
-                    id: 'd15-12',
-                    time: '18:30',
-                    title: 'Yellow Bastion 夕陽（強烈推薦）',
-                    type: 'sightseeing',
-                    iconName: 'Sun',
-                    subtitle: '最美黃昏看點',
-                    location: 'Yellow Bastion (Žuta tabija)',
-                    mapLink: 'https://maps.app.goo.gl/3A7Fk4A6H7j3tH9X9',
-                    desc: '步行或搭車前往黃堡，這是塞拉耶佛欣賞日落 and 城市全景的最佳地點。尤其在黃昏時分，陽光將整個城市鋪上一層金色，景色壯觀。這裡也是當地人聚集、喝咖啡放鬆的熱門地。',
-                    tips: ['可拍整個城市鋪滿紅色屋頂', '日落時間較晚，注意保暖']
+  id: 'd15-12',
+  time: '18:45',
+  title: 'Yellow Bastion 夕陽',
+  type: 'sightseeing',
+  iconName: 'Sun',
+  subtitle: 'Sarajevo 最美黃昏看點',
+  location: 'Yellow Bastion (Žuta tabija)',
+  mapLink: 'https://maps.app.goo.gl/3A7Fk4A6H7j3tH9X9',
+  desc: '步行或搭車前往 Yellow Bastion，這是 Sarajevo 欣賞日落與城市全景的經典地點。黃昏時分，陽光會灑在山谷、清真寺尖塔與紅色屋頂上，是很適合為 Sarajevo 深度日收尾的地方。',
+  tips: ['可拍整個城市與紅色屋頂', '日落後氣溫下降，帶件薄外套', '回程若天黑，建議走主路或叫車']
                 }
             ],
             16: [
