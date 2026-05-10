@@ -211,30 +211,30 @@
             const end = new Date(2026, 5, 12);
 
             const cityMap = {
-                0: '飛機上',
                 1: '札格瑞布',
-                2: '札格瑞布\n盧比安納',
-                3: '盧比安納',
-                4: '盧比安納\n布萊德',
-                5: '布萊德\n博希尼',
-                6: '布萊德\n羅維尼',
-                7: '羅維尼\n普拉',
-                8: '羅維尼\n十六湖',
-                9: '十六湖\n札達爾',
-                10: '克爾卡\n國家公園',
-                11: '赫瓦爾島\n斯普利特',
-                12: '斯普利特\n莫斯塔爾',
-                13: '莫斯塔爾\n塞拉耶佛',
-                14: '塞拉耶佛',
-                15: '塞拉耶佛\n科托爾',
-                16: '科托爾',
-                17: '科托爾\n杜布羅夫尼克',
-                18: '杜布羅夫尼克',
-                19: '返台'
+                2: '札格瑞布',
+                3: '札格瑞布\n盧比安納',
+                4: '盧比安納',
+                5: '盧比安納\n布萊德',
+                6: '布萊德\n博希尼',
+                7: '布萊德\n羅維尼',
+                8: '羅維尼\n普拉',
+                9: '羅維尼\n十六湖',
+                10: '十六湖\n札達爾',
+                11: '克爾卡\n國家公園',
+                12: '赫瓦爾島\n斯普利特',
+                13: '斯普利特\n莫斯塔爾',
+                14: '莫斯塔爾\n塞拉耶佛',
+                15: '塞拉耶佛',
+                16: '塞拉耶佛\n科托爾',
+                17: '科托爾',
+                18: '科托爾\n杜布羅夫尼克',
+                19: '杜布羅夫尼克',
+                20: '返台'
             };
 
             let current = start;
-            let dayCount = 0; // 5/24 is D1
+            let dayCount = 1; // 5/24 is D1
 
             while (current <= end) {
                 dates.push({
@@ -268,32 +268,9 @@
         );
 
         const itineraryData = {
-            0: [
-                {
-                    id: 'd1-1',
-                    time: '18:30',
-                    title: '前往機場',
-                    type: 'transport',
-                    iconName: 'Plane',
-                    location: '桃園國際機場',
-                    desc: '準備出發前往西巴爾幹半島！建議提早3小時抵達機場辦理登機手續。',
-                    tips: ['檢查電源轉接頭', '下載離線地圖', '攜帶頸枕']
-                },
-                {
-                    id: 'd1-2',
-                    time: '23:35',
-                    title: '飛往杜拜',
-                    type: 'transport',
-                    iconName: 'Plane',
-                    subtitle: '長途飛行 EK367 TPE → DXB',
-                    location: '杜拜國際機場 (轉機)',
-                    desc: '搭乘阿聯酋航空 EK367 班機前往杜拜。長途飛行請多補充水分。',
-                    tips: ['機上保濕', '調整手錶時差']
-                }
-            ],
             1: [
                 {
-                    id: 'd2-1',
+                    id: 'd1-1',
                     time: '04:15',
                     title: '杜拜機場轉機',
                     type: 'transport',
@@ -304,18 +281,18 @@
                     tips: ['不用出境', '找舒適區域休息']
                 },
                 {
-                    id: 'd2-2',
-                    time: '09:20',
+                    id: 'd1-2',
+                    time: '08:40',
                     title: '飛往札格瑞布',
                     type: 'transport',
                     iconName: 'Plane',
                     location: '札格瑞布機場 (ZAG)',
-                    subtitle: 'EK2012 DXB → ZAG (預計 13:30 抵達)',
+                    subtitle: 'EK2012/FZ1793 DXB → ZAG (預計 13:30 抵達)',
                     desc: '第二段飛行，搭乘 EK2012 前往克羅埃西亞首都。',
                     tips: ['調整時區 (GMT+2)']
                 },
                 {
-                    id: 'd2-3',
+                    id: 'd1-3',
                     time: '13:30',
                     title: '抵達札格瑞布機場 (ZAG)',
                     type: 'arrival',
@@ -323,35 +300,12 @@
                     location: 'Zagreb Airport',
                     mapLink: 'https://maps.app.goo.gl/zEc8CPN39NLXcLzf6',
                     subtitle: '領取行李、出關',
-                    desc: '抵達克羅埃西亞首都札格瑞布。領取行李後，準備前往租車櫃檯。',
-                    tips: ['確認行李數量', '準備租車文件']
+                    desc: '抵達克羅埃西亞首都札格瑞布。領取行李。',
                 },
                 {
-                    id: 'd2-4',
-                    time: '15:30',
-                    title: '機場取車',
-                    type: 'transport',
-                    iconName: 'Car',
-                    location: 'Zagreb Airport',
-                    mapLink: 'https://maps.app.goo.gl/zEc8CPN39NLXcLzf6',
-                    subtitle: '辦理租車手續',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4">辦理租車手續，開始西巴爾幹半島的自駕之旅。請務必詳細檢查車況及保險文件。</p>
-                            <p className="text-sm">
-                                租車公司官網：
-                                <a href="https://www.uni-rent.net/" target="_blank" rel="noreferrer" className="text-blue-500 hover:underline ml-1">
-                                    Uni-Rent Car Rental
-                                </a>
-                            </p>
-                        </Fragment>
-                    ),
-                    tips: ['準備國際駕照', '確認油箱返還規定', '檢查車身刮痕']
-                },
-                {
-                    id: 'd2-5',
+                    id: 'd1-4',
                     time: '16:00',
-                    title: 'Nino Luxury Apartment, Zagreb',
+                    title: 'Olive Tree City Apartment',
                     type: 'hotel',
                     iconName: 'BedDouble',
                     subtitle: 'Booking/check in',
@@ -361,7 +315,7 @@
                     tips: ['確認停車位置', '詢問房東當地推薦']
                 },
                 {
-                    id: 'd2-6',
+                    id: 'd1-5',
                     time: '16:30',
                     title: '札格瑞布舊城漫遊',
                     type: 'sightseeing',
@@ -413,7 +367,7 @@
                     tips: ['穿著舒適好走的鞋', '石門為肅靜場所請保持安靜', '教堂內部參觀需注意開放時間']
                 },
                  {
-                    id: 'd2-7',
+                    id: 'd1-6',
                     time: '18:00',
                     title: '札格瑞布晚餐',
                     type: 'food',
@@ -470,7 +424,7 @@
             ],
             2: [
                 {
-                    id: 'd3-1',
+                    id: 'd2-1',
                     time: '09:00',
                     title: '早餐',
                     type: 'food',
@@ -480,7 +434,7 @@
                     tips: []
                 },
                 {
-                    id: 'd3-checkout-parking',
+                    id: '-checkout-parking',
                     time: '10:00',
                     title: 'Check out & 停車',
                     type: 'compact',
@@ -489,7 +443,7 @@
                     mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36'
                 },
                 {
-                    id: 'd3-combined',
+                    id: 'd2-combined',
                     time: '10:00',
                     title: '札格瑞布下城漫步',
                     type: 'sightseeing',
@@ -550,7 +504,7 @@
                     ]
                 },
                 {
-                    id: 'd3-funicular-tower',
+                    id: 'd2-funicular-tower',
                     time: '11:30',
                     title: '登山纜車 & 洛特爾薩克塔',
                     type: 'activity',
@@ -602,7 +556,7 @@
                     tips: ['正午大炮聲音非常大，請注意安全', '纜車車程很短但體驗獨特']
                 },
                 {
-                    id: 'd3-9',
+                    id: 'd2-9',
                     time: '12:15',
                     title: '午餐',
                     type: 'food',
@@ -610,6 +564,49 @@
                     location: 'Tkalčićeva Street',
                     desc: '建議在 Tkalčićeva 街或主廣場附近用餐，這一帶聚集了許多餐廳、咖啡館與酒吧，選擇非常豐富。',
                     tips: []
+                },
+                {
+                    id: 'd2-10',
+                    time: '15:30',
+                    title: '機場取車',
+                    type: 'transport',
+                    iconName: 'Car',
+                    location: 'Zagreb Airport',
+                    mapLink: 'https://maps.app.goo.gl/zEc8CPN39NLXcLzf6',
+                    subtitle: '辦理租車手續',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4">辦理租車手續，請務必詳細檢查車況及保險文件。</p>
+                            <p className="text-sm">
+                                租車公司官網：
+                                <a href="https://www.uni-rent.net/" target="_blank" rel="noreferrer" className="text-blue-500 hover:underline ml-1">
+                                    Uni-Rent Car Rental
+                                </a>
+                            </p>
+                        </Fragment>
+                    ),
+                    tips: ['準備國際駕照', '確認油箱返還規定', '檢查車身刮痕']
+                }
+            ],
+            3: [
+                {
+                    id: 'd3-1',
+                    time: '09:00',
+                    title: '早餐',
+                    type: 'food',
+                    iconName: 'Coffee',
+                    location: 'Zagreb',
+                    desc: '享受美好的早餐時光，為新的一天補充滿滿活力。',
+                    tips: []
+                },
+                {
+                    id: 'd3-checkout-parking',
+                    time: '10:00',
+                    title: 'Check out & 停車',
+                    type: 'compact',
+                    iconName: 'Clock',
+                    location: 'Parking Location',
+                    mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36'
                 },
                 {
                     id: 'd3-travel-checkin',
@@ -644,7 +641,7 @@
                     tips: ['跨國自駕請確認過境文件', '準備斯洛維尼亞高速公路通行證 (Vignette)']
                 },
                 {
-                    id: 'd3-12',
+                    id: 'd3-2',
                     time: '17:15',
                     title: '盧比安納市中心漫遊',
                     type: 'sightseeing',
@@ -679,7 +676,7 @@
                     tips: ['晚上河畔燈光倒映河面非常漂亮', '三重橋是 Plečnik 建築經典', '記得從橋的兩側拍全景']
                 },
                 {
-                    id: 'd3-13',
+                    id: 'd3-3',
                     time: '18:00',
                     title: '城市象徵巡禮',
                     type: 'sightseeing',
@@ -711,7 +708,7 @@
                     tips: ['龍橋的雕像是城市象徵', '傍晚市場外圍適合散步拍照']
                 },
                 {
-                    id: 'd3-14',
+                    id: 'd3-4',
                     time: '19:00',
                     title: '晚餐',
                     type: 'food',
@@ -745,7 +742,7 @@
                     tips: ['超市可買到斯洛維尼亞當地食材', '享受放鬆的晚餐時光']
                 },
                 {
-                    id: 'd3-15',
+                    id: 'd3-5',
                     time: '20:30',
                     title: '河畔散步',
                     type: 'relax',
@@ -756,7 +753,7 @@
                     tips: ['夜晚安全、愜意', '感受河畔悠閒氛']
                 }
             ],
-            3: [
+            4: [
                 {
                     id: 'd4-0',
                     time: '08:30',
@@ -827,7 +824,7 @@
                         <Fragment>
                             <div className="mb-4 flex items-center">
                                 <span className="font-bold text-gray-800">散步路線</span>
-                                <MapLink url="https://maps.app.goo.gl/fss7bvUgLN7RGd369" />
+                                <MapLink url="https://maps.app.goo.gl/fss7bvUgLN7RG69" />
                             </div>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
                                 下山後漫步於老城區，這裡充滿可愛的小店與咖啡館，沿途更是橋樑建築的巡禮。
@@ -1091,7 +1088,7 @@
                     tips: ['酒吧營業時間通常較晚，適合放鬆']
                 }
             ],
-            4: [
+            5: [
                 {
                     id: 'd5-1',
                     time: '08:00',
@@ -1322,7 +1319,7 @@
                     tips: ['熱門時段務必訂位']
                 }
             ],
-            5: [
+            6: [
                 {
                     id: 'd6-1',
                     time: '08:30',
@@ -1490,7 +1487,7 @@
                     tips: []
                 }
             ],
-            6: [
+            7: [
                 {
                     id: 'd7-1',
                     time: '06:30',
@@ -1649,7 +1646,7 @@
                     tips: ['舊城石板路較滑，建議穿好走的鞋', '夕陽後氣溫稍涼']
                 }
             ],
-            7: [
+            8: [
                 {
                     id: 'd8-1',
                     time: '08:30',
@@ -1900,7 +1897,7 @@
                     tips: ['Rovinj 海鮮非常新鮮推薦']
                 }
             ],
-            8: [
+            9: [
                 {
                     id: 'd9-1',
                     time: '09:00',
@@ -2000,7 +1997,7 @@
                     tips: ['早點休息為明日健行做準備', '確認好明日入園門票']
                 }
             ],
-            9: [
+            10: [
                  {
                     id: 'd10-1',
                     time: '08:30',
@@ -2228,7 +2225,7 @@
                     tips: ['札達爾晚餐建議避開太早吃，先去海風琴看夕陽、等向陽禮讚亮燈後再用餐，整個夜晚的節奏會更剛好也更有氣氛。']
                 }
             ],
-            10: [
+            11: [
                 {
                     id: 'd11-1',
                     time: '08:00',
@@ -2427,7 +2424,7 @@
                     tips: ['儲備體力迎接明天的行程', '舊城石板路較滑，建議穿好走的鞋']
                 }
             ],
-            11: [
+            12: [
                 {
                     id: 'd12-1',
                     time: '07:00',
@@ -2588,7 +2585,7 @@
                     tips: ['放鬆享受美酒與爵士樂']
                 }
             ],
-            12: [
+            13: [
                 {
                     id: 'd13-1',
                     time: '09:00',
@@ -2807,7 +2804,7 @@
                     tips: ['回到噴泉廣場', '最後拍一次點燈後的橋']
                 }
             ],
-            13: [
+            14: [
                 {
                     id: 'd14-1',
                     time: '08:30',
@@ -2989,7 +2986,7 @@
                     tips: ['石板路夜晚偏滑 → 建議穿防滑鞋', '不建議夜登上 Yellow Bastion', '主路線燈光足、安全']
                 }
             ],
-            14: [
+            15: [
                 {
                     id: 'd15-1',
                     time: '08:30',
@@ -3187,7 +3184,7 @@
                     tips: ['可拍整個城市鋪滿紅色屋頂', '日落時間較晚，注意保暖']
                 }
             ],
-            15: [
+            16: [
                 {
                     id: 'd16-1',
                     time: '07:30',
@@ -3278,7 +3275,7 @@
                     tips: ['第一晚建議放鬆步調']
                 }
             ],
-            16: [
+            17: [
                 {
                     id: 'd17-1',
                     time: '06:30',
@@ -3444,7 +3441,7 @@
                     tips: ['點燈後的城牆很美', '早點睡，避免舟車勞頓的憤勞累積']
                 }
             ],
-            17: [
+            18: [
                 {
                     id: 'd18-1',
                     time: '09:00',
@@ -3593,7 +3590,7 @@
                     tips: ['夜晚的舊城更有氣氛']
                 }
             ],
-            18: [
+            19: [
                 {
                     id: 'd19-1',
                     time: '07:30',
@@ -3704,7 +3701,7 @@
                     tips: ['享受最後的夜晚', '購買紀念品']
                 }
             ],
-            19: [
+            20: [
                 {
                     id: 'd20-1',
                     time: '06:45',
