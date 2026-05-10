@@ -2014,107 +2014,120 @@
             ],
             10: [
                  {
-                    id: 'd10-1',
-                    time: '08:30',
-                    title: '抵達入口 2 (Entrance 2)',
-                    type: 'sightseeing',
-                    iconName: 'MapPin',
-                    subtitle: '最佳起點 • 路線 B',
-                    location: 'Plitvice Lakes Entrance 2',
-                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Plitvice+Lakes+Entrance+2',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                <span className="font-bold text-gray-800">🟢 今日策略：路線 B（上下湖全覽）</span><br/>
-                                這是最適合您的路線！距離適中，體力消耗剛好，景色密度最高，且能一次看完上湖區的靜謐藍湖與下湖區的經典瀑布群。
-                            </p>
-                            <p className="text-sm text-gray-600 leading-relaxed">
-                                選擇入口 2 進入，可以比入口 1 更快避開下游的塞車人潮。
-                            </p>
-                        </Fragment>
-                    ),
-                    tips: ['早到避開 10:00 後的爆量團客', '穿防滑好走的鞋']
+  id: 'd10-1',
+  time: '08:00',
+  title: '抵達入口 2 (Entrance 2)',
+  type: 'sightseeing',
+  iconName: 'MapPin',
+  subtitle: '最佳起點 • 路線 H',
+  location: 'Plitvice Lakes Entrance 2',
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Plitvice+Lakes+Entrance+2',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        <span className="font-bold text-gray-800">🟢 今日策略：路線 H（上下湖全覽）</span><br/>
+        從 Entrance 2 出發，先搭全景車前往 ST3，再由上湖區一路往下走，接著搭船橫渡 Kozjak 湖，最後走下湖區與 Veliki Slap 大瀑布。這條路線能一次看完上湖的靜謐藍綠湖色與下湖的經典瀑布群。
+      </p>
+      <p className="text-sm text-gray-600 leading-relaxed">
+        建議早一點進園，避開 10:00 後團客與木棧道壅塞。若天氣或體力狀況不佳，可縮短下湖區停留時間，保留體力前往札達爾。
+      </p>
+    </Fragment>
+  ),
+  tips: ['建議 08:00 左右入園', '穿防滑好走的鞋', '準備水、簡單點心與薄外套']
                 },
                 {
-                    id: 'd10-2',
-                    time: '09:00',
-                    title: '上湖區健行',
-                    type: 'activity',
-                    iconName: 'Camera',
-                    subtitle: '搭巴士至 ST3 起點',
-                    location: 'Upper Lakes',
-                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Plitvice+Upper+Lakes',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                進園後先搭乘園區巴士到 ST3（上湖區起點）。您會站在十六湖最「安靜的高處」，直接開始欣賞深綠色的湖面與森林步道。
-                            </p>
-                            <div className="mb-4 mt-4">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    📸 上湖區必拍：
-                                </h4>
-                                <ul className="text-sm text-gray-600 leading-relaxed space-y-1 list-disc pl-4">
-                                    <li>Gradinsko jezero 湖面倒影</li>
-                                    <li>Galovački buk 大瀑布</li>
-                                </ul>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['此區禁止飛空拍機', '禁止游泳']
+  id: 'd10-2',
+  time: '08:30',
+  title: '上湖區健行',
+  type: 'activity',
+  iconName: 'Camera',
+  subtitle: '全景車至 ST3 起點',
+  location: 'Upper Lakes',
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Plitvice+Upper+Lakes',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        進園後先搭乘園區全景車前往 ST3，從上湖區開始健行。這一段湖面較寧靜、森林感強，水色與瀑布層次非常漂亮。
+      </p>
+      <div className="mb-4 mt-4">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          📸 上湖區必拍：
+        </h4>
+        <ul className="text-sm text-gray-600 leading-relaxed space-y-1 list-disc pl-4">
+          <li>Gradinsko jezero 湖面倒影</li>
+          <li>Galovački buk 大瀑布</li>
+          <li>木棧道與藍綠湖水交錯的經典畫面</li>
+        </ul>
+      </div>
+    </Fragment>
+  ),
+  tips: ['此區禁止飛空拍機', '禁止游泳', '木棧道濕滑時請放慢腳步']
                 },
                 {
-                    id: 'd10-3',
-                    time: '11:00',
-                    title: '遊船橫渡大湖',
-                    type: 'transport',
-                    iconName: 'Compass',
-                    subtitle: 'P2 → P3',
-                    location: 'Lake Kozyak',
-                    desc: '結束上湖區健行後，抵達碼頭 P2，搭乘電動船前往 P3，橫渡最大的 Kozyak 湖。這段船程約 10-15 分鐘，非常舒服。',
-                    tips: ['船班約 10-15 分鐘一班', '旺季偶爾需排隊']
+  id: 'd10-3',
+  time: '10:45',
+  title: '遊船橫渡 Kozjak 湖',
+  type: 'transport',
+  iconName: 'Compass',
+  subtitle: 'P2 → P3',
+  location: 'Lake Kozjak',
+  desc: '結束上湖區健行後，抵達 P2 碼頭，搭乘電動船前往 P3，橫渡園區最大的 Kozjak 湖。抵達 P3 後可上洗手間、補水，簡單吃點心或午餐，再繼續下湖區路線。',
+  tips: ['船程約 20 分鐘', '旺季可能需要排隊', 'P3 適合休息與補給']
                 },
                 {
-                    id: 'd10-4',
-                    time: '11:20',
-                    title: '下湖區健行',
-                    type: 'activity',
-                    iconName: 'Camera',
-                    subtitle: '經典瀑布群',
-                    location: 'Lower Lakes',
-                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Plitvice+Lower+Lakes',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                抵達 P3 碼頭後進入下湖區，這裡是全園區最震撼的「大小瀑布密集區」。木棧道緊貼著水邊，超級好拍。
-                            </p>
-                            <div className="mb-4 mt-4">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    📸 下湖區必拍：
-                                </h4>
-                                <ul className="text-sm text-gray-600 leading-relaxed space-y-1 list-disc pl-4">
-                                    <li>Milanovac – Gavanovac 湖連接構圖</li>
-                                    <li>Veliki Slap (大瀑布)：從高處拍全景最壯觀</li>
-                                </ul>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['下雨天木棧道會滑，請小心', '雨天顏色反而更飽和']
+  id: 'd10-break',
+  time: '11:15',
+  title: 'P3 簡單午餐／休息',
+  type: 'food',
+  iconName: 'Utensils',
+  subtitle: '補水、點心、洗手間',
+  location: 'P3 Boat Dock',
+  desc: '在 P3 碼頭附近稍作休息，補充水分與簡單點心。十六湖園區內用餐選擇有限，建議前一晚或早上先準備三明治、能量棒或水果。',
+  tips: ['不要把正式午餐排得太重', '垃圾請隨身帶走或投入指定垃圾桶']
                 },
                 {
-                    id: 'd10-5',
-                    time: '13:00',
-                    title: '高點觀景台 & 回程',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: 'Postcard View',
-                    location: 'Veliki Slap Viewpoint',
-                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Veliki+Slap+Viewpoint',
-                    desc: '走到下湖區尾端，爬上高點觀景台，這裡就是無數明信片上的經典畫面位置。約 13:30 從 ST1 搭乘接駁巴士返回 ST2 (入口 2)。',
-                    tips: ['準備離開園區']
+  id: 'd10-4',
+  time: '11:45',
+  title: '下湖區健行',
+  type: 'activity',
+  iconName: 'Camera',
+  subtitle: '經典瀑布群',
+  location: 'Lower Lakes',
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Plitvice+Lower+Lakes',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        從 P3 進入下湖區，沿著湖畔與木棧道前往 Veliki Slap 大瀑布。這裡是十六湖最經典、也最容易遇到人潮的區域，瀑布、峽谷與藍綠色湖水非常震撼。
+      </p>
+      <div className="mb-4 mt-4">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          📸 下湖區必拍：
+        </h4>
+        <ul className="text-sm text-gray-600 leading-relaxed space-y-1 list-disc pl-4">
+          <li>Milanovac – Gavanovac 湖泊與木棧道構圖</li>
+          <li>Veliki Slap 大瀑布近景</li>
+          <li>通往高點觀景台的明信片視角</li>
+        </ul>
+      </div>
+    </Fragment>
+  ),
+  tips: ['下雨天木棧道會滑，請小心', '越接近大瀑布人潮越多', '雨天水色反而更飽和']
+                },
+                {
+  id: 'd10-5',
+  time: '13:30',
+  title: '高點觀景台 & 回程',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: 'Postcard View',
+  location: 'Veliki Slap Viewpoint',
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Veliki+Slap+Viewpoint',
+  desc: '走到下湖區尾端後，前往高點觀景台欣賞十六湖最經典的明信片視角。拍照後依園區指標前往 ST1，搭乘全景車返回 ST2 / Entrance 2，準備離開園區。',
+  tips: ['回程接駁需預留等候時間', '離園前確認是否已取回停車位置與行李']
                 },
                 {
                     id: 'd10-6',
-                    time: '15:00',
+                    time: '15:30',
                     title: '前往札達爾',
                     type: 'transport',
                     iconName: 'Car',
@@ -2122,7 +2135,7 @@
                     location: 'Zadar, Croatia',
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Zadar+Old+Town',
                     desc: '告別十六湖，開車前往克羅埃西亞的歷史古城——札達爾 (Zadar)。沿途風景將從內陸森林轉變為亞得里亞海的沿海風光。',
-                    tips: ['準備入住 Zadar']
+                    tips: ['健行後開車請先補水休息', '抵達札達爾後先確認停車與入住方式']
                 },
                 {
                     id: 'd10-7',
@@ -2138,8 +2151,8 @@
                 },
                 {
                     id: 'd10-8',
-                    time: '18:00',
-                    title: '札達爾精華散步',
+                    time: '18:30',
+                    title: '札達爾夕陽散步',
                     type: 'sightseeing',
                     iconName: 'Camera',
                     subtitle: '舊城區、海風琴、向陽禮讚',
@@ -2206,38 +2219,51 @@
                     tips: ['海風琴階梯適合坐著看海', '準備好相機拍攝日落']
                 },
                 {
-                    id: 'd10-dinner',
-                    time: '20:00',
-                    title: '札達爾晚餐',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    location: 'Zadar',
-                    desc: (
-                        <Fragment>
-                            <h4 className="font-bold text-gray-800 mb-3">【晚餐選項】</h4>
-                            <ul className="list-none pl-0 space-y-4">
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Restoran 4 Kantuna
-                                        <MapLink url="https://maps.app.goo.gl/t64nvyaAcvPe3CQYA" />
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Restoran Bruschetta
-                                        <MapLink url="https://maps.app.goo.gl/M6dxGS8TdMHN1GTM9" />
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Soul Food Restaurant Cultro
-                                        <MapLink url="https://maps.app.goo.gl/eiT4RPvr8KuBtWyV7" />
-                                    </div>
-                                </li>
-                            </ul>
-                        </Fragment>
-                    ),
-                    tips: ['札達爾晚餐建議避開太早吃，先去海風琴看夕陽、等向陽禮讚亮燈後再用餐，整個夜晚的節奏會更剛好也更有氣氛。']
+  id: 'd10-dinner',
+  time: '20:30',
+  title: '札達爾舊城晚餐',
+  type: 'food',
+  iconName: 'Utensils',
+  subtitle: '4 Kantuna / Bruschetta / Cultro',
+  location: 'Zadar',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        看完海風琴夕陽與向陽禮讚燈光後，在札達爾舊城區享用晚餐。今晚不建議排太早，先把海邊黃金時刻留給夕陽，再慢慢回到巷弄裡用餐。
+      </p>
+      <h4 className="font-bold text-gray-800 mb-3">【晚餐選項】</h4>
+      <ul className="list-none pl-0 space-y-4">
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Restoran 4 Kantuna
+            <MapLink url="https://maps.app.goo.gl/t64nvyaAcvPe3CQYA" />
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            舊城內人氣餐廳，適合想吃義式、海鮮與克羅埃西亞料理的穩妥選擇。
+          </p>
+        </li>
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Restoran Bruschetta
+            <MapLink url="https://maps.app.goo.gl/M6dxGS8TdMHN1GTM9" />
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            氣氛較精緻，適合想吃海鮮、義式料理與較有餐酒館感的晚餐。
+          </p>
+        </li>
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Soul Food Restaurant Cultro
+            <MapLink url="https://maps.app.goo.gl/eiT4RPvr8KuBtWyV7" />
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            風格較輕鬆，適合想吃得不那麼正式、以小餐館氛圍收尾的一晚。
+          </p>
+        </li>
+      </ul>
+    </Fragment>
+  ),
+  tips: ['先看海風琴夕陽與向陽禮讚，再回舊城晚餐', '熱門餐廳建議預訂', '健行日晚上不要排太晚']
                 }
             ],
             11: [
