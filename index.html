@@ -4099,10 +4099,23 @@
         };
 
         const App = () => {
-            const [activeTab, setActiveTab] = useState('itinerary'); 
-            const [selectedDateIdx, setSelectedDateIdx] = useState(1); // Start on D1 (5/25)
-            const [viewingItem, setViewingItem] = useState(null); 
-            const scrollRef = useRef(null);
+            const [activeTab, setActiveTab] = useState(() => {
+    return localStorage.getItem('westBalkans_activeTab') || 'itinerary';
+});
+
+const [selectedDateIdx, setSelectedDateIdx] = useState(() => {
+    const saved = localStorage.getItem('westBalkans_selectedDateIdx');
+    const parsed = saved !== null ? parseInt(saved, 10) : 0;
+
+    if (Number.isNaN(parsed)) return 0;
+    if (parsed < 0) return 0;
+    if (parsed >= tripDates.length) return 0;
+
+    return parsed;
+});
+
+const [viewingItem, setViewingItem] = useState(null); 
+const scrollRef = useRef(null);
 
             const currentDate = tripDates[selectedDateIdx];
             const currentEvents = getDayEvents(currentDate.dayNum);
@@ -4115,6 +4128,13 @@
                     }
                 }
             }, [selectedDateIdx]);
+            useEffect(() => {
+    localStorage.setItem('westBalkans_activeTab', activeTab);
+}, [activeTab]);
+
+useEffect(() => {
+    localStorage.setItem('westBalkans_selectedDateIdx', selectedDateIdx.toString());
+}, [selectedDateIdx]);
 
             return (
                 <div className={`min-h-screen ${MORANDI_COLORS.bg} font-sans selection:bg-[#D4C4B7] selection:text-white`}>
