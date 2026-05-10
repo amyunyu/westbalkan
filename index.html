@@ -1689,10 +1689,10 @@
                 {
                     id: 'd8-zero',
                     time: '11:20',
-                    title: '零街地下隧道',
+                    title: 'Zerostrasse 地下隧道',
                     type: 'sightseeing',
                     iconName: 'Compass',
-                    subtitle: 'Zerostrasse地下軍事隧道',
+                    subtitle: '奧匈時期軍事隧道',
                     location: 'Zerostrasse',
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Zerostrasse+Pula',
                     desc: (
@@ -1710,103 +1710,88 @@
                     tips: ['隧道內較涼爽', '風格獨特好拍照']
                 },
                 {
-                    id: 'd8-4',
-                    time: '12:00',
-                    title: '古城遺跡與堡壘巡禮',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: '凱旋門、神廟、Pulski Fort',
-                    location: 'Pula Old Town',
-                    desc: (
-                        <Fragment>
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【凱旋門 (Arch of the Sergii)】
-                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Arch+of+the+Sergii" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    這座精美的古羅馬凱旋門位於舊城區入口，雕刻細緻，已有兩千年歷史。
-                                </p>
-                            </div>
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【奧古斯都神廟 (Temple of Augustus)】
-                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Temple+of+Augustus+Pula" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    位於市政廣場 (Forum)，是獻給羅馬第一位皇帝奧古斯都的神廟，保存狀況極佳，見證了普拉悠久的歷史。
-                                </p>
-                            </div>
-                            <div className="mb-4">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【威尼斯堡壘 (Pulski Fort / Kaštel)】
-                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Pula+Castle+Kastel" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    這座星形要塞由威尼斯人建於17世紀，矗立在市中心的最高點。不僅是重要的防禦工事，現在更是俯瞰普拉市景、競技場與海港的最佳瞭望台。
-                                </p>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['堡壘需爬坡，視野極佳']
+  id: 'd8-4',
+  time: '12:30',
+  title: '普拉舊城散步',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: '凱旋門、Forum、奧古斯都神廟',
+  location: 'Pula Old Town',
+  desc: (
+    <Fragment>
+      <div className="mb-6">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【凱旋門 (Arch of the Sergii)】
+          <MapLink url="https://www.google.com/maps/search/?api=1&query=Arch+of+the+Sergii" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          位於舊城區入口，是普拉最具代表性的古羅馬地標之一，適合順路拍照。
+        </p>
+      </div>
+      <div className="mb-6">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【Forum 與奧古斯都神廟】
+          <MapLink url="https://www.google.com/maps/search/?api=1&query=Temple+of+Augustus+Pula" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          市政廣場周邊保留了普拉古羅馬城市的核心氛圍，奧古斯都神廟外觀保存良好，是舊城散步的重點。
+        </p>
+      </div>
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【可選：威尼斯堡壘 Kaštel】
+          <MapLink url="https://www.google.com/maps/search/?api=1&query=Pula+Castle+Kastel" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          若時間與體力充裕，可上到市中心高處的星形堡壘，俯瞰普拉市景、競技場與海港。
+        </p>
+      </div>
+    </Fragment>
+  ),
+  tips: ['舊城石板路較滑，建議穿好走的鞋', 'Kaštel 需爬坡，可視體力決定']
                 },
                 {
-                    id: 'd8-5',
-                    time: '13:00',
-                    title: '普拉午餐',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    subtitle: '在地美食推薦',
-                    location: 'Pula City Center',
-                    desc: (
-                        <Fragment>
-                            <ul className="list-none pl-0 space-y-4">
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Jupiter
-                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Pizzeria+Jupiter+Pula" />
-                                    </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">當地著名的披薩與義大利麵餐廳，份量足、口味好。</p>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Taj Tavern
-                                        <MapLink url="https://maps.app.goo.gl/nGRxbhLoCR9qn4Es9" />
-                                    </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">距離市區開車 10 分鐘，氛圍傳統道地的餐廳。</p>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Pjero Istrian Gourmet
-                                        <MapLink url="https://maps.app.goo.gl/F2FWtpkq8UEybUrA9" />
-                                    </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">精緻的伊斯特里亞風味料理，食材上乘。</p>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Padela
-                                        <MapLink url="https://maps.app.goo.gl/cYUJ3uocMsf6XKcV7" />
-                                    </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">深受台灣旅人好評推薦，提供美味的家常感料理。</p>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Farabuto
-                                        <MapLink url="https://maps.app.goo.gl/7ggiUmSeo7ugnkvF7" />
-                                    </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">高品質的海鮮與在地料理，深受當地人喜愛。</p>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Kod Kadre
-                                        <MapLink url="https://maps.app.goo.gl/XtQtkGjJc3jtffkZA" />
-                                    </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">提供傳統烤肉與在地風味，價格實惠且道地。</p>
-                                </li>
-                            </ul>
-                        </Fragment>
-                    ),
-                    tips: []
+  id: 'd8-5',
+  time: '13:30',
+  title: '普拉午餐',
+  type: 'food',
+  iconName: 'Utensils',
+  subtitle: 'Istrian / Pizza / Grill',
+  location: 'Pula City Center',
+  desc: (
+    <Fragment>
+      <ul className="list-none pl-0 space-y-4">
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Pjero Istrian Gourmet
+            <MapLink url="https://maps.app.goo.gl/F2FWtpkq8UEybUrA9" />
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            精緻的伊斯特里亞風味料理，適合想在普拉午餐吃得有特色一點。
+          </p>
+        </li>
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Jupiter
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Pizzeria+Jupiter+Pula" />
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            位於市中心，披薩與義大利麵選擇多，適合想快速、方便用餐。
+          </p>
+        </li>
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Kod Kadre
+            <MapLink url="https://maps.app.goo.gl/XtQtkGjJc3jtffkZA" />
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            傳統烤肉與在地風味，價格相對實惠，適合想吃飽一點的午餐。
+          </p>
+        </li>
+      </ul>
+    </Fragment>
+  ),
+  tips: ['午餐建議不要排太久，保留下午回羅維尼的時間']
                 },
                 {
                     id: 'd8-6',
