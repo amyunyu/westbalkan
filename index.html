@@ -1493,16 +1493,28 @@
                     tips: ['步道較陡請小心', '記得帶水']
                 },
                 {
-                    id: 'd7-2',
-                    time: '10:30',
-                    title: '前往 Postojna Cave',
-                    type: 'transport',
-                    iconName: 'Car',
-                    subtitle: '車程 1h10',
-                    location: 'Postojna Cave Park',
-                    mapLink: 'https://maps.app.goo.gl/9n7MVp4bRbEhCDMv9',
-                    desc: '享用早餐並辦理退房後，開車前往歐洲最壯觀的鐘乳石洞——波斯托伊納溶洞 (Postojna Cave)。',
-                    tips: ['確認導航路線']
+  id: 'd7-checkout',
+  time: '10:00',
+  title: '早餐與 Check out',
+  type: 'compact',
+  iconName: 'Clock',
+  subtitle: '整理行李、退房',
+  location: 'Penzion Berc',
+  mapLink: 'https://maps.app.goo.gl/FQitHjh52aKmXW7g8',
+  desc: '晨拍後回住宿享用早餐、整理行李並辦理退房，準備開車前往 Postojna Cave。',
+  tips: ['確認相機與充電器都已收好', '洞窟外套放在容易拿取的位置']
+                },
+                {
+  id: 'd7-2',
+  time: '10:30',
+  title: '前往 Postojna Cave',
+  type: 'transport',
+  iconName: 'Car',
+  subtitle: '車程約 1 小時 10 分',
+  location: 'Postojna Cave Park',
+  mapLink: 'https://maps.app.goo.gl/9n7MVp4bRbEhCDMv9',
+  desc: '享用早餐並辦理退房後，開車前往波斯托伊納溶洞。建議預留停車、簡單午餐與報到時間，洞窟導覽開始前至少 30 分鐘抵達入口。',
+  tips: ['確認導航路線', '洞內約 10°C，外套放在容易拿取的位置', '若已訂票，提前準備 QR code']
                 },
                 {
                     id: 'd7-3',
@@ -1510,7 +1522,7 @@
                     title: 'Postojna Cave 洞窟導覽',
                     type: 'sightseeing',
                     iconName: 'MapPin',
-                    subtitle: '搭乘洞窟小火車',
+                    subtitle: '洞窟小火車＋鐘乳石大廳',
                     location: 'Postojna Cave',
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Postojna+Cave+Entrance',
                     desc: (
@@ -1523,11 +1535,11 @@
                             </p>
                         </Fragment>
                     ),
-                    tips: ['洞內恆溫約10度，務必帶外套', '建議事先預約導覽']
+                    tips: ['洞內恆溫約 10°C，務必帶外套', '建議事先預約導覽', '導覽前至少 30 分鐘抵達入口']
                 },
                 {
                     id: 'd7-4',
-                    time: '15:00',
+                    time: '15:45',
                     title: 'Predjama Castle',
                     type: 'sightseeing',
                     iconName: 'Camera',
@@ -1548,7 +1560,7 @@
                 },
                 {
                     id: 'd7-5',
-                    time: '16:00',
+                    time: '17:00',
                     title: '前往羅維尼',
                     type: 'transport',
                     iconName: 'Car',
@@ -1559,74 +1571,74 @@
                     tips: ['準備護照通關', '注意克羅埃西亞交通規則']
                 },
                 {
-                    id: 'd7-6',
-                    time: '18:00',
-                    title: 'Loreto LYA SEA VIEW APARTMENTS',
-                    type: 'hotel',
-                    iconName: 'BedDouble',
-                    subtitle: 'Booking/check in',
-                    location: 'Loreto LYA Apartments',
-                    mapLink: 'https://maps.app.goo.gl/vKh1GcrtsoXXU8sH9',
-                    desc: '辦理入住手續，放下行李。準備迎接亞得里亞海的夕陽。',
-                    tips: []
+  id: 'd7-6',
+  time: '19:00',
+  title: 'Loreto LYA SEA VIEW APARTMENTS',
+  type: 'hotel',
+  iconName: 'BedDouble',
+  subtitle: 'Booking / check-in',
+  location: 'Loreto LYA Apartments',
+  mapLink: 'https://maps.app.goo.gl/vKh1GcrtsoXXU8sH9',
+  desc: '辦理入住手續、放下行李。若抵達時間較晚，今晚以輕鬆散步與晚餐為主，不勉強安排太多景點。',
+  tips: ['事先確認入住方式與停車資訊']
                 },
                 {
-                    id: 'd7-7',
-                    time: '19:00',
-                    title: '舊城夕陽散步 & 晚餐',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: 'St. Euphemia Sunset',
-                    location: 'Rovinj Old Town',
-                    desc: (
-                        <Fragment>
-                            <div className="mb-4 flex items-center">
-                                <span className="font-bold text-gray-800">散步路線</span>
-                                <MapLink url="https://maps.app.goo.gl/6WL62poDFQ9MbSjW9" />
-                            </div>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                傍晚是羅維尼最魔幻的時刻。建議沿著蜿蜒的石板路漫步至舊城最高點的 <span className="font-bold text-gray-800">聖歐菲米亞教堂 (St. Euphemia)</span>。
-                            </p>
+  id: 'd7-7',
+  time: '20:00',
+  title: '羅維尼舊城晚餐散步',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: 'St. Euphemia • 海邊晚餐',
+  location: 'Rovinj Old Town',
+  desc: (
+    <Fragment>
+      <div className="mb-4 flex items-center">
+        <span className="font-bold text-gray-800">散步路線</span>
+        <MapLink url="https://maps.app.goo.gl/6WL62poDFQ9MbSjW9" />
+      </div>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        抵達羅維尼後，以輕鬆散步和晚餐為主。沿著舊城石板路慢慢往聖歐菲米亞教堂方向走，感受亞得里亞海小城入夜後的浪漫氣氛。
+      </p>
 
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【夕陽觀景點：教堂廣場】
-                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Church+of+St.+Euphemia+Rovinj" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    這裡擁有開闊的視野，可以欣賞金黃色夕陽灑落在亞得里亞海上的絕美景色，是羅維尼必拍的黃金時刻。
-                                </p>
-                            </div>
+      <div className="mb-6">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【散步重點：聖歐菲米亞教堂周邊】
+          <MapLink url="https://www.google.com/maps/search/?api=1&query=Church+of+St.+Euphemia+Rovinj" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          如果抵達時間順利，仍可在教堂廣場或海邊捕捉夕陽餘暉；若已天黑，舊城石板路與海港夜色也很適合慢慢散步。
+        </p>
+      </div>
 
-                            <div className="mb-4">
-                                <h4 className="font-bold text-gray-800 mb-2">【晚餐推薦】</h4>
-                                <ul className="list-none pl-0 space-y-4">
-                                    <li>
-                                        <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                            La Puntulina
-                                            <MapLink url="https://maps.app.goo.gl/HftfrvrUuebu4f149" />
-                                        </div>
-                                        <p className="text-sm text-gray-600 leading-relaxed">懸崖邊的景觀餐廳，可以邊吃海鮮邊看海，非常熱門，務必預訂。</p>
-                                    </li>
-                                    <li>
-                                        <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                            Kantinon Tavern
-                                            <MapLink url="https://www.google.com/maps/search/?api=1&query=Kantinon+Tavern+Rovinj" />
-                                        </div>
-                                        <p className="text-sm text-gray-600 leading-relaxed">提供道地的伊斯特里亞傳統料理與海鮮，更有在地氛圍。</p>
-                                    </li>
-                                    <li>
-                                        <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                            Spacio Matika
-                                            <MapLink url="https://maps.app.goo.gl/LFVZ4J5r9vk6KyFy5" />
-                                        </div>
-                                        <p className="text-sm text-gray-600 leading-relaxed">體驗傳統羅維尼酒館文化 (Spacio) 的好地方，氣氛輕鬆。</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['舊城石板路較滑，建議穿好走的鞋', '夕陽後氣溫稍涼']
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-2">【晚餐推薦】</h4>
+        <ul className="list-none pl-0 space-y-4">
+          <li>
+            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+              La Puntulina
+              <MapLink url="https://maps.app.goo.gl/HftfrvrUuebu4f149" />
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed">懸崖邊的景觀餐廳，可以邊吃海鮮邊看海，非常熱門，務必預訂。</p>
+          </li>
+          <li>
+            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+              Kantinon Tavern
+              <MapLink url="https://www.google.com/maps/search/?api=1&query=Kantinon+Tavern+Rovinj" />
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed">提供伊斯特里亞傳統料理與海鮮，氛圍比景觀餐廳更在地。</p>
+          </li>
+          <li>
+            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+              Spacio Matika
+              <MapLink url="https://maps.app.goo.gl/LFVZ4J5r9vk6KyFy5" />
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed">體驗傳統羅維尼酒館文化 Spacio 的好地方，氣氛輕鬆。</p>
+          </li>
+        </ul>
+      </div>
+    </Fragment>
+  ),
+  tips: ['舊城石板路較滑，建議穿好走的鞋', '若抵達較晚，今晚以晚餐與短程散步為主', '熱門餐廳建議預訂']
                 }
             ],
             8: [
