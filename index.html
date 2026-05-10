@@ -2626,25 +2626,42 @@
   tips: ['日落景色絕美', '不用爬到最高點，第一觀景台視野就很棒', '若回程船晚，這段可彈性取消']
                 },
                 {
-  id: 'd12-4',
-  time: '18:00',
-  title: '馬里安山夕陽',
-  type: 'sightseeing',
-  iconName: 'Camera',
-  subtitle: 'Prva Vidilica na Marjanu',
-  location: 'Marjan Hill',
-  mapLink: 'https://maps.app.goo.gl/ubZmm3TsiPcg4QJy9',
+  id: 'd12-dinner',
+  time: '20:00',
+  title: '斯普利特晚餐',
+  type: 'food',
+  iconName: 'Utensils',
+  subtitle: 'Konoba Fetivi / Apetit',
+  location: 'Split',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        若回程船班順利、抵達斯普利特時間夠早，可前往馬里安山第一觀景台 Prva Vidilica na Marjanu。從 Riva 附近步行上去約 15–20 分鐘，不需要爬到最高點，就能俯瞰斯普利特舊城、港口與亞得里亞海。
+        從 Hvar 返回後，在斯普利特舊城或 Riva 附近享用晚餐。若有去 Marjan Hill 看夕陽，建議選擇步行可達、不要太正式的餐廳，讓晚上節奏更輕鬆。
       </p>
-      <p className="text-sm text-gray-600 leading-relaxed text-justify">
-        若當天從 Hvar 回來較晚或體力不足，這段可直接取消，改成在 Riva 海濱散步、晚餐與爵士酒吧。
-      </p>
+      <h4 className="font-bold text-gray-800 mb-3">【晚餐選項】</h4>
+      <ul className="list-none pl-0 space-y-4">
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Konoba Fetivi
+            <MapLink url="https://maps.app.goo.gl/MPT4exoixvaKarhf6" />
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            傳統達爾馬提亞風味餐館，適合想吃海鮮、燉菜或家常感料理的一晚。
+          </p>
+        </li>
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Apetit
+            <MapLink url="https://maps.app.goo.gl/NvsSdsFWZ5EihkCM7" />
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            位於舊城中的精緻餐廳，氣氛較正式，適合想吃得舒服一點、慢慢收尾。
+          </p>
+        </li>
+      </ul>
     </Fragment>
   ),
-  tips: ['日落景色絕美', '不用爬到最高點，第一觀景台視野就很棒', '若回程船晚，這段可彈性取消']
+  tips: ['若有去 Marjan 夕陽，晚餐建議改 20:00', '熱門餐廳建議預訂', '晚餐後可步行前往爵士酒吧']
                 },
                 {
   id: 'd12-jazz',
@@ -2661,221 +2678,208 @@
             ],
             13: [
                 {
-                    id: 'd13-1',
-                    time: '09:00',
-                    title: '戴克里先皇宮精華漫步',
-                    type: 'sightseeing',
-                    iconName: 'MapPin',
-                    subtitle: '戴克里先皇宮',
-                    location: 'Diocletian\'s Palace',
-                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Diocletians+Palace',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                今天重點是補齊 Split 的經典景點。這是一座「活著的皇宮」，居民生活與古羅馬遺跡完美融合。建議路線（約 2.5 - 3 小時）：
-                            </p>
-                            <ul className="text-sm text-gray-600 space-y-3 list-none pl-0">
-                                <li>
-                                    <div className="font-bold text-gray-700 flex items-center mb-1">
-                                        1. Riva 海濱步道 (10-15 min)
-                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Riva+Split" />
-                                    </div>
-                                    <span className="text-xs text-gray-500 block">早晨散步，欣賞港口風光。</span>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-gray-700 flex items-center mb-1">
-                                        2. 銀門 / 皇宮入口 (5 min)
-                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Silver+Gate+Split" />
-                                    </div>
-                                </li>
-                                <li className="bg-yellow-50 p-2 rounded-lg border border-yellow-100">
-                                    <div className="font-bold text-gray-800 flex items-center mb-1">
-                                        3. 列柱中庭 Peristyle ⭐ (20 min)
-                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Peristyle+Split" />
-                                    </div>
-                                    <span className="text-xs text-gray-600 block">皇宮的核心，最經典的打卡點。早晨人少，運氣好會遇到羅馬士兵換崗表演。</span>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-gray-700 flex items-center mb-1">
-                                        4. 聖多普努斯大教堂 & 鐘樓 (20-50 min)
-                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Cathedral+of+Saint+Domnius" />
-                                    </div>
-                                    <span className="text-xs text-gray-500 block">Split Cathedral。若體力允許，強烈建議登鐘樓，俯瞰紅瓦屋頂與大海。</span>
-                                </li>
-                                <li className="bg-gray-50 p-2 rounded-lg border border-gray-100">
-                                    <div className="font-bold text-gray-800 flex items-center mb-1">
-                                        5. 皇宮地下室 Substructures ⭐ (25-40 min)
-                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Diocletians+Cellars" />
-                                    </div>
-                                    <span className="text-xs text-gray-600 block">巨大的石造空間，是《冰與火之歌：權力遊戲》龍母關龍的拍攝地，非常壯觀。</span>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-gray-700 mb-1">
-                                        6. 水果廣場 (Fruit Square) (10 min)
-                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Fruit+Square+Split" />
-                                    </div>
-                                </li>
-                            </ul>
-                        </Fragment>
-                    ),
-                    tips: ['皇宮地下室必看', '早點出發避開遊輪人潮']
+  id: 'd13-1',
+  time: '08:30',
+  title: '戴克里先皇宮精華漫步',
+  type: 'sightseeing',
+  iconName: 'MapPin',
+  subtitle: 'Peristyle • 地下室 • Riva',
+  location: 'Diocletian\'s Palace',
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Diocletians+Palace',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        今天上午以 Split 舊城精華為主，補齊戴克里先皇宮最經典的幾個角落。這是一座「活著的皇宮」，古羅馬石牆、居民生活、咖啡館與小巷自然融合。因中午要跨國前往莫斯塔爾，建議採 2 小時精華版，不要把上午排太滿。
+      </p>
+      <ul className="text-sm text-gray-600 space-y-3 list-none pl-0">
+        <li>
+          <div className="font-bold text-gray-700 flex items-center mb-1">
+            1. Riva 海濱步道
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Riva+Split" />
+          </div>
+          <span className="text-xs text-gray-500 block">早晨散步，欣賞港口風光，也適合作為進入舊城前的暖身。</span>
+        </li>
+        <li className="bg-yellow-50 p-2 rounded-lg border border-yellow-100">
+          <div className="font-bold text-gray-800 flex items-center mb-1">
+            2. 列柱中庭 Peristyle ⭐
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Peristyle+Split" />
+          </div>
+          <span className="text-xs text-gray-600 block">皇宮核心與最經典打卡點，早晨人潮相對少，石柱與拱門光影很漂亮。</span>
+        </li>
+        <li>
+          <div className="font-bold text-gray-700 flex items-center mb-1">
+            3. 聖多米努斯主教座堂 & 鐘樓
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Cathedral+of+Saint+Domnius" />
+          </div>
+          <span className="text-xs text-gray-500 block">若體力與時間允許，可登鐘樓俯瞰紅瓦屋頂與港口；若時間緊，外觀與中庭周邊拍照即可。</span>
+        </li>
+        <li className="bg-gray-50 p-2 rounded-lg border border-gray-100">
+          <div className="font-bold text-gray-800 flex items-center mb-1">
+            4. 皇宮地下室 Substructures ⭐
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Diocletians+Cellars" />
+          </div>
+          <span className="text-xs text-gray-600 block">巨大的石造空間，是 Split 最有震撼力的古羅馬遺構之一。若鐘樓與地下室只能選一個，我會優先選地下室。</span>
+        </li>
+        <li>
+          <div className="font-bold text-gray-700 flex items-center mb-1">
+            5. 水果廣場 Fruit Square
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Fruit+Square+Split" />
+          </div>
+          <span className="text-xs text-gray-500 block">順路穿過舊城巷弄，作為散步收尾。</span>
+        </li>
+      </ul>
+    </Fragment>
+  ),
+  tips: ['上午採精華版即可', '皇宮地下室很值得看', '11:00 左右準備用餐與取車']
                 },
                 {
-                    id: 'd13-2',
-                    time: '11:30',
-                    title: '舊城午餐 & 咖啡',
-                    type: 'food',
-                    iconName: 'Coffee',
-                    subtitle: '自由活動',
-                    location: 'Split Old Town',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                在迷宮般的巷弄中找間咖啡館休息，或是享用午餐。請務必在 12:00 前結束用餐，準備出發前往莫斯塔爾。
-                            </p>
-                            <div className="mt-6 border-t border-gray-100 pt-6">
-                                <h4 className="font-bold text-gray-800 mb-3">【午餐選項】</h4>
-                                <ul className="list-none pl-0 space-y-4">
-                                    <li>
-                                        <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                            Villa Spiza
-                                            <MapLink url="https://maps.app.goo.gl/K2AzkU2ia2uMNgKZ7" />
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                            Pizzeria Sette Sorelle
-                                            <MapLink url="https://maps.app.goo.gl/pLLwDwibaqLcqjJC8" />
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['把握時間，準備跨國移動']
+  id: 'd13-2',
+  time: '11:00',
+  title: '早午餐 & 咖啡',
+  type: 'food',
+  iconName: 'Coffee',
+  subtitle: '出發前補給',
+  location: 'Split Old Town',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        在舊城簡單用餐、喝杯咖啡，接著回住宿取行李與車輛，準備跨國前往莫斯塔爾。這餐不建議排太正式，重點是補充體力並準時出發。
+      </p>
+      <div className="mt-6 border-t border-gray-100 pt-6">
+        <h4 className="font-bold text-gray-800 mb-3">【輕食選項】</h4>
+        <ul className="list-none pl-0 space-y-4">
+          <li>
+            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+              Villa Spiza
+              <MapLink url="https://maps.app.goo.gl/K2AzkU2ia2uMNgKZ7" />
+            </div>
+            <p className="text-xs text-gray-500 leading-relaxed">熱門小餐館，若剛好有位可吃；若需等待太久，建議直接改其他輕食。</p>
+          </li>
+          <li>
+            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+              Pizzeria Sette Sorelle
+              <MapLink url="https://maps.app.goo.gl/pLLwDwibaqLcqjJC8" />
+            </div>
+            <p className="text-xs text-gray-500 leading-relaxed">較輕鬆快速的披薩選項，適合出發前簡單補給。</p>
+          </li>
+        </ul>
+      </div>
+    </Fragment>
+  ),
+  tips: ['不要吃太久，12:00 準時出發', '護照與租車跨境文件放在容易拿的位置']
                 },
                 {
-                    id: 'd13-3',
-                    time: '12:00',
-                    title: '前往莫斯塔爾',
-                    type: 'transport',
-                    iconName: 'Car',
-                    subtitle: '跨國移動 • 車程約 3 小時',
-                    location: 'Mostar, Bosnia & Herzegovina',
-                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Mostar+Old+Bridge',
-                    desc: '告別克羅埃西亞海岸，提早出發前往波士尼亞與赫塞哥維納的古城——莫斯塔爾 (Mostar)。預計 15:00 左右抵達，準備迎接截然不同的異國風情。',
-                    tips: ['準備護照過境', '注意波士尼亞入境規定', '山路駕駛請注意安全']
+  id: 'd13-3',
+  time: '12:00',
+  title: '前往莫斯塔爾',
+  type: 'transport',
+  iconName: 'Car',
+  subtitle: '跨國移動 • 車程約 3 小時＋邊境緩衝',
+  location: 'Mostar, Bosnia & Herzegovina',
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Mostar+Old+Bridge',
+  desc: '告別克羅埃西亞海岸，開車前往波士尼亞與赫塞哥維納的古城莫斯塔爾。這段車程通常約 3 小時，但因需跨越克羅埃西亞與波士尼亞邊境，建議預留檢查與等待時間。抵達後先辦理入住、補水休息，再步行進入舊城。',
+  tips: ['準備護照過境', '確認租車可跨境與保險文件', '波士尼亞部分地方可能較常用現金']
                 },
                 {
-                    id: 'd13-4',
-                    time: '15:00',
-                    title: 'Shangri La Mansion',
-                    type: 'hotel',
-                    iconName: 'BedDouble',
-                    subtitle: 'Booking/check in',
-                    location: 'Shangri La Mansion',
-                    mapLink: 'https://maps.app.goo.gl/QuS8gZQkZc8o6PeE7',
-                    desc: '抵達莫斯塔爾的住宿地點辦理入住手續，放下行李、補充水分，換上輕便的鞋子，準備出門探索舊城區。',
-                    tips: ['詢問停車位置', '換上好走的鞋子']
+  id: 'd13-4',
+  time: '15:30',
+  title: 'Shangri La Mansion',
+  type: 'hotel',
+  iconName: 'BedDouble',
+  subtitle: 'Booking / check-in',
+  location: 'Shangri La Mansion',
+  mapLink: 'https://maps.app.goo.gl/QuS8gZQkZc8o6PeE7',
+  desc: '抵達莫斯塔爾住宿地點，辦理入住、停車與放行李。稍微補充水分，換上防滑好走的鞋子，再步行前往舊城區。',
+  tips: ['詢問停車位置', '莫斯塔爾舊城石板路很滑，鞋子很重要']
                 },
                 {
-                    id: 'd13-5',
-                    time: '15:30',
-                    title: '莫斯塔爾舊市集',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: 'Kujundžiluk Bazar',
-                    location: 'Kujundžiluk, Mostar',
-                    mapLink: 'https://maps.app.goo.gl/T65mCuf6kzmqwQ3f7',
-                    desc: '逛逛這條充滿色彩的手工藝品街和銅器街，體驗奧斯曼時期的古老市集氛圍。這是拍攝聖橋 (Stari Most) 河岸視角的第一個角度。',
-                    tips: ['逛彩色手工藝、銅器街', '拍老橋的第一個角度']
+  id: 'd13-5',
+  time: '16:15',
+  title: '莫斯塔爾舊市集',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: 'Kujundžiluk Bazar',
+  location: 'Kujundžiluk, Mostar',
+  mapLink: 'https://maps.app.goo.gl/T65mCuf6kzmqwQ3f7',
+  desc: '從住宿步行進入舊城，逛逛充滿色彩的手工藝品街與銅器街，感受奧斯曼時期市集氛圍。沿途可慢慢接近 Stari Most 老橋，先拍河岸與市集交織的第一個角度。',
+  tips: ['逛彩色手工藝與銅器街', '舊城石板路很滑，慢慢走']
                 },
                 {
-                    id: 'd13-6',
-                    time: '16:10',
-                    title: '科斯基穆罕默德帕夏清真寺',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: 'Koski Mehmed Pasha Mosque',
-                    location: 'Koski Mehmed Pasha Mosque',
-                    mapLink: 'https://maps.app.goo.gl/aDvyJSTFK6xFuuLc6',
-                    desc: '這座清真寺位於河岸邊，是拍攝莫斯塔爾老橋 (Stari Most) 最經典角度的絕佳地點。特別推薦在午後光線下拍攝，景色更佳。',
-                    tips: ['最推薦午後光線', '塔樓比較窄，小心腳步', '需購買門票']
+  id: 'd13-6',
+  time: '16:50',
+  title: 'Koski Mehmed Pasha Mosque',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: '老橋經典俯瞰角度',
+  location: 'Koski Mehmed Pasha Mosque',
+  mapLink: 'https://maps.app.goo.gl/aDvyJSTFK6xFuuLc6',
+  desc: '這座清真寺位於 Neretva 河岸邊，是俯瞰 Stari Most 老橋與莫斯塔爾舊城的經典角度。若開放登塔，可以拍到老橋、河谷與石屋屋頂交疊的畫面；塔樓樓梯較窄，請放慢腳步。',
+  tips: ['午後與傍晚光線都很適合拍照', '塔樓較窄，小心腳步', '需購買門票']
                 },
                 {
-                    id: 'd13-7',
-                    time: '16:50',
-                    title: '內雷特瓦河畔散步',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: '橋下仰拍弧線',
-                    location: 'Neretva Riverbank, Mostar',
-                    mapLink: 'https://maps.app.goo.gl/kaG3PKUVvf9CdK8QA',
-                    desc: '沿著 Neretva 河畔漫步至老橋。在這個角度可以拍到老橋優美的「橋下仰拍弧線」。如果運氣好，可能會在下午時段看到當地人進行著名的跳橋表演。',
-                    tips: ['拍「橋下仰拍弧線」', '如果有跳橋者，通常在下午出現', '老橋石階較滑，請小心']
+  id: 'd13-7',
+  time: '17:40',
+  title: '內雷特瓦河畔散步',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: '橋下仰拍弧線',
+  location: 'Neretva Riverbank, Mostar',
+  mapLink: 'https://maps.app.goo.gl/kaG3PKUVvf9CdK8QA',
+  desc: '沿著 Neretva 河畔漫步至老橋下方，拍攝 Stari Most 優美的橋拱弧線。若運氣好，午後或傍晚可能看到當地跳橋表演；無論是否遇到表演，橋下視角都很值得停留。',
+  tips: ['拍「橋下仰拍弧線」', '若遇到跳橋表演，請注意人潮與隨身物品', '河邊石階濕滑，請小心']
                 },
                 {
-                    id: 'd13-8',
-                    time: '17:20',
-                    title: '晚餐 (Mostar)',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    subtitle: 'Hindin Han / Šadrvan / Urban Grill',
-                    location: 'Mostar Old Town',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                在莫斯塔爾舊城區享用晚餐，品嚐當地特色料理如 Ćevapi（烤肉卷）。
-                            </p>
-                            <h4 className="font-bold text-gray-800 mb-2 flex items-center">【餐廳推薦】</h4>
-                            <ul className="list-none pl-0 space-y-3">
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Hindin Han
-                                        <MapLink url="https://maps.app.goo.gl/3w5Ua45T1j4q2xHw8" />
-                                    </div>
-                                    <p className="text-xs text-gray-500 mt-1 leading-relaxed">最推薦，有河景座位且好拍照，食物傳統美味。</p>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Šadrvan
-                                        <MapLink url="https://maps.app.goo.com/Wc2k5P5wS4nK1vQW9" />
-                                    </div>
-                                    <p className="text-xs text-gray-500 mt-1 leading-relaxed">位於舊城中心，裝潢充滿當地特色。</p>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Urban Grill
-                                        <MapLink url="https://maps.app.goo.gl/FkG9w3xZgR2x2pXq9" />
-                                    </div>
-                                    <p className="text-xs text-gray-500 mt-1 leading-relaxed">提供西式烤肉和牛排，適合喜歡大口吃肉的人。</p>
-                                </li>
-                            </ul>
-                        </Fragment>
-                    ),
-                    tips: ['建議 Hindin Han：河景＋好拍照', '嘗試當地咖啡與甜點']
+  id: 'd13-8',
+  time: '18:30',
+  title: 'Mostar 傳統晚餐',
+  type: 'food',
+  iconName: 'Utensils',
+  subtitle: 'Hindin Han / Šadrvan / Urban Grill',
+  location: 'Mostar Old Town',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        在莫斯塔爾舊城區享用晚餐，品嚐 Ćevapi、烤肉、燉菜、波士尼亞咖啡與甜點等當地風味。若想要景觀與拍照，我會優先選 Hindin Han；若想要傳統裝潢與位置方便，Šadrvan 也很適合。
+      </p>
+      <h4 className="font-bold text-gray-800 mb-2 flex items-center">【餐廳推薦】</h4>
+      <ul className="list-none pl-0 space-y-3">
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Hindin Han
+            <MapLink url="https://maps.app.goo.gl/3w5Ua45T1j4q2xHw8" />
+          </div>
+          <p className="text-xs text-gray-500 mt-1 leading-relaxed">最推薦，有河景座位且好拍照，食物傳統美味。</p>
+        </li>
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Šadrvan
+            <MapLink url="https://maps.app.goo.gl/9vFWZ68GHpux9Zym6" />
+          </div>
+          <p className="text-xs text-gray-500 mt-1 leading-relaxed">位於舊城中心，裝潢充滿波士尼亞傳統特色，適合第一次來 Mostar。</p>
+        </li>
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Urban Grill
+            <MapLink url="https://maps.app.goo.gl/FkG9w3xZgR2x2pXq9" />
+          </div>
+          <p className="text-xs text-gray-500 mt-1 leading-relaxed">提供烤肉與西式料理，適合想吃得簡單、份量足的人。</p>
+        </li>
+      </ul>
+    </Fragment>
+  ),
+  tips: ['首選 Hindin Han：河景＋好拍照', '可嘗試波士尼亞咖啡與甜點', '部分餐廳或小店建議備現金']
                 },
                 {
-                    id: 'd13-9',
-                    time: '18:20',
-                    title: '老橋夕陽',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: '金色時刻 × 倒影',
-                    location: 'Stari Most (Old Bridge), Mostar',
-                    desc: '晚餐後返回老橋，拍攝日落時分的景色。抓住「金色時刻」，捕捉夕陽餘暉灑在老橋與 Neretva 河面上的倒影，景色如詩如畫。',
-                    tips: ['拍「金色時刻 × 老橋倒影」', '老橋上人潮較多，注意安全']
-                },
-                {
-                    id: 'd13-10',
-                    time: '19:00',
-                    title: '舊城夜景散步',
-                    type: 'relax',
-                    iconName: 'Coffee',
-                    subtitle: '點燈後的橋',
-                    location: 'Mostar Old Town',
-                    desc: '在夜色中漫步於舊城區，回到噴泉廣場. 小巷中的路燈燈光昏黃，氣氛浪漫。最後，別忘了在不同角度拍攝一次點燈後的老橋，展現它不同的魅力。',
-                    tips: ['回到噴泉廣場', '最後拍一次點燈後的橋']
+  id: 'd13-9',
+  time: '19:45',
+  title: '老橋夜景散步',
+  type: 'relax',
+  iconName: 'Coffee',
+  subtitle: 'Stari Most 點燈後',
+  location: 'Mostar Old Town',
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Stari+Most+Mostar',
+  desc: '晚餐後回到 Stari Most 老橋周邊散步。若時間剛好，可捕捉金色時刻與河面倒影；天色轉暗後，點燈的老橋與昏黃小巷會呈現完全不同的氣氛。可以從橋上、橋下河岸與市集入口各拍一次。',
+  tips: ['老橋石面非常滑，請小心行走', '夜間拍照注意隨身物品', '最後可回到噴泉廣場周邊散步']
                 }
             ],
             14: [
