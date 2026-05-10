@@ -1805,76 +1805,53 @@
                     tips: []
                 },
                 {
-                    id: 'd8-7',
-                    time: '16:00',
-                    title: '羅維尼日落時光',
-                    type: 'relax',
-                    iconName: 'Coffee',
-                    subtitle: 'Old Town / Port Sunset',
-                    location: 'Rovinj Port',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                羅維尼的傍晚是最迷人的時刻。魚市場與市中心港口是拍照的絕佳地點，可以拍到色彩斑斕的房子倒映在海水中。
-                            </p>
-                            <div className="mb-4">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">推薦海邊小酒吧：</h4>
-                                <ul className="text-sm text-gray-600 space-y-1 list-none pl-0">
-                                    <li>
-                                        <div className="flex items-center">
-                                            Mediterraneo Bar
-                                            <MapLink url="https://www.google.com/maps/search/?api=1&query=Mediterraneo+Bar+Rovinj" />
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className="flex items-center">
-                                            La Puntulina (也有酒吧區)
-                                            <MapLink url="https://www.google.com/maps/search/?api=1&query=La+Puntulina+Rovinj" />
-                                        </div>
-                                    </li>
-                                </ul>
-                                <p className="text-sm text-gray-600 mt-2 leading-relaxed">坐在石階上喝一杯，看著夕陽落入海中，是羅維尼最經典的體驗。</p>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['海邊石頭較硬，可帶坐墊', '日落景色絕美']
+  id: 'd8-7',
+  time: '16:00',
+  title: '羅維尼午後海邊時光',
+  type: 'relax',
+  iconName: 'Coffee',
+  subtitle: 'Old Town / Port / Sunset',
+  location: 'Rovinj Port',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        回到羅維尼後，把節奏放慢。可以在港口、市中心海邊或舊城小巷散步，找間海邊酒吧坐下來，等待夕陽慢慢染上海面。
+      </p>
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">推薦海邊小酒吧：</h4>
+        <ul className="text-sm text-gray-600 space-y-1 list-none pl-0">
+          <li>
+            <div className="flex items-center">
+              Mediterraneo Bar
+              <MapLink url="https://www.google.com/maps/search/?api=1&query=Mediterraneo+Bar+Rovinj" />
+            </div>
+          </li>
+          <li>
+            <div className="flex items-center">
+              La Puntulina 酒吧區
+              <MapLink url="https://www.google.com/maps/search/?api=1&query=La+Puntulina+Rovinj" />
+            </div>
+          </li>
+        </ul>
+        <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+          坐在海邊喝一杯，看著夕陽落入亞得里亞海，是羅維尼最經典的體驗之一。
+        </p>
+      </div>
+    </Fragment>
+  ),
+  tips: ['熱門海景座位建議提早卡位', '海邊石階較硬，可帶薄外套或坐墊']
                 },
                 {
-                    id: 'd8-8',
-                    time: '19:00',
-                    title: '海鮮晚餐',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    subtitle: 'La Puntulina / Kantinon',
-                    location: 'Rovinj',
-                    desc: (
-                        <Fragment>
-                            <ul className="list-none pl-0 space-y-4">
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        La Puntulina
-                                        <MapLink url="https://maps.app.goo.gl/HftfrvrUuebu4f149" />
-                                    </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">懸崖邊的景觀餐廳，可以邊吃海鮮邊看海，非常熱門，務必預訂。</p>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Kantinon Tavern
-                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Kantinon+Tavern+Rovinj" />
-                                    </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">提供道地的伊斯特里亞傳統料理與海鮮，更有在地氛圍。</p>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Spacio Matika
-                                        <MapLink url="https://maps.app.goo.gl/LFVZ4J5r9vk6KyFy5" />
-                                    </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">體驗傳統羅維尼酒館文化 (Spacio) 的好地方，氣氛輕鬆。</p>
-                                </li>
-                            </ul>
-                        </Fragment>
-                    ),
-                    tips: ['Rovinj 海鮮非常新鮮推薦']
+  id: 'd8-8',
+  time: '19:00',
+  title: '羅維尼海景晚餐',
+  type: 'food',
+  iconName: 'Utensils',
+  subtitle: 'La Puntulina',
+  location: 'La Puntulina',
+  mapLink: 'https://maps.app.goo.gl/HftfrvrUuebu4f149',
+  desc: '在羅維尼舊城海邊的 La Puntulina 享用晚餐。這天已經從普拉回到羅維尼，有足夠時間提早抵達舊城與海邊，適合安排一頓有夕陽、海景與海鮮的晚餐。',
+  tips: ['非常熱門，務必事先預訂', '建議預約日落前後時段', '若訂不到，可改 Kantinon 或 Spacio Matika']
                 }
             ],
             9: [
