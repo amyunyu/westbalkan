@@ -1856,55 +1856,58 @@
             ],
             9: [
                 {
-                    id: 'd9-1',
-                    time: '09:00',
-                    title: '羅維尼全景 & 教堂',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: 'Panorama & St. Euphemia',
-                    location: 'Rovinj',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                退房後把握早晨的最佳光線。前往 Panorama Lookout 拍攝羅維尼彷彿漂浮在海上的經典城景。
-                            </p>
-                            <div className="mb-4">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【St. Euphemia 教堂】
-                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Church+of+St+Donatus" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    這座巴洛克式教堂位於舊城最高點，守護著這座城市。若塔樓開放，建議登頂俯瞰紅瓦屋頂與蔚藍亞得里亞海的絕美對比。
-                                </p>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['早上光線順光適合拍照']
+  id: 'd9-1',
+  time: '08:30',
+  title: '羅維尼全景 & 教堂',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: 'Panorama & St. Euphemia',
+  location: 'Rovinj',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        退房前把握早晨光線，前往 Panorama Lookout 拍攝羅維尼彷彿漂浮在海上的經典城景。若時間充裕，再順路走上舊城最高點的 St. Euphemia 教堂周邊。
+      </p>
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【St. Euphemia 教堂】
+          <MapLink url="https://maps.app.goo.gl/fRMuoF7qoEZysKmt7" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          這座巴洛克式教堂位於舊城最高點，守護著羅維尼。若塔樓開放且時間充裕，可登頂俯瞰紅瓦屋頂與亞得里亞海；若時間有限，外觀與教堂廣場周邊拍照即可。
+        </p>
+      </div>
+    </Fragment>
+  ),
+  tips: ['早上光線適合拍羅維尼全景', '退房日前不要排太滿，保留整理行李時間']
                 },
                 {
-                    id: 'd9-checkout',
-                    time: '10:00',
-                    title: 'Check out',
-                    type: 'compact',
-                    iconName: 'Clock',
-                    location: 'Parking Location',
-                    mapLink: 'https://maps.app.goo.gl/vVg2zjfzU9WXba4p9'
+  id: 'd9-checkout',
+  time: '10:00',
+  title: 'Check out',
+  type: 'compact',
+  iconName: 'Clock',
+  subtitle: '整理行李、取車',
+  location: 'Parking Location',
+  mapLink: 'https://maps.app.goo.gl/vVg2zjfzU9WXba4p9',
+  desc: '辦理退房、整理行李並取車，準備離開羅維尼，開往克羅埃西亞內陸的 Rastoke。',
+  tips: ['確認住宿鑰匙或自助退房方式', '長途車程前先補水、上洗手間']
                 },
                 {
-                    id: 'd9-2',
-                    time: '10:00',
-                    title: '前往拉斯托克小鎮',
-                    type: 'transport',
-                    iconName: 'Car',
-                    subtitle: '18世紀水磨坊/車程3h10',
-                    location: 'Rastoke, Croatia',
-                    mapLink: 'https://maps.app.goo.gl/Qr7cMxXrHWwj1MKt8',
-                    desc: '告別海岸，開車前往克羅埃西亞著名的水磨坊村落——拉斯托克 (Rastoke)。這是一段較長的內陸山林車程，建議中途適時休息。',
-                    tips: ['路程較長請預留休息時間', '抵達後將有驚喜的水色美景']
+  id: 'd9-2',
+  time: '10:30',
+  title: '前往 Rastoke',
+  type: 'transport',
+  iconName: 'Car',
+  subtitle: '18世紀水磨坊/車程3h10',
+  location: 'Rastoke, Croatia',
+  mapLink: 'https://maps.app.goo.gl/Qr7cMxXrHWwj1MKt8',
+  desc: '告別亞得里亞海岸，開車前往克羅埃西亞著名的水磨坊村落 Rastoke。這是一段較長的內陸車程，建議中途視情況休息、補水或加油。',
+  tips: ['路程較長，建議中途休息', '抵達後先用午餐，再慢慢散步拍照']
                 },
                 {
                     id: 'd9-3',
-                    time: '13:15',
+                    time: '14:00',
                     title: '18世紀水磨坊',
                     type: 'sightseeing',
                     iconName: 'Camera',
@@ -1914,7 +1917,7 @@
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                拉斯托克被譽為「小十六湖」，是一個充滿童話氣息的古老村莊。這裡以18世紀的水磨坊和交錯的瀑布景致聞名，河流在進入峽谷前形成無數天然水池。
+                                Rastoke 被譽為「小十六湖」，是一個充滿童話氣息的水磨坊村落。溪流穿過老屋、木橋與石板路，形成層層小瀑布與清澈水池，非常適合作為前往十六湖前的悠閒停靠點。
                             </p>
                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
@@ -1922,36 +1925,38 @@
                                     <MapLink url="https://maps.app.goo.gl/YKAvuVKhYuK48HZJ6" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
-                                    在村落周邊享用美味午餐。這間餐館提供道地的在地料理，是在此休憩補充體力的好選擇。
+                                    在村落周邊享用午餐，補充長途車程後的體力。若時間充裕，也可以選擇靠近水邊的餐廳，慢慢感受流水與古宅交織的寧靜。
                                 </p>
                             </div>
-                            <p className="text-sm text-gray-600 leading-relaxed text-justify">在此停留散步約 45 分鐘至 1 小時，感受流水與古宅交織的寧靜。建築外牆與石板路非常有味道。</p>
+                            <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                建議停留約 1.5–2 小時，包含午餐、散步與拍照。若抵達時間較晚，就以午餐和村落核心區短程散步為主。
+                            </p>
                         </Fragment>
                     ),
-                    tips: ['瀑布聲非常宏大', '氣氛非常寧靜適合拍照']
+                    tips: ['水邊石板路可能濕滑，建議穿好走的鞋', '午餐後保留時間前往十六湖住宿']
                 },
                 {
                     id: 'd9-4',
-                    time: '15:00',
+                    time: '16:00',
                     title: '前往十六湖',
                     type: 'transport',
                     iconName: 'Car',
-                    subtitle: '備註車程約50m',
+                    subtitle: '車程約50m',
                     location: 'Plitvice Lakes National Park',
                     desc: '開車前往克羅埃西亞最著名的普利特維采湖群國家公園 (十六湖)。沿途風景將從地中海景觀轉變為內陸山林景色。',
                     tips: ['山路駕駛請注意安全']
                 },
                 {
-                    id: 'd9-5',
-                    time: '16:30',
-                    title: 'Hotel Jezero',
-                    type: 'hotel',
-                    iconName: 'BedDouble',
-                    subtitle: 'Booking/check in',
-                    location: 'Hotel Jezero',
-                    mapLink: 'https://maps.app.goo.gl/SZXmLHcbfiHt2gt16',
-                    desc: '抵達住宿地點辦理入住。建議選擇靠近 Entrance 1 或 Entrance 2 的住宿，以便明天一早就能進入園區，避開人潮並節省體力。',
-                    tips: ['早點休息為明日健行做準備', '確認好明日入園門票']
+  id: 'd9-5',
+  time: '17:00',
+  title: 'Hotel Jezero',
+  type: 'hotel',
+  iconName: 'BedDouble',
+  subtitle: 'Booking / check-in',
+  location: 'Hotel Jezero',
+  mapLink: 'https://maps.app.goo.gl/SZXmLHcbfiHt2gt16',
+  desc: '抵達十六湖國家公園旁的 Hotel Jezero，辦理入住並整理行李。今晚建議早點休息，確認明日入園門票、路線與裝備，為十六湖健行做準備。',
+  tips: ['確認明日入園門票與入口時間', '準備好外套、雨具、水與好走的鞋', '早點休息，明天一早進園避開人潮']
                 }
             ],
             10: [
