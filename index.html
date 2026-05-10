@@ -1248,7 +1248,7 @@
                 },
                 {
                     id: 'd5-5',
-                    time: '15:30',
+                    time: '15:00',
                     title: '布萊德島遊船',
                     type: 'activity',
                     iconName: 'Compass',
@@ -1269,7 +1269,7 @@
                 },
                 {
                     id: 'd5-6',
-                    time: '17:30',
+                    time: '17:00',
                     title: '布萊德城堡夕陽',
                     type: 'sightseeing',
                     iconName: 'Camera',
@@ -1282,24 +1282,42 @@
                                 登上懸崖邊的千年古堡，這裡是俯瞰全湖最壯闊的制高點。強烈建議黃昏時分前來，看著夕陽餘暉灑在湖面與遠方阿爾卑斯山頭，景色美不勝收。
                             </p>
                             <p className="text-sm text-gray-600 leading-relaxed">
-                                建議停留1-1.5小時參觀拍照，盡情享受這魔幻時刻。
+                                建議停留到 18:30，盡情享受這魔幻時刻。
                             </p>
                         </Fragment>
                     ),
                     tips: ['夕陽時分遊客較多，建議提早佔位', '城堡內有博物館與酒窖可參觀']
                 },
                 {
-  id: 'd5-7',
-  time: '19:30',
-  title: '布萊德湖畔晚餐',
-  type: 'food',
-  iconName: 'Utensils',
-  subtitle: 'Grajska plaža Restaurant',
-  location: 'Grajska plaža Restaurant',
-  mapLink: 'https://www.google.com/maps/search/?api=1&query=Grajska+plaza+Restaurant+Bled',
-  desc: '在布萊德湖畔的 Grajska plaža Restaurant 享用晚餐。餐廳位於城堡下方、湖岸邊，露台可欣賞布萊德湖與湖心島景色，氣氛比城堡餐廳更輕鬆，適合接在城堡夕陽後，慢慢用一頓湖景晚餐收尾。',
-  tips: ['季節性戶外餐廳，出發前需確認營業時間', '湖邊座位建議事先預約', '若天氣不佳，可改選 Steakhouse Berc 或其他室內餐廳']
-}
+                    id: 'd5-7',
+                    time: '19:00',
+                    title: '晚餐',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    subtitle: '城堡餐廳 / Vrtnarija',
+                    location: 'Bled',
+                    desc: (
+                        <Fragment>
+                            <ul className="list-none pl-0 space-y-4">
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Bled Castle Restaurant
+                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Bled+Castle+Restaurant" />
+                                    </div>
+                                    <p className="text-sm text-gray-600">景觀第一的餐廳，就在城堡內。一邊享用美食一邊欣賞夜景，非常浪漫（強烈建議預訂）。</p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Restaurant Vrtnarija
+                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Restaurant+Vrtnarija+Bled" />
+                                    </div>
+                                    <p className="text-sm text-gray-600">位於 Garden Village 内，主打在地食材與健康料理，環境綠意盎然，氣氛極佳。</p>
+                                </li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: ['熱門時段務必訂位']
+                }
             ],
             6: [
                 {
@@ -1317,12 +1335,12 @@
                 {
                     id: 'd6-2',
                     time: '09:30',
-                    title: '博希尼湖晨間散步',
+                    title: '博希尼湖畔走走',
                     type: 'sightseeing',
                     iconName: 'Camera',
-                    subtitle: '聖約翰教堂 • 湖面倒影',
+                    subtitle: '鏡面反射美景',
                     location: 'Lake Bohinj',
-                    mapLink: 'https://maps.app.goo.gl/5RNLjXnmXD8Yi5RCA',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Lake+Bohinj',
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
@@ -1342,41 +1360,41 @@
                     tips: ['湖水清澈見底', '適合深呼吸放鬆']
                 },
                 {
-  id: 'd6-3',
-  time: '10:15',
-  title: 'Vogel Cable Car',
-  type: 'activity',
-  iconName: 'Compass',
-  subtitle: '纜車上山＋山頂散步',
-  location: 'Vogel Ski Center',
-  mapLink: 'https://www.google.com/maps/search/?api=1&query=Vogel+Cable+Car',
-  desc: (
-    <Fragment>
-      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        搭乘纜車上山，從高處俯瞰博希尼湖與朱利安阿爾卑斯山景。若天氣晴朗，這會是整天最壯觀的視角之一。
-      </p>
-      <div className="mb-4">
-        <h4 className="font-bold text-gray-800 mb-1">【山頂亮點】</h4>
-        <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
-          <li>俯瞰深谷中的博希尼湖，視角震撼。</li>
-          <li>欣賞朱利安阿爾卑斯群峰與高山草地景色。</li>
-          <li>可在山頂短程散步，或找間咖啡館休息。</li>
-        </ul>
-      </div>
-      <div className="p-3 bg-gray-50 rounded-lg border border-gray-100 text-sm text-gray-600">
-        <span className="font-bold">☁️ 天氣判斷：</span> 若山區雲霧太厚、能見度不佳，可考慮不上山，改成延長湖畔散步、咖啡時間，或提早前往薩維察瀑布。
-      </div>
-    </Fragment>
-  ),
-  tips: ['山上氣溫較低，建議帶件薄外套', '上山前先確認雲量與能見度']
+                    id: 'd6-3',
+                    time: '10:00',
+                    title: 'Vogel Cable Car',
+                    type: 'activity',
+                    iconName: 'Compass',
+                    subtitle: '纜車上山＋山頂散步',
+                    location: 'Vogel Ski Center',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Vogel+Cable+Car',
+                    desc: (
+                        <Fragment>
+                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                                搭乘纜車直達海拔 1535 公尺的山頂，單趟僅需 4 分鐘。
+                            </p>
+                            <div className="mb-4">
+                                <h4 className="font-bold text-gray-800 mb-1">【山頂亮點】</h4>
+                                <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
+                                    <li>壯觀的朱利安阿爾卑斯群峰 (Julian Alps) 全景。</li>
+                                    <li>俯瞰深谷中的博希尼湖，視角震撼。</li>
+                                    <li>山上步道輕鬆好走，約 20-40 分鐘即可遊覽主要觀景點。</li>
+                                </ul>
+                            </div>
+                            <div className="p-3 bg-gray-50 rounded-lg border border-gray-100 text-sm text-gray-600">
+                                <span className="font-bold">☕️ 愜意推薦：</span> 在山頂的咖啡館喝杯咖啡或享用早午餐，被群山環抱的氣氛極佳。
+                            </div>
+                        </Fragment>
+                    ),
+                    tips: ['山上氣溫較低，建議帶件薄外套', '天氣晴朗時視野最佳']
                 },
                 {
                     id: 'd6-4',
                     time: '12:30',
-                    title: '博希尼湖區午餐',
+                    title: '博希尼午餐',
                     type: 'food',
                     iconName: 'Utensils',
-                    subtitle: 'Foksner / Restavracija Triglav',
+                    subtitle: 'Foksner / Triglav',
                     location: 'Ribčev Laz',
                     desc: (
                         <Fragment>
@@ -1401,12 +1419,12 @@
                             </ul>
                         </Fragment>
                     ),
-                    tips: ['若 Vogel 因天氣取消，可提前用餐或延長湖畔散步']
+                    tips: []
                 },
                 {
                     id: 'd6-5-combined',
-                    time: '14:15',
-                    title: '薩維察瀑布健行',
+                    time: '14:00',
+                    title: '薩維察瀑布 (Savica Waterfall)',
                     type: 'sightseeing',
                     iconName: 'Camera',
                     subtitle: '前往瀑布 & 步道健行',
@@ -1428,7 +1446,7 @@
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Savica+Waterfall" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                    這是斯洛維尼亞最著名的瀑布之一，也是薩瓦河 (Sava River) 的源頭。從停車場出發，需爬約 20-25 分鐘的階梯步道才能抵達觀景台。瀑布呈現獨特的字母「A」形（或說倒 Y 形），注入下方碧綠的水潭，顏色是夢幻的綠松石色，非常獨特且壯觀。
+                                    這是斯洛維尼亞最著名的瀑布之一，也是薩瓦河 (Sava River) 的源頭。從停車場出發，需爬約 20-25 分鐘的階梯步道才能抵達觀景台。瀑布呈現獨特的字母「A」形（或說倒 Y 形），注入下方碧綠的水潭，顏色是夢幻的錄松石色，非常獨特且壯觀。
                                 </p>
                             </div>
                         </Fragment>
@@ -1449,26 +1467,25 @@
                 {
                     id: 'd6-8',
                     time: '17:00',
-                    title: '回到布萊德湖畔放空',
+                    title: '湖邊休息／自由活動',
                     type: 'relax',
                     iconName: 'Coffee',
-                    subtitle: '奶油蛋糕 • 湖邊自由時間',
+                    subtitle: '布萊德奶油蛋糕',
                     location: 'Lake Bled',
-                    desc: '回到布萊德後，把節奏放慢。可以在湖畔長椅休息、品嚐布萊德奶油蛋糕 Kremna rezina，或補逛湖邊小店與紀念品。若前一天有未完成的活動，也可以利用這段時間彈性安排。'
+                    desc: '回到布萊德後，可以在湖畔找個長椅休息，或是享用著名的「布萊德奶油蛋糕」(Kremna rezina)。這段時間也可以用來補足昨天想做但沒時間完成的活動，或者採買紀念品。',
                     tips: ['享受悠閒的湖畔時光']
                 },
                 {
-  id: 'd6-9',
-  time: '19:30',
-  title: '布萊德悠閒晚餐',
-  type: 'food',
-  iconName: 'Utensils',
-  subtitle: 'Restavracija Steakhouse Berc',
-  location: 'Restavracija Steakhouse Berc',
-  mapLink: 'https://maps.app.goo.gl/ujktEB9G1GuhpRtd8',
-  desc: '回到布萊德後，在住宿旁的 Steakhouse Berc 享用晚餐。這天白天已經走訪博希尼湖、Vogel 山景與薩維察瀑布，晚上不再拉遠移動，適合用一頓舒適的晚餐慢慢收尾。',
-  tips: ['建議事先訂位', '若當天是週日，需確認是否營業']
-}
+                    id: 'd6-9',
+                    time: '19:00',
+                    title: '晚餐',
+                    type: 'food',
+                    iconName: 'Utensils',
+                    subtitle: 'Bled',
+                    location: 'Bled',
+                    desc: '在布萊德享用晚餐，為美好的一天畫下句點樣。',
+                    tips: []
+                }
             ],
             7: [
                 {
