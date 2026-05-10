@@ -287,7 +287,7 @@
                     type: 'transport',
                     iconName: 'Plane',
                     location: '札格瑞布機場 (ZAG)',
-                    subtitle: 'EK2012 DXB → ZAG (預計 13:30 抵達)',
+                    subtitle: 'EK2012/FZ1793 DXB → ZAG (預計 13:30 抵達)',
                     desc: '第二段飛行，搭乘 EK2012 前往克羅埃西亞首都。',
                     tips: ['調整時區 (GMT+2)']
                 },
@@ -299,12 +299,12 @@
                     iconName: 'MapPin',
                     location: 'Zagreb Airport',
                     mapLink: 'https://maps.app.goo.gl/zEc8CPN39NLXcLzf6',
-                    subtitle: '領取行李、EES 入境登錄、出關',
-                    desc: '抵達克羅埃西亞首都札格瑞布。\n領取行李後辦理申根區入境手續。\n★ 首次使用 EES 入境時，需完成護照掃描、臉部影像與指紋等生物辨識資料登錄，入境流程可能比以往稍久。'
+                    subtitle: '領取行李、出關',
+                    desc: '抵達克羅埃西亞首都札格瑞布。領取行李。',
                 },
                 {
                     id: 'd1-4',
-                    time: '15:00',
+                    time: '16:00',
                     title: 'Olive Tree City Apartment',
                     type: 'hotel',
                     iconName: 'BedDouble',
@@ -432,6 +432,15 @@
                     location: 'Zagreb',
                     desc: '享受美好的早餐時光，為新的一天補充滿滿活力。',
                     tips: []
+                },
+                {
+                    id: '-checkout-parking',
+                    time: '10:00',
+                    title: 'Check out & 停車',
+                    type: 'compact',
+                    iconName: 'Clock',
+                    location: 'Parking Location',
+                    mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36'
                 },
                 {
                     id: 'd2-combined',
@@ -1086,7 +1095,7 @@
                     title: '早安盧比安納：市場與咖啡',
                     type: 'food',
                     iconName: 'Coffee',
-                    subtitle: '中央市場 • 簡單咖啡早餐',
+                    subtitle: '中央市場 • 河岸早餐',
                     location: 'Central Market, Ljubljana',
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Central+Market+Ljubljana',
                     desc: (
@@ -1149,10 +1158,10 @@
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                從盧比安納開車前往布萊德，車程約 45 分鐘。抵達後先處理停車，再慢慢走向湖畔午餐。
+                                抵達布萊德後，先享用一頓美味的湖景午餐。
                             </p>
                             <div className="p-3 bg-gray-50 rounded-lg border border-gray-100 text-sm text-gray-600">
-                                <span className="font-bold">🚗 駕駛提醒：</span> 沿著 A2 高速公路行駛，路況通常良好。接近布萊德湖區時車流與行人會增加，建議放慢速度，先確認停車位置再安排湖邊活動。
+                                <span className="font-bold">🚗 駕駛提醒：</span> 沿著 A2 高速公路行駛，路況通常良好。接近布萊德時可能會有些許車潮，請放慢速度欣賞沿途阿爾卑斯山腳下的美景。
                             </div>
                         </Fragment>
                     ),
@@ -1194,15 +1203,15 @@
                 {
                     id: 'd5-4',
                     time: '13:00',
-                    title: '布萊德湖畔散步',
+                    title: '布萊德湖散步',
                     type: 'sightseeing',
                     iconName: 'Camera',
-                    subtitle: '湖畔短程散步 • 拍湖心島',
+                    subtitle: '環湖步道',
                     location: 'Lake Bled',
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                午餐後沿著湖畔輕鬆散步，不必完整環湖，重點放在欣賞湖心島、城堡與阿爾卑斯山背景。這段時間很適合慢慢拍照、買杯咖啡或品嚐布萊德奶油蛋糕。
+                                沿著湖畔逆時針散步，全程平緩好走，約需 1-1.5 小時。這是感受布萊德湖寧靜之美的最佳方式。
                             </p>
                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
@@ -1239,7 +1248,7 @@
                 },
                 {
                     id: 'd5-5',
-                    time: '15:30',
+                    time: '15:00',
                     title: '布萊德島遊船',
                     type: 'activity',
                     iconName: 'Compass',
@@ -1260,7 +1269,7 @@
                 },
                 {
                     id: 'd5-6',
-                    time: '17:30',
+                    time: '17:00',
                     title: '布萊德城堡夕陽',
                     type: 'sightseeing',
                     iconName: 'Camera',
@@ -1281,15 +1290,33 @@
                 },
                 {
                     id: 'd5-7',
-                    time: '19:30',
-                    title: '布萊德湖畔晚餐',
+                    time: '19:00',
+                    title: '晚餐',
                     type: 'food',
                     iconName: 'Utensils',
-                    subtitle: 'Grajska plaža Restaurant',
-                    location: 'Grajska plaža Restaurant',
-                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Grajska+plaza+Restaurant+Bled',
-                    desc: '在布萊德湖畔的 Grajska plaža Restaurant 享用晚餐。餐廳位於城堡下方、湖岸邊，露台可欣賞布萊德湖與湖心島景色，氣氛比城堡餐廳更輕鬆，適合接在城堡夕陽後，慢慢用一頓湖景晚餐收尾。',
-                    tips: ['季節性戶外餐廳，出發前需確認營業時間', '湖邊座位建議事先預約', '若天氣不佳，可改選 Steakhouse Berc 或其他室內餐廳']
+                    subtitle: '城堡餐廳 / Vrtnarija',
+                    location: 'Bled',
+                    desc: (
+                        <Fragment>
+                            <ul className="list-none pl-0 space-y-4">
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Bled Castle Restaurant
+                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Bled+Castle+Restaurant" />
+                                    </div>
+                                    <p className="text-sm text-gray-600">景觀第一的餐廳，就在城堡內。一邊享用美食一邊欣賞夜景，非常浪漫（強烈建議預訂）。</p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Restaurant Vrtnarija
+                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Restaurant+Vrtnarija+Bled" />
+                                    </div>
+                                    <p className="text-sm text-gray-600">位於 Garden Village 内，主打在地食材與健康料理，環境綠意盎然，氣氛極佳。</p>
+                                </li>
+                            </ul>
+                        </Fragment>
+                    ),
+                    tips: ['熱門時段務必訂位']
                 }
             ],
             6: [
@@ -1307,11 +1334,11 @@
                 },
                 {
                     id: 'd6-2',
-                    time: '09:15',
-                    title: '博希尼湖晨間散步',
+                    time: '09:30',
+                    title: '博希尼湖畔走走',
                     type: 'sightseeing',
                     iconName: 'Camera',
-                    subtitle: '聖約翰教堂 • 湖面倒影',
+                    subtitle: '鏡面反射美景',
                     location: 'Lake Bohinj',
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Lake+Bohinj',
                     desc: (
@@ -1334,7 +1361,7 @@
                 },
                 {
                     id: 'd6-3',
-                    time: '10:15',
+                    time: '10:00',
                     title: 'Vogel Cable Car',
                     type: 'activity',
                     iconName: 'Compass',
@@ -1344,30 +1371,30 @@
                     desc: (
                         <Fragment>
                             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                搭乘纜車上山，從高處俯瞰博希尼湖與朱利安阿爾卑斯山景。若天氣晴朗，這會是整天最壯觀的視角之一。
+                                搭乘纜車直達海拔 1535 公尺的山頂，單趟僅需 4 分鐘。
                             </p>
                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-1">【山頂亮點】</h4>
                                 <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
+                                    <li>壯觀的朱利安阿爾卑斯群峰 (Julian Alps) 全景。</li>
                                     <li>俯瞰深谷中的博希尼湖，視角震撼。</li>
-                                    <li>欣賞朱利安阿爾卑斯群峰與高山草地景色。</li>
-                                    <li>可在山頂短程散步，或找間咖啡館休息。</li>
+                                    <li>山上步道輕鬆好走，約 20-40 分鐘即可遊覽主要觀景點。</li>
                                 </ul>
                             </div>
                             <div className="p-3 bg-gray-50 rounded-lg border border-gray-100 text-sm text-gray-600">
-                                <span className="font-bold">☁️ 天氣判斷：</span> 若山區雲霧太厚、能見度不佳，可考慮不上山，改成延長湖畔散步、咖啡時間，或提早前往薩維察瀑布。
+                                <span className="font-bold">☕️ 愜意推薦：</span> 在山頂的咖啡館喝杯咖啡或享用早午餐，被群山環抱的氣氛極佳。
                             </div>
                         </Fragment>
                     ),
-                    tips: ['山上氣溫較低，建議帶件薄外套', '上山前先確認雲量與能見度']
+                    tips: ['山上氣溫較低，建議帶件薄外套', '天氣晴朗時視野最佳']
                 },
                 {
                     id: 'd6-4',
-                    time: '12:45',
-                    title: '博希尼湖區午餐',
+                    time: '12:30',
+                    title: '博希尼午餐',
                     type: 'food',
                     iconName: 'Utensils',
-                    subtitle: 'Foksner / Restavracija Triglav',
+                    subtitle: 'Foksner / Triglav',
                     location: 'Ribčev Laz',
                     desc: (
                         <Fragment>
@@ -1392,25 +1419,25 @@
                             </ul>
                         </Fragment>
                     ),
-                    tips: ['若 Vogel 因天氣取消，可提前用餐或延長湖畔散步']
+                    tips: []
                 },
                 {
                     id: 'd6-5-combined',
-                    time: '14:15',
-                    title: '薩維察瀑布健行',
+                    time: '14:00',
+                    title: '薩維察瀑布 (Savica Waterfall)',
                     type: 'sightseeing',
                     iconName: 'Camera',
-                    subtitle: 'Savica Waterfall • 階梯步道',
+                    subtitle: '前往瀑布 & 步道健行',
                     location: 'Slap Savica',
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Savica+Waterfall',
                     desc: (
                         <Fragment>
-                            <div className="mb-4">
+                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
                                     【前往瀑布】
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
-                                    午餐後開車前往 Savica Waterfall 停車場，車程約 20 分鐘。
+                                    午餐後開車前往 Savica Waterfall，車程約 20 分鐘。
                                 </p>
                             </div>
                             <div className="mb-4">
@@ -1419,12 +1446,12 @@
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Savica+Waterfall" />
                                 </h4>
                                 <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                    薩維察瀑布是博希尼地區最具代表性的自然景點之一，瀑布高約 78 公尺，水流呈現獨特的 A 字形注入下方碧綠水潭。從停車場出發需沿階梯步道上行，約 20–25 分鐘可抵達觀景台。
+                                    這是斯洛維尼亞最著名的瀑布之一，也是薩瓦河 (Sava River) 的源頭。從停車場出發，需爬約 20-25 分鐘的階梯步道才能抵達觀景台。瀑布呈現獨特的字母「A」形（或說倒 Y 形），注入下方碧綠的水潭，顏色是夢幻的錄松石色，非常獨特且壯觀。
                                 </p>
                             </div>
                         </Fragment>
                     ),
-                    tips: ['需購買門票', '階梯較多但路況良好', '建議穿防滑好走的鞋']
+                    tips: ['需購買門票', '階梯較多但路況良好', '不會太累，值得一走']
                 },
                 {
                     id: 'd6-7',
@@ -1440,25 +1467,24 @@
                 {
                     id: 'd6-8',
                     time: '17:00',
-                    title: '回到布萊德湖畔放空',
+                    title: '湖邊休息／自由活動',
                     type: 'relax',
                     iconName: 'Coffee',
                     subtitle: '布萊德奶油蛋糕',
                     location: 'Lake Bled',
-                    desc: '回到布萊德後，把節奏放慢。可以在湖畔長椅休息、品嚐布萊德奶油蛋糕 Kremna rezina，或補逛湖邊小店與紀念品。若前一天有未完成的活動，也可以利用這段時間彈性安排。'
+                    desc: '回到布萊德後，可以在湖畔找個長椅休息，或是享用著名的「布萊德奶油蛋糕」(Kremna rezina)。這段時間也可以用來補足昨天想做但沒時間完成的活動，或者採買紀念品。',
                     tips: ['享受悠閒的湖畔時光']
                 },
                 {
                     id: 'd6-9',
-                    time: '19:30',
-                    title: '布萊德悠閒晚餐',
+                    time: '19:00',
+                    title: '晚餐',
                     type: 'food',
                     iconName: 'Utensils',
-                    subtitle: 'Restavracija Steakhouse Berc',
-                    location: 'Restavracija Steakhouse Berc',
-                    mapLink: 'https://maps.app.goo.gl/ujktEB9G1GuhpRtd8',
-                    desc: '回到布萊德後，在住宿旁的 Steakhouse Berc 享用晚餐。這天白天已經走訪博希尼湖、Vogel 山景與薩維察瀑布，晚上不再拉遠移動，適合用一頓舒適的晚餐慢慢收尾。',
-                    tips: ['建議事先訂位', '若當天是週日，需確認是否營業']
+                    subtitle: 'Bled',
+                    location: 'Bled',
+                    desc: '在布萊德享用晚餐，為美好的一天畫下句點樣。',
+                    tips: []
                 }
             ],
             7: [
@@ -1473,27 +1499,15 @@
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Mala+Osojnica+Trailhead',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 攝影愛好者的必訪行程！清晨光線順光，是拍攝布萊德湖經典全景（湖、島、城堡、山巒）的絕佳時刻。
                             </p>
-                            <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                            <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 步道有些陡峭，單程約需 20-30 分鐘，建議穿著防滑好走的鞋子。山頂的視野絕對值得這番努力。
                             </p>
                         </Fragment>
                     ),
                     tips: ['步道較陡請小心', '記得帶水']
-                },
-                {
-                    id: 'd7-checkout',
-                    time: '08:30',
-                    title: '早餐／回住宿整理',
-                    type: 'compact',
-                    iconName: 'Coffee',
-                    subtitle: '早餐、整理行李',
-                    location: 'Penzion Berc',
-                    mapLink: 'https://maps.app.goo.gl/FQitHjh52aKmXW7g8',
-                    desc: 'Mala Osojnica 晨拍後回住宿享用早餐、整理行李，準備辦理退房並前往 Postojna Cave。',
-                    tips: ['確認相機、充電器與外套都已收好', '洞窟外套放在容易拿取的位置']
                 },
                 {
                     id: 'd7-2',
@@ -1504,8 +1518,8 @@
                     subtitle: '車程 1h10',
                     location: 'Postojna Cave Park',
                     mapLink: 'https://maps.app.goo.gl/9n7MVp4bRbEhCDMv9',
-                    desc: '享用早餐並辦理退房後，開車前往波斯托伊納溶洞。建議預留停車、簡單午餐與報到時間，洞窟導覽開始前至少 30 分鐘抵達入口。',
-                    tips: ['確認導航路線', '洞內約 10°C，外套放在容易拿取的位置', '若已訂票，提前準備 QR code']
+                    desc: '享用早餐並辦理退房後，開車前往歐洲最壯觀的鐘乳石洞——波斯托伊納溶洞 (Postojna Cave)。',
+                    tips: ['確認導航路線']
                 },
                 {
                     id: 'd7-3',
@@ -1513,125 +1527,66 @@
                     title: 'Postojna Cave 洞窟導覽',
                     type: 'sightseeing',
                     iconName: 'MapPin',
-                    subtitle: '洞窟小火車＋鐘乳石大廳',
+                    subtitle: '搭乘洞窟小火車',
                     location: 'Postojna Cave',
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Postojna+Cave+Entrance',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                全程約 1.5 小時的奇幻地底之旅。先搭乘洞窟小火車深入地底，再步行參觀壯麗的鐘乳石大廳，最後尋找傳說中的「人魚」洞螈。
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
+                                全程約 1.5 小時的奇幻地底之旅。首先搭乘復古的洞窟小火車深入地底，接著步行參觀壯麗的鐘乳石大廳，最後尋找傳說中的「人魚」（洞螈）。
                             </p>
-                            <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                洞內步道平整好走，但溫度約 10°C，務必攜帶外套或薄羽絨。
+                            <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
+                                這是世界唯一有雙軌鐵路的溶洞，規模宏大令人嘆為觀止。
                             </p>
                         </Fragment>
                     ),
-                    tips: ['洞內恆溫約 10°C，務必帶外套', '建議事先預約導覽', '導覽前至少 30 分鐘抵達入口']
+                    tips: ['洞內恆溫約10度，務必帶外套', '建議事先預約導覽']
                 },
                 {
                     id: 'd7-4',
-                    time: '15:45',
+                    time: '15:00',
                     title: 'Predjama Castle',
                     type: 'sightseeing',
                     iconName: 'Camera',
-                    subtitle: '懸崖洞窟城堡',
+                    subtitle: '洞窟城堡',
                     location: 'Predjama Castle',
-                    mapLink: 'https://maps.app.goo.gl/BQNTthtwchNGhMS56',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Predjama+Castle',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                距離溶洞僅15分鐘車程。這座城堡嵌在 123 公尺高的懸崖峭壁洞口，是金氏世界紀錄認證「世界上最大的洞窟城堡」。
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
+                                距離溶洞僅10分鐘車程。這座城堡嵌在 123 公尺高的懸崖峭壁洞口，是金氏世界紀錄認證「世界上最大的洞窟城堡」。
                             </p>
-                            <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                            <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 外觀極具震撼力，彷彿魔幻電影場景。內部展示了中世紀的生活與騎士埃拉澤姆 (Erazem) 的傳奇故事。
-                            </p>
-                            <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                若時間充裕可入內參觀；若當天行程已延後，也可以以外觀拍照為主，保留體力前往羅維尼。
                             </p>
                         </Fragment>
                     ),
-                    tips: [外觀必拍', '若時間緊，可只拍外觀不入內', '留意前往羅維尼的車程時間']
+                    tips: ['外觀必拍']
                 },
                 {
                     id: 'd7-5',
-                    time: '17:00',
+                    time: '16:00',
                     title: '前往羅維尼',
                     type: 'transport',
                     iconName: 'Car',
                     subtitle: '車程約 2 小時',
                     location: 'Rovinj, Croatia',
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Rovinj+Old+Town',
-                    desc: '離開斯洛維尼亞喀斯特地貌區，開車前往克羅埃西亞伊斯特里亞半島上的海港小城羅維尼。抵達時間可能受路況與停車影響，建議把晚上的舊城散步排得彈性一點。',
+                    desc: '跨越邊境進入克羅埃西亞，前往伊斯特里亞半島上最浪漫的城市——羅維尼 (Rovinj)。沿途欣賞地中海風情景致。',
                     tips: ['準備護照通關', '注意克羅埃西亞交通規則']
                 },
                 {
                     id: 'd7-6',
-                    time: '19:00',
+                    time: '18:00',
                     title: 'Loreto LYA SEA VIEW APARTMENTS',
                     type: 'hotel',
                     iconName: 'BedDouble',
                     subtitle: 'Booking/check in',
                     location: 'Loreto LYA Apartments',
                     mapLink: 'https://maps.app.goo.gl/vKh1GcrtsoXXU8sH9',
-                    desc: '辦理入住手續、放下行李。若抵達時間較晚，今晚以輕鬆散步與晚餐為主，不勉強安排太多景點。',
-                    tips: ['事先確認入住方式與停車資訊']
+                    desc: '辦理入住手續，放下行李。準備迎接亞得里亞海的夕陽。',
+                    tips: []
                 },
-                {
-                    id: 'd7-7',
-                    time: '20:00',
-                    title: '羅維尼舊城晚餐散步',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: 'St. Euphemia • 海邊晚餐',
-                    location: 'Rovinj Old Town',
-                    desc: (
-                        <Fragment>
-                            <div className="mb-4 flex items-center">
-                                <span className="font-bold text-gray-800">散步路線</span>
-                                <MapLink url="https://maps.app.goo.gl/6WL62poDFQ9MbSjW9" />
-                            </div>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                抵達羅維尼後，以輕鬆散步和晚餐為主。沿著舊城石板路慢慢往聖歐菲米亞教堂方向走，感受亞得里亞海小城入夜後的浪漫氣氛。
-                            </p>
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【散步重點：聖歐菲米亞教堂周邊】
-                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Church+of+St.+Euphemia+Rovinj" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    如果抵達時間順利，仍可在教堂廣場或海邊捕捉夕陽餘暉；若已天黑，舊城石板路與海港夜色也很適合慢慢散步。
-                                </p>
-                            </div>
-                            <div className="mb-4">
-                                <h4 className="font-bold text-gray-800 mb-2">【晚餐推薦】</h4>
-                                <ul className="list-none pl-0 space-y-4">
-                                    <li>
-                                        <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                            La Puntulina
-                                            <MapLink url="https://maps.app.goo.gl/HftfrvrUuebu4f149" />
-                                        </div>
-                                        <p className="text-sm text-gray-600 leading-relaxed">懸崖邊的景觀餐廳，可以邊吃海鮮邊看海，非常熱門，務必預訂。</p>
-                                    </li>
-                                    <li>
-                                        <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                            Kantinon Tavern
-                                            <MapLink url="https://www.google.com/maps/search/?api=1&query=Kantinon+Tavern+Rovinj" />
-                                        </div>
-                                        <p className="text-sm text-gray-600 leading-relaxed">提供伊斯特里亞傳統料理與海鮮，氛圍比景觀餐廳更在地。</p>
-                                    </li>
-                                    <li>
-                                        <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                            Spacio Matika
-                                            <MapLink url="https://maps.app.goo.gl/LFVZ4J5r9vk6KyFy5" />
-                                        </div>
-                                        <p className="text-sm text-gray-600 leading-relaxed">體驗傳統羅維尼酒館文化 Spacio 的好地方，氣氛輕鬆。</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['舊城石板路較滑，建議穿好走的鞋', '若抵達較晚，今晚以晚餐與短程散步為主', '熱門餐廳建議預訂']
-                }
                 {
                     id: 'd7-7',
                     time: '19:00',
@@ -1646,7 +1601,7 @@
                                 <span className="font-bold text-gray-800">散步路線</span>
                                 <MapLink url="https://maps.app.goo.gl/6WL62poDFQ9MbSjW9" />
                             </div>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 傍晚是羅維尼最魔幻的時刻。建議沿著蜿蜒的石板路漫步至舊城最高點的 <span className="font-bold text-gray-800">聖歐菲米亞教堂 (St. Euphemia)</span>。
                             </p>
 
@@ -1655,7 +1610,7 @@
                                     【夕陽觀景點：教堂廣場】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Church+of+St.+Euphemia+Rovinj" />
                                 </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
+                                <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed">
                                     這裡擁有開闊的視野，可以欣賞金黃色夕陽灑落在亞得里亞海上的絕美景色，是羅維尼必拍的黃金時刻。
                                 </p>
                             </div>
@@ -1668,21 +1623,21 @@
                                             La Puntulina
                                             <MapLink url="https://maps.app.goo.gl/HftfrvrUuebu4f149" />
                                         </div>
-                                        <p className="text-sm text-gray-600 leading-relaxed">懸崖邊的景觀餐廳，可以邊吃海鮮邊看海，非常熱門，務必預訂。</p>
+                                        <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed">懸崖邊的景觀餐廳，可以邊吃海鮮邊看海，非常熱門，務必預訂。</p>
                                     </li>
                                     <li>
                                         <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                             Kantinon Tavern
                                             <MapLink url="https://www.google.com/maps/search/?api=1&query=Kantinon+Tavern+Rovinj" />
                                         </div>
-                                        <p className="text-sm text-gray-600 leading-relaxed">提供道地的伊斯特里亞傳統料理與海鮮，更有在地氛圍。</p>
+                                        <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed">提供道地的伊斯特里亞傳統料理與海鮮，更有在地氛圍。</p>
                                     </li>
                                     <li>
                                         <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                             Spacio Matika
                                             <MapLink url="https://maps.app.goo.gl/LFVZ4J5r9vk6KyFy5" />
                                         </div>
-                                        <p className="text-sm text-gray-600 leading-relaxed">體驗傳統羅維尼酒館文化 (Spacio) 的好地方，氣氛輕鬆。</p>
+                                        <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed">體驗傳統羅維尼酒館文化 (Spacio) 的好地方，氣氛輕鬆。</p>
                                     </li>
                                 </ul>
                             </div>
@@ -1726,10 +1681,10 @@
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Pula+Arena',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 世界現存六大羅馬競技場之一，也是保存最完整的之一。這座建於西元一世紀的宏偉建築，曾是神鬼戰士搏鬥的場所。
                             </p>
-                            <p className="text-sm text-gray-600 leading-relaxed">
+                            <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed">
                                 上午的光線最適合拍攝競技場的外觀與內部。
                             </p>
                         </Fragment>
@@ -1739,18 +1694,18 @@
                 {
                     id: 'd8-zero',
                     time: '11:20',
-                    title: 'Zerostrasse 地下隧道',
+                    title: '零街地下隧道',
                     type: 'sightseeing',
                     iconName: 'Compass',
-                    subtitle: '奧匈時期軍事隧道',
+                    subtitle: 'Zerostrasse地下軍事隧道',
                     location: 'Zerostrasse',
-                    mapLink: 'https://maps.app.goo.gl/x5go2SYdV4mx5HbBA',
+                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Zerostrasse+Pula',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 這是普拉鮮為人知的地下世界，一戰時期建造的龐大防禦工事系統。
                             </p>
-                            <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
+                            <ul className="text-sm text-gray-600導致領先的文字對齊方式： space-y-1 list-disc pl-4">
                                 <li><span className="font-bold">位置便利：</span>距離競技場步行僅需 5 分鐘。</li>
                                 <li><span className="font-bold">參觀時間：</span>約 20–30 分鐘即可走完。</li>
                                 <li><span className="font-bold">特色體驗：</span>隧道內終年恆溫，非常涼爽（適合避暑）。冷冽的工業風格與地面的羅馬遺跡截然不同，拍照非常有氛圍。</li>
@@ -1761,11 +1716,11 @@
                 },
                 {
                     id: 'd8-4',
-                    time: '12:30',
-                    title: '普拉舊城散步',
+                    time: '12:00',
+                    title: '古城遺跡與堡壘巡禮',
                     type: 'sightseeing',
                     iconName: 'Camera',
-                    subtitle: '凱旋門、Forum、奧古斯都神廟',
+                    subtitle: '凱旋門、神廟、Pulski Fort',
                     location: 'Pula Old Town',
                     desc: (
                         <Fragment>
@@ -1774,74 +1729,89 @@
                                     【凱旋門 (Arch of the Sergii)】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Arch+of+the+Sergii" />
                                 </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    位於舊城區入口，是普拉最具代表性的古羅馬地標之一，適合順路拍照。
+                                <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed">
+                                    這座精美的古羅馬凱旋門位於舊城區入口，雕刻細緻，已有兩千年歷史。
                                 </p>
                             </div>
                             <div className="mb-6">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【Forum 與奧古斯都神廟】
+                                    【奧古斯都神廟 (Temple of Augustus)】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Temple+of+Augustus+Pula" />
                                 </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    市政廣場周邊保留了普拉古羅馬城市的核心氛圍，奧古斯都神廟外觀保存良好，是舊城散步的重點。
+                                <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed">
+                                    位於市政廣場 (Forum)，是獻給羅馬第一位皇帝奧古斯都的神廟，保存狀況極佳，見證了普拉悠久的歷史。
                                 </p>
                             </div>
                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【可選：威尼斯堡壘 Kaštel】
+                                    【威尼斯堡壘 (Pulski Fort / Kaštel)】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Pula+Castle+Kastel" />
                                 </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    若時間與體力充裕，可上到市中心高處的星形堡壘，俯瞰普拉市景、競技場與海港。
+                                <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed">
+                                    這座星形要塞由威尼斯人建於17世紀，矗立在市中心的最高點。不僅是重要的防禦工事，現在更是俯瞰普拉市景、競技場與海港的最佳瞭望台。
                                 </p>
                             </div>
                         </Fragment>
                     ),
-                    tips: ['舊城石板路較滑，建議穿好走的鞋', 'Kaštel 需爬坡，可視體力決定']
+                    tips: ['堡壘需爬坡，視野極佳']
                 },
                 {
                     id: 'd8-5',
-                    time: '13:30',
+                    time: '13:00',
                     title: '普拉午餐',
                     type: 'food',
                     iconName: 'Utensils',
-                    subtitle: 'Istrian / Pizza / Grill',
+                    subtitle: '在地美食推薦',
                     location: 'Pula City Center',
                     desc: (
                         <Fragment>
                             <ul className="list-none pl-0 space-y-4">
                                 <li>
                                     <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Pjero Istrian Gourmet
-                                        <MapLink url="https://maps.app.goo.gl/F2FWtpkq8UEybUrA9" />
-                                    </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                        精緻的伊斯特里亞風味料理，適合想在普拉午餐吃得有特色一點。
-                                    </p>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                         Jupiter
                                         <MapLink url="https://www.google.com/maps/search/?api=1&query=Pizzeria+Jupiter+Pula" />
                                     </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                        位於市中心，披薩與義大利麵選擇多，適合想快速、方便用餐。
-                                    </p>
+                                    <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">當地著名的披薩與義大利麵餐廳，份量足、口味好。</p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Taj Tavern
+                                        <MapLink url="https://maps.app.goo.gl/nGRxbhLoCR9qn4Es9" />
+                                    </div>
+                                    <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">距離市區開車 10 分鐘，氛圍傳統道地的餐廳。</p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Pjero Istrian Gourmet
+                                        <MapLink url="https://maps.app.goo.gl/F2FWtpkq8UEybUrA9" />
+                                    </div>
+                                    <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">精緻的伊斯特里亞風味料理，食材上乘。</p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Padela
+                                        <MapLink url="https://maps.app.goo.gl/cYUJ3uocMsf6XKcV7" />
+                                    </div>
+                                    <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">深受台灣旅人好評推薦，提供美味的家常感料理。</p>
+                                </li>
+                                <li>
+                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                                        Farabuto
+                                        <MapLink url="https://maps.app.goo.gl/7ggiUmSeo7ugnkvF7" />
+                                    </div>
+                                    <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">高品質的海鮮與在地料理，深受當地人喜愛。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                         Kod Kadre
                                         <MapLink url="https://maps.app.goo.gl/XtQtkGjJc3jtffkZA" />
                                     </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                        傳統烤肉與在地風味，價格相對實惠，適合想吃飽一點的午餐。
-                                    </p>
+                                    <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">提供傳統烤肉與在地風味，價格實惠且道地。</p>
                                 </li>
                             </ul>
                         </Fragment>
                     ),
-                    tips: ['午餐建議不要排太久，保留下午回羅維尼的時間']
+                    tips: []
                 },
                 {
                     id: 'd8-6',
@@ -1864,12 +1834,12 @@
                     location: 'Rovinj Port',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 羅維尼的傍晚是最迷人的時刻。魚市場與市中心港口是拍照的絕佳地點，可以拍到色彩斑斕的房子倒映在海水中。
                             </p>
                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">推薦海邊小酒吧：</h4>
-                                <ul className="text-sm text-gray-600 space-y-1 list-none pl-0">
+                                <ul className="text-sm text-gray-600導致領先的文字對齊方式： space-y-1 list-none pl-0">
                                     <li>
                                         <div className="flex items-center">
                                             Mediterraneo Bar
@@ -1883,7 +1853,7 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <p className="text-sm text-gray-600 mt-2 leading-relaxed">坐在石階上喝一杯，看著夕陽落入海中，是羅維尼最經典的體驗。</p>
+                                <p className="text-sm text-gray-600導致領先的文字對齊方式： mt-2 leading-relaxed">坐在石階上喝一杯，看著夕陽落入海中，是羅維尼最經典的體驗。</p>
                             </div>
                         </Fragment>
                     ),
@@ -1905,21 +1875,21 @@
                                         La Puntulina
                                         <MapLink url="https://maps.app.goo.gl/HftfrvrUuebu4f149" />
                                     </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">懸崖邊的景觀餐廳，可以邊吃海鮮邊看海，非常熱門，務必預訂。</p>
+                                    <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">懸崖邊的景觀餐廳，可以邊吃海鮮邊看海，非常熱門，務必預訂。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                         Kantinon Tavern
                                         <MapLink url="https://www.google.com/maps/search/?api=1&query=Kantinon+Tavern+Rovinj" />
                                     </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">提供道地的伊斯特里亞傳統料理與海鮮，更有在地氛圍。</p>
+                                    <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">提供道地的伊斯特里亞傳統料理與海鮮，更有在地氛圍。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                         Spacio Matika
                                         <MapLink url="https://maps.app.goo.gl/LFVZ4J5r9vk6KyFy5" />
                                     </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">體驗傳統羅維尼酒館文化 (Spacio) 的好地方，氣氛輕鬆。</p>
+                                    <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">體驗傳統羅維尼酒館文化 (Spacio) 的好地方，氣氛輕鬆。</p>
                                 </li>
                             </ul>
                         </Fragment>
@@ -1938,7 +1908,7 @@
                     location: 'Rovinj',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 退房後把握早晨的最佳光線。前往 Panorama Lookout 拍攝羅維尼彷彿漂浮在海上的經典城景。
                             </p>
                             <div className="mb-4">
@@ -1946,7 +1916,7 @@
                                     【St. Euphemia 教堂】
                                     <MapLink url="https://www.google.com/maps/search/?api=1&query=Church+of+St+Donatus" />
                                 </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
+                                <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed">
                                     這座巴洛克式教堂位於舊城最高點，守護著這座城市。若塔樓開放，建議登頂俯瞰紅瓦屋頂與蔚藍亞得里亞海的絕美對比。
                                 </p>
                             </div>
@@ -1986,7 +1956,7 @@
                     mapLink: 'https://maps.app.goo.gl/tue1f6uJDdXDBL3x5',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 拉斯托克被譽為「小十六湖」，是一個充滿童話氣息的古老村莊。這裡以18世紀的水磨坊和交錯的瀑布景致聞名，河流在進入峽谷前形成無數天然水池。
                             </p>
                             <div className="mb-4">
@@ -1994,11 +1964,11 @@
                                     【午餐推薦：Bistro Centar】
                                     <MapLink url="https://maps.app.goo.gl/YKAvuVKhYuK48HZJ6" />
                                 </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
+                                <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed">
                                     在村落周邊享用美味午餐。這間餐館提供道地的在地料理，是在此休憩補充體力的好選擇。
                                 </p>
                             </div>
-                            <p className="text-sm text-gray-600 leading-relaxed text-justify">在此停留散步約 45 分鐘至 1 小時，感受流水與古宅交織的寧靜。建築外牆與石板路非常有味道。</p>
+                            <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">在此停留散步約 45 分鐘至 1 小時，感受流水與古宅交織的寧靜。建築外牆與石板路非常有味道。</p>
                         </Fragment>
                     ),
                     tips: ['瀑布聲非常宏大', '氣氛非常寧靜適合拍照']
@@ -2039,11 +2009,11 @@
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Plitvice+Lakes+Entrance+2',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 <span className="font-bold text-gray-800">🟢 今日策略：路線 B（上下湖全覽）</span><br/>
                                 這是最適合您的路線！距離適中，體力消耗剛好，景色密度最高，且能一次看完上湖區的靜謐藍湖與下湖區的經典瀑布群。
                             </p>
-                            <p className="text-sm text-gray-600 leading-relaxed">
+                            <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed">
                                 選擇入口 2 進入，可以比入口 1 更快避開下游的塞車人潮。
                             </p>
                         </Fragment>
@@ -2061,14 +2031,14 @@
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Plitvice+Upper+Lakes',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 進園後先搭乘園區巴士到 ST3（上湖區起點）。您會站在十六湖最「安靜的高處」，直接開始欣賞深綠色的湖面與森林步道。
                             </p>
                             <div className="mb-4 mt-4">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
                                     📸 上湖區必拍：
                                 </h4>
-                                <ul className="text-sm text-gray-600 leading-relaxed space-y-1 list-disc pl-4">
+                                <ul className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed space-y-1 list-disc pl-4">
                                     <li>Gradinsko jezero 湖面倒影</li>
                                     <li>Galovački buk 大瀑布</li>
                                 </ul>
@@ -2099,14 +2069,14 @@
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Plitvice+Lower+Lakes',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 抵達 P3 碼頭後進入下湖區，這裡是全園區最震撼的「大小瀑布密集區」。木棧道緊貼著水邊，超級好拍。
                             </p>
                             <div className="mb-4 mt-4">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
                                     📸 下湖區必拍：
                                 </h4>
-                                <ul className="text-sm text-gray-600 leading-relaxed space-y-1 list-disc pl-4">
+                                <ul className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed space-y-1 list-disc pl-4">
                                     <li>Milanovac – Gavanovac 湖連接構圖</li>
                                     <li>Veliki Slap (大瀑布)：從高處拍全景最壯觀</li>
                                 </ul>
@@ -2166,7 +2136,7 @@
                                 <span className="font-bold text-gray-800">散步路線</span>
                                 <MapLink url="https://maps.app.goo.gl/SVrXj8uGu4QYkaxq7" />
                             </div>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 札達爾以其羅馬遺跡和現代海濱藝術裝置聞名。以下是最佳光線與動線的建議：
                             </p>
 
@@ -2174,45 +2144,45 @@
                                 <h4 className="font-bold text-gray-800 mb-2 flex items-center">
                                     建議路線與停留時間：
                                 </h4>
-                                <ul className="text-sm text-gray-600 space-y-3 list-none pl-0">
+                                <ul className="text-sm text-gray-600導致領先的文字對齊方式： space-y-3 list-none pl-0">
                                     <li>
                                         <div className="font-bold text-gray-700 flex items-center mb-1">
                                             1. 五井廣場 (Five Wells Square)
                                             <MapLink url="https://www.google.com/maps/search/?api=1&query=Five+Wells+Square+Zadar" />
                                         </div>
-                                        <span className="text-xs text-gray-500 leading-relaxed block">建議停留：10-15 分鐘。氣溫舒適，散步起點。</span>
+                                        <span className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed block">建議停留：10-15 分鐘。氣溫舒適，散步起點。</span>
                                     </li>
                                     <li>
                                         <div className="font-bold text-gray-700 flex items-center mb-1">
                                             2. 羅馬廣場 (Roman Forum)
                                             <MapLink url="https://www.google.com/maps/search/?api=1&query=Roman+Forum+Zadar" />
                                         </div>
-                                        <span className="text-xs text-gray-500 leading-relaxed block">建議停留：10-20 分鐘。傍晚前光線柔和，遺跡拍照好看。</span>
+                                        <span className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed block">建議停留：10-20 分鐘。傍晚前光線柔和，遺跡拍照好看。</span>
                                     </li>
                                     <li>
                                         <div className="font-bold text-gray-700 flex items-center mb-1">
                                             3. 聖多那教堂 & 聖瑪麗亞教堂
                                             <MapLink url="https://www.google.com/maps/search/?api=1&query=Church+of+St+Donatus" />
                                         </div>
-                                        <span className="text-xs text-gray-500 leading-relaxed block">建議停留：各 10-15 分鐘。著名的圓形教堂，傍晚人潮較少。</span>
+                                        <span className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed block">建議停留：各 10-15 分鐘。著名的圓形教堂，傍晚人潮較少。</span>
                                     </li>
                                     <li className="bg-orange-50 p-2 rounded-lg border border-orange-100">
                                         <div className="font-bold text-orange-800 flex items-center mb-1">
                                             4. 海風琴 (Sea Organ)
                                             <MapLink url="https://www.google.com/maps/search/?api=1&query=Sea+Organ+Zadar" />
                                         </div>
-                                        <span className="text-xs text-orange-700 leading-relaxed block">建議停留：20-30 分鐘。</span>
-                                        <span className="text-xs font-bold text-orange-600 leading-relaxed block mt-1">最佳時間：日落前後 30 分鐘。</span>
-                                        <span className="text-xs text-orange-600 leading-relaxed block">坐在階梯上，聽海浪演奏的音樂，欣賞被譽為「世界最美」的夕陽。</span>
+                                        <span className="text-xs text-orange-700導致領先的文字對齊方式： leading-relaxed block">建議停留：20-30 分鐘。</span>
+                                        <span className="text-xs font-bold text-orange-600導致領先的文字對齊方式： leading-relaxed block mt-1">最佳時間：日落前後 30 分鐘。</span>
+                                        <span className="text-xs text-orange-600導致領先的文字對齊方式： leading-relaxed block">坐在階梯上，聽海浪演奏的音樂，欣賞被譽為「世界最美」的夕陽。</span>
                                     </li>
                                     <li className="bg-blue-50 p-2 rounded-lg border border-blue-100">
                                         <div className="font-bold text-blue-800 flex items-center mb-1">
                                             5. 向陽禮讚 (Greeting to the Sun)
                                             <MapLink url="https://www.google.com/maps/search/?api=1&query=Greeting+to+the+Sun+Zadar" />
                                         </div>
-                                        <span className="text-xs text-blue-700 leading-relaxed block">建議停留：10-20 分鐘。</span>
-                                        <span className="text-xs font-bold text-blue-600 leading-relaxed block mt-1">最佳時間：天完全黑後。</span>
-                                        <span className="text-xs text-blue-600 leading-relaxed block">地面巨大的太陽能板會上演絢麗的 LED 燈光秀。</span>
+                                        <span className="text-xs text-blue-700導致領先的文字對齊方式： leading-relaxed block">建議停留：10-20 分鐘。</span>
+                                        <span className="text-xs font-bold text-blue-600導致領先的文字對齊方式： leading-relaxed block mt-1">最佳時間：天完全黑後。</span>
+                                        <span className="text-xs text-blue-600導致領先的文字對齊方式： leading-relaxed block">地面巨大的太陽能板會上演絢麗的 LED 燈光秀。</span>
                                     </li>
                                 </ul>
                             </div>
@@ -2271,42 +2241,42 @@
                                 <span className="font-bold text-gray-800">晨間散步路線</span>
                                 <MapLink url="https://maps.app.goo.gl/xCjDz2jxem6j8BDj6" />
                             </div>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 若前一天太累，今早可悠閒地在 Riva 海濱散步，找間咖啡館享受亞得里亞海的早晨，補拍昨晚沒拍好的景點。以下是推薦的順遊路線：
                             </p>
 
-                            <ul className="text-sm text-gray-600 leading-relaxed space-y-4 list-none pl-0">
+                            <ul className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed space-y-4 list-none pl-0">
                                 <li>
                                     <div className="font-bold text-gray-700 mb-1">1. Land Gate（陸門）— 古城氣場起點 (5 min)</div>
-                                    <p className="text-xs text-gray-500 leading-relaxed">Zadar 舊城的南門，文藝復興式建築。清晨光線剛好打在城牆上，非常適合拍一張「抵達 Zadar」照。</p>
+                                    <p className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed">Zadar 舊城的南門，文藝復興式建築。清晨光線剛好打在城牆上，非常適合拍一張「抵達 Zadar」照。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-gray-700 mb-1">2. 五井廣場 (Five Wells Square) (10 min)</div>
-                                    <p className="text-xs text-gray-500 leading-relaxed">這裡早上通常只有散步的當地人。可以順著廣場旁邊的公園台地走上去，俯瞰一小段舊城。</p>
+                                    <p className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed">這裡早上通常只有散步的當地人。可以順著廣場旁邊的公園台地走上去，俯瞰一小段舊城。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-gray-700 mb-1">3. Queen Jelena Madijevka Park (5-10 min)</div>
-                                    <p className="text-xs text-gray-500 leading-relaxed">就在五井廣場旁，是 Zadar 最舒服的晨間散步點之一。早上鳥叫聲＋微風超療癒。</p>
+                                    <p className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed">就在五井廣場旁，是 Zadar 最舒服的晨間散步點之一。早上鳥叫聲＋微風超療癒。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-gray-700 mb-1">4. 主街 Široka Ulica（卡拉街）(10 min)</div>
-                                    <p className="text-xs text-gray-500 leading-relaxed時隔：">早上 8-9 點這裡還沒開始擠人，可以邊走邊看咖啡店、糕點店開始營業。</p>
+                                    <p className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed時隔：">早上 8-9 點這裡還沒開始擠人，可以邊走邊看咖啡店、糕點店開始營業。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-gray-700 mb-1">5. 羅馬廣場 Roman Forum (10 min)</div>
-                                    <p className="text-xs text-gray-500 leading-relaxed">建議站在 Forum Café 旁邊的空地拍照。光線從東邊打過來，照在遺跡與 St. Donatus 教堂上，非常漂亮。</p>
+                                    <p className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed">建議站在 Forum Café 旁邊的空地拍照。光線從東邊打過來，照在遺跡與 St. Donatus 教堂上，非常漂亮。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-gray-700 mb-1">6. St. Donatus（聖多那）(5-10 min)</div>
-                                    <p className="text-xs text-gray-500 leading-relaxed">圓形教堂外觀是 Zadar 最代表性的照片。早上遊客很少，可以拍到乾淨畫面。</p>
+                                    <p className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed">圓形教堂外觀是 Zadar 最代表性的照片。早上遊客很少，可以拍到乾淨畫面。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-gray-700 mb-1">7. Sea Organ（海風琴）(10-15 min)</div>
-                                    <p className="text-xs text-gray-500 leading-relaxed">早晨海風輕，聲音比下午更柔。這裡早上非常舒服，坐 5 分鐘就覺得很療癒。</p>
+                                    <p className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed">早晨海風輕，聲音比下午更柔。這裡早上非常舒服，坐 5 分鐘就覺得很療癒。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-gray-700 mb-1">8. Greeting to the Sun（向陽禮讚）(5-10 min)</div>
-                                    <p className="text-xs text-gray-500 leading-relaxed">清晨看到陽光反射在藍色玻璃板上也很好看，很推薦從這裡拍一張海岸線全景。</p>
+                                    <p className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed">清晨看到陽光反射在藍色玻璃板上也很好看，很推薦從這裡拍一張海岸線全景。</p>
                                 </li>
                                 <li className="bg-orange-50 p-3 rounded-lg border border-orange-100">
                                     <div className="font-bold text-orange-800 mb-2">9. 早晨咖啡推薦 (10 min)</div>
@@ -2314,15 +2284,15 @@
                                         <div className="flex items-center">
                                             <span className="text-xs font-bold text-orange-700 mr-2">Cogito Coffee Zadar</span>
                                             <MapLink url="https://www.google.com/maps/search/?api=1&query=Cogito+Coffee+Zadar" />
-                                            <span className="text-xs text-gray-500 leading-relaxed ml-2">精品咖啡</span>
+                                            <span className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed ml-2">精品咖啡</span>
                                         </div>
                                         <div className="flex items-center">
                                             <span className="text-xs font-bold text-orange-700 mr-2">CAFFE BAR DOMA</span>
                                             <MapLink url="https://maps.app.goo.gl/JX63JwbbjiXVN3NC9" />
-                                            <span className="text-xs text-gray-500 leading-relaxed ml-2">在地推薦</span>
+                                            <span className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed ml-2">在地推薦</span>
                                         </div>
                                     </div>
-                                    <p className="text-xs text-gray-500 leading-relaxed mt-2">喝完咖啡，回飯店收行李 → 10:00 出發剛剛好。</p>
+                                    <p className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed mt-2">喝完咖啡，回飯店收行李 → 10:00 出發剛剛好。</p>
                                 </li>
                             </ul>
                         </Fragment>
@@ -2361,7 +2331,7 @@
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Skradinski+buk',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed">
                                 克爾卡國家公園以瀑布群聞名，其中最壯觀的是 <strong>Skradinski buk</strong>。
                             </p>
 
@@ -2369,7 +2339,7 @@
                                 <h4 className="font-bold text-gray-800 mb-2 flex items-center">
                                     遊覽路線攻略：
                                 </h4>
-                                <ul className="text-sm text-gray-600 leading-relaxed space-y-3 list-disc pl-4">
+                                <ul className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed space-y-3 list-disc pl-4">
                                     <li>
                                         <span className="font-bold text-gray-700">入園方式：</span>
                                         從 Skradin 搭船進入園區，沿途欣賞峽谷河景。
@@ -2394,7 +2364,7 @@
                                 </ul>
                             </div>
 
-                            <p className="text-sm text-gray-600 leading-relaxed">
+                            <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed">
                                 下午 12:30 - 16:00 是光線最佳的時刻，瀑布水霧在陽光下經常會出現彩虹。沿著木棧道散步，感受與十六湖截然不同的開闊瀑布景觀。
                             </p>
                         </Fragment>
@@ -2428,7 +2398,7 @@
                                 <span className="font-bold text-gray-800">散步路線</span>
                                 <MapLink url="https://maps.app.goo.gl/oGDoMPrWPYfUUM2z5" />
                             </div>
-                            <p className="text-gray-600 leading-relaxed text-justify mb-6">
+                            <p className="text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify mb-6">
                                 Riva海濱散步，黃昏時分面向舊城、背對港口拍照，從銅門進入戴克里先宮，石牆、拱門、老屋直接長在宮殿裡；Peristyle 廣場，整個舊城的靈魂，晚上常有街頭音樂、小型演出；聖多米努斯主教座堂，抬頭看鐘樓夜燈就很美；巷弄慢走，曬衣服的石牆、小酒吧藏在拱門下、羅馬柱被包在咖啡店裡。
                             </p>
                             
@@ -2478,10 +2448,10 @@
                     mapLink: 'https://maps.app.goo.gl/qEPxLmYBqdQge8HB7',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 登上西班牙堡壘 (Španjola Fortress)，這裡是俯瞰赫瓦爾港口與帕克林斯基群島 (Pakleni Islands) 的最佳制高點。
                             </p>
-                            <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                            <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 從舊城區沿著蜿蜒的小路向上爬，沿途可以看見許多仙人掌和地中海植物，抵達頂部後，亞得里亞海的蔚藍景色將一覽無遺。
                             </p>
                         </Fragment>
@@ -2499,10 +2469,10 @@
                     mapLink: 'https://maps.app.goo.gl/wE2oj7WQe1oAP1eu5',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 來到赫瓦爾舊城的核心——史特芬亞廣場。這是達爾馬提亞地區面積最大且最美麗的古老廣場之一。
                             </p>
-                            <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                            <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 廣場盡頭是聖史特芬大教堂 (Cathedral of St. Stephen)，其細緻的鐘樓是島上的地標建築。您可以在此悠閒散步，感受這座威尼斯風格古城的優雅氛圍。
                             </p>
                         </Fragment>
@@ -2518,7 +2488,7 @@
                     location: 'Hvar Town',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 在赫瓦爾島享受陽光與地中海風情午餐。
                             </p>
                             <h4 className="font-bold text-gray-800 mb-3">【推薦餐廳】</h4>
@@ -2528,14 +2498,14 @@
                                         Dalmatino
                                         <MapLink url="https://maps.app.goo.gl/1zt9sZKo2FYrfL4z8" />
                                     </div>
-                                    <p className="text-xs text-gray-500 leading-relaxed">極受歡迎的高評價餐廳，提供高品質的在地創意海鮮料理。</p>
+                                    <p className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed">極受歡迎的高評價餐廳，提供高品質的在地創意海鮮料理。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                         Fig Hvar
                                         <MapLink url="https://maps.app.goo.gl/wgn6Jkkro85qiPyw6" />
                                     </div>
-                                    <p className="text-xs text-gray-500 leading-relaxed">主打新鮮、現代且充滿驚喜的創意異國料理。</p>
+                                    <p className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed">主打新鮮、現代且充滿驚喜的創意異國料理。</p>
                                 </li>
                             </ul>
                         </Fragment>
@@ -2564,10 +2534,10 @@
                     mapLink: 'https://maps.app.goo.gl/ubZmm3TsiPcg4QJy9',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 回到斯普利特後，前往馬里安山 (Marjan Hill) 的觀景台 (Prva Vidilica na Marjanu)。登頂約需 15-20 分鐘，路程輕鬆。
                             </p>
-                            <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                            <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 這裡是俯瞰斯普利特舊城與港口全景的最佳地點。日落前抵達，看著夕陽將整座城市染成金黃色，非常浪漫。
                             </p>
                         </Fragment>
@@ -2627,16 +2597,16 @@
                     mapLink: 'https://www.google.com/maps/search/?api=1&query=Diocletians+Palace',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 今天重點是補齊 Split 的經典景點。這是一座「活著的皇宮」，居民生活與古羅馬遺跡完美融合。建議路線（約 2.5 - 3 小時）：
                             </p>
-                            <ul className="text-sm text-gray-600 space-y-3 list-none pl-0">
+                            <ul className="text-sm text-gray-600導致領先的文字對齊方式： space-y-3 list-none pl-0">
                                 <li>
                                     <div className="font-bold text-gray-700 flex items-center mb-1">
                                         1. Riva 海濱步道 (10-15 min)
                                         <MapLink url="https://www.google.com/maps/search/?api=1&query=Riva+Split" />
                                     </div>
-                                    <span className="text-xs text-gray-500 block">早晨散步，欣賞港口風光。</span>
+                                    <span className="text-xs text-gray-500導致領先的文字對齊方式： block">早晨散步，欣賞港口風光。</span>
                                 </li>
                                 <li>
                                     <div className="font-bold text-gray-700 flex items-center mb-1">
@@ -2649,21 +2619,21 @@
                                         3. 列柱中庭 Peristyle ⭐ (20 min)
                                         <MapLink url="https://www.google.com/maps/search/?api=1&query=Peristyle+Split" />
                                     </div>
-                                    <span className="text-xs text-gray-600 block">皇宮的核心，最經典的打卡點。早晨人少，運氣好會遇到羅馬士兵換崗表演。</span>
+                                    <span className="text-xs text-gray-600導致領先的文字對齊方式： block">皇宮的核心，最經典的打卡點。早晨人少，運氣好會遇到羅馬士兵換崗表演。</span>
                                 </li>
                                 <li>
                                     <div className="font-bold text-gray-700 flex items-center mb-1">
                                         4. 聖多普努斯大教堂 & 鐘樓 (20-50 min)
                                         <MapLink url="https://www.google.com/maps/search/?api=1&query=Cathedral+of+Saint+Domnius" />
                                     </div>
-                                    <span className="text-xs text-gray-500 block">Split Cathedral。若體力允許，強烈建議登鐘樓，俯瞰紅瓦屋頂與大海。</span>
+                                    <span className="text-xs text-gray-500導致領先的文字對齊方式： block">Split Cathedral。若體力允許，強烈建議登鐘樓，俯瞰紅瓦屋頂與大海。</span>
                                 </li>
                                 <li className="bg-gray-50 p-2 rounded-lg border border-gray-100">
                                     <div className="font-bold text-gray-800 flex items-center mb-1">
                                         5. 皇宮地下室 Substructures ⭐ (25-40 min)
                                         <MapLink url="https://www.google.com/maps/search/?api=1&query=Diocletians+Cellars" />
                                     </div>
-                                    <span className="text-xs text-gray-600 block">巨大的石造空間，是《冰與火之歌：權力遊戲》龍母關龍的拍攝地，非常壯觀。</span>
+                                    <span className="text-xs text-gray-600導致領先的文字對齊方式： block">巨大的石造空間，是《冰與火之歌：權力遊戲》龍母關龍的拍攝地，非常壯觀。</span>
                                 </li>
                                 <li>
                                     <div className="font-bold text-gray-700 mb-1">
@@ -2686,7 +2656,7 @@
                     location: 'Split Old Town',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 在迷宮般的巷弄中找間咖啡館休息，或是享用午餐。請務必在 12:00 前結束用餐，準備出發前往莫斯塔爾。
                             </p>
                             <div className="mt-6 border-t border-gray-100 pt-6">
@@ -2780,7 +2750,7 @@
                     location: 'Mostar Old Town',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 在莫斯塔爾舊城區享用晚餐，品嚐當地特色料理如 Ćevapi（烤肉卷）。
                             </p>
                             <h4 className="font-bold text-gray-800 mb-2 flex items-center">【餐廳推薦】</h4>
@@ -2790,21 +2760,21 @@
                                         Hindin Han
                                         <MapLink url="https://maps.app.goo.gl/3w5Ua45T1j4q2xHw8" />
                                     </div>
-                                    <p className="text-xs text-gray-500 mt-1 leading-relaxed">最推薦，有河景座位且好拍照，食物傳統美味。</p>
+                                    <p className="text-xs text-gray-500導致領先的文字對齊方式： mt-1 leading-relaxed">最推薦，有河景座位且好拍照，食物傳統美味。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                         Šadrvan
                                         <MapLink url="https://maps.app.goo.com/Wc2k5P5wS4nK1vQW9" />
                                     </div>
-                                    <p className="text-xs text-gray-500 mt-1 leading-relaxed">位於舊城中心，裝潢充滿當地特色。</p>
+                                    <p className="text-xs text-gray-500導致領先的文字對齊方式： mt-1 leading-relaxed">位於舊城中心，裝潢充滿當地特色。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                         Urban Grill
                                         <MapLink url="https://maps.app.goo.gl/FkG9w3xZgR2x2pXq9" />
                                     </div>
-                                    <p className="text-xs text-gray-500 mt-1 leading-relaxed">提供西式烤肉和牛排，適合喜歡大口吃肉的人。</p>
+                                    <p className="text-xs text-gray-500導致領先的文字對齊方式： mt-1 leading-relaxed">提供西式烤肉和牛排，適合喜歡大口吃肉的人。</p>
                                 </li>
                             </ul>
                         </Fragment>
@@ -2932,12 +2902,12 @@
                     mapLink: 'https://maps.app.goo.gl/E39G4J8H9k2T8Z4A6',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 開始長途車程前往波士尼亞首都塞拉耶佛 (Sarajevo)。這段路程結合了山路和城鎮道路，風景優美但需專注駕駛。
                             </p>
                             <div className="mb-2">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">【路線建議】</h4>
-                                <ul className="text-sm text-gray-600 leading-relaxed space-y-1 list-disc pl-4">
+                                <ul className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed space-y-1 list-disc pl-4">
                                     <li><span className="font-bold">路徑：</span>Čapljina → Jablanica → Konjic → Sarajevo</li>
                                     <li><span className="font-bold">休息：</span>建議在 Jablanica 或 Konjic 擇一短暫休息 5-10 分鐘。</li>
                                     <li><span className="font-bold">提醒：</span>不用趕，安全最重要，預計 17:45 抵達。</li>
@@ -2974,38 +2944,38 @@
                                 <span className="font-bold text-gray-800">推薦散步路線</span>
                                 <MapLink url="https://maps.app.goo.gl/VKq18rv1AogvX3Sj7" />
                             </div>
-                            <p className="mb-4 text-gray-600 leading-relaxed">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed">
                                 傍晚的塞拉耶佛別有一番風味。建議沿著以下路線漫步，感受夜色中的中東氛圍：
                             </p>
-                            <ul className="text-sm text-gray-600 leading-relaxed space-y-3 list-none pl-0">
+                            <ul className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed space-y-3 list-none pl-0">
                                 <li>
                                     <span className="font-bold text-gray-700">1. Miljacka 河岸（起點）</span>
-                                    <span className="text-xs text-gray-500 leading-relaxed block">河水＋街燈，適合慢走或坐下休息（10–15 分鐘）。</span>
+                                    <span className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed block">河水＋街燈，適合慢走或坐下休息（10–15 分鐘）。</span>
                                 </li>
                                 <li>
                                     <span className="font-bold text-gray-700">2. Latin Bridge</span>
-                                    <span className="text-xs text-gray-500 leading-relaxed block">燈光倒映河面，一戰歷史地點（10 分鐘）。</span>
+                                    <span className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed block">燈光倒映河面，一戰歷史地點（10 分鐘）。</span>
                                 </li>
                                 <li>
                                     <span className="font-bold text-gray-700">3. Gazi Husrev-beg Mosque（外觀）</span>
-                                    <span className="text-xs text-gray-500 leading-relaxed block">不需入內，夜燈下安靜、有力量（5–10 分鐘）。</span>
+                                    <span className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed block">不需入內，夜燈下安靜、有力量（5–10 分鐘）。</span>
                                 </li>
                                 <li>
                                     <span className="font-bold text-gray-700">4. Kazandžiluk 銅匠街</span>
-                                    <span className="text-xs text-gray-500 leading-relaxed block">黃色燈光＋銅器反光，夜晚更有中東氛圍（10–15 分鐘）。</span>
+                                    <span className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed block">黃色燈光＋銅器反光，夜晚更有中東氛圍（10–15 分鐘）。</span>
                                 </li>
                                 <li>
                                     <span className="font-bold text-gray-700">5. Sebilj Fountain（必拍）</span>
-                                    <span className="text-xs text-gray-500 leading-relaxed block">木製噴泉夜拍很美，人少、燈光柔（5 分鐘）。</span>
+                                    <span className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed block">木製噴泉夜拍很美，人少、燈光柔（5 分鐘）。</span>
                                 </li>
                                 <li>
                                     <span className="font-bold text-gray-700">6. Baščaršija 廣場（終點）</span>
-                                    <span className="text-xs text-gray-500 leading-relaxed block">夜晚比白天舒服，商店仍開、人潮不亂（5–10 分鐘）。</span>
+                                    <span className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed block">夜晚比白天舒服，商店仍開、人潮不亂（5–10 分鐘）。</span>
                                 </li>
                             </ul>
                              <div className="mt-4 p-3 bg-yellow-50 rounded-lg border border-yellow-100">
                                 <h4 className="font-bold text-yellow-800 mb-1 text-sm flex items-center">✨ 結尾加分（選一）</h4>
-                                <ul className="list-disc pl-4 text-xs text-yellow-700 space-y-1">
+                                <ul className="list-disc pl-4 text-xs text-yellow-700導致領先的文字對齊方式： space-y-1">
                                     <li>Baklava Shop（外帶甜點）</li>
                                     <li>Miris Dunja（咖啡甜點）</li>
                                     <li>Birtija（氣氛酒吧）</li>
@@ -3062,12 +3032,12 @@
                     mapLink: 'https://maps.app.goo.gl/LovrfzyUm6PzZYSY9',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed">
                                 這座橋本身是塞拉耶佛最古老的鄂圖曼橋樑之一，但更著名的是它作為「第一次世界大戰的引爆點」。
                             </p>
                             <div className="mb-2">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">【重點】</h4>
-                                <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
+                                <ul className="text-sm text-gray-600導致領先的文字對齊方式： space-y-1 list-disc pl-4">
                                     <li><span className="font-bold">遇刺點紀念碑：</span>就在橋頭的對面，標記了 1914 年奧匈帝國王儲斐迪南大公遇刺的地點。</li>
                                     <li><span className="font-bold">美景：</span>在橋上可拍 Miljacka 河谷的兩岸景色，見證塞拉耶佛從東方走向西方的歷史分界線。</li>
                                 </ul>
@@ -3129,18 +3099,18 @@
                     location: 'Old Town / Yellow Bastion',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed">
                                 享受悠閒的午後時光，您可以選擇：
                             </p>
-                            <ul className="text-sm text-gray-600 leading-relaxed space-y-3 list-none pl-0">
+                            <ul className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed space-y-3 list-none pl-0">
                                 <li>
                                     <span className="font-bold text-gray-700">【選項一：黃堡 (Yellow Bastion) 散步】</span>
                                     <MapLink url="https://maps.app.goo.gl/3A7Fk4A6H7j3tH9X9" />
-                                    <span className="text-xs text-gray-500 block">提早到黃堡（Vijećnica 附近）散步，拍下塞拉耶佛的城市景色，為傍晚的夕陽做探路。</span>
+                                    <span className="text-xs text-gray-500導致領先的文字對齊方式： block">提早到黃堡（Vijećnica 附近）散步，拍下塞拉耶佛的城市景色，為傍晚的夕陽做探路。</span>
                                 </li>
                                 <li>
                                     <span className="font-bold text-gray-700">【選項二：老城區休息】</span>
-                                    <span className="text-xs text-gray-500 block">在 Baščaršija 找間傳統咖啡店，體驗正宗的波斯咖啡 (Bosnian coffee) 或享用當地甜點。</span>
+                                    <span className="text-xs text-gray-500導致領先的文字對齊方式： block">在 Baščaršija 找間傳統咖啡店，體驗正宗的波斯咖啡 (Bosnian coffee) 或享用當地甜點。</span>
                                 </li>
                             </ul>
                         </Fragment>
@@ -3158,10 +3128,10 @@
                     mapLink: 'https://maps.app.goo.gl/G4g9T7E9k2T8Z4A6',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed">
                                 沿著 Ferhadija 街前進，從鄂圖曼風格的 Baščaršija 過渡到奧匈帝國時期的西式建築。這條街被稱為「塞拉耶佛的歐洲耶路撒冷分界線」，展現了這座城市的第二種面貌。
                             </p>
-                            <p className="text-sm text-gray-600 leading-relaxed">
+                            <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed">
                                 最終抵達 **Eternal Flame (長明火)**，紀念二戰解放塞拉耶佛的犧牲者。
                             </p>
                         </Fragment>
@@ -3177,7 +3147,7 @@
                     location: 'Sarajevo',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed">
                                 在塞拉耶佛享用晚餐，為接下來的黃堡夕陽做準備。
                             </p>
                             <h4 className="font-bold text-gray-800 mb-2 flex items-center">【餐廳推薦】</h4>
@@ -3187,14 +3157,14 @@
                                         Dveri
                                         <MapLink url="https://maps.app.goo.gl/j4Fh6tD2G1xR6N8" />
                                     </div>
-                                    <p className="text-xs text-gray-600 leading-relaxed">塞拉耶佛最著名的隱藏式傳統餐廳，氛圍親密浪漫，食物精緻（務必預訂）。</p>
+                                    <p className="text-xs text-gray-600導致領先的文字對齊方式： leading-relaxed">塞拉耶佛最著名的隱藏式傳統餐廳，氛圍親密浪漫，食物精緻（務必預訂）。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                         Avlija
                                         <MapLink url="https://maps.app.goo.gl/A7Fj5tD2G1xR6N8" />
                                     </div>
-                                    <p className="text-xs text-gray-600 leading-relaxed">充滿異國風情的室外庭院餐廳，提供優質的傳統和國際美食。</p>
+                                    <p className="text-xs text-gray-600導致領先的文字對齊方式： leading-relaxed">充滿異國風情的室外庭院餐廳，提供優質的傳統和國際美食。</p>
                                 </li>
                             </ul>
                         </Fragment>
@@ -3226,32 +3196,32 @@
                     mapLink: 'https://maps.app.goo.gl/eidKifRKo9mYUoQu7',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed">
                                 今日是跨國移動日，建議於 07:30–08:00 間出發。早餐請吃得清淡，並確保出發前在塞拉耶佛市區將油箱加滿。
                             </p>
                             <div className="mb-4">
                                 <h4 className="font-bold text-gray-800 mb-2 flex items-center">【行車路線與停點建議】</h4>
-                                <ul className="text-sm text-gray-600 space-y-3 list-none pl-0">
+                                <ul className="text-sm text-gray-600導致領先的文字對齊方式： space-y-3 list-none pl-0">
                                     <li className="bg-blue-50 p-3 rounded-xl border border-blue-100">
                                         <div className="flex justify-between items-center mb-1">
                                             <span className="font-bold text-blue-800">Bileća Lake</span>
                                             <span className="text-xs font-medium text-blue-600導致領先的文字對齊方式：">15–20 分</span>
                                         </div>
-                                        <p className="text-xs leading-relaxed">中途伸展筋骨、拍下湖泊美景的好地方。</p>
+                                        <p className="text-xs導致領先的文字對齊方式： leading-relaxed">中途伸展筋骨、拍下湖泊美景的好地方。</p>
                                     </li>
                                     <li className="bg-green-50 p-3 rounded-xl border border-green-100">
                                         <div className="flex justify-between items-center mb-1">
                                             <span className="font-bold text-green-800">Morača Canyon</span>
                                             <span className="text-xs font-medium text-green-600導致領先的文字對齊方式：">10–15 分</span>
                                         </div>
-                                        <p className="text-xs leading-relaxed">進入黑山後的峽谷俯瞰點，欣賞壯麗的自然景觀。</p>
+                                        <p className="text-xs導致領先的文字對齊方式： leading-relaxed">進入黑山後的峽谷俯瞰點，欣賞壯麗的自然景觀。</p>
                                     </li>
                                     <li className="bg-orange-50 p-3 rounded-xl border border-orange-100">
                                         <div className="flex justify-between items-center mb-1">
                                             <span className="font-bold text-orange-800">邊境通關</span>
                                             <span className="text-xs font-medium text-orange-600導致領先的文字對齊方式：">30–90 分</span>
                                         </div>
-                                        <p className="text-xs leading-relaxed">過境時間視排隊情況具備彈性，請留心時程規劃。</p>
+                                        <p className="text-xs導致領先的文字對齊方式： leading-relaxed">過境時間視排隊情況具備彈性，請留心時程規劃。</p>
                                     </li>
                                 </ul>
                             </div>
@@ -3280,7 +3250,7 @@
                     location: 'Kotor Old Town',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed">
                                 在科托爾舊城區內散步並享用晚餐。
                             </p>
                             <div className="mt-6 border-t border-gray-100 pt-6">
@@ -3321,10 +3291,10 @@
                                 <span className="font-bold text-gray-800">健行路線</span>
                                 <MapLink url="https://maps.app.goo.gl/MvLkMFuFX4w4nhxb7" />
                             </div>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 **強烈建議早上出發（避開炎熱和人潮）**。這段健行約需 1.5 到 2 小時（往返＋拍照），雖然階梯多，但從山頂俯瞰科托爾灣 (Kotor Bay) 的景色是蒙特內哥羅最經典的畫面。
                             </p>
-                            <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                            <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 爬到**「聖母健康教堂 (Church of Our Lady of Health)」**（約 30 分鐘）即可看到非常棒的景色。繼續往上爬到堡壘頂端（約 60 分鐘），景色更壯闊。
                             </p>
                         </Fragment>
@@ -3353,7 +3323,7 @@
                     location: 'Kotor Old Town',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 深入探索科托爾迷宮般的舊城區（受聯合國教科文組織保護），這是一座「貓城」，充滿中世紀的建築魅力。
                             </p>
                             <div className="mb-6">
@@ -3361,7 +3331,7 @@
                                     【聖特里芬大教堂 / 科托爾主教座堂】
                                     <MapLink url="https://maps.app.goo.gl/Cb4EKm5QevWsnVbZA" />
                                 </h4>
-                                <ul className="text-sm text-gray-600 space-y-1 list-none pl-0 leading-relaxed">
+                                <ul className="text-sm text-gray-600導致領先的文字對齊方式： space-y-1 list-none pl-0 leading-relaxed">
                                     <li>1. 建於 1166 年，是黑山最重要的天主教建築。</li>
                                     <li>2. 地震痕跡明顯，反而讓建築更有故事感。</li>
                                 </ul>
@@ -3371,13 +3341,13 @@
                                     【鐘樓廣場】
                                     <MapLink url="https://maps.app.goo.gl/ZP2cGiA7BPJiF2E17" />
                                 </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                     科托爾舊城區的中心地帶，著名的 17 世紀鐘樓矗立在此。
                                 </p>
                             </div>
                             <div className="mb-2">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">【其他必看亮點】</h4>
-                                <ul className="text-sm text-gray-600 leading-relaxed space-y-1 list-disc pl-4">
+                                <ul className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed space-y-1 list-disc pl-4">
                                     <li><span className="font-bold">武器廣場：</span>舊城區最大的廣場。</li>
                                     <li><span className="font-bold">貓咪博物館：</span>科托爾是著名的愛貓城市，這間小小的博物館充滿趣味。</li>
                                     <li><span className="font-bold">城牆邊緣：</span>沿著城牆腳下的小路走，感受古老的石牆氛圍。</li>
@@ -3397,7 +3367,7 @@
                     location: 'Kotor Old Town',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 享用舊城內的美食。科托爾靠近海邊，推薦品嚐新鮮的海鮮 and 達爾馬提亞特色菜。
                             </p>
                             <h4 className="font-bold text-gray-800 mb-2 flex items-center">【餐廳推薦】</h4>
@@ -3407,21 +3377,21 @@
                                         Konoba Scala Santa
                                         <MapLink url="https://maps.app.goo.gl/r6W4W2H6j5T8Z4A6" />
                                     </div>
-                                    <p className="text-xs text-gray-600 leading-relaxed">位於安靜的廣場，提供優質的本地菜和海鮮。</p>
+                                    <p className="text-xs text-gray-600導致領先的文字對齊方式： leading-relaxed">位於安靜的廣場，提供優質的本地菜和海鮮。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                         Cesarica
                                         <MapLink url="https://maps.app.goo.gl/9k2c8G4H6j5T8Z4A6" />
                                     </div>
-                                    <p className="text-xs text-gray-600 leading-relaxed">家庭式經營的小餐館，主打傳統菜，氣氛溫馨。</p>
+                                    <p className="text-xs text-gray-600導致領先的文字對齊方式： leading-relaxed">家庭式經營的小餐館，主打傳統菜，氣氛溫馨。</p>
                                 </li>
                                 <li>
                                     <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                         BBQ Tanjga
                                         <MapLink url="https://maps.app.goo.gl/omAchTgeaFnGQ9kS6" />
                                     </div>
-                                    <p className="text-xs text-gray-500 leading-relaxed">評價極高且份量十足的在地燒烤店。</p>
+                                    <p className="text-xs text-gray-500導致領先的文字對齊方式： leading-relaxed">評價極高且份量十足的在地燒烤店。</p>
                                 </li>
                             </ul>
                         </Fragment>
@@ -3438,21 +3408,21 @@
                     location: 'Kotor Cable Car / Dobrota',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed">
                                 下午氣溫高，建議選擇一個輕鬆的行程：
                             </p>
-                            <ul className="text-sm text-gray-600 leading-relaxed space-y-4 list-none pl-0">
+                            <ul className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed space-y-4 list-none pl-0">
                                 <li>
                                     <div className="flex items-center mb-1">
                                         <span className="font-bold text-gray-700">【A. Kotor Cable Car (纜車)】</span>
                                         <MapLink url="https://maps.app.goo.gl/w7Qk4HxVc83gRd4n9" />
                                     </div>
-                                    <span className="text-xs text-gray-500 block">搭乘 2023 年啟用的新纜車，從高處俯瞰整個科托爾灣，景色絕美且輕鬆不流汗。</span>
+                                    <span className="text-xs text-gray-500導致領先的文字對齊方式： block">搭乘 2023 年啟用的新纜車，從高處俯瞰整個科托爾灣，景色絕美且輕鬆不流汗。</span>
                                 </li>
                                 <li>
                                     <span className="font-bold text-gray-700">【B. Dobrota 海邊放空】</span>
                                     <MapLink url="https://maps.app.goo.gl/LUBdDPyV9ESCDgyM8" />
-                                    <span className="text-xs text-gray-500 block">沿著 Dobrota 的海濱步道散步，找間海邊咖啡館或小泳點，享受真正的地中海慢生活。</span>
+                                    <span className="text-xs text-gray-500導致領先的文字對齊方式： block">沿著 Dobrota 的海濱步道散步，找間海邊咖啡館或小泳點，享受真正的地中海慢生活。</span>
                                 </li>
                             </ul>
                         </Fragment>
@@ -3506,7 +3476,7 @@
                     mapLink: 'https://maps.app.goo.gl/SyHmnCTGR51swK5s8',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 走進派勒門 (Pile Gate)，踏上杜布羅夫尼克的心臟——史特拉敦大道 (Stradun)。這條光滑的大理石大道兩旁盡是歷史悠久的建築與傳奇故事。
                             </p>
                             <div className="space-y-6">
@@ -3515,7 +3485,7 @@
                                         【大奧諾佛里奧供水池 Big Onofrio Fountains】
                                         <MapLink url="https://maps.app.goo.gl/KQ21bCWhUBZ1QVpP9" />
                                     </h4>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                    <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                         建於1438年，是杜布羅夫尼克供水系統的終點之一，其水源來自於十二公里外的Dubrovacka河，世紀以來為市民提供了新鮮的泉水，至今仍在運作。呈十六邊型的大奧諾佛里奧供水池，每面都有一個人臉浮雕，泉水便是從其口中的水龍頭流洩出來。
                                     </p>
                                 </div>
@@ -3524,7 +3494,7 @@
                                         【杜布羅夫尼克鐘塔】
                                         <MapLink url="https://maps.app.goo.gl/HFBrY5hvzanYhzvZ7" />
                                     </h4>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                    <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                         高31公尺的鐘塔原建於1444年，為拉古薩的象徵之一。後來因為大地震造成結構上的危險，現在所見的鐘塔是在1929年重建的。鐘塔上的銅像每小時會敲鐘。鐘塔下方旁還有小奧諾佛里奧供水池與Marin Drzic的銅像。他是推廣克羅埃西亞語言的學者。由於傳說摸他的鼻子可以增加智慧，因此雕像的鼻子閃亮無比。
                                     </p>
                                 </div>
@@ -3533,7 +3503,7 @@
                                         【斯蓬扎宮 Sponza Palace】
                                         <MapLink url="https://maps.app.goo.gl/DszMqr8weU1xepmd9" />
                                     </h4>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                    <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                         緊鄰鐘塔的斯蓬扎宮是座十六世紀的文藝復興宮殿，曾作為海關、銀行 and 鑄幣廠，現在是國家檔案館，展有大量獨立戰爭期間的文物。
                                     </p>
                                 </div>
@@ -3542,7 +3512,7 @@
                                         【聖伯拉削教堂與奧蘭多石柱】
                                         <MapLink url="https://maps.app.goo.gl/eNJyBr5YWHZr3ttj6" />
                                     </h4>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                    <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                         這座巴洛克式的教堂建於1717年，是獻給該城的守護聖人聖伯拉削 (St. Blaise)。教堂內部的寶庫收藏了聖伯拉削的聖骨。教堂前的奧蘭多石柱則立於1418年，上有身著鎧甲的奧蘭多騎士，象徵自由與獨立。
                                     </p>
                                 </div>
@@ -3551,7 +3521,7 @@
                                         【總督府 Rector’s Palace】
                                         <MapLink url="https://maps.app.goo.gl/CmKsdv427gZqUJoo6" />
                                     </h4>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                    <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                         杜布羅夫尼克在14世紀至1808年間的政府所在地。建築風格融合了哥德、文藝復興與巴洛克元素。現為歷史博物館，可深入參觀地牢與武器庫。
                                     </p>
                                 </div>
@@ -3560,7 +3530,7 @@
                                         【聖母升天大教堂 The Cathedral】
                                         <MapLink url="https://maps.app.goo.gl/2pmqiisn3ygAqYeF8" />
                                     </h4>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                    <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                         今日所見的大教堂是1667年大地震後重建，完工於1713年。建築外觀優雅，內部收藏有提香的畫作與大量金銀工藝聖物。
                                     </p>
                                 </div>
@@ -3578,7 +3548,7 @@
                                         【聖天使報喜東正教堂】
                                         <MapLink url="https://maps.app.goo.gl/MRCSB5vKRFpEhnNW6" />
                                     </h4>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                    <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                         建於1877年，在天主教堂眾多的舊城中顯得相當特別，內部裝飾金碧輝煌。
                                     </p>
                                 </div>
@@ -3587,7 +3557,7 @@
                                         【舊港 Old Port】
                                         <MapLink url="https://maps.app.goo.gl/36WxoUVf2L4qheWPA" />
                                     </h4>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+                                    <p className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                         杜布羅夫尼克最古老的區域之一。現今是宜人的徒步區，可在此觀賞海景並前往洛克魯姆島。
                                     </p>
                                 </div>
@@ -3632,12 +3602,12 @@
                     mapLink: 'https://maps.app.goo.gl/mS7QxZ5J8k2T8Z4A6',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 這是杜布羅夫尼克最經典、絕對不能錯過的體驗。全長約 2 公里的城牆步道，可以 360 度俯瞰紅瓦屋頂舊城與亞得里亞海。
                             </p>
                             <div className="mb-2">
                                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">【攻略重點】</h4>
-                                <ul className="text-sm text-gray-600 leading-relaxed space-y-1 list-disc pl-4">
+                                <ul className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed space-y-1 list-disc pl-4">
                                     <li><span className="font-bold">時間：</span>務必在 08:00 前開始（通常 08:00 開門，部分季節 09:00，請依現場為準，越早越好）。</li>
                                     <li><span className="font-bold">時長：</span>走走停停拍照約需 1.5 - 2 小時。</li>
                                     <li><span className="font-bold">亮點：</span>Minceta Tower (最高點)、Bokar Fortress (權力遊戲場景)。</li>
@@ -3669,10 +3639,10 @@
                     mapLink: 'https://maps.app.goo.gl/nR8QxZ5J8k2T8Z4A6',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                 在平地上輕鬆探索舊城區的精華建築與巷弄。
                             </p>
-                            <ul className="text-sm text-gray-600 leading-relaxed space-y-2 list-none pl-0">
+                            <ul className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed space-y-2 list-none pl-0">
                                 <li><span className="font-bold">Rector’s Palace (總督宮)：</span>哥德文藝復興式建築，曾是拉古薩共和國的權力中心。</li>
                                 <li><span className="font-bold">Dubrovnik Cathedral (大教堂)：</span>巴洛克式教堂，內部藏有珍貴的聖物。</li>
                                 <li><span className="font-bold">巷弄拍照：</span>隨意走進兩側的階梯巷弄，捕捉光影與生活感。</li>
@@ -3702,17 +3672,17 @@
                     location: 'Lokrum / Mount Srđ',
                     desc: (
                         <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed">
+                            <p className="mb-4 text-gray-600導致領先的文字對齊方式： leading-relaxed">
                                 根據上午的體力消耗，選擇一項下午活動：
                             </p>
-                            <ul className="text-sm text-gray-600 leading-relaxed space-y-4 list-none pl-0">
+                            <ul className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed space-y-4 list-none pl-0">
                                 <li>
                                     <span className="font-bold text-gray-700">【A. Lokrum Island (洛克魯姆島)】</span>
-                                    <span className="text-xs text-gray-500 block">從老港口搭船僅需 15 分鐘。島上有孔雀、修道院遺跡、植物園 and 一個鹹水湖（死海），非常適合游泳或在森林中散步避暑。</span>
+                                    <span className="text-xs text-gray-500導致領先的文字對齊方式： block">從老港口搭船僅需 15 分鐘。島上有孔雀、修道院遺跡、植物園 and 一個鹹水湖（死海），非常適合游泳或在森林中散步避暑。</span>
                                 </li>
                                 <li>
                                     <span className="font-bold text-gray-700">【B. Mount Srđ (瑟爾德山)】</span>
-                                    <span className="text-xs text-gray-500 block">搭乘纜車（或自駕）上山。這裡是俯瞰整個杜布羅夫尼克舊城、亞得里亞海與附近島嶼的最佳制高點。傍晚光線最美。</span>
+                                    <span className="text-xs text-gray-500導致領先的文字對齊方式： block">搭乘纜車（或自駕）上山。這裡是俯瞰整個杜布羅夫尼克舊城、亞得里亞海與附近島嶼的最佳制高點。傍晚光線最美。</span>
                                 </li>
                             </ul>
                         </Fragment>
@@ -3743,11 +3713,11 @@
                     mapLink: 'https://maps.app.goo.gl/gQ5XyZ5J8k2T8Z4A6',
                     desc: (
                         <Fragment>
-                            <p className="mb-2 text-gray-600 leading-relaxed">
+                            <p className="mb-2 text-gray-600導致領先的文字對齊方式： leading-relaxed">
                                 早起享受杜布羅夫尼克最寧靜、最好拍的時刻。郵輪遊客約 09:00 才來，此時光線柔和、溫度宜人。
                             </p>
                             <h4 className="font-bold text-gray-800 mb-1 flex items-center">【建議走法】</h4>
-                            <ul className="text-sm text-gray-600 leading-relaxed space-y-1 list-disc pl-4">
+                            <ul className="text-sm text-gray-600導致領先的文字對齊方式： leading-relaxed space-y-1 list-disc pl-4">
                                 <li>**平坦路線：** Pile Gate → Stradun → Onofrio Fountain → Old Port。</li>
                                 <li>隨意在小巷隨走隨拍，完全不用上城牆。</li>
                             </ul>
@@ -3904,7 +3874,7 @@
 
                             <div className="prose prose-sm mb-8">
                                 <h3 className={`text-lg font-medium mb-3 ${MORANDI_COLORS.highlight} flex items-center`}>關於此行程</h3>
-                                <div className="text-gray-600 leading-relaxed text-justify">
+                                <div className="text-gray-600導致領先的文字對齊方式： leading-relaxed text-justify">
                                     {item.desc}
                                 </div>
                             </div>
@@ -4044,7 +4014,7 @@
                                                     <span className="text-lg font-bold leading-none mb-0.5">{d.dateObj.getDate()}</span>
                                                     <span className="text-[9px] opacity-60 leading-none mb-0.5">D{d.dayNum}</span>
                                                     <div className="h-7 w-full flex items-center justify-center px-0.5 mt-0.5">
-                                                        <span className="text-[9px] font-medium leading-[1.1] text-center whitespace-pre-line line-clamp-3">
+                                                        <span className="text-[9px] font-medium leading-[1.1] text-center whitespace-pre-line line-clamp-2">
                                                             {d.city}
                                                         </span>
                                                     </div>
