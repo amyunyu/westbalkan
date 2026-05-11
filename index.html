@@ -3347,6 +3347,10 @@
       <p className="mb-4 text-gray-600 leading-relaxed">
         今日是跨國移動日，建議 07:30–08:00 間從 Sarajevo 出發。早餐吃清淡一些，出發前確認油箱、護照、租車跨境文件與保險文件都已準備好。
       </p>
+      <p className="mb-4 text-gray-600 leading-relaxed">
+        這段路雖然地圖時間看起來不算太長，但實際會受到山路、邊境通關、休息與抵達 Kotor 後停車影響。若順利，下午 16:00–17:00 可抵達；若通關或路況延誤，18:00 前後抵達也屬正常。今天請以安全抵達為主，不安排需要準時抵達的活動。
+      </p>
+
       <div className="mb-4">
         <h4 className="font-bold text-gray-800 mb-2 flex items-center">【行車路線與停點建議】</h4>
         <ul className="text-sm text-gray-600 space-y-3 list-none pl-0">
@@ -3355,15 +3359,17 @@
               <span className="font-bold text-blue-800">Bileća Lake</span>
               <span className="text-xs font-medium text-blue-600">15–20 分</span>
             </div>
-            <p className="text-xs leading-relaxed">中途伸展筋骨、補水、拍湖景的短暫停靠點。</p>
+            <p className="text-xs leading-relaxed">中途伸展筋骨、補水、拍湖景的短暫停靠點。若當天路況較慢，也可以直接略過。</p>
           </li>
+
           <li className="bg-green-50 p-3 rounded-xl border border-green-100">
             <div className="flex justify-between items-center mb-1">
-              <span className="font-bold text-green-800">Morača Canyon / 路邊觀景點</span>
-              <span className="text-xs font-medium text-green-600">10–15 分</span>
+              <span className="font-bold text-green-800">Nikšić / Grahovo 附近休息點</span>
+              <span className="text-xs font-medium text-green-600">10–20 分</span>
             </div>
-            <p className="text-xs leading-relaxed">進入黑山後若路況與時間允許，可短暫停靠看峽谷景色；若已疲累則直接前往 Kotor。</p>
+            <p className="text-xs leading-relaxed">進入黑山後可視體力找加油站、咖啡館或路邊安全停靠點休息，順便確認後段前往 Kotor 的導航與停車安排。</p>
           </li>
+
           <li className="bg-orange-50 p-3 rounded-xl border border-orange-100">
             <div className="flex justify-between items-center mb-1">
               <span className="font-bold text-orange-800">邊境通關</span>
@@ -3375,19 +3381,88 @@
       </div>
     </Fragment>
   ),
-  tips: ['早餐清淡', '油箱加滿', '準備護照與租車跨境文件', '今天以順利抵達為主']
+  tips: ['早餐清淡', 'Google Maps 搜尋 gas station ', '準備護照與租車跨境文件', '今天以順利抵達為主']
                 },
                 {
-                    id: 'd16-2',
-                    time: '16:00',
-                    title: '抵達科托爾',
-                    type: 'arrival',
-                    iconName: 'MapPin',
-                    subtitle: 'Booking/Avenza Residences Kotor Old Town',
-                    location: 'Avenza Residences Kotor Old Town',
-                    mapLink: 'https://maps.app.goo.gl/my9aZM6wpMBUZdg7A',
-                    desc: '預計於 16:00–17:00 之間抵達 Kotor。辦理入住手續後建議稍作休息，為晚上的古城探索恢復體力。',
-                    tips: ['黑山共和國使用歐元', '舊城區內禁行車輛']
+  id: 'd16-2',
+  time: '16:00',
+  title: '抵達科托爾・停車與入住',
+  type: 'arrival',
+  iconName: 'MapPin',
+  subtitle: 'Avenza Residences Kotor Old Town',
+  location: 'Avenza Residences Kotor Old Town',
+  mapLink: 'https://maps.app.goo.gl/zn2CUvw76MkCYKxF8',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed">
+        預計下午抵達 Kotor。Avenza Residences 位於 Kotor Old Town 內，Check-in 時間為 14:00–23:00。由於 Kotor Old Town 是 UNESCO 保護的步行區，車輛無法開進老城，抵達後需先完成停車，再步行進入舊城辦理入住。
+      </p>
+
+      <p className="mb-4 text-gray-600 leading-relaxed">
+        住宿方提醒，公寓需爬 24 階超過 200 年歷史、受文化遺產保護的古老階梯。建議抵達時只帶今晚需要的行李進老城，大件行李可視情況留在車上或分批搬運，避免長途開車後再搬運過重行李。
+      </p>
+
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">【停車選項】</h4>
+        <ul className="text-sm text-gray-600 space-y-3 list-none pl-0">
+          <li className="bg-blue-50 p-3 rounded-xl border border-blue-100">
+            <div className="flex justify-between items-center mb-1">
+              <span className="font-bold text-blue-800">Local resident's yard parking</span>
+              <span className="text-xs font-medium text-blue-600">約 €20 / 日</span>
+            </div>
+            <p className="text-xs leading-relaxed">
+              距離 Old Town Northern Gate 約 200 公尺。住宿方可協助安排，但需提前告知。
+            </p>
+            <MapLink url="https://maps.app.goo.gl/XitTpBi4waGPxj3F6" />
+          </li>
+
+          <li className="bg-green-50 p-3 rounded-xl border border-green-100">
+            <div className="flex justify-between items-center mb-1">
+              <span className="font-bold text-green-800">Benovo Parking</span>
+              <span className="text-xs font-medium text-green-600">€1.90 / 小時</span>
+            </div>
+            <p className="text-xs leading-relaxed">
+              距離 Old Town Northern Gate 約 200 公尺，24 小時營業。位置方便，但若停過夜費用會偏高。
+            </p>
+            <MapLink url="https://maps.app.goo.gl/Pgdsx5LorWTr476e6" />
+          </li>
+
+          <li className="bg-yellow-50 p-3 rounded-xl border border-yellow-100">
+            <div className="flex justify-between items-center mb-1">
+              <span className="font-bold text-yellow-800">Autoboka Parking</span>
+              <span className="text-xs font-medium text-yellow-600">€0.90 / 小時</span>
+            </div>
+            <p className="text-xs leading-relaxed">
+              距離 Gurdić Gate 約 500 公尺，24 小時營業。價格較低，但需多走一段路，帶大行李時較不方便。
+            </p>
+            <MapLink url="https://maps.app.goo.gl/Y2RowYWxcq83MM7w6" />
+          </li>
+
+          <li className="bg-gray-50 p-3 rounded-xl border border-gray-100">
+            <div className="flex justify-between items-center mb-1">
+              <span className="font-bold text-gray-800">Škaljari Free Public Parking</span>
+              <span className="text-xs font-medium text-gray-600">免費</span>
+            </div>
+            <p className="text-xs leading-relaxed">
+              距離 Gurdić Gate 約 850 公尺，較有機會找到車位，但步行距離較遠。適合行李不多、想省停車費時使用。
+            </p>
+            <MapLink url="https://maps.app.goo.gl/7rSjZVBFVMoffX7s7" />
+          </li>
+        </ul>
+      </div>
+
+      <p className="text-sm text-gray-600 leading-relaxed">
+        若抵達時間較晚或行李較多，可提前聯絡住宿方，請他們在最方便的 Old Town 入口協助會合，讓入住流程更順利。
+      </p>
+    </Fragment>
+  ),
+  tips: [
+    'Check-in 時間 14:00–23:00',
+    'Kotor Old Town 禁止車輛進入',
+    '建議優先請住宿方協助安排 €20 / 日的居民院子停車',
+    '住宿需爬 24 階古老階梯，行李不要帶太重',
+    '黑山共和國使用歐元'
+  ]
                 },
                 {
   id: 'd16-3',
@@ -3596,13 +3671,13 @@
                 {
   id: 'd18-breakfast-supply',
   time: '08:00',
-  title: 'Senso Bakery 買路上補給',
+  title: 'Senso Bakery',
   type: 'food',
   iconName: 'Croissant',
   subtitle: 'Kotor 出發前 • 路上早餐與午餐備案',
   location: 'Senso Bakery, Kotor',
   mapLink: 'https://maps.app.goo.gl/QFxvkqJtT6yxgTbT8',
-  desc: 'Senso Bakery 08:00 開門，剛好適合在離開 Kotor 前買簡單早餐與路上補給。今日上午需跨境前往 Dubrovnik，13:00 還車前後時間不穩定，不建議排正式午餐；可先買麵包、burek、三明治、咖啡與水，車上或邊境前後簡單補充體力。',
+  desc: 'Senso Bakery 08:00 開門，在離開 Kotor 前買簡單早餐與路上補給。今日上午需跨境前往 Dubrovnik，13:00 還車前後時間不穩定，不建議排正式午餐；先買麵包、burek、三明治、咖啡與水，車上或邊境前後簡單補充體力。',
   tips: [
     'Senso Bakery 08:00 開門，可 08:15 左右前往',
     '買早餐，也順便買午餐備案',
