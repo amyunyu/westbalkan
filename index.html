@@ -3198,16 +3198,80 @@
                     tips: ['在住宿或老城區找間有氣氛的咖啡館']
                 },
                 {
-                    id: 'd15-2',
-                    time: '09:00',
-                    title: '巴斯卡爾森雅市集散步',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: 'Baščaršija/傳統銅器店、咖啡店',
-                    location: 'Baščaršija (Pigeon Square)',
-                    mapLink: 'https://maps.app.goo.gl/LkDee3bNZy3UrD526',
-                    desc: '在老城區的中心——鴿子廣場（Sebilj Fountain）開始一天的探索。清晨的光線柔和，遊客還不多，可以悠閒地逛逛傳統的銅器店與咖啡店，感受鄂圖曼時期的古老氛圍。',
-                    tips: ['早晨的光線漂亮又不擠', '鴿子廣場是最佳拍照點']
+  id: 'd15-2',
+  time: '09:00',
+  title: '塞拉耶佛歷史環線散步',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: 'Eternal Flame → Baščaršija → City Hall → Latin Bridge',
+  location: 'Sarajevo Old Town',
+  mapLink: 'https://maps.app.goo.gl/Gg3RsPQqwciykXf78',
+  desc: (
+    <Fragment>
+      <div className="mb-4 flex items-center">
+        <span className="font-bold text-gray-800">散步路線</span>
+        <MapLink url="https://maps.app.goo.gl/Gg3RsPQqwciykXf78" />
+      </div>
+
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        今天上午以塞拉耶佛最經典的歷史環線為主。從 Eternal Flame 永恆之火
+        <MapLink url="https://maps.app.goo.gl/kATs4sXvJ6uuhJcT7" />
+        一帶出發，沿著 Ferhadija 徒步區
+        <MapLink url="https://maps.app.goo.gl/jsErPBTb3YJwZLAh6" />
+        往東走，會先經過奧匈帝國時期留下的歐式街區，再走到 Sarajevo Meeting of Cultures 東西文化相遇線
+        <MapLink url="https://maps.app.goo.gl/VrBQ9W95p6SvCJZUA" />
+        ，進入鄂圖曼風格的 Baščaršija 舊市集。這段路能很清楚感受到 Sarajevo 從西方走向東方、從奧匈走回鄂圖曼的城市層次。
+      </p>
+
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        途中可順路看 Sacred Heart Cathedral 耶穌聖心大教堂
+        <MapLink url="https://maps.app.goo.gl/FHSPvfUrDDKt8H1EA" />
+        、Sahat Kula 薩哈特庫拉鐘樓
+        <MapLink url="https://maps.app.goo.gl/LAnb9upQ5setxDrQ7" />
+        、Gazi Husrev-beg Mosque 格茲・胡色雷・貝格清真寺
+        <MapLink url="https://maps.app.goo.gl/Suuna9dKYd9sgvy59" />
+        ，再走進 Baščaršija 巴斯卡爾森雅
+        <MapLink url="https://maps.app.goo.gl/kHCx86Pxf9WQ7USL9" />
+        、Kazandžiluk 銅匠街
+        <MapLink url="https://maps.app.goo.gl/4wmTmY7Txh5gty63A" />
+        與 Sebilj Fountain
+        <MapLink url="https://maps.app.goo.gl/WpemrGjFj1kvCaEM8" />
+        。
+      </p>
+
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        最後走到華麗的 Sarajevo City Hall
+        <MapLink url="https://maps.app.goo.gl/ccKfJR63LHqMyR4U8" />
+        ，再沿著 Miljacka 河回到 Latin Bridge 拉丁橋
+        <MapLink url="https://maps.app.goo.gl/eGKmz1P4He5Vhfyx5" />
+        與斐迪南大公遇刺地點
+        <MapLink url="https://maps.app.goo.gl/zLmf2vVvmkx76iot5" />
+        ，串起這座城市從鄂圖曼、奧匈、一戰到近代戰爭的歷史。
+      </p>
+
+      <div className="mb-2">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">【建議小動線】</h4>
+        <ul className="text-sm text-gray-600 leading-relaxed space-y-1 list-disc pl-4">
+          <li>09:00 Eternal Flame 永恆之火，作為散步起點</li>
+          <li>09:15 Ferhadija 徒步區，觀察奧匈帝國風建築</li>
+          <li>09:30 Sacred Heart Cathedral 耶穌聖心大教堂外觀</li>
+          <li>09:45 Sarajevo Meeting of Cultures 東西文化相遇線</li>
+          <li>10:00 Sahat Kula、Gazi Husrev-beg Mosque 與周邊鄂圖曼建築</li>
+          <li>10:35 Baščaršija、Kazandžiluk 銅匠街與 Sebilj Fountain</li>
+          <li>11:10 Sarajevo City Hall / Vijećnica，可外觀拍照，若時間足夠可入內</li>
+          <li>11:45 Latin Bridge 與斐迪南大公遇刺地點</li>
+          <li>12:15 回老城午餐</li>
+        </ul>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    '這條路線比單純從 Baščaršija 開始更有歷史脈絡',
+    'Sarajevo Meeting of Cultures 是觀察東西建築風格轉換的重點',
+    'Gazi Husrev-beg Mosque 入內需注意服裝規定',
+    'City Hall 如果時間充裕很值得入內，內部比外觀更驚艷',
+    'Latin Bridge 重點不是橋本身，而是橋頭附近的遇刺現場與「轉錯彎」的歷史瞬間'
+  ]
                 },
                 {
                     id: 'd15-3',
