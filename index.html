@@ -3386,7 +3386,7 @@
                 {
   id: 'd16-2',
   time: '16:00',
-  title: '抵達科托爾・停車與入住',
+  title: '抵達科托爾',
   type: 'arrival',
   iconName: 'MapPin',
   subtitle: 'Avenza Residences Kotor Old Town',
@@ -3467,7 +3467,7 @@
                 {
   id: 'd16-3',
   time: '19:30',
-  title: 'Kotor 舊城輕鬆晚餐',
+  title: '科托爾老城輕鬆晚餐',
   type: 'food',
   iconName: 'Utensils',
   subtitle: 'Scala Santa / Cesarica',
@@ -3521,28 +3521,89 @@
         <span className="font-bold text-gray-800">健行路線</span>
         <MapLink url="https://maps.app.goo.gl/MvLkMFuFX4w4nhxb7" />
       </div>
+
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
         <span className="font-bold text-gray-800">強烈建議清晨出發，避開炎熱和人潮。</span>
-        這段健行階梯多、曝曬明顯，完整往返加拍照建議抓 2–3 小時。從山腰一路俯瞰 Kotor Old Town 與 Kotor Bay，是黑山最經典的畫面之一。
+        這段健行階梯多、遮蔭少，完整往返加拍照建議抓 2–3 小時。從山腰一路俯瞰 Kotor Old Town 與 Kotor Bay，是黑山最經典的畫面之一。
       </p>
+
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">【路線選擇】</h4>
+        <ul className="text-sm text-gray-600 leading-relaxed space-y-3 list-none pl-0">
+          <li className="bg-green-50 p-3 rounded-xl border border-green-100">
+            <div className="font-bold text-green-800 mb-1">輕量版｜Our Lady of Health 附近折返</div>
+            <p className="text-xs leading-relaxed">
+              適合前一晚抵達較晚、睡眠不足，或不想消耗太多體力的人。約 45–75 分鐘即可看到很棒的老城與海灣視角。
+            </p>
+          </li>
+
+          <li className="bg-blue-50 p-3 rounded-xl border border-blue-100">
+            <div className="font-bold text-blue-800 mb-1">完整版｜San Giovanni Fortress</div>
+            <p className="text-xs leading-relaxed">
+              若體力與天氣允許，可繼續往上到堡壘頂端。完整往返加拍照約 2–3 小時，視野最完整，但階梯更多、曝曬更明顯。
+            </p>
+          </li>
+        </ul>
+      </div>
+
       <p className="text-sm text-gray-600 leading-relaxed text-justify">
-        若只想輕量健行，可以爬到 <span className="font-bold text-gray-800">Church of Our Lady of Health</span> 附近折返，約 30–45 分鐘可看到很棒的景色。若體力與天氣允許，再繼續往上到堡壘頂端。
+        若前一晚因跨境、停車或入住較晚才休息，今天不必硬爬到頂。只要清晨走到半山腰，已經能看到 Kotor 最經典的海灣景色。
       </p>
     </Fragment>
   ),
-  tips: ['一定要帶水', '穿舒適防滑的運動鞋', '早上 6:00–7:00 出發最佳', '若不想爬山，可改下午搭 Kotor Cable Car']
-                },
+  tips: [
+    '一定要帶水',
+    '每人建議至少 1 公升水',
+    '穿舒適防滑的運動鞋',
+    '早上 6:00–7:00 出發最佳',
+    '準備現金支付城牆／堡壘門票',
+    '若不想爬山，可改下午搭 Kotor Cable Car'
+  ]
                 {
-                    id: 'd17-2',
-                    time: '10:00',
-                    title: '早餐＋休息',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    subtitle: 'Dobrota 或老城咖啡館',
-                    location: 'Kotor Old Town / Dobrota',
-                    mapLink: 'https://maps.app.goo.gl/JqFh6tD2G1xR6N8',
-                    desc: '健行後回到老城區，找間咖啡館享用早餐並休息。推薦：老城內咖啡館，或沿著 Dobrota 沿海大道找間有海景的 Cafe，享受真正的慢活時光。',
-                    tips: ['補充水分與能量', 'Dobrota 沿海有很多安靜的咖啡館']
+  id: 'd17-2',
+  time: '09:30',
+  title: '下山後早餐休息',
+  type: 'food',
+  iconName: 'Utensils',
+  subtitle: '老城咖啡館 / Dobrota 海邊',
+  location: 'Kotor Old Town / Dobrota',
+  mapLink: 'https://maps.app.goo.gl/JqFh6tD2G1xR6N8',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed">
+        健行結束後先回到老城區或住宿附近，找間咖啡館吃早餐、補充水分與能量。若只爬到 Our Lady of Health 附近折返，早餐可能會提早到 08:30–09:00；若完整爬到堡壘頂端，則可抓 09:30–10:30 左右下山後用餐。
+      </p>
+
+      <p className="mb-4 text-gray-600 leading-relaxed">
+        若身體已經流汗或覺得疲累，建議先回住宿洗澡、換衣服，再出門慢慢吃早餐。今天後面還有老城散步與午後自由活動，不需要急著接下一個景點。
+      </p>
+
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">【早餐選擇】</h4>
+        <ul className="text-sm text-gray-600 leading-relaxed space-y-3 list-none pl-0">
+          <li className="bg-blue-50 p-3 rounded-xl border border-blue-100">
+            <div className="font-bold text-blue-800 mb-1">老城內咖啡館</div>
+            <p className="text-xs leading-relaxed">
+              最方便、最省體力。適合下山後想立刻坐下來吃早餐，或想先回住宿整理後再出門。
+            </p>
+          </li>
+
+          <li className="bg-green-50 p-3 rounded-xl border border-green-100">
+            <div className="font-bold text-green-800 mb-1">Dobrota 海邊咖啡館</div>
+            <p className="text-xs leading-relaxed">
+              若體力還不錯，可以沿著海邊移動到 Dobrota，找間有海景的 Cafe，讓早上的健行慢慢收尾。
+            </p>
+          </li>
+        </ul>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    '補充水分與能量',
+    '流汗後可先回住宿洗澡換衣服',
+    '老城內早餐最省體力',
+    'Dobrota 沿海有很多安靜的咖啡館'
+  ]
                 },
                 {
   id: 'd17-3',
@@ -3561,7 +3622,7 @@
       <div className="mb-6">
         <h4 className="font-bold text-gray-800 mb-1 flex items-center">
           【聖特里芬大教堂 / 科托爾主教座堂】
-          <MapLink url="https://maps.app.goo.gl/Cb4EKm5QevWsnVbZA" />
+          <MapLink url="https://maps.app.goo.gl/1fEzRW8suA6AHs6J6" />
         </h4>
         <p className="text-sm text-gray-600 leading-relaxed text-justify">
           科托爾最重要的教堂之一，外觀很有氣勢。若體力與時間允許，可入內參觀；若早上健行後較累，外觀拍照即可。
@@ -3571,7 +3632,7 @@
       <div className="mb-6">
         <h4 className="font-bold text-gray-800 mb-1 flex items-center">
           【鐘樓廣場】
-          <MapLink url="https://maps.app.goo.gl/ZP2cGiA7BPJiF2E17" />
+          <MapLink url="https://maps.app.goo.gl/Y4yrCWMoDYLJwyTS6" />
         </h4>
         <p className="text-sm text-gray-600 leading-relaxed text-justify">
           科托爾老城的中心地帶，適合坐下來喝點東西、看人來人往，也很適合作為老城散步的休息點。
@@ -3581,14 +3642,13 @@
       <div className="mb-2">
         <h4 className="font-bold text-gray-800 mb-1 flex items-center">【可視體力加走】</h4>
         <ul className="text-sm text-gray-600 leading-relaxed space-y-1 list-disc pl-4">
-          <li><span className="font-bold">武器廣場：</span>老城最大廣場，順路拍照即可。</li>
           <li><span className="font-bold">貓咪博物館：</span>如果喜歡貓，可以短暫參觀。</li>
           <li><span className="font-bold">城牆邊緣：</span>沿著石牆旁慢慢走，感受古城氛圍。</li>
         </ul>
       </div>
     </Fragment>
   ),
-  tips: ['早上已爬山，這段以輕鬆散步為主', '有體力再入內參觀教堂或博物館', '注意地上的貓咪']
+  tips: ['早上已爬山，這段以輕鬆散步為主', '有體力再入內參觀教堂或博物館', '有貓注意']
                 },
                 {
   id: 'd17-4',
@@ -3596,13 +3656,18 @@
   title: '午餐',
   type: 'food',
   iconName: 'Utensils',
-  subtitle: 'BBQ Tanjga / 老城輕食',
-  location: 'Kotor Old Town',
+  subtitle: 'BBQ Tanjga / Dobrota 海邊輕食',
+  location: 'Kotor Old Town / Dobrota',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        健行與老城散步後，午餐建議選擇簡單、份量足、不太正式的餐點。若想吃得快速又有在地感，BBQ Tanjga 是很適合的選項；若想休息久一點，也可以回老城找間咖啡館或海鮮小館。
+        健行與老城慢逛後，午餐選擇簡單、份量足、不太正式的餐點。若想吃得快速又有在地感，BBQ Tanjga 是很適合的選項；若想休息久一點，也可以往 Dobrota 海邊移動，找間海景餐廳或咖啡館慢慢吃。
       </p>
+
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        今天下午還有自由活動，午餐不要吃太撐。若選 BBQ Tanjga，份量通常較足，兩人可以先點少一點再追加，避免吃完下午太沉。
+      </p>
+
       <h4 className="font-bold text-gray-800 mb-2 flex items-center">【午餐推薦】</h4>
       <ul className="list-none pl-0 space-y-3">
         <li>
@@ -3610,19 +3675,48 @@
             BBQ Tanjga
             <MapLink url="https://maps.app.goo.gl/omAchTgeaFnGQ9kS6" />
           </div>
-          <p className="text-xs text-gray-500 leading-relaxed">評價高、份量足的在地燒烤店，適合健行後補充能量。</p>
+          <p className="text-xs text-gray-500 leading-relaxed">
+            評價高、份量足的在地燒烤店，適合健行後補充能量。適合想吃肉、想快速解決午餐的時候。
+          </p>
         </li>
+
         <li>
-          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-            Dobrota 海邊餐廳 / 咖啡館
-            <MapLink url="https://maps.app.goo.gl/LUBdDPyV9ESCDgyM8" />
-          </div>
-          <p className="text-xs text-gray-500 leading-relaxed">若想吃得更慢，可以往 Dobrota 海邊移動，找間海景餐廳或咖啡館休息。</p>
-        </li>
+  <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+    Dobrota 海邊餐廳 / 咖啡館
+    <MapLink url="https://maps.app.goo.gl/LUBdDPyV9ESCDgyM8" />
+  </div>
+  <p className="text-xs text-gray-500 leading-relaxed mb-2">
+    若想吃得更慢、更放鬆，可以往 Dobrota 海邊移動，找間海景餐廳或咖啡館休息，順便銜接下午海邊放空。
+  </p>
+
+  <ul className="text-xs text-gray-500 leading-relaxed space-y-1 list-disc pl-4">
+    <li>
+      <span className="font-bold text-gray-700">Konoba Portun：</span>
+      海邊餐廳，適合想坐下來吃海鮮、地中海料理或比較完整午餐。
+      <MapLink url="https://maps.app.goo.gl/95BXTnhLbfz2QvMVA" />
+    </li>
+    <li>
+      <span className="font-bold text-gray-700">Tiha Noć Restaurant：</span>
+      輕鬆安全牌，菜色選擇通常較廣，適合不知道想吃什麼時。
+      <MapLink url="https://maps.app.goo.gl/Ag1Cstd6GUP5kcJD8" />
+    </li>
+    <li>
+      <span className="font-bold text-gray-700">Caffe del Mare / 海邊咖啡館類：</span>
+      若只是想喝咖啡、果汁或看海放空，可在 Google Maps 搜尋
+      <span className="font-mono"> cafe Dobrota waterfront </span>
+      ，沿著海邊找喜歡的位置坐下。
+    </li>
+  </ul>
+</li>
       </ul>
     </Fragment>
   ),
-  tips: ['午餐後可回住宿小睡片刻', '下午依體力選纜車或海邊放空']
+  tips: [
+    '午餐後可回住宿小睡片刻',
+    'BBQ Tanjga 份量較足，可先點少一點',
+    '下午依體力選纜車或海邊放空',
+    '若想接 Dobrota 海邊放空，午餐可直接往海邊移動'
+  ]
                 },
                 {
   id: 'd17-5',
