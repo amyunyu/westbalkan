@@ -3879,7 +3879,7 @@
                 {
   id: 'd19-2',
   time: '10:00',
-  title: '早餐 / 咖啡休息',
+  title: '早餐咖啡休息',
   type: 'food',
   iconName: 'Coffee',
   subtitle: 'Gradska Kavana Arsenal / Cogito Coffee',
@@ -3945,42 +3945,121 @@
                     tips: ['總督宮中庭很美', '巷弄階梯也是權力遊戲場景']
                 },
                 {
-                    id: 'd19-4',
-                    time: '13:00',
-                    title: '午餐',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    subtitle: '避開尖峰時刻',
-                    location: 'Dubrovnik',
-                    desc: '在城內或城外（Pile Gate 附近）享用午餐。建議避開 12:00-13:00 的最尖峰時段，選擇 13:00 後用餐會比較愜意。推薦品嚐亞得里亞海的墨魚燉飯。',
-                    tips: ['推薦墨魚燉飯']
+  id: 'd19-4',
+  time: '13:00',
+  title: '午餐',
+  type: 'food',
+  iconName: 'Utensils',
+  subtitle: 'Barba / Gradska Kavana Arsenal / Taj Mahal',
+  location: 'Dubrovnik Old Town',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        走完城牆與老城散步後，午餐可吃得輕鬆一點，不要排太正式的大餐，因為下午還要回住宿休息、傍晚上 Mount Srđ。
+      </p>
+
+      <div className="space-y-6">
+        <div>
+          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+            【Barba】
+            <MapLink url="https://maps.app.goo.gl/s4sgWQ28cBvBgbtz5" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            首選 Barba，適合吃章魚漢堡、蝦與炸海鮮等輕鬆海鮮小吃。
+          </p>
+        </div>
+
+        <div>
+          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+            【Gradska Kavana Arsenal】
+            <MapLink url="https://maps.app.goo.gl/w3i63TmzPTAKCDHc9" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            若想坐得舒服、避暑並吃海鮮或克羅埃西亞料理，可選 Gradska Kavana Arsenal。
+          </p>
+        </div>
+
+        <div>
+          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+            【Taj Mahal】
+            <MapLink url="https://maps.app.goo.gl/P5cBmVqU1KnzFAsf8" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            如果 D18 晚餐沒有吃 Taj Mahal，也可以把波士尼料理放在這餐，但建議控制份量。
+          </p>
+        </div>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    '首選 Barba：海鮮街食，適合章魚漢堡、蝦與炸海鮮',
+    '想坐舒服與避暑，可選 Gradska Kavana Arsenal',
+    '若 D18 沒吃 Taj Mahal，D19 午餐也可作為巴爾幹料理備案',
+    '這餐不要吃太飽，下午要休息，傍晚還要上 Mount Srđ',
+    '13:00 後用餐比較避開最尖峰人潮'
+  ]
                 },
                 {
   id: 'd19-5',
-  time: '16:30',
-  title: 'Mount Srđ 夕陽 / Lokrum Island 二選一',
+  time: '17:00',
+  title: 'Mount Srđ 夕陽',
   type: 'activity',
   iconName: 'Compass',
-  subtitle: '依體力與天氣決定',
-  location: 'Lokrum / Mount Srđ',
+  subtitle: '纜車上山 • 俯瞰舊城紅瓦屋頂',
+  location: 'Mount Srđ',
+  mapLink: 'https://maps.app.goo.gl/7r9kJfV4shbkPcKNA',
   desc: (
     <Fragment>
-      <p className="mb-4 text-gray-600 leading-relaxed">
-        上午已走完城牆，下午建議先休息，避開最熱時段後再出門。若想拍旅程收尾的經典全景，優先選 Mount Srđ；若想游泳與森林散步，則選 Lokrum Island。
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        上午已走完古城牆、午後也逛過老城，傍晚最適合上 Mount Srđ，從高處俯瞰杜布羅夫尼克舊城、紅瓦屋頂、城牆、Lokrum Island 與亞得里亞海。這個視角很適合作為旅程收尾：早上是在城牆上看城市細節，傍晚則是從山上看整座城市與海。
       </p>
-      <ul className="text-sm text-gray-600 leading-relaxed space-y-4 list-none pl-0">
-        <li>
-          <span className="font-bold text-gray-700">【A. Mount Srđ】</span>
-          <span className="text-xs text-gray-500 block">搭纜車或自駕上山，是俯瞰杜布羅夫尼克舊城、紅瓦屋頂、城牆與亞得里亞海的最佳制高點。傍晚光線最美，適合作為旅程收尾。</span>
-        </li>
-        <li>
-          <span className="font-bold text-gray-700">【B. Lokrum Island】</span>
-          <span className="text-xs text-gray-500 block">從老港口搭船前往，島上有孔雀、修道院遺跡、植物園與鹹水湖，適合想游泳、避暑和放空的人。需注意末班船時間。</span>
-        </li>
-      </ul>
+
+      <div className="space-y-6">
+        <div>
+          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+            【上山方式】
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            首選搭乘 Dubrovnik Cable Car 上山，速度快、視野好，也最有儀式感。若纜車排隊過長、天氣或風況影響營運，也可以改搭 Uber、Bolt 或計程車上山。建議夕陽前 60–90 分鐘抵達山上，才有足夠時間拍照、走動與等光線變化。
+          </p>
+        </div>
+
+        <div>
+          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+            【山上看什麼】
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            山頂可以俯瞰完整的杜布羅夫尼克舊城輪廓、城牆線條、紅瓦屋頂、老港與 Lokrum Island。傍晚光線會從金色慢慢轉成藍調，是拍攝整趟 Dubrovnik 最經典全景的時刻。
+          </p>
+        </div>
+
+        <div>
+          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+            【晚餐安排】
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            若想在山上用餐，可提前預約 Panorama Restaurant；但如果不想被訂位時間綁住，也可以只上山看景拍照，夕陽後再下山回老城晚餐。這樣彈性較高，也比較適合已經走了一整天的行程節奏。
+          </p>
+        </div>
+
+        <div>
+          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+            【備案：Lokrum Island】
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            如果當天不想上山、天氣不適合看夕陽，或更想游泳與森林散步，可改考慮 Lokrum Island。不過 Lokrum 較適合早一點出發並停留 2–3 小時，傍晚前往需特別確認船班與末班船時間。
+          </p>
+        </div>
+      </div>
     </Fragment>
   ),
-  tips: ['我會優先選 Mount Srđ 夕陽', 'Lokrum 需確認末班船', '下午先休息再出門']
+  tips: [
+    '建議 17:00 左右安排上山，夕陽前 60–90 分鐘抵達最舒服',
+    '首選搭纜車；若排隊過長或停駛，可改 Uber / Bolt / 計程車',
+    '上山前先確認纜車營運、風況與夕陽時間',
+    'Panorama Restaurant 景觀好，但若想用餐需提前預約',
+    'Lokrum Island 只作為備案，且需確認船班與末班船'
+  ]
                 },
                 {
                     id: 'd19-6',
