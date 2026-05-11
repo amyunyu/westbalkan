@@ -2915,61 +2915,57 @@
             14: [
                 {
   id: 'd14-1',
-  time: '08:00',
-  title: 'Mostar 老城早餐',
-  type: 'food',
-  iconName: 'Coffee',
-  subtitle: 'URBAN taste of orient / 波士尼亞早餐',
-  location: 'Mostar Old Town',
-  mapLink: 'https://maps.app.goo.gl/SD8tmYirMazJhwWJ8',
-  desc: '退房前先到莫斯塔爾老城享用早餐：可選波士尼亞風格早餐、麵包、起司、肉類、抹醬、burek、波士尼亞咖啡等，並有機會欣賞老橋景觀。早餐後回住宿退房、取車，再出發前往 Blagaj。',
-  tips: [
-    '建議 08:00 左右用餐，避免影響後面行程',
-    '早餐後回住宿退房、取車，09:00 前後出發最順'
-  ]
-                },
-                {
-  id: 'd14-1',
-  time: '08:30',
+  time: '08:15',
   title: 'Mostar 早餐 & 退房',
   type: 'food',
   iconName: 'Coffee',
   location: 'Mostar Accommodation',
   desc: '在莫斯塔爾享用早餐後辦理退房手續。確認所有行李已放上車，並準備好足夠的水分，為接下來的波士尼亞一日遊和長途車程做準備。',
-  tips: ['早餐後退房', '行李放上車', '每人至少準備1瓶水', '油量確認']
+  tips: ['早餐後退房', '行李放上車', '水、油量確認']
                 },
                 {
-                    id: 'd14-2',
-                    time: '09:00',
-                    title: '前往布拉加伊修道院',
-                    type: 'transport',
-                    iconName: 'Car',
-                    location: '前往布拉加伊修道院',
-                    mapLink: 'https://maps.app.goo.gl/mK8NSqCzbP2485x16',
-                    desc: '從莫斯塔爾出發前往布拉加伊，參觀這座與壯麗岩壁和冰涼河源共生的神聖場所。',
-                    tips: ['早點出發避開人潮']
-                },
-                {
-                    id: 'd14-3',
-                    time: '09:20',
-                    title: '布拉加伊修道院&河源',
-                    type: 'sightseeing',
-                    iconName: 'MapPin',
-                    subtitle: 'Blagaj Tekija/藍綠色河源旁白色蘇菲派修道院',
-                    location: 'Blagaj Tekija',
-                    mapLink: 'https://maps.app.goo.gl/HbEVGwQc4jo8VqLa6',
-                    desc: '參觀建於岩壁下方的 Blagaj Tekija，感受蘇菲派修道院、峭壁與 Buna 河源共生的獨特氛圍。建議走到河對岸拍攝修道院與岩壁的經典全景，再視情況入內參觀。',
-                    tips: ['入內需注意服裝儀容', '女性可能需頭巾，現場通常可借用', '河源對岸是最佳拍攝點']
-                },
-                {
-                    id: 'd14-4',
-                    time: '10:45',
-                    title: '布拉加伊河邊早午餐',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    location: 'Blagaj',
-                    desc: '在布納河 (Buna River) 畔選擇一間河邊餐廳享用午餐，推薦品嚐當地的烤鱒魚料理，清爽鮮美。',
-                    tips: ['坐在河邊享受冰涼的水氣']
+  id: 'd14-2',
+  time: '09:00',
+  title: '布拉加伊修道院、Buna河源&河邊早午餐',
+  type: 'sightseeing',
+  iconName: 'MapPin',
+  subtitle: 'Blagaj Tekija • Buna River Spring • Restoran Vrelo',
+  location: 'Blagaj',
+  mapLink: 'https://maps.app.goo.gl/8btfvxEiqdN5QEzH6',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        從 Mostar 出發前往 Blagaj，車程約 20–30 分鐘。抵達後先參觀建於岩壁下方的 Blagaj Tekija
+        <MapLink url="https://maps.app.goo.gl/HbEVGwQc4jo8VqLa6" />
+        ，感受蘇菲派修道院、峭壁與 Buna 河源共生的獨特氛圍。建議走到河對岸拍攝修道院與岩壁的經典全景，再視情況入內參觀。
+      </p>
+
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        參觀後可在 Buna 河畔的 Restoran Vrelo
+        <MapLink url="https://maps.app.goo.gl/oSCing8RFBZp5vDWA" />
+        坐下來吃早午餐。這間餐廳靠近 Blagaj Tekija 與 Buna 河源，適合邊看河景、邊品嚐當地招牌鱒魚料理。
+      </p>
+
+      <div className="mb-2">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">【建議小動線】</h4>
+        <ul className="text-sm text-gray-600 leading-relaxed space-y-1 list-disc pl-4">
+          <li>09:00 從 Mostar 出發前往 Blagaj</li>
+          <li>09:25 抵達 Blagaj Tekija，先看修道院與 Buna 河源</li>
+          <li>10:15 河對岸拍照、視情況入內參觀</li>
+          <li>10:45 Restoran Vrelo 河邊早午餐</li>
+          <li>11:45 前後離開，前往 Počitelj</li>
+        </ul>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    'Blagaj Tekija 入內需注意服裝儀容，女性可能需頭巾，現場通常可借用',
+    '河源對岸是拍攝修道院與岩壁全景的最佳角度',
+    'Restoran Vrelo 推薦點烤鱒魚，搭配沙拉、麵包或薯條',
+    '河邊座位氣氛好，入座時可詢問是否有靠水位置',
+    '建議抓 2.5–3 小時完成 Blagaj 區域，11:45 左右離開前往 Počitelj',
+    '備 KM 現金，點餐前可確認是否能刷卡'
+  ]
                 },
                 {
                     id: 'd14-5',
