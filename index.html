@@ -3734,7 +3734,7 @@
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed">
-        下午氣溫較高，建議依早上體力選擇一個輕鬆行程。若早上已爬 San Giovanni Fortress，下午更推薦 Dobrota 海邊放空；若早上沒有爬山，則可選 Kotor Cable Car 補足高處視角。
+        下午氣溫較高，依體力選擇一個輕鬆行程。若早上已爬 San Giovanni Fortress，下午更推薦 Dobrota 海邊放空；若早上沒有爬山，則可選 Kotor Cable Car 補足高處視角。
       </p>
       <ul className="text-sm text-gray-600 leading-relaxed space-y-4 list-none pl-0">
         <li>
@@ -3747,7 +3747,7 @@
         <li>
           <span className="font-bold text-gray-700">【B. Dobrota 海邊放空】</span>
           <MapLink url="https://maps.app.goo.gl/LUBdDPyV9ESCDgyM8" />
-          <span className="text-xs text-gray-500 block">若早上已完成堡壘健行，下午建議沿著 Dobrota 海濱步道散步，找間海邊咖啡館或小泳點，享受真正的地中海慢生活。</span>
+          <span className="text-xs text-gray-500 block">若早上已完成堡壘健行，下午可以沿著 Dobrota 海濱步道散步，找間海邊咖啡館或小泳點，享受真正的地中海慢生活。</span>
         </li>
       </ul>
     </Fragment>
@@ -3760,10 +3760,74 @@
   title: 'Kotor 舊城夜景晚餐',
   type: 'food',
   iconName: 'Utensils',
-  subtitle: '輕鬆享受夜晚',
+  subtitle: 'Pepe Nero / Pescaria Dekaderon / Cesarica',
   location: 'Kotor Old Town',
-  desc: '在老城內享用晚餐，或沿著城牆外圍散步，欣賞點燈後的城牆與山壁。若早上有健行，今晚建議不要排太晚，讓身體恢復，避免舟車勞頓與爬山疲勞累積。',
-  tips: ['點燈後的城牆很美', '早點睡，避免疲勞累積']
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed">
+        在老城內享用晚餐，或沿著城牆外圍散步，欣賞點燈後的城牆與山壁。若早上有健行，今晚建議不要排太晚，讓身體恢復，避免舟車勞頓與爬山疲勞累積。
+      </p>
+
+      <p className="mb-4 text-gray-600 leading-relaxed">
+        這是 Kotor 的第二晚，可以比前一晚稍微從容一點。若想好好吃一餐，可優先考慮 Pepe Nero；若想坐在老城核心感受夜晚氣氛，則可選 Pescaria Dekaderon；若想吃小巧溫馨的海鮮與在地料理，Cesarica 也很適合。
+      </p>
+
+      <div className="mt-6 border-t border-gray-100 pt-6">
+        <h4 className="font-bold text-gray-800 mb-3 flex items-center">【晚餐選項】</h4>
+        <ul className="list-none pl-0 space-y-4">
+          <li>
+            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+              Pepe Nero
+              <MapLink url="https://maps.app.goo.gl/PZ2V5tTaC2GwGDVC9" />
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              適合第17晚慢慢吃的一餐，氣氛比第一晚更像小小犒賞。若想吃得稍微精緻一點，可以優先考慮。
+            </p>
+          </li>
+
+          <li>
+            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+              Pescaria Dekaderon
+              <MapLink url="https://maps.app.goo.gl/HNHCZWANF8FPdFrHA" />
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              位於老城核心區，適合想在比較熱鬧、有廣場氛圍的地方吃晚餐。適合海鮮、披薩或想輕鬆坐久一點的晚上。
+            </p>
+          </li>
+
+          <li>
+            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+              Restoran Cesarica
+              <MapLink url="https://maps.app.goo.gl/xn9qk5gLouA8XTvZ9" />
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              小巧溫馨的海鮮與在地料理選項。若前一晚沒有吃到 Cesarica，今晚可以安排在這裡。
+            </p>
+          </li>
+
+          <li>
+            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+              La Catedral Pasta Bar
+              <MapLink url="https://maps.app.goo.gl/sqN8qE3rGBkUtojV7" />
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              若中午吃太飽、晚上只想吃簡單義大利麵或安全牌，這間可以作為輕鬆備選。
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <p className="mt-5 text-sm text-gray-600 leading-relaxed">
+        晚餐後若還有精神，可以走到城門外或城牆邊緣看夜色；若早上有完成堡壘健行，今晚建議早點回住宿休息。
+      </p>
+    </Fragment>
+  ),
+  tips: [
+    '點燈後的城牆很美',
+    '若想吃 Pepe Nero 或 Cesarica，建議提前訂位',
+    '早上若有爬堡壘，晚餐不要排太晚',
+    '第16晚若已吃 Scala Santa，第17晚可換 Pepe Nero 或 Dekaderon'
+  ]
                 }
             ],
             18: [
