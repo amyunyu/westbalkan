@@ -3581,18 +3581,36 @@
             ],
             18: [
                 {
+  id: 'd18-breakfast-supply',
+  time: '08:00',
+  title: 'Senso Bakery 買路上補給',
+  type: 'food',
+  iconName: 'Croissant',
+  subtitle: 'Kotor 出發前 • 路上早餐與午餐備案',
+  location: 'Senso Bakery, Kotor',
+  mapLink: 'https://maps.app.goo.gl/QFxvkqJtT6yxgTbT8',
+  desc: 'Senso Bakery 08:00 開門，剛好適合在離開 Kotor 前買簡單早餐與路上補給。今日上午需跨境前往 Dubrovnik，13:00 還車前後時間不穩定，不建議排正式午餐；可先買麵包、burek、三明治、咖啡與水，車上或邊境前後簡單補充體力。',
+  tips: [
+    'Senso Bakery 08:00 開門，可 08:15 左右前往',
+    '買早餐，也順便買午餐備案',
+    '推薦麵包、burek、三明治、甜點、咖啡與水',
+    '跨境與還車時間不穩，D18 午餐不排正式餐廳',
+    '買完後 09:00 左右出發前往 Dubrovnik'
+  ]
+                },
+                {
   id: 'd18-1',
-  time: '09:00',
+  time: '08:30',
   title: '前往杜布羅夫尼克',
   type: 'transport',
   iconName: 'Car',
   subtitle: '跨國移動 • 邊境通關 • 13:00 市區還車',
   location: 'Dubrovnik, Croatia',
-  mapLink: 'https://maps.app.goo.gl/ZBLwjRubkpnKgBfC9',
-  desc: '告別蒙特內哥羅，開車前往杜布羅夫尼克。今日需經過 Debeli Brijeg / Karasovići 邊境，並於 13:00 在 Dubrovnik Downtown 還車，建議提早從 Kotor 出發，預留邊境排隊、進城交通與加油時間。',
-  tips: ['準備護照過境', '預留邊境排隊時間', '還車前確認油箱規定', '建議 09:00 左右出發']
-},
-{
+  mapLink: 'https://maps.app.goo.gl/4DZGzasvydVFU2oU9',
+  desc: '告別蒙特內哥羅，開車前往杜布羅夫尼克。今日需經過 Debeli Brijeg / Karasovići 邊境，並於 13:00 在 Dubrovnik Downtown 還車。因午餐時間不穩定，建議已先於 Kotor 買好路上補給，再預留邊境排隊、進城交通與加油時間。',
+  tips: ['準備護照過境', '預留邊境排隊時間', '還車前確認油箱規定', '聽說科托到杜布羅夫尼克這段要等','車上先備好水與簡單食物']
+                },
+                {
   id: 'd18-return-car',
   time: '13:00',
   title: 'Dubrovnik Downtown 還車',
@@ -3824,7 +3842,7 @@
             【適合放在 D18 或 D19】
           </h4>
           <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            若排在 D18，建議訂 20:00 左右，接在 Banje Beach 夕陽後作為抵達杜布羅夫尼克的第一頓晚餐；若排在 D19，則適合作為 Mount Srđ 夕陽後的最後一晚收尾，但建議控制份量，避免吃得太重。
+            若排在 D18，接在 Banje Beach 夕陽後作為抵達杜布羅夫尼克的第一頓晚餐；若排在 D19，則適合作為 Mount Srđ 夕陽後的最後一晚收尾。
           </p>
         </div>
       </div>
@@ -3834,8 +3852,7 @@
     '不是印度料理，是波士尼／巴爾幹料理',
     '第一次吃可優先考慮 Traditional Experience',
     '推薦 Roasted Pepper with Kajmak, Honey and Walnuts、Bosnian Pot、Sarma / Dolma / Japrak',
-    '肉類或慢燉菜建議搭配 Šopska Salad 或 Lukmira',
-    '建議提前訂位；菜單價格為 2023 PDF，實際價格以現場為準'
+    '肉類或慢燉菜建議搭配 Šopska Salad 或 Lukmira'
   ]
                 }
             ],
@@ -3897,9 +3914,7 @@
     </Fragment>
   ),
   tips: [
-  '建議前一晚先線上購買 Dubrovnik City Walls 票券',
-  '不要單買 Lovrijenac Fortress；通常 City Walls 票已包含',
-  '若確定要進 Rector’s Palace 等多個博物館，再比較 Dubrovnik Pass',
+  '票券已購買',
   '07:30 抵達 Pile Gate 一帶，等開放後立刻入場',
   '全程約 1.5–2 小時，階梯多、遮蔭少，一定要帶水、帽子、防曬'
   ]
@@ -3950,28 +3965,80 @@
   ]
                 },
                 {
-                    id: 'd19-3',
-                    time: '11:00',
-                    title: '老城深度散步',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: 'Rector’s Palace & 大教堂',
-                    location: 'Rector\'s Palace',
-                    mapLink: 'https://maps.app.goo.gl/nR8QxZ5J8k2T8Z4A6',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                在平地上輕鬆探索舊城區的精華建築與巷弄。
-                            </p>
-                            <ul className="text-sm text-gray-600 leading-relaxed space-y-2 list-none pl-0">
-                                <li><span className="font-bold">Rector’s Palace (總督宮)：</span>哥德文藝復興式建築，曾是拉古薩共和國的權力中心。</li>
-                                <li><span className="font-bold">Dubrovnik Cathedral (大教堂)：</span>巴洛克式教堂，內部藏有珍貴的聖物。</li>
-                                <li><span className="font-bold">巷弄拍照：</span>隨意走進兩側的階梯巷弄，捕捉光影與生活感。</li>
-                            </ul>
-                        </Fragment>
-                    ),
-                    tips: ['總督宮中庭很美', '巷弄階梯也是權力遊戲場景']
-                },
+  id: 'd19-3',
+  time: '11:00',
+  title: '老城深度散步',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: 'Rector’s Palace • Franciscan Monastery • Jesuit Stairs',
+  location: 'Dubrovnik Old Town',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        走完古城牆並喝完咖啡後，回到老城平面慢慢欣賞杜布羅夫尼克的教堂、宮殿與巷弄。（可選 1–2 個重點進去，其餘以外觀、廣場與街景為主。）
+      </p>
+
+      <div className="space-y-6">
+        <div>
+          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+            【Dubrovnik Cathedral 聖母升天大教堂】
+            <MapLink url="https://maps.app.goo.gl/2pmqiisn3ygAqYeF8" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            巴洛克式大教堂位於總督府附近，外觀優雅，周邊廣場感很好。若喜歡教堂內部、祭壇與宗教藝術，可以入內短暫參觀；若時間有限，外觀與廣場氛圍也已足夠。
+          </p>
+        </div>
+          
+          <div>
+          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+            【Rector’s Palace 總督府】
+            <MapLink url="https://maps.app.goo.gl/CmKsdv427gZqUJoo6" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            最推薦進去參觀的建築。這裡曾是拉古薩共和國的權力中心，建築融合哥德式、文藝復興與巴洛克元素。中庭、拱廊與樓梯很有氣氛，能感受到杜布羅夫尼克昔日作為海上共和國的秩序與繁華。
+          </p>
+        </div>
+
+        <div>
+          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+            【Sponza Palace / St. Blaise / 鐘塔】
+            <MapLink url="https://maps.app.goo.gl/DszMqr8weU1xepmd9" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            Luža Square 一帶是老城最華麗的核心區域。Sponza Palace 的立面與拱廊很適合外觀欣賞；聖伯拉削教堂是城市守護聖人的教堂，可短暫入內；鐘塔則是廣場視覺焦點，適合慢慢拍照。
+          </p>
+        </div>
+
+          <div>
+          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+            【Jesuit Stairs / Church of St. Ignatius】
+            <MapLink url="https://maps.app.goo.gl/QUGS4XNYN3J7ostPA" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            從 Gundulić Square 往上走到耶穌會階梯與聖依納爵教堂，是老城最有戲劇感的空間之一。階梯、教堂立面與兩側牆面形成漂亮的垂直構圖，很適合拍照；教堂可視體力與時間短暫入內。
+          </p>
+        </div>
+          
+        <div>
+  <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+    【Franciscan Monastery 方濟各教堂和修道院】
+    <MapLink url="https://maps.app.goo.gl/KiZ1jnrrjD9V75mx9" />
+  </h4>
+  <p className="text-sm text-gray-600 leading-relaxed text-justify">
+    位於 Pile Gate 與 Onofrio Fountain 附近，教堂與修道院緊鄰 Stradun，修道院迴廊安靜陰涼，與主街的熱鬧形成對比；若想看較靜謐的宗教建築、修道院空間與老藥房，這裡很值得進去。
+  </p>
+        </div>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    '這段建議只選 1–2 個室內景點深入參觀',
+    '第一順位：Rector’s Palace；第二順位：Franciscan Monastery',
+    'Sponza Palace、St. Blaise、鐘塔適合外觀看與拍照',
+    'Jesuit Stairs 很適合拍老城階梯與光影',
+    '13:00 前後接午餐，不要拖太久以免下午無法休息'
+  ]
+},
                 {
   id: 'd19-4',
   time: '13:00',
