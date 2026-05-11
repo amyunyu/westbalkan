@@ -2968,57 +2968,94 @@
   ]
                 },
                 {
-                    id: 'd14-5',
-                    time: '11:30',
-                    title: '前往波西泰利古鎮',
-                    type: 'transport',
-                    iconName: 'Car',
-                    location: '前往波西泰利古鎮',
-                    desc: '繼續南下前往依山而建的中世紀鄂圖曼風格村落。',
-                    tips: ['保持專注駕駛']
-                },
-                {
-  id: 'd14-6',
-  time: '12:30',
-  title: '波西泰利古鎮',
+  id: 'd14-3',
+  time: '11:45',
+  title: '波西泰利古鎮散步',
   type: 'sightseeing',
   iconName: 'Camera',
   subtitle: 'Počitelj • 鄂圖曼石頭村 • 堡壘俯瞰',
   location: 'Počitelj',
-  desc: '這座依山而建的石頭村莊曾是軍事要塞，保留濃厚的鄂圖曼風格。可以沿石階穿梭於老屋、清真寺與城牆之間，若體力允許，登上堡壘俯瞰整個村落與 Neretva 河谷。',
-  tips: ['穿著好走的鞋子', '石階多且日曬強，防曬要做好', '若天氣太熱，可只走村落核心區']
+  mapLink: 'https://maps.app.goo.gl/uao9sCmrFFjGLaFU9',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        從 Blagaj / Restoran Vrelo 出發，沿著 Neretva 河谷方向前往 Počitelj
+        <MapLink url="https://maps.app.goo.gl/JgbLnUtpzCC8k2N68" />
+        ，車程約 35–45 分鐘。抵達後建議先找好停車位置，再步行進入村落核心區。
+      </p>
+
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        Počitelj 是依山而建的石頭古鎮，曾是軍事要塞，保留濃厚的鄂圖曼風格。可以沿石階穿梭於老屋、清真寺與城牆之間，若體力允許，登上堡壘俯瞰整個村落與 Neretva 河谷。這裡石階多、日曬強，慢慢走。
+      </p>
+
+      <div className="mb-2">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">【建議小動線】</h4>
+        <ul className="text-sm text-gray-600 leading-relaxed space-y-1 list-disc pl-4">
+          <li>11:45 從 Blagaj / Restoran Vrelo 出發</li>
+          <li>12:25–12:30 抵達 Počitelj，先找停車位置</li>
+          <li>12:30 進入古鎮核心區，沿石階散步拍照</li>
+          <li>若天氣與體力允許，可登上堡壘俯瞰 Neretva 河谷</li>
+          <li>13:30 前後離開，前往 Kravica Waterfall</li>
+        </ul>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    'Počitelj 建議停留 45–60 分鐘',
+    '石階多又日曬強，穿好走的鞋、準備水與防曬',
+    '若天氣太熱，可只走村落核心區，不一定要登高',
+  ]
                 },
                 {
-                    id: 'd14-7',
-                    time: '13:00',
-                    title: '前往克拉維斯瀑布',
-                    type: 'transport',
-                    iconName: 'Car',
-                    location: '前往克拉維斯瀑布',
-                    desc: '前往被稱為「波赫的尼加拉」的壯觀瀑布群。',
-                    tips: []
-                },
-                {
-  id: 'd14-8',
-  time: '14:15',
-  title: '克拉維斯瀑布',
+  id: 'd14-4',
+  time: '13:30',
+  title: '克拉維斯瀑布散步',
   type: 'sightseeing',
   iconName: 'Sun',
-  subtitle: 'Kravica 瀑布 • 弧形瀑布群 • 木棧道 & 戲水',
+  subtitle: 'Kravica Waterfall • 弧形瀑布群 • 木棧道 & 戲水',
   location: 'Kravica Waterfall',
   mapLink: 'https://maps.app.goo.gl/6oscrGKD9ktjXEZR6',
-  desc: '欣賞氣勢磅礴的弧形瀑布群。可沿著水邊步道散步、拍攝瀑布全景，或在水邊休息享受清涼。若季節與現場規定允許，也可以戲水或游泳。',
-  tips: ['需購買門票，成人票常見為 20 KM', '若要戲水請自備泳衣與毛巾', '水邊地面濕滑，請小心']
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        從 Počitelj 出發前往 Kravica Waterfall
+        <MapLink url="https://maps.app.goo.gl/UcbjmUdzUNmQGwobA" />
+        ，車程約 40–50 分鐘。這裡是波赫南部最有代表性的自然景點之一，以弧形展開的瀑布群聞名，水氣清涼，很適合作為 Mostar 周邊一日遊的午後收尾。
+      </p>
+
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        抵達後可沿著水邊步道散步、拍攝瀑布全景，或在水邊休息享受清涼。若季節、天氣與現場規定允許，也可以戲水或游泳。由於傍晚還要長途開車前往 Sarajevo，要控制停留時間，不要玩到太晚。
+      </p>
+
+      <div className="mb-2">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">【建議小動線】</h4>
+        <ul className="text-sm text-gray-600 leading-relaxed space-y-1 list-disc pl-4">
+          <li>13:30 從 Počitelj 出發前往 Kravica Waterfall</li>
+          <li>14:15 抵達瀑布，購票後進入園區</li>
+          <li>14:20 沿步道下到瀑布區，拍攝弧形瀑布全景</li>
+          <li>14:45 水邊休息、拍照，若開放且有準備可短暫戲水</li>
+          <li>15:30–15:45 前後離開，準備前往 Sarajevo</li>
+        </ul>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    '需購買門票，建議備 KM 現金',
+    '成人票常見約 20 KM，實際以現場公告為準',
+    '若要戲水請自備泳衣、毛巾與可濕拖鞋',
+    '水邊地面濕滑，請小心',
+    '建議 15:30–15:45 左右離開，保留前往 Sarajevo 的車程時間'
+  ]
                 },
                 {
-  id: 'd14-9',
+  id: 'd14-5',
   time: '15:45',
   title: '前往塞拉耶佛',
   type: 'transport',
   iconName: 'Car',
   subtitle: '長途車程約 3–3.5 小時',
   location: 'Sarajevo',
-  mapLink: 'https://maps.app.goo.gl/E39G4J8H9k2T8Z4A6',
+  mapLink: 'https://maps.app.goo.gl/9s1DSf9ehGrwTr9r9',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
