@@ -359,7 +359,7 @@
                                 <ul className="text-sm text-gray-600 space-y-1 list-none pl-0">
                                     <li>1. Zagreb 的視覺標誌，以彩色瓷磚屋頂最具代表性：屋頂圖案呈現 克羅埃西亞國徽 + Zagreb 市徽，拍照觀察非常亮眼，是必訪地標。</li>
                                     <li>2. 位於上城最古老區域，周邊是國會與政府機構：聖馬爾谷廣場周邊開闊、典雅，是 Zagreb 政治中心與歷史重心。</li>
-                                    <li>3. 建築本體為羅馬式＋哥德式混合風格：內部偶爾開放（不固定），但外觀本身就相當值得欣賞；建議白天拍一次、傍晚光線下再看一次更漂亮。</li>
+                                    <li>3. 建築本體為羅馬式＋哥德式混合風格：內部偶爾開放（不固定），但外觀本身就相當值得欣賞；可以白天拍一次、傍晚光線下再看一次更漂亮。</li>
                                 </ul>
                             </div>
                         </Fragment>
@@ -497,7 +497,7 @@
                         </Fragment>
                     ),
                     tips: [
-                        '市集部分攤販僅收現金，建議帶小額歐元',
+                        '市集部分攤販僅收現金，提醒帶小額歐元',
                         '水果可請店家「幫你挑一盒好吃的」',
                         '推薦邊走邊吃：葡萄、櫻桃、無花果',
                         'Dolac Market 很安全，但旅遊區仍注意包包'
@@ -546,7 +546,7 @@
                                     自1877年起，每天正午12點整，塔樓頂端的大炮 (Grič Cannon) 會準時鳴響，為全城校對時間。
                                 </p>
                                 <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
-                                    <li>建議 11:50 前抵達塔樓下方佔位。</li>
+                                    <li>提醒 11:50 前抵達塔樓下方佔位。</li>
                                     <li>炮聲非常響亮，請做好心理準備。</li>
                                     <li>可購票登塔，360度俯瞰城市紅瓦屋頂。</li>
                                 </ul>
@@ -566,26 +566,39 @@
                     tips: []
                 },
                 {
-                    id: 'd2-10',
-                    time: '15:30',
-                    title: '機場取車',
-                    type: 'transport',
-                    iconName: 'Car',
-                    location: 'Zagreb Airport',
-                    mapLink: 'https://maps.app.goo.gl/zEc8CPN39NLXcLzf6',
-                    subtitle: '辦理租車手續',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4">辦理租車手續，請務必詳細檢查車況及保險文件。</p>
-                            <p className="text-sm">
-                                租車公司官網：
-                                <a href="https://www.uni-rent.net/" target="_blank" rel="noreferrer" className="text-blue-500 hover:underline ml-1">
-                                    Uni-Rent Car Rental
-                                </a>
-                            </p>
-                        </Fragment>
-                    ),
-                    tips: ['準備國際駕照', '確認油箱返還規定', '檢查車身刮痕']
+  id: 'd2-10',
+  time: '15:00',
+  title: 'Zagreb 市區取車',
+  type: 'transport',
+  iconName: 'Car',
+  location: 'Uni Rent Zagreb Downtown',
+  mapLink: 'https://maps.app.goo.gl/XrgP8HDv9nTh7E4T8',
+  subtitle: 'Kranjčevićeva 46 • Uni Rent',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        前往 Uni Rent Zagreb Downtown 辦理取車。取車地點為 Kranjčevićeva 46。
+      </p>
+
+      <div className="p-3 bg-gray-50 rounded-lg border border-gray-100 text-sm text-gray-600">
+        <p className="font-bold text-gray-800 mb-1">取車資訊</p>
+        <p>車款級距：VW Golf 或同級車</p>
+        <p>取車時間：25.05.2026 15:30</p>
+        <p>地點：Zagreb Downtown (ZGD)</p>
+        <p>地址：Kranjčevićeva 46, Zagreb</p>
+        <p>電話：+385 99 499 9135</p>
+        <p>Email：zagreb@uni-rent.hr</p>
+        <p>營業時間：08:00–20:00</p>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    '準備護照、台灣駕照、國際駕照與信用卡',
+    '取車前拍照記錄車身、輪胎、玻璃與油表',
+    '確認 SCDW 自負額 0€、輪胎玻璃險與跨境文件',
+    '確認油箱返還規定'
+  ]
+
                 }
             ],
             3: [
@@ -4223,7 +4236,7 @@
   subtitle: '機場接送 / Uber / 計程車',
   location: 'Dubrovnik Airport (DBV)',
   mapLink: 'https://www.google.com/maps/search/?api=1&query=Dubrovnik+Airport',
-  desc: '從 Dubrovnik Finest Apartments 前往 Dubrovnik Airport，準備搭乘 EK2075。因已於 6/10 在 Dubrovnik Downtown 還車，今日建議使用機場接送、Uber/Bolt 或計程車前往機場。',
+  desc: '從 Dubrovnik Finest Apartments 前往 Dubrovnik Airport，準備搭乘 EK2075。使用機場接送、Uber/Bolt 或計程車前往機場。',
   tips: ['前一天先預約接送或確認叫車可用性', '前往機場抓 45–60 分鐘較安心', '確認護照、登機文件與行李重量']
                 },
                 {
