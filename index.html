@@ -2139,144 +2139,219 @@
   tips: ['回程接駁需預留等候時間', '離園前確認是否已取回停車位置與行李']
                 },
                 {
-                    id: 'd10-6',
-                    time: '15:30',
-                    title: '前往札達爾',
-                    type: 'transport',
-                    iconName: 'Car',
-                    subtitle: '車程約 2 小時',
-                    location: 'Zadar, Croatia',
-                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Zadar+Old+Town',
-                    desc: '告別十六湖，開車前往克羅埃西亞的歷史古城——札達爾 (Zadar)。沿途風景將從內陸森林轉變為亞得里亞海的沿海風光。',
-                    tips: ['健行後開車請先補水休息', '抵達札達爾後先確認停車與入住方式']
-                },
-                {
-                    id: 'd10-7',
-                    time: '17:00',
-                    title: 'Iadra apartment in city center',
-                    type: 'hotel',
-                    iconName: 'BedDouble',
-                    subtitle: 'Booking/check in',
-                    location: 'Iadra apartment in city center',
-                    mapLink: 'https://maps.app.goo.gl/gdvV4gctwJw6wxBY8',
-                    desc: '抵達札達爾住宿點，辦理入住手續並稍作休息，準備迎接這座城市最美的夕陽時刻。',
-                    tips: []
-                },
-                {
-                    id: 'd10-8',
-                    time: '18:30',
-                    title: '札達爾夕陽散步',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: '舊城區、海風琴、向陽禮讚',
-                    location: 'Zadar Old Town',
-                    mapLink: 'https://maps.app.goo.gl/SVrXj8uGu4QYkaxq7',
-                    desc: (
-                        <Fragment>
-                            <div className="mb-4 flex items-center">
-                                <span className="font-bold text-gray-800">散步路線</span>
-                                <MapLink url="https://maps.app.goo.gl/SVrXj8uGu4QYkaxq7" />
-                            </div>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                札達爾以其羅馬遺跡和現代海濱藝術裝置聞名。以下是最佳光線與動線的建議：
-                            </p>
+    id: 'd10-6',
+    time: '15:30',
+    title: '前往札達爾・停車與入住',
+    type: 'transport',
+    iconName: 'Car',
+    subtitle: '車程約 1 小時 45 分－2 小時 15 分 / 抵達後 check in',
+    location: 'Iadra apartment in city center',
+    mapLink: 'https://maps.app.goo.gl/gdvV4gctwJw6wxBY8',
+    desc: (
+        <Fragment>
+            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                告別十六湖，開車前往克羅埃西亞的歷史古城——札達爾 (Zadar)。沿途風景將從內陸森林逐漸轉為亞得里亞海沿岸的開闊風光。這段是健行後的移動日，建議不要急著趕路，先補水、休息，再出發前往札達爾。
+            </p>
 
-                            <div className="mb-4">
-                                <h4 className="font-bold text-gray-800 mb-2 flex items-center">
-                                    建議路線與停留時間：
-                                </h4>
-                                <ul className="text-sm text-gray-600 space-y-3 list-none pl-0">
-                                    <li>
-                                        <div className="font-bold text-gray-700 flex items-center mb-1">
-                                            1. 五井廣場 (Five Wells Square)
-                                            <MapLink url="https://www.google.com/maps/search/?api=1&query=Five+Wells+Square+Zadar" />
-                                        </div>
-                                        <span className="text-xs text-gray-500 leading-relaxed block">建議停留：10-15 分鐘。氣溫舒適，散步起點。</span>
-                                    </li>
-                                    <li>
-                                        <div className="font-bold text-gray-700 flex items-center mb-1">
-                                            2. 羅馬廣場 (Roman Forum)
-                                            <MapLink url="https://www.google.com/maps/search/?api=1&query=Roman+Forum+Zadar" />
-                                        </div>
-                                        <span className="text-xs text-gray-500 leading-relaxed block">建議停留：10-20 分鐘。傍晚前光線柔和，遺跡拍照好看。</span>
-                                    </li>
-                                    <li>
-                                        <div className="font-bold text-gray-700 flex items-center mb-1">
-                                            3. 聖多那教堂 & 聖瑪麗亞教堂
-                                            <MapLink url="https://www.google.com/maps/search/?api=1&query=Church+of+St+Donatus" />
-                                        </div>
-                                        <span className="text-xs text-gray-500 leading-relaxed block">建議停留：各 10-15 分鐘。著名的圓形教堂，傍晚人潮較少。</span>
-                                    </li>
-                                    <li className="bg-orange-50 p-2 rounded-lg border border-orange-100">
-                                        <div className="font-bold text-orange-800 flex items-center mb-1">
-                                            4. 海風琴 (Sea Organ)
-                                            <MapLink url="https://www.google.com/maps/search/?api=1&query=Sea+Organ+Zadar" />
-                                        </div>
-                                        <span className="text-xs text-orange-700 leading-relaxed block">建議停留：20-30 分鐘。</span>
-                                        <span className="text-xs font-bold text-orange-600 leading-relaxed block mt-1">最佳時間：日落前後 30 分鐘。</span>
-                                        <span className="text-xs text-orange-600 leading-relaxed block">坐在階梯上，聽海浪演奏的音樂，欣賞被譽為「世界最美」的夕陽。</span>
-                                    </li>
-                                    <li className="bg-blue-50 p-2 rounded-lg border border-blue-100">
-                                        <div className="font-bold text-blue-800 flex items-center mb-1">
-                                            5. 向陽禮讚 (Greeting to the Sun)
-                                            <MapLink url="https://www.google.com/maps/search/?api=1&query=Greeting+to+the+Sun+Zadar" />
-                                        </div>
-                                        <span className="text-xs text-blue-700 leading-relaxed block">建議停留：10-20 分鐘。</span>
-                                        <span className="text-xs font-bold text-blue-600 leading-relaxed block mt-1">最佳時間：天完全黑後。</span>
-                                        <span className="text-xs text-blue-600 leading-relaxed block">地面巨大的太陽能板會上演絢麗的 LED 燈光秀。</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['海風琴階梯適合坐著看海', '準備好相機拍攝日落']
+            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                抵達札達爾後，先依現場狀況選擇停車場，再步行前往 Iadra apartment in city center 辦理入住。6 月初札達爾日落約在 20:35，若 18:00 前後安頓好，仍有足夠時間慢慢走進舊城區，最後把黃金時刻留給海風琴與向陽禮讚。
+            </p>
+
+            <div className="bg-blue-50 p-3 rounded-lg border border-blue-100 mb-4">
+                <h4 className="font-bold text-blue-800 mb-2">住宿與停車</h4>
+                <ul className="text-sm text-blue-700 space-y-2 list-none pl-0">
+                    <li className="flex items-center">
+                        <span>Iadra apartment in city center</span>
+                        <MapLink url="https://maps.app.goo.gl/gdvV4gctwJw6wxBY8" />
+                    </li>
+                    <li className="flex items-center">
+                        <span>停車場備案 1</span>
+                        <MapLink url="https://maps.app.goo.gl/V23tdPAQeLzMRiCd9" />
+                    </li>
+                    <li className="flex items-center">
+                        <span>停車場備案 2</span>
+                        <MapLink url="https://maps.app.goo.gl/tQiR13o8wUFWeX7z5" />
+                    </li>
+                </ul>
+            </div>
+
+            <div className="bg-orange-50 p-3 rounded-lg border border-orange-100">
+                <h4 className="font-bold text-orange-800 mb-2">抵達時間判斷</h4>
+                <ul className="text-sm text-orange-700 space-y-2 list-disc pl-5">
+                    <li>若 17:30 前完成停車與入住，可以悠閒走完整段舊城夕陽路線。</li>
+                    <li>若 18:00–18:30 才安頓好，仍可從 Roman Forum 開始散步，再慢慢走向海風琴。</li>
+                    <li>若健行後太累，可以略過前段廣場散步，只保留 Sea Organ、Greeting to the Sun 與晚餐。</li>
+                </ul>
+            </div>
+        </Fragment>
+    ),
+    tips: [
+        '健行後開車請先補水休息，避免疲勞駕駛',
+        '抵達札達爾前先導航至停車場，再步行前往住宿',
+        '6/2 日落約 20:35，建議 20:00 前抵達海風琴卡位'
+    ]
                 },
                 {
-  id: 'd10-dinner',
-  time: '20:30',
-  title: '札達爾舊城晚餐',
-  type: 'food',
-  iconName: 'Utensils',
-  subtitle: '4 Kantuna / Bruschetta / Cultro',
-  location: 'Zadar',
-  desc: (
-    <Fragment>
-      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        看完海風琴夕陽與向陽禮讚燈光後，在札達爾舊城區享用晚餐。今晚不建議排太早，先把海邊黃金時刻留給夕陽，再慢慢回到巷弄裡用餐。
-      </p>
-      <h4 className="font-bold text-gray-800 mb-3">【晚餐選項】</h4>
-      <ul className="list-none pl-0 space-y-4">
-        <li>
-          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-            Restoran 4 Kantuna
-            <MapLink url="https://maps.app.goo.gl/t64nvyaAcvPe3CQYA" />
-          </div>
-          <p className="text-sm text-gray-600 leading-relaxed">
-            舊城內人氣餐廳，適合想吃義式、海鮮與克羅埃西亞料理的穩妥選擇。
-          </p>
-        </li>
-        <li>
-          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-            Restoran Bruschetta
-            <MapLink url="https://maps.app.goo.gl/M6dxGS8TdMHN1GTM9" />
-          </div>
-          <p className="text-sm text-gray-600 leading-relaxed">
-            氣氛較精緻，適合想吃海鮮、義式料理與較有餐酒館感的晚餐。
-          </p>
-        </li>
-        <li>
-          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-            Soul Food Restaurant Cultro
-            <MapLink url="https://maps.app.goo.gl/eiT4RPvr8KuBtWyV7" />
-          </div>
-          <p className="text-sm text-gray-600 leading-relaxed">
-            風格較輕鬆，適合想吃得不那麼正式、以小餐館氛圍收尾的一晚。
-          </p>
-        </li>
-      </ul>
-    </Fragment>
-  ),
-  tips: ['先看海風琴夕陽與向陽禮讚，再回舊城晚餐', '熱門餐廳建議預訂', '健行日晚上不要排太晚']
+    id: 'd10-7',
+    time: '18:30',
+    title: '札達爾夕陽散步',
+    type: 'sightseeing',
+    iconName: 'Camera',
+    subtitle: '舊城區、海風琴、向陽禮讚',
+    location: 'Zadar Old Town',
+    mapLink: 'https://maps.app.goo.gl/SVrXj8uGu4QYkaxq7',
+    desc: (
+        <Fragment>
+            <div className="mb-4 flex items-center">
+                <span className="font-bold text-gray-800">散步路線</span>
+                <MapLink url="https://maps.app.goo.gl/SVrXj8uGu4QYkaxq7" />
+            </div>
+
+            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                札達爾以羅馬遺跡、海濱夕陽與現代藝術裝置聞名。6/2 日落約在 20:35，建議 18:30 從舊城區慢慢散步，20:00 前抵達海風琴，留足時間坐在階梯上聽海浪聲、等夕陽落入亞得里亞海。
+            </p>
+
+            <div className="mb-4 bg-orange-50 p-3 rounded-lg border border-orange-100">
+                <h4 className="font-bold text-orange-800 mb-2">今日夕陽策略</h4>
+                <ul className="text-sm text-orange-700 space-y-2 list-disc pl-5">
+                    <li>若 18:30 前已安頓好，可照完整路線從五井廣場慢慢走到海邊。</li>
+                    <li>若 18:30 後才出門，建議從 Roman Forum 開始，略過前段廣場。</li>
+                    <li>20:00 前建議抵達 Sea Organ，先找階梯坐下等日落。</li>
+                    <li>日落後再走到 Greeting to the Sun，看地面 LED 燈光亮起。</li>
+                </ul>
+            </div>
+
+            <div className="mb-4">
+                <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+                    建議路線與停留時間：
+                </h4>
+                <ul className="text-sm text-gray-600 space-y-3 list-none pl-0">
+                    <li>
+                        <div className="font-bold text-gray-700 flex items-center mb-1">
+                            1. 五井廣場 (Five Wells Square)
+                            <MapLink url="https://maps.app.goo.gl/AePNkG2TpgDnsxKA9" />
+                        </div>
+                        <span className="text-xs text-gray-500 leading-relaxed block">
+                            建議停留：10-15 分鐘。作為舊城散步起點很順，若抵達較晚可略過。
+                        </span>
+                    </li>
+
+                    <li>
+                        <div className="font-bold text-gray-700 flex items-center mb-1">
+                            2. 羅馬廣場 (Roman Forum)
+                            <MapLink url="https://maps.app.goo.gl/V7FX42m4ByCeMiSm8" />
+                        </div>
+                        <span className="text-xs text-gray-500 leading-relaxed block">
+                            建議停留：10-20 分鐘。傍晚光線柔和，遺跡與聖多那教堂同框很好拍。
+                        </span>
+                    </li>
+
+                    <li>
+                        <div className="font-bold text-gray-700 flex items-center mb-1">
+                            3. 聖多那教堂 & 聖瑪麗亞教堂
+                            <MapLink url="https://maps.app.goo.gl/h7yLg6hTZcDko2MeA" />
+                        </div>
+                        <span className="text-xs text-gray-500 leading-relaxed block">
+                            建議停留：各 10-15 分鐘。札達爾最具代表性的圓形教堂，傍晚人潮較少，外觀拍照即可。
+                        </span>
+                    </li>
+
+                    <li className="bg-orange-50 p-2 rounded-lg border border-orange-100">
+                        <div className="font-bold text-orange-800 flex items-center mb-1">
+                            4. 海風琴 (Sea Organ)
+                            <MapLink url="https://www.google.com/maps/search/?api=1&query=Sea+Organ+Zadar" />
+                        </div>
+                        <span className="text-xs text-orange-700 leading-relaxed block">
+                            建議停留：30-40 分鐘。
+                        </span>
+                        <span className="text-xs font-bold text-orange-600 leading-relaxed block mt-1">
+                            6/2 建議 20:00 前抵達，日落約 20:35。
+                        </span>
+                        <span className="text-xs text-orange-600 leading-relaxed block">
+                            坐在階梯上聽海浪推動管風琴發出的聲音，等天空從金色慢慢變成粉橘色。
+                        </span>
+                    </li>
+
+                    <li className="bg-blue-50 p-2 rounded-lg border border-blue-100">
+                        <div className="font-bold text-blue-800 flex items-center mb-1">
+                            5. 向陽禮讚 (Greeting to the Sun)
+                            <MapLink url="https://www.google.com/maps/search/?api=1&query=Greeting+to+the+Sun+Zadar" />
+                        </div>
+                        <span className="text-xs text-blue-700 leading-relaxed block">
+                            建議停留：10-20 分鐘。
+                        </span>
+                        <span className="text-xs font-bold text-blue-600 leading-relaxed block mt-1">
+                            最佳時間：日落後、天色漸暗時。
+                        </span>
+                        <span className="text-xs text-blue-600 leading-relaxed block">
+                            地面巨大的太陽能板會逐漸亮起 LED 燈光，適合在看完夕陽後順路停留。
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </Fragment>
+    ),
+    tips: [
+        '6/2 日落約 20:35，建議 20:00 前抵達海風琴',
+        '若時間不足，可略過五井廣場，直接從 Roman Forum 開始走',
+        '海風琴階梯適合坐著看海，建議不要只路過',
+        '向陽禮讚要等天色變暗後才比較有看點'
+    ]
+                },
+                {
+    id: 'd10-dinner',
+    time: '20:45',
+    title: '札達爾舊城晚餐',
+    type: 'food',
+    iconName: 'Utensils',
+    subtitle: 'Kornat Restaurant / Restoran 4 Kantuna',
+    location: 'Zadar',
+    desc: (
+        <Fragment>
+            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                看完海風琴夕陽與向陽禮讚燈光後，在札達爾舊城區享用晚餐。6/2 日落約在 20:35，建議不要把晚餐排太早，先把海邊黃金時刻留給夕陽，再慢慢回到城裡用餐。
+            </p>
+
+            <div className="mb-4 bg-orange-50 p-3 rounded-lg border border-orange-100">
+                <h4 className="font-bold text-orange-800 mb-2">今晚用餐策略</h4>
+                <ul className="text-sm text-orange-700 space-y-2 list-disc pl-5">
+                    <li>建議 20:00 前抵達 Sea Organ，20:35 左右看日落。</li>
+                    <li>日落後可順路停留 Greeting to the Sun，看地面燈光亮起。</li>
+                    <li>晚餐建議抓 20:45–21:00，避免為了餐廳預約錯過夕陽。</li>
+                    <li>若想吃精緻一點，選 Kornat；若想要穩妥、彈性高，選 4 Kantuna。</li>
+                </ul>
+            </div>
+
+            <h4 className="font-bold text-gray-800 mb-3">【晚餐選項】</h4>
+            <ul className="list-none pl-0 space-y-4">
+                <li>
+                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                        Kornat Restaurant
+                        <MapLink url="https://maps.app.goo.gl/nxUj6yQqyKg27hGZA" />
+                    </div>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                        今晚精緻首選。餐廳位在海港旁，風格較正式，適合想吃海鮮、達爾馬提亞料理與比較有餐酒館感的一餐。若打算看完夕陽後前往，建議預訂 21:00 左右。
+                    </p>
+                </li>
+
+                <li>
+                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+                        Restoran 4 Kantuna
+                        <MapLink url="https://maps.app.goo.gl/t64nvyaAcvPe3CQYA" />
+                    </div>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                        今晚穩妥首選。位在札達爾舊城中心，選項較多，適合健行日晚上想吃得舒服、不想太正式時選擇。若日落後行程稍微延後，這間時間彈性也比較好。
+                    </p>
+                </li>
+            </ul>
+        </Fragment>
+    ),
+    tips: [
+        '6/2 日落約 20:35，晚餐建議抓 20:45–21:00',
+        '想吃精緻海鮮選 Kornat，建議訂 21:00',
+        '想要穩妥彈性高選 4 Kantuna',
+        '健行日晚上不要排太滿，若太累可選 4 Kantuna 或簡單晚餐'
+    ]
                 }
             ],
             11: [
@@ -2617,49 +2692,49 @@
     ]
   },
   {
-    id: 'd12-lunch',
-    time: '12:15',
-    title: '赫瓦爾島午餐',
-    type: 'food',
-    iconName: 'Utensils',
-    subtitle: 'Dalmatino / Fig Hvar',
-    location: 'Hvar Town',
-    desc: (
-      <Fragment>
-        <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-          中午在 Hvar Town 享受陽光與地中海風情午餐。今天下午還要保留港口散步與回程搭船時間，午餐建議選擇舊城或港口附近步行可達的餐廳，不要排太遠，也不要吃得太趕。
-        </p>
+  id: 'd12-lunch',
+  time: '12:15',
+  title: '赫瓦爾島午餐',
+  type: 'food',
+  iconName: 'Utensils',
+  subtitle: 'Fig Hvar / Plava Alga',
+  location: 'Hvar Town',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        中午在 Hvar Town 享受陽光與地中海風情午餐。今天下午還要保留港口散步、海邊咖啡與回程搭船時間，午餐建議選擇舊城或港口附近步行可達的餐廳，不要排太遠，也不要吃得太久。
+      </p>
 
-        <h4 className="font-bold text-gray-800 mb-3">【推薦餐廳】</h4>
-        <ul className="list-none pl-0 space-y-4">
-          <li>
-            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-              Dalmatino
-              <MapLink url="https://maps.app.goo.gl/1zt9sZKo2FYrfL4z8" />
-            </div>
-            <p className="text-xs text-gray-500 leading-relaxed text-justify">
-              極受歡迎的高評價餐廳，提供高品質的在地創意海鮮料理與達爾馬提亞風味。適合想在 Hvar 好好吃一餐的人，但熱門時段建議提前預約或早點抵達。
-            </p>
-          </li>
-          <li>
-            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-              Fig Hvar
-              <MapLink url="https://maps.app.goo.gl/wgn6Jkkro85qiPyw6" />
-            </div>
-            <p className="text-xs text-gray-500 leading-relaxed text-justify">
-              主打新鮮、現代且充滿驚喜的創意料理，氣氛輕鬆，適合想吃得比較活潑、不一定只限傳統海鮮的人。
-            </p>
-          </li>
-        </ul>
-      </Fragment>
-    ),
-    tips: [
-      '熱門餐廳建議先預約或早點去',
-      '若沒有預約，不建議為了排隊壓縮下午時間',
-      '午餐地點盡量選 Hvar Town 內，方便回港口',
-      '用餐時再次確認回程船班與登船時間'
-    ]
-  },
+      <h4 className="font-bold text-gray-800 mb-3">【午餐選項】</h4>
+      <ul className="list-none pl-0 space-y-4">
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Fig Hvar
+            <MapLink url="https://maps.app.goo.gl/tkkDT8FfAMd2C5hU6" />
+          </div>
+          <p className="text-xs text-gray-500 leading-relaxed text-justify">
+            輕鬆、有創意的小巷餐廳，菜色不只限於傳統海鮮，包含 flatbread、沙拉、墨西哥風手撕豬肉、雞肉 burrito、咖哩與漢堡等。適合想吃得比較活潑、清爽、不想午餐吃太正式的人。店家位置藏在主廣場旁的小巷中，從 Pizza Kogo 和 La Bocca 之間的小巷走進去約 20 公尺。
+          </p>
+        </li>
+
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Plava Alga
+            <MapLink url="https://maps.app.goo.gl/e5NT162fWbqjqQnm6" />
+          </div>
+          <p className="text-xs text-gray-500 leading-relaxed text-justify">
+            位於 Hvar Town 港口附近的傳統餐廳，適合想吃海鮮、義大利麵、燉飯或比較典型達爾馬提亞風味午餐的人。若想坐在靠近港口的位置、看著人潮與船隻用餐，這家會比 Fig 更有海島港口感。
+          </p>
+        </li>
+      </ul>
+    </Fragment>
+  ),
+  tips: [
+    'Fig Hvar 較適合輕鬆創意午餐，Plava Alga 較適合港口海鮮與傳統餐',
+    '若天氣炎熱，Fig 的沙拉、flatbread 或清爽主餐會比較舒服',
+    '若想吃海鮮、義大利麵或燉飯，可選 Plava Alga'
+  ]
+},
   {
   id: 'd12-free',
   time: '13:45',
@@ -2726,7 +2801,7 @@
                 {
   id: 'd12-dinner',
   time: '18:00',
-  title: '斯普利特早晚餐',
+  title: '斯普利特晚餐',
   type: 'food',
   iconName: 'Utensils',
   subtitle: 'Pizzeria Sette Sorelle • 已訂位',
