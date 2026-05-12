@@ -2542,113 +2542,176 @@
             ],
             12: [
                 {
-                    id: 'd12-1',
-                    time: '07:00',
-                    title: '前往赫瓦爾島 (Hvar)',
-                    type: 'transport',
-                    iconName: 'Compass',
-                    subtitle: '搭乘渡輪',
-                    location: 'Split Ferry Port',
-                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Split+Ferry+Port',
-                    desc: '早起搭乘渡輪前往有「薰衣草之島」美稱的赫瓦爾島 (Hvar)。船程約 1-1.5 小時，沿途欣賞亞得里亞海的島嶼風光。',
-                    tips: ['建議事先查好船班並購票', '確認回程時間']
+  id: 'd12-1',
+  time: '07:35',
+  title: '前往赫瓦爾島 (Hvar)',
+  type: 'transport',
+  iconName: 'Compass',
+  subtitle: '08:15 Split → 09:15 Hvar 快船',
+  location: 'Split Ferry Port',
+  mapLink: 'https://maps.app.goo.gl/MjJb6a6uJxnH4RSQ9',
+  desc: '早上前往 Split Ferry Port，搭乘 08:15 從 Split 出發、09:15 抵達 Hvar Town 的快船。船程約 1 小時，沿途可欣賞亞得里亞海與達爾馬提亞群島風光。抵達 Hvar 後先上西班牙堡壘，避開中午炎熱與人潮，再回到舊城廣場、港口與海邊慢慢散步。',
+  tips: [
+    '建議 07:35–07:45 抵達 Split Ferry Port',
+    '船票與 QR code 建議截圖保存，避免現場網路不穩',
+    '確認登船碼頭與船公司標示，不同公司可能停靠位置不同',
+    '抵達 Hvar 後先上堡壘，動線最順'
+  ]
                 },
                 {
-                    id: 'd12-fortress',
-                    time: '09:00',
-                    title: '西班牙堡壘',
-                    type: 'sightseeing',
-                    iconName: 'Compass',
-                    subtitle: 'Španjola Fortress, Hvar',
-                    location: 'Španjola Fortress, Hvar',
-                    mapLink: 'https://maps.app.goo.gl/qEPxLmYBqdQge8HB7',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                登上西班牙堡壘 (Španjola Fortress)，這裡是俯瞰赫瓦爾港口與帕克林斯基群島 (Pakleni Islands) 的最佳制高點。
-                            </p>
-                            <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                從舊城區沿著蜿蜒的小路向上爬，沿途可以看見許多仙人掌和地中海植物，抵達頂部後，亞得里亞海的蔚藍景色將一覽無遺。
-                            </p>
-                        </Fragment>
-                    ),
-                    tips: ['建議早點出發避開炎熱和人潮', '堡壘視野極佳必去']
-                },
-                {
-                    id: 'd12-square',
-                    time: '10:30',
-                    title: '前往史特芬亞廣場',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: 'St. Stephen\'s Square/Katedrala sv. Stjepana',
-                    location: 'St. Stephen\'s Square, Hvar',
-                    mapLink: 'https://maps.app.goo.gl/wE2oj7WQe1oAP1eu5',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                來到赫瓦爾舊城的核心——史特芬亞廣場。這是達爾馬提亞地區面積最大且最美麗的古老廣場之一。
-                            </p>
-                            <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                廣場盡頭是聖史特芬大教堂 (Cathedral of St. Stephen)，其細緻的鐘樓是島上的地標建築。您可以在此悠閒散步，感受這座威尼斯風格古城的優雅氛圍。
-                            </p>
-                        </Fragment>
-                    ),
-                    tips: ['大教堂內部莊嚴肅穆', '廣場周邊巷弄非常適合拍照']
-                },
-                {
-                    id: 'd12-lunch',
-                    time: '12:00',
-                    title: '赫瓦爾島午餐',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    location: 'Hvar Town',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                在赫瓦爾島享受陽光與地中海風情午餐。
-                            </p>
-                            <h4 className="font-bold text-gray-800 mb-3">【推薦餐廳】</h4>
-                            <ul className="list-none pl-0 space-y-4">
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Dalmatino
-                                        <MapLink url="https://maps.app.goo.gl/1zt9sZKo2FYrfL4z8" />
-                                    </div>
-                                    <p className="text-xs text-gray-500 leading-relaxed">極受歡迎的高評價餐廳，提供高品質的在地創意海鮮料理。</p>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Fig Hvar
-                                        <MapLink url="https://maps.app.goo.gl/wgn6Jkkro85qiPyw6" />
-                                    </div>
-                                    <p className="text-xs text-gray-500 leading-relaxed">主打新鮮、現代且充滿驚喜的創意異國料理。</p>
-                                </li>
-                            </ul>
-                        </Fragment>
-                    ),
-                    tips: ['熱門餐廳建議先預約或早點去']
-                },
-                {
+    id: 'd12-fortress',
+    time: '09:40',
+    title: '西班牙堡壘',
+    type: 'sightseeing',
+    iconName: 'Compass',
+    subtitle: 'Španjola Fortress • 俯瞰 Hvar 港口',
+    location: 'Španjola Fortress, Hvar',
+    mapLink: 'https://maps.app.goo.gl/qEPxLmYBqdQge8HB7',
+    desc: (
+  <Fragment>
+    <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+      抵達 Hvar Town 後，建議先前往西班牙堡壘 <strong>Španjola Fortress</strong>。這座堡壘位在舊城上方山坡，是俯瞰赫瓦爾港口、紅瓦屋頂與帕克林斯基群島 <strong>Pakleni Islands</strong> 的最佳制高點。
+    </p>
+    <p className="mb-4 text-sm text-gray-600 leading-relaxed text-justify">
+      堡壘不只是觀景台，也是威尼斯時期守護 Hvar 港口的重要防禦核心。16 世紀亞得里亞海局勢緊張，奧斯曼艦隊與海上勢力威脅沿岸城鎮，Hvar 居民曾在攻擊時躲入山上的堡壘避難。今天站在城牆邊看出去，眼前的藍色海面過去其實也是城市的警戒線。
+    </p>
+    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+      從舊城區沿著蜿蜒小路往上走，沿途會經過石階、仙人掌與地中海植物。早上先上堡壘，可以避開中午炎熱，也能用比較從容的節奏欣賞亞得里亞海的藍色層次。
+    </p>
+  </Fragment>
+    ),
+    tips: [
+      '抵達 Hvar 後先上堡壘，避開中午炎熱和人潮',
+      '上坡路段需要一點體力，建議穿好走的鞋',
+      '堡壘視野極佳，是 Hvar 一日遊必去重點',
+      '拍完堡壘後再下山逛舊城，動線最順'
+    ]
+  },
+  {
+    id: 'd12-square',
+    time: '11:00',
+    title: '史特芬亞廣場與赫瓦爾舊城',
+    type: 'sightseeing',
+    iconName: 'Camera',
+    subtitle: "St. Stephen's Square • Cathedral of St. Stephen",
+    location: "St. Stephen's Square, Hvar",
+    mapLink: 'https://maps.app.goo.gl/wE2oj7WQe1oAP1eu5',
+    desc: (
+  <Fragment>
+    <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+      從堡壘下山後，回到赫瓦爾舊城核心——史特芬亞廣場 <strong>St. Stephen's Square</strong>。這座廣場連接港口、舊城巷弄、貴族宅邸與聖史特芬大教堂，是 Hvar 在威尼斯時期形成的城市客廳。
+    </p>
+    <p className="mb-4 text-sm text-gray-600 leading-relaxed text-justify">
+      過去這裡不只是市民散步的地方，也是船員、商人、貴族與居民交會的公共空間。廣場盡頭的聖史特芬大教堂 <strong>Cathedral of St. Stephen</strong> 則是 Hvar 的宗教核心，鐘樓與石造立面展現了達爾馬提亞海港城市典雅而明亮的氣質。
+    </p>
+    <p className="text-sm text-gray-600 leading-relaxed text-justify">
+      這段不需要趕景點，可以慢慢穿過廣場、巷弄與海邊，感受 Hvar Town 兼具海港、防禦城市與度假島嶼的多重性格。
+    </p>
+  </Fragment>
+    ),
+    tips: [
+      '廣場周邊巷弄非常適合拍照',
+      '大教堂可視時間與體力決定是否入內',
+      '這段以散步和拍照為主，不用排得太滿',
+      '午餐前可先確認下午自由時間與回程船班'
+    ]
+  },
+  {
+    id: 'd12-lunch',
+    time: '12:15',
+    title: '赫瓦爾島午餐',
+    type: 'food',
+    iconName: 'Utensils',
+    subtitle: 'Dalmatino / Fig Hvar',
+    location: 'Hvar Town',
+    desc: (
+      <Fragment>
+        <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+          中午在 Hvar Town 享受陽光與地中海風情午餐。今天下午還要保留港口散步與回程搭船時間，午餐建議選擇舊城或港口附近步行可達的餐廳，不要排太遠，也不要吃得太趕。
+        </p>
+
+        <h4 className="font-bold text-gray-800 mb-3">【推薦餐廳】</h4>
+        <ul className="list-none pl-0 space-y-4">
+          <li>
+            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+              Dalmatino
+              <MapLink url="https://maps.app.goo.gl/1zt9sZKo2FYrfL4z8" />
+            </div>
+            <p className="text-xs text-gray-500 leading-relaxed text-justify">
+              極受歡迎的高評價餐廳，提供高品質的在地創意海鮮料理與達爾馬提亞風味。適合想在 Hvar 好好吃一餐的人，但熱門時段建議提前預約或早點抵達。
+            </p>
+          </li>
+          <li>
+            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+              Fig Hvar
+              <MapLink url="https://maps.app.goo.gl/wgn6Jkkro85qiPyw6" />
+            </div>
+            <p className="text-xs text-gray-500 leading-relaxed text-justify">
+              主打新鮮、現代且充滿驚喜的創意料理，氣氛輕鬆，適合想吃得比較活潑、不一定只限傳統海鮮的人。
+            </p>
+          </li>
+        </ul>
+      </Fragment>
+    ),
+    tips: [
+      '熱門餐廳建議先預約或早點去',
+      '若沒有預約，不建議為了排隊壓縮下午時間',
+      '午餐地點盡量選 Hvar Town 內，方便回港口',
+      '用餐時再次確認回程船班與登船時間'
+    ]
+  },
+  {
   id: 'd12-free',
-  time: '13:30',
+  time: '13:45',
   title: '赫瓦爾海邊自由時間',
   type: 'relax',
   iconName: 'Coffee',
-  subtitle: '港口散步 / 海邊咖啡 / 小巷拍照',
+  subtitle: '港口散步 / 海邊咖啡 / 小巷拍照 / 薰衣草小物',
   location: 'Hvar Town',
   mapLink: 'https://www.google.com/maps/search/?api=1&query=Hvar+Town',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        午餐後保留一段彈性時間，慢慢逛赫瓦爾港口、舊城小巷與海邊步道。若天氣炎熱，可以找間海邊咖啡館休息，或回到廣場周邊拍照、買薰衣草與紀念品。
+        午餐後保留一段彈性時間，慢慢逛赫瓦爾港口、舊城小巷與海邊步道。這段不再硬排行程，重點是放慢節奏，感受 Hvar 明亮、精緻又帶有度假感的海島氣氛。
       </p>
+
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          下午可以這樣選：
+        </h4>
+        <ul className="text-sm text-gray-600 leading-relaxed space-y-3 list-disc pl-4">
+          <li>
+            <span className="font-bold text-gray-700">保守版：</span>
+            留在 Hvar Town，沿著港口散步、回到 St. Stephen's Square 周邊拍照，買薰衣草、橄欖油、香氛或手工藝小物。這是最穩、最不怕錯過回程船的選擇。
+          </li>
+          <li>
+            <span className="font-bold text-gray-700">舒服版：</span>
+            找一間海邊咖啡館坐下，點杯咖啡、檸檬水或冰飲，休息避暑。上午爬過堡壘後，這段很適合讓身體慢下來。
+          </li>
+          <li>
+            <span className="font-bold text-gray-700">拍照版：</span>
+            鑽進廣場後方的石造小巷，拍白石牆、百葉窗、階梯、花盆與轉角光影。Hvar 的小巷比主廣場更安靜，也很適合拍旅行感照片。
+          </li>
+          <li>
+            <span className="font-bold text-gray-700">進階版：</span>
+            若回程船班較晚、天氣穩定且水上計程車時間明確，才考慮短程前往 Pakleni Islands 附近海灣。這個選項不建議硬排，因為最重要的是保留足夠時間回港口搭船。
+          </li>
+        </ul>
+      </div>
+
       <p className="text-sm text-gray-600 leading-relaxed text-justify">
-        若體力充裕，也可以安排短程水上計程車前往 Pakleni Islands 附近海灣，但要特別注意回程船班，不建議把時間抓得太緊。
+        如果當天很熱，建議不要勉強繼續走景點；Hvar 最迷人的地方之一，就是坐在港口邊看船進出、聽廣場聲音、讓陽光和海風慢慢把下午拉長。
       </p>
     </Fragment>
   ),
-  tips: ['保留回港口搭船的時間', '注意防曬與補水', '回程船票建議提前買好']
-                },
+  tips: [
+    '保留足夠時間回港口搭船，建議至少提早 30 分鐘回到碼頭附近',
+    '注意防曬與補水，上午爬堡壘後下午不要硬撐',
+    '回程船票建議提前買好，QR code 截圖保存',
+    'Pakleni Islands 只作為船班充裕時的彈性選項，不建議硬排',
+    '若想買紀念品，可選薰衣草香包、橄欖油、香氛或手工藝小物'
+  ]
+},
                 {
   id: 'd12-3',
   time: '16:30',
