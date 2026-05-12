@@ -5442,32 +5442,38 @@ useEffect(() => {
                                     <div className="px-6 space-y-2 mt-4">
                                         {currentEvents.map((item, idx) => {
                                             if (item.type === 'compact') {
-                                                return (
-                                                    <div
-                                                        key={item.id}
-                                                        className="bg-gray-100 rounded-lg p-3 border border-gray-200 flex items-center justify-between mb-2 shadow-sm"
-                                                    >
-                                                        <div className="flex items-center gap-3">
-                                                            <div className={`text-xs font-bold font-serif ${MORANDI_COLORS.highlight} w-12 text-right`}>
-                                                                {item.time}
-                                                            </div>
-                                                            <h3 className="text-sm font-bold text-gray-600 leading-relaxed">{item.title}</h3>
-                                                        </div>
-                                                        <button
-                                                            onClick={(e) => {
-                                                                e.stopPropagation();
-                                                                const url = item.mapLink || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.location)}`;
-                                                                window.open(url, '_blank');
-                                                            }}
-                                                            className={`p-1.5 rounded-full bg-white text-gray-400 hover:text-[#C78F76] transition-colors flex-shrink-0 border border-gray-200`}
-                                                        >
-                                                            <div className="w-3.5 h-3.5 flex items-center justify-center rounded-tr-[50%] rounded-tl-[50%] rounded-bl-[50%] rounded-br-0 transform rotate-45 border-2 border-current">
-                                                                <div className="w-0.5 h-0.5 bg-current rounded-full transform -rotate-45" />
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                );
-                                            }
+  return (
+    <div
+      key={item.id}
+      onClick={() => setViewingItem(item)}
+      className="bg-gray-100 rounded-lg p-3 border border-gray-200 flex items-center justify-between mb-2 shadow-sm cursor-pointer hover:bg-gray-50 hover:shadow-md transition-all duration-200"
+    >
+      <div className="flex items-center gap-3">
+        <div className={`text-xs font-bold font-serif ${MORANDI_COLORS.highlight} w-12 text-right`}>
+          {item.time}
+        </div>
+        <h3 className="text-sm font-bold text-gray-600 leading-relaxed">
+          {item.title}
+        </h3>
+      </div>
+
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          const url =
+            item.mapLink ||
+            `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.location)}`;
+          window.open(url, '_blank');
+        }}
+        className="p-1.5 rounded-full bg-white text-gray-400 hover:text-[#C78F76] transition-colors flex-shrink-0 border border-gray-200"
+      >
+        <div className="w-3.5 h-3.5 flex items-center justify-center rounded-tr-[50%] rounded-tl-[50%] rounded-bl-[50%] rounded-br-0 transform rotate-45 border-2 border-current">
+          <div className="w-0.5 h-0.5 bg-current rounded-full transform -rotate-45" />
+        </div>
+      </button>
+    </div>
+  );
+}
                                             return (
                                                 <div
                                                     key={item.id}
