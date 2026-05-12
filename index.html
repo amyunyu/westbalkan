@@ -3188,14 +3188,59 @@
             ],
             15: [
                 {
-                    id: 'd15-1',
-                    time: '08:30',
-                    title: '早餐',
-                    type: 'food',
-                    iconName: 'Coffee',
-                    location: 'Sarajevo Accommodation / Local Cafe',
-                    desc: '享用早餐，準備開始塞拉耶佛的深度歷史之旅。',
-                    tips: ['在住宿或老城區找間有氣氛的咖啡館']
+  id: 'd15-1',
+  time: '08:15',
+  title: '塞拉耶佛早餐',
+  type: 'food',
+  iconName: 'Coffee',
+  subtitle: '住宿附近 / Kawa / 簡單咖啡早餐',
+  location: 'Fadilpasic’s House / Eternal Flame 周邊',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        由於 09:00 的歷史環線會從 Eternal Flame 永恆之火開始，早餐建議以住宿附近或前往 Eternal Flame 途中簡單解決為主。可在附近 pekara 買麵包、burek、咖啡，或選一間咖啡館坐下來吃輕早餐，08:50 前後準備抵達 Eternal Flame。
+      </p>
+
+      <ul className="list-none pl-0 space-y-3">
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            pekara / 外帶早餐
+              <MapLink url="https://maps.app.goo.gl/W7jXEmPM7JDzvoiE8" />
+              <MapLink url="https://maps.app.goo.gl/S5uVtekSPFky27rT7" />
+          </div>
+          <p className="text-xs text-gray-500 mt-1 leading-relaxed">
+            最省時間的選擇。買麵包、burek、優格或咖啡，簡單吃完後直接前往 Eternal Flame 開始歷史環線。
+          </p>
+        </li>
+
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Kawa
+            <MapLink url="https://maps.app.goo.gl/9fwfYu86G2TbscbMA" />
+          </div>
+          <p className="text-xs text-gray-500 mt-1 leading-relaxed">
+            精品咖啡路線，適合想喝 espresso、filter coffee 或冷萃。氣氛現代、有戶外座位，但較偏咖啡輕食，不一定是吃飽型早餐。
+          </p>
+        </li>
+
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Eternal Flame / Ferhadija 附近咖啡館
+            <MapLink url="https://maps.app.goo.gl/kATs4sXvJ6uuhJcT7" />
+          </div>
+          <p className="text-xs text-gray-500 mt-1 leading-relaxed">
+            若想動線最直覺，可直接到 Eternal Flame 附近找咖啡館坐下，吃完後不用移動太多就能開始散步。
+          </p>
+        </li>
+      </ul>
+    </Fragment>
+  ),
+  tips: [
+    '早餐建議 08:15 開始，08:50 前後抵達 Eternal Flame',
+    '最省時間：住宿附近 pekara 或外帶咖啡',
+    '咖啡控：Kawa，但早餐偏輕食路線',
+    '不要先走到 Baščaršija 深處再折返，動線會比較繞'
+  ]
                 },
                 {
   id: 'd15-2',
@@ -3359,7 +3404,7 @@
                 },
                 {
   id: 'd15-3',
-  time: '11:30',
+  time: '12:00',
   title: '老城午餐',
   type: 'food',
   iconName: 'Utensils',
@@ -3369,7 +3414,7 @@
                 },
                 {
   id: 'd15-4',
-  time: '12:45',
+  time: '13:15',
   title: '希望隧道博物館',
   type: 'activity',
   iconName: 'Compass',
@@ -3433,12 +3478,13 @@
     '內容比較沉重，參觀後建議安排休息或咖啡時間',
     '隧道段低矮、地面可能不平，建議穿好走的鞋',
     '位置不在老城步行範圍內，需開車或叫車前往',
-    '門票、開放時間與付款方式出發前再確認，以現場公告為準'
+    '門票、開放時間與付款方式出發前再確認，以現場公告為準',
+    '備案：War Childhood Museum。若天氣不好、不去 Yellow Bastion，或希望多理解圍城中的日常生活，可安排 60–90 分鐘參觀。'
   ]
                 },
                 {
-  id: 'd15-8',
-  time: '14:45',
+  id: 'd15-5',
+  time: '15:00',
   title: '回市區 / 回住宿休息',
   type: 'transport',
   iconName: 'Car',
@@ -3452,7 +3498,7 @@
   ]
                 },
                 {
-  id: 'd15-9',
+  id: 'd15-6',
   time: '15:45',
   title: '老城咖啡 & 自由時間',
   type: 'relax',
@@ -3503,7 +3549,7 @@
   ]
                 },
                 {
-  id: 'd15-11',
+  id: 'd15-7',
   time: '17:45',
   title: '塞拉耶佛傳統晚餐',
   type: 'food',
@@ -3546,7 +3592,7 @@
   ]
                 },
                 {
-  id: 'd15-12',
+  id: 'd15-8',
   time: '19:30',
   title: 'Yellow Bastion 夕陽',
   type: 'sightseeing',
@@ -3577,7 +3623,7 @@
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed">
-        今日是跨國移動日，建議 07:30–08:00 間從 Sarajevo 出發。早餐吃清淡一些，出發前確認油箱、護照、租車跨境文件與保險文件都已準備好。
+        今日是跨國移動日，建議 07:30–08:00 間從 Sarajevo 出發。早餐可去pekara外帶，出發前確認油箱、護照、租車跨境文件與保險文件都已準備好。
       </p>
       <p className="mb-4 text-gray-600 leading-relaxed">
         這段路雖然地圖時間看起來不算太長，但實際會受到山路、邊境通關、休息與抵達 Kotor 後停車影響。若順利，下午 16:00–17:00 可抵達；若通關或路況延誤，18:00 前後抵達也屬正常。今天請以安全抵達為主，不安排需要準時抵達的活動。
