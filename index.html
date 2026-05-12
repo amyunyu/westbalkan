@@ -2088,6 +2088,23 @@
         最後走下湖區與 Veliki Slap 大瀑布。整體節奏建議以「早進園、慢慢走、P3 簡單補給」為主。
       </p>
 
+      <div className="mb-5 rounded-xl bg-blue-50 p-4">
+        <div className="font-bold text-sm text-gray-800 mb-1">
+          🗺️ 官方路線圖
+        </div>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          出發前可先打開十六湖官方 Program H 路線圖，對照 ST2、ST3、P2、P3、ST1 與 Entrance 2 的位置。
+        </p>
+        <a
+          href="https://np-plitvicka-jezera.hr/wp-content/uploads/2021/03/Program-H-01.jpg"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-2 text-sm font-semibold text-blue-600 underline"
+        >
+          開啟 Program H 官方路線圖
+        </a>
+      </div>
+
       <div className="space-y-4">
         <div className="border-l-4 border-emerald-500 pl-4">
           <div className="font-bold text-sm text-gray-800 mb-1">
@@ -2133,14 +2150,17 @@
         </div>
 
         <div className="border-l-4 border-violet-500 pl-4">
-          <div className="font-bold text-sm text-gray-800 mb-1">
-            13:30–14:30｜高點觀景台 & 回 Entrance 2
-          </div>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            走到下湖區尾端後，前往高點觀景台欣賞十六湖最經典的明信片視角。
-            拍照後依園區指標前往 ST1，搭乘全景車返回 ST2 / Entrance 2，
-            再步行回 Hotel Jezero 取車，準備前往札達爾。
-          </p>
+  <div className="font-bold text-sm text-gray-800 mb-1 flex items-center">
+    13:30–14:30｜Entrance 1 高點觀景台 & 回 Entrance 2
+    <MapLink url="https://maps.app.goo.gl/hZzXfkUM4rBcG5rx6" />
+  </div>
+  <p className="text-sm text-gray-600 leading-relaxed text-justify">
+    走完下湖區與 Veliki Slap 大瀑布後，往 Entrance 1 / ST1 方向上行，
+    前往下湖區上方的高點觀景台，欣賞十六湖經典的明信片視角。
+    這裡可從高處俯瞰 Veliki Slap、下湖區峽谷、瀑布群與木棧道。
+    拍照後依園區指標前往 ST1，搭乘全景車返回 ST2 / Entrance 2，
+    再步行回 Hotel Jezero 取車，準備前往札達爾。
+  </p>
         </div>
       </div>
 
@@ -2166,13 +2186,17 @@
           <li>Kozjak 湖遊船視角</li>
           <li>Milanovac – Gavanovac 湖泊與木棧道構圖</li>
           <li>Veliki Slap 大瀑布近景</li>
-          <li>下湖區高點觀景台的明信片視角</li>
+          <li>
+  下湖區高點觀景台的明信片視角
+  <MapLink url="https://maps.app.goo.gl/hZzXfkUM4rBcG5rx6" />
+</li>
         </ul>
       </div>
     </Fragment>
   ),
   tips: [
     '路線 H 約需 4–6 小時，含拍照、船班排隊與休息時間',
+    '出發前可先開啟官方 Program H 路線圖，確認 ST2、ST3、P2、P3 與 ST1 位置',
     'P3 適合洗手間、補水與簡單午餐',
     '園區內用餐選擇有限，建議自備三明治、能量棒或水果',
     '旺季遊船與全景車可能需要排隊，時間請保留彈性',
@@ -2181,97 +2205,7 @@
   ]
                 },
                 {
-  id: 'd10-2',
-  time: '08:30',
-  title: '上湖區健行',
-  type: 'activity',
-  iconName: 'Camera',
-  subtitle: '全景車至 ST3 起點',
-  location: 'Upper Lakes',
-  mapLink: 'https://www.google.com/maps/search/?api=1&query=Plitvice+Upper+Lakes',
-  desc: (
-    <Fragment>
-      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        進園後先搭乘園區全景車前往 ST3，從上湖區開始健行。這一段湖面較寧靜、森林感強，水色與瀑布層次非常漂亮。
-      </p>
-      <div className="mb-4 mt-4">
-        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-          📸 上湖區必拍：
-        </h4>
-        <ul className="text-sm text-gray-600 leading-relaxed space-y-1 list-disc pl-4">
-          <li>Gradinsko jezero 湖面倒影</li>
-          <li>Galovački buk 大瀑布</li>
-          <li>木棧道與藍綠湖水交錯的經典畫面</li>
-        </ul>
-      </div>
-    </Fragment>
-  ),
-  tips: ['此區禁止飛空拍機', '禁止游泳', '木棧道濕滑時請放慢腳步']
-                },
-                {
-  id: 'd10-3',
-  time: '10:45',
-  title: '遊船橫渡 Kozjak 湖',
-  type: 'transport',
-  iconName: 'Compass',
-  subtitle: 'P2 → P3',
-  location: 'Lake Kozjak',
-  desc: '結束上湖區健行後，抵達 P2 碼頭，搭乘電動船前往 P3，橫渡園區最大的 Kozjak 湖。抵達 P3 後可上洗手間、補水，簡單吃點心或午餐，再繼續下湖區路線。',
-  tips: ['船程約 20 分鐘', '旺季可能需要排隊', 'P3 適合休息與補給']
-                },
-                {
-  id: 'd10-break',
-  time: '11:15',
-  title: 'P3 簡單午餐／休息',
-  type: 'food',
-  iconName: 'Utensils',
-  subtitle: '補水、點心、洗手間',
-  location: 'P3 Boat Dock',
-  desc: '在 P3 碼頭附近稍作休息，補充水分與簡單點心。十六湖園區內用餐選擇有限，建議前一晚或早上先準備三明治、能量棒或水果。',
-  tips: ['不要把正式午餐排得太重', '垃圾請隨身帶走或投入指定垃圾桶']
-                },
-                {
-  id: 'd10-4',
-  time: '11:45',
-  title: '下湖區健行',
-  type: 'activity',
-  iconName: 'Camera',
-  subtitle: '經典瀑布群',
-  location: 'Lower Lakes',
-  mapLink: 'https://www.google.com/maps/search/?api=1&query=Plitvice+Lower+Lakes',
-  desc: (
-    <Fragment>
-      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        從 P3 進入下湖區，沿著湖畔與木棧道前往 Veliki Slap 大瀑布。這裡是十六湖最經典、也最容易遇到人潮的區域，瀑布、峽谷與藍綠色湖水非常震撼。
-      </p>
-      <div className="mb-4 mt-4">
-        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-          📸 下湖區必拍：
-        </h4>
-        <ul className="text-sm text-gray-600 leading-relaxed space-y-1 list-disc pl-4">
-          <li>Milanovac – Gavanovac 湖泊與木棧道構圖</li>
-          <li>Veliki Slap 大瀑布近景</li>
-          <li>通往高點觀景台的明信片視角</li>
-        </ul>
-      </div>
-    </Fragment>
-  ),
-  tips: ['下雨天木棧道會滑，請小心', '越接近大瀑布人潮越多', '雨天水色反而更飽和']
-                },
-                {
-  id: 'd10-5',
-  time: '13:30',
-  title: '高點觀景台 & 回程',
-  type: 'sightseeing',
-  iconName: 'Camera',
-  subtitle: 'Postcard View',
-  location: 'Veliki Slap Viewpoint',
-  mapLink: 'https://www.google.com/maps/search/?api=1&query=Veliki+Slap+Viewpoint',
-  desc: '走到下湖區尾端後，前往高點觀景台欣賞十六湖最經典的明信片視角。拍照後依園區指標前往 ST1，搭乘全景車返回 ST2 / Entrance 2，準備離開園區。',
-  tips: ['回程接駁需預留等候時間', '離園前確認是否已取回停車位置與行李']
-                },
-                {
-    id: 'd10-6',
+    id: 'd10-3',
     time: '15:30',
     title: '前往札達爾・停車與入住',
     type: 'transport',
@@ -2324,7 +2258,7 @@
     ]
                 },
                 {
-    id: 'd10-7',
+    id: 'd10-4',
     time: '18:30',
     title: '札達爾夕陽散步',
     type: 'sightseeing',
