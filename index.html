@@ -1977,51 +1977,70 @@
   title: '普拉舊城散步',
   type: 'sightseeing',
   iconName: 'Camera',
-  subtitle: '凱旋門、Forum、奧古斯都神廟',
+  subtitle: '凱旋門、Forum、奧古斯都神廟、威尼斯堡壘',
   location: 'Pula Old Town',
+  mapLink: 'https://maps.app.goo.gl/tqhYLH89Rf55zDPB7',
   desc: (
     <Fragment>
+      <div className="mb-4 flex items-center">
+        <span className="font-bold text-gray-800">散步路線</span>
+        <MapLink url="https://maps.app.goo.gl/LnQf4XWpjmujXh3y6" />
+      </div>
+
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        午餐後沿著普拉舊城核心區散步，從古羅馬時代的凱旋門一路走到 Forum、奧古斯都神廟與主教座堂，最後視時間與體力上行至威尼斯堡壘 Kaštel，俯瞰普拉市景與海港。
+      </p>
+
       <div className="mb-6">
         <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-          【凱旋門 (Arch of the Sergii)】
-          <MapLink url="https://www.google.com/maps/search/?api=1&query=Arch+of+the+Sergii" />
+          【13:30｜塞爾吉烏斯凱旋門 Arch of the Sergii｜停留 10–15 分鐘】
+          <MapLink url="https://maps.app.goo.gl/tqhYLH89Rf55zDPB7" />
         </h4>
-        <p className="text-sm text-gray-600 leading-relaxed">
-          位於舊城區入口，是普拉最具代表性的古羅馬地標之一，適合順路拍照。
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          位於舊城入口附近，是普拉最具代表性的古羅馬地標之一。凱旋門建於羅馬時期，石雕與拱門比例優雅，很適合作為舊城散步的起點與拍照點。
         </p>
       </div>
 
       <div className="mb-6">
         <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-          【Forum 與奧古斯都神廟】
-          <MapLink url="https://www.google.com/maps/search/?api=1&query=Temple+of+Augustus+Pula" />
+          【13:50｜Forum 與奧古斯都神廟｜停留 15–20 分鐘】
+          <MapLink url="https://maps.app.goo.gl/uo5jZRaNABmqtoMJ8" />
         </h4>
-        <p className="text-sm text-gray-600 leading-relaxed">
-          市政廣場周邊保留了普拉古羅馬城市的核心氛圍，奧古斯都神廟外觀保存良好，是舊城散步的重點。
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          Forum 是古羅馬城市的公共生活中心，如今仍是普拉舊城最有歷史感的廣場。奧古斯都神廟外觀保存良好，正面柱廊與三角山牆非常典雅，是普拉羅馬遺跡散步的重點。
+        </p>
+      </div>
+
+      <div className="mb-6">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【14:20｜普拉主教座堂 Pula Cathedral｜停留 10–15 分鐘】
+          <MapLink url="https://maps.app.goo.gl/8zs2yT62gM9zcpPw9" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          主教座堂位於舊城區內，是普拉重要的宗教建築。相較於競技場與神廟，這裡氣氛更安靜，可作為舊城散步中的短暫停留點，感受普拉從羅馬時期到中世紀城市發展的不同層次。
         </p>
       </div>
 
       <div className="mb-4">
         <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-          【可選：威尼斯堡壘 Kaštel】
-          <MapLink url="https://www.google.com/maps/search/?api=1&query=Pula+Castle+Kastel" />
+          【14:30｜威尼斯堡壘 Kaštel｜停留 20–30 分鐘】
+          <MapLink url="https://maps.app.goo.gl/DYkjuX9SNP94xWe88" />
         </h4>
-        <p className="text-sm text-gray-600 leading-relaxed">
-          若時間與體力充裕，可上到市中心高處的星形堡壘，俯瞰普拉市景、競技場與海港。
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          威尼斯堡壘位於普拉舊城高處，是俯瞰城市、海港與競技場方向的好位置。需稍微爬坡，若天氣炎熱或時間不足，可改為外觀拍照；若體力充裕，建議上去看一眼普拉的城市全景。
         </p>
       </div>
     </Fragment>
   ),
   tips: [
-    '午餐後慢慢散步舊城',
+    '完整走完約 60–80 分鐘',
     '舊城石板路較滑，建議穿好走的鞋',
-    'Kaštel 需爬坡，可視體力決定',
-    '14:30 前準備返回羅維尼'
+    '夏季中午偏曬，記得補水'
   ]
 },
                 {
   id: 'd8-6',
-  time: '14:30',
+  time: '15:00',
   title: '返回羅維尼',
   type: 'transport',
   iconName: 'Car',
@@ -2071,15 +2090,6 @@
             </p>
           </li>
 
-          <li>
-            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-              La Puntulina 酒吧區
-              <MapLink url="https://www.google.com/maps/search/?api=1&query=La+Puntulina+Rovinj" />
-            </div>
-            <p className="text-sm text-gray-600 leading-relaxed text-justify">
-              靠近今晚晚餐地點，可以提早到附近散步或喝一杯，順便確認晚餐動線。
-            </p>
-          </li>
         </ul>
 
         <p className="text-sm text-gray-600 mt-4 leading-relaxed text-justify">
@@ -2089,36 +2099,48 @@
     </Fragment>
   ),
   tips: [
-    '熱門海景座位建議提早卡位',
-    '海邊石階較硬，可帶薄外套或坐墊',
-    '若想先休息，可回住宿後再出門看夕陽',
-    '晚餐若訂 La Puntulina，可提早往舊城海邊移動'
-  ]
+  '熱門海景座位建議提早卡位',
+  '海邊石階較硬，可帶薄外套或坐墊',
+  '若想先休息，可回住宿後再出門看夕陽',
+  '晚餐安排 Graciano，可先在海邊散步後再前往餐廳'
+]
 },
 {
   id: 'd8-8',
   time: '19:00',
-  title: '羅維尼海景晚餐',
+  title: '羅維尼晚餐',
   type: 'food',
   iconName: 'Utensils',
-  subtitle: 'La Puntulina',
-  location: 'La Puntulina',
-  mapLink: 'https://maps.app.goo.gl/HftfrvrUuebu4f149',
+  subtitle: 'Graciano • 海鮮與伊斯特里亞料理',
+  location: 'Graciano',
+  mapLink: 'https://maps.app.goo.gl/aGBDZJsiD5wpS7Hg7',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        在羅維尼舊城海邊的 La Puntulina 享用晚餐。這天已經從普拉回到羅維尼，有足夠時間提早抵達舊城與海邊，適合安排一頓有夕陽、海景與海鮮的晚餐。
+        在羅維尼的 Graciano 享用晚餐。這間餐廳以海鮮、伊斯特里亞手工麵與傳統料理為主，適合安排在從普拉回到羅維尼後，作為一頓正式但不過度高壓的晚餐。
       </p>
-      <p className="text-sm text-gray-600 leading-relaxed text-justify">
-        建議預約日落前後時段，並提早抵達附近散步或拍照。若訂不到 La Puntulina，可改選第 7 晚列出的其他羅維尼晚餐備案。
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        菜單選擇完整，從章魚沙拉、海鮮前菜、Fuži 松露手工麵，到羅維尼風味魚排、烤魷魚與雙人魚盤都有。若想吃在地感較強的一餐，Graciano 會比單純景觀餐廳更實際。
       </p>
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-2">【推薦菜色】</h4>
+        <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
+          <li>Octopus salad｜章魚沙拉</li>
+          <li>Fuži with truffles｜伊斯特里亞手工麵佐松露</li>
+          <li>Pljukanci with seafood｜伊斯特里亞手工麵佐海鮮</li>
+          <li>Rovinj style fish fillet｜羅維尼風味魚排</li>
+          <li>Grilled or fried calamari｜烤魷魚或炸魷魚</li>
+          <li>Fish plate Graciano for 2 persons｜Graciano 雙人綜合魚盤</li>
+        </ul>
+      </div>
     </Fragment>
   ),
   tips: [
-    '非常熱門，務必事先預訂',
-    '建議預約日落前後時段',
-    '提早抵達舊城海邊，避免趕路',
-    '若訂不到，可改 Twin Figs、Grongo e Alice 或 La Mula Ristorante'
+    '建議事先訂位',
+    '可預約 19:00 左右晚餐',
+    '若想坐戶外或露台，訂位時可特別詢問',
+    '推薦 Fuži with truffles、Pljukanci with seafood、Rovinj style fish fillet',
+    '若白天普拉行程延後，可改成 19:30'
   ]
                 }
             ],
