@@ -1421,44 +1421,78 @@
             ],
             6: [
                 {
-                    id: 'd6-1',
-                    time: '08:30',
-                    title: '前往博希尼',
-                    type: 'transport',
-                    iconName: 'Car',
-                    subtitle: '車程約 30-35 分鐘',
-                    location: 'Bohinj, Slovenia',
-                    mapLink: 'https://maps.app.goo.gl/o35VzmZEAa8iL4zg7',
-                    desc: '從布萊德出發，前往更原始、更寧靜的博希尼湖 (Lake Bohinj)。沿途風景優美，抵達後可先在湖邊散步拍照。',
-                    tips: ['早晨湖面常有氣，非常夢幻']
-                },
-                {
-                    id: 'd6-2',
-                    time: '09:30',
-                    title: '博希尼湖晨間散步',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: '聖約翰教堂 • 湖面倒影',
-                    location: 'Lake Bohinj',
-                    mapLink: 'https://maps.app.goo.gl/hyeKd2z7rcFjYczD6',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                相比布萊德的熱鬧，博希尼湖多了一份遺世獨立的寧靜。湖面廣闊，群山環繞，天氣好時湖面呈現完美的鏡面反射。
-                            </p>
-                            <div className="mb-4">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【必拍地標：聖約翰教堂】
-                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Church+of+St+John+the+Baptist+Bohinj" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    St. John the Baptist 教堂矗立在石橋旁，是博希尼湖最經典的畫面。
-                                </p>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['湖水清澈見底', '適合深呼吸放鬆']
-                },
+  id: 'd6-breakfast',
+  time: '07:30',
+  title: '住宿早餐',
+  type: 'food',
+  iconName: 'Coffee',
+  subtitle: 'Penzion Berc • 含早餐',
+  location: 'Penzion Berc',
+  mapLink: 'https://maps.app.goo.gl/FQitHjh52aKmXW7g8',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        在 Penzion Berc 享用住宿附的早餐，先補充體力，再出發前往博希尼湖。這天會安排湖邊散步、Vogel 纜車與薩維察瀑布，早上不用另外找咖啡館，直接在住宿慢慢吃早餐最方便。
+      </p>
+      <p className="text-sm text-gray-600 leading-relaxed">
+        建議早餐後整理好隨身物品，準備薄外套、好走的鞋、水與相機，08:30 左右開車出發。
+      </p>
+    </Fragment>
+  ),
+  tips: [
+    '住宿已含早餐，不需另外安排早餐店',
+    '早餐後確認相機、外套與水都有帶',
+    '08:30 左右出發前往博希尼'
+  ]
+},
+{
+  id: 'd6-1',
+  time: '08:30',
+  title: '前往博希尼',
+  type: 'transport',
+  iconName: 'Car',
+  subtitle: '車程約 30-35 分鐘',
+  location: 'Bohinj, Slovenia',
+  mapLink: 'https://maps.app.goo.gl/o35VzmZEAa8iL4zg7',
+  desc: '從布萊德出發，前往更原始、更寧靜的博希尼湖 Lake Bohinj。沿途穿過山谷與村落，風景優美。抵達後先在湖邊散步拍照，讓一天從清新的湖光山色開始。',
+  tips: ['早晨湖面常有霧氣，非常夢幻', '出發前可確認 Vogel 纜車天氣與能見度']
+},
+{
+  id: 'd6-2',
+  time: '09:30',
+  title: '博希尼湖晨間散步',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: '聖約翰教堂 • 石橋 • 湖面倒影',
+  location: 'Lake Bohinj',
+  mapLink: 'https://maps.app.goo.gl/hyeKd2z7rcFjYczD6',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        相比布萊德的熱鬧，博希尼湖多了一份遺世獨立的寧靜。湖面廣闊，群山環繞，早晨若天氣穩定，湖面常能映出山影與雲影，很適合慢慢散步、拍照，也適合作為前往 Vogel 纜車前的暖身。
+      </p>
+
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【必拍地標：聖約翰教堂與石橋】
+          <MapLink url="https://maps.app.goo.gl/5ZECayB1PLB4LudD8" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          St. John the Baptist 教堂矗立在湖口旁，旁邊的石橋橫跨清澈溪水，是博希尼湖最經典的畫面之一。可以從橋邊、湖岸與教堂前方多換幾個角度，拍下教堂、石橋、湖水與山景同框的景色。
+        </p>
+      </div>
+
+      <p className="text-sm text-gray-600 leading-relaxed text-justify">
+        這段不需要走太遠，建議以 Ribčev Laz 周邊湖岸為主，停留約 30–45 分鐘即可，保留時間接續前往 Vogel Cable Car。
+      </p>
+    </Fragment>
+  ),
+  tips: [
+    '湖水清澈見底，早晨光線柔和，適合拍倒影',
+    '聖約翰教堂與石橋是博希尼湖經典取景點',
+    '不需要走太遠，保留體力給 Vogel 與下午瀑布'
+  ]
+},
                 {
   id: 'd6-3',
   time: '10:15',
@@ -1467,12 +1501,13 @@
   iconName: 'Compass',
   subtitle: '纜車上山＋山頂散步',
   location: 'Vogel Ski Center',
-  mapLink: 'https://www.google.com/maps/search/?api=1&query=Vogel+Cable+Car',
+  mapLink: 'https://maps.app.goo.gl/wSvNqeQ9jzwmCc1t9',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        搭乘纜車上山，從高處俯瞰博希尼湖與朱利安阿爾卑斯山景。若天氣晴朗，這會是整天最壯觀的視角之一。
+        從博希尼湖畔前往 Vogel Cable Car（那邊就有停車場），搭乘纜車上山，從高處俯瞰博希尼湖與朱利安阿爾卑斯山景。若天氣晴朗，這會是整天最壯觀的視角之一：湖泊像一面深藍色鏡子躺在山谷中，周圍被層層山脈與高山草地包圍。
       </p>
+
       <div className="mb-4">
         <h4 className="font-bold text-gray-800 mb-1">【山頂亮點】</h4>
         <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
@@ -1481,13 +1516,29 @@
           <li>可在山頂短程散步，或找間咖啡館休息。</li>
         </ul>
       </div>
+
       <div className="p-3 bg-gray-50 rounded-lg border border-gray-100 text-sm text-gray-600">
-        <span className="font-bold">☁️ 天氣判斷：</span> 若山區雲霧太厚、能見度不佳，可考慮不上山，改成延長湖畔散步、咖啡時間，或提早前往薩維察瀑布。
+        <span className="font-bold">☁️ 天氣判斷：</span>
+        上山前先確認雲量與能見度。若山區雲霧太厚、能見度不佳，可考慮不上山，改成延長湖畔散步、咖啡時間，或提早前往薩維察瀑布。
+      </div>
+
+         <div className="mt-4">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【Vogel 即時天氣】
+          <MapLink url="https://vogel.si/en/weather/" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          出發前可先查看官方天氣頁面，確認山上溫度、風況、雲量與能見度。若 webcam 看起來一片白霧，代表上山後景觀可能有限，可以彈性調整行程。
+        </p>
       </div>
     </Fragment>
   ),
-  tips: ['山上氣溫較低，建議帶件薄外套', '上山前先確認雲量與能見度']
-                },
+  tips: [
+    '山上氣溫較低，建議帶件薄外套',
+    '上山前先確認雲量與能見度',
+    '若天氣不好，不必勉強上山，可改成湖邊散步或提早去瀑布'
+  ]
+},
                 {
                     id: 'd6-4',
                     time: '12:30',
