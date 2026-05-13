@@ -1772,72 +1772,117 @@
             ],
             8: [
                 {
-                    id: 'd8-1',
-                    time: '08:30',
-                    title: '舊城晨間散步',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: 'Rovinj Old Town',
-                    location: 'Rovinj Old Town',
-                    desc: '早晨的羅維尼安靜而美好，避開遊客喧囂，細細品味這座色彩繽紛的海港山城。',
-                    tips: []
-                },
+  id: 'd8-1',
+  time: '08:00',
+  title: '羅維尼早餐與晨間散步',
+  type: 'food',
+  iconName: 'Coffee',
+  subtitle: 'Brasserie Adriatic • 港口小巷',
+  location: 'Brasserie Adriatic',
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Brasserie+Adriatic+Rovinj',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        在羅維尼港口旁享用早餐，順便感受舊城剛醒來的清晨氣氛。這天早上以港口、小巷與咖啡早餐為主，不特別安排登高或教堂參觀，避免與第 9 天重複。
+      </p>
+      <p className="text-sm text-gray-600 leading-relaxed text-justify">
+        Brasserie Adriatic 位於市中心與港口旁，早餐時間較早，適合吃完後直接回住宿或停車處，準備開車前往普拉。
+      </p>
+    </Fragment>
+  ),
+  tips: [
+    '早餐首選 Brasserie Adriatic',
+    '08:00 左右用餐，09:15 前準備取車',
+  ]
+},
                 {
-                    id: 'd8-2',
-                    time: '09:30',
-                    title: '前往普拉',
-                    type: 'transport',
-                    iconName: 'Car',
-                    subtitle: '車程 40 分鐘',
-                    location: 'Pula, Croatia',
-                    mapLink: 'https://maps.app.goo.gl/a23gVksw1nteuByo7',
-                    desc: '出發前往伊斯特里亞半島最大的城市——普拉 (Pula)，探訪著名的古羅馬遺跡。',
-                    tips: []
-                },
+  id: 'd8-2',
+  time: '09:30',
+  title: '前往普拉',
+  type: 'transport',
+  iconName: 'Car',
+  subtitle: '車程約 40 分鐘',
+  location: 'Pula, Croatia',
+  mapLink: 'https://maps.app.goo.gl/a23gVksw1nteuByo7',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        早餐後從羅維尼出發，開車前往伊斯特里亞半島最大的城市普拉 Pula，探訪保存完整的古羅馬遺跡與舊城區。
+      </p>
+      <p className="text-sm text-gray-600 leading-relaxed text-justify">
+        車程約 40 分鐘，直接導航至普拉市中心或競技場周邊停車場，抵達後先前往 Pula Arena，再順路步行參觀 Zerostrasse、凱旋門與 Forum 一帶。
+      </p>
+    </Fragment>
+  ),
+  tips: [
+    '早餐後取車出發',
+    '09:30 準時離開羅維尼'
+  ]
+},
                 {
-                    id: 'd8-3',
-                    time: '10:30',
-                    title: '普拉競技場',
-                    type: 'sightseeing',
-                    iconName: 'MapPin',
-                    subtitle: 'Pula Arena',
-                    location: 'Pula Arena',
-                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Pula+Arena',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                世界現存六大羅馬競技場之一，也是保存最完整的之一。這座建於西元一世紀的宏偉建築，曾是神鬼戰士搏鬥的場所。
-                            </p>
-                            <p className="text-sm text-gray-600 leading-relaxed">
-                                上午的光線最適合拍攝競技場的外觀與內部。
-                            </p>
-                        </Fragment>
-                    ),
-                    tips: ['保留度極高', '光線上午最好']
-                },
+  id: 'd8-3',
+  time: '10:30',
+  title: '普拉競技場',
+  type: 'sightseeing',
+  iconName: 'MapPin',
+  subtitle: 'Pula Arena',
+  location: 'Pula Arena',
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Pula+Arena',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        普拉競技場是克羅埃西亞最具代表性的古羅馬遺跡之一，也是世界上保存最完整的羅馬圓形競技場之一。巨大的石造外牆、拱門與看台結構，至今仍保留著古羅馬城市的壯闊氣勢。
+      </p>
+      <p className="text-sm text-gray-600 leading-relaxed text-justify">
+        上午光線適合拍攝競技場外觀與內部空間。若時間充裕，可入內參觀地下展區；若想控制節奏，也可以以外觀拍攝與短程入內參觀為主。
+      </p>
+    </Fragment>
+  ),
+  tips: [
+    '建議先拍外觀，再入內參觀',
+    '可視時間決定是否參觀地下展區',
+    '預估停留約 45–60 分鐘',
+    '若停留較久，後面的 Zerostrasse 可視時間縮短'
+  ]
+},
                 {
-                    id: 'd8-zero',
-                    time: '11:20',
-                    title: 'Zerostrasse 地下隧道',
-                    type: 'sightseeing',
-                    iconName: 'Compass',
-                    subtitle: '奧匈時期軍事隧道',
-                    location: 'Zerostrasse',
-                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Zerostrasse+Pula',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                這是普拉鮮為人知的地下世界，一戰時期建造的龐大防禦工事系統。
-                            </p>
-                            <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
-                                <li><span className="font-bold">位置便利：</span>距離競技場步行僅需 5 分鐘。</li>
-                                <li><span className="font-bold">參觀時間：</span>約 20–30 分鐘即可走完。</li>
-                                <li><span className="font-bold">特色體驗：</span>隧道內終年恆溫，非常涼爽（適合避暑）。冷冽的工業風格與地面的羅馬遺跡截然不同，拍照非常有氛圍。</li>
-                            </ul>
-                        </Fragment>
-                    ),
-                    tips: ['隧道內較涼爽', '風格獨特好拍照']
-                },
+  id: 'd8-zero',
+  time: '11:20',
+  title: 'Zerostrasse 地下隧道',
+  type: 'sightseeing',
+  iconName: 'Compass',
+  subtitle: '奧匈時期地下防禦工事',
+  location: 'Zerostrasse',
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Zerostrasse+Pula',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        Zerostrasse 是普拉市中心下方的地下隧道系統，最初作為奧匈時期與一戰期間的防禦、避難設施使用。與地面上的羅馬遺跡相比，這裡呈現的是更冷冽、工業感的城市記憶。
+      </p>
+
+      <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
+        <li>
+          <span className="font-bold">位置便利：</span>
+          距離 Pula Arena 步行約 5–10 分鐘，可作為競技場後的短程順遊。
+        </li>
+        <li>
+          <span className="font-bold">參觀時間：</span>
+          約 20–30 分鐘即可走完，適合不想讓行程太滿時快速體驗。
+        </li>
+        <li>
+          <span className="font-bold">特色體驗：</span>
+          隧道內溫度較低、光線昏暗，和普拉地面的陽光、石牆與羅馬遺跡形成明顯對比，拍照很有氛圍。
+        </li>
+      </ul>
+    </Fragment>
+  ),
+  tips: [
+    '可作為 Pula Arena 後的短程順遊',
+    '若競技場停留較久，此點可省略',
+    '隧道內較涼爽，怕冷可帶薄外套',
+    '預估停留約 20–30 分鐘'
+  ]
+},
                 {
   id: 'd8-4',
   time: '12:30',
@@ -1880,8 +1925,8 @@
   tips: ['舊城石板路較滑，建議穿好走的鞋', 'Kaštel 需爬坡，可視體力決定']
                 },
                 {
-  id: 'd8-5',
-  time: '13:30',
+  id: 'd8-4',
+  time: '12:30',
   title: '普拉午餐',
   type: 'food',
   iconName: 'Utensils',
@@ -1920,57 +1965,137 @@
       </ul>
     </Fragment>
   ),
-  tips: ['午餐建議不要排太久，保留下午回羅維尼的時間']
-                },
+  tips: [
+    '看完 Pula Arena 與 Zerostrasse 後先用午餐休息',
+    '午餐建議不要排太久，保留下午舊城散步時間',
+    '若想快速用餐，可選 Jupiter'
+  ]
+},
+{
+  id: 'd8-5',
+  time: '13:30',
+  title: '普拉舊城散步',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: '凱旋門、Forum、奧古斯都神廟',
+  location: 'Pula Old Town',
+  desc: (
+    <Fragment>
+      <div className="mb-6">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【凱旋門 (Arch of the Sergii)】
+          <MapLink url="https://www.google.com/maps/search/?api=1&query=Arch+of+the+Sergii" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          位於舊城區入口，是普拉最具代表性的古羅馬地標之一，適合順路拍照。
+        </p>
+      </div>
+
+      <div className="mb-6">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【Forum 與奧古斯都神廟】
+          <MapLink url="https://www.google.com/maps/search/?api=1&query=Temple+of+Augustus+Pula" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          市政廣場周邊保留了普拉古羅馬城市的核心氛圍，奧古斯都神廟外觀保存良好，是舊城散步的重點。
+        </p>
+      </div>
+
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【可選：威尼斯堡壘 Kaštel】
+          <MapLink url="https://www.google.com/maps/search/?api=1&query=Pula+Castle+Kastel" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          若時間與體力充裕，可上到市中心高處的星形堡壘，俯瞰普拉市景、競技場與海港。
+        </p>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    '午餐後慢慢散步舊城',
+    '舊城石板路較滑，建議穿好走的鞋',
+    'Kaštel 需爬坡，可視體力決定',
+    '14:30 前準備返回羅維尼'
+  ]
+},
                 {
-                    id: 'd8-6',
-                    time: '14:30',
-                    title: '返回羅維尼',
-                    type: 'transport',
-                    iconName: 'Car',
-                    subtitle: '車程 40 分鐘',
-                    location: 'Rovinj',
-                    desc: '結束普拉的羅馬歷史之旅，開車返回羅維尼，準備享受悠閒的午後時光。',
-                    tips: []
-                },
-                {
+  id: 'd8-6',
+  time: '14:30',
+  title: '返回羅維尼',
+  type: 'transport',
+  iconName: 'Car',
+  subtitle: '車程約 40 分鐘',
+  location: 'Rovinj',
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Rovinj+Old+Town',
+  desc: (
+    <Fragment>
+      <p className="text-gray-600 leading-relaxed text-justify">
+        結束普拉的羅馬歷史之旅後，開車返回羅維尼。下午回到海邊小城，把節奏放慢，準備享受港口散步、海邊酒吧與夕陽晚餐。
+      </p>
+    </Fragment>
+  ),
+  tips: [
+    '建議 14:30 左右離開普拉',
+    '回程約 40 分鐘',
+    '抵達羅維尼後可先回住宿休息或直接前往海邊'
+  ]
+},
+{
   id: 'd8-7',
   time: '16:00',
   title: '羅維尼午後海邊時光',
   type: 'relax',
   iconName: 'Coffee',
-  subtitle: 'Old Town / Port / Sunset',
+  subtitle: 'Old Town • Port • Sunset',
   location: 'Rovinj Port',
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Rovinj+Port',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
         回到羅維尼後，把節奏放慢。可以在港口、市中心海邊或舊城小巷散步，找間海邊酒吧坐下來，等待夕陽慢慢染上海面。
       </p>
+
       <div className="mb-4">
-        <h4 className="font-bold text-gray-800 mb-1 flex items-center">推薦海邊小酒吧：</h4>
-        <ul className="text-sm text-gray-600 space-y-1 list-none pl-0">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【推薦海邊小酒吧】
+        </h4>
+        <ul className="text-sm text-gray-600 space-y-3 list-none pl-0">
           <li>
-            <div className="flex items-center">
+            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
               Mediterraneo Bar
               <MapLink url="https://www.google.com/maps/search/?api=1&query=Mediterraneo+Bar+Rovinj" />
             </div>
+            <p className="text-sm text-gray-600 leading-relaxed text-justify">
+              位於舊城海邊的經典酒吧，座位面向海景，適合午後喝一杯、等夕陽。
+            </p>
           </li>
+
           <li>
-            <div className="flex items-center">
+            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
               La Puntulina 酒吧區
               <MapLink url="https://www.google.com/maps/search/?api=1&query=La+Puntulina+Rovinj" />
             </div>
+            <p className="text-sm text-gray-600 leading-relaxed text-justify">
+              靠近今晚晚餐地點，可以提早到附近散步或喝一杯，順便確認晚餐動線。
+            </p>
           </li>
         </ul>
-        <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+
+        <p className="text-sm text-gray-600 mt-4 leading-relaxed text-justify">
           坐在海邊喝一杯，看著夕陽落入亞得里亞海，是羅維尼最經典的體驗之一。
         </p>
       </div>
     </Fragment>
   ),
-  tips: ['熱門海景座位建議提早卡位', '海邊石階較硬，可帶薄外套或坐墊']
-                },
-                {
+  tips: [
+    '熱門海景座位建議提早卡位',
+    '海邊石階較硬，可帶薄外套或坐墊',
+    '若想先休息，可回住宿後再出門看夕陽',
+    '晚餐若訂 La Puntulina，可提早往舊城海邊移動'
+  ]
+},
+{
   id: 'd8-8',
   time: '19:00',
   title: '羅維尼海景晚餐',
@@ -1979,8 +2104,22 @@
   subtitle: 'La Puntulina',
   location: 'La Puntulina',
   mapLink: 'https://maps.app.goo.gl/HftfrvrUuebu4f149',
-  desc: '在羅維尼舊城海邊的 La Puntulina 享用晚餐。這天已經從普拉回到羅維尼，有足夠時間提早抵達舊城與海邊，適合安排一頓有夕陽、海景與海鮮的晚餐。',
-  tips: ['非常熱門，務必事先預訂', '建議預約日落前後時段', '若訂不到，可改 Kantinon 或 Spacio Matika']
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        在羅維尼舊城海邊的 La Puntulina 享用晚餐。這天已經從普拉回到羅維尼，有足夠時間提早抵達舊城與海邊，適合安排一頓有夕陽、海景與海鮮的晚餐。
+      </p>
+      <p className="text-sm text-gray-600 leading-relaxed text-justify">
+        建議預約日落前後時段，並提早抵達附近散步或拍照。若訂不到 La Puntulina，可改選第 7 晚列出的其他羅維尼晚餐備案。
+      </p>
+    </Fragment>
+  ),
+  tips: [
+    '非常熱門，務必事先預訂',
+    '建議預約日落前後時段',
+    '提早抵達舊城海邊，避免趕路',
+    '若訂不到，可改 Twin Figs、Grongo e Alice 或 La Mula Ristorante'
+  ]
                 }
             ],
             9: [
