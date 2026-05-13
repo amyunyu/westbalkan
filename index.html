@@ -1103,141 +1103,167 @@
             ],
             5: [
                 {
-                    id: 'd5-1',
-                    time: '08:00',
-                    title: '早安盧比安納：市場與咖啡',
-                    type: 'food',
-                    iconName: 'Coffee',
-                    subtitle: '中央市場 • 簡單咖啡早餐',
-                    location: 'Central Market, Ljubljana',
-                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Central+Market+Ljubljana',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                將盧比安納最道地的兩種早晨體驗結合，享受愜意的慢活時光。
-                            </p>
+  id: 'd5-1',
+  time: '08:00',
+  title: '早安盧比安納：市場與咖啡',
+  type: 'food',
+  iconName: 'Coffee',
+  subtitle: '中央市場 • 簡單咖啡早餐',
+  location: 'Central Market, Ljubljana',
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Central+Market+Ljubljana',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        將盧比安納最道地的兩種早晨體驗結合，享受愜意的慢活時光。
+      </p>
 
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【中央市場早市散步】
-                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Central+Market+Ljubljana" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    早晨是市場最熱鬧的時候，充滿生活感。建議可以逛逛戶外攤位，買些新鮮水果、蜂蜜或當地火腿，邊逛邊吃小東西，感受在地人的活力。
-                                </p>
-                            </div>
+      <div className="mb-6">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【中央市場早市散步】
+          <MapLink url="https://www.google.com/maps/search/?api=1&query=Central+Market+Ljubljana" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          早晨是市場最熱鬧的時候，充滿生活感。建議可以逛逛戶外攤位，買些新鮮水果、蜂蜜或當地火腿，邊逛邊吃小東西，感受在地人的活力。
+        </p>
+      </div>
 
-                            <div className="mb-4">
-                                <h4 className="font-bold text-gray-800 mb-2">【河岸咖啡早餐推薦】</h4>
-                                <ul className="list-none pl-0 space-y-4">
-                                    <li>
-                                        <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                            Café Čokl
-                                            <MapLink url="https://www.google.com/maps/search/?api=1&query=Cafe+Cokl+Ljubljana" />
-                                        </div>
-                                        <p className="text-sm text-gray-600">如果你是咖啡愛好者，這裡有非常棒的手沖與義式咖啡。</p>
-                                    </li>
-                                    <li>
-                                        <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                            Le Petit Café
-                                            <MapLink url="https://www.google.com/maps/search/?api=1&query=Le+Petit+Cafe+Ljubljana" />
-                                        </div>
-                                        <p className="text-sm text-gray-600">提供經典的法式早餐與早午餐，氣氛優雅。</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['市場建議早點去食材較新鮮', '熱門咖啡館可能需要稍作等待']
-                },
-                {
-                    id: 'd5-checkout',
-                    time: '10:00',
-                    title: 'Check out',
-                    type: 'compact',
-                    iconName: 'Clock',
-                    location: 'Parking Location',
-                    mapLink: 'https://maps.app.goo.gl/zsdMMzgbVpbsUgYN6'
-                },
-                {
-                    id: 'd5-2',
-                    time: '10:30',
-                    title: '前往布萊德',
-                    type: 'transport',
-                    iconName: 'Car',
-                    subtitle: '車程約 45 分鐘',
-                    location: 'Bled, Slovenia',
-                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Lake+Bled',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                抵達布萊德後，先享用一頓美味的湖景午餐。
-                            </p>
-                            <div className="p-3 bg-gray-50 rounded-lg border border-gray-100 text-sm text-gray-600">
-                                <span className="font-bold">🚗 駕駛提醒：</span> 沿著 A2 高速公路行駛，路況通常良好。接近布萊德時可能會有些許車潮，請放慢速度欣賞沿途阿爾卑斯山腳下的美景。
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['確認行李都已上車', '準備好相機迎接湖光山色']
-                },
-                {
-                    id: 'd5-3',
-                    time: '11:30',
-                    title: '湖景午餐',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    subtitle: 'Penzion Mlino / Vila Ajda',
-                    location: 'Lake Bled',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                抵達布萊德後，先享用一頓美味的湖景午餐。
-                            </p>
-                            <ul className="list-none pl-0 space-y-4">
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Penzion Mlino
-                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Penzion+Mlino+Bled" />
-                                    </div>
-                                    <p className="text-sm text-gray-600">擁有絕佳的湖景位置，價格合理，是欣賞湖心島的好地方。</p>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Vila Ajda
-                                        <MapLink url="https://www.google.com/maps/search/?api=1&query=Vila+Ajda+Bled" />
-                                    </div>
-                                    <p className="text-sm text-gray-600">著名的布萊德奶油蛋糕 (Kremna rezina) 非常好吃，環境舒適。</p>
-                                </li>
-                            </ul>
-                        </Fragment>
-                    ),
-                    tips: ['午餐後可順便品嚐布萊德蛋糕']
-                },
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-2">【河岸咖啡早餐推薦】</h4>
+        <ul className="list-none pl-0 space-y-4">
+          <li>
+            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+              Café Čokl
+              <MapLink url="https://www.google.com/maps/search/?api=1&query=Cafe+Cokl+Ljubljana" />
+            </div>
+            <p className="text-sm text-gray-600">
+              如果你是咖啡愛好者，這裡有非常棒的手沖與義式咖啡。
+            </p>
+          </li>
+          <li>
+            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+              Le Petit Café
+              <MapLink url="https://www.google.com/maps/search/?api=1&query=Le+Petit+Cafe+Ljubljana" />
+            </div>
+            <p className="text-sm text-gray-600">
+              提供經典的法式早餐與早午餐，氣氛優雅。
+            </p>
+          </li>
+        </ul>
+      </div>
+    </Fragment>
+  ),
+  tips: ['市場建議早點去食材較新鮮', '熱門咖啡館可能需要稍作等待']
+},
+{
+  id: 'd5-checkout',
+  time: '10:00',
+  title: 'Check out',
+  type: 'compact',
+  iconName: 'Clock',
+  location: 'Parking Location',
+  mapLink: 'https://maps.app.goo.gl/zsdMMzgbVpbsUgYN6'
+},
+{
+  id: 'd5-2',
+  time: '10:30',
+  title: '前往布萊德',
+  type: 'transport',
+  iconName: 'Car',
+  subtitle: '車程約 45 分鐘',
+  location: 'Bled, Slovenia',
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Lake+Bled',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        離開盧比安納後，開車前往斯洛維尼亞最經典的湖區小鎮布萊德。抵達後先安排湖景午餐，讓旅程節奏自然轉入阿爾卑斯山腳下的悠閒氛圍。
+      </p>
+      <div className="p-3 bg-gray-50 rounded-lg border border-gray-100 text-sm text-gray-600">
+        <span className="font-bold">🚗 駕駛提醒：</span>
+        沿著 A2 高速公路行駛，路況通常良好。接近布萊德時可能會有些許車潮，請放慢速度欣賞沿途阿爾卑斯山腳下的美景。
+      </div>
+    </Fragment>
+  ),
+  tips: ['確認行李都已上車', '準備好相機迎接湖光山色']
+},
+{
+  id: 'd5-3',
+  time: '11:30',
+  title: '湖景午餐',
+  type: 'food',
+  iconName: 'Utensils',
+  subtitle: 'Penzion Mlino / Vila Ajda',
+  location: 'Lake Bled',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        抵達布萊德後，先享用一頓美味的湖景午餐。這一餐不需要太趕，適合坐下來慢慢看湖、適應布萊德的度假節奏。
+      </p>
+      <ul className="list-none pl-0 space-y-4">
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Penzion Mlino
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Penzion+Mlino+Bled" />
+          </div>
+          <p className="text-sm text-gray-600">
+            擁有絕佳的湖景位置，價格合理，是欣賞湖心島的好地方。
+          </p>
+        </li>
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Vila Ajda
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Vila+Ajda+Bled" />
+          </div>
+          <p className="text-sm text-gray-600">
+            著名的布萊德奶油蛋糕 Kremna rezina 非常好吃，環境舒適。
+          </p>
+        </li>
+      </ul>
+    </Fragment>
+  ),
+  tips: ['午餐後可順便品嚐布萊德蛋糕']
+},
                 {
   id: 'd5-4',
   time: '13:00',
   title: '布萊德湖畔散步',
   type: 'sightseeing',
   iconName: 'Camera',
-  subtitle: '湖畔短程散步 • 拍湖心島',
+  subtitle: '湖畔短程散步 • 拍湖心島與城堡',
   location: 'Lake Bled',
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Lake+Bled',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        午餐後沿著湖畔輕鬆散步，不必完整環湖，重點放在欣賞湖心島、城堡與阿爾卑斯山背景。這段時間很適合慢慢拍照、買杯咖啡或品嚐布萊德奶油蛋糕。
+        午餐後沿著布萊德湖畔輕鬆散步，不必完整環湖，重點放在欣賞湖心島、布萊德城堡與阿爾卑斯山背景。這段時間適合慢慢拍照、買杯咖啡，或找湖邊長椅坐一下，讓下午的遊船行程前保留體力。
       </p>
+
       <div className="mb-4">
         <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-          【拍照重點】
+          【推薦散步方向：Mlino 湖岸一帶】
+          <MapLink url="https://www.google.com/maps/search/?api=1&query=Mlino+Bled" />
         </h4>
-        <p className="text-sm text-gray-600 leading-relaxed">
-          可沿著湖畔尋找能同時拍到湖心島與城堡的角度。若時間與體力充裕，再視情況往 Mala Osojnica 方向移動；若只想輕鬆散步，留在湖邊即可。
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          如果午餐選 Penzion Mlino，餐後可以直接沿著 Mlino 附近湖岸散步。這一帶離湖心島較近，視角開闊，也方便接續後面的 Pletna 遊船。若只想輕鬆走走，建議在湖邊拍照、看船、找咖啡休息即可。
+        </p>
+      </div>
+
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【進階選項：Ojstrica / Mala Osojnica 觀景點】
+          <MapLink url="https://www.google.com/maps/search/?api=1&query=Ojstrica+Lake+Bled" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          如果天氣晴朗、體力充裕，可以考慮往 Ojstrica 或 Mala Osojnica 方向短程健行，這裡是俯瞰布萊德湖、湖心島與城堡的經典高處視角。不過路段較陡，時間也比較容易拉長；若 15:00 已安排遊船，建議最多只選 Ojstrica，並視現場狀況決定是否上去。
         </p>
       </div>
     </Fragment>
   ),
-  tips: ['不必完整環湖，保留體力給下午遊船與城堡', '穿著舒適好走的鞋']
-                },
+  tips: [
+    '不必完整環湖，保留體力給下午遊船與城堡',
+    'Mlino 湖岸很適合接續 Pletna 船行程',
+    '若要上 Ojstrica / Mala Osojnica，需穿好走的鞋並注意時間'
+  ]
+},
                 {
                     id: 'd5-checkin',
                     time: '14:30',
@@ -1260,59 +1286,125 @@
                     tips: ['14:00 後即可辦理入住', '民宿環境優美適合拍照']
                 },
                 {
-                    id: 'd5-5',
-                    time: '15:00',
-                    title: '布萊德島遊船',
-                    type: 'activity',
-                    iconName: 'Compass',
-                    subtitle: 'Pletna Boat & 許願鐘',
-                    location: 'Bled Island',
-                    mapLink: 'https://maps.app.goo.gl/PnJRe8mLQZxmwxVw9',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                搭乘當地傳統的人力木造船 Pletna 前往湖心島，這是布萊德湖獨有的體驗。
-                            </p>
-                            <p className="text-sm text-gray-600 leading-relaxed">
-                                上島後需爬上99階階梯才能抵達聖母升天教堂。別忘了進教堂拉響「許願鐘」，據說能讓願望成真。整個行程（含船程與島上停留）約 1.5 小時。
-                            </p>
-                        </Fragment>
-                    ),
-                    tips: ['Pletna 船夫通常只收現金', '教堂內部需購票參觀']
-                },
-                {
-                    id: 'd5-6',
-                    time: '17:00',
-                    title: '布萊德城堡夕陽',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: 'Bled Castle',
-                    location: 'Bled Castle',
-                    mapLink: 'https://www.google.com/maps/search/?api=1&query=Bled+Castle',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                登上懸崖邊的千年古堡，這裡是俯瞰全湖最壯闊的制高點。強烈建議黃昏時分前來，看著夕陽餘暉灑在湖面與遠方阿爾卑斯山頭，景色美不勝收。
-                            </p>
-                            <p className="text-sm text-gray-600 leading-relaxed">
-                                建議停留到 18:30，盡情享受這魔幻時刻。
-                            </p>
-                        </Fragment>
-                    ),
-                    tips: ['夕陽時分遊客較多，建議提早佔位', '城堡內有博物館與酒窖可參觀']
-                },
-                {
+  id: 'd5-5',
+  time: '15:00',
+  title: '布萊德島遊船',
+  type: 'activity',
+  iconName: 'Compass',
+  subtitle: 'Pletna 傳統木船 • 湖心島許願鐘',
+  location: 'Pletna Boat Pier',
+  mapLink: 'https://maps.app.goo.gl/SMYqeAybH35CjTt19',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        搭乘布萊德最具代表性的傳統 Pletna 木船前往湖心島。船夫站著划船，慢慢穿過湖面，沿途可欣賞布萊德城堡、湖心島與阿爾卑斯山背景，是第一次來布萊德非常值得安排的經典體驗。
+      </p>
+
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【遊船上船地點】
+          <MapLink url="https://maps.app.goo.gl/SMYqeAybH35CjTt19" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          建議依照此定位前往碼頭搭乘 Pletna 傳統木船。一般 Pletna 多為原碼頭往返湖心島，建議預設會回到同一個上船點下船，這樣時間最穩，也方便後續回住宿休息。
+        </p>
+      </div>
+
+      <p className="text-sm text-gray-600 leading-relaxed text-justify">
+        上島後需爬上 99 階階梯才能抵達聖母升天教堂。可以進教堂拉響「許願鐘」，據說能讓願望成真。整個行程含船程與島上停留約 1.5 小時，結束後可回住宿休息，或在湖邊喝咖啡、補拍照。
+      </p>
+    </Fragment>
+  ),
+  tips: [
+    '依照指定碼頭定位前往上船',
+    '一般 Pletna 多為原碼頭往返',
+    '船夫通常偏好現金付款，建議準備歐元現金',
+    '教堂內部與許願鐘通常需另行購票'
+  ]
+},
+{
+  id: 'd5-rest',
+  time: '16:30',
+  title: '湖邊休息／Ojstrica 觀景台',
+  type: 'relax',
+  iconName: 'Coffee',
+  subtitle: 'Bled Cream Cake • 天氣好可加 Ojstrica',
+  location: 'Lake Bled',
+  mapLink: 'https://maps.app.goo.gl/QD2uhQyNtb4UsPPDA',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        遊船結束後先放慢節奏，這段可依天氣與體力彈性安排。若想輕鬆一點，可以到 Kavarna Park 品嚐布萊德經典奶油蛋糕；若天氣晴朗、體力也足夠，則可改往 Ojstrica 觀景台，從高處俯瞰湖心島與布萊德城堡。
+      </p>
+
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【布萊德奶油蛋糕：Kavarna Park】
+          <MapLink url="https://maps.app.goo.gl/QD2uhQyNtb4UsPPDA" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          Kavarna Park 是品嚐 Bled Cream Cake 的經典地點，適合在遊船後坐下來喝咖啡、吃蛋糕、整理照片。若不想把下午排得太滿，這會是最舒服的選擇。
+        </p>
+      </div>
+
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【天氣好備案：Ojstrica 觀景台】
+          <MapLink url="https://maps.app.goo.gl/ZNLDKSsjBAoNQW6d8" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          若天氣晴朗且體力充足，可以改上 Ojstrica 觀景台。步道不長但偏陡，來回加拍照建議抓 1–1.5 小時。建議 18:15 前回到湖邊，避免影響 19:15 前往布萊德城堡看夕陽。
+        </p>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    '輕鬆版：Kavarna Park 吃 Bled Cream Cake＋湖邊咖啡',
+    '風景版：天氣好、體力夠再上 Ojstrica',
+    '不建議蛋糕與 Ojstrica 都硬排，容易壓縮休息時間',
+    '若要看 19:15 城堡夕陽，18:30 前最好結束這段'
+  ]
+},
+{
+  id: 'd5-6',
+  time: '19:00',
+  title: '布萊德城堡傍晚景觀',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: 'Bled Castle • 日落前湖景',
+  location: 'Bled Castle',
+  mapLink: 'https://maps.app.goo.gl/niF9yfuNjTkuNyAp6',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        傍晚登上懸崖邊的布萊德城堡，俯瞰布萊德湖、湖心島與遠方阿爾卑斯山景。「日落前的柔光湖景」。
+      </p>
+      <p className="text-sm text-gray-600 leading-relaxed">
+        建議 20:00 左右離開城堡，預留前往 Restavracija Sova Bled 的移動與停車時間。
+      </p>
+    </Fragment>
+  ),
+  tips: [
+    '5/28 日落約 20:44，這段以日落前柔光湖景為主',
+    '20:30 已訂 Sova 晚餐，20:00 左右離開城堡',
+    '城堡停車與下山移動需預留緩衝'
+  ]
+},
+{
   id: 'd5-7',
-  time: '19:30',
-  title: '布萊德湖畔晚餐',
+  time: '20:30',
+  title: 'Restavracija Sova Bled 晚餐',
   type: 'food',
   iconName: 'Utensils',
-  subtitle: 'Grajska plaža Restaurant',
-  location: 'Grajska plaža Restaurant',
-  mapLink: 'https://www.google.com/maps/search/?api=1&query=Grajska+plaza+Restaurant+Bled',
-  desc: '在布萊德湖畔的 Grajska plaža Restaurant 享用晚餐。餐廳位於城堡下方、湖岸邊，露台可欣賞布萊德湖與湖心島景色，氣氛比城堡餐廳更輕鬆，適合接在城堡夕陽後，慢慢用一頓湖景晚餐收尾。',
-  tips: ['季節性戶外餐廳，出發前需確認營業時間', '湖邊座位建議事先預約', '若天氣不佳，可改選 Steakhouse Berc 或其他室內餐廳']
-                }
+  subtitle: '已訂位 20:30',
+  location: 'Restavracija Sova Bled',
+  mapLink: 'https://maps.app.goo.gl/rudbPG183VaXDz9y8',
+  desc: '晚上在 Restavracija Sova Bled 享用已訂位的晚餐。餐廳位於布萊德湖畔，適合在城堡傍晚景觀後，以一頓較正式但仍有湖區氛圍的晚餐收尾。',
+  tips: [
+    '已訂位 20:30',
+    '20:00 左右從城堡離開，預留移動與停車時間',
+  ]
+}
             ],
             6: [
                 {
@@ -1491,29 +1583,69 @@
   type: 'sightseeing',
   iconName: 'Camera',
   subtitle: '停 Velika Zaka 後步行登山',
-  location: 'Velika Zaka Parking',
+  location: 'Velika Zaka Parking / Mala Osojnica Trail',
   mapLink: 'https://maps.app.goo.gl/g3VMjGhbwr1b4eCo9',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        開車前往布萊德湖西側的 Velika Zaka 停車場，停好車後沿湖邊步行至 Mala Osojnica 登山口，再爬上觀景點拍攝布萊德湖經典全景。
+        開車前往布萊德湖西側的 Velika Zaka 停車場，停好車後沿湖邊步行至登山口，再爬上觀景點拍攝布萊德湖經典全景。
       </p>
+
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-2">【觀景點選擇】</h4>
+        <ul className="list-none pl-0 space-y-3">
+          <li>
+            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+              Viewpoint 1
+              <MapLink url="https://maps.app.goo.gl/d96uGR9NRamFX5Fs8" />
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed text-justify">
+              可作為第一個拍攝點，若體力或時間有限，可先在此停留拍攝湖景。
+            </p>
+          </li>
+
+          <li>
+            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+              Viewpoint 2
+              <MapLink url="https://maps.app.goo.gl/8MZEqHA1fnP3Jgrf7" />
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed text-justify">
+              可繼續往上走，視野通常更開闊，適合拍攝布萊德湖、湖心島與城堡的經典角度。
+            </p>
+          </li>
+
+          <li>
+            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+              Viewpoint 3
+              <MapLink url="https://maps.app.goo.gl/g2mUX4tMVfnorPMLA" />
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed text-justify">
+              若時間、體力與天氣都允許，可再往第三個觀景點前進；適合想多拍幾個角度的晨拍安排。
+            </p>
+          </li>
+        </ul>
+      </div>
+
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        觀景台無法直接開車抵達，需步行上山。登山口到觀景點約 20–30 分鐘，部分路段陡峭且清晨可能濕滑，建議穿防滑鞋並攜帶薄外套與水。
+        觀景台無法直接開車抵達，需步行上山。登山口到主要觀景點約 20–30 分鐘，部分路段陡峭且清晨可能濕滑，建議穿防滑鞋並攜帶薄外套與水。
       </p>
+
       <p className="text-sm text-gray-600 leading-relaxed text-justify">
         停車場費用約 €7.5／小時，晨拍加上來回步行建議至少預估 1.5–2 小時停留時間。
       </p>
     </Fragment>
   ),
   tips: [
-    '導航至 Velika Zaka Parking',
+    '主導航至 Velika Zaka Parking',
+    '停好車後步行前往觀景點',
     '停車費約 €7.5／小時',
     '建議預估 1.5–2 小時停留',
+    '依體力選擇走到第 1、2 或第 3 個觀景點',
+    '不要路邊違停',
     '步道較陡且可能濕滑',
     '晨拍後預留時間回住宿早餐'
   ]
-                },
+},
                 {
   id: 'd7-checkout',
   time: '09:00',
@@ -1722,7 +1854,7 @@
               <MapLink url="https://maps.app.goo.gl/sFMtdEeJF2yexsr89" />
             </div>
             <p className="text-sm text-gray-600 leading-relaxed text-justify">
-              評價很高的地中海小餐館，料理較精緻。若能準時抵達並事先確認訂位與最後點餐時間，會是吃好一點的選擇。
+              ⭐想吃這家。評價很高的地中海小餐館，料理較精緻。若能準時抵達並事先確認訂位與最後點餐時間，會是吃好一點的選擇。
             </p>
           </li>
 
@@ -1752,7 +1884,7 @@
               <MapLink url="https://maps.app.goo.gl/eKKpxvj8A2eh1eJ6A" />
             </div>
             <p className="text-sm text-gray-600 leading-relaxed text-justify">
-              現代魚料理快餐，評價高、價格親民。不過目前查到的營業資訊偏午餐時段，晚餐是否營業建議出發前再確認。
+              現代魚料理快餐，評價高、價格親民。晚餐是否營業建議出發前再確認。
             </p>
           </li>
         </ul>
