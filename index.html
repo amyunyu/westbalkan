@@ -746,7 +746,7 @@ tips: [
     title: 'Oktogon & 塞爾維亞正教會主教座堂',
     type: 'sightseeing',
     iconName: 'Camera',
-    location: 'Olive Tree City Apartment',
+    location: 'Oktogon Passage',
     mapLink: 'https://maps.app.goo.gl/8uGXdJpJhx2PVbpX8',
     subtitle: '市中心拱廊、花廣場與東正教主教座堂',
     desc: (
@@ -889,7 +889,7 @@ tips: [
         '想喝好咖啡、坐一下但不要太久，選 CHI Specialty Coffee',
         '想坐在庭院裡喝咖啡、放慢節奏，選 Figa Garden by Henrik',
         '今天中午後要自駕前往 Ljubljana',
-        '可外帶麵包、點心或飲料作為路上補給'
+        '可外帶麵包、點心或飲料作為路上補給',
         '出發前確認 Slovenia e-vignette、導航、護照與租車文件'
     ]
                 },
@@ -901,7 +901,7 @@ tips: [
   iconName: 'Clock',
   subtitle: '整理行李、退房、移動車輛停放',
   location: 'Parking Location'
-mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36'
+mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36',
   desc: (
     <Fragment>
       <p className="text-gray-600 leading-relaxed text-justify">
@@ -968,13 +968,13 @@ mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36'
     title: '盧比安納市中心漫遊',
     type: 'sightseeing',
     iconName: 'Camera',
-    subtitle: '普列舍倫廣場、三重橋、河畔散步',
+    subtitle: '普列舍倫廣場、三重橋、龍橋與河畔散步',
     location: 'Prešernov trg',
     mapLink: 'https://maps.app.goo.gl/f2dcEMFHYewVjR2KA',
     desc: (
         <Fragment>
             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                抵達 Ljubljana、辦理入住並稍作休息後，傍晚前往市中心散步。第一晚不需要排太多景點，建議從普列舍倫廣場開始，走過三重橋，再沿著 Ljubljanica River 河畔慢慢散步，感受這座城市輕盈、安靜又帶點童話感的氣氛。
+                抵達 Ljubljana、辦理入住並稍作休息後，傍晚前往市中心散步。第一晚不需要排太多室內景點，建議從普列舍倫廣場開始，走過三重橋，沿著 Ljubljanica River 河畔慢慢往龍橋與中央市場外圍移動。這條路線距離不長，卻能一次感受到 Ljubljana 最經典的廣場、橋樑、河景與城市象徵。
             </p>
 
             <div className="mb-6">
@@ -997,7 +997,7 @@ mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36'
                 </p>
             </div>
 
-            <div className="mb-4">
+            <div className="mb-6">
                 <h4 className="font-bold text-gray-800 mb-1 flex items-center">
                     【Ljubljanica River 河畔】
                     <MapLink url="https://maps.app.goo.gl/QPMrvxzf38D6VePX8" />
@@ -1006,48 +1006,37 @@ mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36'
                     從三重橋沿著 Ljubljanica River 慢慢走，是第一晚最舒服的安排。河岸兩旁有咖啡館、餐廳、拱廊與小橋，不需要特別趕景點，只要順著河邊散步，就能感受到 Ljubljana 悠閒又精緻的城市節奏。
                 </p>
             </div>
+
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【龍橋 Dragon Bridge】
+                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Dragon+Bridge+Ljubljana" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    龍橋是 Ljubljana 最具辨識度的城市象徵之一，橋頭四角的飛龍雕像很適合拍照。橋本身停留時間不長，適合沿河散步時順路經過，作為第一晚城市散步的亮點。
+                </p>
+            </div>
+
+            <div className="mb-4">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【中央市場外圍 Central Market】
+                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Central+Market+Ljubljana" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    中央市場建築群同樣與 Plečnik 的城市設計有關。傍晚時分市場攤販多半已收，但沿著河岸的拱廊與建築線條仍很有氣氛，適合輕鬆散步與拍照。
+                </p>
+            </div>
         </Fragment>
     ),
     tips: [
-        '抵達 Ljubljana 第一天以輕鬆散步為主，不要排太滿',
-        '傍晚光線很適合拍三重橋與河面倒影',
-        '市中心多為步行區，建議停好車後步行或搭車前往'
+        '傍晚光線很適合拍三重橋、河面倒影與龍橋',
+        '中央市場傍晚多半已收攤，這段以看建築與河岸氣氛為主',
+        '市中心多為步行區，建議停好車後步行前往',
+        '散步結束後可接 19:00 晚餐或超市採買'
     ]
 },
                 {
                     id: 'd3-3',
-                    time: '18:00',
-                    title: '城市象徵巡禮',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: '龍橋、中央市場',
-                    location: 'Dragon Bridge',
-                    desc: (
-                        <Fragment>
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【龍橋 (Dragon Bridge)】
-                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Dragon+Bridge+Ljubljana" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    這座橋建於1901年，展現了維也納分離派風格。橋頭四個角落的飛龍雕像是盧比安納最著名的象徵，也是遊客必拍的打卡點。
-                                </p>
-                            </div>
-                            <div className="mb-4">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【中央市場 (Central Market)】
-                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Central+Market+Ljubljana" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    同樣由 Plečnik 設計的市場建築群。雖然傍晚時分攤販已收，但沿著河岸的拱廊建築（Plečnik's Arcade）非常有氣氛，適合輕鬆散步與拍照。
-                                </p>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['龍橋的雕像是城市象徵', '傍晚市場外圍適合散步拍照']
-                },
-                {
-                    id: 'd3-4',
                     time: '19:00',
                     title: '晚餐',
                     type: 'food',
@@ -1081,7 +1070,7 @@ mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36'
                     tips: ['超市可買到斯洛維尼亞當地食材', '享受放鬆的晚餐時光']
                 },
                 {
-                    id: 'd3-5',
+                    id: 'd3-4',
                     time: '20:30',
                     title: '河畔散步',
                     type: 'relax',
