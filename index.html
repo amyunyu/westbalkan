@@ -270,38 +270,56 @@
         const itineraryData = {
             1: [
                 {
-                    id: 'd1-1',
-                    time: '04:35',
-                    title: '杜拜機場轉機',
-                    type: 'transport',
-                    iconName: 'Clock',
-                    location: 'Dubai International Airport (DXB)',
-                    subtitle: '轉機等待中',
-                    desc: '抵達杜拜，準備轉往札格瑞布。杜拜機場設施完善，建議找安靜區域休息。',
-                    tips: ['不用出境', '找舒適區域休息']
-                },
-                {
-                    id: 'd1-2',
-                    time: '08:40',
-                    title: '飛往札格瑞布',
-                    type: 'transport',
-                    iconName: 'Plane',
-                    location: '札格瑞布機場 (ZAG)',
-                    subtitle: 'EK2012/FZ1793 DXB → ZAG (預計 13:30 抵達)',
-                    desc: '第二段飛行，搭乘 EK2012 前往克羅埃西亞首都。',
-                    tips: ['調整時區 (GMT+2)']
-                },
-                {
-                    id: 'd1-3',
-                    time: '13:30',
-                    title: '抵達札格瑞布機場 (ZAG)',
-                    type: 'arrival',
-                    iconName: 'MapPin',
-                    location: 'Zagreb Airport',
-                    mapLink: 'https://maps.app.goo.gl/zEc8CPN39NLXcLzf6',
-                    subtitle: '領取行李、出關',
-                    desc: '抵達克羅埃西亞首都札格瑞布。領取行李。',
-                },
+    id: 'd1-1',
+    time: '04:35',
+    title: '杜拜機場轉機',
+    type: 'transport',
+    iconName: 'Clock',
+    location: 'Dubai International Airport (DXB)',
+    subtitle: '轉機等待中',
+    desc: '抵達杜拜後銜接前往札格瑞布的航班。這段轉機時間以休息、補水、簡單整理隨身物品為主，並提早確認下一段航班的登機門與登機時間。若兩段航班行李已直掛札格瑞布，通常可留在管制區內轉機，不需要入境杜拜。',
+    tips: [
+        '原則上不用出境，跟著 Transfer / Connections 指標走',
+        '先確認下一段航班登機門，DXB 登機門可能會變動',
+        '找安靜座位休息，手機與行動電源先充電',
+        '轉機時間長可考慮付費 sleep pod / lounge',
+        '保留護照與下一段登機證在容易拿的位置'
+    ]
+},
+{
+    id: 'd1-2',
+    time: '08:40',
+    title: '飛往札格瑞布',
+    type: 'transport',
+    iconName: 'Plane',
+    location: '札格瑞布機場 (ZAG)',
+    subtitle: 'EK2012/FZ1793｜DXB → ZAG｜預計 13:30 抵達',
+    desc: '第二段航班前往克羅埃西亞首都札格瑞布。建議在機上調整成歐洲作息，能睡就睡，抵達前整理好護照、住宿資訊與交通方式，讓入境與前往市區更順利。',
+    tips: [
+        '上機後把時間調成克羅埃西亞時間',
+        '抵達前準備護照、住宿地址與回程/後續行程資料',
+        '若使用 eSIM，可在降落前後確認是否已啟用',
+        '飛機上補水，抵達日避免排太緊'
+    ]
+},
+{
+    id: 'd1-3',
+    time: '13:30',
+    title: '抵達札格瑞布機場 (ZAG)',
+    type: 'arrival',
+    iconName: 'MapPin',
+    location: 'Zagreb Airport',
+    mapLink: 'https://maps.app.goo.gl/zEc8CPN39NLXcLzf6',
+    subtitle: '入境、領取行李、前往市區',
+    desc: '抵達札格瑞布機場後，依序完成入境檢查、領取行李與交通銜接。抵達日建議保留足夠緩衝，不要急著安排太多景點；先順利進市區、入住與休息最重要。',
+    tips: [
+        '先完成護照查驗與行李提領',
+        '確認行李是否完整，若有損壞或遺失需在機場立即處理',
+        '出關後可啟用 eSIM、領現金或購買飲水',
+        '前往市區可選機場巴士、計程車或叫車服務',
+        '若搭機場巴士，終點通常是 Zagreb Central Bus Station，再轉 tram / taxi 進市區'
+    ]
+},
                 {
                     id: 'd1-4',
                     time: '16:00',
@@ -311,12 +329,18 @@
                     subtitle: 'Booking/check in',
                     location: 'Olive Tree City Apartment',
                     mapLink: 'https://maps.app.goo.gl/TySnotHPkL6MhyCUA',
-                    desc: '抵達今日住宿地點辦理入住手續，稍作休息。',
-                    tips: ['確認停車位置', '詢問房東當地推薦']
+                    desc: '抵達今日住宿地點後辦理入住，放下行李並稍作休息。因為前面已經經過長途飛行與轉機，這段時間建議先補水、整理隨身物品、確認鑰匙與門禁方式，再視體力出門散步。',
+tips: [
+    '確認入住方式、鑰匙位置與退房規則',
+    '確認是否有電梯，若需搬行李可先安排動線',
+    '先查好住宿到舊城區的步行或叫車路線',
+    '貴重物品、護照與租車文件集中放好',
+    '若體力不足，舊城散步可縮短，只保留主教座堂與晚餐'
+]
                 },
                 {
                     id: 'd1-5',
-                    time: '16:30',
+                    time: '16:45',
                     title: '札格瑞布舊城漫遊',
                     type: 'sightseeing',
                     iconName: 'Camera',
@@ -324,103 +348,117 @@
                     location: 'Zagrebačka katedrala',
                     mapLink: 'https://maps.app.goo.gl/7EzQcsDABBNFR2JQ8',
                     desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">漫步於札格瑞布上城區，探索三大歷史地標：</p>
+    <Fragment>
+        <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+            抵達札格瑞布後的第一段城市散步，以「輕鬆認識上城」為主。從主教座堂周邊開始，慢慢走向石門與聖馬爾谷教堂，最後接到 Tkalčićeva 街或主廣場附近用晚餐。若時差疲累，這段可以彈性縮短。
+        </p>
 
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【札格瑞布主教座堂】
-                                    <MapLink url="https://maps.app.goo.gl/LUBdDPyV9ESCDgyM8" />
-                                </h4>
-                                <ul className="text-sm text-gray-600 space-y-1 list-none pl-0">
-                                    <li>1. 克羅埃西亞最高、最具代表性的哥德式地標：擁有雙尖塔，是 Zagreb 天際線最顯眼的建築，但因 2020 地震受損，目前仍在修復（外觀部分有鷹架）。</li>
-                                    <li>2. 教堂歷史超過八百年，是首都最重要宗教中心：內部以哥德式拱頂、彩繪玻璃與雕刻聞名；地震後雖可能僅部分開放，但仍值得一訪。</li>
-                                    <li>3. 外觀拍照非常壯觀，周邊廣場也適合停留：廣場空間大，適合拍整體建築；若想拍上城全景，可在同一天搭 Funicular 去塔上補景。</li>
-                                </ul>
-                            </div>
+        <div className="mb-6">
+            <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                【札格瑞布主教座堂】
+                <MapLink url="https://maps.app.goo.gl/LUBdDPyV9ESCDgyM8" />
+            </h4>
+            <ul className="text-sm text-gray-600 space-y-1 list-none pl-0">
+                <li>1. 札格瑞布最具代表性的宗教地標，雙尖塔是城市天際線中最醒目的輪廓。</li>
+                <li>2. 教堂因 2020 年地震受損後長期修復，實際開放範圍可能依現場狀況調整；即使只看外觀與周邊廣場，也很值得停留。</li>
+                <li>3. 作為舊城散步起點，從廣場慢慢往上城方向移動，節奏會比較順。</li>
+            </ul>
+        </div>
 
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【石門】
-                                    <MapLink url="https://maps.app.goo.gl/eN9HqDhoKveSN28d6" />
-                                </h4>
-                                <ul className="text-sm text-gray-600 space-y-1 list-none pl-0">
-                                    <li>1. 上城僅存的中世紀城門，城市重要歷史遺址：原本是城牆的一部分， 13 世紀建成，是 Zagreb 少數保留至今的城門。</li>
-                                    <li>2. 門內供奉奇蹟聖母畫像，被視為守護 Zagreb 的象徵：據說 1731 大火中所有物品燒毀，只有聖母畫像完好無損，因此成為市民重要的祈願地點。</li>
-                                    <li>3. 氣氛寧靜、帶有神聖感，可短暫停留點蠟燭：遊客多是靜靜經過、拍照或祈願；參觀免費，行程可在 5–10 分鐘內完成。</li>
-                                </ul>
-                            </div>
+        <div className="mb-6">
+            <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                【石門】
+                <MapLink url="https://maps.app.goo.gl/eN9HqDhoKveSN28d6" />
+            </h4>
+            <ul className="text-sm text-gray-600 space-y-1 list-none pl-0">
+                <li>1. 上城僅存的重要中世紀城門，也是札格瑞布很有精神象徵感的地點。</li>
+                <li>2. 門內供奉聖母畫像，傳說在 1731 年大火中倖存，因此成為當地人祈願與點燭的場所。</li>
+                <li>3. 這裡不是單純拍照景點，更像一處安靜的城市小聖所；經過時放低音量、短暫停留感受氣氛。</li>
+            </ul>
+        </div>
 
-                            <div className="mb-4">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【聖馬爾谷教堂】
-                                    <MapLink url="https://maps.app.goo.gl/kh5qDiZeJnayCNBJ7" />
-                                </h4>
-                                <ul className="text-sm text-gray-600 space-y-1 list-none pl-0">
-                                    <li>1. Zagreb 的視覺標誌，以彩色瓷磚屋頂最具代表性：屋頂圖案呈現 克羅埃西亞國徽 + Zagreb 市徽，拍照觀察非常亮眼，是必訪地標。</li>
-                                    <li>2. 位於上城最古老區域，周邊是國會與政府機構：聖馬爾谷廣場周邊開闊、典雅，是 Zagreb 政治中心與歷史重心。</li>
-                                    <li>3. 建築本體為羅馬式＋哥德式混合風格：內部偶爾開放（不固定），但外觀本身就相當值得欣賞；可以白天拍一次、傍晚光線下再看一次更漂亮。</li>
-                                </ul>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['穿著舒適好走的鞋', '石門為肅靜場所請保持安靜', '教堂內部參觀需注意開放時間']
+        <div className="mb-4">
+            <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                【聖馬爾谷教堂】
+                <MapLink url="https://maps.app.goo.gl/kh5qDiZeJnayCNBJ7" />
+            </h4>
+            <ul className="text-sm text-gray-600 space-y-1 list-none pl-0">
+                <li>1. 上城最具辨識度的建築，以彩色瓷磚屋頂聞名，是札格瑞布最經典的畫面之一。</li>
+                <li>2. 屋頂圖案呈現克羅埃西亞與 Zagreb 的徽章；Visit Zagreb 也將它列為城市代表性地標。</li>
+                <li>3. 周邊是政府與國會建築，廣場氣氛較安靜莊重；以外觀欣賞與拍照為主。</li>
+            </ul>
+        </div>
+    </Fragment>
+),
+tips: [
+    '建議 16:45 後再出門，入住後留一點整理與休息時間',
+    '這段以輕鬆散步為主，若太累可只走主教座堂、石門、晚餐',
+    '石門是祈願場所，請保持安靜',
+    '聖馬爾谷教堂周邊為政府區，拍照時留意現場管制',
+    '傍晚光線柔和，適合拍上城街道與屋頂'
+]
                 },
                  {
-                    id: 'd1-6',
-                    time: '18:00',
-                    title: '札格瑞布晚餐',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    location: 'Zagreb Old Town',
-                    desc: (
-                        <Fragment>
-                             <h4 className="font-bold text-gray-800 mb-2">【札格瑞布晚餐選項】</h4>
-                            <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                                札格瑞布市區提供多樣化的克羅埃西亞傳統料理與現代街頭美食，以下為推薦清單：
-                            </p>
-                            <ul className="space-y-4">
-                                <li>
-                                    <div className="font-bold text-gray-700 flex items-center">
-                                        La Štruk
-                                        <MapLink url="https://maps.app.goo.gl/XxbrHj2KArnY891H8" />
-                                    </div>
-                                    <p className="text-xs text-gray-500 mt-1">
-                                        必嚐的克羅埃西亞經典甜點/鹹點 Štrukli（起司麵皮）。
-                                    </p>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-gray-700 flex items-center">
-                                        Vinodol
-                                        <MapLink url="https://maps.app.goo.gl/R9x4Ddx2QHHA1rv86" />
-                                    </div>
-                                    <p className="text-xs text-gray-500 mt-1">
-                                        傳統高級克羅埃西亞料理，適合想要「好好坐下來吃一頓」的場合。
-                                    </p>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-gray-700 flex items-center">
-                                        HERITAGE - Croatian Street Food & Shop
-                                        <MapLink url="https://maps.app.goo.gl/JuJgkjrKjtvWerqN7" />
-                                    </div>
-                                    <p className="text-xs text-gray-500 mt-1">
-                                        提供精緻的克羅埃西亞街頭美食，可快速享用。
-                                    </p>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-gray-700 flex items-center">
-                                        Batak Tkalčićeva
-                                        <MapLink url="https://maps.app.goo.gl/v9SbKvGMc3cLFtTW9" />
-                                    </div>
-                                    <p className="text-xs text-gray-500 mt-1">
-                                        主打傳統烤肉 (Grill)，份量充足，口味濃郁。
-                                    </p>
-                                </li>
-                            </ul>
-                        </Fragment>
-                    ),
-                    tips: ['晚餐後可沿 Tkalčićeva 街散步', 'Štrukli 適合當晚輕食', 'Vinodol 需預訂']
-                }
+    id: 'd1-6',
+    time: '18:15',
+    title: '札格瑞布晚餐',
+    type: 'food',
+    iconName: 'Utensils',
+    location: 'Zagreb Old Town',
+    desc: (
+        <Fragment>
+             <h4 className="font-bold text-gray-800 mb-2">【札格瑞布晚餐選項】</h4>
+            <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                抵達日的晚餐建議安排在舊城、主廣場或 Tkalčićeva 街一帶，走完上城後可自然銜接。今晚不建議排太正式或太晚的餐廳，以「好抵達、好入座、吃完能早點休息」為優先。
+            </p>
+            <ul className="space-y-4">
+                <li>
+                    <div className="font-bold text-gray-700 flex items-center">
+                        La Štruk
+                        <MapLink url="https://maps.app.goo.gl/XxbrHj2KArnY891H8" />
+                    </div>
+                    <p className="text-xs text-gray-500 mt-1">
+                        主打克羅埃西亞經典 Štrukli，可選甜口或鹹口，適合抵達日想吃特色料理但不想吃太重的晚餐。
+                    </p>
+                </li>
+                <li>
+                    <div className="font-bold text-gray-700 flex items-center">
+                        Vinodol
+                        <MapLink url="https://maps.app.goo.gl/R9x4Ddx2QHHA1rv86" />
+                    </div>
+                    <p className="text-xs text-gray-500 mt-1">
+                        較正式的克羅埃西亞料理選擇，適合想好好坐下來吃一頓；若選這間，建議事先訂位並預留較長用餐時間。
+                    </p>
+                </li>
+                <li>
+                    <div className="font-bold text-gray-700 flex items-center">
+                        HERITAGE - Croatian Street Food & Shop
+                        <MapLink url="https://maps.app.goo.gl/JuJgkjrKjtvWerqN7" />
+                    </div>
+                    <p className="text-xs text-gray-500 mt-1">
+                        精緻版克羅埃西亞街頭小食，適合想快速用餐、少量多樣品嚐，或時差疲累不想坐太久的晚上。
+                    </p>
+                </li>
+                <li>
+                    <div className="font-bold text-gray-700 flex items-center">
+                        Batak Tkalčićeva
+                        <MapLink url="https://maps.app.goo.gl/v9SbKvGMc3cLFtTW9" />
+                    </div>
+                    <p className="text-xs text-gray-500 mt-1">
+                        主打烤肉與 Grill，份量較足，適合想吃得飽一點或同行者偏好肉類料理的選擇。
+                    </p>
+                </li>
+            </ul>
+        </Fragment>
+    ),
+    tips: [
+        '抵達日首選 La Štruk 或 HERITAGE，負擔較輕',
+        'Vinodol 較適合體力充足、想正式用餐時選',
+        '晚餐後可沿 Tkalčićeva 街短暫散步',
+        '若時差很累，吃完就回住宿休息，不要硬排夜景',
+        '熱門餐廳建議先確認營業時間或訂位'
+    ]
+}
             ],
             2: [
                 {
