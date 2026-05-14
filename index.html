@@ -840,91 +840,180 @@ tips: [
             ],
             3: [
                 {
-                    id: 'd3-1',
-                    time: '09:00',
-                    title: '早餐',
-                    type: 'food',
-                    iconName: 'Coffee',
-                    location: 'Zagreb',
-                    desc: '享受美好的早餐時光，為新的一天補充滿滿活力。',
-                    tips: []
+    id: 'd3-1',
+    time: '09:00',
+    title: '早餐',
+    type: 'food',
+    iconName: 'Coffee',
+    location: 'Zagreb City Center',
+    subtitle: 'Korica / CHI Specialty Coffee / Figa Garden by Henrik',
+    desc: (
+        <Fragment>
+            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                Day 3 早上安排在住宿附近或市中心吃早餐。今天中午過後才前往 Ljubljana，因此早上可以不用太趕。早餐可依當天心情選擇：想快速好吃、外帶點心上車，選 Korica；想喝好咖啡與簡單輕食，選 CHI Specialty Coffee；想坐在庭院裡放慢節奏，選 Figa Garden by Henrik。
+            </p>
+
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【Korica】
+                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Korica+Zagreb" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    Zagreb 人氣麵包咖啡店，適合可頌、酸種麵包、甜點與咖啡。若想節省時間，這裡很適合作為 Day 3 早餐，也可以外帶一些麵包或點心放車上，當作前往 Ljubljana 路上的補給。
+                </p>
+            </div>
+
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【CHI | Specialty Coffee】
+                    <MapLink url="https://maps.app.goo.gl/vjLfzQD8bKNhwvoU6" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    位於市中心的特色咖啡店，適合想喝一杯品質穩定的咖啡，搭配簡單早餐、甜點或輕食。它比正式早午餐輕鬆，也比純外帶麵包店更適合坐下來休息一下。
+                </p>
+            </div>
+
+            <div className="mb-4">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【Figa Garden by Henrik】
+                    <MapLink url="https://maps.app.goo.gl/bpvNtNKM6KW8qGMK8" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    藏在 Gundulićeva 街巷弄庭院裡的咖啡店，氣氛安靜、有綠意，適合坐下來喝咖啡、吃簡單早餐或甜點。比起快速外帶，這裡更適合想在離開 Zagreb 前放慢一下節奏的人。
+                </p>
+            </div>
+        </Fragment>
+    ),
+    tips: [
+        '想快速吃完並外帶點心，選 Korica',
+        '想喝好咖啡、坐一下但不要太久，選 CHI Specialty Coffee',
+        '想坐在庭院裡喝咖啡、放慢節奏，選 Figa Garden by Henrik',
+        '今天中午後要自駕前往 Ljubljana',
+        '可外帶麵包、點心或飲料作為路上補給'
+        '出發前確認 Slovenia e-vignette、導航、護照與租車文件'
+    ]
                 },
                 {
-                    id: 'd3-checkout-parking',
-                    time: '10:00',
-                    title: 'Check out & 停車',
-                    type: 'compact',
-                    iconName: 'Clock',
-                    location: 'Parking Location',
-                    mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36'
-                },
+  id: 'd3-checkout',
+  time: '10:00',
+  title: 'Check out',
+  type: 'compact',
+  iconName: 'Clock',
+  subtitle: '整理行李、退房、移動車輛停放',
+  location: 'Parking Location'
+mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36'
+  desc: (
+    <Fragment>
+      <p className="text-gray-600 leading-relaxed text-justify">
+        早餐後回住宿整理行李並辦理退房。退房後先將行李上車，接著開往預計停車地點找車位，確認停車規則與付款方式後，再輕鬆前往市區散步或午餐。因行李已放在車上，貴重物品、護照、相機與租車文件請隨身攜帶，不要留在車內明顯位置。
+      </p>
+    </Fragment>
+  ),
+  tips: [
+    '確認住宿退房方式、鑰匙歸還與是否有遺漏物品',
+    '行李上車後，護照、錢包、相機與租車文件請隨身攜帶',
+    '車內不要外露背包、購物袋或貴重物品',
+    '找好車位後，確認是否需要付費、可停放時段與繳費方式'
+  ]
+},
                 {
-                    id: 'd3-travel-checkin',
-                    time: '14:30',
-                    title: '前往盧比安納 & 入住',
-                    type: 'transport',
-                    iconName: 'Car',
-                    subtitle: '車程1時40分 • Romantic JUMP Studio overlooking river, free parking',
-                    location: 'Romantic JUMP Studio overlooking river, free parking',
-                    mapLink: 'https://maps.app.goo.gl/MJwSKMkRag86adaF8',
-                    desc: (
-                        <Fragment>
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【前往盧比安納】
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    開車離開札格瑞布 (Zagreb)，前往斯洛維尼亞首都盧布爾雅那 (Ljubljana)。提早出發可以避免塞車，並剛好於下午抵達目的地。
-                                </p>
-                            </div>
-                            <div className="mb-4">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    Romantic JUMP Studio overlooking river free parking
-                                    <MapLink url="https://maps.app.goo.gl/MJwSKMkRag86adaF8" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    預計 16:30 抵達住宿地點。辦理入住手續，放下行李並稍作休息，為傍晚的城市漫遊養精蓄銳。
-                                </p>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['跨國自駕請確認過境文件', '準備斯洛維尼亞高速公路通行證 (Vignette)']
-                },
+    id: 'd3-travel-checkin',
+    time: '14:00',
+    title: '前往盧比安納 & 入住',
+    type: 'transport',
+    iconName: 'Car',
+    subtitle: 'Zagreb → Ljubljana｜約 1.5–2.5 小時，含過境與休息緩衝',
+    location: 'Romantic JUMP Studio overlooking river, free parking',
+    mapLink: 'https://maps.app.goo.gl/MJwSKMkRag86adaF8',
+    desc: (
+        <Fragment>
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【從札格瑞布前往盧比安納】
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    午餐後從 Zagreb 出發，開車前往斯洛維尼亞首都 Ljubljana。兩城距離不算遠，但因為是跨國自駕，建議保留邊境、休息站、導航與道路收費確認的緩衝時間。出發前請再次確認 Slovenia e-vignette、車牌資料、租車跨境文件與住宿停車資訊。
+                </p>
+            </div>
+
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【自駕途中注意】
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    上高速前先確認導航路線，避免邊開車邊調整。進入斯洛維尼亞前，務必確認高速公路電子通行證已購買，且車牌號碼與車籍國別輸入正確。若途中覺得疲累，可以在休息站短暫停留、上廁所、補水後再繼續開。
+                </p>
+            </div>
+
+            <div className="mb-4">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    Romantic JUMP Studio overlooking river, free parking
+                    <MapLink url="https://maps.app.goo.gl/MJwSKMkRag86adaF8" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    預計下午 16:00–16:30 左右抵達 Ljubljana 住宿。抵達後先辦理入住、確認免費停車位置，放下行李並稍作休息。傍晚再前往 Ljubljana 市中心散步，節奏會比較舒服。
+                </p>
+            </div>
+        </Fragment>
+    ),
+    tips: [
+        '出發前確認租車公司允許跨境進入斯洛維尼亞',
+        '確認 Slovenia e-vignette 已購買，車牌與國別輸入正確',
+        '導航先設定住宿地址'
+    ]
+},
                 {
-                    id: 'd3-2',
-                    time: '17:15',
-                    title: '盧比安納市中心漫遊',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: '普列舍倫廣場、三重橋',
-                    location: 'Prešernov trg',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                傍晚時分，來到盧比安納最熱鬧的中心地帶，欣賞這座城市最經典的建築與河畔夜景。
-                            </p>
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【普列舍倫廣場 (Prešernov trg)】
-                                    <MapLink url="https://maps.app.goo.gl/f2dcEMFHYewVjR2KA" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    盧比安納最熱鬧的中心，以斯洛維尼亞偉大詩人法蘭策·普列舍倫 (France Prešeren) 命名。廣場旁粉紅色的方濟各會教堂 (Franciscan Church) 是最顯眼的地標，也是當地人約會碰面的熱門地點。
-                                </p>
-                            </div>
-                            <div className="mb-4">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【三重橋 (Triple Bridge)】
-                                    <MapLink url="https://maps.app.goo.gl/FMNMuYQ5jh11BnwB9" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    建築大師約熱·普列奇尼克 (Jože Plečnik) 的經典作品。原本只有中間的一座石橋，後來為了疏導交通，大師巧妙地在兩側各加了一座行人橋，形成了獨特的三叉造型。晚上河畔燈光倒映在盧布爾雅尼察河面，景色非常迷人，記得從橋的兩側拍攝全景。
-                                </p>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['晚上河畔燈光倒映河面非常漂亮', '三重橋是 Plečnik 建築經典', '記得從橋的兩側拍全景']
-                },
+    id: 'd3-2',
+    time: '17:30',
+    title: '盧比安納市中心漫遊',
+    type: 'sightseeing',
+    iconName: 'Camera',
+    subtitle: '普列舍倫廣場、三重橋、河畔散步',
+    location: 'Prešernov trg',
+    mapLink: 'https://maps.app.goo.gl/f2dcEMFHYewVjR2KA',
+    desc: (
+        <Fragment>
+            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                抵達 Ljubljana、辦理入住並稍作休息後，傍晚前往市中心散步。第一晚不需要排太多景點，建議從普列舍倫廣場開始，走過三重橋，再沿著 Ljubljanica River 河畔慢慢散步，感受這座城市輕盈、安靜又帶點童話感的氣氛。
+            </p>
+
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【普列舍倫廣場 Prešernov trg】
+                    <MapLink url="https://maps.app.goo.gl/f2dcEMFHYewVjR2KA" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    Ljubljana 最具代表性的市中心廣場，以斯洛維尼亞詩人 France Prešeren 命名。廣場旁粉紅色的方濟各會教堂是最醒目的地標，也是當地人約見面、旅人開始認識城市的地方。傍晚來這裡，光線柔和，人潮也很有生活感。
+                </p>
+            </div>
+
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【三重橋 Triple Bridge】
+                    <MapLink url="https://maps.app.goo.gl/FMNMuYQ5jh11BnwB9" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    三重橋是建築師 Jože Plečnik 的代表作品之一，由中央石橋與兩側行人橋組成，連接普列舍倫廣場與舊城區。橋本身不大，但視角很漂亮，可以從橋上、河岸兩側與廣場方向各拍一次，傍晚燈光倒映在河面時尤其迷人。
+                </p>
+            </div>
+
+            <div className="mb-4">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【Ljubljanica River 河畔】
+                    <MapLink url="https://maps.app.goo.gl/QPMrvxzf38D6VePX8" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    從三重橋沿著 Ljubljanica River 慢慢走，是第一晚最舒服的安排。河岸兩旁有咖啡館、餐廳、拱廊與小橋，不需要特別趕景點，只要順著河邊散步，就能感受到 Ljubljana 悠閒又精緻的城市節奏。
+                </p>
+            </div>
+        </Fragment>
+    ),
+    tips: [
+        '抵達 Ljubljana 第一天以輕鬆散步為主，不要排太滿',
+        '傍晚光線很適合拍三重橋與河面倒影',
+        '市中心多為步行區，建議停好車後步行或搭車前往'
+    ]
+},
                 {
                     id: 'd3-3',
                     time: '18:00',
