@@ -431,14 +431,14 @@ tips: [
                     </p>
                 </li>
                 <li>
-                    <div className="font-bold text-gray-700 flex items-center">
-                        HERITAGE - Croatian Street Food & Shop
-                        <MapLink url="https://maps.app.goo.gl/JuJgkjrKjtvWerqN7" />
-                    </div>
-                    <p className="text-xs text-gray-500 mt-1">
-                        精緻版克羅埃西亞街頭小食，適合想快速用餐、少量多樣品嚐，或時差疲累不想坐太久的晚上。
-                    </p>
-                </li>
+    <div className="font-bold text-gray-700 flex items-center">
+        HERITAGE - Croatian Street Food & Shop
+        <MapLink url="https://maps.app.goo.gl/JuJgkjrKjtvWerqN7" />
+    </div>
+    <p className="text-xs text-gray-500 mt-1">
+        小巧的克羅埃西亞街頭小食與在地食材選物店，主打本地小農食材、冷肉、起司、抹醬、三明治與特色飲品。適合抵達日想吃得輕鬆、有特色，又不想坐太久的晚餐。
+    </p>
+</li>
                 <li>
                     <div className="font-bold text-gray-700 flex items-center">
                         Batak Tkalčićeva
@@ -462,146 +462,240 @@ tips: [
             ],
             2: [
                 {
-                    id: 'd2-1',
-                    time: '09:00',
-                    title: '早餐',
-                    type: 'food',
-                    iconName: 'Coffee',
-                    location: 'Zagreb',
-                    desc: '享受美好的早餐時光，為新的一天補充滿滿活力。',
-                    tips: []
+    id: 'd2-1',
+    time: '08:30',
+    title: '早餐',
+    type: 'food',
+    iconName: 'Coffee',
+    location: 'Zagreb City Center',
+    subtitle: '主廣場 / Dolac Market 附近早餐',
+    desc: (
+        <Fragment>
+            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                第二天早上建議不要吃太晚，早餐安排在主廣場、Dolac Market 或 Tkalčićeva 街附近，吃完即可順路銜接下城散步與市場行程。今天上午重點是 Dolac Market、Zrinjevac Park 與 12:00 Lotrščak Tower 正午大炮，因此早餐以輕鬆、好抵達、不拖太久為主。
+            </p>
+
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【Broom 44】
+                    <MapLink url="https://maps.app.goo.gl/mDRruL1U8UoJaM938" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    位在 Dolac Market 旁的小型早午餐店，適合想直接接市場行程的人。咖啡與早餐評價不錯，但店面小，假日或尖峰時間可能需要排隊。
+                </p>
+            </div>
+
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【Otto & Frank】
+                    <MapLink url="https://maps.app.goo.gl/tukTsRZRLd9AR9Rw6" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    位於 Tkalčićeva 街一帶，適合想坐下來吃一份比較完整早餐的人。招牌 Zagreb Breakfast 很適合當作札格瑞布城市早餐體驗。
+                </p>
+            </div>
+
+            <div className="mb-4">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【麵包店 / 咖啡外帶】
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    如果不想花太多時間，也可以選擇附近麵包店或咖啡外帶，買 burek、可頌、咖啡後直接前往市場。這樣最省時間，也最適合趕 11:50 前到 Lotrščak Tower 的節奏。
+                </p>
+            </div>
+        </Fragment>
+    ),
+    tips: [
+        '08:30 左右開始早餐，09:30 前出發散步',
+        '若想吃熱門早午餐，Broom 44 可能需要排隊',
+        '想節省時間可改成麵包店外帶咖啡與 burek',
+        '早餐後先逛 Dolac Market，市場早上最有氣氛',
+        '記得保留 11:50 前抵達 Lotrščak Tower 的時間'
+    ]
                 },
                 {
-                    id: '-checkout-parking',
-                    time: '10:00',
-                    title: 'Check out & 停車',
-                    type: 'compact',
-                    iconName: 'Clock',
-                    location: 'Parking Location',
-                    mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36'
-                },
+    id: 'd2-combined',
+    time: '10:00',
+    title: '札格瑞布下城漫步',
+    type: 'sightseeing',
+    iconName: 'Camera',
+    subtitle: '綠色馬蹄、公園、主廣場與紅傘市場',
+    location: 'Zrinjevac Park, Zagreb',
+    mapLink: 'https://maps.app.goo.gl/MBA9ahmZafFHqB2Y7',
+    desc: (
+        <Fragment>
+            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                上午從札格瑞布下城區（Donji Grad）開始散步，先感受綠色馬蹄一帶的優雅公園與廣場，再慢慢走回城市核心 Ban Jelačić Square，最後接到熱鬧的 Dolac Market。這條路線節奏輕鬆，也很適合接續 11:30 的登山纜車與 Lotrščak Tower 正午大炮。
+            </p>
+
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【Zrinjevac Park】
+                    <MapLink url="https://maps.app.goo.gl/MBA9ahmZafFHqB2Y7" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    札格瑞布最優雅的城市公園之一，也是「綠色馬蹄」的一部分。林蔭大道、花圃、噴泉與音樂亭讓這裡很適合作為早晨散步的起點。Visit Zagreb 也把 Zrinjevac 形容為遠離城市節奏、適合放慢腳步的浪漫綠地。
+                </p>
+            </div>
+
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【托米斯拉夫國王廣場】
+                    <MapLink url="https://maps.app.goo.gl/n4DVFc5MyALF2pJx9" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    位於 Zagreb 火車總站前方，廣場中央是克羅埃西亞第一位國王 King Tomislav 的騎馬雕像。雕像後方的黃色 Art Pavilion 與開闊草地，是下城區很經典的城市畫面。
+                </p>
+            </div>
+
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【耶拉契奇總督廣場】
+                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Ban+Jelačić+Square+Zagreb" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    Zagreb 的主廣場，也是下城、上城與主要商業街之間的交會點。這裡很適合作為辨認方向的中心地標，從廣場往北走一小段就能抵達 Dolac Market，往西則可接往纜車與上城方向。
+                </p>
+            </div>
+
+            <div className="mb-4">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【多拉茨市場 Dolac Market】
+                    <MapLink url="https://maps.app.goo.gl/fqnhjcCdCPA8VhrE8" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    札格瑞布最具代表性的紅傘市場，也是當地人日常採買的地方。紅色遮陽傘、蔬果攤、花攤與乳製品區都很有生活感。建議上午造訪，市場氣氛最熱鬧，也可以買水果、蜂蜜、起司或簡單點心作為路上補給。
+                </p>
+            </div>
+        </Fragment>
+    ),
+    tips: [
+        '這段建議控制在 60–75 分鐘內，避免影響 11:50 前抵達 Lotrščak Tower',
+        'Dolac Market 以早上最有氣氛，若想買水果或蜂蜜，這段時間最適合',
+        '市場部分攤販可能只收現金，建議準備小額歐元',
+        '可買葡萄、櫻桃、無花果或當季水果當路上點心',
+        '從 Dolac Market 往纜車站步行不遠，適合接續上城行程'
+    ]
+},
                 {
-                    id: 'd2-combined',
-                    time: '10:00',
-                    title: '札格瑞布下城漫步',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: '公園、市場與廣場',
-                    location: 'Zrinjevac Park, Zagreb',
-                    mapLink: 'https://maps.app.goo.gl/MBA9ahmZafFHqB2Y7',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">早晨在下城區（Donji Grad）愜意散步，一路從公園漫遊至熱鬧的市集：</p>
+    id: 'd2-funicular-tower',
+    time: '11:30',
+    title: '登山纜車 & 洛特爾薩克塔',
+    type: 'activity',
+    iconName: 'Compass',
+    subtitle: '前往上城，等待 12:00 正午大炮',
+    location: 'Lotrščak Tower',
+    mapLink: 'https://maps.app.goo.gl/b261uivUK7pmrhi79',
+    desc: (
+        <Fragment>
+            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                從下城區搭乘 Zagreb Funicular 前往上城，這段纜車距離很短，卻是札格瑞布最有代表性的城市移動體驗之一。抵達上城後，步行即可到 Lotrščak Tower， 11:50 前抵達塔樓附近，等待 12:00 的 Grič Cannon 正午大炮。
+            </p>
 
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【Zrinjevac Park】
-                                    <MapLink url="https://maps.app.goo.gl/MBA9ahmZafFHqB2Y7" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    正式名稱為 Nikola Šubić Zrinski 廣場，是札格瑞布著名的「綠色馬蹄」公園序列的一部分。公園中心有建於1891年的音樂涼亭，四周環繞著百年懸鈴木與噴泉，氛圍優雅浪漫。
-                                </p>
-                            </div>
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【搭乘登山纜車 Zagreb Funicular】
+                    <MapLink url="https://maps.app.goo.gl/QGiFLBaw1pf9CkUj9" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    纜車連接下城與上城，車程非常短，但很有城市記憶點。它適合安排在 Dolac Market 或主廣場散步後，作為前往上城的輕鬆銜接。若現場排隊或剛好錯過班次，也可以沿旁邊階梯步行上去，距離不遠。
+                </p>
+            </div>
 
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【托米斯拉夫國王噴泉】
-                                    <MapLink url="https://maps.app.goo.gl/n4DVFc5MyALF2pJx9" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    位於火車總站正對面（King Tomislav Square）。廣場上矗立著克羅埃西亞第一位國王托米斯拉夫的騎馬雕像，紀念他在925年加冕的歷史時刻。雕像後方是黃色的藝術展覽館（Art Pavilion），展現了華麗的新藝術風格。
-                                </p>
-                            </div>
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【洛特爾薩克塔 Lotrščak Tower】
+                    <MapLink url="https://maps.app.goo.gl/vikjFtN5odUFcgZy9" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    Lotrščak Tower 位於上城邊緣，是札格瑞布中世紀防禦工事的一部分。塔樓不大，但位置很好，若購票登塔，可以俯瞰下城、紅瓦屋頂與遠方街廓，是快速理解 Zagreb 城市格局的好視角。
+                </p>
+            </div>
 
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【耶拉契奇總督廣場】
-                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Ban+Jelačić+Square" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    札格瑞布的地理中心與主廣場，連接著上城與下城。廣場中央是19世紀總督 Josip Jelačić 的騎馬雕像，他是克羅埃西亞的民族英雄。由此上階梯約1分鐘即達市場。
-                                </p>
-                            </div>
-
-                            <div className="mb-4">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【多拉茨市場 (Dolac Market)】
-                                    <MapLink url="https://maps.app.goo.gl/fqnhjcCdCPA8VhrE8" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    札格瑞布最著名的「紅傘市場」，也是在地人的廚房。充滿鮮豔的紅色遮陽傘，適合購買新鮮水果、蜂蜜，體驗當地生活。
-                                </p>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: [
-                        '市集部分攤販僅收現金，提醒帶小額歐元',
-                        '水果可請店家「幫你挑一盒好吃的」',
-                        '推薦邊走邊吃：葡萄、櫻桃、無花果',
-                        'Dolac Market 很安全，但旅遊區仍注意包包'
-                    ]
-                },
+            <div className="p-4 bg-gray-50 rounded-xl border border-gray-100 mb-2">
+                <h4 className="font-bold text-gray-700 mb-2 flex items-center gap-2">
+                    <Icon name="Clock" size={16} /> 12:00 正午大炮
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed mb-2">
+                    每天正午 12:00，塔樓內的 Grič Cannon 會準時鳴響，許多遊客與當地人會在塔樓周邊等待這一刻。炮聲非常大，是札格瑞布很有存在感的城市儀式。
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
+                    <li>建議 11:50 前抵達塔樓附近，先找好站位。</li>
+                    <li>炮聲很突然也很響，怕聲響的人可以站遠一點。</li>
+                    <li>若想登塔拍照，可在大炮前後安排 20–30 分鐘。</li>
+                    <li>若天氣不好或人太多，也可以只在 Strossmayer Promenade 看城市景色。</li>
+                </ul>
+            </div>
+        </Fragment>
+    ),
+    tips: [
+        ' 11:30 抵達纜車站，11:50 前到 Lotrščak Tower',
+        '正午大炮聲音非常大，請先提醒同行者',
+        '登塔需要走樓梯，若體力不足可只在塔外與觀景平台停留',
+        '天氣晴朗時很適合拍 Zagreb 紅瓦屋頂',
+        '看完大炮後可直接回主廣場或 Tkalčićeva 街午餐'
+    ]
+},
                 {
-                    id: 'd2-funicular-tower',
-                    time: '11:30',
-                    title: '登山纜車 & 洛特爾薩克塔',
-                    type: 'activity',
-                    iconName: 'Compass',
-                    subtitle: '通往上城、警盜鐘與大炮',
-                    location: 'Lotrščak Tower',
-                    mapLink: 'https://maps.app.goo.gl/b261uivUK7pmrhi79',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                這是札格瑞布（Zagreb）必訪的兩大地標，結合了城市交通工具和古老防禦工事，是俯瞰城市景色的絕佳地點。
-                            </p>
+    id: 'd2-9',
+    time: '12:30',
+    title: '午餐',
+    type: 'food',
+    iconName: 'Utensils',
+    location: 'Tkalčićeva Street',
+    subtitle: '正午大炮後，回到主廣場 / Tkalčićeva 街用餐',
+    desc: (
+        <Fragment>
+            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                看完 Lotrščak Tower 的正午大炮後，回到 Tkalčićeva 街或主廣場附近用午餐。這一帶是札格瑞布最熱鬧的餐飲街區之一，餐廳、咖啡館與酒吧選擇很多，適合安排一頓不太趕、但也不拖太久的午餐。下午還要前往市區取車，因此午餐建議以交通方便、出餐穩定、步行可回到主廣場的地點為主。
+            </p>
 
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【搭乘登山纜車 (Funicular)】
-                                    <MapLink url="https://maps.app.goo.gl/QGiFLBaw1pf9CkUj9" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    連接下城區與上城區，被譽為世界上最短的實用大眾交通纜車之一。纜車站就在市場旁東南側，下坡步行約3分鐘可到。
-                                </p>
-                            </div>
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【Otto & Frank】
+                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Otto+%26+Frank+Zagreb" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    位於 Tkalčićeva 街上的輕鬆 bistro，適合早午餐、午餐或簡單正餐。菜色偏歐式 comfort food，也有咖啡、甜點、精釀啤酒與葡萄酒，適合想坐下來吃但不想太正式的午餐。
+                </p>
+            </div>
 
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【洛特爾薩克塔 (Lotrščak Tower)】
-                                    <MapLink url="https://maps.app.goo.gl/vikjFtN5odUFcgZy9" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    位於纜車上站出口。建於13世紀，原為防禦工事，名為「盜賊之鐘」，古時每晚敲鐘提醒城外居民回家。
-                                </p>
-                            </div>
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【La Štruk】
+                    <MapLink url="https://maps.app.goo.gl/XxbrHj2KArnY891H8" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    如果 Day 1 晚餐沒有吃到 štrukli，可以把 La Štruk 放在 Day 2 午餐。這裡主打克羅埃西亞經典起司麵皮料理，可選鹹口或甜口，份量不會像正式主餐那麼重，適合午餐輕鬆吃。
+                </p>
+            </div>
 
-                            <div className="p-4 bg-gray-50 rounded-xl border border-gray-100 mb-2">
-                                <h4 className="font-bold text-gray-700 mb-2 flex items-center gap-2">
-                                    <Icon name="Clock" size={16} /> 12:00 正午大炮
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed mb-2">
-                                    自1877年起，每天正午12點整，塔樓頂端的大炮 (Grič Cannon) 會準時鳴響，為全城校對時間。
-                                </p>
-                                <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
-                                    <li>提醒 11:50 前抵達塔樓下方佔位。</li>
-                                    <li>炮聲非常響亮，請做好心理準備。</li>
-                                    <li>可購票登塔，360度俯瞰城市紅瓦屋頂。</li>
-                                </ul>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['正午大炮聲音非常大，請注意安全', '纜車車程很短但體驗獨特']
-                },
-                {
-                    id: 'd2-9',
-                    time: '12:15',
-                    title: '午餐',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    location: 'Tkalčićeva Street',
-                    desc: '建議在 Tkalčićeva 街或主廣場附近用餐，這一帶聚集了許多餐廳、咖啡館與酒吧，選擇非常豐富。',
-                    tips: []
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【Batak Tkalčićeva】
+                    <MapLink url="https://maps.app.goo.gl/v9SbKvGMc3cLFtTW9" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    位於 Tkalčićeva 街一帶的 Grill 餐廳，適合想吃肉類、烤肉或份量較足的午餐。若晚上行程簡單、午餐想吃飽一點，可以選這間。
+                </p>
+            </div>
+
+            <div className="mb-4">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【快速方案：咖啡館 / 麵包店 / 外帶】
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    若正午大炮後時間被壓縮，或下午取車前想保留更多緩衝，可以改成簡單外帶三明治、burek、咖啡或甜點。這樣可以避免午餐拖太久，讓 15:00 前往租車行的節奏更安心。
+                </p>
+            </div>
+        </Fragment>
+    ),
+    tips: [
+        '下午 15:00 要前往取車，午餐不建議排太正式或太遠',
+        'Otto & Frank 適合輕鬆午餐，La Štruk 適合補吃特色料理',
+        '若選 Batak，份量較足，要預留較長用餐時間',
+        '用餐後保留 30–45 分鐘緩衝，整理租車文件與前往取車地點'
+    ]
                 },
                 {
   id: 'd2-10',
