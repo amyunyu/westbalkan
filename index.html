@@ -1100,16 +1100,43 @@ mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36',
             ],
             4: [
                 {
-                    id: 'd4-0',
-                    time: '08:30',
-                    title: '盧比安納早餐',
-                    type: 'food',
-                    iconName: 'Coffee',
-                    subtitle: 'Cafe Čokl',
-                    location: 'Cafe Čokl, Ljubljana',
-                    mapLink: 'https://maps.app.goo.gl/gUkv3T67itKUoSY37',
-                    desc: '在 Cafe Čokl 享受美好的早晨時光，這間店提供高品質的咖啡，為一天的城堡與舊城區探索行程補充能量。',
-                    tips: ['享受一杯斯洛維尼亞咖啡', '搭配當地糕點']
+  id: 'd4-0',
+  time: '08:15',
+  title: '盧比安納早餐',
+  type: 'food',
+  iconName: 'Coffee',
+  subtitle: 'Cafe Čokl / Kodila Gourmet & Bistro Market',
+  location: 'Ljubljana Central Market',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        在盧比安納中央市場周邊享用早餐，依當天食慾選擇咖啡館或較完整的在地早餐。兩間位置都方便銜接接下來的盧比安納城堡行程。
+      </p>
+
+      <ul className="list-none pl-0 space-y-4">
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Cafe Čokl
+            <MapLink url="https://maps.app.goo.gl/gUkv3T67itKUoSY37" />
+          </div>
+          <p className="text-sm text-gray-600">
+            適合想喝一杯好咖啡、搭配簡單糕點或輕食的早晨。氣氛輕鬆，離城堡纜車站也很近。
+          </p>
+        </li>
+
+        <li>
+          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+            Kodila Gourmet & Bistro Market
+            <MapLink url="https://maps.app.goo.gl/JkmrTVsXMtqVneTt7" />
+          </div>
+          <p className="text-sm text-gray-600">
+            適合想吃比較完整、比較有在地特色的早餐。可考慮蛋料理、Ljubljana breakfast，或搭配斯洛維尼亞傳統甜點 Prekmurska gibanica。
+          </p>
+        </li>
+      </ul>
+    </Fragment>
+  ),
+  tips: ['想輕鬆喝咖啡選 Cafe Čokl', '想吃飽一點選 Kodila', '兩間都方便銜接城堡行程']
                 },
                 {
                     id: 'd4-1',
@@ -1136,10 +1163,7 @@ mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36',
                                         城堡最高點，提供 360 度絕佳視野，天氣好時可遠眺朱利安阿爾卑斯山，是拍攝城市紅瓦屋頂的最佳位置。
                                     </li>
                                     <li>
-                                        <span className="font-bold text-gray-700 flex items-center">
-                                            【木偶博物館 (Museum of Puppetry)】
-                                            <MapLink url="https://maps.app.goo.gl/qjgHxATvNW7D85wQ7" />
-                                        </span><br/>
+                                        <span className="font-bold text-gray-700">【木偶博物館 (Museum of Puppetry)】<MapLink url="https://maps.app.goo.gl/qjgHxATvNW7D85wQ7" /></span><br/>
                                         斯洛維尼亞擁有豐富的木偶戲傳統，這裡展示了各種有趣的木偶與互動裝置。
                                     </li>
                                     <li>
