@@ -846,7 +846,7 @@ tips: [
     type: 'food',
     iconName: 'Coffee',
     location: 'Zagreb City Center',
-    subtitle: 'Korica / CHI Specialty Coffee / Figa Garden by Henrik',
+    subtitle: 'Korica / CHI / Figa Garden',
     desc: (
         <Fragment>
             <p className="mb-4 text-gray-600 leading-relaxed text-justify">
@@ -922,7 +922,7 @@ mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36',
     title: '前往盧比安納 & 入住',
     type: 'transport',
     iconName: 'Car',
-    subtitle: 'Zagreb → Ljubljana｜約 1.5–2.5 小時，含過境與休息緩衝',
+    subtitle: '約 1.5–2.5 小時，含過境與休息緩衝',
     location: 'Romantic JUMP Studio overlooking river, free parking',
     mapLink: 'https://maps.app.goo.gl/MJwSKMkRag86adaF8',
     desc: (
@@ -1036,38 +1036,55 @@ mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36',
     ]
 },
                 {
-                    id: 'd3-3',
-                    time: '19:00',
-                    title: '晚餐',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    subtitle: '自炊 / 附近超市採買',
-                    location: 'Ljubljana City',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                享受自炊晚餐的樂趣。可以在附近超市購買當地食材，簡單烹調美味的一餐，享受像當地人一樣的生活步調。
-                            </p>
-                            <h4 className="font-bold text-gray-800 mb-2 flex items-center">
-                                附近超市建議：
-                            </h4>
-                            <ul className="list-none pl-0 space-y-3">
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Mercator (較大間)
-                                        <MapLink url="https://maps.app.goo.gl/oyyStkCapt99reQ7A" />
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Lidl (平價)
-                                        <MapLink url="https://maps.app.goo.gl/7tiE46DfzxKKZa8G9" />
-                                    </div>
-                                </li>
-                            </ul>
-                        </Fragment>
-                    ),
-                    tips: ['超市可買到斯洛維尼亞當地食材', '享受放鬆的晚餐時光']
+    id: 'd3-3',
+    time: '19:00',
+    title: 'Ljubljana 晚餐',
+    type: 'food',
+    iconName: 'Utensils',
+    subtitle: 'Julija / Pop’s Place / Druga Violina',
+    location: 'Ljubljana Old Town',
+    desc: (
+        <Fragment>
+            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+                抵達 Ljubljana 的第一晚，今晚可在住宿附近或河畔餐廳用餐，吃完再沿著 Ljubljanica River 散步回住宿。若想吃正式一點的斯洛維尼亞與歐式料理，選 Julija；若想輕鬆吃漢堡、肋排與精釀啤酒，選 Pop’s Place。
+            </p>
+
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【Julija】
+                    <MapLink url="https://maps.app.goo.gl/tgeGhj5cQH1d9ub19" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    舊城區熱門餐廳，適合想好好坐下來吃一頓歐式／斯洛維尼亞料理的晚上。若想安排比較有餐廳感的第一晚，Julija 是最穩的選擇。
+                </p>
+            </div>
+
+            <div className="mb-6">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【Pop’s Place】
+                    <MapLink url="https://maps.app.goo.gl/vEjSdgSXi7XUf2Ac7" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    河邊的漢堡與精釀啤酒吧，主打 gourmet burgers、BBQ ribs、fish & chips 與 craft beer。適合抵達 Ljubljana 當晚想吃得輕鬆、不想正式用餐的人；晚餐後也能順路沿河散步。
+                </p>
+            </div>
+
+            <div className="mb-4">
+                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+                    【Druga Violina】
+                    <MapLink url="https://maps.app.goo.gl/2QweHexqrFM53LPZ7" />
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    舊城區的斯洛維尼亞家常菜餐廳，氣氛比較樸實親切。若想吃在地傳統料理，又不想像 Julija 那麼正式，可以把它當作備案。
+                </p>
+            </div>
+        </Fragment>
+    ),
+    tips: [
+        '想正式一點選 Julija，想輕鬆吃漢堡和啤酒選 Pop’s Place',
+        'Pop’s Place 適合抵達日晚餐，但熱門時段可能需要等位',
+        '晚餐後可沿 Ljubljanica River 河畔散步回住宿',
+    ]
                 },
                 {
                     id: 'd3-4',
