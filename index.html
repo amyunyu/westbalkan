@@ -1181,63 +1181,108 @@ mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36',
                     tips: ['纜車來回票較划算', '景觀台視野極佳']
                 },
                 {
-                    id: 'd4-2',
-                    time: '11:00',
-                    title: '老城區散步',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: 'Stari trg & Gornji trg',
-                    location: 'Old Town, Ljubljana',
-                    mapLink: 'https://maps.app.goo.gl/bKZvT7cViwRTryVm8',
-                    desc: (
-                        <Fragment>
-                            <div className="mb-4 flex items-center">
-                                <span className="font-bold text-gray-800">散步路線</span>
-                                <MapLink url="https://maps.app.goo.gl/fss7bvUgLN7RG69" />
-                            </div>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                下山後漫步於老城區，這裡充滿可愛的小店與咖啡館，沿途更是橋樑建築的巡禮。
-                            </p>
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【聖尼各老主教座堂】
-                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Ljubljana+Cathedral" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    Stolnica Sv. Nikolaj，著名的雙塔地標，內部裝飾華麗，大門上的浮雕也值得細看。
-                                </p>
-                            </div>
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【屠夫橋 (Mesarski most)】
-                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Butchers'+Bridge+Ljubljana" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    雖然名為屠夫橋，橋上卻掛滿了象徵愛情的鎖，還有許多奇特的現代雕塑，形成強烈的對比。
-                                </p>
-                            </div>
-                            <div className="mb-6">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【龍橋 (Zmajski most)】
-                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Dragon+Bridge+Ljubljana" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    盧比安納最具代表性的地標。橋頭四個角落鎮守著張牙爪的飛龍銅像，展現了這座「龍之城」的威嚴與神話色彩。
-                                </p>
-                            </div>
-                            <div className="mb-4">
-                                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                    【鞋匠橋 (Šuštarski most)】
-                                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Cobblers'+Bridge+Ljubljana" />
-                                </h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    這也是建築大師 Plečnik 的作品。橋上矗立著多根高低錯落的石柱，古時候鞋匠們常在此處擺攤交易，因而得名。現在則是街頭藝人表演的熱門場所。
-                                </p>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['老城區巷弄很適合隨意探索']
-                },
+  id: 'd4-2',
+  time: '11:00',
+  title: '老城區散步',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: 'Central Market・Bridges・Old Town',
+  location: 'Old Town, Ljubljana',
+  mapLink: 'https://maps.app.goo.gl/bKZvT7cViwRTryVm8',
+  desc: (
+    <Fragment>
+      <div className="mb-4 flex items-center">
+        <span className="font-bold text-gray-800">散步路線</span>
+        <MapLink url="https://maps.app.goo.gl/fss7bvUgLN7RG69" />
+      </div>
+
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        從城堡下山後，沿著中央市場與河岸慢慢散步，串起盧比安納最經典的橋樑、廣場與老城街巷。這段不需要趕行程，很適合邊走邊拍照，感受這座城市小巧、優雅又帶點童話感的節奏。
+      </p>
+
+      <div className="mb-6">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【中央市場 Central Market】
+          <MapLink url="https://maps.app.goo.gl/zXrqvRz3ZJQJ8nXA9" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          盧比安納最有生活感的地方之一，早上可看到蔬果、花卉與在地食材攤位。若剛剛早餐在 Cafe Čokl 或 Kodila，這一帶也正好是散步起點。
+        </p>
+      </div>
+
+      <div className="mb-6">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【聖尼各老主教座堂】
+          <MapLink url="https://maps.app.goo.gl/JBX4L9zq8To1zseT6" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          Stolnica Sv. Nikolaj，著名的雙塔地標。內部裝飾華麗，青銅大門上的浮雕也值得細看，是老城區最重要的宗教建築之一。
+        </p>
+      </div>
+
+      <div className="mb-6">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【龍橋 Dragon Bridge】
+          <MapLink url="https://maps.app.goo.gl/HDJoBdj852fZo4vCA" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          盧比安納最具代表性的地標。橋頭四個角落鎮守著張牙舞爪的飛龍銅像，展現這座「龍之城」的神話色彩，也是最經典的拍照點。
+        </p>
+      </div>
+
+      <div className="mb-6">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【屠夫橋 Butchers’ Bridge】
+          <MapLink url="https://maps.app.goo.gl/En1ivDmDayiaT4nM6" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          橋上掛滿象徵愛情的鎖，也有許多帶點奇幻與怪誕感的現代雕塑，和浪漫河景形成有趣對比。
+        </p>
+      </div>
+
+      <div className="mb-6">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【普雷雪倫廣場與三橋 Prešeren Square & Triple Bridge】
+          <MapLink url="https://maps.app.goo.gl/w6EZPtqLoSN1XSKx7" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          盧比安納市中心最經典的畫面，由粉紅色的方濟各教堂、普雷雪倫雕像與建築師 Plečnik 設計改造的三橋構成。這裡很適合停下來拍照，也能感受到城市最熱鬧的河岸氣氛。
+        </p>
+      </div>
+
+        <div className="mb-6">
+  <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+    【Klobasarna】
+    <MapLink url="https://maps.app.goo.gl/uuS3E8awGDZfebCM9" />
+  </h4>
+  <p className="text-sm text-gray-600 leading-relaxed">
+    位於市中心的傳統香腸專賣小店，主打斯洛維尼亞經典的 Kranjska klobasa／Carniolian sausage。若早餐吃得不多，可以在老城散步途中買半份香腸嚐味道，搭配芥末、辣根醬與麵包，是很有在地感的小吃補給。
+  </p>
+</div>
+
+      <div className="mb-6">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【Stari trg & Gornji trg 老城街巷】
+          <MapLink url="https://www.google.com/maps/search/?api=1&query=Stari+trg+Gornji+trg+Ljubljana" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          老城區最適合慢慢走的街巷，兩旁有小店、餐廳、咖啡館與巴洛克風格建築。這段不用特別趕景點，重點是感受盧比安納細緻而悠閒的街道尺度。
+        </p>
+      </div>
+
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+          【鞋匠橋 Cobblers’ Bridge】
+          <MapLink url="https://maps.app.goo.gl/tRQnJUz22ZLutCxE8" />
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          這也是建築大師 Plečnik 的作品。橋上矗立著多根高低錯落的石柱，古時鞋匠們常在此處擺攤交易，因而得名。現在則是散步與街頭表演的熱門地點。
+        </p>
+      </div>
+    </Fragment>
+  ),
+  tips: ['三橋與普雷雪倫廣場是盧比安納最經典拍照點', '老城區巷弄很適合隨意探索', '若想準時午餐，11:50 左右可往餐廳方向移動']
+},
                 {
                     id: 'd4-3',
                     time: '12:00',
@@ -1253,12 +1298,14 @@ mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36',
                             </p>
                             <ul className="list-none pl-0 space-y-4">
                                 <li>
-                                    <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-                                        Julija
-                                        <MapLink url="https://maps.app.goo.gl/DANzZysdiBtfjvFi8" />
-                                    </div>
-                                    <p className="text-sm text-gray-600">位於舊城中心，裝潢典雅且提供多樣化的地中海與當地特色料理，是非常受歡迎的熱門選擇。</p>
-                                </li>
+  <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
+    Burek Olimpija
+    <MapLink url="https://maps.app.goo.gl/dHwkmhy8na2ZBcVr8" />
+  </div>
+  <p className="text-sm text-gray-600">
+    盧比安納知名 burek 小店，適合想快速、便宜、吃得有在地日常感的午餐。Burek 是巴爾幹常見的酥皮鹹派，可選肉餡、起司、菠菜起司或蘋果口味；若下午還要去美術館與 Tivoli，這是一個省時間又有特色的輕午餐選項。
+  </p>
+</li>
                                 <li>
                                     <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
                                         Druga Violina
@@ -1276,7 +1323,7 @@ mapLink: 'https://maps.app.goo.gl/JR3hP9aV7zLSRaR36',
                             </ul>
                         </Fragment>
                     ),
-                    tips: ['熱門餐廳如 Julija 建議先訂位']
+                    tips: []
                 },
                 {
                     id: 'd4-4',
