@@ -1460,38 +1460,58 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
                     tips: []
                 },
                 {
-                    id: 'd4-7',
-                    time: '18:00',
-                    title: '晚餐＋酒吧',
-                    type: 'food',
-                    iconName: 'Utensils',
-                    subtitle: '晚餐/酒吧',
-                    location: 'Ljubljana',
-                    desc: (
-                        <Fragment>
-                            <div>
+  id: 'd4-7',
+  time: '18:30',
+  title: '盧比安納老城晚餐',
+  type: 'food',
+  iconName: 'Utensils',
+  subtitle: 'Julija',
+  location: 'Julija',
+  mapLink: 'https://maps.app.goo.gl/DANzZysdiBtfjvFi8',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        晚餐安排在老城區人氣餐廳 Julija，用一頓較完整的晚餐為盧比安納這天收尾。這裡氣氛典雅但不會過度正式，餐點融合地中海與斯洛維尼亞風格，很適合在城堡、老城、美術館與 Tivoli 公園之後，慢慢坐下來用餐。
+      </p>
+
+      <div className="mb-4">
+        <h4 className="font-bold text-gray-800 mb-2">點餐方向：</h4>
+        <ul className="text-sm text-gray-600 space-y-2 list-none pl-0">
+          <li>・想吃在地風味：可看燉菜、肉類主菜或當日特餐。</li>
+          <li>・想吃輕盈一點：可選義大利麵、燉飯或沙拉搭配前菜。</li>
+        </ul>
+      </div>
+
+      <div className="p-3 bg-gray-50 rounded-lg border border-gray-100 text-sm text-gray-600">
+        <span className="font-bold">💡 用餐建議：</span>
+        Julija 是熱門餐廳，晚餐時段建議事先訂位。若想接續飯後小酌，可用餐後散步到河畔，再視體力前往 Kolibri Cocktail Bar 或 TOZD。
+      </div>
+
+        <div>
                                 <h4 className="font-bold text-gray-800 mb-2">飯後小酌：</h4>
                                 <ul className="list-none pl-0 space-y-3">
                                     <li>
                                         <div className="font-bold text-sm flex items-center">
                                             Kolibri Cocktail Bar
-                                            <MapLink url="https://www.google.com/maps/search/?api=1&query=Kolibri+Cocktail+Bar" />
+                                            <MapLink url="https://maps.app.goo.gl/BHAAZu9G8hQd9A18A" />
                                         </div>
                                         <p className="text-xs text-gray-600">最推薦的雞尾酒吧。</p>
                                     </li>
                                     <li>
                                         <div className="font-bold text-sm flex items-center">
                                             TOZD
-                                            <MapLink url="https://www.google.com/maps/search/?api=1&query=TOZD+bar+Ljubljana" />
+                                            <MapLink url="https://maps.app.goo.gl/9xfR4nbk4QcNJtABA" />
                                         </div>
                                         <p className="text-xs text-gray-600">充滿文青風格的酒吧。</p>
                                     </li>
                                 </ul>
                             </div>
-                        </Fragment>
-                    ),
-                    tips: ['酒吧營業時間通常較晚，適合放鬆']
-                }
+    </Fragment>
+  ),
+  tips: [
+    '飯後可沿河岸散步，或再去 Kolibri / TOZD 小酌'
+  ]
+}
             ],
             5: [
                 {
@@ -1815,7 +1835,7 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
                 {
   id: 'd6-breakfast',
   time: '07:30',
-  title: '住宿早餐',
+  title: '布萊德早餐',
   type: 'food',
   iconName: 'Coffee',
   subtitle: 'Penzion Berc • 含早餐',
@@ -2029,7 +2049,7 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
   title: '布萊德悠閒晚餐',
   type: 'food',
   iconName: 'Utensils',
-  subtitle: 'Steakhouse Berc • 住宿旁晚餐',
+  subtitle: 'Steakhouse Berc • 已訂位',
   location: 'Restavracija Steakhouse Berc',
   mapLink: 'https://maps.app.goo.gl/ujktEB9G1GuhpRtd8',
   desc: (
@@ -2037,16 +2057,6 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
         回到布萊德後，在住宿旁的 Steakhouse Berc 享用晚餐。這天白天已經走訪博希尼湖、Vogel 山景與薩維察瀑布，晚上不再拉遠移動，適合用一頓舒適的牛排晚餐慢慢收尾。
       </p>
-
-      <div className="mb-4">
-        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-          【訂位提醒】
-          <MapLink url="http://www.penzion-berc.si/en/steakhouse/" />
-        </h4>
-        <p className="text-sm text-gray-600 leading-relaxed text-justify">
-          Steakhouse Berc 的網站是以「預約詢問」形式訂位，建議事先透過 email 或電話確認座位。若住在 Penzion Berc，也可以入住時再次請櫃檯協助確認晚餐訂位。
-        </p>
-      </div>
 
       <div className="mb-4">
         <h4 className="font-bold text-gray-800 mb-1">
@@ -2063,8 +2073,6 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
     </Fragment>
   ),
   tips: [
-    '建議事先以 email 或電話提出訂位詢問',
-    '若入住 Penzion Berc，可請櫃檯協助再次確認訂位',
     '推薦主菜：Ribeye steak、Filet mignon、Striploin / New York steak',
     '非牛排選擇可考慮烤章魚或海鱸魚',
     '菜單價格自 2026/4/1 起生效，價格皆含 VAT'
@@ -2169,7 +2177,7 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
   title: '前往 Postojna Cave',
   type: 'transport',
   iconName: 'Car',
-  subtitle: '車程約 1 小時 10 分',
+  subtitle: '車程約 1 小時 10 分 • 午餐',
   location: 'Postojna Cave Park',
   mapLink: 'https://maps.app.goo.gl/9n7MVp4bRbEhCDMv9',
   desc: (
@@ -2199,7 +2207,7 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
   title: 'Postojna Cave 洞窟導覽',
   type: 'sightseeing',
   iconName: 'MapPin',
-  subtitle: '洞窟小火車 • 鐘乳石大廳',
+  subtitle: '洞窟小火車 • 鐘乳石大廳 • 已購票',
   location: 'Postojna Cave',
   mapLink: 'https://maps.app.goo.gl/wKpNCVmFpzumhEQeA',
   desc: (
@@ -2216,7 +2224,7 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
     '導覽全程約 1.5 小時',
     '洞內恆溫約 10°C，務必帶外套',
     '小火車行進時風會更冷',
-    '導覽前至少 30 分鐘抵達入口',
+    '導覽前至少 20 分鐘抵達入口',
     '洞內拍照注意低光源與防手震'
   ]
         },
@@ -5492,7 +5500,7 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
   title: '杜布羅夫尼克舊城晚餐',
   type: 'food',
   iconName: 'Utensils',
-  subtitle: 'Taj Mahal Old Town',
+  subtitle: 'Taj Mahal Old Town • 已訂位',
   location: 'Taj Mahal Old Town',
   mapLink: 'https://maps.app.goo.gl/oFzKubNFrtuCZu4N8',
   desc: (
