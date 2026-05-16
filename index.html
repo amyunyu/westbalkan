@@ -294,12 +294,11 @@
     iconName: 'Plane',
     location: '札格瑞布機場 (ZAG)',
     subtitle: 'EK2012/FZ1793｜預計 13:30 抵達',
-    desc: '第二段航班前往克羅埃西亞首都札格瑞布。建議在機上調整成歐洲作息，能睡就睡，抵達前整理好護照、住宿資訊與交通方式，讓入境與前往市區更順利。',
+    desc: '第二段航班前往克羅埃西亞首都札格瑞布。抵達前整理好護照、住宿資訊與交通方式，讓入境與前往市區更順利。',
     tips: [
         '上機後把時間調成克羅埃西亞時間',
         '抵達前準備護照、住宿地址與回程/後續行程資料',
-        '若使用 eSIM，可在降落前後確認是否已啟用',
-        '飛機上補水，抵達日避免排太緊'
+        '若使用 eSIM，可在降落前後確認是否已啟用'
     ]
 },
 {
@@ -6332,11 +6331,17 @@ useEffect(() => {
                                                     className="group bg-white rounded-xl p-5 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.05)] border border-gray-50 hover:shadow-lg transition-all duration-300 cursor-pointer relative overflow-hidden"
                                                 >
                                                     <div className="flex items-start gap-4">
-                                                        <div className={`flex-shrink-0 w-14 pt-1 text-right text-sm font-bold font-serif ${MORANDI_COLORS.highlight}`}>
-                                                            {item.time}
-                                                        </div>
+    <div className="flex-shrink-0 w-14 flex flex-col items-end pt-1">
+        <div className={`text-sm font-bold font-serif ${MORANDI_COLORS.highlight}`}>
+            {item.time}
+        </div>
 
-                                                        <div className="flex-1 min-w-0">
+        <div className="mt-3 w-9 h-9 rounded-full bg-[#FDFCF8] text-[#8F9E9D] flex items-center justify-center border border-gray-100 shadow-sm">
+            <Icon name={item.iconName || "MapPin"} size={18} />
+        </div>
+    </div>
+
+    <div className="flex-1 min-w-0">
                                                             <div className="flex justify-between items-start mb-0.5">
                                                                 <h3 className={`text-lg font-bold ${MORANDI_COLORS.text} leading-tight`}>
                                                                     {item.title}
