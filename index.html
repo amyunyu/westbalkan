@@ -3586,9 +3586,43 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
         '6/2 日落約 20:35，建議 20:00 前抵達海風琴卡位'
     ]
                 },
-               {
+                {
+  id: 'd10-dinner',
+  time: '18:00',
+title: '札達爾舊城晚餐',
+  type: 'food',
+  iconName: 'Utensils',
+  subtitle: 'Restoran 4 Kantuna • 已訂位',
+  location: 'Zadar Old Town',
+  mapLink: 'https://maps.app.goo.gl/t64nvyaAcvPe3CQYA',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        在札達爾舊城區享用晚餐後要看夕陽。6/2 日落約在 20:35。
+      </p>
+
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            Restoran 4 Kantuna
+            <MapLink url="https://maps.app.goo.gl/t64nvyaAcvPe3CQYA" />
+          </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            距離住宿走路1分鐘。位在札達爾舊城中心，選項較多，適合健行日晚上想吃得舒服、不想太正式時選擇。
+          </p>
+        </div>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+      '18:00 先吃 Restoran 4 Kantuna，晚餐後再去海風琴看夕陽',
+      '若 19:15 左右離開餐廳，建議略過五井廣場，直接往 Roman Forum 與 Sea Organ 方向走',
+      '20:00 前抵達 Sea Organ 最理想，6/2 日落約 20:35',
+      '海風琴階梯適合坐著看海，建議不要只路過'
+  ]
+                },
+                {
   id: 'd10-4',
-  time: '18:30',
+  time: '19:30',
   title: '札達爾夕陽散步',
   type: 'sightseeing',
   iconName: 'Camera',
@@ -3700,76 +3734,6 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
     '若時間不足，可略過五井廣場，直接從 Roman Forum 開始走',
     '海風琴階梯適合坐著看海，建議不要只路過',
     '向陽禮讚要等天色變暗後才比較有看點',
-    '看完夕陽後再回舊城晚餐，節奏會比較舒服'
-  ]
-},
-                {
-  id: 'd10-dinner',
-  time: '20:45',
-  title: '札達爾舊城晚餐',
-  type: 'food',
-  iconName: 'Utensils',
-  subtitle: 'Kornat Restaurant • Restoran 4 Kantuna',
-  location: 'Zadar Old Town',
-  desc: (
-    <Fragment>
-      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        看完海風琴夕陽與向陽禮讚燈光後，在札達爾舊城區享用晚餐。6/2 日落約在 20:35，不要把晚餐排太早，先把海邊黃金時刻留給夕陽，再慢慢回到城裡用餐。
-      </p>
-
-      <div className="mb-5 p-3 bg-orange-50 rounded-xl border border-orange-100">
-        <h4 className="font-bold text-orange-900 mb-2">
-          今晚用餐策略
-        </h4>
-        <ul className="text-sm text-orange-900/80 leading-relaxed space-y-1 list-disc pl-4">
-          <li>20:00 前抵達 Sea Organ，20:35 左右看日落。</li>
-          <li>日落後可順路停留 Greeting to the Sun，看地面燈光亮起。</li>
-          <li>晚餐大約 20:45–21:00，避免為了餐廳預約錯過夕陽。</li>
-          <li>若想吃精緻一點，選 Kornat；若想要穩妥、彈性高，選 4 Kantuna。</li>
-        </ul>
-      </div>
-
-      <div className="space-y-4">
-        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
-          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
-            ① 精緻海港晚餐｜Kornat Restaurant
-            <MapLink url="https://maps.app.goo.gl/5Wy8yUYwpC3AffsQ9" />
-          </h4>
-          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
-            今晚精緻首選。餐廳位在海港旁，風格較正式，適合想吃海鮮、達爾馬提亞料理與比較有餐酒館感的一餐。若想把札達爾晚餐安排得比較有儀式感，可以選這間。
-          </p>
-          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
-            適合情境：想吃精緻海鮮、想安排比較正式的晚餐、願意提前訂位。若看完夕陽後前往，建議預訂 21:00 左右。
-          </p>
-        </div>
-
-        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
-          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
-            ② 穩妥舊城晚餐｜Restoran 4 Kantuna
-            <MapLink url="https://maps.app.goo.gl/t64nvyaAcvPe3CQYA" />
-          </h4>
-          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
-            今晚穩妥首選。位在札達爾舊城中心，選項較多，適合健行日晚上想吃得舒服、不想太正式時選擇。若日落後行程稍微延後，這間時間彈性也比較好。
-          </p>
-          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
-            適合情境：想吃得穩、選擇多、同行者口味不一定一致，或看完夕陽後不想趕正式餐廳預約。
-          </p>
-        </div>
-      </div>
-
-      <div className="mt-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
-        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
-          今日晚餐建議
-        </h4>
-        <p className="text-sm text-gray-600 leading-relaxed text-justify">
-          如果體力還不錯、想吃一頓比較有質感的札達爾晚餐，優先選 Kornat，時間抓 21:00 最剛好；如果白天十六湖健行後比較累，或不想被訂位時間綁住，選 Restoran 4 Kantuna。今晚重點是先看夕陽，不要為了晚餐錯過海風琴的黃金時刻。
-        </p>
-      </div>
-    </Fragment>
-  ),
-  tips: [
-    '健行日晚上不要排太滿，若太累可選 4 Kantuna 或簡單晚餐',
-    '今晚優先保留 Sea Organ 夕陽時間，不要為了晚餐太早離開海邊'
   ]
 }
             ],
@@ -3907,21 +3871,21 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
           <div className="space-y-3">
             <div>
               <div className="font-bold text-sm text-orange-900 flex items-center mb-1">
-                Cogito Coffee Zadar
-                <MapLink url="https://www.google.com/maps/search/?api=1&query=Cogito+Coffee+Zadar" />
+                D16 Coffee Shop Zadar
+                <MapLink url="https://maps.app.goo.gl/M8HC3z5rvPMS8iAQ7" />
               </div>
               <p className="text-xs text-orange-800/70 leading-relaxed">
-                精品咖啡取向，適合想喝一杯品質穩定咖啡的人。
+                距離住宿走路7分鐘。精品咖啡取向，適合想喝一杯品質穩定咖啡的人。
               </p>
             </div>
 
             <div>
               <div className="font-bold text-sm text-orange-900 flex items-center mb-1">
                 CAFFE BAR DOMA
-                <MapLink url="https://maps.app.goo.gl/JX63JwbbjiXVN3NC9" />
+                <MapLink url="https://maps.app.goo.gl/QMLARur7ueb22VPN7" />
               </div>
               <p className="text-xs text-orange-800/70 leading-relaxed">
-                在地感較強，適合想坐下來感受 Zadar 早晨生活節奏。
+                距離住宿走路1分鐘。在地感較強，適合想坐下來感受 Zadar 早晨生活節奏。
               </p>
             </div>
           </div>
