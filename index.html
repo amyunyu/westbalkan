@@ -484,21 +484,88 @@ tips: [
            {
   id: 'd2-1',
   time: '08:30',
-  title: '札格瑞布早餐',
+  title: '札格瑞布早餐與下城晨間散步',
   type: 'food',
   iconName: 'Coffee',
-  subtitle: 'Dolac Market 周邊早餐',
+  subtitle: '散步路線 • 綠色馬蹄 • 早餐選項',
   location: 'Zagreb City Center',
+  mapLink: 'https://maps.app.goo.gl/AscNiR4t5dQsicd57',
   desc: (
     <Fragment>
+      <div className="mb-4 flex items-center">
+        <span className="font-bold text-gray-800">散步路線</span>
+        <MapLink url="https://maps.app.goo.gl/AscNiR4t5dQsicd57" />
+      </div>
+
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        早餐安排在主廣場、Dolac Market 或 Tkalčićeva 街附近，吃完即可順路銜接下城散步與市場行程。今天上午重點是 Dolac Market、Zrinjevac Park 與 12:00 Lotrščak Tower 正午大炮，因此早餐以輕鬆、好抵達、不拖太久為主。
+        今天上午以札格瑞布下城區散步、Dolac Market 與早餐為主。因為 12:00 要看 Lotrščak Tower 正午大炮，這段行程重點是輕鬆、順路、不要拖太久。建議先從托米斯拉夫國王廣場與 Zrinjevac Park 感受下城綠色馬蹄，再回到主廣場與 Dolac Market，最後銜接上城方向。
       </p>
 
       <div className="space-y-4">
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ① 托米斯拉夫國王廣場
+            <MapLink url="https://maps.app.goo.gl/n4DVFc5MyALF2pJx9" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            位於 Zagreb 火車總站前方，廣場中央是克羅埃西亞第一位國王 King Tomislav 的騎馬雕像。雕像後方的黃色 Art Pavilion 與開闊草地，是下城區很經典的城市畫面。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            適合情境：作為下城綠色馬蹄散步起點，早晨光線與廣場視野都很舒服。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ② Zrinjevac Park
+            <MapLink url="https://maps.app.goo.gl/MBA9ahmZafFHqB2Y7" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            札格瑞布最優雅的城市公園之一，也是「綠色馬蹄」的一部分。林蔭大道、花圃、噴泉與音樂亭讓這裡很適合作為早晨散步點。這裡的氣氛比主廣場安靜，適合用慢一點的節奏感受 Zagreb 的城市日常。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            若時間較緊，也可以只走托米斯拉夫國王廣場與 Zrinjevac Park，之後直接回主廣場方向。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ③ 耶拉契奇總督廣場
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Ban+Jelačić+Square+Zagreb" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            Zagreb 的主廣場，也是下城、上城與主要商業街之間的交會點。這裡很適合作為辨認方向的中心地標，從廣場往北走一小段就能抵達 Dolac Market，往西則可接往纜車與上城方向。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            適合作為下城散步與市場行程之間的銜接點，也方便後續往上城方向移動。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ④ 多拉茨市場 Dolac Market
+            <MapLink url="https://maps.app.goo.gl/fqnhjcCdCPA8VhrE8" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            札格瑞布最具代表性的紅傘市場，也是當地人日常採買的地方。紅色遮陽傘、蔬果攤、花攤與乳製品區都很有生活感。建議上午造訪，市場氣氛最熱鬧，也可以買水果、蜂蜜、起司或簡單點心作為路上補給。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            建議停留：20–30 分鐘。部分攤販可能只收現金，建議準備小額歐元。
+          </p>
+        </div>
+
+        <div className="p-3 bg-stone-50 rounded-xl border border-stone-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            建議走法
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            托米斯拉夫國王廣場 → Zrinjevac Park → 耶拉契奇總督廣場 → 多拉茨市場 Dolac Market。若時間較緊，建議縮短下城公園停留時間，但保留 Dolac Market，之後銜接 11:30 登山纜車與 12:00 Lotrščak Tower 正午大炮。
+          </p>
+        </div>
+
         <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
           <h4 className="font-bold text-orange-900 mb-2 flex items-center">
-            ① 市場旁早午餐｜Broom 44
+            ⑤ 早餐選項｜Broom 44
             <MapLink url="https://maps.app.goo.gl/mDRruL1U8UoJaM938" />
           </h4>
           <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
@@ -511,7 +578,7 @@ tips: [
 
         <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
           <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
-            ② 完整早餐｜Otto & Frank
+            ⑥ 早餐選項｜Otto & Frank
             <MapLink url="https://maps.app.goo.gl/tukTsRZRLd9AR9Rw6" />
           </h4>
           <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
@@ -524,7 +591,7 @@ tips: [
 
         <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
           <h4 className="font-bold text-gray-800 mb-2 flex items-center">
-            ③ 省時備案｜麵包店 / 咖啡外帶
+            ⑦ 省時備案｜麵包店 / 咖啡外帶
           </h4>
           <p className="text-sm text-gray-600 leading-relaxed text-justify">
             如果不想花太多時間，也可以選擇附近麵包店或咖啡外帶，買 burek、可頌、咖啡後直接前往市場。這樣最省時間，也最適合想把上午留給 Dolac Market、下城散步與 Lotrščak Tower 的節奏。
@@ -540,97 +607,21 @@ tips: [
           今日早餐建議
         </h4>
         <p className="text-sm text-gray-600 leading-relaxed text-justify">
-          如果早上精神不錯，首選 Broom 44，吃完最順路接 Dolac Market；如果想坐得舒服一點，選 Otto & Frank；若起床較晚或不想排隊，就改成麵包店外帶早餐，把時間留給市場與正午大炮。
+          如果想把市場安排得最順，Broom 44 很適合接 Dolac Market；如果想坐得舒服一點，選 Otto & Frank；若起床較晚或不想排隊，就改成麵包店外帶早餐，把時間留給下城散步、市場與正午大炮。
         </p>
       </div>
     </Fragment>
   ),
   tips: [
-    '08:30 左右開始早餐，09:30 前出發散步',
+    '散步順序：托米斯拉夫國王廣場 → Zrinjevac Park → 耶拉契奇總督廣場 → Dolac Market',
     '想接 Dolac Market 最順：Broom 44',
     '想坐下吃完整早餐：Otto & Frank',
-    '想節省時間：麵包店外帶咖啡與 burek',
-    '早餐後先逛 Dolac Market，市場早上最有氣氛',
+    'Dolac Market 以早上最有氣氛，市場部分攤販可能只收現金',
     '記得保留 11:50 前抵達 Lotrščak Tower 的時間'
   ]
-},
+           },
                 {
   id: 'd2-2',
-  time: '10:00',
-  title: '札格瑞布下城漫步',
-  type: 'sightseeing',
-  iconName: 'Camera',
-  subtitle: '綠色馬蹄、公園、主廣場與紅傘市場',
-  location: 'Zrinjevac Park, Zagreb',
-  mapLink: 'https://maps.app.goo.gl/MBA9ahmZafFHqB2Y7',
-  desc: (
-    <Fragment>
-      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        上午從札格瑞布下城區（Donji Grad）開始散步，先感受綠色馬蹄一帶的優雅公園與廣場，再慢慢走回城市核心 Ban Jelačić Square，最後接到熱鬧的 Dolac Market。這條路線節奏輕鬆，也很適合接續 11:30 的登山纜車與 Lotrščak Tower 正午大炮。
-      </p>
-
-      <div className="space-y-4">
-        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
-          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
-            ① Zrinjevac Park
-            <MapLink url="https://maps.app.goo.gl/MBA9ahmZafFHqB2Y7" />
-          </h4>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            札格瑞布最優雅的城市公園之一，也是「綠色馬蹄」的一部分。林蔭大道、花圃、噴泉與音樂亭讓這裡很適合作為早晨散步的起點。這裡的氣氛比主廣場安靜，適合用慢一點的節奏進入 Zagreb 的城市日常。
-          </p>
-        </div>
-
-        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
-          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
-            ② 托米斯拉夫國王廣場
-            <MapLink url="https://maps.app.goo.gl/n4DVFc5MyALF2pJx9" />
-          </h4>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            位於 Zagreb 火車總站前方，廣場中央是克羅埃西亞第一位國王 King Tomislav 的騎馬雕像。雕像後方的黃色 Art Pavilion 與開闊草地，是下城區很經典的城市畫面。
-          </p>
-        </div>
-
-        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
-          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
-            ③ 耶拉契奇總督廣場
-            <MapLink url="https://www.google.com/maps/search/?api=1&query=Ban+Jelačić+Square+Zagreb" />
-          </h4>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            Zagreb 的主廣場，也是下城、上城與主要商業街之間的交會點。這裡很適合作為辨認方向的中心地標，從廣場往北走一小段就能抵達 Dolac Market，往西則可接往纜車與上城方向。
-          </p>
-        </div>
-
-        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
-          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
-            ④ 多拉茨市場 Dolac Market
-            <MapLink url="https://maps.app.goo.gl/fqnhjcCdCPA8VhrE8" />
-          </h4>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            札格瑞布最具代表性的紅傘市場，也是當地人日常採買的地方。紅色遮陽傘、蔬果攤、花攤與乳製品區都很有生活感。建議上午造訪，市場氣氛最熱鬧，也可以買水果、蜂蜜、起司或簡單點心作為路上補給。
-          </p>
-        </div>
-      </div>
-
-      <div className="mt-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
-        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
-          建議走法
-        </h4>
-        <p className="text-sm text-gray-600 leading-relaxed text-justify">
-          Zrinjevac Park → 托米斯拉夫國王廣場 → 耶拉契奇總督廣場 → Dolac Market。若時間較緊，可以略過托米斯拉夫國王廣場，直接從 Zrinjevac Park 慢慢走回主廣場與市場，確保 11:50 前抵達 Lotrščak Tower 附近等正午大炮。
-        </p>
-      </div>
-    </Fragment>
-  ),
-  tips: [
-    '這段控制在 60–75 分鐘內，避免影響 11:50 前抵達 Lotrščak Tower',
-    'Dolac Market 以早上最有氣氛，若想買水果或蜂蜜，這段時間最適合',
-    '市場部分攤販可能只收現金，建議準備小額歐元',
-    '可買葡萄、櫻桃、無花果或當季水果當路上點心',
-    '從 Dolac Market 往纜車站步行不遠，適合接續上城行程'
-  ]
-                },
-                {
-  id: 'd2-3',
   time: '11:30',
   title: '登山纜車 • 洛特爾薩克塔',
   type: 'activity',
@@ -704,7 +695,7 @@ tips: [
   ]
                 },
                 {
-  id: 'd2-4',
+  id: 'd2-3',
   time: '12:30',
   title: '札格瑞布午餐',
   type: 'food',
@@ -786,7 +777,7 @@ tips: [
   ]
                 },
                 {
-  id: 'd2-5',
+  id: 'd2-4',
   time: '15:00',
   title: 'Zagreb 市區取車',
   type: 'transport',
@@ -821,7 +812,7 @@ tips: [
 
                 },
                 {
-  id: 'd2-6',
+  id: 'd2-5',
   time: '16:30',
   title: '拱廊 • 東正教教堂',
   type: 'sightseeing',
@@ -892,7 +883,7 @@ tips: [
   ]
                 },
 {
-    id: 'd2-7',
+    id: 'd2-6',
     time: '18:45',
     title: 'Vinodol 晚餐',
     type: 'food',
@@ -1243,7 +1234,7 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
                 {
                     id: 'd3-4',
                     time: '20:30',
-                    title: '河畔散步',
+                    title: '盧布爾雅察河畔散步',
                     type: 'relax',
                     iconName: 'Coffee',
                     location: 'Ljubljanica River',
@@ -3901,7 +3892,7 @@ title: '札達爾舊城晚餐',
           今日晨間建議
         </h4>
         <p className="text-sm text-gray-600 leading-relaxed text-justify">
-          不需要把 9 個點全部走完。若體力普通，建議選 Roman Forum、St. Donatus、Sea Organ，再加一間咖啡館即可；若前一天沒好好逛舊城，再從 Land Gate 與 Five Wells Square 開始補走。09:30 左右回住宿收行李，10:00 退房最剛好。
+          若體力普通，建議選 Roman Forum、St. Donatus、Sea Organ，再加一間咖啡館即可；若前一天沒好好逛舊城，再從 Land Gate 與 Five Wells Square 開始補走。09:30 左右回住宿收行李，10:00 退房最剛好。
         </p>
       </div>
     </Fragment>
@@ -3909,8 +3900,6 @@ title: '札達爾舊城晚餐',
   tips: [
     '依體力選 3–4 個點即可，不需要完整走完',
     '若昨晚已看過夕陽，今早重點放在少人版 Roman Forum 與 Sea Organ',
-    '想喝精品咖啡選 Cogito Coffee Zadar',
-    '想要在地感可選 CAFFE BAR DOMA',
     '09:30 左右回住宿收行李，10:00 辦理退房'
   ]
                },
@@ -3926,13 +3915,13 @@ title: '札達爾舊城晚餐',
                 {
   id: 'd11-2',
   time: '10:15',
-  title: '前往 Krka 國家公園',
+  title: '前往克爾卡 Krka 國家公園',
   type: 'transport',
   iconName: 'Car',
   subtitle: 'Skradin 入口 • 車程約 1.5 小時',
   location: 'Skradin, Krka National Park',
   mapLink: 'https://maps.app.goo.gl/2dVKwT28vXqEzEMf6',
-  desc: '從札達爾出發前往 Krka 國家公園的 Skradin 入口。抵達後先處理停車、購票與確認前往 Skradinski buk 的船班；午餐以 Skradin 鎮上的麵包店、港口咖啡館簡單輕食，或事先準備的三明治、水果與點心為主，不建議安排正式用餐，以免壓縮瀑布區停留時間。',
+  desc: '從札達爾出發前往克爾卡 Krka 國家公園的 Skradin 入口。抵達後先處理停車、購票與確認前往 Skradinski buk 的船班；午餐以 Skradin 鎮上的麵包店、港口咖啡館簡單輕食，或事先準備的三明治、水果與點心為主，不建議安排正式用餐，以免壓縮瀑布區停留時間。',
   tips: [
     '建議使用 Skradin 入口搭船進園',
     '抵達後先確認前往 Skradinski buk 的船班與回程時間',
@@ -3943,7 +3932,7 @@ title: '札達爾舊城晚餐',
 {
   id: 'd11-3',
   time: '13:00',
-  title: 'Krka 瀑布巡禮',
+  title: '克爾卡 Krka 瀑布巡禮',
   type: 'sightseeing',
   iconName: 'Camera',
   subtitle: 'Skradinski buk',
@@ -3952,7 +3941,7 @@ title: '札達爾舊城晚餐',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        Krka 國家公園以瀑布群聞名，其中最經典的是 <strong>Skradinski buk</strong>。從 Skradin 入口搭船進入園區，沿途可欣賞 Krka 河谷景色；抵達後沿著環狀木棧道散步，慢慢穿過濕地、小瀑布、水車磨坊與觀景平台。
+        克爾卡 Krka 國家公園以瀑布群聞名，其中最經典的是 <strong>Skradinski buk</strong>。從 Skradin 入口搭船進入園區，沿途可欣賞 Krka 河谷景色；抵達後沿著環狀木棧道散步，慢慢穿過濕地、小瀑布、水車磨坊與觀景平台。
       </p>
 
       <div className="mb-4">
@@ -3999,13 +3988,13 @@ title: '札達爾舊城晚餐',
                 {
   id: 'd11-4',
   time: '16:30',
-  title: '斯普利特住宿',
+  title: '前往斯普利特住宿',
   type: 'transport',
   iconName: 'Car',
   subtitle: '車程約 1 小時 15 分 • 住宿附車位',
   location: 'Apartments and Rooms Perimar Split Center, Split',
   mapLink: 'https://maps.app.goo.gl/Jh9SHDVZDZSZwrgFA',
-  desc: '離開 Krka 國家公園後，開車前往達爾馬提亞海岸最大城市斯普利特。住宿有附車位，抵達後先依住宿方指示停車、辦理入住與放行李，稍微休息補水，再步行前往 Riva 海濱與戴克里先宮舊城區。今晚不再開車移動，以輕鬆散步與舊城晚餐為主。',
+  desc: '離開克爾卡 Krka 國家公園後，開車前往達爾馬提亞海岸最大城市斯普利特。住宿有附車位，抵達後先依住宿方指示停車、辦理入住與放行李，稍微休息補水，再步行前往 Riva 海濱與戴克里先宮舊城區。今晚不再開車移動，以輕鬆散步與舊城晚餐為主。',
   tips: [
     '抵達前先確認住宿方提供的停車入口與入住方式',
     '住宿附車位，抵達後依房東指示停車即可',
@@ -4104,7 +4093,7 @@ title: '札達爾舊城晚餐',
           今晚晚餐建議
         </h4>
         <p className="text-sm text-gray-600 leading-relaxed text-justify">
-          如果 Villa Spiza 剛好有位，今晚可以優先試；若需要等太久，就不要硬排，改 Konoba Fetivi 吃一頓傳統達爾馬提亞正餐。若今天從 Krka 到 Split 後已經很累，Pizzeria Sette Sorelle 是最省心的收尾。晚餐後可沿 Riva 海濱短暫散步，再早點回住宿休息。
+          如果 Villa Spiza 剛好有位，今晚可以優先試；若需要等太久，就不要硬排，改 Konoba Fetivi 吃一頓傳統達爾馬提亞正餐。若今天從 Krka 到 Split 後已經很累，Pizzeria Sette Sorelle 是最輕鬆的收尾。晚餐後可沿 Riva 海濱短暫散步，再早點回住宿休息。
         </p>
       </div>
     </Fragment>
@@ -4138,70 +4127,120 @@ title: '札達爾舊城晚餐',
   ]
                 },
                 {
-    id: 'd12-fortress',
-    time: '09:40',
-    title: '西班牙堡壘',
-    type: 'sightseeing',
-    iconName: 'Compass',
-    subtitle: 'Španjola Fortress • 俯瞰 Hvar 港口',
-    location: 'Španjola Fortress, Hvar',
-    mapLink: 'https://maps.app.goo.gl/qEPxLmYBqdQge8HB7',
-    desc: (
-  <Fragment>
-    <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-      抵達 Hvar Town 後，建議先前往西班牙堡壘 <strong>Španjola Fortress</strong>。這座堡壘位在舊城上方山坡，是俯瞰赫瓦爾港口、紅瓦屋頂與帕克林斯基群島 <strong>Pakleni Islands</strong> 的最佳制高點。
-    </p>
-    <p className="mb-4 text-sm text-gray-600 leading-relaxed text-justify">
-      堡壘不只是觀景台，也是威尼斯時期守護 Hvar 港口的重要防禦核心。16 世紀亞得里亞海局勢緊張，奧斯曼艦隊與海上勢力威脅沿岸城鎮，Hvar 居民曾在攻擊時躲入山上的堡壘避難。今天站在城牆邊看出去，眼前的藍色海面過去其實也是城市的警戒線。
-    </p>
-    <p className="text-sm text-gray-600 leading-relaxed text-justify">
-      從舊城區沿著蜿蜒小路往上走，沿途會經過石階、仙人掌與地中海植物。早上先上堡壘，可以避開中午炎熱，也能用比較從容的節奏欣賞亞得里亞海的藍色層次。
-    </p>
-  </Fragment>
-    ),
-    tips: [
-      '抵達 Hvar 後先上堡壘，避開中午炎熱和人潮',
-      '上坡路段需要一點體力，建議穿好走的鞋',
-      '堡壘視野極佳，是 Hvar 一日遊必去重點',
-      '拍完堡壘後再下山逛舊城，動線最順'
-    ]
-  },
-  {
-    id: 'd12-square',
-    time: '11:00',
-    title: '史特芬亞廣場與赫瓦爾舊城',
-    type: 'sightseeing',
-    iconName: 'Camera',
-    subtitle: "Square • Cathedral",
-    location: "St. Stephen's Square, Hvar",
-    mapLink: 'https://maps.app.goo.gl/wE2oj7WQe1oAP1eu5',
-    desc: (
-  <Fragment>
-    <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-      從堡壘下山後，回到赫瓦爾舊城核心——史特芬亞廣場 <strong>St. Stephen's Square</strong>。這座廣場連接港口、舊城巷弄、貴族宅邸與聖史特芬大教堂，是 Hvar 在威尼斯時期形成的城市客廳。
-    </p>
-    <p className="mb-4 text-sm text-gray-600 leading-relaxed text-justify">
-      過去這裡不只是市民散步的地方，也是船員、商人、貴族與居民交會的公共空間。廣場盡頭的聖史特芬大教堂 <strong>Cathedral of St. Stephen</strong> 則是 Hvar 的宗教核心，鐘樓與石造立面展現了達爾馬提亞海港城市典雅而明亮的氣質。
-    </p>
-    <p className="text-sm text-gray-600 leading-relaxed text-justify">
-      這段不需要趕景點，可以慢慢穿過廣場、巷弄與海邊，感受 Hvar Town 兼具海港、防禦城市與度假島嶼的多重性格。
-    </p>
-  </Fragment>
-    ),
-    tips: [
-      '廣場周邊巷弄非常適合拍照',
-      '大教堂可視時間與體力決定是否入內',
-      '這段以散步和拍照為主，不用排得太滿',
-      '午餐前可先確認下午自由時間與回程船班'
-    ]
-  },
+  id: 'd12-hvar-morning',
+  time: '09:40',
+  title: '赫瓦爾上午散步',
+  type: 'sightseeing',
+  iconName: 'Compass',
+  subtitle: '西班牙堡壘 • 史特芬亞廣場 • 舊城',
+  location: 'Hvar Town',
+  mapLink: 'https://maps.app.goo.gl/kM4QDdHFcsTWHvrv6',
+  desc: (
+    <Fragment>
+      <div className="mb-4 flex items-center">
+        <span className="font-bold text-gray-800">散步路線</span>
+        <MapLink url="https://maps.app.goo.gl/kM4QDdHFcsTWHvrv6" />
+      </div>
+
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        抵達 Hvar Town 後，上午先安排最經典的高低差動線：從港口與舊城慢慢上行至西班牙堡壘 Španjola Fortress，俯瞰赫瓦爾港口、紅瓦屋頂與帕克林斯基群島 Pakleni Islands；再下山回到史特芬亞廣場 St. Stephen's Square 與赫瓦爾舊城，感受這座海港小城的威尼斯時期風貌。
+      </p>
+
+      <div className="space-y-4">
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ① 西班牙堡壘 Španjola Fortress
+            <MapLink url="https://maps.app.goo.gl/qEPxLmYBqdQge8HB7" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            西班牙堡壘位在舊城上方山坡，是俯瞰 Hvar 港口、紅瓦屋頂與 Pakleni Islands 的最佳制高點。從舊城區沿著蜿蜒小路往上走，沿途會經過石階、仙人掌與地中海植物；早上先上堡壘，可以避開中午炎熱，也能用比較從容的節奏欣賞亞得里亞海的藍色層次。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            參觀重點：港口全景、紅瓦屋頂、帕克林斯基群島、城牆視角。建議停留約 45–60 分鐘，含上坡與拍照時間。
+          </p>
+
+          <div className="mt-3 p-3 bg-stone-50 rounded-lg border border-stone-100">
+            <h5 className="font-bold text-gray-800 mb-2">
+              堡壘觀景點
+            </h5>
+            <ul className="text-xs text-gray-600 leading-relaxed space-y-2 list-none pl-0">
+              <li className="flex items-center">
+                <span>港口與紅瓦屋頂視角</span>
+                <MapLink url="https://maps.app.goo.gl/K6LrdZJtydjswzjo9" />
+              </li>
+              <li className="flex items-center">
+                <span>帕克林斯基群島視角</span>
+                <MapLink url="https://maps.app.goo.gl/vWSCPEpg4ahtNxQK9" />
+              </li>
+              <li className="flex items-center">
+                <span>城牆與海灣視角</span>
+                <MapLink url="https://maps.app.goo.gl/UKbjgPhPMug4PuNn7" />
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="p-3 bg-stone-50 rounded-xl border border-stone-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            堡壘歷史小重點
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            這座堡壘不只是觀景台，也是威尼斯時期守護 Hvar 港口的重要防禦核心。16 世紀亞得里亞海局勢緊張，奧斯曼艦隊與海上勢力威脅沿岸城鎮，Hvar 居民曾在攻擊時躲入山上的堡壘避難。今天站在城牆邊看出去，眼前的藍色海面過去其實也是城市的警戒線。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ② 史特芬亞廣場 St. Stephen's Square
+            <MapLink url="https://maps.app.goo.gl/wE2oj7WQe1oAP1eu5" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            從堡壘下山後，回到赫瓦爾舊城核心——史特芬亞廣場。這座廣場連接港口、舊城巷弄、貴族宅邸與聖史特芬大教堂，是 Hvar 在威尼斯時期形成的城市客廳。過去這裡不只是市民散步的地方，也是船員、商人、貴族與居民交會的公共空間。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            參觀重點：廣場尺度、石造建築、舊城巷弄入口、港口與廣場的連接感。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ③ 聖史特芬大教堂 Cathedral of St. Stephen
+            <MapLink url="https://maps.app.goo.gl/wE2oj7WQe1oAP1eu5" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            廣場盡頭的聖史特芬大教堂是 Hvar 的宗教核心，鐘樓與石造立面展現了達爾馬提亞海港城市典雅而明亮的氣質。這段以外觀欣賞與廣場散步為主，是否入內可依時間與體力決定。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            建議停留：10–15 分鐘。若時間有限，外觀與廣場拍照即可。
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          建議走法
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          Hvar 港口 → 西班牙堡壘 Španjola Fortress → 堡壘觀景點 → 下山回史特芬亞廣場 → 聖史特芬大教堂外觀 → 舊城巷弄與海邊散步。上午先上堡壘最順，也能避開中午炎熱；下山後再慢慢逛廣場與舊城，午餐前可先確認下午自由時間與回程船班。
+        </p>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    '抵達 Hvar 後先上西班牙堡壘，避開中午炎熱和人潮',
+    '堡壘視野極佳，是 Hvar 一日遊必去重點',
+    '下山後再逛史特芬亞廣場與舊城，動線最順',
+    '大教堂可視時間與體力決定是否入內',
+    '午餐前可先確認下午自由時間與回程船班'
+  ]
+                },
   {
   id: 'd12-lunch',
   time: '12:15',
   title: '赫瓦爾島午餐',
   type: 'food',
   iconName: 'Utensils',
-  subtitle: 'Fig Hvar / Plava Alga',
+  subtitle: 'Fig Hvar • Plava Alga',
   location: 'Hvar Town',
   desc: (
     <Fragment>
@@ -4209,34 +4248,50 @@ title: '札達爾舊城晚餐',
         中午在 Hvar Town 享受陽光與地中海風情午餐。今天下午還要保留港口散步、海邊咖啡與回程搭船時間，午餐建議選擇舊城或港口附近步行可達的餐廳，不要排太遠，也不要吃得太久。
       </p>
 
-      <h4 className="font-bold text-gray-800 mb-3">【午餐選項】</h4>
-      <ul className="list-none pl-0 space-y-4">
-        <li>
-          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-            Fig Hvar
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 輕鬆創意午餐｜Fig Hvar
             <MapLink url="https://maps.app.goo.gl/tkkDT8FfAMd2C5hU6" />
-          </div>
-          <p className="text-xs text-gray-500 leading-relaxed text-justify">
-            輕鬆、有創意的小巷餐廳，菜色不只限於傳統海鮮，包含 flatbread、沙拉、墨西哥風手撕豬肉、雞肉 burrito、咖哩與漢堡等。適合想吃得比較活潑、清爽、不想午餐吃太正式的人。店家位置藏在主廣場旁的小巷中，從 Pizza Kogo 和 La Bocca 之間的小巷走進去約 20 公尺。
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            輕鬆、有創意的小巷餐廳，菜色不只限於傳統海鮮，包含 flatbread、沙拉、墨西哥風手撕豬肉、雞肉 burrito、咖哩與漢堡等。適合想吃得比較活潑、清爽、不想午餐吃太正式的人。
           </p>
-        </li>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            找路提醒：店家位置藏在主廣場旁的小巷中，從 Pizza Kogo 和 La Bocca 之間的小巷走進去約 20 公尺。
+          </p>
+        </div>
 
-        <li>
-          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-            Plava Alga
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ② 港口傳統餐｜Plava Alga
             <MapLink url="https://maps.app.goo.gl/e5NT162fWbqjqQnm6" />
-          </div>
-          <p className="text-xs text-gray-500 leading-relaxed text-justify">
+          </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
             位於 Hvar Town 港口附近的傳統餐廳，適合想吃海鮮、義大利麵、燉飯或比較典型達爾馬提亞風味午餐的人。若想坐在靠近港口的位置、看著人潮與船隻用餐，這家會比 Fig 更有海島港口感。
           </p>
-        </li>
-      </ul>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            適合情境：想吃海鮮、義大利麵、燉飯，或想要更典型的港口午餐氣氛。
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          今日午餐建議
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          若天氣炎熱、想吃得輕鬆清爽，優先選 Fig Hvar，沙拉、flatbread 或清爽主餐會比較舒服；若想要港口感、傳統海鮮、義大利麵或燉飯，選 Plava Alga 會更符合海島午餐的想像。午餐不要吃太久，下午還要保留港口散步與回程船班緩衝。
+        </p>
+      </div>
     </Fragment>
   ),
   tips: [
-    'Fig Hvar 較適合輕鬆創意午餐，Plava Alga 較適合港口海鮮與傳統餐',
+    'Fig Hvar 較適合輕鬆創意午餐',
+    'Plava Alga 較適合港口海鮮與傳統餐',
     '若天氣炎熱，Fig 的沙拉、flatbread 或清爽主餐會比較舒服',
-    '若想吃海鮮、義大利麵或燉飯，可選 Plava Alga'
+    '若想吃海鮮、義大利麵或燉飯，可選 Plava Alga',
+    '午餐後保留時間散步與確認回程船班'
   ]
 },
   {
@@ -4245,7 +4300,7 @@ title: '札達爾舊城晚餐',
   title: '赫瓦爾海邊自由時間',
   type: 'relax',
   iconName: 'Coffee',
-  subtitle: '港口散步 / 海邊咖啡 / 小巷拍照 / 薰衣草小物',
+  subtitle: '港口散步 • 海邊咖啡 • 小巷拍照 • 薰衣草小物',
   location: 'Hvar Town',
   mapLink: 'https://www.google.com/maps/search/?api=1&query=Hvar+Town',
   desc: (
@@ -4254,33 +4309,68 @@ title: '札達爾舊城晚餐',
         午餐後保留一段彈性時間，慢慢逛赫瓦爾港口、舊城小巷與海邊步道。這段不再硬排行程，重點是放慢節奏，感受 Hvar 明亮、精緻又帶有度假感的海島氣氛。
       </p>
 
-      <div className="mb-4">
-        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
-          下午可以這樣選：
-        </h4>
-        <ul className="text-sm text-gray-600 leading-relaxed space-y-3 list-disc pl-4">
-          <li>
-            <span className="font-bold text-gray-700">保守版：</span>
-            留在 Hvar Town，沿著港口散步、回到 St. Stephen's Square 周邊拍照，買薰衣草、橄欖油、香氛或手工藝小物。這是最穩、最不怕錯過回程船的選擇。
-          </li>
-          <li>
-            <span className="font-bold text-gray-700">舒服版：</span>
-            找一間海邊咖啡館坐下，點杯咖啡、檸檬水或冰飲，休息避暑。上午爬過堡壘後，這段很適合讓身體慢下來。
-          </li>
-          <li>
-            <span className="font-bold text-gray-700">拍照版：</span>
+      <div className="space-y-4">
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ① 保守版｜港口散步與小物採買
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Hvar+Town+Harbour" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            留在 Hvar Town，沿著港口散步、回到 St. Stephen's Square 周邊拍照，順路逛小店。可以看看薰衣草香包、橄欖油、香氛、手工藝品或海島風格小物。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            適合情境：想最穩、不想離港口太遠、不想擔心回程船班。
+          </p>
+        </div>
+
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ② 舒服版｜海邊咖啡與避暑休息
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Hvar+Town+waterfront+cafe" />
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            找一間海邊咖啡館坐下，點杯咖啡、檸檬水或冰飲，休息避暑。上午已經爬過西班牙堡壘，午後最適合讓身體慢下來，看港口船隻進出。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            適合情境：天氣炎熱、上午走很多、想好好坐下來感受海島午後。
+          </p>
+        </div>
+
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ③ 拍照版｜舊城小巷與白石牆
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Hvar+Old+Town+streets" />
+          </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
             鑽進廣場後方的石造小巷，拍白石牆、百葉窗、階梯、花盆與轉角光影。Hvar 的小巷比主廣場更安靜，也很適合拍旅行感照片。
-          </li>
-          <li>
-            <span className="font-bold text-gray-700">進階版：</span>
-            若回程船班較晚、天氣穩定且水上計程車時間明確，才考慮短程前往 Pakleni Islands 附近海灣。這個選項不建議硬排，因為最重要的是保留足夠時間回港口搭船。
-          </li>
-        </ul>
+          </p>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            適合情境：想拍 Hvar 的小巷光影、想避開主廣場人潮。
+          </p>
+        </div>
+
+        <div className="p-3 bg-blue-50 rounded-xl border border-blue-100">
+          <h4 className="font-bold text-blue-900 mb-2 flex items-center">
+            ④ 進階版｜Pakleni Islands 彈性選項
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Pakleni+Islands+Hvar" />
+          </h4>
+          <p className="text-sm text-blue-900/80 leading-relaxed text-justify">
+            若回程船班較晚、天氣穩定，且水上計程車時間明確，才考慮短程前往 Pakleni Islands 附近海灣。這個選項不建議硬排，因為最重要的是保留足夠時間回港口搭船。
+          </p>
+          <p className="text-xs text-blue-800/70 leading-relaxed mt-2">
+            適合情境：船班很充裕、天氣穩、已確認來回水上計程車時間。
+          </p>
+        </div>
       </div>
 
-      <p className="text-sm text-gray-600 leading-relaxed text-justify">
-        如果當天很熱，建議不要勉強繼續走景點；Hvar 最迷人的地方之一，就是坐在港口邊看船進出、聽廣場聲音、讓陽光和海風慢慢把下午拉長。
-      </p>
+      <div className="mt-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          今日下午建議
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          如果當天很熱，建議不要勉強繼續走景點。Hvar 最迷人的地方之一，就是坐在港口邊看船進出、聽廣場聲音、讓陽光和海風慢慢把下午拉長。最穩的安排是留在 Hvar Town，散步、喝咖啡、買小物，並提早回到碼頭附近等船。
+        </p>
+      </div>
     </Fragment>
   ),
   tips: [
@@ -4375,73 +4465,108 @@ title: '札達爾舊城晚餐',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        今天上午以 Split 舊城精華為主，補齊戴克里先皇宮最經典的幾個角落。戴克里先皇宮最特別的地方：古羅馬石牆、居民生活、咖啡館、商店與小巷自然融合在一起。
+        今天上午以 Split 舊城精華為主，補齊戴克里先皇宮最經典的幾個角落。戴克里先皇宮最特別的地方，是古羅馬石牆、居民生活、咖啡館、商店與小巷自然融合在一起，整座舊城就像長在古羅馬皇宮遺構之中。
       </p>
 
-      <p className="mb-4 text-sm text-gray-600 leading-relaxed text-justify">
-        這座皇宮建於西元 4 世紀初，是羅馬皇帝戴克里先退位後的居所，結合了皇宮、軍營與海邊堡壘的功能。後來隨著時代變遷，人們逐漸住進皇宮牆內，古羅馬建築被改造成教堂、廣場、住宅與街巷，也讓 Split 的舊城核心直接長在皇宮遺構之中。
-      </p>
+      <div className="mb-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          皇宮背景小重點
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          戴克里先皇宮建於西元 4 世紀初，是羅馬皇帝戴克里先退位後的居所，結合了皇宮、軍營與海邊堡壘的功能。後來隨著時代變遷，人們逐漸住進皇宮牆內，古羅馬建築被改造成教堂、廣場、住宅與街巷，也讓 Split 的舊城核心保留了非常獨特的歷史層次。
+        </p>
+      </div>
 
-      <p className="mb-4 text-sm text-gray-600 leading-relaxed text-justify">
-        因中午要跨國前往莫斯塔爾，今天採 2 小時精華版，不把上午排太滿。可以 Riva 海濱作為暖身，接著進入皇宮核心 Peristyle，再視時間選擇地下室或鐘樓；若只能選一個，優先看皇宮地下室。
-      </p>
+      <div className="mb-5 p-3 bg-orange-50 rounded-xl border border-orange-100">
+        <h4 className="font-bold text-orange-900 mb-2">
+          今日上午策略
+        </h4>
+        <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+          因中午要跨國前往莫斯塔爾，今天採 2 小時精華版，不把上午排太滿。可以 Riva 海濱作為暖身，接著進入皇宮核心 Peristyle，再視時間選擇地下室或鐘樓；若只能選一個，優先看皇宮地下室。
+        </p>
+      </div>
 
-      <ul className="text-sm text-gray-600 space-y-3 list-none pl-0">
-        <li>
-          <div className="font-bold text-gray-700 flex items-center mb-1">
-            1. Riva 海濱步道
+      <div className="space-y-4">
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ① Riva 海濱步道
             <MapLink url="https://maps.app.goo.gl/rYQ6ZvdQXCjZfyQA6" />
-          </div>
-          <span className="text-xs text-gray-500 block">
-            早晨散步，欣賞港口、棕櫚樹與舊城外牆交界的風光，也適合作為進入皇宮前的暖身。
-          </span>
-        </li>
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            早晨先從 Riva 海濱步道暖身，欣賞港口、棕櫚樹與舊城外牆交界的風光。這裡很適合作為進入皇宮前的第一個視角，也能感受 Split 作為海港城市的明亮氣氛。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            建議停留：10–15 分鐘。以輕鬆散步與拍港口為主，不需要停太久。
+          </p>
+        </div>
 
-        <li className="bg-yellow-50 p-2 rounded-lg border border-yellow-100">
-          <div className="font-bold text-gray-800 flex items-center mb-1">
-            2. 列柱中庭 Peristyle ⭐
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ② 皇宮核心｜列柱中庭 Peristyle ⭐
             <MapLink url="https://maps.app.goo.gl/kmV8rJb1vXmYVXEaA" />
-          </div>
-          <span className="text-xs text-gray-600 block">
-            皇宮核心與最經典打卡點，過去是皇帝接受臣民朝見的正式空間。早晨人潮相對少，石柱、拱門與鐘樓形成的光影很漂亮。
-          </span>
-        </li>
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            Peristyle 是戴克里先皇宮的核心空間，也是 Split 最經典的畫面之一。過去這裡是皇帝接受臣民朝見的正式空間，如今則成為舊城裡最有歷史感的廣場。早晨人潮相對少，石柱、拱門與鐘樓形成的光影很漂亮。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            建議停留：15–20 分鐘。這裡是今日必看重點，適合多拍幾個角度。
+          </p>
+        </div>
 
-        <li>
-          <div className="font-bold text-gray-700 flex items-center mb-1">
-            3. 聖多米努斯主教座堂 & 鐘樓
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ③ 聖多米努斯主教座堂 & 鐘樓
             <MapLink url="https://maps.app.goo.gl/qZur58gK27CyJ6yL8" />
-          </div>
-          <span className="text-xs text-gray-500 block">
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
             主教座堂前身是戴克里先皇帝的陵墓，後來被改為基督教教堂，是 Split 歷史轉變最具象徵性的地方。若體力與時間允許，可登鐘樓俯瞰紅瓦屋頂與港口；若時間緊，外觀與中庭周邊拍照即可。
-          </span>
-        </li>
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            建議停留：外觀 10 分鐘；若登鐘樓需再多抓 20–30 分鐘。若和地下室只能選一個，優先地下室。
+          </p>
+        </div>
 
-        <li className="bg-gray-50 p-2 rounded-lg border border-gray-100">
-          <div className="font-bold text-gray-800 flex items-center mb-1">
-            4. 皇宮地下室 Substructures ⭐
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ④ 必看遺構｜皇宮地下室 Substructures ⭐
             <MapLink url="https://maps.app.goo.gl/cUvvJrwu1NA36kDp7" />
-          </div>
-          <span className="text-xs text-gray-600 block">
-            巨大的石造空間，是 Split 最有震撼力的古羅馬遺構之一。地下室結構大致對應皇帝居住區的上層格局，也讓人更容易想像當年皇宮的規模。若鐘樓與地下室只能選一個，優先選地下室。
-          </span>
-        </li>
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            皇宮地下室是 Split 最有震撼力的古羅馬遺構之一，巨大的石造空間保留得相當完整。地下室結構大致對應皇帝居住區的上層格局，也讓人更容易想像當年皇宮的規模。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            建議停留：25–35 分鐘。若鐘樓與地下室只能選一個，優先選地下室。
+          </p>
+        </div>
 
-        <li>
-          <div className="font-bold text-gray-700 flex items-center mb-1">
-            5. 水果廣場 Fruit Square
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ⑤ 水果廣場 Fruit Square
             <MapLink url="https://www.google.com/maps/search/?api=1&query=Fruit+Square+Split" />
-          </div>
-          <span className="text-xs text-gray-500 block">
-            順路穿過舊城巷弄，感受 Split 從古羅馬皇宮逐漸變成中世紀城市的層次，作為上午散步收尾。
-          </span>
-        </li>
-      </ul>
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            從皇宮核心順路穿過舊城巷弄，來到水果廣場。這裡可以感受 Split 從古羅馬皇宮逐漸變成中世紀城市的層次，也很適合作為上午散步收尾。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            建議停留：10–15 分鐘。若時間充裕，可在附近喝杯咖啡再回住宿整理。
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          建議走法
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          Riva 海濱步道 → Peristyle 列柱中庭 → 聖多米努斯主教座堂與鐘樓外觀 → 皇宮地下室 Substructures → Fruit Square。08:30–10:30 走皇宮精華，10:30–11:00 留給咖啡、拍照或回住宿整理，11:00 左右準備用餐、取行李與車，12:00 準時出發前往 Mostar。
+        </p>
+      </div>
     </Fragment>
   ),
   tips: [
     '上午採精華版即可，不要把行程排太滿',
     '08:30–10:30 走皇宮精華，10:30–11:00 留給咖啡、拍照或回住宿整理',
+    'Peristyle 是必看核心，早晨人潮較少',
     '皇宮地下室很值得看；若鐘樓與地下室只能選一個，優先地下室',
     '11:00 左右準備用餐、回住宿取行李與車',
     '12:00 建議準時出發前往 Mostar'
