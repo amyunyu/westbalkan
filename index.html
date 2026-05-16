@@ -399,108 +399,133 @@ tips: [
 ]
                 },
                  {
-    id: 'd1-6',
-    time: '18:15',
-    title: '札格瑞布晚餐',
-    type: 'food',
-    iconName: 'Utensils',
-    location: 'Zagreb Old Town',
-    desc: (
-        <Fragment>
-             <h4 className="font-bold text-gray-800 mb-2">【札格瑞布晚餐選項】</h4>
-            <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                抵達日的晚餐建議安排在舊城、主廣場或 Tkalčićeva 街一帶，走完上城後可自然銜接。今晚不建議排太正式或太晚的餐廳，以「好抵達、好入座、吃完能早點休息」為優先。
-            </p>
-            <ul className="space-y-4">
-                <li>
-                    <div className="font-bold text-gray-700 flex items-center">
-                        La Štruk
-                        <MapLink url="https://maps.app.goo.gl/XxbrHj2KArnY891H8" />
-                    </div>
-                    <p className="text-xs text-gray-500 mt-1">
-                        主打克羅埃西亞經典 Štrukli，可選甜口或鹹口，適合抵達日想吃特色料理但不想吃太重的晚餐。
-                    </p>
-                </li>
-                <li>
-    <div className="font-bold text-gray-700 flex items-center">
-        HERITAGE - Croatian Street Food & Shop
-        <MapLink url="https://maps.app.goo.gl/JuJgkjrKjtvWerqN7" />
-    </div>
-    <p className="text-xs text-gray-500 mt-1">
-        小巧的克羅埃西亞街頭小食與在地食材選物店，主打本地小農食材、冷肉、起司、抹醬、三明治與特色飲品。適合抵達日想吃得輕鬆、有特色，又不想坐太久的晚餐。
-    </p>
-</li>
-                <li>
-                    <div className="font-bold text-gray-700 flex items-center">
-                        Batak Tkalčićeva
-                        <MapLink url="https://maps.app.goo.gl/v9SbKvGMc3cLFtTW9" />
-                    </div>
-                    <p className="text-xs text-gray-500 mt-1">
-                        主打烤肉與 Grill，份量較足，適合想吃得飽一點或同行者偏好肉類料理的選擇。
-                    </p>
-                </li>
-            </ul>
-        </Fragment>
-    ),
-    tips: [
-        '抵達日首選 La Štruk 或 HERITAGE，負擔較輕',
-        '晚餐後可沿 Tkalčićeva 街短暫散步',
-        '若時差很累，吃完就回住宿休息，不要硬排夜景',
-    ]
+  id: 'd1-6',
+  time: '18:15',
+  title: '札格瑞布晚餐',
+  type: 'food',
+  iconName: 'Utensils',
+  subtitle: 'Štrukli / Street Food / Grill',
+  location: 'Zagreb Old Town',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        抵達日的晚餐建議安排在舊城、主廣場或 Tkalčićeva 街一帶，走完上城後可自然銜接。今晚不建議排太正式或太晚的餐廳，以「好抵達、好入座、吃完能早點休息」為優先。
+      </p>
+
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 抵達日首選：La Štruk
+            <MapLink url="https://maps.app.goo.gl/XxbrHj2KArnY891H8" />
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            主打克羅埃西亞經典 Štrukli，可選甜口或鹹口。Štrukli 是以薄麵皮包起司餡後烘烤或水煮的傳統料理，口感柔軟、溫熱、有奶香，很適合抵達日想吃特色料理但不想吃太重的晚餐。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            適合情境：想吃 Zagreb 代表性小吃、晚餐不要太正式、吃完可以早點回住宿休息。
+          </p>
+        </div>
+
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ② 輕鬆小食：HERITAGE ★
+            <MapLink url="https://maps.app.goo.gl/JuJgkjrKjtvWerqN7" />
+          </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            小巧的克羅埃西亞街頭小食與在地食材選物店，主打本地小農食材、冷肉、起司、抹醬、三明治與特色飲品。適合抵達日想吃得輕鬆、有特色，又不想坐太久的晚餐。
+          </p>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            適合情境：時差累、胃口不大、想快速吃點在地風味後回住宿。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ③ 想吃飽一點：Batak Tkalčićeva
+            <MapLink url="https://maps.app.goo.gl/v9SbKvGMc3cLFtTW9" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            主打烤肉與 Grill，份量較足，適合想吃得飽一點或同行者偏好肉類料理的選擇。位置在熱鬧的 Tkalčićeva 街一帶，晚餐後可順路短暫散步。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            適合情境：飛機餐吃不飽、想吃肉、想要比較穩定的正餐。
+          </p>
+        </div>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    '抵達日首選 La Štruk 或 HERITAGE，負擔較輕',
+    '想吃飽一點再選 Batak Tkalčićeva',
+    '晚餐後可沿 Tkalčićeva 街短暫散步',
+    '若時差很累，吃完就回住宿休息，不要硬排夜景'
+  ]
 }
             ],
             2: [
                 {
-    id: 'd2-1',
-    time: '08:30',
-    title: '早餐',
-    type: 'food',
-    iconName: 'Coffee',
-    location: 'Zagreb City Center',
-    subtitle: '主廣場 / Dolac Market 附近早餐',
-    desc: (
-        <Fragment>
-            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                早餐安排在主廣場、Dolac Market 或 Tkalčićeva 街附近，吃完即可順路銜接下城散步與市場行程。今天上午重點是 Dolac Market、Zrinjevac Park 與 12:00 Lotrščak Tower 正午大炮，因此早餐以輕鬆、好抵達、不拖太久為主。
-            </p>
+  id: 'd2-1',
+  time: '08:30',
+  title: '早餐',
+  type: 'food',
+  iconName: 'Coffee',
+  subtitle: '主廣場 / Dolac Market 附近早餐',
+  location: 'Zagreb City Center',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        早餐安排在主廣場、Dolac Market 或 Tkalčićeva 街附近，吃完即可順路銜接下城散步與市場行程。今天上午重點是 Dolac Market、Zrinjevac Park 與 12:00 Lotrščak Tower 正午大炮，因此早餐以輕鬆、好抵達、不拖太久為主。
+      </p>
 
-            <div className="mb-6">
-                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                    【Broom 44】
-                    <MapLink url="https://maps.app.goo.gl/mDRruL1U8UoJaM938" />
-                </h4>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                    位在 Dolac Market 旁的小型早午餐店，適合想直接接市場行程的人。咖啡與早餐評價不錯，但店面小，假日或尖峰時間可能需要排隊。
-                </p>
-            </div>
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 市場旁早午餐：Broom 44
+            <MapLink url="https://maps.app.goo.gl/mDRruL1U8UoJaM938" />
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            位在 Dolac Market 旁的小型早午餐店，適合想直接銜接市場行程的人。咖啡與早餐評價不錯，吃完即可走到市場、主廣場與上城方向。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            注意：店面較小，假日或尖峰時間可能需要排隊；若等待太久，建議直接改外帶早餐。
+          </p>
+        </div>
 
-            <div className="mb-6">
-                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                    【Otto & Frank】
-                    <MapLink url="https://maps.app.goo.gl/tukTsRZRLd9AR9Rw6" />
-                </h4>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                    位於 Tkalčićeva 街一帶，適合想坐下來吃一份比較完整早餐的人。招牌 Zagreb Breakfast 很適合當作札格瑞布城市早餐體驗。
-                </p>
-            </div>
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ② 坐下吃完整早餐：Otto & Frank
+            <MapLink url="https://maps.app.goo.gl/tukTsRZRLd9AR9Rw6" />
+          </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            位於 Tkalčićeva 街一帶，適合想坐下來吃一份比較完整早餐的人。招牌 Zagreb Breakfast 很適合當作札格瑞布城市早餐體驗。
+          </p>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            適合情境：想吃得舒服一點、早餐當作城市體驗的一部分，但仍要注意不要拖到後面正午大炮時間。
+          </p>
+        </div>
 
-            <div className="mb-4">
-                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                    【麵包店 / 咖啡外帶】
-                </h4>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                    如果不想花太多時間，也可以選擇附近麵包店或咖啡外帶，買 burek、可頌、咖啡後直接前往市場。這樣最省時間，也最適合趕 11:50 前到 Lotrščak Tower 的節奏。
-                </p>
-            </div>
-        </Fragment>
-    ),
-    tips: [
-        '08:30 左右開始早餐，09:30 前出發散步',
-        '若想吃熱門早午餐，Broom 44 可能需要排隊',
-        '想節省時間可改成麵包店外帶咖啡與 burek',
-        '早餐後先逛 Dolac Market，市場早上最有氣氛',
-        '記得保留 11:50 前抵達 Lotrščak Tower 的時間'
-    ]
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ③ 最省時間：麵包店 / 咖啡外帶
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            如果不想花太多時間，也可以選擇附近麵包店或咖啡外帶，買 burek、可頌、咖啡後直接前往市場。這樣最省時間，也最適合想把上午留給 Dolac Market、下城散步與 Lotrščak Tower 的節奏。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            適合情境：前一天抵達後較累、早上起得比較慢，或不想為了早餐排隊。
+          </p>
+        </div>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    '08:30 左右開始早餐，09:30 前出發散步',
+    '想接 Dolac Market 最順：Broom 44',
+    '想坐下吃完整早餐：Otto & Frank',
+    '想節省時間：麵包店外帶咖啡與 burek',
+    '早餐後先逛 Dolac Market，市場早上最有氣氛',
+    '記得保留 11:50 前抵達 Lotrščak Tower 的時間'
+  ]
                 },
                 {
     id: 'd2-2',
@@ -626,74 +651,87 @@ tips: [
     ]
 },
                 {
-    id: 'd2-4',
-    time: '12:30',
-    title: '午餐',
-    type: 'food',
-    iconName: 'Utensils',
-    location: 'Tkalčićeva Street',
-    subtitle: ' Tkalčićeva 街用餐',
-    desc: (
-        <Fragment>
-            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                看完 Lotrščak Tower 的正午大炮後，可回到 Tkalčićeva 街或主廣場附近用午餐。這一帶聚集許多餐廳、咖啡館與酒吧，選擇豐富，也方便下午搭路面電車前往 Zagreb 市區取車。下午還要辦理租車手續。
-            </p>
+  id: 'd2-4',
+  time: '12:30',
+  title: '午餐',
+  type: 'food',
+  iconName: 'Utensils',
+  subtitle: 'Tkalčićeva 街用餐',
+  location: 'Tkalčićeva Street',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        看完 Lotrščak Tower 的正午大炮後，可回到 Tkalčićeva 街或主廣場附近用午餐。這一帶聚集許多餐廳、咖啡館與酒吧，選擇豐富，也方便下午搭路面電車前往 Zagreb 市區取車。這餐不建議吃太久，重點是補充體力並保留取車緩衝。
+      </p>
 
-            <div className="mb-6">
-                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                    【Otto & Frank】
-                    <MapLink url="https://www.google.com/maps/search/?api=1&query=Otto+%26+Frank+Zagreb" />
-                </h4>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                    位於 Tkalčićeva 街上的輕鬆 bistro，適合早午餐、午餐或簡單正餐。適合想坐下來吃，但不想太正式或吃太久的午餐。
-                </p>
-            </div>
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 輕鬆 Bistro：Otto & Frank
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Otto+%26+Frank+Zagreb" />
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            位於 Tkalčićeva 街上的輕鬆 bistro，適合早午餐、午餐或簡單正餐。若想坐下來吃得舒服一點，但不想太正式或吃太久，這家很適合。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            適合情境：想吃早午餐感、漢堡／蛋料理／輕正餐，且下午還要取車。
+          </p>
+        </div>
 
-            <div className="mb-6">
-                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                    【La Štruk】
-                    <MapLink url="https://maps.app.goo.gl/XxbrHj2KArnY891H8" />
-                </h4>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                    如果 Day 1 晚餐沒有吃到 štrukli，可以把 La Štruk 放在 Day 2 午餐。主打克羅埃西亞經典起司麵皮料理，份量不會像正式主餐那麼重，適合午餐輕鬆吃。
-                </p>
-            </div>
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ② 若 Day 1 沒吃到：La Štruk
+            <MapLink url="https://maps.app.goo.gl/XxbrHj2KArnY891H8" />
+          </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            如果 Day 1 晚餐沒有吃到 štrukli，可以把 La Štruk 放在 Day 2 午餐。主打克羅埃西亞經典起司麵皮料理，可選鹹口或甜口，份量不會像正式主餐那麼重，適合午餐輕鬆吃。
+          </p>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            注意：Štrukli 現點現做，菜單提醒最少等待約 25 分鐘；若趕取車，不要太晚入座。
+          </p>
+        </div>
 
-            <div className="mb-6">
-                <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                    【Batak Tkalčićeva】
-                    <MapLink url="https://maps.app.goo.gl/v9SbKvGMc3cLFtTW9" />
-                </h4>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                    位於 Tkalčićeva 街一帶的 Grill 餐廳，適合想吃肉類、烤肉或份量較足的午餐。若選這間，則預留較長用餐時間。
-                </p>
-            </div>
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ③ 想吃飽一點：Batak Tkalčićeva
+            <MapLink url="https://maps.app.goo.gl/v9SbKvGMc3cLFtTW9" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            位於 Tkalčićeva 街一帶的 Grill 餐廳，適合想吃肉類、烤肉或份量較足的午餐。若選這間，建議預留較長用餐時間，避免影響下午取車。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            適合情境：想吃肉、飛機時差後需要補充體力，或不想下午太快餓。
+          </p>
+        </div>
+      </div>
 
-            <div className="p-4 bg-gray-50 rounded-xl border border-gray-100 mb-2">
-                <h4 className="font-bold text-gray-700 mb-2 flex items-center gap-2">
-                    <Icon name="TrainFront" size={16} /> 午餐後前往取車：搭 Zagreb 路面電車
-                </h4>
-                <p className="text-sm text-gray-600 leading-relaxed mb-2">
-                    午餐後可從主廣場 / Tkalčićeva 街附近搭路面電車前往 Uni Rent Zagreb Downtown。提前在路邊 kiosk 或 ZET 售票點購票，比上車向司機購買便宜。
-                </p>
-                <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
-                    <li>預先購票：30 分鐘 €0.53、60 分鐘 €0.93、90 分鐘 €1.33。</li>
-                    <li>上車向司機購票：30 分鐘 €0.80、60 分鐘 €1.33、90 分鐘 €1.99。</li>
-                    <li>前往 Kranjčevićeva 46 通常 30 分鐘票已足夠，但若不熟路線可買 60 分鐘票更安心。</li>
-                    <li>上車後記得在黃色驗票機打票 / 驗票，效期從驗票後開始計算。</li>
-                    <li>票價可能調整。</li>
-                </ul>
-            </div>
-        </Fragment>
-    ),
-    tips: [
-        '下午 15:00 要前往取車',
-        '午餐後先買電車票，再搭車前往 Uni Rent Zagreb Downtown',
-        '路面電車票可在 kiosk / ZET 售票點購買，通常比上車買便宜',
-        '搭車後記得驗票，避免查票罰款',
-        '14:15–14:30 左右離開午餐區，保留找車站與搭車緩衝'
-    ]
-},
+      <div className="mt-5 p-4 bg-blue-50 rounded-xl border border-blue-100">
+        <h4 className="font-bold text-blue-900 mb-2 flex items-center gap-2">
+          <Icon name="TrainFront" size={16} /> 午餐後前往取車：搭 Zagreb 路面電車
+        </h4>
+        <p className="text-sm text-blue-900/80 leading-relaxed mb-2 text-justify">
+          午餐後可從主廣場 / Tkalčićeva 街附近搭路面電車前往 Uni Rent Zagreb Downtown。提前在路邊 kiosk 或 ZET 售票點購票，比上車向司機購買便宜。
+        </p>
+        <ul className="text-sm text-blue-900/80 space-y-1 list-disc pl-4">
+          <li>預先購票：30 分鐘 €0.53、60 分鐘 €0.93、90 分鐘 €1.33。</li>
+          <li>上車向司機購票：30 分鐘 €0.80、60 分鐘 €1.33、90 分鐘 €1.99。</li>
+          <li>前往 Kranjčevićeva 46 通常 30 分鐘票已足夠，但若不熟路線可買 60 分鐘票更安心。</li>
+          <li>上車後記得在黃色驗票機打票 / 驗票，效期從驗票後開始計算。</li>
+          <li>票價可能調整，實際以現場或 ZET 公告為準。</li>
+        </ul>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    '下午 15:00 要前往取車，午餐不要拖太久',
+    '首選 Otto & Frank：坐得舒服、選擇多、時間比較好控制',
+    '若 Day 1 沒吃 La Štruk，Day 2 午餐可補吃，但要預留現做等待時間',
+    '想吃飽一點再選 Batak Tkalčićeva',
+    '午餐後先買電車票，再搭車前往 Uni Rent Zagreb Downtown',
+    '搭車後記得驗票，避免查票罰款',
+    '14:15–14:30 左右離開午餐區，保留找車站與搭車緩衝'
+  ]
+                },
                 {
   id: 'd2-5',
   time: '15:00',
