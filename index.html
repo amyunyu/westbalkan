@@ -4254,11 +4254,12 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
       <ul className="list-none pl-0 space-y-4">
         <li>
           <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-            Ćevabdžinica Željo
-            <MapLink url="https://maps.app.goo.gl/GfPFjuXM3wGeZ5zKA" />
+            Ćevabdžinica Beg
+            <MapLink url="https://maps.app.goo.gl/yPiDcXYRupAYCysy5" />
           </div>
           <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            Sarajevo 經典 ćevapi 名店，適合想吃最代表性的波士尼亞烤肉卷。上菜快、份量剛好，很適合長途移動後的第一餐。(Google評論台灣人示警)
+            Sarajevo 經典 ćevapi ，適合想吃最代表性的波士尼亞烤肉卷。上菜快、份量剛好，很適合長途移動後的第一餐。(Google評論台灣人示警)
+            ćevapi是巴爾幹地區很經典的烤肉卷／烤肉腸，吃法為搭配 somun / lepinja 麵包 + 生洋蔥 + kajmak 或優格類醬料。
           </p>
         </li>
 
@@ -4279,6 +4280,7 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
           </div>
           <p className="text-sm text-gray-600 leading-relaxed text-justify">
             晚餐後若還有精神，可以外帶一份 baklava 或喝杯波士尼亞咖啡，作為抵達 Sarajevo 的甜點收尾。
+            巴克拉瓦，果仁蜜餅，是一種口味濃郁、甜蜜的土耳其酥皮點心。
           </p>
         </li>
       </ul>
@@ -4556,13 +4558,59 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
                 },
                 {
   id: 'd15-3',
-  time: '12:00',
+  time: '12:15',
   title: '老城午餐',
   type: 'food',
   iconName: 'Utensils',
-  location: 'Sarajevo Old Town',
-  desc: '在 Baščaršija 或老城周邊享用午餐。若昨晚已吃 ćevapi，今天可改試 Bosanski lonac 波士尼亞燉肉、burek 餡餅，或找間傳統餐廳坐下來慢慢吃。',
-  tips: ['若昨晚吃過 ćevapi，今天可改吃 Bosanski lonac 或 burek', '午餐後準備前往 Tunnel of Hope']
+  subtitle: 'Burek / 傳統熱菜 / Ćevapi',
+  location: 'Baščaršija / Sarajevo Old Town',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        完成上午的塞拉耶佛歷史環線後，在 Baščaršija 或老城周邊享用午餐。這餐重點是坐下休息、補充體力，但不要吃太久，下午還要前往 Tunnel of Hope。
+      </p>
+
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 快速在地：Buregdžinica Bosna
+            <MapLink url="https://maps.app.goo.gl/VvtC1YiscwEvDVKC7" />
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            適合想吃得快又有在地感。可點 burek、sirnica、zeljanica 或 krompiruša，搭配優格或酸奶類飲品。若早餐吃得不多，這餐很適合補充體力。
+          </p>
+        </div>
+
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ② 傳統熱菜：Aščinica ASDŽ
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Ascinica+ASDZ+Sarajevo" />
+          </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            適合想吃 Bosanski lonac、begova čorba、japrak、klepe、dolma 等波士尼亞家常熱菜。這類餐點很適合中午吃，熱、樸實、份量剛好，也比正式餐廳更有效率。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ③ 經典 Ćevapi：Ćevabdžinica Željo
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Cevabdzinica+Zeljo+Sarajevo" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            Sarajevo 經典 ćevapi 名店，適合想吃最代表性的波士尼亞烤肉卷。上菜快、份量剛好（Google評論中台灣人示警，所以放成備案）。
+            ćevapi是巴爾幹地區很經典的烤肉卷／烤肉腸，吃法為搭配 somun / lepinja 麵包 + 生洋蔥 + kajmak 或優格類醬料。
+          </p>
+        </div>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    '上午會走不少路，午餐建議坐下休息',
+    '最快速：Buregdžinica Bosna，適合 burek 類餡餅',
+    '最在地：Aščinica ASDŽ，適合 Bosanski lonac、begova čorba、japrak、klepe',
+    'Ćevabdžinica Željo 只放備案，想吃 ćevapi 再考慮',
+    '13:15 左右準備離開，前往 Tunnel of Hope'
+  ]
                 },
                 {
   id: 'd15-4',
@@ -4642,6 +4690,7 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
   iconName: 'Car',
   subtitle: 'Tunnel of Hope → Old Town',
   location: 'Sarajevo Old Town',
+  mapLink: 'https://maps.app.goo.gl/awir3k6gjWrq6cWPA',
   desc: '參觀完希望隧道博物館後，開車返回市區或住宿地點。這段行程內容較沉重，建議不要立刻接太密集的景點，可以先回住宿洗臉、補水、整理情緒，或回老城找間咖啡店坐下休息。',
   tips: [
     '可回住宿休息 30–45 分鐘',
@@ -4697,17 +4746,18 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
     '這段是緩衝時間，不要排太硬',
     '可喝 Bosnian coffee 或吃 baklava',
     '若看到 Sarajevo Rose，請留意腳下並保持尊重',
-    '17:30 前後準備晚餐，晚餐後接 Yellow Bastion 夕陽'
+    '17:15 前後準備晚餐，晚餐後接 Yellow Bastion 夕陽'
   ]
                 },
                 {
   id: 'd15-7',
-  time: '17:45',
+  time: '17:30',
   title: '塞拉耶佛傳統晚餐',
   type: 'food',
   iconName: 'Utensils',
-  subtitle: 'Dveri / Avlija',
+  subtitle: 'Dveri • 已訂位',
   location: 'Sarajevo',
+  mapLink: 'https://maps.app.goo.gl/7WjjLe8EyJQzJvf37',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
