@@ -7096,12 +7096,12 @@ title: '札達爾舊城晚餐',
                 }
             ],
             19: [
-                {
+               {
   id: 'd19-1',
   time: '07:30',
-  title: '古城牆健行 (City Walls)',
+  title: '古城牆健行',
   type: 'sightseeing',
-  iconName: 'MapPin',
+  iconName: 'Camera',
   subtitle: 'Pile Gate 入場 • 08:00 開始 • 避熱避人',
   location: 'Dubrovnik City Walls',
   mapLink: 'https://maps.app.goo.gl/eVGQffvaDtVUWakaA',
@@ -7141,11 +7141,11 @@ title: '札達爾舊城晚餐',
           </ul>
         </div>
 
-        <div>
-          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-1 flex items-center">
             【走完後安排】
           </h4>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
             走完城牆後不要立刻加排 Lovrijenac Fortress，建議先回到老城內找咖啡館休息、補水與吃早餐。Lovrijenac 雖然通常可與城牆票券搭配使用，但需要額外爬坡與階梯，較適合視體力在傍晚或隔天清晨遠拍。
           </p>
         </div>
@@ -7153,119 +7153,160 @@ title: '札達爾舊城晚餐',
     </Fragment>
   ),
   tips: [
-  '票券已購買',
-  '07:30 抵達 Pile Gate 一帶，等開放後立刻入場',
-  '全程約 1.5–2 小時，階梯多、遮蔭少，一定要帶水、帽子、防曬'
+    '票券已購買，出發前先截圖或確認離線可開啟',
+    '07:30 抵達 Pile Gate 一帶，等開放後立刻入場',
+    '全程約 1.5–2 小時，階梯多、遮蔭少，一定要帶水、帽子、防曬',
+    '城牆上廁所與補水點有限，建議入場前先上洗手間',
+    '走完後先早餐咖啡休息，不要立刻加排 Lovrijenac Fortress'
   ]
-                },
+               },
                 {
   id: 'd19-2',
   time: '10:00',
-  title: '早餐咖啡休息',
+  title: '城牆後早餐咖啡休息',
   type: 'food',
   iconName: 'Coffee',
-  subtitle: 'Gradska Kavana Arsenal / Cogito Coffee',
+  subtitle: 'Gradska Kavana Arsenal • Cogito Coffee',
   location: 'Dubrovnik Old Town',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        走完古城牆後，身體會又熱又累，這一站重點是補水、降溫與坐下休息。
+        走完古城牆後，身體會又熱又累，這一站重點不是趕景點，而是補水、降溫、上洗手間與坐下休息。建議先找有座位的地方喝咖啡或果汁，吃一點簡單早餐，讓體力恢復後再繼續老城深度散步。
       </p>
 
-      <div className="space-y-6">
-        <div>
-          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-            【Gradska Kavana Arsenal】
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 坐下休息首選｜Gradska Kavana Arsenal
             <MapLink url="https://maps.app.goo.gl/3FXyxhGyDhxYsrXr7" />
           </h4>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            首選 Gradska Kavana Arsenal，位置在老城核心，營業時間早，適合點咖啡、果汁與簡單早餐。
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            首選 Gradska Kavana Arsenal，位置在老城核心，營業時間早，適合點咖啡、果汁、水與簡單早餐。若走完城牆後需要坐下休息、降溫、上洗手間，這間比純咖啡外帶型店更穩。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            適合情境：城牆後很熱、需要坐久一點、想吃簡單早餐或補水。
           </p>
         </div>
 
-        <div>
-          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-            【Cogito Coffee】
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ② 咖啡控備案｜Cogito Coffee
             <MapLink url="https://maps.app.goo.gl/svUNFhoAE9bk5iq76" />
           </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            如果更在意咖啡品質，可以選 Cogito Coffee，短暫喝杯 specialty coffee 後再繼續老城散步。這間比較適合「想喝好咖啡」的情境，不一定是完整早餐或長時間休息首選。
+          </p>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            適合情境：想喝精品咖啡、只需要短暫休息、不想吃太多。
+          </p>
+        </div>
+
+        <div className="p-3 bg-stone-50 rounded-xl border border-stone-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            今日休息策略
+          </h4>
           <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            如果更在意咖啡品質，可以選 Cogito Coffee，短暫喝杯 specialty coffee 後再繼續老城散步。
+            這餐不要吃太撐，因為 13:00 還會安排午餐。最理想是補水、喝咖啡或果汁，再吃一份輕早餐或甜點即可。若天氣太熱或店家人太多，就近找有陰影、有座位的 café，不必為了指定店家硬撐。
           </p>
         </div>
       </div>
     </Fragment>
   ),
   tips: [
-    '走完城牆先補水，不要立刻接下一個景點',
-    '首選 Gradska Kavana Arsenal：位置順、有座位、適合早餐',
-    '咖啡控可選 Cogito Coffee',
+    '走完城牆先補水、降溫、坐下休息',
+    '首選 Gradska Kavana Arsenal：位置順、有座位、較適合早餐與休息',
+    '咖啡控可選 Cogito Coffee，但它比較適合短暫喝咖啡',
     '這餐不要吃太撐，13:00 還有午餐',
     '若太熱或人太多，就近找有陰影和空位的 café 即可'
   ]
-                },
+},
                 {
   id: 'd19-3',
   time: '11:00',
   title: '老城深度散步',
   type: 'sightseeing',
   iconName: 'Camera',
-  subtitle: 'Rector’s Palace • Franciscan Monastery • Jesuit Stairs',
+  subtitle: 'Rector’s Palace • Cathedral • Jesuit Stairs',
   location: 'Dubrovnik Old Town',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        走完古城牆並喝完咖啡後，回到老城平面慢慢欣賞杜布羅夫尼克的教堂、宮殿與巷弄。（可選 1–2 個重點進去，其餘以外觀、廣場與街景為主。）
+        走完古城牆並喝完咖啡後，回到老城平面慢慢欣賞杜布羅夫尼克的教堂、宮殿與巷弄。這段不需要每個景點都入內參觀，建議只選 1–2 個重點深入，其餘以外觀、廣場與街景為主，保留體力給下午休息與傍晚 Mount Srđ 夕陽。
       </p>
 
-      <div className="space-y-6">
-        <div>
-          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-            【Dubrovnik Cathedral 聖母升天大教堂】
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 第一順位｜Rector’s Palace 總督府
+            <MapLink url="https://maps.app.goo.gl/CmKsdv427gZqUJoo6" />
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            這是本段最推薦入內參觀的建築。總督府曾是拉古薩共和國的權力中心，建築融合哥德式、文藝復興與巴洛克元素。中庭、拱廊與樓梯很有氣氛，能感受到 Dubrovnik 昔日作為海上共和國的秩序、外交與繁華。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            建議停留：30–45 分鐘。若今天只選一個室內景點，優先選這裡。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ② Dubrovnik Cathedral 聖母升天大教堂
             <MapLink url="https://maps.app.goo.gl/2pmqiisn3ygAqYeF8" />
           </h4>
           <p className="text-sm text-gray-600 leading-relaxed text-justify">
             巴洛克式大教堂位於總督府附近，外觀優雅，周邊廣場感很好。若喜歡教堂內部、祭壇與宗教藝術，可以入內短暫參觀；若時間有限，外觀與廣場氛圍也已足夠。
           </p>
-        </div>
-          
-          <div>
-          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-            【Rector’s Palace 總督府】
-            <MapLink url="https://maps.app.goo.gl/CmKsdv427gZqUJoo6" />
-          </h4>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            最推薦進去參觀的建築。這裡曾是拉古薩共和國的權力中心，建築融合哥德式、文藝復興與巴洛克元素。中庭、拱廊與樓梯很有氣氛，能感受到杜布羅夫尼克昔日作為海上共和國的秩序與繁華。
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            建議停留：外觀 5–10 分鐘；若入內可抓 15–20 分鐘。
           </p>
         </div>
 
-        <div>
-          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-            【Sponza Palace / St. Blaise / 鐘塔】
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ③ Luža Square｜Sponza Palace • St. Blaise • 鐘塔
             <MapLink url="https://maps.app.goo.gl/DszMqr8weU1xepmd9" />
           </h4>
           <p className="text-sm text-gray-600 leading-relaxed text-justify">
             Luža Square 一帶是老城最華麗的核心區域。Sponza Palace 的立面與拱廊很適合外觀欣賞；聖伯拉削教堂是城市守護聖人的教堂，可短暫入內；鐘塔則是廣場視覺焦點，適合慢慢拍照。
           </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            建議停留：15–25 分鐘。這一帶以外觀、廣場與拍照為主即可。
+          </p>
         </div>
 
-          <div>
-          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-            【Jesuit Stairs / Church of St. Ignatius】
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ④ 第二順位｜Franciscan Monastery 方濟各教堂和修道院
+            <MapLink url="https://maps.app.goo.gl/KiZ1jnrrjD9V75mx9" />
+          </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            位於 Pile Gate 與 Onofrio Fountain 附近，教堂與修道院緊鄰 Stradun。修道院迴廊安靜陰涼，與主街的熱鬧形成對比；若想看較靜謐的宗教建築、修道院空間與老藥房，這裡很值得進去。
+          </p>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            建議停留：25–40 分鐘。若 Rector’s Palace 之後還有體力，可以把它作為第二個室內景點。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ⑤ Jesuit Stairs / Church of St. Ignatius
             <MapLink url="https://maps.app.goo.gl/QUGS4XNYN3J7ostPA" />
           </h4>
           <p className="text-sm text-gray-600 leading-relaxed text-justify">
             從 Gundulić Square 往上走到耶穌會階梯與聖依納爵教堂，是老城最有戲劇感的空間之一。階梯、教堂立面與兩側牆面形成漂亮的垂直構圖，很適合拍照；教堂可視體力與時間短暫入內。
           </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            建議停留：10–20 分鐘。若早上城牆已經走累，可只拍階梯外觀。
+          </p>
         </div>
-          
-        <div>
-  <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-    【Franciscan Monastery 方濟各教堂和修道院】
-    <MapLink url="https://maps.app.goo.gl/KiZ1jnrrjD9V75mx9" />
-  </h4>
-  <p className="text-sm text-gray-600 leading-relaxed text-justify">
-    位於 Pile Gate 與 Onofrio Fountain 附近，教堂與修道院緊鄰 Stradun，修道院迴廊安靜陰涼，與主街的熱鬧形成對比；若想看較靜謐的宗教建築、修道院空間與老藥房，這裡很值得進去。
-  </p>
+
+        <div className="p-3 bg-stone-50 rounded-xl border border-stone-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            今日參觀策略
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            若想看歷史與建築，優先入內 Rector’s Palace；若想看安靜修道院與老藥房，再加 Franciscan Monastery。其他景點以外觀和廣場散步為主即可。13:00 前後接午餐，這段不要拖太久，下午才有時間回住宿休息。
+          </p>
         </div>
       </div>
     </Fragment>
@@ -7273,53 +7314,71 @@ title: '札達爾舊城晚餐',
   tips: [
     '這段建議只選 1–2 個室內景點深入參觀',
     '第一順位：Rector’s Palace；第二順位：Franciscan Monastery',
-    'Sponza Palace、St. Blaise、鐘塔適合外觀看與拍照',
+    'Sponza Palace、St. Blaise、鐘塔適合外觀欣賞與拍照',
     'Jesuit Stairs 很適合拍老城階梯與光影',
-    '13:00 前後接午餐，不要拖太久以免下午無法休息'
+    '13:00 前後接午餐，不要拖太久，以免下午無法休息'
   ]
 },
                 {
   id: 'd19-4',
   time: '13:00',
-  title: '午餐',
+  title: '杜布羅夫尼克老城午餐',
   type: 'food',
   iconName: 'Utensils',
-  subtitle: 'Barba / Gradska Kavana Arsenal / Taj Mahal',
+  subtitle: 'Barba • Gradska Kavana Arsenal • Taj Mahal',
   location: 'Dubrovnik Old Town',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        走完城牆與老城散步後，午餐可吃得輕鬆一點，不要排太正式的大餐，因為下午還要回住宿休息、傍晚上 Mount Srđ。
+        走完古城牆與老城深度散步後，午餐以輕鬆、補水、避暑為主，不建議排太正式的大餐。下午還要回住宿休息，傍晚再上 Mount Srđ 看夕陽，所以這餐吃得舒服即可，不要吃太久或太撐。
       </p>
 
-      <div className="space-y-6">
-        <div>
-          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-            【Barba】
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 首選｜Barba
             <MapLink url="https://maps.app.goo.gl/s4sgWQ28cBvBgbtz5" />
           </h4>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            首選 Barba，適合吃章魚漢堡、蝦與炸海鮮等輕鬆海鮮小吃。
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            Barba 是老城內很適合午餐的輕鬆海鮮小吃選項，適合吃章魚漢堡、蝦、炸海鮮或簡單魚類餐點。上午已經走了城牆與老城，這餐選 Barba 的好處是不用吃得太正式，也比較不會影響下午休息與傍晚上山。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            適合情境：想吃海鮮街食、想快速舒服吃完、想把下午留給休息。
           </p>
         </div>
 
-        <div>
-          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-            【Gradska Kavana Arsenal】
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ② 避暑坐下｜Gradska Kavana Arsenal
             <MapLink url="https://maps.app.goo.gl/w3i63TmzPTAKCDHc9" />
           </h4>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            若想坐得舒服、避暑並吃海鮮或克羅埃西亞料理，可選 Gradska Kavana Arsenal。
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            若天氣炎熱、早上走完城牆後很累，或只是想坐得舒服一點，可以選 Gradska Kavana Arsenal。位置在老城核心，適合點海鮮、克羅埃西亞料理、沙拉、咖啡或飲料，讓身體先降溫再回住宿休息。
+          </p>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            適合情境：想坐得舒服、想避暑、想邊吃午餐邊恢復體力。
           </p>
         </div>
 
-        <div>
-          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-            【Taj Mahal】
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ③ 若 D18 沒吃｜Taj Mahal Old Town
             <MapLink url="https://maps.app.goo.gl/P5cBmVqU1KnzFAsf8" />
           </h4>
           <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            如果 D18 晚餐沒有吃 Taj Mahal，也可以把波士尼料理放在這餐，但建議控制份量。
+            如果 D18 晚餐沒有安排 Taj Mahal，D19 午餐也可以作為補吃波士尼／巴爾幹料理的備案。不過這餐建議控制份量，不要點太多慢燉菜或肉類拼盤，避免下午太撐、傍晚上 Mount Srđ 時不舒服。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            適合情境：D18 沒吃到 Taj Mahal、想補波士尼料理，但願意吃得簡單一點。
+          </p>
+        </div>
+
+        <div className="p-3 bg-stone-50 rounded-xl border border-stone-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            今日午餐建議
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            若天氣不太熱、想吃輕鬆海鮮，首選 Barba；若早上城牆走完已經很累，選 Gradska Kavana Arsenal 坐下避暑會更舒服。Taj Mahal 只建議在 D18 沒吃到時作為備案，而且份量要控制。午餐後建議回住宿休息，傍晚再出發上 Mount Srđ。
           </p>
         </div>
       </div>
@@ -7328,16 +7387,15 @@ title: '札達爾舊城晚餐',
   tips: [
     '首選 Barba：海鮮街食，適合章魚漢堡、蝦與炸海鮮',
     '想坐舒服與避暑，可選 Gradska Kavana Arsenal',
-    '若 D18 沒吃 Taj Mahal，D19 午餐也可作為巴爾幹料理備案',
-    '這餐不要吃太飽，下午要休息，傍晚還要上 Mount Srđ',
+    '若 D18 沒吃 Taj Mahal，D19 午餐可作為波士尼料理備案，但份量要控制',
+    '這餐不要吃太飽，下午要回住宿休息，傍晚還要上 Mount Srđ',
     '13:00 後用餐比較避開最尖峰人潮'
   ]
-                },
-                {
+},{
   id: 'd19-5',
   time: '17:00',
-  title: 'Mount Srđ 夕陽',
-  type: 'activity',
+  title: 'Mount Srđ 夕陽觀景',
+  type: 'sightseeing',
   iconName: 'Compass',
   subtitle: '纜車上山 • 俯瞰舊城紅瓦屋頂',
   location: 'Mount Srđ',
@@ -7345,45 +7403,66 @@ title: '札達爾舊城晚餐',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        上午已走完古城牆、午後也逛過老城，傍晚最適合上 Mount Srđ，從高處俯瞰杜布羅夫尼克舊城、紅瓦屋頂、城牆、Lokrum Island 與亞得里亞海。這個視角很適合作為旅程收尾：早上是在城牆上看城市細節，傍晚則是從山上看整座城市與海。
+        上午已走完古城牆，午後也逛過老城並回住宿休息，傍晚最適合上 Mount Srđ。從高處俯瞰杜布羅夫尼克舊城、紅瓦屋頂、城牆、老港、Lokrum Island 與亞得里亞海，是整趟 Dubrovnik 行程最經典的全景視角之一。早上是在城牆上看城市細節，傍晚則是從山上回望整座城市與海。
       </p>
 
-      <div className="space-y-6">
-        <div>
-          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-            【上山方式】
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 上山方式｜Dubrovnik Cable Car
           </h4>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
             首選搭乘 Dubrovnik Cable Car 上山，速度快、視野好，也最有儀式感。若纜車排隊過長、天氣或風況影響營運，也可以改搭 Uber、Bolt 或計程車上山。建議夕陽前 60–90 分鐘抵達山上，才有足夠時間拍照、走動與等光線變化。
           </p>
-        </div>
-
-        <div>
-          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-            【山上看什麼】
-          </h4>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            山頂可以俯瞰完整的杜布羅夫尼克舊城輪廓、城牆線條、紅瓦屋頂、老港與 Lokrum Island。傍晚光線會從金色慢慢轉成藍調，是拍攝整趟 Dubrovnik 最經典全景的時刻。
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            建議：先確認纜車營運狀況與排隊情況；若隊伍太長，不要硬等，可以直接改叫車上山。
           </p>
         </div>
 
-        <div>
-          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-            【晚餐安排】
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ② 山上看什麼
           </h4>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            若想在山上用餐，可提前預約 Panorama Restaurant；但如果不想被訂位時間綁住，也可以只上山看景拍照，夕陽後再下山回老城晚餐。這樣彈性較高，也比較適合已經走了一整天的行程節奏。
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            山頂可以俯瞰完整的杜布羅夫尼克舊城輪廓、城牆線條、紅瓦屋頂、老港與 Lokrum Island。傍晚光線會從金色慢慢轉成藍調，是拍攝整趟 Dubrovnik 最經典全景的時刻。若天氣晴朗，可以先拍白天版舊城，再等金色光線、夕陽與藍調夜色。
+          </p>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            拍照重點：舊城全景、Lokrum Island、海岸線、紅瓦屋頂與城牆輪廓。
           </p>
         </div>
 
-        <div>
-          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-            【備案：Lokrum Island】
+        <div className="p-3 bg-blue-50 rounded-xl border border-blue-100">
+          <h4 className="font-bold text-blue-900 mb-2 flex items-center">
+            ③ 晚餐安排
           </h4>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            如果當天不想上山、天氣不適合看夕陽，或更想游泳與森林散步，可改考慮 Lokrum Island。不過 Lokrum 較適合早一點出發並停留 2–3 小時，傍晚前往需特別確認船班與末班船時間。
+          <p className="text-sm text-blue-900/80 leading-relaxed text-justify">
+            若想在山上用餐，可提前預約 Panorama Restaurant，景觀非常好，但會被訂位時間綁住。若想保留彈性，更建議只上山看景與拍照，夕陽後再下山回老城晚餐。這樣比較適合已經走了一整天、傍晚想看光線變化但不想被餐廳時間限制的節奏。
+          </p>
+          <p className="text-xs text-blue-800/70 leading-relaxed mt-2">
+            若沒有預約 Panorama Restaurant，就把 Mount Srđ 當作純觀景行程，下山後再晚餐最彈性。
           </p>
         </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ④ 備案｜不上山時的夕陽選擇
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            若纜車停駛、排隊太久、天氣不適合，或下午休息後不想再上山，可以改成在 Old Port、Ploče Gate 外側或 Banje Beach 一帶看夕陽。這些點雖然沒有 Mount Srđ 的高處全景，但移動壓力小，也比較適合體力不足時作為輕鬆備案。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            Lokrum Island 比較適合白天半日遊，不建議作為 17:00 後的主要備案。
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          今日夕陽建議
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          若體力許可，Mount Srđ 很值得保留，因為它能把 Dubrovnik 舊城、城牆、紅瓦屋頂與亞得里亞海一次收入眼前。建議先搭纜車或叫車上山，看完夕陽後再下山晚餐；若纜車排隊太久或天氣不佳，就改在 Old Port 或 Banje Beach 輕鬆看夕陽，不要硬趕。
+        </p>
       </div>
     </Fragment>
   ),
@@ -7392,9 +7471,10 @@ title: '札達爾舊城晚餐',
     '首選搭纜車；若排隊過長或停駛，可改 Uber / Bolt / 計程車',
     '上山前先確認纜車營運、風況與夕陽時間',
     'Panorama Restaurant 景觀好，但若想用餐需提前預約',
-    'Lokrum Island 只作為備案，且需確認船班與末班船'
+    '若不上山，可改 Old Port、Ploče Gate 外側或 Banje Beach 看夕陽',
+    'Lokrum Island 較適合白天半日遊，不建議作為傍晚臨時備案'
   ]
-                },
+},
                 {
                     id: 'd19-6',
                     time: '20:00',
