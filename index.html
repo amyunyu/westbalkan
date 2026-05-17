@@ -3560,7 +3560,7 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
   title: '前往 Rastoke',
   type: 'transport',
   iconName: 'Car',
-  subtitle: '18世紀水磨坊/車程3h10',
+  subtitle: '18世紀水磨坊 • 車程3h10',
   location: 'Rastoke, Croatia',
   mapLink: 'https://maps.app.goo.gl/Qr7cMxXrHWwj1MKt8',
   desc: '告別亞得里亞海岸，開車前往克羅埃西亞著名的水磨坊村落 Rastoke。這是一段較長的內陸車程，建議中途視情況休息、補水或加油。',
@@ -3630,10 +3630,10 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
                 {
   id: 'd9-4',
   time: '16:00',
-  title: '前往十六湖・超市補給',
+  title: '前往十六湖 • 超市補給',
   type: 'transport',
   iconName: 'Car',
-  subtitle: '車程約 50m・入住前補給',
+  subtitle: '車程約 50m • 入住前補給',
   location: 'Plitvice Lakes National Park',
   mapLink: 'https://maps.app.goo.gl/SZXmLHcbfiHt2gt16',
   desc: (
@@ -4497,18 +4497,51 @@ title: '札達爾舊城晚餐',
                 {
   id: 'd12-1',
   time: '07:35',
-  title: '前往赫瓦爾島 (Hvar)',
+  title: '前往赫瓦爾島 Hvar',
   type: 'transport',
   iconName: 'Compass',
   subtitle: '08:15 Split → 09:15 Hvar 快船',
-  location: 'Split Ferry Port',
-  mapLink: 'https://maps.app.goo.gl/MjJb6a6uJxnH4RSQ9',
-  desc: '早上前往 Split Ferry Port，搭乘 08:15 從 Split 出發、09:15 抵達 Hvar Town 的快船。船程約 1 小時，沿途可欣賞亞得里亞海與達爾馬提亞群島風光。抵達 Hvar 後先上西班牙堡壘，避開中午炎熱與人潮，再回到舊城廣場、港口與海邊慢慢散步。',
+  location: 'Split Ferry Port • 登船碼頭',
+  mapLink: 'https://maps.app.goo.gl/QUjxr4Vc5k5ATuCR9',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        早上前往 Split Ferry Port，搭乘 08:15 從 Split 出發、09:15 抵達 Hvar Town 的快船。船程約 1 小時，沿途可欣賞亞得里亞海與達爾馬提亞群島風光。抵達 Hvar 後先上西班牙堡壘，避開中午炎熱與人潮，再回到舊城廣場、港口與海邊慢慢散步。
+      </p>
+
+      <div className="space-y-4">
+        <div className="p-3 bg-blue-50 rounded-xl border border-blue-100">
+          <h4 className="font-bold text-blue-900 mb-2 flex items-center">
+            ① 登船碼頭｜Split Ferry Port
+            <MapLink url="https://maps.app.goo.gl/QUjxr4Vc5k5ATuCR9" />
+          </h4>
+          <p className="text-sm text-blue-900/80 leading-relaxed text-justify">
+            早上請優先導航到實際登船碼頭位置，而不是只搜尋 Split Ferry Port 大範圍。不同船公司或航線的停靠位置可能略有不同，抵達後再依現場船公司標示、電子票資訊與工作人員指引確認登船口。
+          </p>
+          <p className="text-xs text-blue-800/70 leading-relaxed mt-2">
+            建議 07:35–07:45 抵達碼頭附近，保留找登船口、排隊與確認船班的時間。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ② 船班資訊
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            08:15 從 Split 出發，預計 09:15 抵達 Hvar Town。抵達 Hvar Town 後，建議直接銜接上午行程，先往西班牙堡壘方向上行，之後再下山逛史特芬亞廣場與舊城。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            船票與 QR code 建議事先截圖，避免碼頭現場網路不穩或臨時找不到信件。
+          </p>
+        </div>
+      </div>
+    </Fragment>
+  ),
   tips: [
-    '07:35–07:45 抵達 Split Ferry Port',
+    '07:35–07:45 抵達 Split Ferry Port 登船碼頭',
     '船票與 QR code 建議截圖保存，避免現場網路不穩',
     '確認登船碼頭與船公司標示，不同公司可能停靠位置不同',
-    '抵達 Hvar 後先上堡壘，動線最順'
+    '抵達 Hvar 後先上西班牙堡壘，動線最順'
   ]
                 },
                 {
@@ -4772,11 +4805,50 @@ title: '札達爾舊城晚餐',
   title: '返回斯普利特',
   type: 'transport',
   iconName: 'Compass',
-  subtitle: '依回程船班調整',
-  location: 'Split',
-  desc: '搭乘快船返回斯普利特。',
-  tips: ['務必提前確認回程船班', '建議至少提早 20–30 分鐘回到碼頭']
-                },
+  subtitle: 'Hvar → Split 快船',
+  location: 'Hvar 回程登船碼頭',
+  mapLink: 'https://maps.app.goo.gl/4eNmKynQwWj32jp1A',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        下午搭乘快船從 Hvar Town 返回 Split。回程前請先確認船公司、出發時間與實際登船碼頭位置，並預留足夠時間從舊城或港口咖啡館慢慢走回碼頭。
+      </p>
+
+      <div className="space-y-4">
+        <div className="p-3 bg-blue-50 rounded-xl border border-blue-100">
+          <h4 className="font-bold text-blue-900 mb-2 flex items-center">
+            ① 回程登船碼頭｜Hvar Town
+            <MapLink url="https://maps.app.goo.gl/4eNmKynQwWj32jp1A" />
+          </h4>
+          <p className="text-sm text-blue-900/80 leading-relaxed text-justify">
+            回程請優先使用實際登船碼頭連結，不要只導航到 Hvar Port 大範圍。不同船公司可能在港口不同位置上下船，現場仍需依船公司標示、電子票資訊與工作人員指引確認。
+          </p>
+          <p className="text-xs text-blue-800/70 leading-relaxed mt-2">
+            建議至少提早 20–30 分鐘回到碼頭附近，保留找登船口、排隊與確認船班的時間。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ② 回程船班提醒
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            搭乘快船返回 Split，船程依船公司與航線而定。回程前請再次確認票面時間、目的地是否為 Split，以及是否有臨時碼頭或班次調整。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            船票與 QR code 建議事先截圖，避免碼頭現場網路不穩或臨時找不到信件。
+          </p>
+        </div>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    '務必提前確認回程船班、船公司與目的地 Split',
+    '建議至少提早 20–30 分鐘回到碼頭附近',
+    '船票與 QR code 建議截圖保存，避免現場網路不穩',
+    '不同船公司可能停靠位置不同，現場依標示與工作人員指引為準'
+  ]
+}
                 {
   id: 'd12-dinner',
   time: '18:00',
