@@ -1886,24 +1886,59 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
 {
   id: 'd5-2',
   time: '10:30',
-  title: '前往布萊德',
+  title: '前往布萊德・遊客中心',
   type: 'transport',
   iconName: 'Car',
   subtitle: '車程約 45 分鐘',
-  location: 'Bled, Slovenia',
-  mapLink: 'https://www.google.com/maps/search/?api=1&query=Lake+Bled',
+  location: 'Infocenter Triglavska roža Bled',
+  mapLink: 'https://maps.app.goo.gl/B6ECcfUxmRHHfq5t7',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        離開盧比安納後，開車前往斯洛維尼亞最經典的湖區小鎮布萊德。抵達後先安排湖景午餐，讓旅程節奏自然轉入阿爾卑斯山腳下的悠閒氛圍。
+        離開盧比安納後，開車前往斯洛維尼亞最經典的湖區小鎮布萊德。抵達後先到 Infocenter Triglavska roža Bled 遊客中心，拿地圖、確認湖區資訊與停車動線，也可以順便看看在地選物與伴手禮，再銜接湖景午餐或湖畔散步，讓旅程節奏自然轉入阿爾卑斯山腳下的悠閒氛圍。
       </p>
-      <div className="p-3 bg-gray-50 rounded-lg border border-gray-100 text-sm text-gray-600">
-        <span className="font-bold">🚗 駕駛提醒：</span>
-        沿著 A2 高速公路行駛，路況通常良好。接近布萊德時可能會有些許車潮，請放慢速度欣賞沿途阿爾卑斯山腳下的美景。
+
+      <div className="space-y-4">
+        <div className="p-3 bg-blue-50 rounded-xl border border-blue-100">
+          <h4 className="font-bold text-blue-900 mb-2 flex items-center">
+            ① 抵達第一站｜Infocenter Triglavska roža Bled
+            <MapLink url="https://maps.app.goo.gl/B6ECcfUxmRHHfq5t7" />
+          </h4>
+          <p className="text-sm text-blue-900/80 leading-relaxed text-justify">
+            布萊德的遊客中心，適合剛抵達時先短暫停留。可以索取地圖、詢問湖區散步路線、停車資訊、船班或當日活動，也可以看看在地伴手禮與 Bled Local Selection 類型商品。
+          </p>
+          <p className="text-xs text-blue-800/70 leading-relaxed mt-2">
+            適合情境：剛抵達布萊德、想先確認湖區資訊、想買比較穩妥的在地紀念品或伴手禮。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            駕駛提醒
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            沿著 A2 高速公路行駛，路況通常良好。接近布萊德時可能會有些許車潮，請放慢速度，留意行人、單車與湖區周邊停車標示。
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          抵達後建議
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          若時間順利，可以先停留遊客中心 15–20 分鐘，拿地圖與確認資訊後，再前往湖邊午餐或散步。若停車或抵達時間延後，遊客中心也可以改到下午湖畔自由時間再補逛。
+        </p>
       </div>
     </Fragment>
   ),
-  tips: ['確認行李都已上車', '準備好相機迎接湖光山色']
+  tips: [
+    '確認行李都已上車',
+    '抵達布萊德後可先到 Infocenter Triglavska roža Bled 拿地圖與確認湖區資訊',
+    '遊客中心可順便看在地選物、蜂蜜、茶、果醬或 Bled Local Selection 商品',
+    '若時間不足，遊客中心可改到下午湖畔自由時間再逛',
+    '接近布萊德湖區時留意車潮、行人與停車標示'
+  ]
 },
 {
   id: 'd5-3',
@@ -2257,44 +2292,82 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
   title: 'Vogel Cable Car',
   type: 'activity',
   iconName: 'Compass',
-  subtitle: '纜車上山＋山頂散步',
+  subtitle: '纜車上山 • 山頂散步 • 博希尼湖全景',
   location: 'Vogel Ski Center',
   mapLink: 'https://maps.app.goo.gl/wSvNqeQ9jzwmCc1t9',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        從博希尼湖畔前往 Vogel Cable Car（那邊就有停車場），搭乘纜車上山，從高處俯瞰博希尼湖與朱利安阿爾卑斯山景。若天氣晴朗，這會是整天最壯觀的視角之一：湖泊像一面深藍色鏡子躺在山谷中，周圍被層層山脈與高山草地包圍。
+        從博希尼湖畔前往 Vogel Cable Car，纜車站旁設有停車場，停好車後搭乘纜車上山，從高處俯瞰博希尼湖與朱利安阿爾卑斯山景。若天氣晴朗，這會是整天最壯觀的視角之一：湖泊像一面深藍色鏡子躺在山谷中，周圍被層層山脈與高山草地包圍。
       </p>
 
-      <div className="mb-4">
-        <h4 className="font-bold text-gray-800 mb-1">【山頂亮點】</h4>
-        <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
-          <li>俯瞰深谷中的博希尼湖，視角震撼。</li>
-          <li>欣賞朱利安阿爾卑斯群峰與高山草地景色。</li>
-          <li>可在山頂短程散步，或找間咖啡館休息。</li>
-        </ul>
+      <div className="space-y-4">
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ① 搭乘 Vogel Cable Car
+            <MapLink url="https://maps.app.goo.gl/wSvNqeQ9jzwmCc1t9" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            從湖畔纜車站搭上山，短時間內就能從湖邊視角切換到高山視角。若天氣穩定，這段很值得安排，能一次看到博希尼湖、山谷與朱利安阿爾卑斯山的層次。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            適合情境：天氣晴朗、雲量不厚、想看博希尼湖最經典的高處全景。
+          </p>
+        </div>
+
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ② 山頂亮點｜湖景與阿爾卑斯山景
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            山頂最重要的亮點是俯瞰深谷中的博希尼湖，視角非常開闊。天氣好時，可以看到湖面、山谷、高山草地與朱利安阿爾卑斯群峰交疊在一起，是這天很值得期待的景色。
+          </p>
+          <ul className="text-xs text-orange-800/70 leading-relaxed mt-2 space-y-1 list-disc pl-4">
+            <li>俯瞰深谷中的博希尼湖，視角震撼。</li>
+            <li>欣賞朱利安阿爾卑斯群峰與高山草地景色。</li>
+            <li>可在山頂短程散步，或找間咖啡館休息。</li>
+          </ul>
+        </div>
+
+        <div className="p-3 bg-blue-50 rounded-xl border border-blue-100">
+          <h4 className="font-bold text-blue-900 mb-2 flex items-center">
+            ③ 上山前確認｜Vogel 即時天氣
+            <MapLink url="https://vogel.si/en/weather/" />
+          </h4>
+          <p className="text-sm text-blue-900/80 leading-relaxed text-justify">
+            出發前可先查看 Vogel 官方天氣頁面，確認山上溫度、風況、雲量與能見度。若 webcam 看起來一片白霧，代表上山後景觀可能有限，可以彈性調整行程。
+          </p>
+          <p className="text-xs text-blue-800/70 leading-relaxed mt-2">
+            判斷重點：山頂能見度、雲霧狀況、風勢與溫度。不要只看湖邊天氣，山上狀況可能不同。
+          </p>
+        </div>
+
+        <div className="p-3 bg-stone-50 rounded-xl border border-stone-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            天氣備案
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            上山前先確認雲量與能見度。若山區雲霧太厚、能見度不佳，不必勉強搭纜車上山，可改成延長博希尼湖畔散步、湖邊咖啡時間，或提早前往薩維察瀑布。
+          </p>
+        </div>
       </div>
 
-      <div className="p-3 bg-gray-50 rounded-lg border border-gray-100 text-sm text-gray-600">
-        <span className="font-bold">☁️ 天氣判斷：</span>
-        上山前先確認雲量與能見度。若山區雲霧太厚、能見度不佳，可考慮不上山，改成延長湖畔散步、咖啡時間，或提早前往薩維察瀑布。
-      </div>
-
-         <div className="mt-4">
-        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-          【Vogel 即時天氣】
-          <MapLink url="https://vogel.si/en/weather/" />
+      <div className="mt-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          今日建議
         </h4>
         <p className="text-sm text-gray-600 leading-relaxed text-justify">
-          出發前可先查看官方天氣頁面，確認山上溫度、風況、雲量與能見度。若 webcam 看起來一片白霧，代表上山後景觀可能有限，可以彈性調整行程。
+          如果天氣晴朗，Vogel Cable Car 很值得保留，因為它能提供博希尼湖最經典的高處視角；若山上雲霧厚，就不要硬上山，把時間留給湖畔散步與薩維察瀑布，整天節奏會更舒服。
         </p>
       </div>
     </Fragment>
   ),
   tips: [
     '山上氣溫較低，建議帶件薄外套',
-    '上山前先確認雲量與能見度',
-    '若天氣不好，不必勉強上山，可改成湖邊散步或提早去瀑布'
+    '上山前先看 Vogel 官方天氣與 webcam',
+    '若 webcam 一片白霧，不必勉強上山',
+    '天氣好時，Vogel 是博希尼湖區最值得看的高處視角',
+    '若天氣不好，可改成湖邊散步或提早去薩維察瀑布'
   ]
 },
                 {
@@ -2406,8 +2479,56 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
                     iconName: 'Coffee',
                     subtitle: '布萊德奶油蛋糕',
                     location: 'Lake Bled',
-                    desc: '回到布萊德後，可以在湖畔找個長椅休息，或是享用著名的「布萊德奶油蛋糕」(Kremna rezina)。這段時間也可以用來補足昨天想做但沒時間完成的活動，或者採買紀念品。',
-                    tips: ['享受悠閒的湖畔時光']
+                    <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+  <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+    ③ 自由補行程｜紀念品 / 湖邊散步
+  </h4>
+  <p className="text-sm text-gray-600 leading-relaxed text-justify">
+    這段也可以用來補足前一天想做但沒完成的活動，例如湖邊散步、買明信片或紀念品、拍湖心島與城堡角度，或先回住宿整理休息。
+  </p>
+
+<div className="mt-3 p-3 bg-stone-50 rounded-lg border border-stone-100">
+  <h5 className="font-bold text-gray-800 mb-2">
+    順路紀念品店 / 選物店
+  </h5>
+
+  <ul className="text-xs text-gray-600 leading-relaxed space-y-2 list-none pl-0">
+    <li className="flex items-start">
+      <span>
+        <span className="font-bold text-gray-700">Triglavska roža Shop / TIC Bled：</span>
+        遊客中心旁／裡面的在地選物與伴手禮店，適合買 Bled Local Selection、蜂蜜、茶、果醬、明信片與比較穩妥的在地小物。
+      </span>
+      <MapLink url="https://maps.app.goo.gl/t2NsaDW1VRRYdBW66" />
+    </li>
+
+    <li className="flex items-start">
+      <span>
+        <span className="font-bold text-gray-700">I Love Bled：</span>
+        湖邊主要散步區附近，適合快速買明信片、杯子、T-shirt、Bled 主題小物或觀光感比較強的紀念品。
+      </span>
+      <MapLink url="https://maps.app.goo.gl/2YGfSZ4VeR3fja9y7" />
+    </li>
+
+    <li className="flex items-start">
+      <span>
+        <span className="font-bold text-gray-700">Galerija Mikame：</span>
+        適合找比較有手作感、設計感的小型紀念品，若想避開太制式的觀光商品，可以順路看看。
+      </span>
+      <MapLink url="https://maps.app.goo.gl/QqfuvWfwxxp7xm8B6" />
+    </li>
+  </ul>
+</div>
+
+  <p className="text-xs text-gray-500 leading-relaxed mt-2">
+    適合情境：前一天行程被天氣或體力影響，想保留一點彈性；或想買不是太普通的 Bled 伴手禮。
+  </p>
+</div>
+                    tips: [
+  '這段以休息為主，不需要再排固定景點',
+  '若還沒吃布萊德奶油蛋糕，可安排 Kavarna Park',
+  '若走累了，就在湖畔長椅放空看湖',
+  '晚餐前先回住宿整理一下也很適合'
+]
                 },
                 {
   id: 'd6-9',
@@ -2424,24 +2545,61 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
         回到布萊德後，在住宿旁的 Steakhouse Berc 享用晚餐。這天白天已經走訪博希尼湖、Vogel 山景與薩維察瀑布，晚上不再拉遠移動，適合用一頓舒適的牛排晚餐慢慢收尾。
       </p>
 
-      <div className="mb-4">
-        <h4 className="font-bold text-gray-800 mb-1">
-          【推薦點法】
-        </h4>
-        <p className="text-sm text-gray-600 leading-relaxed text-justify">
-          這家主打高品質肉類，菜單上也寫明不使用人工添加物與增味劑。最穩的主菜是 Ribeye steak 300g，搭烤馬鈴薯、蔬菜與香草奶油；想吃精緻一點可選 Filet mignon 200g，搭 žlikrof 餃子、鵝肝與 demi-glace 醬；若想清爽一點，Striploin / New York steak 搭蘆筍與 chimichurri 也很適合。
-        </p>
-      </div>
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 已訂位｜Restavracija Steakhouse Berc
+            <MapLink url="https://maps.app.goo.gl/ujktEB9G1GuhpRtd8" />
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            餐廳就在住宿旁，晚餐後不用再開車或拉遠移動。這天已經有湖區、山景與瀑布行程，晚上安排在這裡最省力，也能好好坐下來吃一餐。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            適合情境：白天走很多路、想吃一頓舒服正式的晚餐、晚餐後直接回住宿休息。
+          </p>
+        </div>
 
-      <p className="text-sm text-gray-600 leading-relaxed text-justify">
-        若兩人用餐，可考慮水牛莫札瑞拉佐風乾火腿分食，再點 Ribeye 與 Filet mignon 或烤章魚作為主菜。第 5 天已安排 Kavarna Park 品嚐布萊德奶油蛋糕，所以這晚甜點可改點氣泡酒雪酪，或直接不點甜點。
-      </p>
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ② 牛排主菜推薦
+          </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            這家主打高品質肉類，菜單上也寫明不使用人工添加物與增味劑。最穩的主菜是 Ribeye steak 300g，搭烤馬鈴薯、蔬菜與香草奶油；想吃精緻一點可選 Filet mignon 200g，搭 žlikrof 餃子、鵝肝與 demi-glace 醬；若想清爽一點，Striploin / New York steak 搭蘆筍與 chimichurri 也很適合。
+          </p>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            推薦主菜：Ribeye steak、Filet mignon、Striploin / New York steak。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ③ 非牛排選擇
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            如果其中一人不想吃牛排，可考慮烤章魚或海鱸魚。這樣一人吃牛排、一人吃海鮮，整體會比較平衡，也不會兩份肉類都太重。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            適合情境：白天已經吃比較多、想讓晚餐不要太厚重，或兩人想分食不同風味。
+          </p>
+        </div>
+
+        <div className="p-3 bg-stone-50 rounded-xl border border-stone-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            兩人點餐建議
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            可以先點水牛莫札瑞拉佐風乾火腿分食，再點 Ribeye 與 Filet mignon；若想平衡一點，也可以改成 Ribeye 加烤章魚或海鱸魚。第 5 天已安排 Kavarna Park 品嚐布萊德奶油蛋糕，所以這晚甜點可改點氣泡酒雪酪，或直接不點甜點。
+          </p>
+        </div>
+      </div>
     </Fragment>
   ),
   tips: [
+    '已訂位，晚餐後可直接回住宿休息',
     '推薦主菜：Ribeye steak、Filet mignon、Striploin / New York steak',
     '非牛排選擇可考慮烤章魚或海鱸魚',
-    '菜單價格自 2026/4/1 起生效，價格皆含 VAT'
+    '兩人可一份牛排＋一份海鮮，吃起來比較平衡',
+    '第 5 天若已吃布萊德奶油蛋糕，這晚甜點可省略或改點清爽款',
   ]
 }
             ],
