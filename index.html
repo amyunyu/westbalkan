@@ -2472,63 +2472,109 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
                     tips: []
                 },
                 {
-                    id: 'd6-8',
-                    time: '17:00',
-                    title: '湖邊休息／自由活動',
-                    type: 'relax',
-                    iconName: 'Coffee',
-                    subtitle: '布萊德奶油蛋糕',
-                    location: 'Lake Bled',
-                    <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
-  <h4 className="font-bold text-gray-800 mb-2 flex items-center">
-    ③ 自由補行程｜紀念品 / 湖邊散步
-  </h4>
-  <p className="text-sm text-gray-600 leading-relaxed text-justify">
-    這段也可以用來補足前一天想做但沒完成的活動，例如湖邊散步、買明信片或紀念品、拍湖心島與城堡角度，或先回住宿整理休息。
-  </p>
+  id: 'd6-8',
+  time: '17:00',
+  title: '布萊德湖畔休息',
+  type: 'relax',
+  iconName: 'Coffee',
+  subtitle: '湖邊放空 • 奶油蛋糕 • 紀念品',
+  location: 'Lake Bled',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        從博希尼湖區與薩維察瀑布回到布萊德後，這段時間不再排固定景點，改成湖邊休息與自由活動。可以找個湖畔長椅坐下來看湖心島，也可以補吃布萊德經典奶油蛋糕 Kremna rezina，或順路逛紀念品店與選物店。
+      </p>
 
-<div className="mt-3 p-3 bg-stone-50 rounded-lg border border-stone-100">
-  <h5 className="font-bold text-gray-800 mb-2">
-    順路紀念品店 / 選物店
-  </h5>
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 奶油蛋糕｜Kavarna Park
+            <MapLink url="https://maps.app.goo.gl/n65kbNe6dt7Vvot77" />
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            Kavarna Park 是布萊德奶油蛋糕 Kremna rezina 的經典名店。若前一天沒有吃到，或今天下午想安排一段湖邊咖啡時間，可以來這裡點一份奶油蛋糕搭配咖啡。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            適合情境：想吃布萊德代表甜點、想坐下來休息、想用咖啡與甜點結束山湖行程。
+          </p>
+        </div>
 
-  <ul className="text-xs text-gray-600 leading-relaxed space-y-2 list-none pl-0">
-    <li className="flex items-start">
-      <span>
-        <span className="font-bold text-gray-700">Triglavska roža Shop / TIC Bled：</span>
-        遊客中心旁／裡面的在地選物與伴手禮店，適合買 Bled Local Selection、蜂蜜、茶、果醬、明信片與比較穩妥的在地小物。
-      </span>
-      <MapLink url="https://maps.app.goo.gl/t2NsaDW1VRRYdBW66" />
-    </li>
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ② 湖畔放空｜Lake Bled
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Lake+Bled" />
+          </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            若不想再進店用餐，可以在湖畔找長椅休息，看湖心島、布萊德城堡與傍晚湖面光線。今天已經走了不少路，這段很適合單純放空，不需要再追景點。
+          </p>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            適合情境：想休息、想看湖、想等晚餐前恢復體力。
+          </p>
+        </div>
 
-    <li className="flex items-start">
-      <span>
-        <span className="font-bold text-gray-700">I Love Bled：</span>
-        湖邊主要散步區附近，適合快速買明信片、杯子、T-shirt、Bled 主題小物或觀光感比較強的紀念品。
-      </span>
-      <MapLink url="https://maps.app.goo.gl/2YGfSZ4VeR3fja9y7" />
-    </li>
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ③ 自由補行程｜紀念品 / 湖邊散步
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            這段也可以用來補足前一天想做但沒完成的活動，例如湖邊散步、買明信片或紀念品、拍湖心島與城堡角度，或先回住宿整理休息。
+          </p>
 
-    <li className="flex items-start">
-      <span>
-        <span className="font-bold text-gray-700">Galerija Mikame：</span>
-        適合找比較有手作感、設計感的小型紀念品，若想避開太制式的觀光商品，可以順路看看。
-      </span>
-      <MapLink url="https://maps.app.goo.gl/QqfuvWfwxxp7xm8B6" />
-    </li>
-  </ul>
-</div>
+          <div className="mt-3 p-3 bg-stone-50 rounded-lg border border-stone-100">
+            <h5 className="font-bold text-gray-800 mb-2">
+              順路紀念品店 / 選物店
+            </h5>
 
-  <p className="text-xs text-gray-500 leading-relaxed mt-2">
-    適合情境：前一天行程被天氣或體力影響，想保留一點彈性；或想買不是太普通的 Bled 伴手禮。
-  </p>
-</div>
-                    tips: [
-  '這段以休息為主，不需要再排固定景點',
-  '若還沒吃布萊德奶油蛋糕，可安排 Kavarna Park',
-  '若走累了，就在湖畔長椅放空看湖',
-  '晚餐前先回住宿整理一下也很適合'
-]
+            <ul className="text-xs text-gray-600 leading-relaxed space-y-2 list-none pl-0">
+              <li className="flex items-start">
+                <span>
+                  <span className="font-bold text-gray-700">Triglavska roža Shop / TIC Bled：</span>
+                  遊客中心旁／裡面的在地選物與伴手禮店，適合買 Bled Local Selection、蜂蜜、茶、果醬、明信片與比較穩妥的在地小物。
+                </span>
+                <MapLink url="https://maps.app.goo.gl/t2NsaDW1VRRYdBW66" />
+              </li>
+
+              <li className="flex items-start">
+                <span>
+                  <span className="font-bold text-gray-700">I Love Bled：</span>
+                  湖邊主要散步區附近，適合快速買明信片、杯子、T-shirt、Bled 主題小物或觀光感比較強的紀念品。
+                </span>
+                <MapLink url="https://maps.app.goo.gl/2YGfSZ4VeR3fja9y7" />
+              </li>
+
+              <li className="flex items-start">
+                <span>
+                  <span className="font-bold text-gray-700">Galerija Mikame：</span>
+                  適合找比較有手作感、設計感的小型紀念品，若想避開太制式的觀光商品，可以順路看看。
+                </span>
+                <MapLink url="https://maps.app.goo.gl/QqfuvWfwxxp7xm8B6" />
+              </li>
+            </ul>
+          </div>
+
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            適合情境：前一天行程被天氣或體力影響，想保留一點彈性；或想買不是太普通的 Bled 伴手禮。
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          今日下午建議
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          如果今天在博希尼湖和瀑布走得比較累，建議直接湖邊放空或吃 Kavarna Park 奶油蛋糕即可。若體力還不錯，再補一小段湖邊散步或紀念品採買，不需要把這段排成正式景點。
+        </p>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    '這段以休息為主，不需要再排固定景點',
+    '若還沒吃布萊德奶油蛋糕，可安排 Kavarna Park',
+    '若走累了，就在湖畔長椅放空看湖',
+    '想買伴手禮可看 Triglavska roža Shop / TIC Bled、I Love Bled 或 Galerija Mikame',
+    '晚餐前先回住宿整理一下也很適合'
+  ]
                 },
                 {
   id: 'd6-9',
