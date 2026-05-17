@@ -2650,76 +2650,104 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
 }
             ],
             7: [
-                {
+              {
   id: 'd7-1',
   time: '06:30',
   title: 'Mala Osojnica 晨拍',
   type: 'sightseeing',
   iconName: 'Camera',
-  subtitle: '停 Velika Zaka 後步行登山',
+  subtitle: 'Velika Zaka 停車 • 步行登山 • 湖景全景',
   location: 'Velika Zaka Parking / Mala Osojnica Trail',
   mapLink: 'https://maps.app.goo.gl/g3VMjGhbwr1b4eCo9',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        開車前往布萊德湖西側的 Velika Zaka 停車場，停好車後沿湖邊步行至登山口，再爬上觀景點拍攝布萊德湖經典全景。
+        清晨開車前往布萊德湖西側的 Velika Zaka 停車場，停好車後沿湖邊步行至 Mala Osojnica 登山口，再爬上觀景點拍攝布萊德湖經典全景。這段無法直接開車到觀景台，需要步行上山，適合想拍湖心島、城堡與湖面晨光的人。
       </p>
 
-      <div className="mb-4">
-        <h4 className="font-bold text-gray-800 mb-2">【觀景點選擇】</h4>
-        <ul className="list-none pl-0 space-y-3">
-          <li>
-            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-              Viewpoint 1
-              <MapLink url="https://maps.app.goo.gl/g2mUX4tMVfnorPMLA" />
-            </div>
-            <p className="text-sm text-gray-600 leading-relaxed text-justify">
-              可作為第一個拍攝點，若體力或時間有限，可先在此停留拍攝湖景。
-            </p>
-          </li>
+      <div className="space-y-4">
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ① 停車起點｜Velika Zaka Parking
+            <MapLink url="https://maps.app.goo.gl/g3VMjGhbwr1b4eCo9" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            主導航建議設定至 Velika Zaka Parking，停好車後再沿湖邊步行前往登山口。清晨車位通常比白天好找，但仍建議不要路邊違停，以免影響安全或被開罰。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            停車費參考：約 €7.5／小時。晨拍加上來回步行，建議至少預估 1.5–2 小時停留時間。
+          </p>
+        </div>
 
-          <li>
-            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-              Viewpoint 2
-              <MapLink url="https://maps.app.goo.gl/d96uGR9NRamFX5Fs8" />
-            </div>
-            <p className="text-sm text-gray-600 leading-relaxed text-justify">
-              可繼續往上走，視野通常更開闊，適合拍攝布萊德湖、湖心島與城堡的經典角度。
-            </p>
-          </li>
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ② Viewpoint 1｜第一觀景點
+            <MapLink url="https://maps.app.goo.gl/g2mUX4tMVfnorPMLA" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            可作為第一個拍攝點，若體力或時間有限，可以先在此停留拍攝湖景。這裡適合當作安全版選擇，不一定要硬爬到最上方。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            適合情境：清晨體力普通、步道濕滑、或想保留早餐與後續行程時間。
+          </p>
+        </div>
 
-          <li>
-            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-              Viewpoint 3
-              <MapLink url="https://maps.app.goo.gl/8MZEqHA1fnP3Jgrf7" />
-            </div>
-            <p className="text-sm text-gray-600 leading-relaxed text-justify">
-              若時間、體力與天氣都允許，可再往第三個觀景點前進；適合想多拍幾個角度的晨拍安排。
-            </p>
-          </li>
-        </ul>
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ③ Viewpoint 2｜經典湖景角度
+            <MapLink url="https://maps.app.goo.gl/d96uGR9NRamFX5Fs8" />
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            若體力與時間允許，可繼續往上走到第二個觀景點，視野通常更開闊，適合拍攝布萊德湖、湖心島與城堡的經典角度。這裡會是這段晨拍的主要目標。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            適合情境：天氣好、步道狀況安全、想拍最經典的 Bled 全景。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ④ Viewpoint 3｜進階觀景點
+            <MapLink url="https://maps.app.goo.gl/8MZEqHA1fnP3Jgrf7" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            若時間、體力與天氣都允許，可再往第三個觀景點前進，適合想多拍幾個角度的人。若當天步道濕滑或後面行程緊，這個點可以直接略過。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            適合情境：體力很好、時間充裕、想拍更多不同高度與角度。
+          </p>
+        </div>
+
+        <div className="p-3 bg-stone-50 rounded-xl border border-stone-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            步道提醒
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            登山口到主要觀景點約 20–30 分鐘，部分路段陡峭，清晨可能濕滑。建議穿防滑好走的鞋，帶薄外套與水；若路況不佳，不要勉強往上走，保留 Viewpoint 1 或 Viewpoint 2 即可。
+          </p>
+        </div>
       </div>
 
-      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        觀景台無法直接開車抵達，需步行上山。登山口到主要觀景點約 20–30 分鐘，部分路段陡峭且清晨可能濕滑，建議穿防滑鞋並攜帶薄外套與水。
-      </p>
-
-      <p className="text-sm text-gray-600 leading-relaxed text-justify">
-        停車場費用約 €7.5／小時，晨拍加上來回步行建議至少預估 1.5–2 小時停留時間。
-      </p>
+      <div className="mt-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          今日晨拍建議
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          主目標建議放在 Viewpoint 2，若體力或時間不足，Viewpoint 1 就可以作為安全替代；Viewpoint 3 則視天氣、步道狀況與體力再決定。晨拍後預留時間返回住宿早餐，不要把清晨行程排到太緊。
+        </p>
+      </div>
     </Fragment>
   ),
   tips: [
     '主導航至 Velika Zaka Parking',
-    '停好車後步行前往觀景點',
-    '停車費約 €7.5／小時',
-    '建議預估 1.5–2 小時停留',
-    '依體力選擇走到第 1、2 或第 3 個觀景點',
-    '不要路邊違停',
-    '步道較陡且可能濕滑',
+    '停好車後步行前往 Mala Osojnica 觀景點',
+    '停車費參考約 €7.5／小時',
+    '預估 1.5–2 小時停留',
+    '主目標可放 Viewpoint 2，Viewpoint 3 視體力與路況決定',
+    '步道較陡且清晨可能濕滑，建議穿防滑鞋',
     '晨拍後預留時間回住宿早餐'
   ]
-},
+              },
                 {
   id: 'd7-checkout',
   time: '09:00',
@@ -3141,45 +3169,68 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
   title: '普拉午餐',
   type: 'food',
   iconName: 'Utensils',
-  subtitle: 'Istrian / Pizza / Grill',
+  subtitle: 'Istrian • Pizza • Grill',
   location: 'Pula City Center',
   desc: (
     <Fragment>
-      <ul className="list-none pl-0 space-y-4">
-        <li>
-          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-            Pjero Istrian Gourmet
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        看完 Pula Arena 與 Zerostrasse 後，先在普拉市中心用午餐休息。這餐建議不要吃太久，下午還要接普拉舊城散步。若想吃得有伊斯特里亞特色，選 Pjero Istrian Gourmet；若想快速方便，選 Jupiter；若想吃飽一點、價格實惠，選 Kod Kadre。
+      </p>
+
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 伊斯特里亞特色｜Pjero Istrian Gourmet
             <MapLink url="https://maps.app.goo.gl/F2FWtpkq8UEybUrA9" />
-          </div>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            精緻的伊斯特里亞風味料理，適合想在普拉午餐吃得有特色一點。
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            精緻的伊斯特里亞風味料理，適合想在普拉午餐吃得有特色一點的人。若想試試當地風味、松露、海鮮或比較有餐廳感的午餐，可以優先考慮這間。
           </p>
-        </li>
-        <li>
-          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-            Jupiter
-            <MapLink url="https://www.google.com/maps/search/?api=1&query=Pizzeria+Jupiter+Pula" />
-          </div>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            位於市中心，披薩與義大利麵選擇多，適合想快速、方便用餐。
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            適合情境：想吃伊斯特里亞特色、想坐下來吃得比較有質感，但仍要注意不要拖到下午行程。
           </p>
-        </li>
-        <li>
-          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-            Kod Kadre
+        </div>
+
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ② 快速方便｜Jupiter
+            <MapLink url="https://maps.app.goo.gl/9opMgyh5U64pezoH9" />
+          </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            位於市中心，披薩與義大利麵選擇多，適合想快速、方便用餐。若上午走完競技場與地下通道後只想吃點穩妥、不想研究太多菜單，這間會比較省心。
+          </p>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            適合情境：想快速吃、同行者口味不同、下午還想保留更多舊城散步時間。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ③ 實惠烤肉｜Kod Kadre
             <MapLink url="https://maps.app.goo.gl/XtQtkGjJc3jtffkZA" />
-          </div>
+          </h4>
           <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            傳統烤肉與在地風味，價格相對實惠，適合想吃飽一點的午餐。
+            傳統烤肉與在地風味，價格相對實惠，適合想吃飽一點的午餐。若上午走很多、想補充體力，或想吃比較直接的肉類料理，可以把它當作備案。
           </p>
-        </li>
-      </ul>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            適合情境：想吃肉、想吃飽、想控制預算，不追求太精緻的午餐感。
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          今日午餐建議
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          若想讓普拉午餐比較有在地特色，優先選 Pjero Istrian Gourmet；若天氣很熱或下午想多留時間散步，Jupiter 會是最穩、最快速的選擇；若想吃飽一點再走舊城，選 Kod Kadre。午餐後建議 13:30 左右開始舊城散步。
+        </p>
+      </div>
     </Fragment>
   ),
   tips: [
     '看完 Pula Arena 與 Zerostrasse 後先用午餐休息',
-    '午餐建議不要排太久，保留下午舊城散步時間',
-    '若想快速用餐，可選 Jupiter'
+    '午餐不要排太久，保留下午舊城散步時間'
   ]
 },
 {
@@ -3298,7 +3349,54 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
 },
 {
   id: 'd8-7',
-  time: '16:00',
+  time: '16:30',
+  title: '羅維尼早晚餐',
+  type: 'food',
+  iconName: 'Utensils',
+  subtitle: 'Tunaholic Fish Bar • 海鮮快餐',
+  location: 'Tunaholic Fish Bar',
+  mapLink: 'https://maps.app.goo.gl/h8G1gruZca5Cy6Sq7',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        從普拉回到羅維尼後，先在 Tunaholic Fish Bar 吃一頓輕鬆早晚餐。這家是很多人推薦的海鮮快餐店，主打鮪魚漢堡、魚類三明治、炸物與簡單海鮮料理，適合不想吃正式餐廳、但想在羅維尼吃到海味的人。
+      </p>
+
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 主選｜Tunaholic Fish Bar
+            <MapLink url="https://maps.app.goo.gl/h8G1gruZca5Cy6Sq7" />
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            主打鮪魚漢堡、魚類三明治與 fish bar 快餐，適合從普拉回到羅維尼後先快速補充體力。餐點比正式海鮮餐廳輕鬆，也比較適合接續傍晚海邊散步與夕陽。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            注意：店家 19:00 打烊，建議 16:30–17:00 左右前往，不要拖到太晚。
+          </p>
+        </div>
+
+        <div className="p-3 bg-stone-50 rounded-xl border border-stone-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            今日用餐建議
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            這餐可以當作早晚餐，不用吃太正式。吃完後直接回到港口或舊城海邊散步，找位置看夕陽。若白天普拉行程延後、趕不上 Tunaholic，才改成 Graciano 或其他羅維尼晚餐備案。
+          </p>
+        </div>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    'Tunaholic Fish Bar 19:00 打烊，建議不要太晚抵達',
+    '這餐可當作早晚餐，吃完再去海邊散步看夕陽',
+    '若普拉行程延後趕不上，可改 Graciano 或其他晚餐備案',
+    '吃完後可直接接 Rovinj 港口與舊城海邊散步'
+  ]
+},
+{
+  id: 'd8-8',
+  time: '17:30',
   title: '羅維尼午後海邊時光',
   type: 'relax',
   iconName: 'Coffee',
@@ -3308,77 +3406,54 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        回到羅維尼後，把節奏放慢。可以在港口、市中心海邊或舊城小巷散步，找間海邊酒吧坐下來，等待夕陽慢慢染上海面。
+        吃完 Tunaholic Fish Bar 後，把節奏放慢。可以在港口、市中心海邊或舊城小巷散步，找間海邊酒吧坐下來，等待夕陽慢慢染上海面。這段不再硬排行程，重點是享受羅維尼傍晚的海風與光線。
       </p>
 
-      <div className="mb-4">
-        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-          【推薦海邊小酒吧】
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 海邊小酒吧｜Mediterraneo Bar
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Mediterraneo+Bar+Rovinj" />
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            位於舊城海邊的經典酒吧，座位面向海景，很適合午後喝一杯、等夕陽。熱門海景座位不一定好等，若剛好有位就坐下，沒有也可以改沿海邊慢慢散步。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            適合情境：想喝一杯、看海、把普拉回程後的節奏慢慢放下來。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ② 港口與舊城散步｜Rovinj Old Town
+            <MapLink url="https://www.google.com/maps/search/?api=1&query=Rovinj+Old+Town" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            若不想坐酒吧，也可以沿著港口、海邊石階與舊城小巷慢慢散步。羅維尼傍晚的光線很漂亮，彩色房屋、漁船與海面都很適合拍照。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            適合情境：想拍照、想散步、或海景酒吧座位已滿。
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          今日傍晚建議
         </h4>
-        <ul className="text-sm text-gray-600 space-y-3 list-none pl-0">
-          <li>
-            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-              Mediterraneo Bar
-              <MapLink url="https://www.google.com/maps/search/?api=1&query=Mediterraneo+Bar+Rovinj" />
-            </div>
-            <p className="text-sm text-gray-600 leading-relaxed text-justify">
-              位於舊城海邊的經典酒吧，座位面向海景，適合午後喝一杯、等夕陽。
-            </p>
-          </li>
-
-        </ul>
-
-        <p className="text-sm text-gray-600 mt-4 leading-relaxed text-justify">
-          坐在海邊喝一杯，看著夕陽落入亞得里亞海，是羅維尼最經典的體驗之一。
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          先吃 Tunaholic，再把夕陽時間留給海邊。若有海景座位就坐 Mediterraneo Bar；若沒有，就沿著港口與舊城海邊散步。這樣比先喝酒再趕 19:00 前吃 Tunaholic 更從容。
         </p>
       </div>
     </Fragment>
   ),
   tips: [
-  '熱門海景座位建議提早卡位',
-  '海邊石階較硬，可帶薄外套或坐墊',
-  '若想先休息，可回住宿後再出門看夕陽',
-  '晚餐安排 Graciano，可先在海邊散步後再前往餐廳'
-]
-},
-{
-  id: 'd8-8',
-  time: '19:00',
-  title: '羅維尼晚餐',
-  type: 'food',
-  iconName: 'Utensils',
-  subtitle: 'Graciano • 海鮮與伊斯特里亞料理',
-  location: 'Graciano',
-  mapLink: 'https://maps.app.goo.gl/aGBDZJsiD5wpS7Hg7',
-  desc: (
-    <Fragment>
-      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        在羅維尼的 Graciano 享用晚餐。這間餐廳以海鮮、伊斯特里亞手工麵與傳統料理為主，適合安排在從普拉回到羅維尼後，作為一頓正式但不過度高壓的晚餐。
-      </p>
-      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        菜單選擇完整，從章魚沙拉、海鮮前菜、Fuži 松露手工麵，到羅維尼風味魚排、烤魷魚與雙人魚盤都有。若想吃在地感較強的一餐，Graciano 會比單純景觀餐廳更實際。
-      </p>
-      <div className="mb-4">
-        <h4 className="font-bold text-gray-800 mb-2">【推薦菜色】</h4>
-        <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
-          <li>Octopus salad｜章魚沙拉</li>
-          <li>Fuži with truffles｜伊斯特里亞手工麵佐松露</li>
-          <li>Pljukanci with seafood｜伊斯特里亞手工麵佐海鮮</li>
-          <li>Rovinj style fish fillet｜羅維尼風味魚排</li>
-          <li>Grilled or fried calamari｜烤魷魚或炸魷魚</li>
-          <li>Fish plate Graciano for 2 persons｜Graciano 雙人綜合魚盤</li>
-        </ul>
-      </div>
-    </Fragment>
-  ),
-  tips: [
-    '建議事先訂位',
-    '可預約 19:00 左右晚餐',
-    '若想坐戶外或露台，訂位時可特別詢問',
-    '推薦 Fuži with truffles、Pljukanci with seafood、Rovinj style fish fillet',
-    '若白天普拉行程延後，可改成 19:30'
+    '先吃 Tunaholic，再慢慢看夕陽比較順',
+    '熱門海景座位建議提早卡位',
+    '海邊石階較硬，可帶薄外套或坐墊',
+    '若想先休息，可回住宿後再出門看夕陽'
   ]
-                }
+}
             ],
             9: [
                 {
