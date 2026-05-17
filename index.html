@@ -5665,55 +5665,84 @@ title: '札達爾舊城晚餐',
   title: '塞拉耶佛早餐',
   type: 'food',
   iconName: 'Coffee',
-  subtitle: '住宿附近 / Kawa / 簡單咖啡早餐',
+  subtitle: 'Pekara • Kawa • Eternal Flame 周邊',
   location: 'Fadilpasic’s House / Eternal Flame 周邊',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        由於 09:00 的歷史環線會從 Eternal Flame 永恆之火開始，早餐建議以住宿附近或前往 Eternal Flame 途中簡單解決為主。可在附近 pekara 買麵包、burek、咖啡，或選一間咖啡館坐下來吃輕早餐，08:50 前後準備抵達 Eternal Flame。
+        由於 09:00 的歷史環線會從 Eternal Flame 永恆之火開始，早餐建議以住宿附近或前往 Eternal Flame 途中簡單解決為主。可在附近 pekara 買麵包、burek、優格或咖啡，也可以選一間咖啡館坐下來吃輕早餐。重點是不要繞太遠，08:50 前後準備抵達 Eternal Flame。
       </p>
 
-      <ul className="list-none pl-0 space-y-3">
-        <li>
-          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-            pekara / 外帶早餐
-              <MapLink url="https://maps.app.goo.gl/W7jXEmPM7JDzvoiE8" />
-              <MapLink url="https://maps.app.goo.gl/S5uVtekSPFky27rT7" />
-          </div>
-          <p className="text-xs text-gray-500 mt-1 leading-relaxed">
-            最省時間的選擇。買麵包、burek、優格或咖啡，簡單吃完後直接前往 Eternal Flame 開始歷史環線。
-          </p>
-        </li>
+      <div className="space-y-4">
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ① 省時外帶｜Pekara / 麵包店早餐
+          </h4>
 
-        <li>
-          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-            Kawa
-            <MapLink url="https://maps.app.goo.gl/9fwfYu86G2TbscbMA" />
+          <div className="mb-2 text-xs text-gray-600 leading-relaxed space-y-1">
+            <div className="flex items-center">
+              <span>住宿附近麵包店備案 1</span>
+              <MapLink url="https://maps.app.goo.gl/W7jXEmPM7JDzvoiE8" />
+            </div>
+            <div className="flex items-center">
+              <span>住宿附近麵包店備案 2</span>
+              <MapLink url="https://maps.app.goo.gl/S5uVtekSPFky27rT7" />
+            </div>
           </div>
-          <p className="text-xs text-gray-500 mt-1 leading-relaxed">
+
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            最省時間的選擇。買麵包、burek、優格或咖啡，簡單吃完後直接前往 Eternal Flame 開始歷史環線。若前一晚比較累、早上不想坐太久，這個選項最穩。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            適合情境：想省時間、想吃簡單在地早餐、不想為早餐排隊或繞路。
+          </p>
+        </div>
+
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ② 咖啡首選｜Kawa
+            <MapLink url="https://maps.app.goo.gl/9fwfYu86G2TbscbMA" />
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
             精品咖啡路線，適合想喝 espresso、filter coffee 或冷萃。氣氛現代、有戶外座位，但較偏咖啡輕食，不一定是吃飽型早餐。
           </p>
-        </li>
-
-        <li>
-          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-            Eternal Flame / Ferhadija 附近咖啡館
-            <MapLink url="https://maps.app.goo.gl/kATs4sXvJ6uuhJcT7" />
-          </div>
-          <p className="text-xs text-gray-500 mt-1 leading-relaxed">
-            若想動線最直覺，可直接到 Eternal Flame 附近找咖啡館坐下，吃完後不用移動太多就能開始散步。
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            適合情境：咖啡優先、早餐不想吃太重，或想用一杯好咖啡開始 Sarajevo 的歷史散步。
           </p>
-        </li>
-      </ul>
+        </div>
+
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ③ 動線最直覺｜Eternal Flame / Ferhadija 周邊咖啡館
+            <MapLink url="https://maps.app.goo.gl/kATs4sXvJ6uuhJcT7" />
+          </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            若想動線最直覺，可直接到 Eternal Flame 附近找咖啡館坐下，吃完後不用移動太多就能開始散步。這個選項適合早上不想研究太多路線，直接把早餐與集合點綁在一起。
+          </p>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            適合情境：想最接近 09:00 起點、想避免吃完早餐後還要再走一大段路。
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          今日早餐建議
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          若想最省時間，選住宿附近 pekara 外帶；若想喝好咖啡，選 Kawa；若怕 09:00 來不及，就直接到 Eternal Flame / Ferhadija 附近找咖啡館。今天上午會走歷史環線，早餐不要繞到 Baščaršija 深處再折返，動線會比較不順。
+        </p>
+      </div>
     </Fragment>
   ),
   tips: [
     '早餐建議 08:15 開始，08:50 前後抵達 Eternal Flame',
     '最省時間：住宿附近 pekara 或外帶咖啡',
     '咖啡控：Kawa，但早餐偏輕食路線',
+    '想最接近集合點：Eternal Flame / Ferhadija 周邊咖啡館',
     '不要先走到 Baščaršija 深處再折返，動線會比較繞'
   ]
-                },
+},
                 {
   id: 'd15-2',
   time: '09:00',
