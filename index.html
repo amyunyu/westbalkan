@@ -5906,10 +5906,10 @@ title: '札達爾舊城晚餐',
                 {
   id: 'd15-3',
   time: '12:15',
-  title: '老城午餐',
+  title: '塞拉耶佛老城午餐',
   type: 'food',
   iconName: 'Utensils',
-  subtitle: 'Burek / 傳統熱菜 / Ćevapi',
+  subtitle: 'Burek • 傳統熱菜 • Ćevapi',
   location: 'Baščaršija / Sarajevo Old Town',
   desc: (
     <Fragment>
@@ -6032,7 +6032,7 @@ title: '札達爾舊城晚餐',
                 {
   id: 'd15-5',
   time: '15:00',
-  title: '回市區 / 回住宿休息',
+  title: '回市區 • 住宿休息',
   type: 'transport',
   iconName: 'Car',
   subtitle: 'Tunnel of Hope → Old Town',
@@ -6051,7 +6051,7 @@ title: '札達爾舊城晚餐',
   title: '老城咖啡 & 自由時間',
   type: 'relax',
   iconName: 'Coffee',
-  subtitle: 'Bosnian Coffee / Sarajevo Rose / Baščaršija',
+  subtitle: 'Bosnian Coffee • Sarajevo Rose • Baščaršija',
   location: 'Baščaršija / Sarajevo Old Town',
   desc: (
     <Fragment>
@@ -6297,40 +6297,60 @@ title: '札達爾舊城晚餐',
   title: '科托爾老城輕鬆晚餐',
   type: 'food',
   iconName: 'Utensils',
-  subtitle: 'Scala Santa / Cesarica',
+  subtitle: 'Scala Santa • Cesarica',
   location: 'Kotor Old Town',
   desc: (
     <Fragment>
-      <p className="mb-4 text-gray-600 leading-relaxed">
-        長途跨國移動後，今晚以舊城內輕鬆晚餐為主，不再開車外出。可以先在 Kotor Old Town 小巷散步，再選一間步行可達的餐廳慢慢用餐。
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        長途跨國移動後，今晚以科托爾舊城內輕鬆晚餐為主，不再開車外出。可以先在 Kotor Old Town 小巷散步，感受城牆、石板路與夜晚燈光，再選一間步行可達的餐廳慢慢用餐。這晚不建議排太正式或太遠的餐廳，重點是吃得舒服、早點休息。
       </p>
-      <div className="mt-6 border-t border-gray-100 pt-6">
-        <h4 className="font-bold text-gray-800 mb-3 flex items-center">【晚餐選項】</h4>
-        <ul className="list-none pl-0 space-y-4">
-          <li>
-            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-              Konoba Scala Santa
-              <MapLink url="https://maps.app.goo.gl/Urw28oGmFTE5FH4DA" />
-            </div>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              舊城內的傳統餐廳，適合第一晚吃得輕鬆、有氣氛。
-            </p>
-          </li>
-          <li>
-            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-              Restoran Cesarica
-              <MapLink url="https://maps.app.goo.gl/cwANPzdzKAwaew7Z7" />
-            </div>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              小巧溫馨的海鮮與在地料理選項，適合想吃魚類或傳統菜的晚上。
-            </p>
-          </li>
-        </ul>
+
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 舊城氣氛首選｜Konoba Scala Santa
+            <MapLink url="https://maps.app.goo.gl/Urw28oGmFTE5FH4DA" />
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            位於 Kotor Old Town 內的傳統餐廳，適合第一晚吃得輕鬆、有氣氛。若想坐在老城石牆與巷弄之間，感受科托爾夜晚的古城感，Scala Santa 會是很順的選擇。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            適合情境：剛抵達 Kotor、想在舊城裡吃一頓有氣氛但不過度正式的晚餐。
+          </p>
+        </div>
+
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ② 海鮮在地備案｜Restoran Cesarica
+            <MapLink url="https://maps.app.goo.gl/cwANPzdzKAwaew7Z7" />
+          </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            小巧溫馨的海鮮與在地料理選項，適合想吃魚類、海鮮或傳統菜的晚上。若 Scala Santa 客滿，或你們當天比較想吃海鮮，Cesarica 可以作為很好的替代。
+          </p>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            適合情境：想吃魚類或海鮮、想要比較溫馨的小餐館感。
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          今晚晚餐建議
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          若抵達時間順利，先在舊城小巷短暫散步，再選 Scala Santa 用餐；若想吃海鮮或 Scala Santa 客滿，改選 Cesarica。若跨國移動後已經很累，就不要硬等熱門餐廳，選住宿或老城入口附近步行最方便的餐廳即可。
+        </p>
       </div>
     </Fragment>
   ),
-  tips: ['第一晚放鬆步調', '若抵達較晚，選住宿附近餐廳即可']
-                }
+  tips: [
+    '第一晚放鬆步調，不再開車外出',
+    '首選 Scala Santa：舊城氣氛好、傳統餐廳感',
+    '想吃海鮮或 Scala Santa 客滿，可改 Cesarica',
+    '若抵達較晚，選住宿附近或老城入口附近餐廳即可',
+    '晚餐後可短暫散步，不要排太晚，隔天還有 Kotor 行程'
+  ]
+}
             ],
             17: [
                 {
@@ -6339,7 +6359,7 @@ title: '札達爾舊城晚餐',
   title: '聖約翰堡晨間健行',
   type: 'activity',
   iconName: 'Compass',
-  subtitle: 'Kotor Fortress / San Giovanni',
+  subtitle: 'Kotor Fortress • San Giovanni',
   location: 'Kotor Fortress',
   mapLink: 'https://maps.app.goo.gl/MMrYMbnF2kpKjSDF6',
   desc: (
@@ -6393,7 +6413,7 @@ title: '札達爾舊城晚餐',
   title: '下山後早餐休息',
   type: 'food',
   iconName: 'Utensils',
-  subtitle: '老城咖啡館 / Dobrota 海邊',
+  subtitle: '老城咖啡館 • Dobrota 海邊',
   location: 'Kotor Old Town / Dobrota',
   mapLink: 'https://maps.app.goo.gl/JqFh6tD2G1xR6N8',
   desc: (
@@ -6481,10 +6501,10 @@ title: '札達爾舊城晚餐',
                 {
   id: 'd17-4',
   time: '13:00',
-  title: '午餐',
+  title: '科托爾午餐',
   type: 'food',
   iconName: 'Utensils',
-  subtitle: 'BBQ Tanjga / Dobrota 海邊輕食',
+  subtitle: 'BBQ Tanjga • Dobrota 海邊輕食',
   location: 'Kotor Old Town / Dobrota',
   desc: (
     <Fragment>
@@ -6584,90 +6604,143 @@ title: '札達爾舊城晚餐',
                 {
   id: 'd17-6',
   time: '18:30',
-  title: 'Kotor 舊城夜景晚餐',
+  title: '科托爾舊城夜景晚餐',
   type: 'food',
   iconName: 'Utensils',
-  subtitle: 'Pepe Nero / Pescaria Dekaderon / Cesarica',
+  subtitle: 'Pepe Nero • Dekaderon • Cesarica • Pasta',
   location: 'Kotor Old Town',
   desc: (
     <Fragment>
-      <p className="mb-4 text-gray-600 leading-relaxed">
-        在老城內享用晚餐，或沿著城牆外圍散步，欣賞點燈後的城牆與山壁。若早上有健行，今晚建議不要排太晚，讓身體恢復，避免舟車勞頓與爬山疲勞累積。
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        在 Kotor 老城內享用晚餐，或沿著城牆外圍散步，欣賞點燈後的城牆與山壁。這是 Kotor 的第二晚，可以比前一晚稍微從容一點；但若早上有爬堡壘或走較多路，今晚仍不建議排太晚，讓身體恢復，避免舟車勞頓與爬山疲勞累積。
       </p>
 
-      <p className="mb-4 text-gray-600 leading-relaxed">
-        這是 Kotor 的第二晚，可以比前一晚稍微從容一點。若想好好吃一餐，可優先考慮 Pepe Nero；若想坐在老城核心感受夜晚氣氛，則可選 Pescaria Dekaderon；若想吃小巧溫馨的海鮮與在地料理，Cesarica 也很適合。
-      </p>
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 精緻一點首選｜Pepe Nero
+            <MapLink url="https://maps.app.goo.gl/PZ2V5tTaC2GwGDVC9" />
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            適合第 17 晚慢慢吃的一餐，氣氛比第一晚更像小小犒賞。若想吃得稍微精緻一點、坐下來好好享受 Kotor 第二晚，可以優先考慮 Pepe Nero。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            適合情境：想吃比較有餐廳感的一餐、想把 Kotor 第二晚安排得舒服一點。建議提前訂位。
+          </p>
+        </div>
 
-      <div className="mt-6 border-t border-gray-100 pt-6">
-        <h4 className="font-bold text-gray-800 mb-3 flex items-center">【晚餐選項】</h4>
-        <ul className="list-none pl-0 space-y-4">
-          <li>
-            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-              Pepe Nero
-              <MapLink url="https://maps.app.goo.gl/PZ2V5tTaC2GwGDVC9" />
-            </div>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              適合第17晚慢慢吃的一餐，氣氛比第一晚更像小小犒賞。若想吃得稍微精緻一點，可以優先考慮。
-            </p>
-          </li>
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ② 老城廣場氣氛｜Pescaria Dekaderon
+            <MapLink url="https://maps.app.goo.gl/HNHCZWANF8FPdFrHA" />
+          </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            位於老城核心區，適合想在比較熱鬧、有廣場氛圍的地方吃晚餐。選項包含海鮮、披薩與比較輕鬆的餐點，適合想感受 Kotor 夜晚老城氣氛、但不想吃得太正式的人。
+          </p>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            適合情境：想坐在老城核心、看人來人往、吃得輕鬆一點。
+          </p>
+        </div>
 
-          <li>
-            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-              Pescaria Dekaderon
-              <MapLink url="https://maps.app.goo.gl/HNHCZWANF8FPdFrHA" />
-            </div>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              位於老城核心區，適合想在比較熱鬧、有廣場氛圍的地方吃晚餐。適合海鮮、披薩或想輕鬆坐久一點的晚上。
-            </p>
-          </li>
+        <div className="p-3 bg-blue-50 rounded-xl border border-blue-100">
+          <h4 className="font-bold text-blue-900 mb-2 flex items-center">
+            ③ 海鮮在地｜Restoran Cesarica
+            <MapLink url="https://maps.app.goo.gl/xn9qk5gLouA8XTvZ9" />
+          </h4>
+          <p className="text-sm text-blue-900/80 leading-relaxed text-justify">
+            小巧溫馨的海鮮與在地料理選項。若第 16 晚沒有吃到 Cesarica，今晚可以安排在這裡，適合想吃魚類、海鮮或比較傳統的在地料理。
+          </p>
+          <p className="text-xs text-blue-800/70 leading-relaxed mt-2">
+            適合情境：前一晚沒吃到 Cesarica、今晚想吃海鮮或比較溫馨的小餐館。建議提前訂位。
+          </p>
+        </div>
 
-          <li>
-            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-              Restoran Cesarica
-              <MapLink url="https://maps.app.goo.gl/xn9qk5gLouA8XTvZ9" />
-            </div>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              小巧溫馨的海鮮與在地料理選項。若前一晚沒有吃到 Cesarica，今晚可以安排在這裡。
-            </p>
-          </li>
-
-          <li>
-            <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-              La Catedral Pasta Bar
-              <MapLink url="https://maps.app.goo.gl/sqN8qE3rGBkUtojV7" />
-            </div>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              若中午吃太飽、晚上只想吃簡單義大利麵或安全牌，這間可以作為輕鬆備選。
-            </p>
-          </li>
-        </ul>
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ④ 輕鬆備案｜La Catedral Pasta Bar
+            <MapLink url="https://maps.app.goo.gl/sqN8qE3rGBkUtojV7" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            若中午吃太飽、晚上只想吃簡單義大利麵或安全牌，這間可以作為輕鬆備選。適合不想再研究菜單、只想快速吃完再散步或回住宿休息的晚上。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            適合情境：早上爬堡壘後比較累、晚餐想簡單、不想吃太正式。
+          </p>
+        </div>
       </div>
 
-      <p className="mt-5 text-sm text-gray-600 leading-relaxed">
-        晚餐後若還有精神，可以走到城門外或城牆邊緣看夜色；若早上有完成堡壘健行，今晚建議早點回住宿休息。
-      </p>
+      <div className="mt-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          今晚晚餐建議
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          若第 16 晚已吃 Scala Santa，今晚可以換 Pepe Nero 或 Pescaria Dekaderon；想吃得稍微精緻一點選 Pepe Nero，想坐在老城核心感受夜晚氣氛選 Dekaderon。若前一晚沒吃到 Cesarica，今晚也可以補上。晚餐後若還有精神，可以走到城門外或城牆邊緣看夜色；若早上有完成堡壘健行，建議早點回住宿休息。
+        </p>
+      </div>
     </Fragment>
   ),
   tips: [
-    '點燈後的城牆很美',
+    '點燈後的城牆很美，晚餐後可短暫散步',
     '若想吃 Pepe Nero 或 Cesarica，建議提前訂位',
     '早上若有爬堡壘，晚餐不要排太晚',
-    '第16晚若已吃 Scala Santa，第17晚可換 Pepe Nero 或 Dekaderon'
+    '第 16 晚若已吃 Scala Santa，第 17 晚可換 Pepe Nero 或 Dekaderon',
+    '若中午吃太飽，La Catedral Pasta Bar 可作為輕鬆備案'
   ]
-                }
+}
             ],
             18: [
                 {
   id: 'd18-breakfast-supply',
   time: '08:00',
-  title: 'Senso Bakery',
+  title: 'Senso Bakery 補給早餐',
   type: 'food',
   iconName: 'Croissant',
-  subtitle: 'Kotor 出發前 • 路上早餐與午餐備案',
+  subtitle: 'Kotor 出發前 • 早餐 • 午餐備案',
   location: 'Senso Bakery, Kotor',
   mapLink: 'https://maps.app.goo.gl/QFxvkqJtT6yxgTbT8',
-  desc: 'Senso Bakery 08:00 開門，在離開 Kotor 前買簡單早餐與路上補給。今日上午需跨境前往 Dubrovnik，13:00 還車前後時間不穩定，不建議排正式午餐；先買麵包、burek、三明治、咖啡與水，車上或邊境前後簡單補充體力。',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        離開 Kotor 前，先到 Senso Bakery 買簡單早餐與路上補給。今日上午需跨境前往 Dubrovnik，13:00 前後還車，邊境、路況與還車時間都可能影響節奏，因此不建議排正式午餐。先買麵包、burek、三明治、甜點、咖啡與水，車上或邊境前後簡單補充體力會比較安心。
+      </p>
+
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 出發前補給｜Senso Bakery
+            <MapLink url="https://maps.app.goo.gl/QFxvkqJtT6yxgTbT8" />
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            Senso Bakery 08:00 開門，適合在 Kotor 出發前先買早餐與路上食物。今天車程包含跨境與還車，時間不確定性較高，先準備好簡單補給，可以避免中午被邊境或還車流程卡住。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            建議 08:15 左右前往，買完後回住宿或停車處整理，09:00 左右出發前往 Dubrovnik。
+          </p>
+        </div>
+
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ② 建議購買內容
+          </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            可以買麵包、burek、三明治、甜點、咖啡與水。早餐可以先在 Kotor 吃掉，另外多買一份鹹食或麵包作為午餐備案，等跨境後、還車前後再視情況補充。
+          </p>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            推薦組合：咖啡＋一份麵包或 burek 當早餐；三明治或鹹派＋水當路上備案。
+          </p>
+        </div>
+
+        <div className="p-3 bg-stone-50 rounded-xl border border-stone-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            今日午餐策略
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            D18 午餐不排正式餐廳，因為跨境、抵達 Dubrovnik、加油與還車時間都可能變動。若一切順利、還車後時間充裕，再到 Dubrovnik 舊城附近找輕食；若時間被壓縮，就用 Senso Bakery 的外帶補給撐到下午入住後再休息。
+          </p>
+        </div>
+      </div>
+    </Fragment>
+  ),
   tips: [
     'Senso Bakery 08:00 開門，可 08:15 左右前往',
     '買早餐，也順便買午餐備案',
@@ -6706,178 +6779,259 @@ title: '札達爾舊城晚餐',
   title: 'Dubrovnik Finest Apartments',
   type: 'hotel',
   iconName: 'BedDouble',
-  subtitle: 'Booking / check-in',
+  subtitle: 'Booking • check-in',
   location: 'Dubrovnik Finest Apartments',
   mapLink: 'https://maps.app.goo.gl/J66DkWwczpWJgJfW7',
   desc: '還車後前往 Dubrovnik Finest Apartments 辦理入住或寄放行李。稍作休息後，再前往杜布羅夫尼克舊城初訪。',
   tips: ['確認入住方式與鑰匙領取', '確認從還車點到住宿的交通方式', '稍作休息後再前往舊城']
                 },
                 {
-                    id: 'd18-3',
-                    time: '15:00',
-                    title: '杜布羅夫尼克舊城初訪',
-                    type: 'sightseeing',
-                    iconName: 'Camera',
-                    subtitle: 'Pile Gate • Stradun • Old Port',
-                    location: 'Stradun (Placa)',
-                    mapLink: 'https://maps.app.goo.gl/SyHmnCTGR51swK5s8',
-                    desc: (
-                        <Fragment>
-                            <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-                                走進派勒門 Pile Gate，踏上杜布羅夫尼克的心臟——史特拉敦大道 Stradun。今天以初訪散步、外觀拍照與感受古城氣勢為主，不急著進博物館或教堂，把深度參觀留到明天。
-                            </p>
-                            <div className="space-y-6">
-                                <div>
-                                    <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                        【大歐諾弗里奧噴泉 Velika Onofrijeva Fontana】
-                                        <MapLink url="https://maps.app.goo.gl/KQ21bCWhUBZ1QVpP9" />
-                                    </h4>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                        建於1438年，是杜布羅夫尼克供水系統的終點之一，其水源來自於十二公里外的Dubrovacka河，數世紀以來為市民提供新鮮泉水，至今仍在運作。呈十六邊型的大奧諾佛里奧供水池，每面都有一個人臉浮雕，泉水便是從其口中的水龍頭流洩出來。
-                                    </p>
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                        【杜布羅夫尼克鐘塔】
-                                        <MapLink url="https://maps.app.goo.gl/HFBrY5hvzanYhzvZ7" />
-                                    </h4>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                        高31公尺的鐘塔原建於1444年，為拉古薩的象徵之一。後來因為大地震造成結構上的危險，現在所見的鐘塔是在1929年重建的。鐘塔上的銅像每小時會敲鐘。鐘塔下方旁還有小奧諾佛里奧供水池與Marin Drzic的銅像。他是推廣克羅埃西亞語言的學者。由於傳說摸他的鼻子可以增加智慧，因此雕像的鼻子閃亮無比。
-                                    </p>
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                        【斯蓬扎宮 Sponza Palace】
-                                        <MapLink url="https://maps.app.goo.gl/DszMqr8weU1xepmd9" />
-                                    </h4>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                        緊鄰鐘塔的斯蓬扎宮是座十六世紀的文藝復興宮殿，曾作為海關、銀行與鑄幣廠，現在是國家檔案館，展有大量獨立戰爭期間的文物。
-                                    </p>
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                        【聖伯拉削教堂與奧蘭多石柱】
-                                        <MapLink url="https://maps.app.goo.gl/eNJyBr5YWHZr3ttj6" />
-                                    </h4>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                        這座巴洛克式的教堂建於1717年，是獻給該城的守護聖人聖伯拉削 (St. Blaise)。教堂內部的寶庫收藏了聖伯拉削的聖骨。教堂前的奧蘭多石柱則立於1418年，上有身著鎧甲的奧蘭多騎士，象徵自由與獨立。
-                                    </p>
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                        【總督府 Rector’s Palace】
-                                        <MapLink url="https://maps.app.goo.gl/CmKsdv427gZqUJoo6" />
-                                    </h4>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                        杜布羅夫尼克在14世紀至1808年間的政府所在地。建築風格融合了哥德、文藝復興與巴洛克元素。現為歷史博物館，可深入參觀地牢與武器庫。
-                                    </p>
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                        【聖母升天大教堂 The Cathedral】
-                                        <MapLink url="https://maps.app.goo.gl/2pmqiisn3ygAqYeF8" />
-                                    </h4>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                        今日所見的大教堂是1667年大地震後重建，完工於1713年。建築外觀優雅，內部收藏有提香的畫作與大量金銀工藝聖物。
-                                    </p>
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                        【聖依納爵堂 Crkva sv. Ignacija】
-                                        <MapLink url="https://maps.app.goo.gl/QUGS4XNYN3J7ostPA" />
-                                    </h4>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                        建於1725年，模仿了羅馬耶穌會教堂風格。教堂旁的階梯因《權力遊戲》中的「瑟曦羞辱之路」而聲名大噪。
-                                    </p>
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                        【聖天使報喜東正教堂】
-                                        <MapLink url="https://maps.app.goo.gl/MRCSB5vKRFpEhnNW6" />
-                                    </h4>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                        建於1877年，在天主教堂眾多的舊城中顯得相當特別，內部裝飾金碧輝煌。
-                                    </p>
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-                                        【舊港 Old Port】
-                                        <MapLink url="https://maps.app.goo.gl/36WxoUVf2L4qheWPA" />
-                                    </h4>
-                                    <p className="text-sm text-gray-600 leading-relaxed text-justify">
-                                        杜布羅夫尼克最古老的區域之一。現今是宜人的徒步區，可在此觀賞海景並前往洛克魯姆島。
-                                    </p>
-                                </div>
-                            </div>
-                        </Fragment>
-                    ),
-                    tips: ['感受古城氣勢', '在此享用冰淇淋']
-                },
+  id: 'd18-3',
+  time: '15:00',
+  title: '杜布羅夫尼克舊城初訪',
+  type: 'sightseeing',
+  iconName: 'Camera',
+  subtitle: 'Pile Gate • Stradun • Old Port',
+  location: 'Stradun (Placa)',
+  mapLink: 'https://maps.app.goo.gl/SyHmnCTGR51swK5s8',
+  desc: (
+    <Fragment>
+      <p className="mb-4 text-gray-600 leading-relaxed text-justify">
+        走進派勒門 Pile Gate，踏上杜布羅夫尼克的心臟——史特拉敦大道 Stradun。今天是抵達 Dubrovnik 的第一天下午，前面已經經過 Kotor 跨境、還車與入住，這段以初訪散步、外觀拍照與感受古城氣勢為主，不急著進博物館或教堂，把城牆、博物館與深度參觀留到明天。
+      </p>
+
+      <div className="space-y-4">
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ① Pile Gate 派勒門與 Stradun 史特拉敦大道
+            <MapLink url="https://maps.app.goo.gl/SyHmnCTGR51swK5s8" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            從派勒門進入舊城後，會直接接上 Stradun。這條石板大道是 Dubrovnik 舊城最主要的動線，兩側商店、咖啡館與石造建築非常有古城氣勢。第一天先用輕鬆節奏走一遍，熟悉方向感。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            今日重點：外觀拍照、感受古城尺度，不急著深入每個建築。
+          </p>
+        </div>
+
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ② 大歐諾弗里奧噴泉 Velika Onofrijeva Fontana
+            <MapLink url="https://maps.app.goo.gl/KQ21bCWhUBZ1QVpP9" />
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            建於 1438 年，是 Dubrovnik 供水系統的重要終點之一，水源來自城外約 12 公里的水源地。噴泉呈十六邊形，每面都有一個人臉浮雕，泉水從浮雕口中的水龍頭流出，數世紀以來為市民提供用水，至今仍在運作。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            適合停留：5–10 分鐘。可作為進城後第一個辨識地標。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ③ 杜布羅夫尼克鐘塔
+            <MapLink url="https://maps.app.goo.gl/HFBrY5hvzanYhzvZ7" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            高約 31 公尺的鐘塔原建於 1444 年，是昔日拉古薩共和國的象徵之一。後來因地震造成結構危險，現在所見的鐘塔是在 1929 年重建的。鐘塔上的銅像每小時會敲鐘，鐘塔下方附近也能看到小歐諾弗里奧噴泉與 Marin Držić 的雕像。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            小提醒：傳說摸 Marin Držić 雕像鼻子可增加智慧，因此鼻子被摸得閃亮。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ④ 斯蓬扎宮 Sponza Palace
+            <MapLink url="https://maps.app.goo.gl/DszMqr8weU1xepmd9" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            緊鄰鐘塔的斯蓬扎宮是 16 世紀文藝復興風格宮殿，曾作為海關、銀行與鑄幣廠使用。現在為國家檔案館，也展示部分與近代戰爭記憶相關的內容。第一天可先看外觀與廣場周邊，深度參觀留給隔天視時間決定。
+          </p>
+        </div>
+
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ⑤ 聖伯拉削教堂與奧蘭多石柱
+            <MapLink url="https://maps.app.goo.gl/eNJyBr5YWHZr3ttj6" />
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            聖伯拉削教堂建於 1717 年，是獻給 Dubrovnik 守護聖人 St. Blaise 的巴洛克式教堂。教堂前的奧蘭多石柱立於 1418 年，上有身著鎧甲的奧蘭多騎士，象徵城市的自由與獨立。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            適合停留：10–15 分鐘。這一帶是舊城核心廣場，很適合拍照與辨認方向。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ⑥ 總督府 Rector’s Palace
+            <MapLink url="https://maps.app.goo.gl/CmKsdv427gZqUJoo6" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            總督府曾是 Dubrovnik 在 14 世紀至 1808 年間的政府所在地，建築融合哥德、文藝復興與巴洛克元素。現在作為歷史博物館使用，可深入參觀地牢與武器庫。今天先看外觀即可，明天若有 Dubrovnik Pass 或時間充裕再入內。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ⑦ 聖母升天大教堂 The Cathedral
+            <MapLink url="https://maps.app.goo.gl/2pmqiisn3ygAqYeF8" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            今日所見的大教堂是在 1667 年大地震後重建，於 1713 年完工。建築外觀優雅，內部收藏有提香畫作與大量金銀工藝聖物。第一天下午可先看外觀，若剛好開放且不累，再短暫入內。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ⑧ 聖依納爵堂 Crkva sv. Ignacija
+            <MapLink url="https://maps.app.goo.gl/QUGS4XNYN3J7ostPA" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            建於 1725 年，模仿羅馬耶穌會教堂風格。教堂旁的階梯因《權力遊戲》中的「瑟曦羞辱之路」而聲名大噪。若今天體力足夠，可以順路走到這一帶拍照；若太累，留到明天也可以。
+          </p>
+        </div>
+
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ⑨ 聖天使報喜東正教堂
+            <MapLink url="https://maps.app.goo.gl/MRCSB5vKRFpEhnNW6" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            建於 1877 年，在天主教堂眾多的 Dubrovnik 舊城中顯得相當特別。若有開放，可以短暫入內欣賞東正教聖像與室內裝飾；若時間有限，作為舊城巷弄散步時的順路點即可。
+          </p>
+        </div>
+
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ⑩ 舊港 Old Port
+            <MapLink url="https://maps.app.goo.gl/36WxoUVf2L4qheWPA" />
+          </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            Dubrovnik 最古老的區域之一，現今是宜人的徒步區。可以在此看海、拍城牆與港口，也能觀察前往洛克魯姆島的船隻。作為第一天舊城散步的收尾很適合，視體力再決定要不要繼續往城牆外側或海邊走。
+          </p>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            適合情境：想在晚餐前看海、放慢腳步，感受 Dubrovnik 既是古城也是海港城市的一面。
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          今日初訪建議
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          今天不需要每個點都走完或入內參觀。最精華的順序可以抓：Pile Gate → 大歐諾弗里奧噴泉 → Stradun → 鐘塔 / Sponza Palace → 聖伯拉削教堂與奧蘭多石柱 → Rector’s Palace 外觀 → 大教堂外觀 → Old Port。若已經很累，就縮短成 Stradun 與 Old Port，再找冰淇淋或咖啡休息。
+        </p>
+      </div>
+    </Fragment>
+  ),
+  tips: [
+    '今天以初訪散步與外觀拍照為主，深度參觀留到明天',
+    '抵達日不要硬走完整舊城，可依體力刪減',
+    '可在 Stradun 或 Old Port 附近買冰淇淋休息',
+    '舊城石板路較滑，建議穿好走的鞋',
+    '若天氣炎熱，先找陰影或咖啡館休息，不要硬撐'
+  ]
+},
                 {
   id: 'd18-3b',
   time: '16:30',
   title: '舊城邊走邊吃邊逛',
   type: 'shopping',
   iconName: 'ShoppingBag',
-  subtitle: 'Gelato • 側巷選物',
+  subtitle: 'Gelato • 伴手禮 • 側巷選物',
   location: 'Dubrovnik Old Town',
   mapLink: 'https://maps.app.goo.gl/SyHmnCTGR51swK5s8',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        舊城初訪不需要急著進博物館或教堂，最適合用輕鬆的方式感受杜布羅夫尼克。沿著 Stradun 慢慢散步時，可以買一支 gelato 邊走邊吃，也可以轉進兩側小巷，逛逛克羅埃西亞選物、橄欖油、無花果乾、薰衣草香包、天然香皂、明信片與小幅插畫。
+        舊城初訪不需要急著進博物館或教堂，最適合用輕鬆的方式感受 Dubrovnik。沿著 Stradun 慢慢散步時，可以買一支 gelato 邊走邊吃，也可以轉進兩側小巷，逛逛克羅埃西亞選物、橄欖油、無花果乾、薰衣草香包、天然香皂、明信片與小幅插畫。這段以放鬆為主，不要買太重，後面還要走去 Banje Beach 看夕陽。
       </p>
 
-      <div className="space-y-6">
-        <div>
-          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-            【Peppino’s Gelato】
-            <MapLink url="https://maps.app.goo.gl/GMdTY1zh3sLCEWKW7" />
-            <MapLink url="https://maps.app.goo.gl/nJJp27hdSJfYjNvQ6" />
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 進城儀式｜Peppino’s Gelato
           </h4>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+
+          <div className="mb-2 text-xs text-orange-900/80 leading-relaxed space-y-1">
+            <div className="flex items-center">
+              <span>Peppino’s Gelato 分店 1</span>
+              <MapLink url="https://maps.app.goo.gl/GMdTY1zh3sLCEWKW7" />
+            </div>
+            <div className="flex items-center">
+              <span>Peppino’s Gelato 分店 2</span>
+              <MapLink url="https://maps.app.goo.gl/nJJp27hdSJfYjNvQ6" />
+            </div>
+          </div>
+
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
             第一天抵達老城後，最適合先買一支冰淇淋當作進城儀式。Peppino’s Gelato 在舊城內有分店，適合外帶邊走邊吃。可以一邊沿著 Stradun 散步，一邊看石板路、鐘塔、廣場與兩側巷弄。
           </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            適合情境：剛進舊城、想休息一下、想用輕鬆方式開始 Dubrovnik 第一印象。
+          </p>
         </div>
 
-        <div>
-          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-            【Terra Croatica】
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ② 克羅埃西亞伴手禮｜Terra Croatica
             <MapLink url="https://maps.app.goo.gl/eziciv95WyUHp7pn8" />
           </h4>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            如果想買克羅埃西亞伴手禮，可以順路逛 Terra Croatica。橄欖油小瓶裝、無花果乾、糖漬橙皮、松露製品、薰衣草香包、天然香皂、利口酒與在地食品。先買輕便小物，或先觀察品項，可以留到第19天晚上再多買。
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            如果想買克羅埃西亞伴手禮，可以順路逛 Terra Croatica。常見品項包含橄欖油小瓶裝、無花果乾、糖漬橙皮、松露製品、薰衣草香包、天然香皂、利口酒與在地食品。
+          </p>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            今日建議：第 18 天先買輕便小物，或先觀察品項；如果想多買伴手禮，可留到第 19 天晚上再補買。
           </p>
         </div>
 
-        <div>
-          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-            【側巷選物與小店】
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ③ 側巷選物與小店
           </h4>
           <p className="text-sm text-gray-600 leading-relaxed text-justify">
-            有趣的小店常藏在Stradun主街兩側巷弄。可以隨意轉進小巷看看陶器、明信片、小幅插畫、克羅埃西亞設計小物與手工藝品。後面還要走去 Banje Beach 看夕陽，不要買太重、太易碎或需要一路提著走的東西。
+            有趣的小店常藏在 Stradun 主街兩側巷弄。可以隨意轉進小巷看看陶器、明信片、小幅插畫、克羅埃西亞設計小物與手工藝品。後面還要走去 Banje Beach 看夕陽，不要買太重、太易碎或需要一路提著走的東西。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            適合情境：想找比較不像大量觀光品的小物、紙品、插畫或手作紀念品。
           </p>
         </div>
 
-        <div>
-          <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-            【Old Port 前補水】
+        <div className="p-3 bg-blue-50 rounded-xl border border-blue-100">
+          <h4 className="font-bold text-blue-900 mb-2 flex items-center">
+            ④ Old Port 前補水
+            <MapLink url="https://maps.app.goo.gl/36WxoUVf2L4qheWPA" />
           </h4>
-          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          <p className="text-sm text-blue-900/80 leading-relaxed text-justify">
             走到 Old Port 一帶後，可以順路買水或簡單飲料，準備接著往 Ploče Gate 與 Banje Beach 前進。這天剛從 Kotor 跨境開車過來，又要在老城石板路散步，補水比吃太多更重要。
           </p>
+          <p className="text-xs text-blue-800/70 leading-relaxed mt-2">
+            適合情境：天氣熱、走路多、準備接夕陽散步前先補水。
+          </p>
         </div>
+      </div>
+
+      <div className="mt-5 p-3 bg-stone-50 rounded-xl border border-stone-100">
+        <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+          今日逛街建議
+        </h4>
+        <p className="text-sm text-gray-600 leading-relaxed text-justify">
+          今天剛抵達 Dubrovnik，不建議買太多或逛太久。可以先吃 Peppino’s Gelato，順路看 Terra Croatica 與 Stradun 兩側小巷，最後在 Old Port 附近補水，再往 Banje Beach 方向移動。真正要買伴手禮，可以等第 19 天晚一點再補買，避免一路提著走。
+        </p>
       </div>
     </Fragment>
   ),
   tips: [
     'Peppino’s Gelato 適合外帶邊走邊吃',
     'Terra Croatica 可看橄欖油、無花果乾、薰衣草與天然香皂',
-    '逛街請轉進 Stradun 兩側小巷',
-    '第18天只買輕便小物，不建議買太重的伴手禮',
+    '逛街請轉進 Stradun 兩側小巷，常有小店與選物',
+    '第 18 天只買輕便小物，不建議買太重的伴手禮',
     '離開老城前先補水，再前往 Banje Beach'
   ]
-                },
+},
                 {
                     id: 'd18-4',
                     time: '18:00',
