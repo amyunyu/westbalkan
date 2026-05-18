@@ -6466,108 +6466,165 @@ title: '札達爾舊城晚餐',
   title: '科托爾老城輕鬆散步',
   type: 'sightseeing',
   iconName: 'MapPin',
-  subtitle: '小巷、教堂、鐘樓廣場',
+  subtitle: '小巷 • 教堂 • 鐘樓廣場 • 貓咪',
   location: 'Kotor Old Town',
+  mapLink: 'https://maps.app.goo.gl/JqFh6tD2G1xR6N8',
   desc: (
     <Fragment>
+      <div className="mb-4 flex items-center">
+        <span className="font-bold text-gray-800">散步路線</span>
+        <MapLink url="https://maps.app.goo.gl/JqFh6tD2G1xR6N8" />
+      </div>
+
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        健行後回到科托爾老城，以輕鬆散步為主，不把每個景點都排成必進必看的行程。這座受聯合國教科文組織保護的中世紀老城，小巷、廣場、石牆與貓咪本身就是最迷人的風景。
+        健行後回到科托爾老城，以輕鬆散步為主，不把每個景點都排成必進必看的行程。這座受聯合國教科文組織保護的中世紀老城，小巷、廣場、石牆、教堂與貓咪本身就是最迷人的風景。早上已經爬過聖約翰堡，這段建議放慢速度，邊走邊拍、累了就坐下喝點東西。
       </p>
 
-      <div className="mb-6">
-        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-          【聖特里芬大教堂 / 科托爾主教座堂】
-          <MapLink url="https://maps.app.goo.gl/1fEzRW8suA6AHs6J6" />
-        </h4>
-        <p className="text-sm text-gray-600 leading-relaxed text-justify">
-          科托爾最重要的教堂之一，外觀很有氣勢。若體力與時間允許，可入內參觀；若早上健行後較累，外觀拍照即可。
-        </p>
-      </div>
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 聖特里芬大教堂 / 科托爾主教座堂
+            <MapLink url="https://maps.app.goo.gl/1fEzRW8suA6AHs6J6" />
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            科托爾最重要的教堂之一，也是老城裡最具代表性的地標。雙塔立面很有氣勢，廣場尺度也很漂亮。若體力與時間允許，可入內短暫參觀；若早上健行後較累，外觀拍照即可。
+          </p>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            建議停留：10–20 分鐘。今天不需要深度參觀，重點是感受老城核心氣氛。
+          </p>
+        </div>
 
-      <div className="mb-6">
-        <h4 className="font-bold text-gray-800 mb-1 flex items-center">
-          【鐘樓廣場】
-          <MapLink url="https://maps.app.goo.gl/Y4yrCWMoDYLJwyTS6" />
-        </h4>
-        <p className="text-sm text-gray-600 leading-relaxed text-justify">
-          科托爾老城的中心地帶，適合坐下來喝點東西、看人來人往，也很適合作為老城散步的休息點。
-        </p>
-      </div>
+        <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            ② 鐘樓廣場 Clock Tower Square
+            <MapLink url="https://maps.app.goo.gl/Y4yrCWMoDYLJwyTS6" />
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            科托爾老城的中心地帶，也是進城後最容易辨認方向的地方。鐘樓、石板廣場、咖啡座與來往人潮很有老城日常感，適合坐下來喝點東西、看人來人往，也很適合作為健行後的休息點。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            適合情境：早上爬山後想坐下來休息、補水、看老城人潮。
+          </p>
+        </div>
 
-      <div className="mb-2">
-        <h4 className="font-bold text-gray-800 mb-1 flex items-center">【可視體力加走】</h4>
-        <ul className="text-sm text-gray-600 leading-relaxed space-y-1 list-disc pl-4">
-          <li><span className="font-bold">貓咪博物館：</span>如果喜歡貓，可以短暫參觀。</li>
-          <li><span className="font-bold">城牆邊緣：</span>沿著石牆旁慢慢走，感受古城氛圍。</li>
-        </ul>
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ③ 科托爾小巷與廣場慢走
+          </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            科托爾老城不大，但迷人之處在於不規則的小巷、石牆轉角、拱門、窗台、廣場與突然出現的貓。這段不用照著地圖趕景點，可以從主教座堂周邊往鐘樓廣場、北門或城牆邊緣慢慢繞，看到喜歡的巷子就走進去。
+          </p>
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-2">
+            適合情境：想拍石板路、窗台、貓咪與中世紀老城轉角光影。
+          </p>
+        </div>
+
+        <div className="p-3 bg-blue-50 rounded-xl border border-blue-100">
+          <h4 className="font-bold text-blue-900 mb-2 flex items-center">
+            ④ 貓咪博物館 / 貓咪小物
+            <MapLink url="https://maps.app.goo.gl/Ud2eFFrQMf3TdaLh7" />
+          </h4>
+          <p className="text-sm text-blue-900/80 leading-relaxed text-justify">
+            科托爾以貓聞名，老城裡常能遇到慵懶的貓咪。若你喜歡貓，可以短暫參觀貓咪博物館，或在周邊小店看看貓咪主題明信片、磁鐵與小物。若沒有特別想入內，也可以只把它當作順路點。
+          </p>
+          <p className="text-xs text-blue-800/70 leading-relaxed mt-2">
+            建議停留：10–20 分鐘。喜歡貓再進去，不用硬排。
+          </p>
+        </div>
+
+        <div className="p-3 bg-stone-50 rounded-xl border border-stone-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            今日散步建議
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            早上已經完成聖約翰堡健行，所以老城這段不要排太硬。建議只抓聖特里芬大教堂、鐘樓廣場與小巷慢走三個重點；若還有體力，再加貓咪博物館或城牆邊緣散步。午餐前不需要走太久，把體力留給下午自由活動。
+          </p>
+        </div>
       </div>
     </Fragment>
   ),
-  tips: ['早上已爬山，這段以輕鬆散步為主', '有體力再入內參觀教堂或博物館', '有貓注意']
-                },
+  tips: [
+    '早上已爬山，這段以輕鬆散步為主',
+    '主線抓聖特里芬大教堂、鐘樓廣場與小巷慢走即可',
+    '有體力再入內參觀教堂或貓咪博物館',
+    '科托爾老城石板路較滑，請穿好走的鞋',
+    '遇到貓咪可以拍照，但不要勉強觸摸或餵食'
+  ]
+},
                 {
   id: 'd17-4',
   time: '13:00',
   title: '科托爾午餐',
   type: 'food',
   iconName: 'Utensils',
-  subtitle: 'BBQ Tanjga • Dobrota 海邊輕食',
+  subtitle: 'BBQ Tanjga • Dobrota 海邊餐廳',
   location: 'Kotor Old Town / Dobrota',
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        健行與老城慢逛後，午餐選擇簡單、份量足、不太正式的餐點。若想吃得快速又有在地感，BBQ Tanjga 是很適合的選項；若想休息久一點，也可以往 Dobrota 海邊移動，找間海景餐廳或咖啡館慢慢吃。
+        健行與老城慢逛後，午餐以簡單、補充體力、不太正式為主。若想吃得快速又有在地感，首選 BBQ Tanjga；若想休息久一點、看海放空，也可以往 Dobrota 海邊移動，找間海景餐廳或咖啡館慢慢坐。
       </p>
 
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
-        今天下午還有自由活動，午餐不要吃太撐。若選 BBQ Tanjga，份量通常較足，兩人可以先點少一點再追加，避免吃完下午太沉。
+        今天下午還有自由活動，午餐不要吃太撐。若選 BBQ Tanjga，份量通常較足，兩人可以先點少一點再追加，避免吃完下午太沉；若想直接銜接 Dobrota 海邊放空，就把午餐安排在海邊會更順。
       </p>
 
-      <h4 className="font-bold text-gray-800 mb-2 flex items-center">【午餐推薦】</h4>
-
-      <ul className="list-none pl-0 space-y-4">
-        <li>
-          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-            BBQ Tanjga
+      <div className="space-y-4">
+        <div className="p-3 bg-orange-50 rounded-xl border border-orange-100">
+          <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+            ① 首選｜BBQ Tanjga
             <MapLink url="https://maps.app.goo.gl/omAchTgeaFnGQ9kS6" />
-          </div>
-          <p className="text-xs text-gray-500 leading-relaxed">
-            評價高、份量足的在地燒烤店，適合健行後補充能量。適合想吃肉、想快速解決午餐的時候。
+          </h4>
+          <p className="text-sm text-orange-900/80 leading-relaxed text-justify">
+            評價高、份量足的在地燒烤店，適合健行後補充能量。餐點偏肉類與燒烤，適合想快速吃飽、不要太正式午餐的人。若早上有爬聖約翰堡，這餐會很有補給感。
           </p>
-        </li>
+          <p className="text-xs text-orange-800/70 leading-relaxed mt-2">
+            適合情境：想吃肉、想快速解決午餐、想把下午時間留給休息或自由活動。
+          </p>
+        </div>
 
-        <li>
-          <div className="font-bold text-sm text-gray-800 flex items-center mb-1">
-            Dobrota 海邊餐廳 / 咖啡館
+        <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+          <h4 className="font-bold text-emerald-900 mb-2 flex items-center">
+            ② 海邊慢午餐｜Dobrota 海邊餐廳 / 咖啡館
             <MapLink url="https://maps.app.goo.gl/LUBdDPyV9ESCDgyM8" />
-          </div>
-
-          <p className="text-xs text-gray-500 leading-relaxed mb-2">
-            若想吃得更慢、更放鬆，可以往 Dobrota 海邊移動，找間海景餐廳或咖啡館休息，順便銜接下午海邊放空。
+          </h4>
+          <p className="text-sm text-emerald-900/80 leading-relaxed text-justify">
+            若想吃得更慢、更放鬆，可以往 Dobrota 海邊移動，找間海景餐廳或咖啡館休息。這樣午餐後不用再特別移動，可以直接銜接下午的海邊放空、散步或咖啡時間。
           </p>
 
-          <div className="text-xs text-gray-500 leading-relaxed space-y-2 pl-1">
+          <div className="mt-3 text-xs text-emerald-800/70 leading-relaxed space-y-2">
             <div>
-              <span className="font-bold text-gray-700">Konoba Portun：</span>
+              <span className="font-bold text-emerald-900">Konoba Portun：</span>
               海邊餐廳，適合想坐下來吃海鮮、地中海料理或比較完整午餐。
               <MapLink url="https://maps.app.goo.gl/95BXTnhLbfz2QvMVA" />
             </div>
 
             <div>
-              <span className="font-bold text-gray-700">Tiha Noć Restaurant：</span>
+              <span className="font-bold text-emerald-900">Tiha Noć Restaurant：</span>
               輕鬆安全牌，菜色選擇通常較廣，適合不知道想吃什麼時。
               <MapLink url="https://maps.app.goo.gl/Ag1Cstd6GUP5kcJD8" />
             </div>
 
             <div>
-              <span className="font-bold text-gray-700">Caffe del Mare / 海邊咖啡館類：</span>
-              若只是想喝咖啡、果汁或看海放空，可在 Google Maps 搜尋
-              <span className="font-mono"> cafe Dobrota waterfront </span>
-              ，沿著海邊找喜歡的位置坐下。
+              <span className="font-bold text-emerald-900">Caffe del Mare / 海邊咖啡館類：</span>
+              若只是想喝咖啡、果汁或看海放空，可沿著 Dobrota 海邊找喜歡的位置坐下。
             </div>
           </div>
-        </li>
-      </ul>
+
+          <p className="text-xs text-emerald-800/70 leading-relaxed mt-3">
+            適合情境：想坐久一點、想看海、想把午餐直接接到 Dobrota 海邊放空。
+          </p>
+        </div>
+
+        <div className="p-3 bg-stone-50 rounded-xl border border-stone-100">
+          <h4 className="font-bold text-gray-800 mb-2 flex items-center">
+            今日午餐建議
+          </h4>
+          <p className="text-sm text-gray-600 leading-relaxed text-justify">
+            若早上有爬堡壘、想快速補充體力，選 BBQ Tanjga 最順；若早上已經很累，想把下午改成海邊慢節奏，就直接到 Dobrota 午餐，吃完不用再移動，找海邊咖啡館或步道放空即可。
+          </p>
+        </div>
+      </div>
     </Fragment>
   ),
   tips: [
@@ -6576,7 +6633,7 @@ title: '札達爾舊城晚餐',
     '下午依體力選纜車或海邊放空',
     '若想接 Dobrota 海邊放空，午餐可直接往海邊移動'
   ]
-                }, 
+},
                 {
   id: 'd17-5',
   time: '14:30',
