@@ -7805,20 +7805,20 @@ useEffect(() => {
                                                 <button
                                                     key={idx}
                                                     onClick={() => setSelectedDateIdx(idx)}
-                                                    className={`snap-center flex-shrink-0 flex flex-col items-center justify-start w-16 h-20 transition-colors duration-200 border-r border-gray-50 last:border-0 pt-1 ${
+                                                    className={`snap-center flex-shrink-0 flex flex-col items-center justify-start w-[72px] h-20 transition-colors duration-200 border-r border-gray-50 last:border-0 pt-1 ${
                                                         isActive
                                                             ? `${MORANDI_COLORS.primary} text-white`
                                                             : 'bg-white text-gray-600 hover:bg-gray-50'
                                                     }`}
                                                 >
-                                                    <span className="text-[10px] font-medium opacity-80 uppercase tracking-wider leading-none mb-0.5">{d.weekDay}</span>
-                                                    <span className="text-lg font-bold leading-none mb-0.5">{d.dateObj.getDate()}</span>
-                                                    <span className="text-[10px] opacity-70 leading-none mb-0.5 font-semibold">D{d.dayNum}</span>
-                                                    <div className="h-7 w-full flex items-center justify-center px-0.5 mt-0.5">
-                                                        <span className="text-[9px] font-medium leading-[1.1] text-center whitespace-pre-line line-clamp-2">
-                                                            {d.city}
-                                                        </span>
-                                                    </div>
+                                                    <span className="text-[11px] font-medium opacity-80 uppercase tracking-wider leading-none mb-0.5">{d.weekDay}</span>
+<span className="text-xl font-bold leading-none mb-0.5">{d.dateObj.getDate()}</span>
+<span className="text-[11px] font-semibold opacity-70 leading-none mb-0.5">D{d.dayNum}</span>
+<div className="h-7 w-full flex items-center justify-center px-0.5 mt-0.5">
+    <span className="text-[10px] font-medium leading-[1.1] text-center whitespace-pre-line line-clamp-2">
+        {d.city}
+    </span>
+</div>
                                                 </button>
                                             );
                                         })}
