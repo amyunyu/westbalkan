@@ -1743,7 +1743,7 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
   title: '盧比安納老城晚餐',
   type: 'food',
   iconName: 'Utensils',
-  subtitle: 'Julija',
+  subtitle: 'Julija • 已訂位',
   location: 'Julija',
   mapLink: 'https://maps.app.goo.gl/DANzZysdiBtfjvFi8',
   desc: (
@@ -6245,7 +6245,7 @@ title: '札達爾舊城晚餐',
               <span className="text-xs font-medium text-blue-600">約 €20 / 日</span>
             </div>
             <p className="text-xs leading-relaxed">
-              距離 Old Town Northern Gate 約 200 公尺。住宿方可協助安排，但需提前告知。
+              距離 Old Town Northern Gate 約 200 公尺。住宿方可協助安排，已經提前告知 by Booking。
             </p>
             <MapLink url="https://maps.app.goo.gl/XitTpBi4waGPxj3F6" />
           </li>
@@ -7862,21 +7862,21 @@ useEffect(() => {
                                                 <button
   key={idx}
   onClick={() => setSelectedDateIdx(idx)}
-  className={`snap-center flex-shrink-0 flex flex-col items-center justify-start w-16 h-20 transition-colors duration-200 border-r border-gray-50 last:border-0 pt-1 ${
-    isActive
-      ? `${MORANDI_COLORS.primary} text-white`
-      : 'bg-white text-gray-400 hover:bg-gray-50'
+  className={`snap-center flex-shrink-0 flex flex-col items-center justify-between w-16 h-20 transition-colors duration-200 border-r border-gray-50 last:border-0 py-2 ${
+      isActive
+          ? `${MORANDI_COLORS.primary} text-white`
+          : 'bg-white text-gray-400 hover:bg-gray-50'
   }`}
 >
-  <span className="text-[10px] font-medium opacity-80 uppercase tracking-wider leading-none mb-0.5">
+  <span className="text-[10px] font-medium opacity-80 uppercase tracking-wider leading-none">
     {d.weekDay}
   </span>
 
-  <span className="text-lg font-bold leading-none mb-1">
+  <span className="text-lg font-bold leading-none">
     {d.dateObj.getDate()}
   </span>
 
-  <div className="h-8 w-full flex items-center justify-center px-0.5 mt-1">
+  <div className="h-7 w-full flex items-center justify-center px-0.5">
     <span className="text-[9px] font-medium leading-[1.1] text-center whitespace-pre-line line-clamp-2">
       {d.city}
     </span>
