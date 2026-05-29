@@ -2415,6 +2415,18 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
   iconName: 'Utensils',
   subtitle: 'Foksner • Restavracija Triglav',
   location: 'Ribčev Laz / Lake Bohinj',
+
+  travelRecord: {
+    date: '2026/5/29',
+    title: '博希尼湖區午餐實際紀錄',
+    content: `今天從 Vogel 下山後，原本清單中的 Foksner 和 Restavracija Triglav Bohinj 到現場都沒有營業，因此午餐臨時需要改找其他選項。
+
+實際經驗是：博希尼湖區餐廳營業時間變動可能比想像中大，不能只看行前整理的清單。之後如果再來，建議出發前當天再確認 Google Maps、官網或直接打電話確認營業狀況。
+
+下次提醒：這種湖區或山區行程，最好車上先準備麵包、三明治、水果、能量棒或餅乾，避免中午臨時找不到開著的餐廳。`,
+    tags: ['餐廳未營業', '湖區午餐備案', '下次先確認', '自備點心']
+  },
+
   desc: (
     <Fragment>
       <p className="mb-4 text-gray-600 leading-relaxed text-justify">
@@ -2460,8 +2472,10 @@ mapLink: 'https://maps.app.goo.gl/W1UU5f2T9BrRZEUZ9',
     </Fragment>
   ),
   tips: [
+    '實際經驗：5/29 到現場時，Foksner 和 Restavracija Triglav Bohinj 都沒有營業',
+    '湖區餐廳營業時間變動可能較大，建議當天出發前再次確認',
     '下午還要去 Savica Waterfall，午餐不要拖太久',
-    '若 Foksner 排隊太久，可改 Triglav 或就近找湖區餐廳',
+    '建議車上準備麵包、水果、能量棒或餅乾作為備案',
     '午餐後記得補水，下午瀑布步道有階梯'
   ]
 },
@@ -7843,9 +7857,15 @@ title: '札達爾舊城晚餐',
         // --- 子組件 ---
 
         const DetailView = ({ item, onClose }) => {
-            if (!item) return null;
+    const [showRecord, setShowRecord] = useState(false);
 
-            return (
+    useEffect(() => {
+        setShowRecord(false);
+    }, [item]);
+
+    if (!item) return null;
+
+    return (
                 <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center pointer-events-none">
                     <div
                         className="absolute inset-0 bg-black/40 backdrop-blur-sm pointer-events-auto transition-opacity duration-300"
